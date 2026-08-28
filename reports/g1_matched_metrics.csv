@@ -1,0 +1,9 @@
+task,description,model,feature,n_samples,n_cases,n_positive,n_negative,threshold,auroc,auprc,balanced_accuracy,f1,brier
+A_same_current_wrong,RESCUE vs UNRECOVERED within current-wrong,logistic_all_features,__all__,608,608,428,180,0.5,0.5826713395638629,0.7570110348454488,0.5581256490134995,0.6683870967741935,0.24484675160640157
+A_same_current_wrong,RESCUE vs UNRECOVERED within current-wrong,hist_gradient_boosting_balanced,__all__,608,608,428,180,0.5,0.6045690550363447,0.7739995410294239,0.5884215991692627,0.7755102040816326,0.2210607601052142
+B_same_current_correct,CORRUPTION vs STABLE within current-correct,logistic_all_features,__all__,447,447,16,431,0.5,0.5991879350348028,0.052058427826838824,0.5181989559164732,0.07142857142857142,0.1854272820478218
+B_same_current_correct,CORRUPTION vs STABLE within current-correct,hist_gradient_boosting_balanced,__all__,447,447,16,431,0.5,0.5349477958236659,0.03780344456699254,0.4872389791183295,0.0,0.05467987417774309
+C_same_final_correct,RESCUE vs STABLE within final-correct,logistic_all_features,__all__,859,859,428,431,0.5,0.8030932194201704,0.7936148343074136,0.73225979573693,0.7325581395348837,0.18112550629831226
+C_same_final_correct,RESCUE vs STABLE within final-correct,hist_gradient_boosting_balanced,__all__,859,859,428,431,0.5,0.8645835592081011,0.8389917055518888,0.7835396925211962,0.7871853546910755,0.1502405464612834
+D_same_final_wrong,CORRUPTION vs UNRECOVERED within final-wrong,logistic_all_features,__all__,196,196,16,180,0.5,0.6986111111111111,0.13773272485970883,0.6048611111111111,0.21875,0.18399954613128022
+D_same_final_wrong,CORRUPTION vs UNRECOVERED within final-wrong,hist_gradient_boosting_balanced,__all__,196,196,16,180,0.5,0.5420138888888888,0.09068384001499932,0.46111111111111114,0.0,0.11756343942054652

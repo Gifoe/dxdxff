@@ -1,0 +1,8 @@
+{
+  "G0_status": "G0_EXPLORATORY_PASS",
+  "G1_status": "G1_PASS",
+  "cache_status": "BORDERLINE_REVIEW_REQUIRED",
+  "candidate_cache_version": "reva_gsm8k_mini_v2",
+  "primary_checkpoint": 0.6,
+  "reason": "G1 completed, but the same-DEV post-diagnostic G0 exploratory checkpoint is not eligible for an ordinary READY cache."
+}

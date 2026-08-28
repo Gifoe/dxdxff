@@ -1,0 +1,53 @@
+{
+  "G0": {
+    "exploratory_checkpoint": 0.6,
+    "exploratory_min_corruption": 10,
+    "exploratory_min_rcr_joint": 0.01,
+    "exploratory_min_rescue": 30,
+    "exploratory_origin": "selected on parser-v1.0 DEV diagnostic and frozen before parser-v1.1 rerun",
+    "exploratory_required_adjacent_checkpoint": 0.5,
+    "fail_max_rcr_joint_exclusive": 0.01,
+    "g1_run_eligible_statuses": [
+      "G0_PASS",
+      "G0_STRONG_PASS",
+      "G0_EXPLORATORY_PASS"
+    ],
+    "ordinary_ready_eligible_statuses": [
+      "G0_PASS",
+      "G0_STRONG_PASS"
+    ],
+    "strong_checkpoint": 0.5,
+    "strong_min_corruption": 30,
+    "strong_min_rcr_joint": 0.03,
+    "strong_min_rescue": 30,
+    "version": "2.0.0"
+  },
+  "G0_sha256": "5415b9fa489b33307fecb469f29b976151d95f11fef72e0354f58461c5cd7f0c",
+  "G1": {
+    "bootstrap_samples": 1000,
+    "cv_max_folds": 5,
+    "cv_repeats": 3,
+    "hard_threshold": 0.5,
+    "key_matched_tasks": [
+      "A_same_current_wrong",
+      "C_same_final_correct"
+    ],
+    "matched_fail_auroc_min": 0.8,
+    "matched_fail_ci_lower_min": 0.7,
+    "minimum_count_evaluable_matched_positive": 10,
+    "model_selection": "maximum AUROC over the frozen cheap-model universe",
+    "model_universe": [
+      "one balanced logistic model per frozen single causal feature",
+      "balanced logistic regression over all frozen causal features",
+      "balanced HistGradientBoosting over all frozen causal features"
+    ],
+    "n_jobs": 1,
+    "origin": "operationalized after v1.0 DEV audit and frozen before parser-v1.1 rerun",
+    "primary_fail_auroc_min": 0.8,
+    "primary_fail_ci_lower_min": 0.7,
+    "strong_primary_ci_upper_max": 0.7,
+    "version": "2.0.0"
+  },
+  "G1_sha256": "5222fe457bf0d08e00e7b3bdb5ef44725deca347a868d8dadc8e6f847d268d08",
+  "schema_version": "1.0.0"
+}

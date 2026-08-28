@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.tmp
+.pytest_cache/
+.coverage
+
+# Public source trajectories are large and remain external source-of-truth files.
+data/raw/
+data/metadata/repo_info.json
+*.part
+
+# Prophet is a pinned upstream checkout, not vendored project source.
+external/
+
+# Never publish model-weight payloads from this CPU-only audit repository.
+*.safetensors
+*.bin
+*.pt
+
+# Publish only the authoritative root cache decision. The obsolete v1 payload
+# and any future handoff cache remain local unless explicitly released.
+cache/*
+!cache/status.json
+
+# Keep the formal execution log; ignore unrelated generated logs.
+logs/*.log
+!logs/reva_mini_g0_g1.log

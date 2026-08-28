@@ -1,0 +1,28 @@
+{
+  "checkpoint_locator": {
+    "checkpoint": 0.6,
+    "history_index": 153,
+    "progress_mapping_file": "progress_mapping.json",
+    "step_number": 154
+  },
+  "current_commit_rule": "the commit selected at t occurs after forward t and is excluded from the pre-forward input at t",
+  "current_stop_now_rule": "raw x0_history[t] with replayed committed tokens from history indices <= t",
+  "forbidden_future_inputs": [
+    "x0_history rows with history index > t",
+    "true_indices_history commits with history index > t",
+    "final ans_posidx pred_token_id pred_text and other final-answer metadata",
+    "final correctness and trajectory labels",
+    "ground truth answer tokens as model input"
+  ],
+  "generation_length": 256,
+  "hidden_state_timing": "the same forward pass that produces raw x0_history[t]",
+  "history_index_base": 0,
+  "mask_token_id": 126336,
+  "pre_step_commits_rule": "restore only tokens committed at history indices < t",
+  "pre_step_uncommitted_rule": "all positions not committed before t remain mask_token_id",
+  "prompt_source": "prompt_index.parquet.prompt_token_ids",
+  "schema_version": "1.0.0",
+  "state_name": "pre_forward_input_producing_raw_x0",
+  "step_number_base": 1,
+  "total_steps": 256
+}

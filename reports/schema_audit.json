@@ -1,0 +1,1152 @@
+{
+  "actual_keys": [
+    "ans_posidx",
+    "correct",
+    "gt_text",
+    "gt_token_id",
+    "pred_ans",
+    "pred_text",
+    "pred_token_id",
+    "prompt_token_len",
+    "true_indices_history",
+    "x0_history"
+  ],
+  "advertised_but_absent_keys": [
+    "gen_ids"
+  ],
+  "dev_final_empty_marker_fallback_count": 3,
+  "dev_mid_empty_marker_fallback_count": 229,
+  "dev_parser_disagreement_count": 91,
+  "dev_stored_correct_agreement_count": 964,
+  "dev_stored_correct_agreement_rate": 0.9137440758293839,
+  "dev_stored_false_canonical_true_count": 91,
+  "dev_stored_true_canonical_false_count": 0,
+  "g3_correctness_evaluated": false,
+  "g3_structural_validation_performed": true,
+  "g3_used_for_selection": false,
+  "invalid_final_answer_anchor_count": 14,
+  "mask_token_id": 126336,
+  "n_dev": 1055,
+  "n_g3_holdout": 264,
+  "n_source_files": 1319,
+  "pre_step_state_validated_count": 1319,
+  "prompt_index_mismatch_count": 0,
+  "prompt_index_validated_count": 1319,
+  "prompt_token_len_max": 259,
+  "prompt_token_len_min": 94,
+  "query_template_sha256": "231d269274b6a04711d192c935b7a4785da99e6823afbc817972a1d51f48425e",
+  "raw_last_exact_count": 14,
+  "raw_last_exact_rate": 0.01061410159211524,
+  "raw_last_max_token_difference": 37,
+  "raw_last_mean_token_difference": 7.842304776345716,
+  "raw_last_min_token_difference": 0,
+  "raw_source_contains_outcome_fields": true,
+  "reconstruction_consistency": 1.0,
+  "reconstruction_exact_count": 1319,
+  "sample_inspections": [
+    {
+      "case_id": "question_0001",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 97,
+      "raw_last_token_difference": 4,
+      "x0_shapes": [
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ],
+        [
+          32,
+          353
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0066",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 129,
+      "raw_last_token_difference": 10,
+      "x0_shapes": [
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ],
+        [
+          32,
+          385
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0084",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 95,
+      "raw_last_token_difference": 6,
+      "x0_shapes": [
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ],
+        [
+          32,
+          351
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0117",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 101,
+      "raw_last_token_difference": 3,
+      "x0_shapes": [
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ],
+        [
+          32,
+          357
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0309",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 134,
+      "raw_last_token_difference": 11,
+      "x0_shapes": [
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ],
+        [
+          32,
+          390
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0354",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 156,
+      "raw_last_token_difference": 10,
+      "x0_shapes": [
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ],
+        [
+          32,
+          412
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0376",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 110,
+      "raw_last_token_difference": 12,
+      "x0_shapes": [
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ],
+        [
+          32,
+          366
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0452",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 113,
+      "raw_last_token_difference": 9,
+      "x0_shapes": [
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ],
+        [
+          32,
+          369
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0492",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 104,
+      "raw_last_token_difference": 4,
+      "x0_shapes": [
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ],
+        [
+          32,
+          360
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0500",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 109,
+      "raw_last_token_difference": 5,
+      "x0_shapes": [
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ],
+        [
+          32,
+          365
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0530",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 144,
+      "raw_last_token_difference": 16,
+      "x0_shapes": [
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ],
+        [
+          32,
+          400
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0778",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 151,
+      "raw_last_token_difference": 14,
+      "x0_shapes": [
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ],
+        [
+          32,
+          407
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0831",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 157,
+      "raw_last_token_difference": 4,
+      "x0_shapes": [
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ],
+        [
+          32,
+          413
+        ]
+      ]
+    },
+    {
+      "case_id": "question_0832",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 124,
+      "raw_last_token_difference": 11,
+      "x0_shapes": [
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ],
+        [
+          32,
+          380
+        ]
+      ]
+    },
+    {
+      "case_id": "question_1039",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 127,
+      "raw_last_token_difference": 12,
+      "x0_shapes": [
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ],
+        [
+          32,
+          383
+        ]
+      ]
+    },
+    {
+      "case_id": "question_1063",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 119,
+      "raw_last_token_difference": 6,
+      "x0_shapes": [
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ]
+      ]
+    },
+    {
+      "case_id": "question_1076",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 119,
+      "raw_last_token_difference": 0,
+      "x0_shapes": [
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          32,
+          375
+        ]
+      ]
+    },
+    {
+      "case_id": "question_1163",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 107,
+      "raw_last_token_difference": 13,
+      "x0_shapes": [
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ],
+        [
+          32,
+          363
+        ]
+      ]
+    },
+    {
+      "case_id": "question_1271",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 123,
+      "raw_last_token_difference": 12,
+      "x0_shapes": [
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ],
+        [
+          32,
+          379
+        ]
+      ]
+    },
+    {
+      "case_id": "question_1294",
+      "commit_steps": 256,
+      "final_reconstruction_exact": true,
+      "gen_ids_present": false,
+      "keys": [
+        "ans_posidx",
+        "correct",
+        "gt_text",
+        "gt_token_id",
+        "pred_ans",
+        "pred_text",
+        "pred_token_id",
+        "prompt_token_len",
+        "true_indices_history",
+        "x0_history"
+      ],
+      "pred_token_subsequence_found": true,
+      "prompt_token_len": 158,
+      "raw_last_token_difference": 9,
+      "x0_shapes": [
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ],
+        [
+          32,
+          414
+        ]
+      ]
+    }
+  ],
+  "true_indices_organization": "8 blocks x 32 steps x Tensor[1,2]",
+  "x0_dtype": "torch.int64",
+  "x0_organization": "8 block-major tensors x 32 local steps",
+  "x0_shape_template": "[32, prompt_token_len + 256]"
+}

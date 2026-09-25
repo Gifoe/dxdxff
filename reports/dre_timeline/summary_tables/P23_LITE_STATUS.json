@@ -1,0 +1,11 @@
+{
+  "status": "not_admitted",
+  "interpretation": "The accompanying regression audit reports required model outputs missing; this is not a performance result from a completed P23 evaluation.",
+  "criteria": {
+    "oracle": 0.6984,
+    "ez_auprc": 0.5151,
+    "ez_mrr": 0.681919,
+    "lzu_f1_floor": 0.568665
+  },
+  "module_admission": {}
+}

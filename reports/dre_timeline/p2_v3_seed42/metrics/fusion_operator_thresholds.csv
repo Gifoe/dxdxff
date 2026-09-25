@@ -1,0 +1,16 @@
+experiment,outer_fold,threshold,threshold_source,selected
+C1_PROBABILITY_FUSION,1,0.45,outer_fold_validation_only,True
+C1_PROBABILITY_FUSION,2,0.365,outer_fold_validation_only,True
+C1_PROBABILITY_FUSION,3,0.425,outer_fold_validation_only,True
+C1_PROBABILITY_FUSION,4,0.43,outer_fold_validation_only,True
+C1_PROBABILITY_FUSION,5,0.445,outer_fold_validation_only,True
+C2_LOGIT_FUSION,1,0.45,outer_fold_validation_only,True
+C2_LOGIT_FUSION,2,0.36,outer_fold_validation_only,True
+C2_LOGIT_FUSION,3,0.425,outer_fold_validation_only,True
+C2_LOGIT_FUSION,4,0.425,outer_fold_validation_only,True
+C2_LOGIT_FUSION,5,0.445,outer_fold_validation_only,True
+C3_PATIENT_RANK_FUSION,1,0.27,outer_fold_validation_only,True
+C3_PATIENT_RANK_FUSION,2,0.24,outer_fold_validation_only,True
+C3_PATIENT_RANK_FUSION,3,0.14,outer_fold_validation_only,True
+C3_PATIENT_RANK_FUSION,4,0.21,outer_fold_validation_only,True
+C3_PATIENT_RANK_FUSION,5,0.185,outer_fold_validation_only,True

@@ -1,0 +1,2 @@
+true_fusion_macro_f1,shuffle_mean,shuffle_std,shuffle_q025,shuffle_q975,true_minus_shuffle_mean,fraction_shuffle_below_true,shuffle_repeats
+0.6432651653484063,0.6282586878908984,0.0037123604821223594,0.6205679518236221,0.6340847117861089,0.015006477457507827,1.0,200

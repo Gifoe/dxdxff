@@ -1,0 +1,16 @@
+experiment,outer_fold,threshold,threshold_source,selected
+T0_P2_SCORE_P2_THRESHOLD,1,0.45,outer_fold_validation_only,True
+T0_P2_SCORE_P2_THRESHOLD,2,0.35000000000000003,outer_fold_validation_only,True
+T0_P2_SCORE_P2_THRESHOLD,3,0.4,outer_fold_validation_only,True
+T0_P2_SCORE_P2_THRESHOLD,4,0.425,outer_fold_validation_only,True
+T0_P2_SCORE_P2_THRESHOLD,5,0.45,outer_fold_validation_only,True
+T1_FUSION_SCORE_P2_THRESHOLD,1,0.45,frozen_from_p2_validation,True
+T1_FUSION_SCORE_P2_THRESHOLD,2,0.35000000000000003,frozen_from_p2_validation,True
+T1_FUSION_SCORE_P2_THRESHOLD,3,0.4,frozen_from_p2_validation,True
+T1_FUSION_SCORE_P2_THRESHOLD,4,0.425,frozen_from_p2_validation,True
+T1_FUSION_SCORE_P2_THRESHOLD,5,0.45,frozen_from_p2_validation,True
+T2_FUSION_SCORE_FUSION_THRESHOLD,1,0.45,outer_fold_validation_only,True
+T2_FUSION_SCORE_FUSION_THRESHOLD,2,0.365,outer_fold_validation_only,True
+T2_FUSION_SCORE_FUSION_THRESHOLD,3,0.425,outer_fold_validation_only,True
+T2_FUSION_SCORE_FUSION_THRESHOLD,4,0.43,outer_fold_validation_only,True
+T2_FUSION_SCORE_FUSION_THRESHOLD,5,0.445,outer_fold_validation_only,True

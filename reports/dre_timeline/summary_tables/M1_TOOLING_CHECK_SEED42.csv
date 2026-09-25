@@ -1,0 +1,3 @@
+experiment,stage,seed,patient_macro_accuracy,patient_macro_balanced_accuracy,patient_macro_f1,patient_macro_ez_f1,patient_macro_ez_recall_at_true_count,patient_macro_ez_mrr,patient_macro_auroc_ez,patient_macro_auprc_ez,pooled_accuracy,pooled_balanced_accuracy,pooled_macro_f1,pooled_auroc_nez,pooled_auroc_ez,pooled_auprc_nez,pooled_auprc_ez
+m1_feat_HLV,tooling_check,42,0.62,0.63,0.657,0.425,0.458,0.517,0.691,0.361,0.667,0.674,0.6824,0.699,0.699,0.806,0.3621
+m1_gate_m3,tooling_check,42,0.61,0.62,0.6532592832,0.42,0.45,0.51,0.688,0.355,0.66,0.67,0.6761773349,0.6937393207,0.6937393207,0.8,0.3603683291

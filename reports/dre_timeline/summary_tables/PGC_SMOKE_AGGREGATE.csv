@@ -1,0 +1,17 @@
+task,stage,valid_for_inference,seed,n_splits,epochs,metric,value
+task1,smoke,NO,42,2,1,AUROC,0.625
+task1,smoke,NO,42,2,1,AUPRC,0.6833333333
+task1,smoke,NO,42,2,1,patient_macro_F1,0.5
+task1,smoke,NO,42,2,1,EZ_F1,0.1666666667
+task1,smoke,NO,42,2,1,EZ_precision,0.1666666667
+task1,smoke,NO,42,2,1,EZ_recall,0.1666666667
+task1,smoke,NO,42,2,1,EZ_recall_at_true_count,0.3333333333
+task1,smoke,NO,42,2,1,EZ_MRR,0.3333333333
+task1,smoke,NO,42,2,1,balanced_accuracy,0.5
+task2,smoke,NO,42,2,1,AUROC,0.25
+task2,smoke,NO,42,2,1,AUPRC,0.5
+task2,smoke,NO,42,2,1,balanced_accuracy,0.5
+task2,smoke,NO,42,2,1,F1,0.6666666667
+task2,smoke,NO,42,2,1,sensitivity,1.0
+task2,smoke,NO,42,2,1,specificity,0.0
+task2,smoke,NO,42,2,1,Brier_score,0.2515788269

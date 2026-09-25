@@ -1,0 +1,1 @@
+from ._v3_fusion_checks import test_no_metric_hardcoding

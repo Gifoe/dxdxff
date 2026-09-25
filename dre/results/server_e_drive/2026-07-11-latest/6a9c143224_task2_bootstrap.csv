@@ -1,0 +1,2 @@
+model,seed,metric,estimate,ci_lower,ci_upper,bootstrap_samples,paired_reference,paired_vs_best_simple_delta,paired_ci_lower,paired_ci_upper
+majority,42,macro_f1,0.37656903765690375,0.34713332184172224,0.4063745019920319,50,majority,0.0,0.0,0.0

@@ -1,0 +1,38 @@
+{
+  "pipeline": "NGBR-Full",
+  "fixed_outer_folds": 5,
+  "completed_outer_folds": 1,
+  "success_label": 1,
+  "failure_label": 0,
+  "outer_test_used_for_selection": false,
+  "threshold": 0.5,
+  "ridge_C": 0.3,
+  "center_as_input": false,
+  "patient_id_as_input": false,
+  "channel_count_as_input": false,
+  "seizure_count_as_input": false,
+  "P2_fold_safe": true,
+  "P2_frozen": true,
+  "train_test_overlap": 0,
+  "manifest_hash": "f6c17f28caf17a16bfa26005ec9a719ee8f9fbcc0b036f7bd5c039cb9635ec53",
+  "negative_control": "none",
+  "preprocessing_fold_safe": true,
+  "folds": [
+    {
+      "outer_fold": 1,
+      "n_train": 3,
+      "n_test": 1,
+      "train_test_overlap": 0,
+      "hfo_valid_patients": 0,
+      "hfo_valid_success": 0,
+      "hfo_valid_failure": 0,
+      "hfo_enabled_in_fold": false,
+      "hfo_status": "HFO_DISABLED_IN_FOLD_INSUFFICIENT_VALID_PATIENTS",
+      "P2_fold_safe": true,
+      "preprocessing_fit_partition": "outer_train_only",
+      "threshold": 0.5,
+      "ridge_C": 0.3
+    }
+  ],
+  "paper_valid": false
+}

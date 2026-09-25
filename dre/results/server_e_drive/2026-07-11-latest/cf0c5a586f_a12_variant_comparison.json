@@ -1,0 +1,12 @@
+{
+  "bootstrap": [],
+  "variants": [
+    {
+      "action_coverage": 0.0,
+      "patient_macro_ez_f1": null,
+      "patient_macro_f1": null,
+      "status": "failed",
+      "variant": "A12-V8"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+center,success_auprc,failure_auprc,auroc,macro_f1,weighted_f1,balanced_accuracy,accuracy,success_precision,success_recall,failure_precision,failure_recall,specificity_for_failure,brier,ece,true_failure_pred_failure,true_failure_pred_success,true_success_pred_failure,true_success_pred_success,tn,fp,fn,tp
+hup,0.8333333333333333,0.6388888888888888,0.6666666666666666,0.625,0.625,0.6666666666666666,0.6666666666666666,1.0,0.3333333333333333,0.6,1.0,1.0,0.2635648632501568,0.34682114519156837,3,0,2,1,3,0,2,1

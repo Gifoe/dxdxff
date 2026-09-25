@@ -1,0 +1,8 @@
+{
+  "n_patients": 90,
+  "mean_recall_lift": 0.22470460320654467,
+  "mean_auprc_lift": 0.27309511485177,
+  "mean_mrr": 0.7041678987029864,
+  "high_ez_threshold": 0.4,
+  "baseline_pred_dir": ""
+}

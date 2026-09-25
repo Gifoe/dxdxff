@@ -1,0 +1,3 @@
+from __future__ import annotations
+from . import MODEL_VERSION,CACHE_VERSION
+def model_audit(m):return {'model_version':MODEL_VERSION,'cache_version':CACHE_VERSION,'parameter_count':m.parameter_count(),'under_300k':m.parameter_count()<300000,'window_encoder_source':'trace_aux_stable.encoder.WindowEncoder (TRACE-compatible GroupNorm lightweight encoder)','window_encoder_output_dim':32,'uses_batchnorm':False,'uses_patient_or_test_statistics':False,'disabled_modules':['task1_checkpoint','recruitment','propagation','vdr','dualset_attention','gnn','transformer','ranking_loss'],'label_direction':{'NEZ':1,'EZ':0,'success':1,'failure':0}}

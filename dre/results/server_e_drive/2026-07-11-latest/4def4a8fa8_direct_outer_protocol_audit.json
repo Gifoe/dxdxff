@@ -1,0 +1,30 @@
+{
+  "protocol": "DIRECT_OUTER_5FOLD_FIXED_EPOCH",
+  "n_outer_folds": 5,
+  "uses_inner_validation": false,
+  "uses_nested_cv": false,
+  "uses_early_stopping": false,
+  "fixed_epochs": 2,
+  "final_model": "ema_final",
+  "outer_test_used_for_training": false,
+  "outer_test_used_for_epoch_selection": false,
+  "outer_test_used_for_hyperparameter_selection": false,
+  "threshold": 0.5,
+  "primary_metric": "pooled_oof_auroc",
+  "model_version": "TRACE_DRE_LITE_V2_1_TRUE_EZ_VDR",
+  "cache_version": "TRACE_DRE_CACHE_V2",
+  "folds": [
+    {
+      "outer_fold": 1,
+      "train_patient_ids_hash": "43462ded3a548671695e90e33bdca97411eab294513dc5514e0157d632c7bcfd",
+      "test_patient_ids_hash": "8cf3707563c4f5666db97a285f4a2f9569e36790e77fa1466da75d936bb805b8",
+      "train_n": 1,
+      "test_n": 1,
+      "train_success": 0,
+      "train_failure": 1,
+      "test_success": 1,
+      "test_failure": 0,
+      "train_test_overlap_count": 0
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+reference,candidate,mean_delta,ci_low,ci_high,probability_delta_gt_zero,n_patients_improved,n_patients_worsened
+M0_PAM,M5_LIMITED_FINETUNE,0.5811965811965815,0.33333333333333337,0.6666666666666667,1.0,2,1

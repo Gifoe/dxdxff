@@ -1,0 +1,6 @@
+﻿"config","variant_family","score_variant","alpha","beta","patient_macro_f1","patient_macro_ez_f1","patient_macro_auprc_ez","patient_macro_ez_mrr","top1_is_ez_rate"
+"A9v8_stage1c_anchor_a010_b-005_mrr","teacher_anchor","teacher_plus_broad_core_a0.10_b+0.20","0.1","0.2","0.6434671520417574","0.472117160451443","0.5240819256943371","0.7270140661807329","0.6222222222222222"
+"A9v8_stage1c_anchor_a020_b-010_mrr","teacher_anchor","teacher_plus_broad_core_a0.10_b+0.20","0.1","0.2","0.6433847057618383","0.4722580241300603","0.5229742028928132","0.720050104216771","0.6111111111111112"
+"A9v8_stage1c_anchor_a020_b-010_mrr","teacher_anchor","teacher_plus_broad_core_a0.20_b+0.05","0.2","0.05","0.6439088932388404","0.4728701575464535","0.5249519668260504","0.7190973367717552","0.6"
+"A9v8_stage1c_anchor_a010_b000_mrr","teacher_anchor","teacher_plus_broad_core_a0.10_b+0.10","0.1","0.1","0.6432332472004549","0.4718336789123341","0.5224911188686564","0.7175079347355346","0.6"
+"A9v8_stage1c_anchor_a020_b-010_mrr","teacher_anchor","teacher_plus_broad_core_a0.20_b+0.20","0.2","0.2","0.643263745037064","0.4723016042160132","0.5247869711066364","0.7163065715149048","0.6111111111111112"

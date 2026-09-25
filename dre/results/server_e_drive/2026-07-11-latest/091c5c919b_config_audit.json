@@ -1,0 +1,23 @@
+{
+  "profile": "R1_NEZ_CONSENSUS",
+  "task2_success_label": 1,
+  "task2_failure_label": 0,
+  "p2_frozen": true,
+  "p2_backbones_per_fold": 1,
+  "prototype_fit_scope": "outer_train_only_patient_balanced_clean_clinical_NEZ",
+  "clinical_target_semantics": "recorded surgical target, not ground-truth EZ",
+  "seizure_nez_probability_usage": "audit_only",
+  "center_usage": "loss_balancing_only",
+  "coordinates_used": false,
+  "SOZ_used": false,
+  "resection_used": false,
+  "true_EZ_claimed": false,
+  "fixed_epochs": 2,
+  "optimizer": "AdamW",
+  "lr": 0.0005,
+  "weight_decay": 0.001,
+  "decision_threshold": 0.5,
+  "threshold_source": "fixed_predefined_0_5",
+  "negative_control": "none",
+  "paper_valid": false
+}

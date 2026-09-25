@@ -1,0 +1,27 @@
+[
+  {
+    "outer_fold": 1,
+    "checkpoint_exists": true,
+    "checkpoint_outer_fold": 1
+  },
+  {
+    "outer_fold": 2,
+    "checkpoint_exists": true,
+    "checkpoint_outer_fold": 2
+  },
+  {
+    "outer_fold": 3,
+    "checkpoint_exists": true,
+    "checkpoint_outer_fold": 3
+  },
+  {
+    "outer_fold": 4,
+    "checkpoint_exists": true,
+    "checkpoint_outer_fold": 4
+  },
+  {
+    "outer_fold": 5,
+    "checkpoint_exists": true,
+    "checkpoint_outer_fold": 5
+  }
+]

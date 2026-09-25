@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "n_p2_rows": 788,
+      "n_v3_rows": 788,
+      "n_merged_rows": 788,
+      "n_p2_patients": 9,
+      "n_v3_patients": 9,
+      "n_merged_patients": 9,
+      "p2_duplicate_keys": 0,
+      "v3_duplicate_keys": 0,
+      "p2_unmatched_rows": 0,
+      "v3_unmatched_rows": 0,
+      "label_nez_mismatch_count": 0,
+      "label_ez_mismatch_count": 0,
+      "center_mismatch_count": 0,
+      "fold_mismatch_count": 0,
+      "patient_channel_count_mismatch_count": 0,
+      "passed": true
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "n_p2_rows": 3667,
+      "n_v3_rows": 3667,
+      "n_merged_rows": 3667,
+      "n_p2_patients": 36,
+      "n_v3_patients": 36,
+      "n_merged_patients": 36,
+      "p2_duplicate_keys": 0,
+      "v3_duplicate_keys": 0,
+      "p2_unmatched_rows": 0,
+      "v3_unmatched_rows": 0,
+      "label_nez_mismatch_count": 0,
+      "label_ez_mismatch_count": 0,
+      "center_mismatch_count": 0,
+      "fold_mismatch_count": 0,
+      "patient_channel_count_mismatch_count": 0,
+      "passed": true
+    }
+  ]
+}

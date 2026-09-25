@@ -1,0 +1,28 @@
+{
+  "1": {
+    "action_coverage": 0.0,
+    "action_harm_rate": 0.0,
+    "max_swaps": 0,
+    "objective": 0.6666666666666667,
+    "patient_coverage": 0.0,
+    "patient_harm_rate": 0.0,
+    "tau_benefit": 0.7,
+    "tau_delta": 0.0,
+    "tau_harm": 0.2,
+    "tau_positive_seed_fraction": 0.67,
+    "tau_utility": 0.0
+  },
+  "2": {
+    "action_coverage": 0.0,
+    "action_harm_rate": 0.0,
+    "max_swaps": 0,
+    "objective": 0.6666666666666667,
+    "patient_coverage": 0.0,
+    "patient_harm_rate": 0.0,
+    "tau_benefit": 0.7,
+    "tau_delta": 0.0,
+    "tau_harm": 0.2,
+    "tau_positive_seed_fraction": 0.67,
+    "tau_utility": 0.0
+  }
+}

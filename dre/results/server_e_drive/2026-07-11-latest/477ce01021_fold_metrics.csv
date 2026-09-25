@@ -1,0 +1,2 @@
+outer_fold,decision_threshold,threshold_source,inner_cv_used,success_auprc,failure_auprc,auroc,macro_f1,weighted_f1,balanced_accuracy,accuracy,success_precision,success_recall,failure_precision,failure_recall,specificity_for_failure,brier,ece,true_failure_pred_failure,true_failure_pred_success,true_success_pred_failure,true_success_pred_success,tn,fp,fn,tp
+1,0.5,fixed_predefined_0_5,False,0.41666666666666663,0.7,0.33333333333333337,0.2857142857142857,0.22857142857142856,0.5,0.4,0.4,1.0,0.0,0.0,0.0,0.27925438051732315,0.18355842828750613,0,3,0,2,0,3,0,2

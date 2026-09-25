@@ -1,0 +1,31 @@
+{
+  "expected_patient_count": 90,
+  "n_unique_subjects": 90,
+  "patient_count_warning": false,
+  "a9v3_teacher_reproduction_warning": false,
+  "a9v3_teacher_reproduction": {
+    "observed": {
+      "patient_macro_f1": 0.6427135780776422,
+      "patient_macro_ez_f1": 0.47059129425797064,
+      "patient_macro_auprc_ez": 0.5186349018779979,
+      "patient_macro_ez_mrr": 0.7151362033792374,
+      "top1_is_ez_rate": 0.6
+    },
+    "expected": {
+      "patient_macro_f1": 0.642714,
+      "patient_macro_ez_f1": 0.470591,
+      "patient_macro_auprc_ez": 0.518635,
+      "patient_macro_ez_mrr": 0.715136,
+      "top1_is_ez_rate": 0.6
+    },
+    "abs_diff": {
+      "patient_macro_f1": 4.2192235782945176e-07,
+      "patient_macro_ez_f1": 2.942579706566306e-07,
+      "patient_macro_auprc_ez": 9.812200207903743e-08,
+      "patient_macro_ez_mrr": 2.0337923745117337e-07,
+      "top1_is_ez_rate": 0.0
+    }
+  },
+  "score_eval_reproduction_warnings": [],
+  "score_eval_reproduction_warning": false
+}

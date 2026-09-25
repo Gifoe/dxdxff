@@ -1,0 +1,22 @@
+paths:
+  feature_cache_path: '${DRE_TASK2_FEATURE_CACHE_PATH}'
+  raw_cache_path: '${DRE_TASK2_RAW_CACHE_PATH}'
+  brainbert_embedding_cache_path: '${DRE_TASK2_BRAINBERT_EMBEDDING_CACHE}'
+  cbramod_embedding_cache_path: '${DRE_TASK2_CBRAMOD_EMBEDDING_CACHE}'
+  old90_manifest_path: '${DRE_TASK1_OLD90_MANIFEST}'
+  output_dir: '${DRE_TASK2_OUTPUT_DIR}'
+  pretrained_model_root: '${DRE_PRETRAINED_MODEL_ROOT}'
+protocol:
+  outer_folds: 5
+  inner_folds: 4
+  random_seed: 42
+  calibration: platt
+  bootstrap_samples: 2000
+training:
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  epochs: 40
+  patience: 8
+  amp: true
+  num_workers: 4

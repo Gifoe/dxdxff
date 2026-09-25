@@ -1,0 +1,1 @@
+from ._v3_fusion_checks import test_combined_figure_single_version

@@ -1,0 +1,14 @@
+{
+  "aligned_run_count": 500,
+  "conflict_subjects": [],
+  "outcome_counts": {
+    "conflict": 0,
+    "failure": 59,
+    "success": 96,
+    "unknown": 0
+  },
+  "patient_count": 155,
+  "run_count_feature": 501,
+  "run_count_raw": 501,
+  "unknown_subjects": []
+}

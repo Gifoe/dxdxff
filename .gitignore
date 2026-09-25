@@ -1,29 +1,27 @@
+# Local environments and generated runtime state
 .venv/
+venv/
 __pycache__/
 *.py[cod]
-*.egg-info/
-*.tmp
 .pytest_cache/
-.coverage
+.mypy_cache/
+.ruff_cache/
+.idea/
 
-# Public source trajectories are large and remain external source-of-truth files.
-data/raw/
-data/metadata/repo_info.json
-*.part
-
-# Prophet is a pinned upstream checkout, not vendored project source.
-external/
-
-# Never publish model-weight payloads from this CPU-only audit repository.
+# Do not publish raw or derived patient data, caches, or model payloads
+dataest/
+raw_data/
+patient_records.pkl
+*_cache.pkl
+*.pt
+*.pth
+*.ckpt
 *.safetensors
 *.bin
-*.pt
+*.npy
+*.npz
 
-# Publish only the authoritative root cache decision. The obsolete v1 payload
-# and any future handoff cache remain local unless explicitly released.
-cache/*
-!cache/status.json
-
-# Keep the formal execution log; ignore unrelated generated logs.
-logs/*.log
-!logs/reva_mini_g0_g1.log
+# Local credentials
+.env
+.env.*
+!.env.example

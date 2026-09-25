@@ -1,0 +1,2 @@
+patient_macro_f1,patient_ez_f1,patient_nez_f1,patient_balanced_accuracy,patient_ez_auprc,patient_ez_mrr,n_patients,analysis_status,true_count_used_for_prediction
+0.6127588305994784,0.4255087616829305,0.8000088995160264,0.7150511899271611,0.5402543089064276,0.7891975308641975,36,PRIMARY_LEGAL,False

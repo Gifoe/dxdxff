@@ -1,0 +1,1 @@
+from ._v3_fusion_checks import test_output_does_not_overwrite_v2

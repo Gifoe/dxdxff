@@ -1,0 +1,9 @@
+{
+    "AUC": 0.4338624338624339,
+    "Balanced_Accuracy": 0.5,
+    "F1": 0.7741935483870968,
+    "Sensitivity": 0.9999999997222222,
+    "Specificity": 0.0,
+    "MCC": 0.0,
+    "N_Evaluated": 57
+}

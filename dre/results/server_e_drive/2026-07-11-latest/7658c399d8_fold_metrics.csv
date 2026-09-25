@@ -1,0 +1,2 @@
+﻿fold_idx,patient_macro_f1,patient_macro_nez_f1,patient_macro_ez_f1,patient_macro_accuracy,patient_macro_balanced_accuracy,patient_macro_auroc_ez,patient_macro_auprc_ez,patient_macro_ez_mrr,patient_macro_ez_recall_at_true_count,patient_macro_top1_is_ez_rate,a_anchor,a_early,a_recurrence
+1,0.5519207416099972,0.7622754164235982,0.3415660667963961,0.6677798759713038,0.6003739216552036,0.6577785800337135,0.476621800045463,0.6567167400500734,0.4175496571195679,0.5555555555555556,0.6905385255813599,0.6903907656669617,0.6903838515281677

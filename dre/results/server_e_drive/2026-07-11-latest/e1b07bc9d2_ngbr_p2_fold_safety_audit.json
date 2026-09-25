@@ -1,0 +1,10 @@
+[
+  {
+    "outer_fold": 1,
+    "checkpoint_exists": true,
+    "checkpoint_outer_fold": 1,
+    "checkpoint_outer_fold_matches": true,
+    "training_manifest_leakage_verified": true,
+    "P2_fold_safe": true
+  }
+]

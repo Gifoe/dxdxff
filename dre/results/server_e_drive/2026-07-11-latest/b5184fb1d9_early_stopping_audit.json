@@ -1,0 +1,5 @@
+{
+  "early_stop_metric_effective": "auroc",
+  "early_stop_metric_requested": "auroc",
+  "fallback_reason": null
+}

@@ -1,0 +1,22 @@
+{
+  "ez_recall_at_true_count": 0.41610955318503257,
+  "macro_topk_recall": 0.41610955318503257,
+  "n_patient_rows": 90.0,
+  "patient_macro_accuracy": 0.7544077544765793,
+  "patient_macro_auprc_ez": 0.45777977277433374,
+  "patient_macro_auprc_nez": 0.8467248777644307,
+  "patient_macro_auroc_ez": 0.6801628514397877,
+  "patient_macro_auroc_nez": 0.6801628514397877,
+  "patient_macro_balanced_accuracy": 0.6147305441767636,
+  "patient_macro_ez_f1": 0.41610955318503257,
+  "patient_macro_ez_mrr": 0.5759926325802762,
+  "patient_macro_ez_precision": 0.41610955318503257,
+  "patient_macro_ez_recall": 0.41610955318503257,
+  "patient_macro_ez_recall_at_true_count": 0.41610955318503257,
+  "patient_macro_f1": 0.6147305441767636,
+  "patient_macro_nez_f1": 0.8133515351684949,
+  "patient_macro_nez_precision": 0.8133515351684949,
+  "patient_macro_nez_recall": 0.8133515351684949,
+  "patient_weighted_f1": 0.7544077544765793,
+  "top1_is_ez_rate": 0.4
+}

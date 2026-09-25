@@ -1,0 +1,2 @@
+model,seed,metric,estimate,ci_lower,ci_upper,bootstrap_samples,paired_reference,paired_status,paired_delta,paired_ci_lower,paired_ci_upper
+rbf_svm,42,patient_macro_f1,0.49945027666212183,0.47003121919604995,0.5194421614915444,50,Frozen V3,evaluated,-0.14326330141552035,-0.18359744182712015,-0.10563356597046443

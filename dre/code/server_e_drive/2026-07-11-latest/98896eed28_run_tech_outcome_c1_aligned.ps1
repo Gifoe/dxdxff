@@ -1,0 +1,31 @@
+$ErrorActionPreference = "Stop"
+
+& $PythonExe "$PSScriptRoot\run_tech_outcome_c1_aligned.py" `
+  --raw-cache $env:DRE_TASK1_RAW_CACHE_PATH `
+  --outcome-table $env:DRE_TASK2_OUTCOME_TABLE `
+  --fold-manifest $env:DRE_TASK2_FOLD_MANIFEST `
+  --exclusion-manifest $env:DRE_TASK2_EXCLUSION_MANIFEST `
+  --cache-dir $env:DRE_TASK2_TECH_C1_CACHE_DIR `
+  --output-dir $env:DRE_TASK2_TECH_C1_ALIGNED_OUTPUT_DIR `
+  --folds 1 `
+  --seed 42 `
+  --device cuda `
+  --train-views-per-patient 2 `
+  --eval-views-per-patient 8 `
+  --max-seizures-per-view 3 `
+  --max-channels-per-seizure 96 `
+  --max-windows-per-phase 6 `
+  --batch-size 4 `
+  --gradient-accumulation-steps 2 `
+  --gradient-clip-norm 1.0 `
+  --learning-rate 1e-4 `
+  --weight-decay 1e-4 `
+  --max-epochs 30 `
+  --min-epochs 5 `
+  --patience 5 `
+  --checkpoint-monitor val_auroc `
+  --checkpoint-mode max `
+  --disable-augmentations `
+  --amp `
+  --amp-dtype bf16 `
+  --strict

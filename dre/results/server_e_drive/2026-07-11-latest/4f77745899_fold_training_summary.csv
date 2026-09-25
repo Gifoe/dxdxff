@@ -1,0 +1,2 @@
+outer_fold,n_train,n_validation,n_test,best_validation_score,checkpoint
+1,8,2,4,0.0,P2_Q10_NPAM\outputs\_trace_smoke_cache\checkpoints\fold_1_seed_42.pt

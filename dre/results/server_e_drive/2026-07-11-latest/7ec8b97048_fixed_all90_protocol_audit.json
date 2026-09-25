@@ -1,0 +1,12 @@
+{
+  "center_as_input_allowed": false,
+  "center_usage": "reporting_and_validation_diagnostics_only",
+  "drop_high_ez_fraction_lzu": false,
+  "n_outer_splits": 5,
+  "n_patients": 90,
+  "n_splits": 5,
+  "positive_label": "ez",
+  "protocol_name": "fixed_all90_patient_topk_ez",
+  "random_seed": 42,
+  "split_strategy": "5fold"
+}

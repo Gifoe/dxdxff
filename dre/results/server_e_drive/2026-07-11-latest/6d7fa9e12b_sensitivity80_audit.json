@@ -1,0 +1,260 @@
+{
+  "cohort": "sensitivity80",
+  "seed": 42,
+  "n_patients": 80,
+  "n_outer_splits": 5,
+  "outer_fold_match": true,
+  "ledger_sha256": "8693f6d8c8ad0608f8ea73ed69dbc00f549fdbf2b1171566be522169de0f0c08",
+  "folds": [
+    {
+      "outer_fold": 1,
+      "fit_count": 51,
+      "validation_count": 13,
+      "test_count": 16,
+      "fit": {
+        "by_center": {
+          "hup": 21,
+          "lzu": 14,
+          "multicenter": 11,
+          "pediatric": 5
+        },
+        "ez_fraction_mean": 0.2330623342796198,
+        "ez_fraction_std": 0.16655324789250148,
+        "channel_count_mean": 93.3921568627451,
+        "channel_count_std": 36.29891071199458,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "validation": {
+        "by_center": {
+          "hup": 6,
+          "lzu": 3,
+          "multicenter": 2,
+          "pediatric": 2
+        },
+        "ez_fraction_mean": 0.2381025232965738,
+        "ez_fraction_std": 0.11764222411623754,
+        "channel_count_mean": 95.46153846153847,
+        "channel_count_std": 34.16614470183872,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "test": {
+        "by_center": {
+          "hup": 9,
+          "lzu": 4,
+          "multicenter": 2,
+          "pediatric": 1
+        },
+        "ez_fraction_mean": 0.2549583109935776,
+        "ez_fraction_std": 0.18479281681471552,
+        "channel_count_mean": 101.9375,
+        "channel_count_std": 24.973657996977536,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "outer_train_coverage": true,
+      "outer_test_match": true
+    },
+    {
+      "outer_fold": 2,
+      "fit_count": 51,
+      "validation_count": 13,
+      "test_count": 16,
+      "fit": {
+        "by_center": {
+          "hup": 24,
+          "lzu": 15,
+          "multicenter": 5,
+          "pediatric": 7
+        },
+        "ez_fraction_mean": 0.2605156137344317,
+        "ez_fraction_std": 0.17107263077863613,
+        "channel_count_mean": 97.54901960784314,
+        "channel_count_std": 32.50901155636948,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "validation": {
+        "by_center": {
+          "hup": 5,
+          "lzu": 4,
+          "multicenter": 3,
+          "pediatric": 1
+        },
+        "ez_fraction_mean": 0.25325472985154224,
+        "ez_fraction_std": 0.15000911712908388,
+        "channel_count_mean": 89.38461538461539,
+        "channel_count_std": 24.25359120605715,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "test": {
+        "by_center": {
+          "hup": 7,
+          "lzu": 2,
+          "multicenter": 7
+        },
+        "ez_fraction_mean": 0.1551398149054527,
+        "ez_fraction_std": 0.1180698589221894,
+        "channel_count_mean": 93.625,
+        "channel_count_std": 43.97424672464555,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "outer_train_coverage": true,
+      "outer_test_match": true
+    },
+    {
+      "outer_fold": 3,
+      "fit_count": 50,
+      "validation_count": 13,
+      "test_count": 17,
+      "fit": {
+        "by_center": {
+          "hup": 19,
+          "lzu": 15,
+          "multicenter": 11,
+          "pediatric": 5
+        },
+        "ez_fraction_mean": 0.250886011827651,
+        "ez_fraction_std": 0.17806372774993742,
+        "channel_count_mean": 91.36,
+        "channel_count_std": 31.55107605138056,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "validation": {
+        "by_center": {
+          "hup": 6,
+          "lzu": 3,
+          "multicenter": 2,
+          "pediatric": 2
+        },
+        "ez_fraction_mean": 0.22164230443130772,
+        "ez_fraction_std": 0.1299250108146843,
+        "channel_count_mean": 101.61538461538461,
+        "channel_count_std": 46.05772041110432,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "test": {
+        "by_center": {
+          "hup": 11,
+          "lzu": 3,
+          "multicenter": 2,
+          "pediatric": 1
+        },
+        "ez_fraction_mean": 0.2138349575308094,
+        "ez_fraction_std": 0.13728138401842185,
+        "channel_count_mean": 102.70588235294117,
+        "channel_count_std": 28.3523309673169,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "outer_train_coverage": true,
+      "outer_test_match": true
+    },
+    {
+      "outer_fold": 4,
+      "fit_count": 52,
+      "validation_count": 13,
+      "test_count": 15,
+      "fit": {
+        "by_center": {
+          "hup": 28,
+          "lzu": 10,
+          "multicenter": 11,
+          "pediatric": 3
+        },
+        "ez_fraction_mean": 0.20697511452385345,
+        "ez_fraction_std": 0.15767706887291413,
+        "channel_count_mean": 94.61538461538461,
+        "channel_count_std": 31.630166860472013,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "validation": {
+        "by_center": {
+          "hup": 6,
+          "lzu": 3,
+          "multicenter": 3,
+          "pediatric": 1
+        },
+        "ez_fraction_mean": 0.2610813625996123,
+        "ez_fraction_std": 0.1451307965226371,
+        "channel_count_mean": 99.23076923076923,
+        "channel_count_std": 36.92019219500322,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "test": {
+        "by_center": {
+          "hup": 2,
+          "lzu": 8,
+          "multicenter": 1,
+          "pediatric": 4
+        },
+        "ez_fraction_mean": 0.3269387438651981,
+        "ez_fraction_std": 0.16423548475048713,
+        "channel_count_mean": 95.0,
+        "channel_count_std": 39.38866165112324,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "outer_train_coverage": true,
+      "outer_test_match": true
+    },
+    {
+      "outer_fold": 5,
+      "fit_count": 51,
+      "validation_count": 13,
+      "test_count": 16,
+      "fit": {
+        "by_center": {
+          "hup": 23,
+          "lzu": 13,
+          "multicenter": 11,
+          "pediatric": 4
+        },
+        "ez_fraction_mean": 0.2352741323514273,
+        "ez_fraction_std": 0.16910120251500957,
+        "channel_count_mean": 97.56862745098039,
+        "channel_count_std": 37.676775444828486,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "validation": {
+        "by_center": {
+          "hup": 6,
+          "lzu": 4,
+          "multicenter": 1,
+          "pediatric": 2
+        },
+        "ez_fraction_mean": 0.23860497695872493,
+        "ez_fraction_std": 0.1464187024129084,
+        "channel_count_mean": 101.84615384615384,
+        "channel_count_std": 22.05533653840914,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "test": {
+        "by_center": {
+          "hup": 7,
+          "lzu": 4,
+          "multicenter": 3,
+          "pediatric": 2
+        },
+        "ez_fraction_mean": 0.2474999610391935,
+        "ez_fraction_std": 0.15968540320536587,
+        "channel_count_mean": 83.4375,
+        "channel_count_std": 26.753431438789306,
+        "seizure_count_mean": 1.0,
+        "seizure_count_std": 0.0
+      },
+      "outer_train_coverage": true,
+      "outer_test_match": true
+    }
+  ],
+  "status": "passed"
+}

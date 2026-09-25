@@ -1,0 +1,16 @@
+{
+  "n_patients": 10,
+  "macro_AUC": 0.7973995208740234,
+  "macro_AUC_PR": 0.5723966360092163,
+  "macro_F1": 0.14178571105003357,
+  "macro_PREC": 0.22857144474983215,
+  "macro_REC": 0.10678871721029282,
+  "macro_TOPK_RECALL": 0.4809305965900421,
+  "macro_TOP1_HIT": 1.0,
+  "macro_TOP3_HIT": 1.0,
+  "macro_COUNT_BIAS": 0.8999999761581421,
+  "macro_ABS_COUNT_BIAS_RATIO": 0.127653568983078,
+  "selection_score": 0.38882961869239807,
+  "epoch": 1,
+  "train_loss": 5.06241821795702
+}

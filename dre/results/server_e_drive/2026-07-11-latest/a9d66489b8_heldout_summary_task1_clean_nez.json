@@ -1,0 +1,18 @@
+[
+  {
+    "fold_idx": 1,
+    "patient_macro_f1": 0.5519207416099972,
+    "patient_macro_nez_f1": 0.7622754164235982,
+    "patient_macro_ez_f1": 0.3415660667963961,
+    "patient_macro_accuracy": 0.6677798759713038,
+    "patient_macro_balanced_accuracy": 0.6003739216552036,
+    "patient_macro_auroc_ez": 0.6577785800337135,
+    "patient_macro_auprc_ez": 0.476621800045463,
+    "patient_macro_ez_mrr": 0.6567167400500734,
+    "patient_macro_ez_recall_at_true_count": 0.4175496571195679,
+    "patient_macro_top1_is_ez_rate": 0.5555555555555556,
+    "a_anchor": 0.6905385255813599,
+    "a_early": 0.6903907656669617,
+    "a_recurrence": 0.6903838515281677
+  }
+]

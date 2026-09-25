@@ -1,0 +1,19 @@
+{
+  "model_version": "TRACE_DRE_LITE_V2",
+  "parameter_count": 40037,
+  "under_250k": true,
+  "enabled_modules": {
+    "side_features": true,
+    "recruitment_dynamics": true,
+    "propagation_escape": true,
+    "virtual_disconnection": true,
+    "cross_seizure_recurrence": true,
+    "edge_correction": false
+  },
+  "label_direction": {
+    "NEZ": 1,
+    "EZ": 0,
+    "success": 1,
+    "failure": 0
+  }
+}

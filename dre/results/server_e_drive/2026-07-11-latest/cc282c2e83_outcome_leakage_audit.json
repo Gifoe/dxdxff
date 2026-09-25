@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scans": [
+    {
+      "forbidden_paths": [],
+      "scanned_key_count": 7,
+      "stage": "audit_model_input_template"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+outer_fold,base_groups,candidate_group,inner_auroc_before,inner_auroc_after,inner_balanced_accuracy_before,inner_balanced_accuracy_after,selected,selection_rule
+1,feature,raw,0.75,0.6319444444444444,0.7083333333333333,0.5833333333333334,False,AUROC gain >= 0.015 OR balanced accuracy gain >= 0.015
+1,feature,p2,0.75,0.8055555555555556,0.7083333333333333,0.75,True,AUROC gain >= 0.010 OR balanced accuracy gain >= 0.010

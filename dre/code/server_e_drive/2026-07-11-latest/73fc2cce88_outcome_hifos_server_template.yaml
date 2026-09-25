@@ -1,0 +1,58 @@
+paths:
+  feature_cache_path: '${DRE_FEATURE_CACHE_PATH}'
+  raw_cache_path: '${DRE_RAW_CACHE_PATH}'
+  output_dir: '${DRE_OUTCOME_OUTPUT_DIR}'
+  pretrained_model_root: '${DRE_PRETRAINED_MODEL_ROOT}'
+model:
+  model_dim: 64
+  num_cores: 4
+  dropout: 0.15
+  head_dropout: 0.20
+  core_temperature: 0.20
+  uot_epsilon: 0.10
+  uot_tau: 1.0
+  sinkhorn_iterations: 20
+  sinkhorn_tolerance: 0.00001
+training:
+  early_stop_metric: auroc
+  optimizer: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.001
+  grad_clip: 1.0
+  epochs: 100
+  patience: 12
+  batch_size: 2
+  gradient_accumulation: 2
+  num_workers: 4
+  amp: true
+  anchor_loss_weight: 0.001
+  usage_loss_weight: 0.001
+  minimum_core_usage: 0.01
+protocol:
+  outer_folds: 5
+  inner_folds: 4
+  random_seed: 42
+  threshold_metric: macro_f1
+  calibration: platt
+  bootstrap_samples: 2000
+report:
+  bootstrap_pairs:
+    - [H3_ATTENTION_MIL, H2_HIER_POOL]
+    - [H4_MULTI_CORE, H3_ATTENTION_MIL]
+    - [H5_ANCHORED_CORE, H4_MULTI_CORE]
+    - [H6_ANCHORED_UOT_DESC, H5_ANCHORED_CORE]
+    - [H7_TRANSPORT_GRAPH, H6_ANCHORED_UOT_DESC]
+    - [H8_RECURRENCE, H7_TRANSPORT_GRAPH]
+    - [H9_FM_INTERSECTION, H8_FEATURE_INTERSECTION]
+    - [H10_LATE_FUSION, H8_FEATURE_INTERSECTION]
+fm:
+  target_sfreq: 200
+  window_sec: 4.0
+  raw_window_key: raw_window_waveforms
+  raw_time_origin: seizure_onset_at_raw_target_midpoint
+  streaming_embedding_format: chunked_npy
+  batch_size: 128
+fusion:
+  feature_variant: H8_RECURRENCE
+  minimum_run_alignment_ratio: 1.0
+  stacker_input_representation: raw_logit

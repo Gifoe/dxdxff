@@ -1,0 +1,3 @@
+center,outcome,n_patients,mean_target_fraction,std_target_fraction,q10_target_fraction,q50_target_fraction,q90_target_fraction,missing_count,all_zero_count,all_one_count
+hup,0,1,0.2777777910232544,,0.2777777910232544,0.2777777910232544,0.2777777910232544,0,0,0
+hup,1,1,0.26744186878204346,,0.26744186878204346,0.26744186878204346,0.26744186878204346,0,0,0

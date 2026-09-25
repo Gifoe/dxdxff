@@ -1,0 +1,8 @@
+{
+  "channel_micro_f1": 0.75,
+  "n_patients": 4,
+  "patient_balanced_accuracy": 0.6666666666666667,
+  "patient_macro_ez_f1": 0.5,
+  "patient_macro_f1": 0.6666666666666667,
+  "patient_macro_nez_f1": 0.8333333333333334
+}

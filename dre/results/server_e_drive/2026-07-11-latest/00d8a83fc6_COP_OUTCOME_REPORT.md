@@ -1,0 +1,3 @@
+# COP-Outcome Audit
+
+AUDIT_ONLY_NO_OUTCOME_MODEL_RUN

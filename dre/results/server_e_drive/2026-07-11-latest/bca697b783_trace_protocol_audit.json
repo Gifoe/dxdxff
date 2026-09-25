@@ -1,0 +1,16 @@
+{
+  "pipeline": "TRACE-RawMIL",
+  "model_version": "TRACE_RAWMIL_FULL_v1",
+  "label_direction_version": "NEZ1_EZ0_TRACE_v1",
+  "nez_label": 1,
+  "ez_label": 0,
+  "success_label": 1,
+  "failure_label": 0,
+  "center_as_input": false,
+  "patient_id_as_input": false,
+  "outer_test_used_for_training": false,
+  "primary_threshold": 0.5,
+  "outer_folds": 5,
+  "seed": 42,
+  "paper_valid": false
+}

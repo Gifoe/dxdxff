@@ -1,0 +1,1 @@
+from ._correction_checks import test_combined_figure_uses_single_version

@@ -1,0 +1,28 @@
+{
+  "model_version": "TRACE_DRE_LITE_V2_1_TRUE_EZ_VDR",
+  "parameter_count": 40037,
+  "under_250k": true,
+  "enabled_modules": {
+    "side_features": true,
+    "recruitment_dynamics": true,
+    "propagation_escape": true,
+    "virtual_disconnection": true,
+    "true_ez_supernode": true,
+    "cross_seizure_recurrence": true,
+    "edge_correction": false
+  },
+  "virtual_disconnection_definition": {
+    "ez_node_source": "true_ez_channel_aggregation",
+    "nez_node_source": "top_q10_propagation_escape",
+    "ez_tau_source": "mean_true_ez_recruitment_time",
+    "max_nodes": 13,
+    "uses_full_channel_graph": false,
+    "uses_gnn": false
+  },
+  "label_direction": {
+    "NEZ": 1,
+    "EZ": 0,
+    "success": 1,
+    "failure": 0
+  }
+}

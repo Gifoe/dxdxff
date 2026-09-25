@@ -1,0 +1,1 @@
+from ._correction_checks import test_loco_center_equal_weighting

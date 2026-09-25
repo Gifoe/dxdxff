@@ -1,0 +1,10 @@
+{
+  "observed_n_patients": 90,
+  "unique_outer_test_membership": true,
+  "split_overlap": false,
+  "normalizer_train_only": true,
+  "threshold_validation_only": true,
+  "test_derived_threshold": false,
+  "true_ez_count_used_for_labels": false,
+  "oof_complete": false
+}

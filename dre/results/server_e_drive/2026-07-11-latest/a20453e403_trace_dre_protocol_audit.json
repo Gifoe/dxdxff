@@ -1,0 +1,8 @@
+{
+  "model_version": "TRACE_DRE_LITE_V2_1_TRUE_EZ_VDR",
+  "cache_version": "TRACE_DRE_CACHE_V2",
+  "cache_signature": "53cb0624711c5e505b913c46c67e4684fc52bed4d9c898d84f357ff0b09e7d92",
+  "threshold": 0.5,
+  "checkpoint_metric": "AUROC - 0.10*Brier",
+  "outer_test_used_for_selection": false
+}

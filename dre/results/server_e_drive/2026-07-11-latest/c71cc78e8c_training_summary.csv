@@ -1,0 +1,2 @@
+outer_fold,train_n,validation_n,test_n,epochs_run,best_epoch,selected_model_type,best_validation_auroc,best_validation_brier,test_accuracy,test_balanced_accuracy,test_macro_f1,test_auroc
+1,2,2,2,2,2,raw,0.0,0.2571553277402949,0.5,0.5,0.3333333333333333,0.0

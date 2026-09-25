@@ -1,0 +1,13 @@
+{
+  "profile": "M0_PAM",
+  "failure_label": 1,
+  "success_label": 0,
+  "center_as_input": false,
+  "coordinates_used": false,
+  "soz_resect_used": false,
+  "true_k_used": false,
+  "graph_source": "none",
+  "p2_backbones": 1,
+  "strict": false,
+  "p2_checkpoint_subject_leakage_verified": false
+}

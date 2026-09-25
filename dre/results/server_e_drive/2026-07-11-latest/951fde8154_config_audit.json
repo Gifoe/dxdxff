@@ -1,0 +1,38 @@
+{
+  "profile": "C3_CROSS_SEIZURE_CONCORDANCE",
+  "primary_profile": "C5_FULL",
+  "final_ensemble_profile": "C6_FIXED_ENSEMBLE",
+  "task1_label_semantics": {
+    "EZ": 0,
+    "NEZ": 1
+  },
+  "task2_label_semantics": {
+    "failure": 0,
+    "success": 1
+  },
+  "model_output": "outcome_probability_success",
+  "derived_probability": "outcome_probability_failure = 1 - outcome_probability_success",
+  "channel_internal_evidence": "failure-risk evidence",
+  "success_label": 1,
+  "failure_label": 0,
+  "decision_threshold": 0.5,
+  "threshold_source": "fixed_predefined_0_5",
+  "training_schedule": "fixed_epochs",
+  "inner_cv_used": false,
+  "threshold_tuning_used": false,
+  "early_stopping_used": false,
+  "center_as_input": false,
+  "coordinates_used": false,
+  "soz_used": false,
+  "resection_used": false,
+  "true_k_used": false,
+  "p2_backbones": 1,
+  "network_phases": [
+    "preictal",
+    "onset",
+    "spread"
+  ],
+  "graph_source": "none",
+  "strict": false,
+  "paper_valid": false
+}

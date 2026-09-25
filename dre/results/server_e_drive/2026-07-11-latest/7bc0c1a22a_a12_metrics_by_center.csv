@@ -1,0 +1,2 @@
+variant,center,outer_fold,patient_macro_f1,patient_ez_f1,patient_nez_f1,patient_accuracy,patient_balanced_accuracy,n_channels,k
+A12-V8,real-cache-fixture,1.5,0.6666666666666667,0.5,0.8333333333333334,0.75,0.6666666666666667,8.0,2.0

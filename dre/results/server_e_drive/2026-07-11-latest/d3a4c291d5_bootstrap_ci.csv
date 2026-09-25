@@ -1,0 +1,9 @@
+metric,mean,ci_low,ci_high,valid_repeats,skipped_single_class
+failure_auprc,1.0,1.0,1.0,39,11
+auroc,1.0,1.0,1.0,39,11
+macro_f1,0.3615384615384616,0.25,0.4,39,11
+balanced_accuracy,0.5,0.5,0.5,39,11
+accuracy,0.5811965811965814,0.3333333333333333,0.6666666666666666,39,11
+failure_recall,0.0,0.0,0.0,39,11
+specificity,1.0,1.0,1.0,39,11
+brier,0.23779560185735554,0.2303769810785523,0.25866138495496543,39,11

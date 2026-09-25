@@ -1,0 +1,29 @@
+{
+  "frozen_replay_file_count": 5,
+  "main_best_macro_f1": 0.4,
+  "metadata_best_macro_f1": 0.4125874125874126,
+  "model_input_policy": "center, counts, quality, duration, sampling rate, and device are excluded from the main model",
+  "robustness_perturbations_excluded_from_shortcut_risk": [
+    "channel_dropout_10",
+    "channel_dropout_20",
+    "channel_dropout_30",
+    "channel_permutation",
+    "original",
+    "seizure_dropout",
+    "shuffled_signal",
+    "window_order_shuffle"
+  ],
+  "shortcut_models_considered": [
+    "center_only",
+    "channel_count_only",
+    "metadata_combined",
+    "seizure_count_only",
+    "window_count_only"
+  ],
+  "shortcut_risk": true,
+  "unavailable": {
+    "quality_only": "missing patient-manifest columns: ['quality']",
+    "record_duration_only": "missing patient-manifest columns: ['record_duration_sec']",
+    "sampling_rate_device_only": "missing patient-manifest columns: ['sampling_rate', 'device']"
+  }
+}

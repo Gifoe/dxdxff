@@ -1,0 +1,2 @@
+outer_fold,n_patients,patient_macro_f1,patient_ez_f1,patient_nez_f1,patient_balanced_accuracy,patient_ez_auprc,patient_ez_mrr
+1,21,0.5613987691845381,0.4157238976036994,0.7070736407653769,0.5994591298907024,0.5625572514398136,0.8015873015873015

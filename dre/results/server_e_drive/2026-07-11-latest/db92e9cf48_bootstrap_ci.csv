@@ -1,0 +1,13 @@
+metric,estimate,ci_lower,ci_upper,repeats
+accuracy,0.5,0.0,1.0,2000
+balanced_accuracy,0.5,0.0,1.0,2000
+macro_f1,0.3333333333333333,0.0,1.0,2000
+auroc,0.0,0.0,0.0,2000
+success_auprc,0.5,0.5,1.0,2000
+failure_auprc,0.5,0.5,1.0,2000
+success_precision,0.0,0.0,0.0,2000
+success_recall,0.0,0.0,0.0,2000
+failure_precision,0.5,0.0,1.0,2000
+failure_recall,1.0,0.0,1.0,2000
+brier,0.25527689820863353,0.20489583628704455,0.3056579601302225,2000
+ece,0.05010460317134857,0.05010460317134857,0.5528634190559387,2000

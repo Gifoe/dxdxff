@@ -1,0 +1,9 @@
+{
+  "shortcut_risk": true,
+  "main_best_macro_f1": 0.37656903765690375,
+  "shortcut_models_considered": [
+    "center_only",
+    "channel_count_only",
+    "seizure_count_only"
+  ]
+}

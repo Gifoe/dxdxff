@@ -1,0 +1,17 @@
+paths:
+  feature_cache_path: '${DRE_TASK1_FEATURE_CACHE_PATH}'
+  raw_cache_path: '${DRE_TASK1_RAW_CACHE_PATH}'
+  v3_ledger_path: '${DRE_TASK1_V3_LEDGER_PATH}'
+  output_dir: '${DRE_TASK1_OUTPUT_DIR}'
+  pretrained_model_root: '${DRE_PRETRAINED_MODEL_ROOT}'
+  brainbert_embedding_cache_path: '${DRE_TASK1_BRAINBERT_EMBEDDING_CACHE}'
+  cbramod_embedding_cache_path: '${DRE_TASK1_CBRAMOD_EMBEDDING_CACHE}'
+protocol:
+  cohort: old-90
+  folds: frozen-v3-5-fold
+  label_semantics: 'NEZ=1,EZ=0'
+  inner_folds: 4
+  seeds: [42, 52, 62]
+training:
+  num_workers: 4
+  amp: true

@@ -1,0 +1,74 @@
+paths:
+  feature_cache_path: ${DRE_FEATURE_CACHE_PATH}
+  raw_cache_path: ${DRE_RAW_CACHE_PATH}
+  output_dir: ${DRE_OUTCOME_OUTPUT_DIR}
+  pretrained_model_root: ${DRE_PRETRAINED_MODEL_ROOT}
+model:
+  model_dim: 64
+  num_cores: 4
+  dropout: 0.15
+  head_dropout: 0.2
+  core_temperature: 0.2
+  uot_epsilon: 0.1
+  uot_tau: 1.0
+  sinkhorn_iterations: 20
+  sinkhorn_tolerance: 0.0
+training:
+  early_stop_metric: auroc
+  learning_rate: 0.0001
+  weight_decay: 0.001
+  grad_clip: 1.0
+  epochs: 100
+  patience: 12
+  batch_size: 4
+  gradient_accumulation: 1
+  num_workers: 2
+  amp: true
+  anchor_loss_weight: 0.001
+  usage_loss_weight: 0.001
+  prefetch_factor: 2
+  persistent_workers: true
+  pin_memory: true
+protocol:
+  outer_folds: 5
+  inner_folds: 4
+  random_seed: 42
+  final_nested: true
+  bootstrap_samples: 2000
+report:
+  bootstrap_pairs:
+  - - H6_ANCHORED_UOT_DESC
+    - H5_ANCHORED_CORE
+  - - H7_TRANSPORT_GRAPH
+    - H6_ANCHORED_UOT_DESC
+  - - H8_RECURRENCE
+    - H7_TRANSPORT_GRAPH
+  - - H9_FM_INTERSECTION
+    - H8_FEATURE_INTERSECTION
+  - - H10_LATE_FUSION
+    - H8_FEATURE_INTERSECTION
+candidate_profiles:
+  compact:
+    model:
+      model_dim: 32
+      num_cores: 2
+      dropout: 0.1
+      core_temperature: 0.15
+      uot_epsilon: 0.05
+      uot_tau: 0.5
+    training:
+      learning_rate: 0.0003
+  default:
+    model:
+      model_dim: 64
+      num_cores: 4
+      dropout: 0.15
+      core_temperature: 0.2
+      uot_epsilon: 0.1
+      uot_tau: 1.0
+    training:
+      learning_rate: 0.0001
+fusion:
+  feature_variant: H8_RECURRENCE
+  minimum_run_alignment_ratio: 1.0
+  stacker_input_representation: raw_logit

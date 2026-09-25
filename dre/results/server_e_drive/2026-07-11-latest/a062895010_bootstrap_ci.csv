@@ -1,0 +1,15 @@
+metric,mean,ci_low,ci_high,valid_repeats,skipped_single_class,success_label,failure_label,threshold,threshold_source,inner_cv_used
+success_auprc,0.4444444444444444,0.3333333333333333,0.6499999999999999,3,2,1,0,0.5,fixed_predefined_0_5,False
+failure_auprc,0.49999999999999994,0.3458333333333333,0.5833333333333333,3,2,1,0,0.5,fixed_predefined_0_5,False
+auroc,0.0,0.0,0.0,3,2,1,0,0.5,fixed_predefined_0_5,False
+macro_f1,0.3,0.25,0.3925,3,2,1,0,0.5,fixed_predefined_0_5,False
+weighted_f1,0.28888888888888886,0.16666666666666666,0.515,3,2,1,0,0.5,fixed_predefined_0_5,False
+balanced_accuracy,0.5,0.5,0.5,3,2,1,0,0.5,fixed_predefined_0_5,False
+accuracy,0.4444444444444444,0.3333333333333333,0.6499999999999999,3,2,1,0,0.5,fixed_predefined_0_5,False
+success_precision,0.4444444444444444,0.3333333333333333,0.6499999999999999,3,2,1,0,0.5,fixed_predefined_0_5,False
+success_recall,1.0,1.0,1.0,3,2,1,0,0.5,fixed_predefined_0_5,False
+failure_precision,0.0,0.0,0.0,3,2,1,0,0.5,fixed_predefined_0_5,False
+failure_recall,0.0,0.0,0.0,3,2,1,0,0.5,fixed_predefined_0_5,False
+specificity_for_failure,0.0,0.0,0.0,3,2,1,0,0.5,fixed_predefined_0_5,False
+brier,0.2519311664286425,0.2483618223588851,0.25386054160148436,3,2,1,0,0.5,fixed_predefined_0_5,False
+ece,0.16985228988859388,0.1597675899664561,0.17530347903569538,3,2,1,0,0.5,fixed_predefined_0_5,False

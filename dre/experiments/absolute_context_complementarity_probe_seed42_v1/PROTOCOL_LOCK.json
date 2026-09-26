@@ -41,6 +41,8 @@
   "validation_selection": "Original A1 VLOO: for each excluded patient, other 12 choose A1 base epoch 1..30 and NEZ probability threshold float32 linspace(0.05,0.95,19), tie break Macro-F1, EZ-F1, BA, closest threshold to .5, earlier A1 epoch. Fullval separately selects on all 13 and is apparent only.",
   "complementarity_gate": {"P2_minus_P0_macro_f1_min": 0.010, "P2_minus_P1_macro_f1_min": 0.005, "P2_positive_vs_P0_folds_min": 4, "P2_positive_vs_P1_folds_min": 3, "P2_ez_f1_nondecreasing_vs_P0": true, "P2_ez_auprc_delta_vs_P0_min": -0.005, "P2_vloo_macro_f1_min": 0.640},
   "test_readiness_gate": {"complementarity_gate_required": true, "apparent_fullval_mean_macro_f1_min": 0.665, "apparent_fullval_worst_fold_macro_f1_min": 0.620, "fraction_abs_delta_gt_0_45_max_exclusive": 0.10, "no_leakage_or_pathology": true},
+  "residual_diagnostic": {"saturation_near_pm0_5": "fraction abs(delta) >= 0.49 on VLOO-selected validation predictions", "pair_order_change": "fraction of valid unordered channel pairs whose NEZ-logit sign ordering changes after residual"},
+  "terminal_rule": "Use ABSOLUTE_CONTEXT_COMPLEMENTARITY_SUPPORTED only if full test-readiness gate passes. Else use RESIDUAL_CAPACITY_ONLY_SUPPORTED if P1-P0 and P2-P0 mean VLOO Macro-F1 are each >=0.010 but P2-P1 <0.005. Otherwise use ABSOLUTE_CONTEXT_COMPLEMENTARITY_NOT_SUPPORTED. Source reproduction failure has priority.",
   "outer_policy": "Development only. Do not read outer-test labels, predictions, metrics, or results. A passing gate freezes a finding only; no outer test or end-to-end retraining.",
   "public_data_policy": "Commit only aggregate CSV/JSON/Markdown and code/lock. Keep patient IDs, channels, embeddings, logits, labels, checkpoints, private paths and runtime logs outside Git."
 }

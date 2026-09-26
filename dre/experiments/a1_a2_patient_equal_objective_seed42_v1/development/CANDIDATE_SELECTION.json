@@ -1,0 +1,11 @@
+{
+  "candidate": "A1",
+  "A1_is_primary": true,
+  "A2_minus_A1_mean_macro_f1": -0.008619947371760462,
+  "A2_positive_folds": 2,
+  "A2_checks": {
+    "delta_macro_f1_ge_0_005": false,
+    "positive_folds_ge_3": false,
+    "mean_ez_f1_nondecreasing": false
+  }
+}

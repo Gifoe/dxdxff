@@ -209,12 +209,21 @@ def train_variant(exp, args, fold: int, train_set, train_loader, val_loader, nor
             train_metrics = exp._train_one_epoch(model, train_loader, optimizer, ez_weight)
             if not math.isfinite(float(train_metrics["loss"])):
                 raise RuntimeError("Nonfinite training loss")
+            if any(not torch.isfinite(parameter).all().item() or
+                   (parameter.grad is not None and not torch.isfinite(parameter.grad).all().item())
+                   for parameter in model.parameters()):
+                raise RuntimeError("Nonfinite model parameter or gradient")
             torch.save({"epoch": epoch, "fold": fold, "variant": variant,
                         "model_state_dict": model.state_dict(), "optimizer_state_dict": optimizer.state_dict(),
                         "train_metrics": train_metrics, "normalizer_mean": normalizer.mean,
                         "normalizer_std": normalizer.std,
                         "normalizer_physics_mean": normalizer.physics.mean,
                         "normalizer_physics_std": normalizer.physics.std}, ckpt)
+        train_metrics_path = variant_dir / f"epoch_{epoch:02d}_train_metrics.json"
+        if not train_metrics_path.exists():
+            atomic_json(train_metrics_path, {"variant": variant, "fold": fold, "epoch": epoch,
+                                             **{key: float(value) for key, value in train_metrics.items()
+                                                if isinstance(value, (int, float))}})
         if not metrics_path.exists():
             _, _, raw_records = exp._evaluate(model, val_loader, ez_weight, split_name="val")
             grid = epoch_grid(raw_records, epoch)

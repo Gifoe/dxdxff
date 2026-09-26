@@ -1,0 +1,23 @@
+{
+  "pass": false,
+  "candidate": "A1",
+  "checks": {
+    "mean_vloo_macro_f1_gain_ge_0_010": true,
+    "positive_folds_ge_4": false,
+    "mean_ez_f1_nondecreasing": true,
+    "ez_auprc_delta_ge_minus_0_005": true,
+    "apparent_fullval_mean_macro_f1_ge_0_665": false,
+    "apparent_fullval_worst_fold_macro_f1_ge_0_620": false,
+    "no_pathology": true
+  },
+  "A0_vloo_macro_f1": 0.6150994887012149,
+  "candidate_vloo_macro_f1": 0.6259962097139906,
+  "candidate_minus_A0_vloo_macro_f1": 0.010896721012775723,
+  "positive_folds": 3,
+  "candidate_minus_A0_ez_f1": 0.017851250770115235,
+  "candidate_minus_A0_ez_auprc": 0.012125346132045967,
+  "candidate_apparent_fullval_macro_f1_mean": 0.6546671761219939,
+  "candidate_apparent_fullval_macro_f1_worst_fold": 0.6073365647427443,
+  "outer_test_evaluated": false,
+  "terminal": "A1_A2_DEVELOPMENT_GATE_FAILED"
+}

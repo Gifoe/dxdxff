@@ -1,5 +1,7 @@
 # PaReSet-EZ: flat five-fold patient-level CV (seed 42)
 
+**SUPERSEDED / INCOMPLETE.** The user clarified that the intended comparison keeps the original fit/validation/test workflow used for the matched CDEL evaluation. This flat no-inner, threshold-0.5 rerun was stopped after two completed fold-1 cells; an epoch-level fold-2 full-model resume checkpoint remains on the server. Its partial outcomes are not published, should not be compared with the original-protocol table, and this branch is retained only as an auditable record of the abandoned protocol. The completed original-protocol code and aggregate results are on [`codex/pareset-ez-original-inner-outer-seed42-v1`](https://github.com/Gifoe/dxdxff/tree/codex/pareset-ez-original-inner-outer-seed42-v1).
+
 This is an **exploratory protocol amendment**, not a new independent final test. The same 80 patients' historical outer-fold results were inspected before this rerun. Do not use this result to claim a prospectively confirmed gain.
 
 Each frozen fold uses the original `fit ∪ validation` patients for training and the original `test` patients for evaluation. No inner split, resplit, validation scoring, early stopping, or outcome-based checkpoint/threshold selection is used. Each model is evaluated at **epoch 45**, with a fixed **NEZ threshold of 0.5**. The five test groups are disjoint and cover all 80 patients once. Fold train/test patient counts: 64/16, 64/16, 63/17, 65/15, 64/16.

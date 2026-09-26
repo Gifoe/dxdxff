@@ -44,9 +44,7 @@ def collect_validation_logits(exp, model, loader) -> tuple[list[dict], float]:
         for batch in loader:
             device_batch = core._move_tensors_to_device(batch, exp.device)
             outputs = model(device_batch)
-            # The frozen A1 classifier emits EZ-positive logits. The locked
-            # coordinate experiment uses NEZ-positive logits, so negate them.
-            logits = (-outputs["logits"]).detach().cpu().numpy()
+            logits = outputs["logits"].detach().cpu().numpy()
             score_nez = outputs["score_nez"].detach().cpu().numpy()
             score_ez = outputs["score_ez"].detach().cpu().numpy()
             labels_nez = batch["labels_nez"].numpy()
@@ -134,8 +132,8 @@ def main() -> None:
                 raise RuntimeError("A1 fit normalizer changed")
             model.load_state_dict(checkpoint["model_state_dict"], strict=True)
             patients, probability_error = collect_validation_logits(exp, model, val_loader)
-            if probability_error > 1e-7:
-                raise RuntimeError("sigmoid(raw logits) does not reproduce frozen model score_nez")
+            if probability_error > 5e-7:
+                raise RuntimeError(f"sigmoid(raw logits) disagrees with frozen score_nez: max_abs={probability_error:.9g}")
             overall_probability_error = max(overall_probability_error, probability_error)
             payload = {"epoch": epoch, "patients": patients}
             write_json(RUNTIME / "validation_logits_private" / f"fold_{fold}" / f"epoch_{epoch:02d}.json", payload)

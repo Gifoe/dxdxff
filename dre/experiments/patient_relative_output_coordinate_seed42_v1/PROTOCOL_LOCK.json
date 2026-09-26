@@ -1,0 +1,58 @@
+{
+  "experiment": "patient_relative_output_coordinate_seed42_v1",
+  "status": "FROZEN_BEFORE_VALIDATION_ANALYSIS",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "source_protocol_sha256": "6694da1b351d7130015661fcce1ec91bec643821392e409f1d5728f472b3aba0",
+  "source_variant": "A1",
+  "source_vloo_macro_f1_by_fold": [0.6549997115717437, 0.6410958089865288, 0.6101185971670673, 0.6329791804569156, 0.5907877503876969],
+  "source_vloo_macro_f1_mean": 0.6259962097139906,
+  "source_reproduction_tolerance": 1e-6,
+  "input_sha256": {
+    "window_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "fixed_partition_manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "source_sha256": {
+    "model_py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "dataset_py": "ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+    "exp_ez_hybrid_py": "d28eeac13ad3ad1916eae03397796f5ba45118b38a30853b8507b7aee67d238d"
+  },
+  "cohort": {"patients": 80, "channels": 7635, "seizure_records": 256, "folds": 5, "validation_patients_per_fold": 13},
+  "training": "none: load the 150 frozen A1 epoch checkpoints and evaluate fit/validation roles only",
+  "source_reconstruction": "Use raw final NEZ logits. Confirm sigmoid(logits) matches the model's score_nez within 1e-7. Rebuild C0 VLOO and compare every fold and mean to the published A1 result before C1/C2 analysis.",
+  "coordinates": {
+    "C0_RAW": "raw NEZ-positive final logit, then sigmoid",
+    "C1_CENTERED": "subtract median of valid patient logits, then sigmoid",
+    "C2_ROBUSTZ": "subtract median and divide by max(1.4826 * median absolute deviation, 1e-6), then sigmoid",
+    "statistics_dtype": "float64 from frozen float32 logits",
+    "clip_or_winsorize": false,
+    "learned_parameters": false
+  },
+  "selection": {
+    "primary": "VLOO: 12 patients select epoch and threshold, excluded 13th scores",
+    "epochs": "1..30",
+    "thresholds": "float32 linspace(0.05,0.95,19) on NEZ probability for all three coordinates",
+    "tie_break": ["mean patient Macro-F1", "mean patient EZ-F1", "mean balanced accuracy", "threshold closest to 0.5", "earlier epoch", "earlier grid order if residual tie"],
+    "tie_numeric_precision_decimals": 12,
+    "fullval": "same selection on all 13, apparent result reported separately"
+  },
+  "rank_invariance": {"cases": 1950, "spearman_min": 0.99999999, "ranking_metric_delta_max_abs": 1e-8,
+    "metrics": ["EZ-AUPRC", "EZ-AUROC", "EZ-MRR", "Top1-is-EZ"]},
+  "oracle_diagnostic": "For each excluded patient at its VLOO-selected epoch, use that patient's labels to select its own threshold from the same grid. Diagnostic only: never use for candidate selection, gate or outer test.",
+  "oracle_threshold_tie_break": ["patient Macro-F1", "patient EZ-F1", "patient balanced accuracy", "threshold closest to 0.5", "earlier grid order"],
+  "candidate_selection": "C1 replaces primary C2 iff C1 VLOO Macro-F1 >= C2 + 0.005. Retain no normalized candidate unless gain over C0 >=0.010, at least 4/5 positive folds, and mean EZ-F1 nondecreasing.",
+  "strong_gate": {
+    "source_reproduced": true,
+    "candidate_vloo_macro_f1_min": 0.640,
+    "candidate_gain_vs_C0_min": 0.010,
+    "positive_folds_min": 4,
+    "mean_ez_f1_nondecreasing": true,
+    "apparent_fullval_mean_macro_f1_min": 0.665,
+    "apparent_fullval_worst_fold_macro_f1_min": 0.620,
+    "rank_invariance_required": true,
+    "no_score_pathology": "all source/transformed logits and probabilities finite; every valid patient-epoch has MAD > 0 and positive finite robust scale; probability saturation is allowed only if the ranking invariance audit still passes"
+  },
+  "outer_policy": "Validation-only. No current outer-test label, prediction, metric or result may be read. Even if the gate passes, freeze selected coordinate/checkpoint/threshold but do not evaluate outer without a new explicit authorization.",
+  "historical_outer_already_viewed": true,
+  "public_data_policy": "Aggregate-only code/lock/CSV/JSON/Markdown; keep patient IDs, channel names, logits, probabilities, labels, checkpoints, paths and runtime files private."
+}

@@ -137,8 +137,10 @@ def get_repr(exp, model, fit_loader, val_loader, folder: Path, source_hash: str)
     if shutil.disk_usage(RUNTIME).free < 2_000_000_000:
         raise RuntimeError("Insufficient private runtime disk space for intermediate representation")
     folder.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(".pt.tmp")
     torch.save({"fit": fit, "validation": val, "lock_sha256": LOCK_SHA256,
-                "source_checkpoint_sha256": source_hash, "outer_test_accessed": False}, path)
+                "source_checkpoint_sha256": source_hash, "outer_test_accessed": False}, temporary)
+    temporary.replace(path)
     return fit, val
 
 
@@ -351,7 +353,9 @@ def cached_recruitment_features(fit: list[dict], val: list[dict], fold: int) -> 
                                "fit_magnitude_q80": q80, "fit_magnitude_q90": q90},
                "fit_identity": fit_identity, "val_identity": val_identity, "lock_sha256": LOCK_SHA256}
     path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save(payload, path)
+    temporary = path.with_suffix(".pt.tmp")
+    torch.save(payload, temporary)
+    temporary.replace(path)
     return payload
 
 
@@ -425,7 +429,7 @@ def process_epoch(exp, model, fit_loader, val_loader, normalizer, fold: int, epo
         for audit in audits:
             for variant in VARIANTS[audit]:
                 saved = torch.load(folder / f"{variant}_probe.pt", map_location="cpu", weights_only=False)
-                if saved["source_checkpoint_sha256"] != source_hash or saved["lock_sha256"] != LOCK_SHA256 or saved["probe_epochs"] != 15:
+                if saved["source_checkpoint_sha256"] != source_hash or saved["lock_sha256"] != LOCK_SHA256 or saved["probe_epochs"] != 15 or saved["variant"] != variant:
                     raise RuntimeError("Complete probe resume provenance changed")
         print(f"[RESUME] fold={fold} epoch={epoch} {','.join(audits)} complete", flush=True)
         return
@@ -467,11 +471,13 @@ def process_epoch(exp, model, fit_loader, val_loader, normalizer, fold: int, epo
                 head.eval()
             else:
                 head, losses = train_head(fit, fit_features[variant], initial, seed, exp.device)
+                temp_probe = probe_path.with_suffix(".pt.tmp")
                 torch.save({"variant": variant, "audit": audit, "fold": fold, "base_epoch": epoch,
                             "source_checkpoint_sha256": source_hash, "lock_sha256": LOCK_SHA256,
                             "probe_epochs": 15, "parameter_count": parameter_count,
                             "head_state_dict": {key: value.detach().cpu() for key, value in head.state_dict().items()},
-                            "training_losses": losses, "outer_test_accessed": False}, probe_path)
+                            "training_losses": losses, "outer_test_accessed": False}, temp_probe)
+                temp_probe.replace(probe_path)
             if not grid_path.exists():
                 atomic_json(grid_path, validation_grid(val, val_features[variant], head, epoch, exp.device))
             print(f"[{variant}] fold={fold} base_epoch={epoch}/30 probe_epoch=15", flush=True)

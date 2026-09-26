@@ -1,0 +1,20 @@
+{
+  "source_A1_reproduced": true,
+  "source_checkpoints": 150,
+  "completed_probe_cells": 300,
+  "probe_epochs_each": 15,
+  "matched_head_input_dim": 192,
+  "matched_head_hidden_dim": 32,
+  "matched_head_parameter_count_each": 6209,
+  "A1_parameters_frozen": true,
+  "probe_head_only_trained": true,
+  "fit_only_context_normalization": true,
+  "P1_P2_matched_architecture_and_initialization": true,
+  "validation_probe_epoch_selection": false,
+  "outer_loader_built": false,
+  "outer_test_accessed": false,
+  "protocol_lock_sha256": "76a9a94cbf364878088ed89370e062e6fe92687adafcd4f95b923e67ce1a36a3",
+  "source_protocol_sha256": "6694da1b351d7130015661fcce1ec91bec643821392e409f1d5728f472b3aba0",
+  "cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "split_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+}

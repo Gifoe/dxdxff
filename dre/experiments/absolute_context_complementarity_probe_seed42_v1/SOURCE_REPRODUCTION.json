@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "terminal": "SOURCE_REPRODUCED",
+  "frozen_checkpoints_evaluated": 150,
+  "validation_patients_per_fold": 13,
+  "max_grid_error_vs_original": 0.0,
+  "folds": [
+    {
+      "fold": 1,
+      "observed": 0.6549997115717437,
+      "reference": 0.6549997115717437,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 2,
+      "observed": 0.6410958089865288,
+      "reference": 0.6410958089865288,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 3,
+      "observed": 0.6101185971670673,
+      "reference": 0.6101185971670673,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 4,
+      "observed": 0.6329791804569156,
+      "reference": 0.6329791804569156,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 5,
+      "observed": 0.5907877503876969,
+      "reference": 0.5907877503876969,
+      "absolute_error": 0.0
+    }
+  ],
+  "observed_mean": 0.6259962097139906,
+  "reference_mean": 0.6259962097139906,
+  "outer_test_accessed": false
+}

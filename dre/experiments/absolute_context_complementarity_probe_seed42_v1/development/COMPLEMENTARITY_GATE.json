@@ -1,0 +1,23 @@
+{
+  "pass": false,
+  "checks": {
+    "P2_minus_P0_macro_f1_ge_0_010": false,
+    "P2_minus_P1_macro_f1_ge_0_005": false,
+    "positive_P2_vs_P0_folds_ge_4": false,
+    "positive_P2_vs_P1_folds_ge_3": false,
+    "P2_mean_EZ_F1_nondecreasing": false,
+    "P2_EZ_AUPRC_delta_ge_minus_0_005": false,
+    "P2_VLOO_macro_f1_ge_0_640": false
+  },
+  "P0_vloo_macro_f1": 0.6259962097139906,
+  "P1_vloo_macro_f1": 0.6186270467928727,
+  "P2_vloo_macro_f1": 0.6171821592389306,
+  "P2_minus_P0_macro_f1": -0.008814050475060009,
+  "P2_minus_P1_macro_f1": -0.0014448875539421202,
+  "P1_minus_P0_macro_f1": -0.007369162921117889,
+  "positive_folds_P2_vs_P0": 1,
+  "positive_folds_P2_vs_P1": 2,
+  "P2_minus_P0_EZ_F1": -0.009594697616994108,
+  "P2_minus_P0_EZ_AUPRC": -0.0050170920127722285,
+  "outer_test_accessed": false
+}

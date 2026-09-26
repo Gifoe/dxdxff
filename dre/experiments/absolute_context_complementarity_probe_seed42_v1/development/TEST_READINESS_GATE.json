@@ -1,0 +1,16 @@
+{
+  "pass": false,
+  "terminal": "ABSOLUTE_CONTEXT_COMPLEMENTARITY_NOT_SUPPORTED",
+  "checks": {
+    "source_P0_reproduced": true,
+    "complementarity_gate_pass": false,
+    "P2_apparent_fullval_mean_ge_0_665": false,
+    "P2_apparent_fullval_worst_fold_ge_0_620": false,
+    "P2_fraction_abs_delta_gt_0_45_lt_0_10": true,
+    "no_leakage_or_pathology": true
+  },
+  "P2_apparent_fullval_mean_macro_f1": 0.654032262065179,
+  "P2_apparent_fullval_worst_fold_macro_f1": 0.5987670504029391,
+  "P2_fraction_abs_delta_gt_0_45": 0.0,
+  "outer_test_accessed": false
+}

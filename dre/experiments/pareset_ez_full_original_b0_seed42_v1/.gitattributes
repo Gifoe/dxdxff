@@ -1,0 +1,2 @@
+# Preserve exact server-source and protocol-lock bytes for SHA-256 provenance.
+* -text

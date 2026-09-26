@@ -1,0 +1,7 @@
+# PaReSet-EZ experiment timeline
+
+1. **Original validation-selected seed 42 comparison** — [`pareset_ez_original_inner_outer_seed42_v1`](pareset_ez_original_inner_outer_seed42_v1). Full, base, and matched controls used the frozen fit/validation/test membership. This branch retains its code and compact development/outer results. Full patient Macro-F1 was 0.5935; matched repaired CDEL was 0.6029. The matched control is not the original paper's historical CDEL.
+2. **Flat five-fold no-inner attempt** — branch [`codex/pareset-ez-flat5-noinner-seed42-v1`](https://github.com/Gifoe/dxdxff/tree/codex/pareset-ez-flat5-noinner-seed42-v1). Stopped as superseded after the user clarified that original validation-selected training/evaluation should be retained. Its incomplete outcomes were not published and must not be used as a five-fold comparison.
+3. **Historical B0/full-only seed 42 comparison** — [`pareset_ez_full_original_b0_seed42_v1`](pareset_ez_full_original_b0_seed42_v1). Uses exact historical B0 evidence and CDEL patient-level evaluator while keeping the PaReSet full model and objective unchanged. Full patient Macro-F1 was 0.616170 versus historical CDEL seed 42 at 0.644589 (difference -2.842 pp; lower in 5/5 folds).
+
+All three stages concern the same historical 80-patient development cohort, whose outer outcomes had been viewed before the latest rerun. The later stage is exploratory, not a fresh sealed test. Patient/channel data, caches, checkpoints, and runtime logs are deliberately excluded from GitHub.

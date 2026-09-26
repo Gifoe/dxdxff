@@ -1,0 +1,9 @@
+{
+  "delta_vs_historical_cdel_seed42": -0.02841922843060518,
+  "folds": 5,
+  "historical_cdel_seed42_macro_f1": 0.6445887618867977,
+  "patients": 80,
+  "protocol_sha256": "61997ec1f2ba16628adfe957c9f1996eb1cbb22e945c028ccfa906bd0393d8b9",
+  "seed": 42,
+  "test_patient_macro_f1": 0.6161695334561925
+}

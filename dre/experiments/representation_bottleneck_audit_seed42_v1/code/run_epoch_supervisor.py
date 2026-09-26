@@ -27,10 +27,13 @@ def complete(fold: int, epoch: int) -> bool:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--start-fold", type=int, default=1)
+    parser.add_argument("--end-fold", type=int, default=5)
     parser.add_argument("--max-retries", type=int, default=3)
     options = parser.parse_args()
+    if not (1 <= options.start_fold <= options.end_fold <= 5):
+        raise ValueError("Fold range must be within 1..5")
     ensure_source()
-    for fold in range(options.start_fold, 6):
+    for fold in range(options.start_fold, options.end_fold + 1):
         for epoch in range(1, 31):
             if complete(fold, epoch):
                 print(f"[KEEP] fold={fold} epoch={epoch} already complete", flush=True)
@@ -49,7 +52,7 @@ def main() -> None:
                     print("\n".join(result.stderr.splitlines()[-18:]), file=sys.stderr, flush=True)
             else:
                 raise RuntimeError(f"Frozen probe cell failed after {options.max_retries} attempts: fold={fold} epoch={epoch}")
-    print("[SUPERVISOR] all 150 frozen cells complete", flush=True)
+    print(f"[SUPERVISOR] requested folds {options.start_fold}..{options.end_fold} complete", flush=True)
 
 
 if __name__ == "__main__":

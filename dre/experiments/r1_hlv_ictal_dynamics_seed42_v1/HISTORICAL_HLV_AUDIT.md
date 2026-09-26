@@ -1,0 +1,9 @@
+# Historical HLV audit
+
+The archived `M1_TOOLING_CHECK_SEED42.csv` reports `m1_feat_HLV` patient Macro-F1 `0.657`. Its stage is explicitly `tooling_check`; it lacks a complete, verifiable fixed-80 fit/validation/test provenance. A separate original-server run at `b0_m1_step1_ablation/m1_feat_HLV` reports patient Macro-F1 `0.654462`, not `0.657`. These numbers must not be conflated.
+
+The inspectable original-server run used the older `neuroez_c_four_center_caches` window cache, not the current `neuroez_c_four_center_caches_task1_s5_8_v1` cache. Its saved arguments specify randomly generated five folds (`split_strategy=5fold`, seed 42) and `val_ratio=0.2`, without the current fixed fit/validation/test manifest. It also enabled `drop_high_ez_fraction_lzu=true`; the current experiment instead selects exactly the 80 manifest patients. Therefore the historical score is **not protocol-compatible** with the requested current-80 test.
+
+The inspectable historical configuration was: `NeuroEZCModel` single expert; B0 nine spectral/classical descriptors with `abs,delta,zdelta,ratio`; HLV variables `log_bp_high_gamma,line_length_per_sec,variance` with `zdelta,delta`; gate weights zero, bias `-4`; model dimension 32; 2 heads; dropout 0.4; temporal and record pooling default mean; patient-relative z active; NEZ-positive model label; AdamW, learning rate `1e-4`, weight decay `1e-3`; 30 maximum epochs, patience 6; patient Macro-F1 validation checkpoint criterion and validation-selected threshold; masked BCE with EZ-negative weight 2; all physics auxiliary loss weights zero. The archived training script is `run_m1_step1_continue.ps1` and the feature definition is `build_step1_continue_feature_experiments()`.
+
+The current retest carries forward only compatible mechanism/configuration choices, with a matched R0, a fixed 80-patient manifest and the current cache. It does not reuse historical performance or checkpoints.

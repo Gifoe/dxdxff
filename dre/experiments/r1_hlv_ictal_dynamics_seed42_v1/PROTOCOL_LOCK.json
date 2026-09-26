@@ -1,0 +1,62 @@
+{
+  "experiment": "r1_hlv_ictal_dynamics_seed42_v1",
+  "status": "FROZEN_BEFORE_TRAINING",
+  "seed": 42,
+  "cohort": {"patients": 80, "channels": 7635, "outer_folds": 5},
+  "input_sha256": {
+    "window_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "fixed_partition_manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "source_sha256": {
+    "model_py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "dataset_py": "ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+    "evidence_views_py": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+    "exp_ez_hybrid_py": "d28eeac13ad3ad1916eae03397796f5ba45118b38a30853b8507b7aee67d238d",
+    "run_neuroez_c_py": "3c74d16bbfd8d93a19b448ddfbd00aec056b658c507076958cf680e07665c390"
+  },
+  "model": {
+    "r0": "NeuroEZC single-expert window path, physics branch off",
+    "r1": "same path with only NeuralDynamicsResidualEncoder and gated HLV residual on",
+    "b0_features": "nine spectral/classical variables x abs,delta,zdelta,ratio",
+    "hlv_features": ["log_bp_high_gamma", "line_length_per_sec", "variance"],
+    "hlv_views": ["delta", "zdelta"],
+    "hlv_dimension": 6,
+    "hlv_column_order": ["high_gamma_delta", "high_gamma_zdelta", "line_length_delta", "line_length_zdelta", "variance_delta", "variance_zdelta"],
+    "gate_weight_init": 0.0,
+    "gate_bias_init": -4.0,
+    "patient_relative_z": true,
+    "positive_label": "NEZ",
+    "model_dim": 32,
+    "num_heads": 2,
+    "dropout": 0.4,
+    "temporal_pooling": "mean",
+    "record_pooling": "mean"
+  },
+  "training": {
+    "objective": "masked_bce",
+    "class_weight_mode": "ez_negative",
+    "ez_negative_weight": 2.0,
+    "auxiliary_loss_weights": 0.0,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.001,
+    "batch_patients": 2,
+    "max_epochs": 30,
+    "patience": 6,
+    "checkpoint_metric": "validation patient_macro_f1 with validation-selected threshold",
+    "threshold_candidates": "0.05 to 0.95 inclusive, step 0.05",
+    "same_initialization_for_common_parameters": true
+  },
+  "validation_gate": {
+    "r1_macro_f1_at_least": 0.645,
+    "delta_macro_f1_at_least": 0.01,
+    "positive_folds_at_least": 3,
+    "ez_f1_non_decreasing": true,
+    "auprc_or_mrr_improves": true,
+    "no_implementation_pathology": true,
+    "pathology_limits": {"gate_mean_above": 0.000001, "gate_q90_below": 0.95, "residual_to_base_norm_ratio_below": 1.0, "all_metrics_finite": true}
+  },
+  "outer_test_policy": "Never evaluate R0 or R1 outer-test performance unless all validation gate conditions pass; if passed, freeze checkpoints and thresholds and evaluate once.",
+  "historical_outer_already_viewed": true,
+  "interpretation": "This is an exploratory retest on a previously studied cohort, not a fresh sealed confirmatory estimate."
+}

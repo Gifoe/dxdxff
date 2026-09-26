@@ -1,0 +1,4 @@
+variant,scope,label_using_diagnostic_only,n_patient_fold_cases,oracle_threshold_mean,oracle_threshold_std,oracle_threshold_iqr,oracle_threshold_mad,oracle_macro_f1_mean
+C0_RAW,all_five_validation_folds,True,65,0.4776923097096957,0.14170141040189765,0.20000001788139343,0.10000002384185791,0.7071793071077859
+C1_CENTERED,all_five_validation_folds,True,65,0.29000000185691394,0.1313246100060982,0.25,0.10000000894069672,0.6933961839810276
+C2_ROBUSTZ,all_five_validation_folds,True,65,0.27461538624304993,0.1336249253803709,0.25,0.10000000894069672,0.6946279708789234

@@ -1,0 +1,16 @@
+{
+  "preferred_by_locked_C1_vs_C2_rule": "C2_ROBUSTZ",
+  "retained": false,
+  "C0_mean_macro_f1": 0.6259962097139906,
+  "C1_mean_macro_f1": 0.5867819373710661,
+  "C2_mean_macro_f1": 0.5972493641716685,
+  "preferred_gain_vs_C0": -0.028746845542322097,
+  "positive_folds": 1,
+  "checks": {
+    "gain_ge_0_010": false,
+    "positive_folds_ge_4": false,
+    "mean_ez_f1_nondecreasing": false
+  },
+  "selection_uses_oracle_labels": false,
+  "outer_test_accessed": false
+}

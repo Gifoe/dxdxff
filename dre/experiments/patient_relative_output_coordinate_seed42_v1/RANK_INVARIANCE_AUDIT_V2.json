@@ -1,0 +1,51 @@
+{
+  "pass": true,
+  "terminal": "RANK_INVARIANCE_V2_PASSED",
+  "patient_epoch_cases_per_transform": 1950,
+  "canonical_rank_score": "float64 EZ-positive negative of raw/centered/robust-z NEZ logits; no sigmoid",
+  "minimum_spearman": {
+    "C1_CENTERED": 0.9999999999999998,
+    "C2_ROBUSTZ": 0.9999999999999998
+  },
+  "pairwise_order_violations": {
+    "C1_CENTERED": 0,
+    "C2_ROBUSTZ": 0
+  },
+  "pairwise_order_changed_cases": {
+    "C1_CENTERED": 0,
+    "C2_ROBUSTZ": 0
+  },
+  "stable_sort_mismatch_cases": {
+    "C1_CENTERED": 0,
+    "C2_ROBUSTZ": 0
+  },
+  "maximum_absolute_metric_delta": {
+    "C1_CENTERED": {
+      "EZ_AUPRC": 0.0,
+      "EZ_AUROC": 0.0,
+      "EZ_MRR": 0.0,
+      "Top1_is_EZ": 0.0
+    },
+    "C2_ROBUSTZ": {
+      "EZ_AUPRC": 0.0,
+      "EZ_AUROC": 0.0,
+      "EZ_MRR": 0.0,
+      "Top1_is_EZ": 0.0
+    }
+  },
+  "ranking_metric_changed_cases": {
+    "C1_CENTERED": 0,
+    "C2_ROBUSTZ": 0
+  },
+  "source_float32_probability_tie_cases_with_distinct_logits_diagnostic_only": 5,
+  "tolerance": {
+    "spearman_min": 0.999999999,
+    "ranking_metrics_max_abs": 1e-12,
+    "Top1_is_EZ": "exact",
+    "pairwise_order": "exact",
+    "stable_sort": "exact"
+  },
+  "original_protocol_sha256": "a28aa5d552e5ff830a9b04eeafe4520a4fd485b3b19420eb79b272f2b6f4a90e",
+  "amendment_sha256": "c13c651d2417d7a6798bcf2772059288bde11a8a99f383a600f505bbcac59d13",
+  "outer_test_accessed": false
+}

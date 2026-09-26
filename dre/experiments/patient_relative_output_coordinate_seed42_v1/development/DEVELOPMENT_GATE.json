@@ -1,0 +1,25 @@
+{
+  "pass": false,
+  "terminal": "OUTPUT_COORDINATE_DEVELOPMENT_GATE_FAILED",
+  "preferred_coordinate": "C2_ROBUSTZ",
+  "checks": {
+    "source_C0_reproduced": true,
+    "normalized_candidate_retained": false,
+    "candidate_vloo_macro_f1_ge_0_640": false,
+    "gain_vs_C0_ge_0_010": false,
+    "positive_folds_ge_4": false,
+    "mean_ez_f1_nondecreasing": false,
+    "apparent_fullval_mean_ge_0_665": false,
+    "apparent_fullval_worst_fold_ge_0_620": false,
+    "ranking_invariant": true,
+    "no_score_pathology": true
+  },
+  "candidate_vloo_macro_f1": 0.5972493641716685,
+  "candidate_gain_vs_C0": -0.028746845542322097,
+  "positive_folds": 1,
+  "candidate_apparent_fullval_mean_macro_f1": 0.6317818093364039,
+  "candidate_apparent_fullval_worst_fold_macro_f1": 0.5918586131640692,
+  "minimum_raw_mad": 0.04232911393046379,
+  "minimum_robust_scale": 0.06275714431330562,
+  "outer_test_accessed": false
+}

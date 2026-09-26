@@ -23,8 +23,8 @@ from development_metrics import METRICS, THRESHOLDS, epoch_grid, finalize_fold, 
 RUNTIME = Path(os.environ.get("COORD_RUNTIME", ""))
 DEVELOPMENT = EXPERIMENT / "development"
 VARIANTS = ("C0_RAW", "C1_CENTERED", "C2_ROBUSTZ")
-RANK_METRICS = ("patient_ez_auprc", "patient_ez_auroc", "patient_ez_mrr", "top1_is_ez")
 EXPECTED_LOCK_SHA256 = "a28aa5d552e5ff830a9b04eeafe4520a4fd485b3b19420eb79b272f2b6f4a90e"
+EXPECTED_AMENDMENT_SHA256 = "c13c651d2417d7a6798bcf2772059288bde11a8a99f383a600f505bbcac59d13"
 
 
 def sha256(path: Path) -> str:
@@ -122,16 +122,19 @@ def main() -> None:
         raise RuntimeError("Set absolute COORD_RUNTIME")
     if sha256(EXPERIMENT / "PROTOCOL_LOCK.json") != EXPECTED_LOCK_SHA256:
         raise RuntimeError("Output-coordinate protocol lock changed")
+    if sha256(EXPERIMENT / "RANK_AUDIT_PROTOCOL_AMENDMENT.json") != EXPECTED_AMENDMENT_SHA256:
+        raise RuntimeError("Rank audit amendment changed")
     source = json.loads((EXPERIMENT / "SOURCE_REPRODUCTION.json").read_text(encoding="utf-8"))
     if source.get("pass") is not True or source.get("outer_test_accessed") is not False:
         raise RuntimeError("SOURCE_A1_VLOO_REPRODUCTION_FAILED")
+    rank_audit = json.loads((EXPERIMENT / "RANK_INVARIANCE_AUDIT_V2.json").read_text(encoding="utf-8"))
+    if rank_audit.get("pass") is not True or rank_audit.get("outer_test_accessed") is not False or \
+            rank_audit.get("original_protocol_sha256") != EXPECTED_LOCK_SHA256 or \
+            rank_audit.get("amendment_sha256") != EXPECTED_AMENDMENT_SHA256:
+        raise RuntimeError("OUTPUT_COORDINATE_RANK_INVARIANCE_V2_FAILED")
     lock = json.loads((EXPERIMENT / "PROTOCOL_LOCK.json").read_text(encoding="utf-8"))
     fold_results, fullval, private_rows, oracle_rows, raw_score_rows = [], [], [], [], []
-    rank_max = {variant: {metric: 0.0 for metric in RANK_METRICS} for variant in VARIANTS[1:]}
-    rank_min_spearman = {variant: 1.0 for variant in VARIANTS[1:]}
     cases = 0
-    source_probability_tie_cases = 0
-    ranking_metric_changed_cases = {variant: 0 for variant in VARIANTS[1:]}
     min_mad = float("inf")
     min_scale = float("inf")
     for fold in range(1, 6):
@@ -150,28 +153,12 @@ def main() -> None:
                     generated[variant] = (record, stats, patient_grid(record))
                 raw_stats = generated["C0_RAW"][1]
                 raw_score_rows.append({"fold": fold, "epoch": epoch, **raw_stats})
-                if len(np.unique(np.asarray(patient["score_ez_core"], dtype=np.float32))) < len(np.unique(np.asarray(patient["logits_nez"], dtype=np.float32))):
-                    source_probability_tie_cases += 1
                 min_mad = min(min_mad, raw_stats["mad"])
                 min_scale = min(min_scale, raw_stats["scale"])
-                for variant in VARIANTS[1:]:
-                    stat = generated[variant][1]
-                    if not math.isfinite(stat["spearman"]):
-                        rank_min_spearman[variant] = -1.0
-                    else:
-                        rank_min_spearman[variant] = min(rank_min_spearman[variant], stat["spearman"])
-                    for metric in RANK_METRICS:
-                        delta = abs(generated[variant][2]["fixed"][metric] -
-                                    generated["C0_RAW"][2]["fixed"][metric])
-                        rank_max[variant][metric] = max(rank_max[variant][metric], float(delta))
-                    if any(abs(generated[variant][2]["fixed"][metric] -
-                               generated["C0_RAW"][2]["fixed"][metric]) > 1e-8 for metric in RANK_METRICS):
-                        ranking_metric_changed_cases[variant] += 1
                 cases += 1
             for variant in VARIANTS:
                 epoch_grids[variant].append(epoch_grid(records[variant], epoch))
-        # The audit must pass before any C1/C2 candidate selection.
-        print(f"[COORD] rebuilt fold={fold} all 30 epochs; audited {cases} patient-epochs", flush=True)
+        print(f"[COORD] rebuilt fold={fold} all 30 epochs; evaluated {cases} patient-epochs", flush=True)
         for variant in VARIANTS:
             aggregate, selected = finalize_fold(epoch_grids[variant], variant, fold,
                                                 RUNTIME / "private" / f"fold_{fold}_{variant}_VLOO_PATIENT.csv")
@@ -188,19 +175,7 @@ def main() -> None:
                 oracle_threshold, oracle_f1 = oracle_for_patient(epoch_grids[variant][selected_epoch - 1], patient_idx)
                 oracle_rows.append({"variant": variant, "fold": fold, "subject_id": subject_id,
                                     "oracle_threshold": oracle_threshold, "oracle_macro_f1": oracle_f1})
-    rank_pass = all(rank_min_spearman[variant] >= lock["rank_invariance"]["spearman_min"] and
-                    all(delta <= lock["rank_invariance"]["ranking_metric_delta_max_abs"]
-                        for delta in rank_max[variant].values()) for variant in VARIANTS[1:])
-    rank_audit = {"pass": rank_pass, "terminal": "RANK_INVARIANCE_PASSED" if rank_pass else
-                  "OUTPUT_COORDINATE_RANK_INVARIANCE_FAILED", "patient_epoch_cases": cases,
-                  "cases_per_transform": cases, "minimum_spearman": rank_min_spearman,
-                  "source_probability_tie_cases_with_distinct_logits": source_probability_tie_cases,
-                  "ranking_metric_changed_cases": ranking_metric_changed_cases,
-                  "maximum_absolute_ranking_metric_deltas": rank_max,
-                  "tolerance": lock["rank_invariance"], "outer_test_accessed": False}
-    write_json(EXPERIMENT / "RANK_INVARIANCE_AUDIT.json", rank_audit)
-    if not rank_pass:
-        raise RuntimeError("OUTPUT_COORDINATE_RANK_INVARIANCE_FAILED")
+    rank_pass = True
     if min_mad <= 0 or not math.isfinite(min_mad) or min_scale <= 0 or not math.isfinite(min_scale):
         score_pathology = True
     else:
@@ -309,6 +284,9 @@ def main() -> None:
         if not source_runtime.is_absolute():
             raise RuntimeError("Need private A1 runtime to freeze selected checkpoints")
         manifest = {"coordinate": preferred, "epsilon": 1e-6, "source_protocol_sha256": lock["source_protocol_sha256"],
+                    "original_output_coordinate_protocol_sha256": EXPECTED_LOCK_SHA256,
+                    "rank_audit_amendment_sha256": EXPECTED_AMENDMENT_SHA256,
+                    "source_sha256": lock["source_sha256"],
                     "cache_sha256": lock["input_sha256"]["window_cache"],
                     "split_sha256": lock["input_sha256"]["fixed_partition_manifest"],
                     "outer_test_accessed": False, "folds": []}
@@ -325,11 +303,19 @@ def main() -> None:
 
 def write_report(by, comparison, fullval, stability, oracle, source, rank, candidate, gate) -> None:
     lines = ["# Patient-relative output coordinate: seed-42 validation-only analysis", "",
+             "## A. Original stopped experiment", "",
+             "The original experiment stopped with `OUTPUT_COORDINATE_RANK_INVARIANCE_FAILED`. That result is preserved in `RANK_INVARIANCE_AUDIT.json`; it has not been erased or rewritten.", "",
+             "## B. Engineering amendment", "",
+             "The original audit compared source float32 sigmoid probabilities against transformed float64 probabilities. Distinct logits sometimes collapsed to tied float32 probabilities. The separately committed amendment changes only the rank audit to canonical float64 EZ logit scores; hard-decision scores, selection, and gates are unchanged.", "",
+             "## C. Revised rank audit", "",
              "All results use frozen A1 checkpoints and validation patients only. No new model was trained and no current outer-test result was read.",
              f"Source A1 VLOO reproduction: {'PASS' if source['pass'] else 'FAIL'}; "
              f"mean {source['reproduced_mean']:.10f}; max fold error "
              f"{max(row['absolute_error'] for row in source['folds']):.2e}.",
-             f"Ranking invariance: {'PASS' if rank['pass'] else 'FAIL'} across {rank['patient_epoch_cases']} patient-epochs per transform.", "",
+             f"Canonical logit-space ranking invariance: {'PASS' if rank['pass'] else 'FAIL'} across {rank['patient_epoch_cases_per_transform']} patient-epochs per transform. "
+             f"Float32-probability tie cases (diagnostic only): {rank['source_float32_probability_tie_cases_with_distinct_logits_diagnostic_only']}.", "",
+             "## D. Scientific C1/C2 VLOO results", "",
+             "The rank-metric columns below retain the original hard-score probability semantics for source comparability. They are evaluated at each coordinate's separately VLOO-selected epochs, so their aggregate differences reflect checkpoint selection and occasional finite-precision ties; they are not evidence that a fixed-checkpoint transform improves mathematical ordering.", "",
              "| Coordinate | VLOO Macro-F1 | EZ-F1 | BA | EZ-AUPRC | EZ-AUROC | EZ-MRR | Top-1 EZ | Pred. EZ fraction |",
              "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for variant in VARIANTS:
@@ -344,12 +330,18 @@ def write_report(by, comparison, fullval, stability, oracle, source, rank, candi
     for row in comparison:
         lines.append(f"| {row['fold']} | {row['C0_macro_f1']:.6f} | {row['C1_macro_f1']:.6f} | "
                      f"{row['C2_macro_f1']:.6f} | {row['C1_minus_C0']:+.6f} | {row['C2_minus_C0']:+.6f} |")
+    lines.append(f"\nMean deltas: C1−C0 {np.mean([row['C1_minus_C0'] for row in comparison]):+.6f}; "
+                 f"C2−C0 {np.mean([row['C2_minus_C0'] for row in comparison]):+.6f}; "
+                 f"C2−C1 {np.mean([row['C2_minus_C1'] for row in comparison]):+.6f}. "
+                 f"Positive folds: C1 {sum(row['C1_minus_C0'] > 0 for row in comparison)}/5, "
+                 f"C2 {sum(row['C2_minus_C0'] > 0 for row in comparison)}/5.")
     lines.extend(["", f"Preferred by the locked C1-vs-C2 rule: {candidate['preferred_by_locked_C1_vs_C2_rule']}; "
                   f"retained vs C0: {candidate['retained']}; gain {candidate['preferred_gain_vs_C0']:+.6f}; "
                   f"positive folds {candidate['positive_folds']}/5.",
                   f"Candidate APPARENT_FULLVAL mean/worst-fold Macro-F1: "
                   f"{gate['candidate_apparent_fullval_mean_macro_f1']:.6f}/"
                   f"{gate['candidate_apparent_fullval_worst_fold_macro_f1']:.6f}.", "",
+                  "## E. Threshold stability and F. Label-using oracle diagnostic", "",
                   "| Coordinate | VLOO threshold std | IQR | entropy (bits) | unique | oracle std | oracle IQR | oracle Macro-F1 |",
                   "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"])
     for s, o in zip(stability, oracle, strict=True):
@@ -360,7 +352,7 @@ def write_report(by, comparison, fullval, stability, oracle, source, rank, candi
                   "they were not used to choose an epoch, coordinate, global threshold, or gate outcome. "
                   "A finite 19-point grid can change each patient's oracle Macro-F1 after a monotone score transform, "
                   "because it samples different cut points in raw-logit space.", "",
-                  "Strong-gate checks:"])
+                  "## G. Development gate", "", "Strong-gate checks:"])
     lines.extend(f"- {name}: {'PASS' if passed else 'FAIL'}" for name, passed in gate["checks"].items())
     lines.extend(["", f"**Terminal: `{gate['terminal']}`.**", ""])
     if gate["pass"]:

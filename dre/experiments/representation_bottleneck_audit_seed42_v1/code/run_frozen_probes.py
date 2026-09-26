@@ -424,8 +424,10 @@ def process_epoch(exp, model, fit_loader, val_loader, normalizer, fold: int, epo
     folder = RUNTIME / "private" / f"fold_{fold}" / f"epoch_{epoch:02d}"
     checkpoint_path = A1_RUNTIME / "A1" / f"fold_{fold}" / f"epoch_{epoch:02d}.pt"
     source_hash = sha256(checkpoint_path)
-    if all((folder / f"{variant}_probe.pt").exists() and (folder / f"{variant}_validation_grid.json").exists()
-           for audit in audits for variant in VARIANTS[audit]):
+    if (folder / "representation.pt").exists() and all(
+        (folder / f"{variant}_probe.pt").exists() and (folder / f"{variant}_validation_grid.json").exists()
+        for audit in audits for variant in VARIANTS[audit]
+    ):
         for audit in audits:
             for variant in VARIANTS[audit]:
                 saved = torch.load(folder / f"{variant}_probe.pt", map_location="cpu", weights_only=False)

@@ -44,7 +44,9 @@ def collect_validation_logits(exp, model, loader) -> tuple[list[dict], float]:
         for batch in loader:
             device_batch = core._move_tensors_to_device(batch, exp.device)
             outputs = model(device_batch)
-            logits = outputs["logits"].detach().cpu().numpy()
+            # The frozen A1 classifier emits EZ-positive logits. The locked
+            # coordinate experiment uses NEZ-positive logits, so negate them.
+            logits = (-outputs["logits"]).detach().cpu().numpy()
             score_nez = outputs["score_nez"].detach().cpu().numpy()
             score_ez = outputs["score_ez"].detach().cpu().numpy()
             labels_nez = batch["labels_nez"].numpy()

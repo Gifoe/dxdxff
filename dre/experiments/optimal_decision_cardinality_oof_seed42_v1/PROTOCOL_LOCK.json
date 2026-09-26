@@ -1,0 +1,71 @@
+{
+  "experiment": "optimal_decision_cardinality_oof_seed42_v1",
+  "status": "EXPLORATORY_HISTORICAL_OUTER_PREVIOUSLY_VIEWED",
+  "seed": 42,
+  "folds": [1, 2, 3, 4, 5],
+  "cohort_patients": 80,
+  "historical_feature_profile": "p2_matched_simple",
+  "feature_dimension": 88,
+  "feature_manifest_sha256": "c8b35748f2e50faad9dd03a8c92c120377b0676171368bcde0a0bc0db781294e",
+  "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+  "split_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "feature_table_sha256": "2632b1ec1e6a7690b22d6e33db14d4d956a78fe01e7cb380b4dde38a43b248eb",
+  "previous_crossfit_lock_sha256": "67789305d2bbc691820c5bfda65a44cb6448ef6e798378305046c0c30e453617",
+  "previous_crossfit_code_sha256": "2cdb72c83b2b5b350f0c4205bd6a927f8fa15342962d782c8d9d2eb72a04d8e9",
+  "prior_b0_replay_max_abs_score_difference": 1.482063293201108e-07,
+  "nested_threshold_replay": "Recompute only deterministic nested B0 selection, verify selected epoch and nested patient Macro-F1 against each of the 25 COMPLETE records; reuse saved OOF predictions and refit checkpoints without retraining them. Apply nested selected NEZ probability threshold to corresponding refit B0 OOF logits to define K0.",
+  "oracle": {
+    "ordering": "descending frozen B0 EZ logit, stable original channel order for exact-score ties",
+    "candidate_k": "all integers 0..C",
+    "metric": "patient Macro-F1 with labels=[0,1], zero_division=0",
+    "optimal_set": "retain all K with score within 1e-12 of maximum, including disconnected sets",
+    "parity": "compare with prior threshold oracle; any discrepancy on non-tied patients >1e-9 is a failure; tied patients are separately counted and discrepancy reported",
+    "validation_ceiling_sanity": "mean optimal-K validation Macro-F1 must be in [0.69,0.72] before fitting any head"
+  },
+  "formal_b0": {
+    "fit_oof": "corresponding nested model's selected NEZ probability threshold applied to crossfit refit logits",
+    "validation_and_test": "historical fold B0 validation-selected NEZ probability threshold",
+    "q0": "formal B0 predicted EZ channel count divided by patient channel count"
+  },
+  "target": {
+    "definition": "all optimal K values divided by C, each shifted by q0; interval supervision is union of contiguous optimal-K runs",
+    "constant_c1": "per-patient nearest-to-zero point in the optimal delta union, median across outer-fit OOF patients",
+    "ties": "do not collapse disconnected optimal-K regions"
+  },
+  "raw_context": {
+    "features": "per-patient median and IQR of each original 88 pre-patient-z feature columns (176 values)",
+    "missing": "SimpleImputer(strategy=median, keep_empty_features if available); fit outer-fit only; all-missing axes filled with zero",
+    "transform": "StandardScaler then PCA(n_components=8, svd_solver=full) fitted on outer-fit only; validation uses transform only"
+  },
+  "score_context": {
+    "features": ["q0", "log1p_C", "evidence_mean", "evidence_std", "evidence_min", "evidence_max", "near_operating_0p25z", "near_operating_0p5z", "score_z_q05", "score_z_q10", "score_z_q25", "score_z_q50", "score_z_q75", "score_z_q90", "score_z_q95", "score_z_skew", "upper_tail_gap", "lower_tail_gap"],
+    "normalization": "within-patient EZ logit z-score using population std, minimum std 1e-8; near operating point measured in this z space",
+    "no_raw_logit_mean": true
+  },
+  "variants": ["C0", "C1", "C2", "C3"],
+  "primary": "C3",
+  "learner": {
+    "architecture": "one linear layer, no hidden layers, zero initialization",
+    "input": "C2 standardized score context; C3 standardized concatenation of score context and 8D absolute PCA",
+    "loss": "mean SmoothL1 distance to nearest optimal-delta interval + 0.02*mean(predicted_delta^2)",
+    "optimizer": "full-batch AdamW lr=0.01 weight_decay=0.01, fixed 500 steps, seed 42",
+    "training_scope": "outer-fit OOF patients only; no validation label used in fitting"
+  },
+  "prediction": {
+    "q_hat": "clip(q0 + predicted_delta,0,1)",
+    "k_hat": "numpy.rint(q_hat*C), clamped to [0,C]",
+    "classification": "exact stable top-K by frozen B0 EZ logit; C0 uses exact historical formal B0 classification",
+    "probability": "sigmoid(EZ_logit minus midpoint rank-cut threshold); edge K uses threshold one logit unit outside extrema; exact-score ties at requested boundary trigger deterministic top-K classification and are audited"
+  },
+  "gate": {
+    "mean_validation_macro_gain_min": 0.01,
+    "positive_folds_min": 3,
+    "mean_ez_f1_delta_min": -0.01,
+    "oracle_delta_correlation_mean_positive": true,
+    "validation_oracle_headroom_recovered_min": 0.15,
+    "all_required": true,
+    "outer_test_if_fail": false
+  },
+  "outer_if_pass": "one evaluation only; paired patient bootstrap with 10000 resamples seed=42; no tuning",
+  "public_privacy": "aggregate-only; no patient IDs, channel IDs, patient raw descriptors, prediction arrays, checkpoints or private cache paths"
+}

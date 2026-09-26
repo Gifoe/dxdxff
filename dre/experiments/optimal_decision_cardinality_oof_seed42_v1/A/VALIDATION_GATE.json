@@ -1,0 +1,22 @@
+{
+  "status": "STOP",
+  "primary": "C3",
+  "checks": {
+    "macro_gain": false,
+    "positive_folds": false,
+    "ez_f1": false,
+    "oracle_delta_correlation": false,
+    "headroom_recovery": false
+  },
+  "mean_validation_macro_f1_c0": 0.6283803453087815,
+  "mean_validation_macro_f1_c3": 0.5845790969561052,
+  "mean_validation_macro_gain": -0.04380124835267625,
+  "positive_folds": 0,
+  "mean_validation_ez_f1_delta": -0.07140457076309831,
+  "mean_validation_oracle_k_macro": 0.7028410661227418,
+  "validation_oracle_headroom": 0.07446072081396027,
+  "headroom_fraction_recovered": -0.588246364980987,
+  "mean_fold_correlation_predicted_vs_oracle_delta": -0.006015446023112209,
+  "outer_test_arrays_read": false,
+  "protocol_lock_sha256": "28c64b0aa262f7074d0c750cd691361520fff5872499e687117f154143e4b7d5"
+}

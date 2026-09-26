@@ -1,0 +1,46 @@
+{
+  "experiment": "absolute_context_complementarity_probe_seed42_v1",
+  "frozen_at_utc": "2026-09-26T20:36:39Z",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "source_protocol_sha256": "6694da1b351d7130015661fcce1ec91bec643821392e409f1d5728f472b3aba0",
+  "source_variant": "A1",
+  "source_vloo_macro_f1_by_fold": [0.6549997115717437, 0.6410958089865288, 0.6101185971670673, 0.6329791804569156, 0.5907877503876969],
+  "source_vloo_macro_f1_mean": 0.6259962097139906,
+  "source_tolerance": 1e-6,
+  "input_sha256": {
+    "window_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "fixed_partition_manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "source_sha256": {
+    "neuroez_c/model.py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "neuroez_c/dataset.py": "ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+    "exp_ez_hybrid.py": "d28eeac13ad3ad1916eae03397796f5ba45118b38a30853b8507b7aee67d238d"
+  },
+  "cohort": {"patients": 80, "channels": 7635, "seizure_records": 256, "outer_folds": 5, "validation_patients_per_fold": 13},
+  "freeze": "All A1 parameters frozen. Extract pre-z patient_channel_embedding h and final classifier pre-hook input r under model.eval(). No outer loader is built.",
+  "absolute_context": "For valid channels only: mu=mean(h); sigma=sqrt(mean((h-mu)^2)+1e-5); context=concat(mu,log(sigma+1e-6)). Fit per-dimension mean/std on FIT patients only for each fold and A1 epoch; transform (context-fit_mean)/(fit_std+1e-6) for fit and validation.",
+  "variants": {
+    "P0": "Frozen A1 NEZ-positive logits; no probe",
+    "P1": "Residual head input concat(r, zeros_like(normalized absolute context))",
+    "P2": "Same residual head input concat(r, normalized absolute context)"
+  },
+  "residual_head": "Linear(input_dim,32)-GELU-Dropout(0.10)-Linear(32,1); final Linear weight and bias exactly zero; delta=0.5*tanh(raw_delta); final NEZ logit=A1 logit+delta. P1/P2 identical parameter count and initialization.",
+  "probe_training": {
+    "loss": "A1 patient-equal weighted BCEWithLogits; EZ weight 2, NEZ weight 1, normalize per patient then mean over patients",
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 15,
+    "checkpoint": "Final probe epoch 15 only; no probe-epoch validation selection",
+    "patient_batch": "Full FIT-patient batch, one optimizer step per epoch; canonical patient-ID order, no shuffle. P1/P2 use identical order and initial state.",
+    "seed": 42,
+    "matched_pair_rng": "Initialize each fold/base-epoch pair with torch manual seed 42+1000*fold+epoch, copy the same initialized head to P1/P2, reset the same RNG state before each matched probe train.",
+    "additional_regularizers": false
+  },
+  "validation_selection": "Original A1 VLOO: for each excluded patient, other 12 choose A1 base epoch 1..30 and NEZ probability threshold float32 linspace(0.05,0.95,19), tie break Macro-F1, EZ-F1, BA, closest threshold to .5, earlier A1 epoch. Fullval separately selects on all 13 and is apparent only.",
+  "complementarity_gate": {"P2_minus_P0_macro_f1_min": 0.010, "P2_minus_P1_macro_f1_min": 0.005, "P2_positive_vs_P0_folds_min": 4, "P2_positive_vs_P1_folds_min": 3, "P2_ez_f1_nondecreasing_vs_P0": true, "P2_ez_auprc_delta_vs_P0_min": -0.005, "P2_vloo_macro_f1_min": 0.640},
+  "test_readiness_gate": {"complementarity_gate_required": true, "apparent_fullval_mean_macro_f1_min": 0.665, "apparent_fullval_worst_fold_macro_f1_min": 0.620, "fraction_abs_delta_gt_0_45_max_exclusive": 0.10, "no_leakage_or_pathology": true},
+  "outer_policy": "Development only. Do not read outer-test labels, predictions, metrics, or results. A passing gate freezes a finding only; no outer test or end-to-end retraining.",
+  "public_data_policy": "Commit only aggregate CSV/JSON/Markdown and code/lock. Keep patient IDs, channels, embeddings, logits, labels, checkpoints, private paths and runtime logs outside Git."
+}

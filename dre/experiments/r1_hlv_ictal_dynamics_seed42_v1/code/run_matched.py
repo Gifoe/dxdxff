@@ -11,6 +11,7 @@ import copy
 import hashlib
 import json
 import math
+import os
 import sys
 from pathlib import Path
 
@@ -19,12 +20,20 @@ import torch
 
 
 EXPERIMENT = Path(__file__).resolve().parents[1]
-SOURCE_ROOT = Path(r"E:\DRE-nips\new-pipeline\7-11")
-CACHE = Path(r"D:\nips-temp\neuroez_c_four_center_caches_task1_s5_8_v1\all_window_cache.pkl")
-SPLIT = Path(r"D:\nips-temp\task1_aaai_completion_training\audit\fixed_partition_manifest.csv")
-RUNTIME = Path(r"D:\nips-temp\r1_hlv_ictal_dynamics_seed42_v1")
+SOURCE_ROOT = Path(os.environ.get("R1_HLV_SOURCE_ROOT", ""))
+CACHE = Path(os.environ.get("R1_HLV_WINDOW_CACHE", ""))
+SPLIT = Path(os.environ.get("R1_HLV_FIXED_MANIFEST", ""))
+RUNTIME = Path(os.environ.get("R1_HLV_RUNTIME", ""))
 EXPECTED_CACHE_SHA = "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087"
 EXPECTED_SPLIT_SHA = "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+SOURCE_HASHES = {
+    "neuroez_c/model.py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "neuroez_c/dataset.py": "ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+    "neuroez_c/evidence_views.py": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+    "neuroez_c/physics_dynamics.py": "566fa4786262fd409f64e22eccf747af59d8cd0e58b7f21cec8f3464eb27ec8a",
+    "exp_ez_hybrid.py": "d28eeac13ad3ad1916eae03397796f5ba45118b38a30853b8507b7aee67d238d",
+    "run_neuroez_c.py": "3c74d16bbfd8d93a19b448ddfbd00aec056b658c507076958cf680e07665c390",
+}
 
 
 def sha256(path: Path) -> str:
@@ -36,9 +45,17 @@ def sha256(path: Path) -> str:
 
 
 def assert_sources() -> None:
+    if any(not os.environ.get(name) for name in (
+        "R1_HLV_SOURCE_ROOT", "R1_HLV_WINDOW_CACHE", "R1_HLV_FIXED_MANIFEST", "R1_HLV_RUNTIME",
+    )):
+        raise RuntimeError("Set all four R1_HLV_* private path environment variables")
     for path, expected in ((CACHE, EXPECTED_CACHE_SHA), (SPLIT, EXPECTED_SPLIT_SHA)):
         if not path.is_file() or sha256(path) != expected:
             raise RuntimeError(f"Missing or changed frozen input: {path}")
+    for relative, expected in SOURCE_HASHES.items():
+        path = SOURCE_ROOT / relative
+        if not path.is_file() or sha256(path) != expected:
+            raise RuntimeError(f"Changed source module: {relative}")
 
 
 def install_interleaved_hlv_view() -> None:
@@ -110,14 +127,18 @@ class GateTracker:
     def __init__(self, model):
         self._mask = None
         self.values: list[np.ndarray] = []
-        self.abs_residual: list[float] = []
-        self.norm_ratio: list[float] = []
+        self.abs_residual_sum = 0.0
+        self.residual_sq_sum = 0.0
+        self.base_sq_sum = 0.0
+        self.n_elements = 0
         self.pre_handle = model.register_forward_pre_hook(self._pre)
         self.handle = model.physics_gate.register_forward_hook(self._post)
 
     def _pre(self, _module, inputs):
         batch = inputs[0]
-        self._mask = batch["window_mask"][:, :, :, None] & batch["seizure_channel_mask"][:, :, None, :]
+        self._mask = (
+            batch["window_mask"][:, :, :, None] & batch["seizure_channel_mask"][:, :, None, :]
+        ).unsqueeze(-1)
 
     def _post(self, _module, inputs, output):
         with torch.no_grad():
@@ -130,9 +151,10 @@ class GateTracker:
             residual = (gate * h_dyn)[mask.expand_as(gate)].float()
             base = h_b0[mask.expand_as(gate)].float()
             self.values.append(selected_gate.cpu().numpy())
-            self.abs_residual.append(float(residual.abs().mean().cpu()))
-            self.norm_ratio.append(float(torch.linalg.vector_norm(residual).div(
-                torch.linalg.vector_norm(base).clamp_min(1e-12)).cpu()))
+            self.abs_residual_sum += float(residual.abs().sum().cpu())
+            self.residual_sq_sum += float(residual.square().sum().cpu())
+            self.base_sq_sum += float(base.square().sum().cpu())
+            self.n_elements += residual.numel()
 
     def summary(self):
         values = np.concatenate(self.values) if self.values else np.asarray([], dtype=np.float32)
@@ -143,8 +165,8 @@ class GateTracker:
             "gate_median": float(np.median(values)),
             "gate_q10": float(np.quantile(values, 0.1)),
             "gate_q90": float(np.quantile(values, 0.9)),
-            "mean_abs_gated_residual": float(np.mean(self.abs_residual)),
-            "gated_residual_to_base_norm_ratio": float(np.mean(self.norm_ratio)),
+            "mean_abs_gated_residual": self.abs_residual_sum / self.n_elements,
+            "gated_residual_to_base_norm_ratio": math.sqrt(self.residual_sq_sum / max(self.base_sq_sum, 1e-24)),
         }
 
     def close(self):
@@ -241,7 +263,7 @@ def run_validation(variant):
         best_threshold = 0.5
         stale = 0
         ckpt_path = fold_dir / "selected.pt"
-        for epoch in range(1, 31):
+        for epoch in range(1, 31) if not ckpt_path.exists() else []:
             exp.current_epoch = epoch
             train_metrics = exp._train_one_epoch(model, train_loader, optimizer, ez_weight)
             _, _, raw_records = exp._evaluate(model, val_loader, ez_weight, split_name="val")
@@ -266,6 +288,8 @@ def run_validation(variant):
             if stale >= 6:
                 break
         checkpoint = torch.load(ckpt_path, map_location=exp.device, weights_only=False)
+        best_epoch = int(checkpoint["selected_epoch"])
+        best_threshold = float(checkpoint["threshold"])
         model.load_state_dict(checkpoint["model_state_dict"])
         tracker = GateTracker(model) if variant == "R1" else None
         _, _, raw_records = exp._evaluate(model, val_loader, ez_weight, split_name="val")

@@ -5,11 +5,12 @@ from __future__ import annotations
 import csv
 import json
 import math
+import os
 from pathlib import Path
 from statistics import mean
 
 
-ROOT = Path(r"D:\nips-temp\r1_hlv_ictal_dynamics_seed42_v1")
+ROOT = Path(os.environ.get("R1_HLV_RUNTIME", ""))
 PUBLIC = Path(__file__).resolve().parents[1] / "validation"
 FIELDS = (
     "patient_macro_f1", "patient_macro_ez_f1", "patient_macro_nez_f1",
@@ -46,6 +47,8 @@ def load_rows(variant: str) -> list[dict]:
 
 
 def main() -> None:
+    if not os.environ.get("R1_HLV_RUNTIME"):
+        raise RuntimeError("Set R1_HLV_RUNTIME to the private experiment output directory")
     r0, r1 = load_rows("R0"), load_rows("R1")
     write_csv(PUBLIC / "R0_VALIDATION_RESULTS.csv", r0)
     write_csv(PUBLIC / "R1_VALIDATION_RESULTS.csv", r1)

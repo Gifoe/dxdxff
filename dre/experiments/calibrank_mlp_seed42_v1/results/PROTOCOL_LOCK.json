@@ -1,0 +1,52 @@
+{
+  "adapter_input": "detached B0 hidden and logits; no patient/center identifiers or labels in forward",
+  "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+  "backbone": "frozen patient_z_mlp, 88 input, 96 hidden",
+  "calibration_hidden_dimension": 16,
+  "calibration_statistics_dimension": 13,
+  "code_sha256": "a8a475c09e5f3ee3c5b8273a6f7c7106e448d7b2343a7bb7aa6aa32e6990f5c2",
+  "diagnostics_sha256": "32aa484a6de7ce3be2ac997028eea71c2892ec987575e9d50604be4edc582225",
+  "embedding_hashes": {
+    "1": "5fe6682d16ba50040fb4e86cf2d677babaa3c12fea7767ba2069ec25907f81e4",
+    "2": "cc64f939493c7b0d43750b36bb3385bf55f84ea25d36433efcf49d1ee7f6e79e",
+    "3": "594ea764b6a14903688b0bf5962b217326cf549e78bbe40e0cb4ae584e51b201",
+    "4": "6809d90dc7ef0f1d25a768aeeb6a3ea8fcb32cc7094899ca3698b70e0fee6711",
+    "5": "2886c82bbf553ef953b4084aecaaae4995f977b56300297a6d7f82651db3ccb4"
+  },
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "gradient_clip": 1.0,
+  "learning_rate": 0.001,
+  "loss": {
+    "count": 0.1,
+    "delta_squared": 0.01,
+    "final_bce": 1.0,
+    "rank": 0.05
+  },
+  "max_epochs": 30,
+  "minimum_stop_epoch": 6,
+  "optimizer": "AdamW",
+  "oracle_used_for_training": false,
+  "outer_test_used_for_tuning": false,
+  "patience": 6,
+  "rank_dropout": 0.1,
+  "rank_projection_dimension": 16,
+  "ranking_residual_bound": 0.1,
+  "replay_audit_sha256": "769a0aab24b90d9d1ecd4eef7f58b83301ecae9e6e10d3a7ddb94246dfed6e85",
+  "seed": 42,
+  "selection": "validation patient Macro-F1, then EZ-F1, then earliest epoch; epoch0 B0 legal",
+  "status": "EXPLORATORY_OUTER_PREVIOUSLY_VIEWED",
+  "threshold": "original frozen patient-Macro-F1 selector, validation only, 0.005 grid",
+  "variants": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "weight_decay": 0.0001
+}

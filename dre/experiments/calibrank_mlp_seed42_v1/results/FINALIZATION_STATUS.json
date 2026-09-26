@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cells": 20,
+  "variants": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "patients_per_variant": 80,
+  "engineering_repair": "Post-training pandas.query scope error in positive-fold count; no model work rerun.",
+  "training_lock_preserved": true
+}

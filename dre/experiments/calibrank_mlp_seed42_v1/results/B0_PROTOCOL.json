@@ -1,0 +1,22 @@
+{
+  "epochs": 30,
+  "feature_cache": "D:\\nips-temp\\neuroez_c_four_center_caches_task1_s5_8_v1\\all_window_cache.pkl",
+  "feature_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "fold_manifest_hash": "3635a5dabf54ee06411f54492f9660eb8807cd1b54796c727bc89ee644787355",
+  "label_semantics": "NEZ=1,EZ=0",
+  "models": [
+    "deepsets_bce",
+    "patient_z_mlp",
+    "patient_rank_mlp",
+    "patient_z_logistic",
+    "patient_z_rbf_svm"
+  ],
+  "patience": 6,
+  "protocol": "sensitivity80_p2_q10_fixed_validation",
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "test_labels_used_for_selection": false
+}

@@ -1,0 +1,5 @@
+# Aggregate-only engineering repair
+
+All 20 `variant × fold` cells completed under the original `results/PROTOCOL_LOCK.json`. After the final cell, the training runner failed while counting positive folds: a `pandas.DataFrame.query()` expression inside a comprehension could not resolve its local `variant` variable. This happened **after** every checkpoint, threshold, private test-patient metric and `COMPLETE.json` had been saved. No training cell failed and no cell was rerun.
+
+`code/finalize_calibrank.py` reads the immutable cell records, verifies each recorded fold metric against its private test-patient table, confirms the same 80 patients in each variant, checks B0 against the original diagnostic aggregate, then computes the four public aggregate CSVs and fixed-seed 2,000-replicate patient-paired bootstrap. It replaces only the failed positive-fold count with explicit index lookup. The original training-code hash and protocol lock are preserved; this repair changes no model, loss, split, validation selection or outer prediction. `results/FINALIZATION_STATUS.json` records PASS.

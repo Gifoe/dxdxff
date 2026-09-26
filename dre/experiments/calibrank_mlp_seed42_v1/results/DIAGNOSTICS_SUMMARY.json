@@ -1,0 +1,89 @@
+{
+  "agreement": {
+    "b0_bcr": {
+      "spearman": 0.7454239081668123,
+      "top10pct_disagreement": 0.5528668468413513
+    },
+    "b0_prq": {
+      "spearman": 0.6916306099234888,
+      "top10pct_disagreement": 0.6473251738827036
+    },
+    "prq_bcr": {
+      "spearman": 0.7851875362906335,
+      "top10pct_disagreement": 0.5891725504579102
+    }
+  },
+  "b0": {
+    "balanced_accuracy": 0.6641791392268257,
+    "ez_auprc": 0.5319959936611567,
+    "ez_auroc": 0.7268443834107704,
+    "ez_f1": 0.4238657223879644,
+    "ez_mrr": 0.7330307468267027,
+    "macro_f1": 0.6161672347405565,
+    "top1_is_ez": 0.65,
+    "true_k_recall": 0.4693826135968472
+  },
+  "channels": 7635,
+  "constructive_gate": {
+    "pass": true,
+    "rule": "Proceed only if oracle shift or true-K gains >= 0.01 Macro-F1, or BCR ranking AUPRC exceeds B0 by >= 0.005."
+  },
+  "feature_dimension": 88,
+  "feature_profile": "p2_matched_simple",
+  "oracle_shift": {
+    "balanced_accuracy": 0.7174430950130801,
+    "delta_vs_b0_macro_f1": 0.08643463321361855,
+    "ez_f1": 0.5443409975935678,
+    "macro_f1": 0.702601867954175
+  },
+  "oracle_true_k": {
+    "balanced_accuracy": 0.6492484669302281,
+    "delta_vs_b0_macro_f1": 0.03308123218967163,
+    "ez_f1": 0.4693826135968472,
+    "macro_f1": 0.6492484669302281
+  },
+  "patients": 80,
+  "provenance": {
+    "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+    "cdel_ledger_sha256": "eb251b4a93a196da4e474901619fc49d20fb3d444cc41c8474e5056930f8f146",
+    "feature_manifest_sha256": "c8b35748f2e50faad9dd03a8c92c120377b0676171368bcde0a0bc0db781294e",
+    "split_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "ranking": {
+    "b0": {
+      "ez_auprc": 0.5319959936611567,
+      "ez_auroc": 0.7268443834107704,
+      "ez_mrr": 0.7330307468267027,
+      "top1_is_ez": 0.65,
+      "true_k_recall": 0.4693826135968472
+    },
+    "bcr": {
+      "ez_auprc": 0.5623110058802782,
+      "ez_auroc": 0.7354603622851681,
+      "ez_mrr": 0.7747942203199568,
+      "top1_is_ez": 0.6875,
+      "true_k_recall": 0.4981625433452276
+    },
+    "prq": {
+      "ez_auprc": 0.5211746750735775,
+      "ez_auroc": 0.7409428541589076,
+      "ez_mrr": 0.6886285891121532,
+      "top1_is_ez": 0.5625,
+      "true_k_recall": 0.46497739213621997
+    }
+  },
+  "seed": 42,
+  "shift_distribution": {
+    "median": -0.030238643843433444,
+    "q10": -1.034807980015235,
+    "q25": -0.7113122201803018,
+    "q75": 0.3445693163524839,
+    "q90": 0.7471341458918173
+  },
+  "shift_patient_outcomes": {
+    "degraded": 0,
+    "improved": 79,
+    "unchanged": 1
+  },
+  "status": "RETROSPECTIVE_ORACLE_ONLY"
+}

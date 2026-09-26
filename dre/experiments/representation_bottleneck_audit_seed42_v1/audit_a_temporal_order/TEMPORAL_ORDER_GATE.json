@@ -1,0 +1,26 @@
+{
+  "pass": false,
+  "terminal": "TEMPORAL_ORDER_NOT_SUPPORTED",
+  "checks": {
+    "gain_ge_0_010": false,
+    "matched_gain_ge_0_005": false,
+    "positive_vs_baseline_ge_4": false,
+    "positive_vs_control_ge_3": false,
+    "EZ_F1_nondecreasing": false,
+    "EZ_AUPRC_preserved": false,
+    "VLOO_macro_f1_ge_0_640": false
+  },
+  "summary": {
+    "mechanism": "temporal_order",
+    "baseline_macro_f1": 0.6259962097139906,
+    "candidate_macro_f1": 0.6178427395015396,
+    "delta_vs_baseline": -0.008153470212451053,
+    "matched_control_macro_f1": 0.6162966858168872,
+    "delta_vs_matched_control": 0.0015460536846523265,
+    "positive_folds_vs_baseline": 1,
+    "positive_folds_vs_control": 2,
+    "EZ_F1_delta": -0.013431915932715643,
+    "AUPRC_delta": -0.007557713309447878
+  },
+  "outer_test_accessed": false
+}

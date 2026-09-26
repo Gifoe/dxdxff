@@ -1,0 +1,26 @@
+{
+  "pass": false,
+  "terminal": "RECRUITMENT_RANK_NOT_SUPPORTED",
+  "checks": {
+    "gain_ge_0_010": false,
+    "matched_gain_ge_0_005": false,
+    "positive_vs_baseline_ge_4": false,
+    "positive_vs_control_ge_3": false,
+    "EZ_F1_nondecreasing": false,
+    "EZ_AUPRC_preserved": false,
+    "VLOO_macro_f1_ge_0_640": false
+  },
+  "summary": {
+    "mechanism": "recruitment_rank",
+    "baseline_macro_f1": 0.6259962097139906,
+    "candidate_macro_f1": 0.6142710529160063,
+    "delta_vs_baseline": -0.01172515679798436,
+    "matched_control_macro_f1": 0.6230350061305219,
+    "delta_vs_matched_control": -0.008763953214515618,
+    "positive_folds_vs_baseline": 0,
+    "positive_folds_vs_control": 1,
+    "EZ_F1_delta": -0.01993132397794889,
+    "AUPRC_delta": -0.007039038572119183
+  },
+  "outer_test_accessed": false
+}

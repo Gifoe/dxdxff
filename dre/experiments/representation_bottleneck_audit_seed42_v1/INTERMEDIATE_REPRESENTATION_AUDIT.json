@@ -1,0 +1,20 @@
+{
+  "cached_fold_epoch_cells": 150,
+  "total_private_cache_bytes": 73059965888,
+  "fit_patients_first_cell": 51,
+  "validation_patients_first_cell": 13,
+  "window_input_dim": 36,
+  "four_views": [
+    "ABS",
+    "DELTA",
+    "ZDELTA",
+    "RATIO"
+  ],
+  "view_dim_each": 9,
+  "window_encoder_output_dim": 32,
+  "temporal_pooled_dim": 32,
+  "cross_seizure_patient_channel_dim": 64,
+  "contextual_preclassifier_dim": 64,
+  "frozen_logit_replay_checked_during_extraction": true,
+  "outer_test_accessed": false
+}

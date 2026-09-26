@@ -1,0 +1,27 @@
+{
+  "pass": false,
+  "terminal": "CROSS_SEIZURE_PERSISTENCE_NOT_SUPPORTED",
+  "checks": {
+    "gain_ge_0_010": false,
+    "matched_gain_ge_0_005": false,
+    "positive_vs_baseline_ge_4": false,
+    "positive_vs_control_ge_3": true,
+    "EZ_F1_nondecreasing": false,
+    "EZ_AUPRC_preserved": false,
+    "VLOO_macro_f1_ge_0_640": false,
+    "multiseizure_subset_C2_minus_C1_positive": true
+  },
+  "summary": {
+    "mechanism": "cross_seizure_persistence",
+    "baseline_macro_f1": 0.6259962097139906,
+    "candidate_macro_f1": 0.6206929489228573,
+    "delta_vs_baseline": -0.005303260791133302,
+    "matched_control_macro_f1": 0.618164866622044,
+    "delta_vs_matched_control": 0.0025280823008133613,
+    "positive_folds_vs_baseline": 2,
+    "positive_folds_vs_control": 4,
+    "EZ_F1_delta": -0.007842927480430362,
+    "AUPRC_delta": -0.0062081779177549645
+  },
+  "outer_test_accessed": false
+}

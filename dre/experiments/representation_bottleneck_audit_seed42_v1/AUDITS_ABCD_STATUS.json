@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "source_reproduced": true,
+  "probe_cells": 900,
+  "view_retraining_cells": 450,
+  "terminals": {
+    "A": "TEMPORAL_ORDER_NOT_SUPPORTED",
+    "B": "RECRUITMENT_RANK_NOT_SUPPORTED",
+    "C": "CROSS_SEIZURE_PERSISTENCE_NOT_SUPPORTED",
+    "D": "VIEW_REDUNDANCY_IDENTIFIED"
+  },
+  "outer_test_accessed": false
+}

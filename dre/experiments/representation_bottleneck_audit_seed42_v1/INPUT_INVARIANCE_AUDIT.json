@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "folds": [
+    {
+      "fold": 1,
+      "epochs": 30,
+      "all_FIT_validation_inputs_bitwise_identical": true
+    },
+    {
+      "fold": 2,
+      "epochs": 30,
+      "all_FIT_validation_inputs_bitwise_identical": true
+    },
+    {
+      "fold": 3,
+      "epochs": 30,
+      "all_FIT_validation_inputs_bitwise_identical": true
+    },
+    {
+      "fold": 4,
+      "epochs": 30,
+      "all_FIT_validation_inputs_bitwise_identical": true
+    },
+    {
+      "fold": 5,
+      "epochs": 30,
+      "all_FIT_validation_inputs_bitwise_identical": true
+    }
+  ],
+  "cells_checked": 150,
+  "fields": [
+    "normalized_four_view_x",
+    "relative_window_centers",
+    "channel_mask",
+    "window_mask"
+  ],
+  "recruitment_features_reusable_per_fold": true,
+  "outer_test_accessed": false
+}

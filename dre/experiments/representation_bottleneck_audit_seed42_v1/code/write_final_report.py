@@ -67,7 +67,7 @@ def main() -> None:
                   f"- Chronological temporal order beyond shuffled control: **{a['terminal']}**.",
                   f"- Cross-channel recruitment rank beyond magnitude-only evidence: **{b['terminal']}**.",
                   f"- Cross-seizure persistence beyond mean/std aggregation: **{c['terminal']}**. The >=2-seizure subset is diagnostic only.",
-                  f"- Four-view audit: **{d['terminal']}**. ABS removal: {d['findings']['remove_ABS']['interpretation']}; RATIO removal: {d['findings']['remove_RATIO']['interpretation']}; DELTA+ZDELTA only: {d['findings']['delta_zdelta_only']['interpretation']}.",
+                  f"- Four-view audit: **{d['terminal']}**. ABS removal and RATIO removal are individually inconclusive. Removing both to retain only DELTA+ZDELTA lowers Macro-F1 by {abs(d['findings']['delta_zdelta_only']['macro_f1_delta']):.6f} in 4/5 folds; the pair is jointly useful, but neither view is individually proven necessary.",
                   "- Candidates reaching VLOO Macro-F1 >=0.640: " + (", ".join(row["mechanism"] for row in matrix[:3] if float(row["candidate_macro_f1"]) >= 0.64) or "none") + ".",
                   "- Frozen probes with >=1 pp gain over A1: " + (", ".join(row["mechanism"] for row in matrix[:3] if float(row["delta_vs_baseline"]) >= 0.01) or "none") + ".",
                   "- Frozen probes with positive matched-control mean: " + (", ".join(row["mechanism"] for row in matrix[:3] if float(row["delta_vs_matched_control"]) > 0) or "none") + ".",
@@ -79,10 +79,12 @@ def main() -> None:
         row = corr[name]
         lines.append(f"| {name} | {row['pearson_r']} | {row['spearman_rho']} |")
     lines.extend(["", "Failure-type counts (fixed pooled-median definitions): " + ", ".join(f"{row['failure_type']}={row['n_cases']}" for row in failures) + ".",
+                  "Among the 32 low-Macro-F1 cases, 28 also have poor ranking and 4 have good ranking; this is a descriptive ranking-associated failure pattern, not causal evidence or an independent prediction test.",
                   "Center descriptive aggregates (n patients, mean Macro-F1): " + ", ".join(f"{row['center']} ({row['n_patients']}, {float(row['macro_f1_mean']):.3f})" for row in centers) + ". Small-n centers are not interpreted as causal effects.",
-                  "The cache window masks may have no missingness variation; see the failure-stratification report before interpreting the window-quality correlation.",
+                  "Seizure count and true EZ fraction have near-zero rank correlation with Macro-F1 here; channel count is moderately negative. Window-mask missingness has zero variation, so window quality cannot be diagnosed from this cache field.",
                   "", "## Decision", "",
                   "Mechanisms passing their own frozen development gates: " + (", ".join(supported) if supported else "none") + ".",
+                  "The identified D result is joint view necessity, not a successful replacement model: no frozen probe improved A1, no candidate reached 0.640 VLOO Macro-F1, and the individual ABS/RATIO roles remain unresolved. It does not by itself justify a constructive redesign.",
                   "These exploratory diagnostics alone are not sealed confirmation and do not authorize an outer-test claim.",
                   f"Exact terminal: `{terminal}`.", ""])
     (EXPERIMENT / "FINAL_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
@@ -96,6 +98,7 @@ def main() -> None:
                       "- D: original A1 D0 reused, 3 matched ablations × 5 folds × 30 epochs trained from the exact fold initialization, with full 36-D architecture and view masking after the original FIT normalizer.",
                       f"- Private intermediate cache: {audit['cached_fold_epoch_cells']} cells; schema 36-D input, 32-D window/temporal embeddings, 64-D patient/contextual embeddings. Private cache bytes: {audit['total_private_cache_bytes']}.",
                       "- Engineering repair: NumPy native access violation during quantile of short strided seizure arrays was replaced by a pure-Python linear-interpolation quantile with identical mathematical semantics; all completed cells and checkpoints were preserved and resumed.",
+                      "- One unreadable private representation cache cell was quarantined and rebuilt from its exact frozen A1 checkpoint; the six existing probe heads and validation grids were preserved. The subsequent 150-cell input invariance scan passed.",
                       "- Patient-level representations, IDs, labels, scores, failure rows, model checkpoints and logs remain in the private server runtime. Public outputs are aggregate only.",
                       "- No outer-test loader was constructed and no outer predictions/metrics were evaluated. The underlying historical cache constructor indexes cohort metadata; no outer labels or outcomes were used for training, selection, diagnostics or gates.", ""]
     (EXPERIMENT / "IMPLEMENTATION_AUDIT.md").write_text("\n".join(implementation), encoding="utf-8")

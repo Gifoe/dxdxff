@@ -1,0 +1,54 @@
+{
+  "terminal": "VIEW_REDUNDANCY_IDENTIFIED",
+  "findings": {
+    "remove_ABS": {
+      "ablated_variant": "D1",
+      "macro_f1_delta": 0.00467557202058988,
+      "EZ_F1_delta": 0.004577830137938388,
+      "EZ_AUPRC_delta": -0.043510978445927884,
+      "fold_deltas": [
+        0.026576794878946597,
+        0.015377112789552005,
+        0.009020909069837879,
+        -0.0147986268818453,
+        -0.012798329753540783
+      ],
+      "view_removable": false,
+      "removed_view_positively_useful": false,
+      "interpretation": "inconclusive"
+    },
+    "remove_RATIO": {
+      "ablated_variant": "D2",
+      "macro_f1_delta": 0.00194763189552849,
+      "EZ_F1_delta": -0.010758655459801092,
+      "EZ_AUPRC_delta": -0.017839276354532196,
+      "fold_deltas": [
+        -0.00687465488764083,
+        -0.0015029121079985774,
+        -0.022128062018740735,
+        0.02350764715651943,
+        0.016736141335503496
+      ],
+      "view_removable": false,
+      "removed_view_positively_useful": false,
+      "interpretation": "inconclusive"
+    },
+    "delta_zdelta_only": {
+      "ablated_variant": "D3",
+      "macro_f1_delta": -0.009125311243311618,
+      "EZ_F1_delta": -0.0036479892834679895,
+      "EZ_AUPRC_delta": -0.03627261352543887,
+      "fold_deltas": [
+        -0.012996387489341288,
+        0.02692185770774147,
+        -0.018941372273033386,
+        -0.020622539319178013,
+        -0.019988114842746096
+      ],
+      "view_removable": false,
+      "removed_view_positively_useful": true,
+      "interpretation": "useful"
+    }
+  },
+  "outer_test_accessed": false
+}

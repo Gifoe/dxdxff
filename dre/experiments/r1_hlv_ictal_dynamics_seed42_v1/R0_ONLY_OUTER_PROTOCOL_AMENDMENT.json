@@ -1,0 +1,34 @@
+{
+  "amendment": "R0_ONLY_OUTER_TEST_AFTER_FAILED_R1_GATE",
+  "recorded_at_utc": "2026-09-26T18:22:04Z",
+  "reason": "The user explicitly requested a frozen R0-only five-fold outer test after the original R1 validation gate failed.",
+  "original_protocol_lock_sha256": "1ba2d1f6f524993c799aff984ea64050d07f43d0ffc4f9738e36f023ba7d6a84",
+  "original_validation_gate_pass": false,
+  "deviation": "The original protocol prohibited any outer evaluation when the R1 gate failed. This amendment permits R0 outer evaluation only; it does not retroactively satisfy or alter that gate.",
+  "scope": {
+    "variant": "R0",
+    "outer_folds": [1, 2, 3, 4, 5],
+    "expected_unique_outer_patients": 80,
+    "R1_outer_evaluation_authorized": false,
+    "retraining_or_checkpoint_reselection_authorized": false,
+    "test_result_tuning_authorized": false
+  },
+  "input_sha256": {
+    "window_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "fixed_partition_manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "frozen_r0_folds": [
+    {"fold": 1, "selected_epoch": 20, "threshold": 0.550000011920929, "checkpoint_sha256": "079ac955b04e366aa226c84397e09529430651aef7559d6a205d2ddcc3486030"},
+    {"fold": 2, "selected_epoch": 18, "threshold": 0.44999998807907104, "checkpoint_sha256": "4f1707847235fb5e7af435755193f29c85e19c8d407e006caee0c45ba017f883"},
+    {"fold": 3, "selected_epoch": 6, "threshold": 0.4000000059604645, "checkpoint_sha256": "fd1cb160515040455350836c166ea71daba21f401850aece743a077b4760a430"},
+    {"fold": 4, "selected_epoch": 15, "threshold": 0.5, "checkpoint_sha256": "0ccb6fadb596ed18d9c14db125946263891cc8cfc84ee02032d68d02729dcfa9"},
+    {"fold": 5, "selected_epoch": 27, "threshold": 0.5, "checkpoint_sha256": "964063543a35df4d4bf889210615b742e7ce60029f2067c58be8ab026caf4da3"}
+  ],
+  "outcomes": {
+    "primary": "80-patient mean of patient_macro_f1",
+    "secondary": ["patient_macro_ez_f1", "patient_macro_balanced_accuracy", "patient_macro_auprc_ez"],
+    "reporting": "five fold aggregate rows, 80-patient mean, descriptive patient bootstrap 95% percentile interval with 2000 resamples and seed 42042; no model comparison or tuning"
+  },
+  "interpretation": "Exploratory only: the same 80-patient cohort has historical outer outcomes already viewed, and this is a post-hoc user-authorized change to the original gate.",
+  "public_data_policy": "Only aggregate CSV/JSON/Markdown and source code may be committed; patient identifiers, patient/channel records, checkpoints, caches, and runtime logs remain private."
+}

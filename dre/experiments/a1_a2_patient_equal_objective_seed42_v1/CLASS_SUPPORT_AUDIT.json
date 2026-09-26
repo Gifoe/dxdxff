@@ -1,0 +1,63 @@
+{
+  "cohort_patients": 80,
+  "no_outer_test_examples_built": true,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_patients": 51,
+      "fit_channels": 4623,
+      "fit_missing_ez": 0,
+      "fit_missing_nez": 0,
+      "validation_patients": 13,
+      "validation_channels": 1381,
+      "validation_missing_ez": 0,
+      "validation_missing_nez": 0
+    },
+    {
+      "fold": 2,
+      "fit_patients": 51,
+      "fit_channels": 4951,
+      "fit_missing_ez": 0,
+      "fit_missing_nez": 0,
+      "validation_patients": 13,
+      "validation_channels": 1186,
+      "validation_missing_ez": 0,
+      "validation_missing_nez": 0
+    },
+    {
+      "fold": 3,
+      "fit_patients": 50,
+      "fit_channels": 4725,
+      "fit_missing_ez": 0,
+      "fit_missing_nez": 0,
+      "validation_patients": 13,
+      "validation_channels": 1164,
+      "validation_missing_ez": 0,
+      "validation_missing_nez": 0
+    },
+    {
+      "fold": 4,
+      "fit_patients": 52,
+      "fit_channels": 4943,
+      "fit_missing_ez": 0,
+      "fit_missing_nez": 0,
+      "validation_patients": 13,
+      "validation_channels": 1267,
+      "validation_missing_ez": 0,
+      "validation_missing_nez": 0
+    },
+    {
+      "fold": 5,
+      "fit_patients": 51,
+      "fit_channels": 5025,
+      "fit_missing_ez": 0,
+      "fit_missing_nez": 0,
+      "validation_patients": 13,
+      "validation_channels": 1275,
+      "validation_missing_ez": 0,
+      "validation_missing_nez": 0
+    }
+  ],
+  "all_active_fit_validation_patients_have_both_classes": true,
+  "missing_class_soft_f1_rule": "true missing class gets soft F1=0, matching zero_division=0"
+}

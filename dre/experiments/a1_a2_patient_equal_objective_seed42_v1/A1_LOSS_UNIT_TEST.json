@@ -1,0 +1,52 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "test": "batch_one_equals_R0_masked_BCE",
+      "pass": true,
+      "R0": 0.537378191947937,
+      "A1": 0.537378191947937
+    },
+    {
+      "test": "duplicating_all_valid_channels_preserves_patient_loss",
+      "pass": true,
+      "original": 0.537378191947937,
+      "duplicated": 0.537378191947937
+    },
+    {
+      "test": "50_vs_150_channels_is_equal_patient_mean",
+      "pass": true,
+      "A": 1.1551560163497925,
+      "B": 0.6717904210090637,
+      "A1": 0.9134732484817505
+    },
+    {
+      "test": "channel_permutation_invariant",
+      "pass": true,
+      "original": 0.9134732484817505,
+      "permuted": 0.9134732484817505
+    },
+    {
+      "test": "finite_A1_A2_gradient",
+      "pass": true,
+      "soft_loss": 0.5857400894165039,
+      "soft_nez_f1": 0.5105608701705933,
+      "soft_ez_f1": 0.3179589807987213
+    },
+    {
+      "test": "locked_beta_schedule",
+      "pass": true,
+      "epochs_1_5_6_7_8_9_10_11_30": [
+        0.0,
+        0.0,
+        0.0,
+        0.025,
+        0.05,
+        0.07500000000000001,
+        0.1,
+        0.1,
+        0.1
+      ]
+    }
+  ]
+}

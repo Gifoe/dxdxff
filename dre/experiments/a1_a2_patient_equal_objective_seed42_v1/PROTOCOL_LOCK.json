@@ -1,0 +1,60 @@
+{
+  "experiment": "a1_a2_patient_equal_objective_seed42_v1",
+  "status": "FROZEN_BEFORE_TRAINING",
+  "source_branch": "codex/r1-hlv-ictal-dynamics-seed42-v1",
+  "seed": 42,
+  "cohort": {"patients": 80, "channels": 7635, "seizure_records": 256, "folds": 5, "validation_patients_per_fold": 13},
+  "input_sha256": {
+    "window_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "fixed_partition_manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "source_sha256": {
+    "model_py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "dataset_py": "ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+    "evidence_views_py": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+    "physics_dynamics_py": "566fa4786262fd409f64e22eccf747af59d8cd0e58b7f21cec8f3464eb27ec8a",
+    "exp_ez_hybrid_py": "d28eeac13ad3ad1916eae03397796f5ba45118b38a30853b8507b7aee67d238d",
+    "run_neuroez_c_py": "3c74d16bbfd8d93a19b448ddfbd00aec056b658c507076958cf680e07665c390"
+  },
+  "architecture": "identical matched R0; HLV/physics and all additional mechanisms off; patient-relative z on; model_dim=32; heads=2; dropout=0.4; temporal/record pooling=mean; NEZ-positive logit",
+  "variants": {
+    "A0": "exact R0 masked weighted BCE: EZ=2, NEZ=1, aggregate channels in batch",
+    "A1": "per-patient weighted BCE with same EZ=2, NEZ=1; mean across active patients",
+    "A2": "A1 plus beta(epoch) times patient soft Macro-F1 on identical final logits"
+  },
+  "a2_beta_by_epoch": {"1-6": 0.0, "7": 0.025, "8": 0.05, "9": 0.075, "10-30": 0.1},
+  "soft_f1_epsilon": 1e-7,
+  "missing_true_class_soft_f1": "zero, matching hard zero_division=0; class support must be audited before training",
+  "training": {
+    "optimizer": "AdamW", "learning_rate": 0.0001, "weight_decay": 0.001,
+    "patient_batch_size": 2, "exact_epochs": 30, "early_stopping": false,
+    "epoch_shuffle_seed": "42*100000 + fold*1000 + epoch; reset same RNG for A0/A1/A2 at each epoch",
+    "initialization": "all model parameters bitwise-identical at epoch0 within each fold",
+    "checkpoint": "every epoch, private runtime only"
+  },
+  "development": {
+    "primary": "leave-one-validation-patient-out selection (VLOO)",
+    "validation_patients": 13,
+    "epoch_candidates": "1..30",
+    "threshold_candidates": "float32 linspace(0.05,0.95,19) on NEZ score",
+    "selection_metrics_order": ["mean patient Macro-F1", "mean patient EZ-F1", "mean patient balanced accuracy", "threshold closest to 0.5", "earlier epoch"],
+    "tie_numeric_precision_decimals": 12,
+    "residual_tie": "earlier threshold-grid order",
+    "fullval_selection": "same rule using all 13; apparent metric is secondary"
+  },
+  "candidate_selection": "A2 replaces primary A1 iff mean VLOO Macro-F1 delta >=0.005, A2 positive in >=3/5 folds, and mean VLOO EZ-F1 nondecreasing",
+  "test_readiness_gate": {
+    "candidate_VLOO_macro_f1_delta_vs_A0_min": 0.01,
+    "positive_folds_min": 4,
+    "mean_EZ_F1_nondecreasing": true,
+    "mean_EZ_AUPRC_delta_min": -0.005,
+    "candidate_apparent_fullval_macro_f1_mean_min": 0.665,
+    "candidate_apparent_fullval_macro_f1_worst_fold_min": 0.62,
+    "no_pathology": true
+  },
+  "multiseed_if_gate_passes": {"seeds": [52, 62], "positive_mean_gain_seeds_min": 2, "three_seed_mean_gain_gt": 0.0, "worst_seed_gain_min": -0.01},
+  "outer_policy": "No current outer labels, predictions, or result files may be read in development. Only after development and multiseed gates pass, freeze candidate fullval checkpoints/thresholds/hashes and evaluate outer once. R0/A1/A2 historical outer outcomes are not a selection input.",
+  "historical_outer_already_viewed": true,
+  "interpretation": "Exploratory on a historically viewed cohort; never claim fresh sealed confirmation.",
+  "public_outputs": "aggregate-only code/lock/CSV/JSON/Markdown; private patient rows, cache, logs and checkpoints stay off Git"
+}

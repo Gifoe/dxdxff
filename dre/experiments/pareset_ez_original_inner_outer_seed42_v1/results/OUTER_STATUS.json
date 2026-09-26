@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "outer_test_accessed": true,
+  "additional_final_heldout_accessed": false,
+  "model_frozen_before_outer_test": true,
+  "outer_test_used_for_tuning": false,
+  "seed": 42,
+  "patients": 80,
+  "folds": 5,
+  "lock_sha256": "734ccb3b185e1c6b660df71fec7e0e510fdfb470cae81fd9cc9da91198d13dc5",
+  "note": "New matched 36-D control reruns; not historical 28-D paper results."
+}

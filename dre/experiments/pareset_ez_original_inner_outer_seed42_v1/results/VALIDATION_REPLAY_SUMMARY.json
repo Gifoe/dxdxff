@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "cells": 20,
+  "max_probability_difference": 1.1102230246251565e-16,
+  "threshold_prediction_mismatches": 0,
+  "outer_test_outcome_accessed": false
+}

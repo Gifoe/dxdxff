@@ -6,6 +6,8 @@ Each frozen fold uses the original `fit ∪ validation` patients for training an
 
 Methods: PaReSet-EZ full, its retained base ablation, and the matched 36-D repaired BCR control. All use the same adapted patient records, frozen patient membership, train-fold-only standardization, AdamW (`lr=1e-4`, `weight_decay=1e-3`), dropout 0.4, batch of four patients, gradient clipping at 1, and seed 42. The repaired BCR preserves the original zero-variance forward value while giving finite gradients. Its repair is not an outcome-tuned change.
 
+Priority amendment: at the user's request, complete and report **full versus base** first. BCR is deferred, with any existing files retained. `code/run_flat5_full_base_priority.py` calls the unchanged frozen trainer, resumes existing cells, and aggregates only the 10 full/base cells. The amendment lock is frozen separately; it changes execution order and report scope, not epochs, model, threshold, data membership, or other scientific rules. Priority amendment SHA-256: `b0a52f82486e767c6d3c4b3f8ea41bdce61f6ce6bd223963a836b32df9ce2288`.
+
 On the original Windows server, the run is launched with `code/run_flat_5fold.py prepare ...` followed by `code/run_flat_5fold.py run ...`. The required flags are `--supplement`, `--model`, `--repair`, `--data`, `--manifest`, and `--output`; see `--help`. The runner validates all 80 patient memberships, writes a SHA-256 protocol lock before evaluating test folds, and supports epoch-level resume. The exact run uses the server paths in the protocol lock. The private adapted cache, patient-level predictions, logs, and model checkpoints are deliberately not published.
 
 The lock records these input hashes:

@@ -1,0 +1,41 @@
+{
+  "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+  "b0_replay_max_abs_score_error": 1.482063293201108e-07,
+  "channels": 7635,
+  "feature_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "feature_dimension": 88,
+  "feature_manifest_sha256": "c8b35748f2e50faad9dd03a8c92c120377b0676171368bcde0a0bc0db781294e",
+  "feature_profile": "p2_matched_simple",
+  "outer_folds": 5,
+  "patients": 80,
+  "private_feature_table_sha256": "2632b1ec1e6a7690b22d6e33db14d4d956a78fe01e7cb380b4dde38a43b248eb",
+  "split_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "split_role_counts": {
+    "1": {
+      "fit": 51,
+      "test": 16,
+      "validation": 13
+    },
+    "2": {
+      "fit": 51,
+      "test": 16,
+      "validation": 13
+    },
+    "3": {
+      "fit": 50,
+      "test": 17,
+      "validation": 13
+    },
+    "4": {
+      "fit": 52,
+      "test": 15,
+      "validation": 13
+    },
+    "5": {
+      "fit": 51,
+      "test": 16,
+      "validation": 13
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,9 @@
+{
+  "PROTOCOL_LOCK.json": "67789305d2bbc691820c5bfda65a44cb6448ef6e798378305046c0c30e453617",
+  "code/aggregate_crossfit.py": "5d001c01867e5fdb17653ac3215aef33661a76ebec229201102705be357179fe",
+  "code/crossfit_b0.py": "2cdb72c83b2b5b350f0c4205bd6a927f8fa15342962d782c8d9d2eb72a04d8e9",
+  "code/outer_evaluate.py": "d0c10fdf5e6cfa8ceb29c228b1bfd2e7615c9a551b4f7329a94b7c4c35bb302f",
+  "code/prepare_data.py": "2a2b4601a0aaef5d7d6da558c8f0cefabdcdddd6a2b9db14e543b4bec7c35c41",
+  "code/rank_audit.py": "a4b93b860eedae7a766c715b4f9f1cd4f1ada109ad6f621359765e977d5389c7",
+  "code/threshold_stage.py": "1a304aee3c5787dcdce15919cb32075bc4a874f261df1e61fb20e4570a7377df"
+}

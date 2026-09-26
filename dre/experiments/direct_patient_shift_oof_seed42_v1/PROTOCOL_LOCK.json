@@ -1,0 +1,48 @@
+{
+  "experiment": "direct_patient_shift_oof_seed42_v1",
+  "status": "EXPLORATORY_HISTORICAL_OUTER_PREVIOUSLY_VIEWED",
+  "seed": 42,
+  "outer_folds": [1, 2, 3, 4, 5],
+  "cohort_patients": 80,
+  "historical_b0": {
+    "feature_profile": "p2_matched_simple",
+    "feature_dimension": 88,
+    "checkpoint_policy": "reuse exact five historical patient_z_mlp selected checkpoints for validation/test inference",
+    "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+    "split_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "cross_fit": {
+    "patient_folds": 5,
+    "split": "KFold(shuffle=True, random_state=42000+outer_fold) over sorted outer-fit patients",
+    "nested_validation": "within inner-train, RNG(420000+1009*outer_fold+inner_fold), ceil(20%) patients, minimum 6",
+    "checkpoint_selection": "exact historical B0 validation-patient Macro-F1 threshold selector, max 30 epochs, patience 6 after epoch 6",
+    "refit": "same B0 architecture, patient-wise z-score, fit-only imputer/scaler, AdamW lr=0.001 wd=0.0001, weighted BCE, patient-batch order, on all inner-train patients for nested-selected epoch count",
+    "seed_formula": "42+1009*outer_fold+97*inner_fold",
+    "outer_validation_or_test_in_inner_training": false
+  },
+  "direct_threshold": {
+    "prediction_label": "EZ iff base_EZ_logit >= predicted_patient_threshold; fixed final probability sigmoid(base_EZ_logit-threshold), classify at 0.5",
+    "target": "all classification-equivalent optimal intervals; disconnected optimal intervals retained as a union",
+    "unbounded_interval_clip": "[minimum outer-fit OOF EZ logit minus 1, maximum outer-fit OOF EZ logit plus 1]",
+    "global_anchor": "negative logit of frozen historical B0 validation-selected NEZ threshold for that outer fold",
+    "descriptor": "label-blind score distribution: mean,std,median,MAD,IQR,q05,q10,q20,q25,q40,q50,q60,q75,q80,q90,q95,entropy mean/std,skewness,top/lower tail gaps, fractions within 0.1/0.25/0.5 of global anchor,log1p channel count,evidence count mean/std/min/max",
+    "hidden_ablation": "A2 omitted: hidden coordinates of independently trained cross-fit B0 models are not aligned to each other or to the historical final B0 checkpoint; pooled PCA would make a scientifically mismatched descriptor",
+    "variants": ["A0", "A1"],
+    "learner": "standardized linear threshold correction around global anchor, full-batch AdamW lr=0.01 weight_decay=0.01 for 500 fixed steps, zero initialization",
+    "loss": "mean distance-to-nearest-optimal-interval SmoothL1 + 0.01*mean((predicted_threshold-global_anchor)^2)",
+    "outer_validation_choice": "A1 fixed as the sole new deployable candidate; no variant selection on validation outcomes",
+    "outer_test_gate": "chosen method mean validation Macro-F1 gain >= 0.01 over A0 AND >=3/5 positive folds AND mean EZ-F1 change >= -0.02",
+    "outer_test_tuning": false
+  },
+  "rank_audit": {
+    "role": "retrospective diagnostic only; no trained rank adapter",
+    "lambda_grid": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+    "rank_percentile": "scipy rankdata(method=average)/(n_channels+1) per patient",
+    "boundary_quantiles": [0.1, 0.2, 0.3],
+    "boundary_reference": "absolute base EZ logit distance to frozen fold-specific global B0 threshold",
+    "global_lambda_tie": "smallest lambda",
+    "worthwhile": "best global rank-mix oracle Macro-F1 >=0.72 OR >=0.015 above B0 threshold oracle, AND EZ-AUPRC and EZ-MRR strictly higher than B0 and Top-1 EZ nonnegative",
+    "oracle_used_for_deployable_model": false
+  },
+  "private_artifacts_excluded_from_git": ["patient IDs", "channel IDs", "raw predictions", "raw embeddings", "checkpoints", "private cache paths"]
+}

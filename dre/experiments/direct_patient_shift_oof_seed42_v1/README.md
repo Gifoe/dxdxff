@@ -1,0 +1,11 @@
+# Direct patient-threshold OOF diagnosis, seed 42
+
+This exploratory follow-up to CalibRank tests a specific failure mode: the prior adapter saw B0 predictions on patients used to train B0, while validation and test patients were out of sample. The historical 80-patient Task-1 cohort, five outer folds, 88-dimensional `p2_matched_simple` features, frozen B0 checkpoints and patient-equal evaluation remain fixed. Historical outer outcomes had already been inspected; this is **not fresh confirmation**.
+
+Part A obtains five-way patient-level B0 out-of-fold logits within each outer-fit partition. Each cross-fit cell selects a B0 epoch on a deterministic patient-wise nested validation subset and refits the unchanged B0 on all of that cell's inner-train patients for exactly that many epochs before predicting held-out patients. A small standardized linear model learns a **direct EZ-logit decision threshold** using the union of Macro-F1-optimal threshold intervals from OOF fit patients. Its descriptors contain label-blind B0 score and evidence-count statistics. A0 is the exact historical B0; A1 is the new direct threshold. The original final B0 checkpoint supplies validation/test logits. Only fit labels train A1; validation assesses transfer and enforces the locked outer-test gate. If the gate fails, this experiment does not read A1 outer-test arrays.
+
+The optional hidden-state PCA A2 was omitted before cross-fit training: the five independently trained B0 models do not share an aligned 96-dimensional hidden coordinate system, nor do they align to the historical final B0 checkpoint. Pooling their hidden vectors for one PCA and applying it to the final model would create another representation mismatch. No substitute hidden architecture was added.
+
+Part B only aligns archived B0/BCR channel scores and computes retrospective rank-space/oracle ceilings. Global and patient-specific oracle lambdas use historical labels and are never deployable methods. No rank adapter or distillation student is trained.
+
+`PROTOCOL_LOCK.json` fixes the scientific procedure, candidate, gate and diagnostic grid. Scripts are in `code/`; `A/` and `B/` contain only aggregate public outputs. Patient/channel identities, private predictions, feature tables, embeddings and checkpoints stay on the server.

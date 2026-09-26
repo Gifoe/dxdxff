@@ -1,0 +1,13 @@
+{
+  "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+  "cdel_ledger_sha256": "eb251b4a93a196da4e474901619fc49d20fb3d444cc41c8474e5056930f8f146",
+  "channels": 7635,
+  "historical_outer_previously_viewed": true,
+  "key_alignment": "EXACT_ONE_TO_ONE",
+  "label_alignment": "EXACT",
+  "outer_folds": 5,
+  "patients": 80,
+  "protocol_lock_sha256": "67789305d2bbc691820c5bfda65a44cb6448ef6e798378305046c0c30e453617",
+  "rank_oracles_deployable": false,
+  "status": "PASS"
+}

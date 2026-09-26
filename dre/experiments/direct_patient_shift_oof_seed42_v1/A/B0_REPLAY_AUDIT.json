@@ -1,0 +1,65 @@
+{
+  "b0_ledger_sha256": "3bd2039cc7d01ecdb375256354978066b4a1b4fc5b8adda1a58b84b2abb9f896",
+  "feature_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "feature_dimension": 88,
+  "fold_manifest_hash": "3635a5dabf54ee06411f54492f9660eb8807cd1b54796c727bc89ee644787355",
+  "folds": [
+    {
+      "checkpoint_sha256": "ada7aef890ac6cfd11033d730ca74d4c9d7fc0b71772c38251174f94e77e2e70",
+      "fit_patients": 51,
+      "fold": 1,
+      "max_score_difference": 1.371520995663289e-07,
+      "selected_epoch": 2,
+      "selected_threshold_nez": 0.505,
+      "test_channels": 1631,
+      "test_patients": 16,
+      "validation_patients": 13
+    },
+    {
+      "checkpoint_sha256": "cce163d40f6850d7ef63355de595bcb125ada178f2124661c7683d9c8fae9120",
+      "fit_patients": 51,
+      "fold": 2,
+      "max_score_difference": 1.4565811157218889e-07,
+      "selected_epoch": 1,
+      "selected_threshold_nez": 0.225,
+      "test_channels": 1498,
+      "test_patients": 16,
+      "validation_patients": 13
+    },
+    {
+      "checkpoint_sha256": "286c3a6e0ba98ffe2eb1f74487b780f8015f064e42a7fc0112eaf41813b45ce1",
+      "fit_patients": 50,
+      "fold": 3,
+      "max_score_difference": 1.482063293201108e-07,
+      "selected_epoch": 2,
+      "selected_threshold_nez": 0.37,
+      "test_channels": 1746,
+      "test_patients": 17,
+      "validation_patients": 13
+    },
+    {
+      "checkpoint_sha256": "7cf67486693cb5b6e54a1f7cd76566bff48309d11f84bd435dd46f650ee45431",
+      "fit_patients": 52,
+      "fold": 4,
+      "max_score_difference": 1.476135254030453e-07,
+      "selected_epoch": 1,
+      "selected_threshold_nez": 0.42,
+      "test_channels": 1425,
+      "test_patients": 15,
+      "validation_patients": 13
+    },
+    {
+      "checkpoint_sha256": "411b01f3474b694377a9ec47aa752f7d00506bccca2d1daea9d576f2193e467c",
+      "fit_patients": 51,
+      "fold": 5,
+      "max_score_difference": 1.3531036380243222e-07,
+      "selected_epoch": 2,
+      "selected_threshold_nez": 0.45,
+      "test_channels": 1335,
+      "test_patients": 16,
+      "validation_patients": 13
+    }
+  ],
+  "source_code_sha256": "3f1b5e187cef6166a587bff6091ad22e47ab6b8e74e731571b09303149c74ee8",
+  "status": "PASS"
+}

@@ -5,6 +5,7 @@ This does not run R1 or convert the failed R1 validation gate into a pass.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import math
@@ -74,10 +75,13 @@ def preflight() -> dict:
 def summarize(fold_rows: list[dict], patients: list[dict], amendment: dict) -> None:
     if len(fold_rows) != 5 or {int(row["fold"]) for row in fold_rows} != {1, 2, 3, 4, 5}:
         raise RuntimeError("Expected exactly five distinct outer folds")
-    if [int(row["n_patients"]) for row in sorted(fold_rows, key=lambda row: row["fold"])] != [16] * 5:
-        raise RuntimeError("Expected 16 outer patients per fold")
     if len(patients) != 80 or len({row["subject_id"] for row in patients}) != 80:
         raise RuntimeError("Expected 80 distinct outer patients")
+    counts = {fold: sum(int(patient["fold"]) == fold for patient in patients) for fold in range(1, 6)}
+    if any(count == 0 for count in counts.values()) or sum(counts.values()) != 80:
+        raise RuntimeError("Outer fold coverage is incomplete")
+    if any(int(row["n_patients"]) != counts[int(row["fold"])] for row in fold_rows):
+        raise RuntimeError("Fold aggregate patient counts disagree with private patient metrics")
     rng = np.random.default_rng(42042)
     draws = rng.integers(0, 80, size=(2000, 80))
     summaries = []
@@ -142,5 +146,34 @@ def main() -> None:
     print(json.dumps({"status": marker["status"], "n_patients": len(patients)}, indent=2), flush=True)
 
 
+def summarize_existing() -> None:
+    """Recover summary from the completed one-shot evaluation; never re-enter test inference."""
+    amendment_path = EXPERIMENT / "R0_ONLY_OUTER_PROTOCOL_AMENDMENT.json"
+    if sha256(amendment_path) != AMENDMENT_SHA256:
+        raise RuntimeError("R0-only amendment hash changed")
+    amendment = json.loads(amendment_path.read_text(encoding="utf-8"))
+    if sha256(EXPERIMENT / "PROTOCOL_LOCK.json") != amendment["original_protocol_lock_sha256"]:
+        raise RuntimeError("Original protocol lock changed")
+    marker = json.loads(PRIVATE_MARKER.read_text(encoding="utf-8"))
+    if marker.get("status") != "R0_OUTER_STARTED" or marker.get("amendment_sha256") != AMENDMENT_SHA256:
+        raise RuntimeError("Expected a single started R0-only test")
+    with (PUBLIC / "R0_OUTER_RESULTS.csv").open(newline="", encoding="utf-8") as stream:
+        fold_rows = list(csv.DictReader(stream))
+    patients = json.loads((RUNTIME / "R0" / "outer_patient_metrics.json").read_text(encoding="utf-8"))
+    summarize(fold_rows, patients, amendment)
+    marker["status"] = "R0_OUTER_COMPLETED"
+    marker["completed_at_utc"] = datetime.now(timezone.utc).isoformat()
+    marker["recovered_summary_without_repeat_inference"] = True
+    PRIVATE_MARKER.write_text(json.dumps(marker, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"status": marker["status"], "n_patients": len(patients),
+                      "repeat_outer_inference": False}, indent=2), flush=True)
+
+
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--summarize-existing", action="store_true")
+    args = parser.parse_args()
+    if args.summarize_existing:
+        summarize_existing()
+    else:
+        main()

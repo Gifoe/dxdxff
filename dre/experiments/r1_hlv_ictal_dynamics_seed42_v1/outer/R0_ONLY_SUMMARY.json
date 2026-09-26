@@ -1,0 +1,48 @@
+{
+  "status": "R0_OUTER_EVALUATED_ONCE",
+  "original_R1_validation_gate_pass": false,
+  "R1_outer_evaluated": false,
+  "historical_outer_already_viewed": true,
+  "interpretation": "exploratory post-hoc R0-only test; not a fresh sealed confirmation",
+  "amendment_sha256": "5b45a59c77a83d3416693588fc39cab0dac7e55e2fe39c02772b105c5e2bbad4",
+  "n_folds": 5,
+  "n_unique_patients": 80,
+  "summary": [
+    {
+      "variant": "R0",
+      "metric": "patient_macro_f1",
+      "n_patients": 80,
+      "mean": 0.622503809558048,
+      "descriptive_ci95_low": 0.5920281674598203,
+      "descriptive_ci95_high": 0.6528434000254895,
+      "bootstrap_replicates": 2000
+    },
+    {
+      "variant": "R0",
+      "metric": "patient_macro_ez_f1",
+      "n_patients": 80,
+      "mean": 0.42847843780491496,
+      "descriptive_ci95_low": 0.37969116274674114,
+      "descriptive_ci95_high": 0.4755304462051089,
+      "bootstrap_replicates": 2000
+    },
+    {
+      "variant": "R0",
+      "metric": "patient_macro_balanced_accuracy",
+      "n_patients": 80,
+      "mean": 0.6772998989090558,
+      "descriptive_ci95_low": 0.6426828449718234,
+      "descriptive_ci95_high": 0.7114020853591783,
+      "bootstrap_replicates": 2000
+    },
+    {
+      "variant": "R0",
+      "metric": "patient_macro_auprc_ez",
+      "n_patients": 80,
+      "mean": 0.5507451025875568,
+      "descriptive_ci95_low": 0.4948426135401511,
+      "descriptive_ci95_high": 0.6057929520653911,
+      "bootstrap_replicates": 2000
+    }
+  ]
+}

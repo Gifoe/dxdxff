@@ -24,7 +24,7 @@ RUNTIME = Path(os.environ.get("COORD_RUNTIME", ""))
 DEVELOPMENT = EXPERIMENT / "development"
 VARIANTS = ("C0_RAW", "C1_CENTERED", "C2_ROBUSTZ")
 RANK_METRICS = ("patient_ez_auprc", "patient_ez_auroc", "patient_ez_mrr", "top1_is_ez")
-EXPECTED_LOCK_SHA256 = "879a585e7a6ae8df3b69faaa6efedc29a02711f5c5a07adcd64fed0b305b5805"
+EXPECTED_LOCK_SHA256 = "a28aa5d552e5ff830a9b04eeafe4520a4fd485b3b19420eb79b272f2b6f4a90e"
 
 
 def sha256(path: Path) -> str:
@@ -130,6 +130,8 @@ def main() -> None:
     rank_max = {variant: {metric: 0.0 for metric in RANK_METRICS} for variant in VARIANTS[1:]}
     rank_min_spearman = {variant: 1.0 for variant in VARIANTS[1:]}
     cases = 0
+    source_probability_tie_cases = 0
+    ranking_metric_changed_cases = {variant: 0 for variant in VARIANTS[1:]}
     min_mad = float("inf")
     min_scale = float("inf")
     for fold in range(1, 6):
@@ -148,6 +150,8 @@ def main() -> None:
                     generated[variant] = (record, stats, patient_grid(record))
                 raw_stats = generated["C0_RAW"][1]
                 raw_score_rows.append({"fold": fold, "epoch": epoch, **raw_stats})
+                if len(np.unique(np.asarray(patient["score_ez_core"], dtype=np.float32))) < len(np.unique(np.asarray(patient["logits_nez"], dtype=np.float32))):
+                    source_probability_tie_cases += 1
                 min_mad = min(min_mad, raw_stats["mad"])
                 min_scale = min(min_scale, raw_stats["scale"])
                 for variant in VARIANTS[1:]:
@@ -160,6 +164,9 @@ def main() -> None:
                         delta = abs(generated[variant][2]["fixed"][metric] -
                                     generated["C0_RAW"][2]["fixed"][metric])
                         rank_max[variant][metric] = max(rank_max[variant][metric], float(delta))
+                    if any(abs(generated[variant][2]["fixed"][metric] -
+                               generated["C0_RAW"][2]["fixed"][metric]) > 1e-8 for metric in RANK_METRICS):
+                        ranking_metric_changed_cases[variant] += 1
                 cases += 1
             for variant in VARIANTS:
                 epoch_grids[variant].append(epoch_grid(records[variant], epoch))
@@ -187,6 +194,8 @@ def main() -> None:
     rank_audit = {"pass": rank_pass, "terminal": "RANK_INVARIANCE_PASSED" if rank_pass else
                   "OUTPUT_COORDINATE_RANK_INVARIANCE_FAILED", "patient_epoch_cases": cases,
                   "cases_per_transform": cases, "minimum_spearman": rank_min_spearman,
+                  "source_probability_tie_cases_with_distinct_logits": source_probability_tie_cases,
+                  "ranking_metric_changed_cases": ranking_metric_changed_cases,
                   "maximum_absolute_ranking_metric_deltas": rank_max,
                   "tolerance": lock["rank_invariance"], "outer_test_accessed": False}
     write_json(EXPERIMENT / "RANK_INVARIANCE_AUDIT.json", rank_audit)

@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "terminal": "SOURCE_REPRODUCED",
+  "frozen_A1_checkpoints_evaluated": 150,
+  "validation_patients_per_fold": 13,
+  "raw_logit_vs_core_probability_max_abs_error": 1.1920928955078125e-07,
+  "recomputed_grid_vs_stored_max_abs_error": 0.0,
+  "folds": [
+    {
+      "fold": 1,
+      "reference": 0.6549997115717437,
+      "reproduced": 0.6549997115717437,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 2,
+      "reference": 0.6410958089865288,
+      "reproduced": 0.6410958089865288,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 3,
+      "reference": 0.6101185971670673,
+      "reproduced": 0.6101185971670673,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 4,
+      "reference": 0.6329791804569156,
+      "reproduced": 0.6329791804569156,
+      "absolute_error": 0.0
+    },
+    {
+      "fold": 5,
+      "reference": 0.5907877503876969,
+      "reproduced": 0.5907877503876969,
+      "absolute_error": 0.0
+    }
+  ],
+  "reference_mean": 0.6259962097139906,
+  "reproduced_mean": 0.6259962097139906,
+  "mean_absolute_error": 0.0,
+  "outer_test_accessed": false
+}

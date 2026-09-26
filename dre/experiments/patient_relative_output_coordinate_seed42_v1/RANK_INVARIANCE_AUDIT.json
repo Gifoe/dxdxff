@@ -1,0 +1,41 @@
+{
+  "pass": false,
+  "terminal": "OUTPUT_COORDINATE_RANK_INVARIANCE_FAILED",
+  "patient_epoch_cases": 1950,
+  "cases_per_transform": 1950,
+  "minimum_spearman": {
+    "C1_CENTERED": 0.9999999999999998,
+    "C2_ROBUSTZ": 0.9999999999999998
+  },
+  "source_probability_tie_cases_with_distinct_logits": 5,
+  "ranking_metric_changed_cases": {
+    "C1_CENTERED": 3,
+    "C2_ROBUSTZ": 3
+  },
+  "maximum_absolute_ranking_metric_deltas": {
+    "C1_CENTERED": {
+      "patient_ez_auprc": 0.013888888888888895,
+      "patient_ez_auroc": 0.0004901960784314818,
+      "patient_ez_mrr": 0.0,
+      "top1_is_ez": 0.0
+    },
+    "C2_ROBUSTZ": {
+      "patient_ez_auprc": 0.013888888888888895,
+      "patient_ez_auroc": 0.0004901960784314818,
+      "patient_ez_mrr": 0.0,
+      "top1_is_ez": 0.0
+    }
+  },
+  "tolerance": {
+    "cases": 1950,
+    "spearman_min": 0.99999999,
+    "ranking_metric_delta_max_abs": 1e-08,
+    "metrics": [
+      "EZ-AUPRC",
+      "EZ-AUROC",
+      "EZ-MRR",
+      "Top1-is-EZ"
+    ]
+  },
+  "outer_test_accessed": false
+}

@@ -19,7 +19,7 @@
   },
   "cohort": {"patients": 80, "channels": 7635, "seizure_records": 256, "folds": 5, "validation_patients_per_fold": 13},
   "training": "none: load the 150 frozen A1 epoch checkpoints and evaluate fit/validation roles only",
-  "source_reconstruction": "Use raw final NEZ logits. Confirm sigmoid(logits) matches the model's score_nez within 1e-7. Rebuild C0 VLOO and compare every fold and mean to the published A1 result before C1/C2 analysis.",
+  "source_reconstruction": "Use raw final NEZ logits. Confirm sigmoid(logits) matches the model's float32 score_nez within 5e-7 (CPU/GPU sigmoid rounding only). Rebuild every stored C0 validation metric grid within 1e-8 and compare every fold and mean VLOO to the published A1 result before C1/C2 analysis.",
   "coordinates": {
     "C0_RAW": "raw NEZ-positive final logit, then sigmoid",
     "C1_CENTERED": "subtract median of valid patient logits, then sigmoid",

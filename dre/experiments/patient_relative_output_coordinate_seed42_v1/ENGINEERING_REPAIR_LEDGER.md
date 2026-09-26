@@ -1,0 +1,6 @@
+# Engineering repair ledger
+
+1. Initial source replay used `1e-7` as the CPU/GPU sigmoid comparison tolerance. The frozen model's maximum difference was `1.1920928955078125e-7` (one float32 ULP), so this check stopped before any C1/C2 analysis. The source config was independently confirmed to use `positive_label=nez`; an attempted sign-negation correction was rejected by the same consistency check and reverted.
+2. The source-only numerical tolerance was changed to `5e-7`, leaving all model scores, grid metrics, splits, transformations, rank audit thresholds, and scientific gates unchanged. A stronger complete-grid check against the original saved A1 validation metrics remained at `1e-8` and subsequently matched with zero observed error. All five source VLOO fold values and their mean also matched exactly.
+3. After the first rank-audit failure, aggregate counters for float32 probability ties and affected cases were added for diagnosis. They do not alter the coordinate transforms, ranking metrics, tolerance, candidate rule, or stop decision.
+4. The protocol lock text was synchronized to the already-applied numerical source tolerance, and both stages were rerun from frozen checkpoints/logits under its new SHA-256. The previous lock SHA-256 was `879a585e7a6ae8df3b69faaa6efedc29a02711f5c5a07adcd64fed0b305b5805`.

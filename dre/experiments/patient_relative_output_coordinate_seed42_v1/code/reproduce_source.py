@@ -24,7 +24,7 @@ sys.path.insert(0, str(SOURCE_ROOT))
 import exp_ez_hybrid as core  # noqa: E402
 
 
-EXPECTED_LOCK_SHA256 = "879a585e7a6ae8df3b69faaa6efedc29a02711f5c5a07adcd64fed0b305b5805"
+EXPECTED_LOCK_SHA256 = "a28aa5d552e5ff830a9b04eeafe4520a4fd485b3b19420eb79b272f2b6f4a90e"
 SOURCE_RUNTIME = Path(os.environ.get("A1_A2_RUNTIME", ""))
 RUNTIME = Path(os.environ.get("COORD_RUNTIME", ""))
 

@@ -212,6 +212,9 @@ def main() -> None:
     source = json.loads((EXPERIMENT / "SOURCE_REPRODUCTION.json").read_text(encoding="utf-8"))
     if not source.get("pass") or source["max_grid_error_vs_original"] != 0:
         raise RuntimeError("SOURCE_A1_REPRODUCTION_FAILED")
+    invariance = json.loads((EXPERIMENT / "INPUT_INVARIANCE_AUDIT.json").read_text(encoding="utf-8"))
+    if not invariance.get("pass") or invariance.get("cells_checked") != 150:
+        raise RuntimeError("Fold-level recruitment feature reuse was not independently verified")
     all_rows: dict[str, list[dict]] = {}
     fullvals: dict[str, list[dict]] = {}
     for variant in NAMES:

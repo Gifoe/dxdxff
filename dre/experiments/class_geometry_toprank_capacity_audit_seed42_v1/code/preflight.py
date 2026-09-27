@@ -39,11 +39,16 @@ def main():
     e, n = 0.7, -0.4
     expected = 0.5 * F.binary_cross_entropy_with_logits(torch.tensor(e), torch.tensor(0.0)) + 0.5 * F.binary_cross_entropy_with_logits(torch.tensor(n), torch.tensor(1.0))
     original = score([e, n], [1, 0])
+    second = score([-0.9] + [1.2]*10, [1] + [0]*10)
+    logits_two = torch.tensor([[e,n]+[0.0]*9,[-0.9]+[1.2]*10],dtype=torch.float64)
+    ez_two = torch.tensor([[1.0,0.0]+[0.0]*9,[1.0]+[0.0]*10],dtype=torch.float64)
+    mask_two = torch.tensor([[True,True]+[False]*9,[True]*11])
+    patient_equal = balanced_patient_losses(logits_two,1-ez_two,ez_two,mask_two).mean()
     tests = {
         "equal_class_mass_1v1": bool(torch.allclose(original, expected.double(), atol=1e-7)),
         "duplicate_NEZ_10x_invariant": bool(torch.allclose(original, score([e] + [n] * 10, [1] + [0] * 10), atol=1e-12)),
         "duplicate_EZ_10x_invariant": bool(torch.allclose(original, score([e] * 10 + [n], [1] * 10 + [0]), atol=1e-12)),
-        "equal_patient_weight": bool(torch.allclose((score([e,n],[1,0]) + score([e]*10+[n],[1]*10+[0]))/2, original, atol=1e-12)),
+        "equal_patient_weight": bool(torch.allclose(patient_equal,(original+second)/2,atol=1e-12)),
         "channel_permutation_invariant": bool(torch.allclose(original, score([n,e],[0,1]), atol=1e-12)),
     }
     x = torch.tensor([[e, n]], dtype=torch.float64, requires_grad=True)

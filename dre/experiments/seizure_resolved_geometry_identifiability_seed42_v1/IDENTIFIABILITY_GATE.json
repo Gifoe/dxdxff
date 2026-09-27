@@ -1,0 +1,52 @@
+{
+  "pass": false,
+  "terminal": "SEIZURE_RESOLVED_CONTEXT_DOES_NOT_IDENTIFY_PATIENT_GEOMETRY",
+  "predeclared_D3_contexts": {
+    "SR_DIST": {
+      "pass": false,
+      "checks": {
+        "mean_cos_gain_static_ge_0_10": false,
+        "median_cos_gain_static_ge_0_08": false,
+        "cluster_cos_delta_ci_lower_gt_0": false,
+        "positive_cos_folds_vs_static_ge_4": false,
+        "ap_gain_static_ge_0_015": false,
+        "positive_ap_folds_vs_static_ge_4": false,
+        "correct_wrong_cos_ge_0_05": false,
+        "correct_wrong_ap_ge_0_010": false,
+        "true_shuffled_cos_ge_0_03": false
+      },
+      "note": null
+    },
+    "SR_PERSIST": {
+      "pass": false,
+      "checks": {
+        "mean_cos_gain_static_ge_0_10": false,
+        "median_cos_gain_static_ge_0_08": false,
+        "cluster_cos_delta_ci_lower_gt_0": false,
+        "positive_cos_folds_vs_static_ge_4": true,
+        "ap_gain_static_ge_0_015": false,
+        "positive_ap_folds_vs_static_ge_4": false,
+        "correct_wrong_cos_ge_0_05": false,
+        "correct_wrong_ap_ge_0_010": true,
+        "true_shuffled_cos_ge_0_03": false
+      },
+      "note": "SR_PERSIST cannot pass shuffled-structure condition: no fabricated persistence control"
+    },
+    "SR_COMBINED": {
+      "pass": false,
+      "checks": {
+        "mean_cos_gain_static_ge_0_10": false,
+        "median_cos_gain_static_ge_0_08": false,
+        "cluster_cos_delta_ci_lower_gt_0": false,
+        "positive_cos_folds_vs_static_ge_4": false,
+        "ap_gain_static_ge_0_015": false,
+        "positive_ap_folds_vs_static_ge_4": false,
+        "correct_wrong_cos_ge_0_05": false,
+        "correct_wrong_ap_ge_0_010": false,
+        "true_shuffled_cos_ge_0_03": false
+      },
+      "note": null
+    }
+  },
+  "SR_PERSIST_shuffled_control": "not constructed by design"
+}

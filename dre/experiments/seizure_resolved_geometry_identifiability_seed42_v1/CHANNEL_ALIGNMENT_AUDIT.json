@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "patients_checked_per_selected_epoch": [
+    64,
+    64,
+    63,
+    65,
+    64
+  ],
+  "seizure_observations_checked_across_selected_epochs": 3073,
+  "mapping_source": "source dataset.py patient_meta canonical_channels; local sample channel_names_norm mapped into canonical index; source dataset SHA256 ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+  "verification": "batch canonical names match source patient_index; names unique; source seizure_channel_mask and seizure_mask exactly consumed by aggregator",
+  "missing_channel_handling": "exclude absent seizure-channel entries for distributions; across-seizure persistence uses only observed entries; pair correlations use intersection of present canonical channels"
+}

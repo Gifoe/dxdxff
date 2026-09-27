@@ -1,0 +1,47 @@
+{
+  "pass": false,
+  "terminal": "SEIZURE_CONTEXT_READOUT_SIGNAL_NOT_YET_SUPPORTED",
+  "predeclared_D3_contexts": {
+    "SR_DIST": {
+      "pass": false,
+      "checks": {
+        "ap_gain_frozen_A1_ge_0_010": false,
+        "positive_ap_folds_vs_A1_ge_4": false,
+        "ap_delta_A1_ci_lower_gt_0": false,
+        "mrr_nondecreasing": false,
+        "top1_nondecreasing": false,
+        "mean_cos_ge_0_40": false,
+        "median_cos_ge_0_35": false,
+        "correct_beats_wrong": false
+      }
+    },
+    "SR_PERSIST": {
+      "pass": false,
+      "checks": {
+        "ap_gain_frozen_A1_ge_0_010": false,
+        "positive_ap_folds_vs_A1_ge_4": false,
+        "ap_delta_A1_ci_lower_gt_0": false,
+        "mrr_nondecreasing": true,
+        "top1_nondecreasing": true,
+        "mean_cos_ge_0_40": false,
+        "median_cos_ge_0_35": false,
+        "correct_beats_wrong": true
+      }
+    },
+    "SR_COMBINED": {
+      "pass": false,
+      "checks": {
+        "ap_gain_frozen_A1_ge_0_010": false,
+        "positive_ap_folds_vs_A1_ge_4": false,
+        "ap_delta_A1_ci_lower_gt_0": false,
+        "mrr_nondecreasing": false,
+        "top1_nondecreasing": false,
+        "mean_cos_ge_0_40": false,
+        "median_cos_ge_0_35": false,
+        "correct_beats_wrong": true
+      }
+    }
+  },
+  "overall_terminal": "ORACLE_GEOMETRY_NOT_WELL_REPRESENTED_BY_SHARED_LINEAR_SUBSPACE",
+  "r80_terminal": "R80_ORACLE_SUBSPACE_INSUFFICIENT"
+}

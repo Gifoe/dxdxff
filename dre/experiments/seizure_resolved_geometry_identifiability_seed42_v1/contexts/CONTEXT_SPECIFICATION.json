@@ -1,0 +1,33 @@
+{
+  "contexts": [
+    {
+      "context": "STATIC_R4_MARG",
+      "raw_dimension": 16,
+      "predictor_input_dimension": 16,
+      "fit_only_scaler_pca": true
+    },
+    {
+      "context": "SR_DIST",
+      "raw_dimension": 82,
+      "predictor_input_dimension": 16,
+      "fit_only_scaler_pca": true
+    },
+    {
+      "context": "SR_PERSIST",
+      "raw_dimension": 122,
+      "predictor_input_dimension": 16,
+      "fit_only_scaler_pca": true
+    },
+    {
+      "context": "SR_COMBINED",
+      "raw_dimension": 204,
+      "predictor_input_dimension": 16,
+      "fit_only_scaler_pca": true
+    }
+  ],
+  "static_pca": "8D FIT R4 channel PCA",
+  "seizure_pca": "8D valid FIT seizure-channel PCA",
+  "preprocess": "FIT StandardScaler then FIT PCA min(16,input_dim,nFIT-1)",
+  "seizure_shuffle": "deterministic reassignment of pooled valid embeddings, preserving per-seizure counts; combined control retains true persistence features",
+  "validation_labels_context_input": false
+}

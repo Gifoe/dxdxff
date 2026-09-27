@@ -1,0 +1,6 @@
+{
+  "pass": true,
+  "source": "original channel classifier forward-pre-hook",
+  "D": 64,
+  "max_logit_replay_error": 0.0
+}

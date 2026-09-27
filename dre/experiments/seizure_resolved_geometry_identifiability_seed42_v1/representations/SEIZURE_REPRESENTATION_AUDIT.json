@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "source_output_key": "seizure_channel_embedding",
+  "capture": "cross-seizure aggregator forward-pre-hook input 0, bitwise-equal to source forward output key",
+  "conceptual_shape": "[batch,seizure,canonical_channel,D_s]",
+  "D_s": 32,
+  "max_aggregator_replay_error": 0.0
+}

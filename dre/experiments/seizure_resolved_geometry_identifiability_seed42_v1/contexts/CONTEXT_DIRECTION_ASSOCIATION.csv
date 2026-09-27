@@ -1,0 +1,5 @@
+context,target_cells,unique_validation_patient_ids,mean_fit_patient_pair_spearman_rho,fit_pair_observations_repeated_across_cells,fit_patient_cluster_bootstrap_ci_low,fit_patient_cluster_bootstrap_ci_high,bootstrap_note
+STATIC_R4_MARG,65,47,-0.04969624467613635,82888,-0.0910700690484371,-0.006308514760876354,10k FIT-patient-ID resamples per distinct selected-epoch coordinate; repeated fold/epoch memberships remain descriptive
+SR_DIST,65,47,-0.004575775633438821,82888,-0.052539877516577585,0.04213198481759069,10k FIT-patient-ID resamples per distinct selected-epoch coordinate; repeated fold/epoch memberships remain descriptive
+SR_PERSIST,65,47,-0.0514844023705393,82888,-0.09728210703871552,-0.0023570408209191494,10k FIT-patient-ID resamples per distinct selected-epoch coordinate; repeated fold/epoch memberships remain descriptive
+SR_COMBINED,65,47,-0.03687992247177511,82888,-0.08531728458076428,0.011769577486600223,10k FIT-patient-ID resamples per distinct selected-epoch coordinate; repeated fold/epoch memberships remain descriptive

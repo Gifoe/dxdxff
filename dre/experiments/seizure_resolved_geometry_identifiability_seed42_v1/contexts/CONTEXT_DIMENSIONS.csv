@@ -1,0 +1,5 @@
+context,raw_dimension,predictor_input_dimension,fit_only_scaler_pca
+STATIC_R4_MARG,16,16,True
+SR_DIST,82,16,True
+SR_PERSIST,122,16,True
+SR_COMBINED,204,16,True

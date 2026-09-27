@@ -1,0 +1,15 @@
+{
+  "pass": false,
+  "terminal": "R80_ORACLE_SUBSPACE_INSUFFICIENT",
+  "checks": {
+    "median_cos_ge_0_75": false,
+    "fraction_cos_ge_0_70_ge_0_65": false,
+    "headroom_retention_ge_0_70": false
+  },
+  "median_cosine": 0.6209499597813246,
+  "fraction_cos_ge_0_70": 0.18461538461538463,
+  "headroom_retention": 0.5404515530254645,
+  "full_oracle_ap_in_sample_label_using": 0.9338742023943774,
+  "r80_oracle_ap_label_using": 0.7448432974771343,
+  "shared_linear_ap": 0.522533665478761
+}

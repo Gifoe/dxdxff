@@ -1,0 +1,11 @@
+{
+  "fit_EZ_labels_oracle_and_shared_linear": true,
+  "validation_EZ_labels_target_oracle_and_metrics_only": true,
+  "validation_labels_context_PCA_scaler_ridge_inputs": false,
+  "all_deployable_directions_and_scores_frozen_before_target_label_read": true,
+  "outer_predictions_metrics_training_or_selection": false,
+  "legacy_monolithic_loader_materializes_all_80_labels": true,
+  "strict_no_outer_label_materialization_satisfied": false,
+  "validation_cells": 65,
+  "unique_validation_patient_ids": 47
+}

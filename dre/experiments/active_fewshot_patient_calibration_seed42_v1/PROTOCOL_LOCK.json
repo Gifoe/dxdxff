@@ -1,0 +1,22 @@
+{
+  "experiment": "active_fewshot_patient_calibration_seed42_v1",
+  "status": "FROZEN_BEFORE_TARGET_OUTCOME",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "reference_tip": "f877ee8a64ecf4fdc26e984157b45b91535d18a9",
+  "seed": 42,
+  "scope": "FIT plus validation development only; no outer prediction, metric, or selection",
+  "source": {"checkpoint_grid": "5 folds x 30 A1 epochs", "replay_tolerance": 1e-6, "VLOO": "other 12 validation patients; Macro-F1, EZ-F1, BA, threshold closest 0.5, earlier epoch", "target_cells": 65, "unique_target_patient_ids": 47, "R4": "exact original classifier forward-pre-hook input D=64; original classifier replay <=1e-6", "private_representation_reuse": "The prior reference's selected-epoch private FIT/validation R4 payloads are reusable only after fresh 150-grid A1 replay and exact source/role/checkpoint/threshold provenance checks; no prior aggregate result is an implementation input"},
+  "preprocess": "one FIT-channel-row StandardScaler per selected fold/epoch; transform FIT and validation R4, no target labels",
+  "frozen_margin": "m0=logit(VLOO NEZ threshold)-original NEZ logit; positive means EZ; zero budget exactly frozen A1",
+  "splits": {"repetitions": 20, "candidate_fraction": 0.5, "candidate_count": "floor(valid_channels/2)", "query": "remaining channels", "label_blind": true, "seed": "first 64 SHA256 bits of UTF-8 pipe-joined components modulo 2^32", "split_components": [42, "fold", "patient_id", "repetition", "split"], "no_class_resampling": true},
+  "budgets": [0, 1, 2, 4, 8, 16],
+  "calibrator": {"form": "m=m0+delta_b+z dot delta_w", "support_loss": "mean binary cross entropy with logits, EZ positive + lambda_w * squared L2(delta_w) + 1.0 * delta_b^2", "lambda_b": 1.0, "initial_residual": 0.0, "optimizer": "deterministic scipy L-BFGS-B with analytic gradient, maxiter=200, no A1 updates", "bias_only": "same support, delta_w=0, lambda_b=1.0", "geometry_cosine": "delta_w versus patient oracle direction transformed to FIT-standardized coordinates (raw oracle coefficient multiplied elementwise by FIT scaler scale)"},
+  "fit_lambda_selection": {"grid": [0.1, 1.0, 10.0, 100.0], "episodes_per_fit_patient": 3, "split": "label-blind 50/50", "budget": 4, "acquisition": "deterministic random", "criterion": "patient-equal mean query EZ-AP; ties within 1e-6 choose larger lambda", "reuse": "one selection per distinct selected fold/epoch checkpoint"},
+  "acquisition": {"RANDOM": "fixed label-blind candidate permutation, first B", "UNCERTAINTY": "sequential minimum absolute current calibrated margin, stable channel hash tie-break", "UNCERTAINTY_DIVERSITY": "sequential 0.5 uncertainty percentile rank plus 0.5 nearest-support cosine-distance percentile rank in standardized R4; empty support diversity rank=1; stable channel hash tie-break", "ORACLE_BALANCED_RANDOM": "B>=2 only; candidate labels used to make approximately class-balanced support; nondeployable and excluded from gates", "FULL_POOL_CALIBRATION": "all candidate labels, same full residual, non-few-shot capacity bound"},
+  "target_evaluation": {"query": "same fixed query channels for all methods and budgets in a repetition", "one_class": "AP/AUROC and positive-class ranking are nonestimable when either class absent; no redraw", "decision_boundary": 0.0, "metrics": ["EZ-AP", "EZ-AUROC", "EZ-MRR", "Top1-EZ", "NDCG-EZ", "Macro-F1", "EZ-F1", "NEZ-F1", "BA", "predicted_EZ_fraction"], "oracle": "target-label-using inner cross-fitted LogisticRegression C=1 K=min(5,nEZ,nNEZ), diagnostic only after scores frozen"},
+  "bootstrap": {"unit": "unique patient ID, include all folds and repetitions", "resamples": 10000, "seed": 42, "paired": true},
+  "gates": {"fewshot": "predeclared B<=8, one of RANDOM/UNCERTAINTY/UNCERTAINTY_DIVERSITY; all nine conditions in user protocol", "active": "UNCERTAINTY_DIVERSITY versus RANDOM at B<=8; all six conditions in user protocol", "full_pool": "AP gain>=0.030, positive >=4/5 folds, patient-cluster lower CI>0"},
+  "outer_policy": "No outer loader/prediction/metric or historical outer outcome; disclose legacy monolithic loader label materialization if unavoidable",
+  "public_outputs": "code, lock, aggregate CSV/JSON/report only; no patient rows, labels, representations, checkpoints or logs"
+}

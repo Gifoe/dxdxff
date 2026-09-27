@@ -1,0 +1,24 @@
+{
+  "cache_feature_count": 28,
+  "cache_feature_names_in_order": [
+    "log_bp_delta", "log_bp_theta", "log_bp_alpha", "log_bp_beta", "log_bp_low_gamma", "log_bp_high_gamma", "log_total_power", "rms", "variance", "line_length_per_sec", "spectral_entropy", "hjorth_mobility", "hjorth_complexity", "degree_norm", "strength_norm", "clustering_coeff", "eigenvector_centrality", "pagerank", "kcore_norm", "local_efficiency", "early_high_gamma_slope", "early_line_length_slope", "onset_latency_high_gamma", "onset_latency_line_length", "onset_rank_high_gamma", "onset_rank_line_length", "high_gamma_top20pct_mean", "line_length_top20pct_mean"
+  ],
+  "source_selected_9": [
+    "log_bp_delta", "log_bp_theta", "log_bp_beta", "log_bp_low_gamma", "log_bp_high_gamma", "rms", "variance", "line_length_per_sec", "spectral_entropy"
+  ],
+  "additional_allowed_signal_features": [
+    "log_bp_alpha", "log_total_power", "hjorth_mobility", "hjorth_complexity", "degree_norm", "strength_norm", "clustering_coeff", "eigenvector_centrality", "pagerank", "kcore_norm", "local_efficiency", "early_high_gamma_slope", "early_line_length_slope", "onset_latency_high_gamma", "onset_latency_line_length", "onset_rank_high_gamma", "onset_rank_line_length", "high_gamma_top20pct_mean", "line_length_top20pct_mean"
+  ],
+  "excluded_cache_fields": {
+    "subject_id,run_id,sample_id,source_center": "identity or center metadata",
+    "channel_names_norm,contact_groups,contact_numbers,channel_meta": "channel/electrode metadata",
+    "labels,surgery_success,outcome_group": "labels or clinical outcome",
+    "file_quality_rating,file_quality_final_action": "clinical quality/exclusion metadata",
+    "window_adjacency,interictal_window_features,raw waveform": "not a scalar descriptor in the frozen ictal window_feature_names field"
+  },
+  "provenance": "The 28 cache window_feature_names were checked against the frozen cache metadata. The source ez_features implementation derives spectral/statistical, graph, early-slope, onset-latency/rank and burstness descriptors from signal windows and relative window centers, not EZ labels. Names containing onset refer to ictal temporal signal position, not annotated EZ/SOZ labels. The source evidence_views implementation selects the 9 listed descriptors for B0.",
+  "inventory_hash_rule": "SHA-256 of UTF-8 cache_feature_names_in_order joined by LF, without trailing LF",
+  "feature_inventory_sha256": "6db5ca02770ab40b07fcf55c07a0ba8d80e39502f0d18d370362a782cc1b2b22",
+  "label_outcomes_read_for_inventory": false,
+  "outer_test_accessed": false
+}

@@ -1,0 +1,19 @@
+{
+  "amendment": "common-checkpoint mechanism diagnostics",
+  "timing": "locked before any new target-label evaluation; FIT training may be underway",
+  "reason": "VLOO may choose a different checkpoint per patient. R4 cosine across independently selected checkpoint states is not a shared coordinate system and cannot measure patient geometry canonicalization.",
+  "unchanged": [
+    "source architecture and inputs",
+    "FIT-only hyperparameter selection",
+    "30-epoch training and A1 VLOO primary performance",
+    "fixed query repetitions",
+    "B=0 deployment",
+    "bootstrap and gates"
+  ],
+  "diagnostic_checkpoint": "epoch 30 for every patient and variant within a fold, regardless of VLOO-selected epoch",
+  "baseline": "load exact A1 epoch-30 source checkpoint and freeze its validation R4 before target-label evaluation",
+  "new_models": "reuse already-frozen epoch-30 target R4 snapshots",
+  "direction_dispersion": "pairwise cosine only between distinct patients in the same fold and same model state; aggregate fold means",
+  "headroom_and_reversal": "FIT and validation R4 both from the same fold-variant epoch-30 model",
+  "status": "mechanism-only correction; no target outcome inspected or used"
+}

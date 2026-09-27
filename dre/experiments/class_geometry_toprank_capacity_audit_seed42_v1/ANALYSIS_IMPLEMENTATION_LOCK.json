@@ -1,0 +1,12 @@
+{
+  "status": "frozen before reading trained-variant validation outcomes",
+  "primary_selector": "source development_metrics.finalize_fold S-F1, no S-RANK",
+  "quartiles": "sort 65 VLOO cases ascending by true EZ fraction with (fold,subject_id) tie-break; split ordered cases into four nearly equal np.array_split bins",
+  "imbalance_direction": "Pearson and Spearman between abs(original EZ loss mass-0.5) and patient delta AUPRC; positive is directionally supportive but does not override six quantitative gates",
+  "hard_negative_margin": "per patient min true EZ score minus maximum score of top16 false EZ NEZ; gain is candidate minus matched control, strictly positive",
+  "capacity_gap": "FIT patient-mean AUPRC minus VLOO validation patient-mean AUPRC at each excluded patient's selected epoch; gap increase >=0.010 is substantial",
+  "topk_tie": "stable descending EZ score order with original channel index as tie-break",
+  "bootstrap": "10000 patient-case resamples with numpy default_rng(42), percentile 2.5/97.5; cases paired by fold and subject ID",
+  "first_positive_trigger": "run if both B01-B00 and B11-B10 mean MRR gains are below +0.010",
+  "outer_test_accessed": false
+}

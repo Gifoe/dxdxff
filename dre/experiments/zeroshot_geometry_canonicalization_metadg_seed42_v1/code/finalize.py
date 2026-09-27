@@ -220,7 +220,7 @@ def isolated_fit_geometry(fold,variant,epoch):
     if not path.is_file():
         command=[sys.executable,"-X","faulthandler","-u",str(Path(__file__).resolve()),
                  "--extract-fit-r4",str(fold),variant,str(epoch)]
-        native={0xC0000005,0xC000001D,0xC0000096,0xC0000409,0x80000003,
+        native={3,0xC0000005,0xC000001D,0xC0000096,0xC0000409,0x80000003,
                 -1073741819,-1073741795,-1073741674,-1073740791,-2147483645}
         for attempt in range(3):
             status=subprocess.run(command,check=False).returncode
@@ -288,7 +288,7 @@ def isolated_diagnostic_group(fold,variant,items):
     if not out.is_file():
         command=[sys.executable,"-X","faulthandler","-u",str(Path(__file__).resolve()),
                  "--diagnostic-group",str(fold),variant]
-        native={0xC0000005,0xC000001D,0xC0000096,0xC0000409,0x80000003,
+        native={3,0xC0000005,0xC000001D,0xC0000096,0xC0000409,0x80000003,
                 -1073741819,-1073741795,-1073741674,-1073740791,-2147483645}
         for attempt in range(3):
             status=subprocess.run(command,check=False).returncode

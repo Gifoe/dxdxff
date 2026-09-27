@@ -6,6 +6,11 @@ same A1 architecture and per-fold initialization; Z1/Z2/Z2B/Z3/Z4/C1 learn
 the representation and original classifier jointly. No target-patient update,
 candidate pool, or B=8 support is used by the new models.
 
+`DIAGNOSTIC_AMENDMENT.json` was locked before new target outcomes. It sets a
+common epoch-30 checkpoint per fold/variant for R4 geometry diagnostics;
+mixing per-patient VLOO-selected checkpoints would compare nonshared spaces.
+The primary VLOO performance protocol is unchanged.
+
 On the original Windows server, private checkpoints, optimizer states, score
 grids, R4 tensors and patient/channel records live only under `ZSG_RUNTIME`.
 The compact aggregate CSV/JSON/MD reports live in this directory. The runner

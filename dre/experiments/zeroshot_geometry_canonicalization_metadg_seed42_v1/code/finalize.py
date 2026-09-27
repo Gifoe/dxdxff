@@ -55,10 +55,18 @@ def baseline_cell(fold,source):
 
 
 def load():
-    if not (RUNTIME/"SCORE_FREEZE_BEFORE_TARGET_LABELS.json").is_file():
+    freeze_path=RUNTIME/"SCORE_FREEZE_BEFORE_TARGET_LABELS.json"
+    if not freeze_path.is_file():
         raise RuntimeError("Model scores were not hash-frozen before target evaluation")
+    frozen=json.loads(freeze_path.read_text(encoding="utf-8"))
+    if frozen["source_common_files"]!=5 or frozen["diagnostic_amendment_sha"]!="765107a265c48d139430c97d95da2aeb513dbadff6a639984ff2b04afa69e0bf":
+        raise RuntimeError("Common-checkpoint diagnostic provenance incomplete")
     cells=[];rows=[];representations={}
     for fold in range(1,6):
+        common_path=RUNTIME/"private"/"a1_common_checkpoint"/f"fold_{fold}_epoch30.pkl"
+        if afc.sha(common_path)!=frozen["source_common"][str(common_path.relative_to(RUNTIME))]:
+            raise RuntimeError("A1 shared-checkpoint R4 changed after freeze")
+        with common_path.open("rb") as f:baseline_common=pickle.load(f)
         source=afc.read_csv(afc.PRIOR_RUNTIME/"private"/f"fold_{fold}"/"A1_VLOO_PRIVATE.csv")
         if len(source)!=13:raise RuntimeError("Source A1 VLOO grid incomplete")
         for src in source:
@@ -71,14 +79,14 @@ def load():
                 for m in cell["metrics"]:
                     rows.append(dict(fold=fold,sid=sid,rep=m["rep"],variant=variant,
                                      **{k:m.get(k,np.nan) for k in METRICS}))
+                y=ev.reference_y(fold,30,sid)
                 if variant=="Z0_A1":
-                    representations[(fold,sid,variant)]=(base["R4"],base["y"],base["epoch"])
+                    representations[(fold,sid,variant)]=(np.asarray(baseline_common[sid]["R4"],dtype=float),y,30)
                 else:
                     path=RUNTIME/"private"/"pending"/variant/f"fold_{fold}"/(_stem(sid)+".pkl")
                     if afc.sha(path)!=cell["pending_sha"]:raise RuntimeError("Target score/R4 pending hash mismatch")
-                    with path.open("rb") as f: pending=pickle.load(f)
-                    y=ev.reference_y(fold,cell["epoch"],sid)
-                    representations[(fold,sid,variant)]=(np.asarray(pending["r4"],dtype=float),y,cell["epoch"])
+                    common=ev.private_snapshot(fold,variant,30)[sid]
+                    representations[(fold,sid,variant)]=(np.asarray(common["R4"],dtype=float),y,30)
     if len(cells)!=65 or len({sid for _,sid,_ in cells})!=47 or len(rows)!=65*20*len(ALL):
         raise RuntimeError("65/47/20 target coverage changed")
     exact={(r["fold"],r["sid"],r["rep"],r["variant"]):r for r in rows}
@@ -163,9 +171,6 @@ def fit_geometry(fold,variant,epoch):
     import torch
     import train as tr
     from exp_ez_hybrid import _move_tensors_to_device
-    if variant=="Z0_A1":
-        source=ev._source_payload(fold,epoch)["fit"]
-        return [(sid,np.asarray(row["R4"],dtype=float),np.asarray(row["y"],dtype=np.int8)) for sid,row in source.items()]
     from run_matched import install_interleaved_hlv_view,make_args
     import exp_ez_hybrid as core
     if not getattr(fit_geometry,"_installed",False):
@@ -177,10 +182,13 @@ def fit_geometry(fold,variant,epoch):
     loader=exp._make_loader(fit_set,shuffle=False,batch_size=2)
     model=exp.runtime["model_cls"](args).to(exp.device)
     exp._dry_initialize_lazy_layers(model,loader)
-    index=selected_config(fold,variant)["config_index"]
-    ckpt=RUNTIME/"full"/f"fold_{fold}"/variant/f"config_{index:02d}"/f"epoch_{epoch:02d}.pt"
+    if variant=="Z0_A1":
+        ckpt=tr.A1_RUNTIME/"A1"/f"fold_{fold}"/f"epoch_{epoch:02d}.pt"
+    else:
+        index=selected_config(fold,variant)["config_index"]
+        ckpt=RUNTIME/"full"/f"fold_{fold}"/variant/f"config_{index:02d}"/f"epoch_{epoch:02d}.pt"
     state=torch.load(ckpt,map_location=exp.device,weights_only=False)
-    model.load_state_dict(state["model"],strict=True)
+    model.load_state_dict(state["model_state_dict"] if variant=="Z0_A1" else state["model"],strict=True)
     cap=tr.CaptureR4(model);model.eval();out=[]
     with torch.no_grad():
         for raw in loader:
@@ -208,7 +216,7 @@ def diagnostics(cells,reps):
         directions=[]
         for fold,sid,epoch,x,y in items:
             d=unit_direction(x,y)
-            if d is not None:directions.append((sid,d))
+            if d is not None:directions.append((fold,sid,d))
             key=(fold,variant,epoch)
             if key not in fit_cache: fit_cache[key]=fit_geometry(*key)
             fit=fit_cache[key]
@@ -240,10 +248,15 @@ def diagnostics(cells,reps):
                 specific_ap=float(average_precision_score(y,pred))
             headroom.append(dict(variant=variant,fold=fold,shared_ap=shared_ap,
                                  patient_specific_oof_ap=specific_ap,gap=specific_ap-shared_ap))
-        cos=[float(a@b) for i,(sa,a) in enumerate(directions) for sb,b in directions[i+1:] if sa!=sb]
+        cos=[float(a@b) for i,(fa,sa,a) in enumerate(directions)
+             for fb,sb,b in directions[i+1:] if fa==fb and sa!=sb]
         if not cos:raise RuntimeError("No cross-patient R4 direction pairs")
-        dmat=np.stack([d for _,d in directions]);singular=np.linalg.svd(dmat-dmat.mean(0),compute_uv=False)
-        evr=float(singular[0]**2/max(float(np.square(singular).sum()),1e-12))
+        evrs=[]
+        for fold in range(1,6):
+            dmat=np.stack([d for f,_,d in directions if f==fold])
+            singular=np.linalg.svd(dmat-dmat.mean(0),compute_uv=False)
+            evrs.append(float(singular[0]**2/max(float(np.square(singular).sum()),1e-12)))
+        evr=float(np.mean(evrs))
         dispersion.append(dict(variant=variant,n_directions=len(directions),n_cross_patient_pairs=len(cos),
                                mean_pairwise_cosine=float(np.mean(cos)),median_pairwise_cosine=float(np.median(cos)),
                                q10_cosine=float(np.quantile(cos,.1)),fraction_cosine_negative=float(np.mean(np.asarray(cos)<0)),
@@ -325,6 +338,8 @@ def main():
     afc.write_json(ROOT/"LABEL_USAGE_AUDIT.json",dict(target_cells=65,unique_patient_ids=47,repetitions=1300,
                    deployment_budget=0,candidate_features_or_labels_for_new_model=False,
                    fit_only_hyperparameter_selection=True,all_new_variant_score_grids_frozen_before_vloo_labels=True,
+                   five_a1_epoch30_diagnostic_r4_snapshots_frozen_before_vloo_labels=True,
+                   diagnostic_amendment_sha="765107a265c48d139430c97d95da2aeb513dbadff6a639984ff2b04afa69e0bf",
                    own_target_label_excluded_from_own_vloo_selection=True,
                    strict_target_label_sequencing=False,
                    note="Exact cross-patient A1 VLOO reads each target label to select other targets; all score grids were frozen first, but final decisions cannot all be frozen before any target label is accessed.",
@@ -334,9 +349,10 @@ def main():
         "# Implementation audit\n\n- Protocol lock was pushed before new target outcomes. A1 150-checkpoint/R4 replay and matched B0 AP were rechecked.\n"
         "- Identical source A1 architecture, per-fold initial state, patient-equal BCE, optimizer, 30 epochs, and 19-threshold VLOO. Geometry heads/adversary are training-only.\n"
         "- FIT-only patient-ID-disjoint 80/20 hyperparameter selection; full-FIT retraining after selection. Z4 geometry and meta parameters derive solely from FIT selections.\n"
-        "- All 900 new-model epoch/fold/variant score and R4 snapshots were hash-frozen before the new target-label evaluation pass. Candidate pools were ignored for B=0 fixed-query prediction.\n"
+        "- All 900 new-model epoch/fold/variant score and R4 snapshots, 30 FIT-selection files, and five exact A1 epoch-30 R4 snapshots were hash-frozen before the new target-label evaluation pass. Candidate pools were ignored for B=0 fixed-query prediction.\n"
+        "- A pre-outcome diagnostic amendment fixes epoch 30 as the common checkpoint within each fold for every variant. Cross-patient R4 cosine uses only within-fold pairs from that same model state; VLOO-selected states are never mixed for geometry diagnostics. Primary VLOO performance is unchanged.\n"
         "- Literal strict target-label sequencing is false: exact A1 VLOO uses a patient's label to select another patient's checkpoint. The patient's own label never enters its own selection; all candidate score grids were frozen first. The legacy loader also materializes all 80 labels, making strict outer label non-materialization false. No outer predictions, metrics or selection were computed.\n"
-        "- Geometry diagnostics, target-specific OOF headroom and FIT-direction transfer are post-score exploratory; patient-specific heads are nondeployable. Winner/gates are retrospective across multiple variants without family-wise correction.\n",
+        "- Geometry diagnostics, target-specific OOF headroom and FIT-direction transfer are post-score exploratory at common epoch 30; patient-specific heads are nondeployable. Winner/gates are retrospective across multiple variants without family-wise correction.\n",
         encoding="utf-8")
     s=summary;g=gates
     report=["# Zero-shot Patient Geometry Recovery Study — development-only","",
@@ -349,9 +365,9 @@ def main():
         f"6. Best descriptive zero-shot variant `{best}` AP {s[best]['ap']:.6f}, paired delta {s[best]['delta_ap_vs_a1']:+.6f} [{s[best]['delta_ap_ci_low']:+.6f},{s[best]['delta_ap_ci_high']:+.6f}], positive folds {g[best]['positive_folds']}/5.",
         f"7. Reaches original B8 0.599632 under predeclared gate: {g[best]['ZERO_SHOT_REACHES_CURRENT_B8']}.",
         f"8. Reaches best B8 0.605291 under predeclared gate: {g[best]['ZERO_SHOT_REACHES_BEST_B8']}.",
-        f"9. Patient-specific-minus-shared headroom: A1 {head['Z0_A1']['gap']:.6f}; best {head[best]['gap']:.6f}. Smaller supports, but does not prove, canonicalization.",
-        f"10. Mean cross-patient direction cosine: A1 {disp['Z0_A1']['mean_pairwise_cosine']:.6f}; best {disp[best]['mean_pairwise_cosine']:.6f}.",
-        f"11. FIT-direction reversal rate: A1 {rev['Z0_A1']['reversal_rate']:.6f}; best {rev[best]['reversal_rate']:.6f}.",
+        f"9. Patient-specific-minus-shared headroom at common epoch 30: A1 {head['Z0_A1']['gap']:.6f}; best {head[best]['gap']:.6f}. Smaller supports, but does not prove, canonicalization.",
+        f"10. Mean within-fold cross-patient direction cosine at common epoch 30: A1 {disp['Z0_A1']['mean_pairwise_cosine']:.6f}; best {disp[best]['mean_pairwise_cosine']:.6f}.",
+        f"11. FIT-direction reversal rate at common epoch 30: A1 {rev['Z0_A1']['reversal_rate']:.6f}; best {rev[best]['reversal_rate']:.6f}.",
         f"12. Interpretation: `{terminal}`. Any richer-physiology switch is a next-study hypothesis, not a causal conclusion from these retrospective data.","",
         "No B8 training, target adaptation, Student distillation or outer evaluation. The legacy loader materializes all 80 labels. Exact A1 VLOO creates cross-patient label dependencies, so strict target-label sequencing is false even though all candidate score/R4 grids were frozen before the new label-using pass. Descriptive best-variant selection is uncorrected for multiplicity."]
     (ROOT/"FINAL_REPORT.md").write_text("\n".join(report)+"\n",encoding="utf-8")

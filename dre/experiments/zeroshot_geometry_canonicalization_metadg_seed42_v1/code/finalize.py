@@ -369,7 +369,15 @@ def main():
         f"10. Mean within-fold cross-patient direction cosine at common epoch 30: A1 {disp['Z0_A1']['mean_pairwise_cosine']:.6f}; best {disp[best]['mean_pairwise_cosine']:.6f}.",
         f"11. FIT-direction reversal rate at common epoch 30: A1 {rev['Z0_A1']['reversal_rate']:.6f}; best {rev[best]['reversal_rate']:.6f}.",
         f"12. Interpretation: `{terminal}`. Any richer-physiology switch is a next-study hypothesis, not a causal conclusion from these retrospective data.","",
+        "## Primary matched-query performance","",
+        "| Variant | EZ-AP | AUROC | MRR | Top1 | Macro-F1 | EZ-F1 | BA |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|"]
+    for variant in ALL:
+        r=s[variant]
+        report.append("| "+variant+" | "+" | ".join(f"{r[k]:.6f}" for k in METRICS)+" |")
+    report.extend(["| B8 best Teacher (reference only) | 0.605291 | — | — | — | — | — | — |", "",
         "No B8 training, target adaptation, Student distillation or outer evaluation. The legacy loader materializes all 80 labels. Exact A1 VLOO creates cross-patient label dependencies, so strict target-label sequencing is false even though all candidate score/R4 grids were frozen before the new label-using pass. Descriptive best-variant selection is uncorrected for multiplicity."]
+    )
     (ROOT/"FINAL_REPORT.md").write_text("\n".join(report)+"\n",encoding="utf-8")
     print(f"[FINAL] best={best} AP={s[best]['ap']:.6f} terminal={terminal}",flush=True)
 

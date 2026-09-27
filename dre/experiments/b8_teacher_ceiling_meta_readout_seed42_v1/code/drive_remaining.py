@@ -16,6 +16,7 @@ def main():
         for d in tc.DIMS:
             call("meta_train.py","--fold",fold,"--dimension",d)
         call("prototype_select.py","--fold",fold)
+    call("freeze.py")
     print("[ALL_FIT_MODEL_SELECTION_FROZEN_BEFORE_TARGET_OUTCOMES]",flush=True)
     for fold in range(1,6):
         for cell in range(13):

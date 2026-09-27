@@ -8,6 +8,7 @@ import pickle
 import numpy as np
 
 import teacher_core as tc
+import freeze
 from fit_select import context_key
 from prototype_select import prototype_score
 
@@ -36,6 +37,7 @@ def score_variant(ep,name,basis,lw,lb,full=False,support=None):
 
 def cell_run(fold,cell_index):
     tc.preflight()
+    freeze.verify()
     rows=tc.selected_rows(fold)
     if cell_index<0 or cell_index>=len(rows):raise RuntimeError("Cell index out of range")
     row=rows[cell_index];sid=row["subject_id"]

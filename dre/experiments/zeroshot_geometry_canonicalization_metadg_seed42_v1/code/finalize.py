@@ -301,8 +301,10 @@ def decisions(summary,folds,disp,head,rev):
                                  supported=bool(geometry))
     best=max(VARIANTS,key=lambda v:summary[v]["ap"])
     bg=gates[best]
-    if bg["ZERO_SHOT_REACHES_BEST_B8"]:terminal="ZEROSHOT_PATIENT_GEOMETRY_RECOVERY_JUSTIFIED"
-    elif bg["ZERO_SHOT_REACHES_CURRENT_B8"]:terminal="ZEROSHOT_APPROACHES_FEWSHOT_PERFORMANCE"
+    # The preregistered gates are existential ("some variant"), not a gate
+    # applied only to the retrospectively highest-AP row.
+    if any(g["ZERO_SHOT_REACHES_BEST_B8"] for g in gates.values()):terminal="ZEROSHOT_PATIENT_GEOMETRY_RECOVERY_JUSTIFIED"
+    elif any(g["ZERO_SHOT_REACHES_CURRENT_B8"] for g in gates.values()):terminal="ZEROSHOT_APPROACHES_FEWSHOT_PERFORMANCE"
     elif gates["Z3_PATIENT_HELDOUT_MLDG"]["ZEROSHOT_IMPROVEMENT_SUPPORTED"] and not any(gates[v]["ZEROSHOT_IMPROVEMENT_SUPPORTED"] for v in VARIANTS[:2]):
         terminal="PATIENT_HELDOUT_META_GENERALIZATION_SUPPORTED"
     elif bg["ZEROSHOT_IMPROVEMENT_SUPPORTED"] and not bg["PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED"]:
@@ -363,8 +365,8 @@ def main():
         f"4. Z3 patient-heldout first-order MLDG AP {s['Z3_PATIENT_HELDOUT_MLDG']['ap']:.6f}, delta {s['Z3_PATIENT_HELDOUT_MLDG']['delta_ap_vs_a1']:+.6f}.",
         f"5. Z4 FIT-selected geometry plus MLDG AP {s['Z4_GEOMETRY_PLUS_MLDG']['ap']:.6f}, delta {s['Z4_GEOMETRY_PLUS_MLDG']['delta_ap_vs_a1']:+.6f}.",
         f"6. Best descriptive zero-shot variant `{best}` AP {s[best]['ap']:.6f}, paired delta {s[best]['delta_ap_vs_a1']:+.6f} [{s[best]['delta_ap_ci_low']:+.6f},{s[best]['delta_ap_ci_high']:+.6f}], positive folds {g[best]['positive_folds']}/5.",
-        f"7. Reaches original B8 0.599632 under predeclared gate: {g[best]['ZERO_SHOT_REACHES_CURRENT_B8']}.",
-        f"8. Reaches best B8 0.605291 under predeclared gate: {g[best]['ZERO_SHOT_REACHES_BEST_B8']}.",
+        f"7. Any variant reaches original B8 0.599632 under predeclared gate: {any(x['ZERO_SHOT_REACHES_CURRENT_B8'] for x in g.values())}; descriptive best-AP row gate: {g[best]['ZERO_SHOT_REACHES_CURRENT_B8']}.",
+        f"8. Any variant reaches best B8 0.605291 under predeclared gate: {any(x['ZERO_SHOT_REACHES_BEST_B8'] for x in g.values())}; descriptive best-AP row gate: {g[best]['ZERO_SHOT_REACHES_BEST_B8']}.",
         f"9. Patient-specific-minus-shared headroom at common epoch 30: A1 {head['Z0_A1']['gap']:.6f}; best {head[best]['gap']:.6f}. Smaller supports, but does not prove, canonicalization.",
         f"10. Mean within-fold cross-patient direction cosine at common epoch 30: A1 {disp['Z0_A1']['mean_pairwise_cosine']:.6f}; best {disp[best]['mean_pairwise_cosine']:.6f}.",
         f"11. FIT-direction reversal rate at common epoch 30: A1 {rev['Z0_A1']['reversal_rate']:.6f}; best {rev[best]['reversal_rate']:.6f}.",

@@ -1,0 +1,60 @@
+{
+  "experiment": "ranking_bottleneck_source_audit_seed42_v1",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "source_variant": "A1",
+  "source_protocol_sha256": "6694da1b351d7130015661fcce1ec91bec643821392e409f1d5728f472b3aba0",
+  "source_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "source_split_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "cohort": "80 fixed development patients; 5 frozen folds; FIT and validation only",
+  "outer_test_accessed": false,
+  "seed": 42,
+  "training": {
+    "epochs": 30,
+    "early_stopping": false,
+    "objective": "patient-equal weighted BCE; EZ=2; NEZ=1; mean patient losses",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.001,
+    "patient_batch_size": 2,
+    "same_fold_initialization": true,
+    "epoch_seed_formula": "42*100000 + fold*1000 + epoch"
+  },
+  "selection": {
+    "sf1": "original A1 VLOO, other 12 choose epoch and threshold by Macro-F1, EZ-F1, BA, threshold distance to 0.5, earlier epoch",
+    "srank": "other 12 first choose epoch by mean patient EZ-AUPRC, EZ-MRR, EZ-AUROC, earlier epoch; then threshold by Macro-F1, EZ-F1, BA, distance to 0.5",
+    "epochs": [1, 30],
+    "thresholds": [0.05, 0.95, 0.05],
+    "excluded_patient_never_selects": true
+  },
+  "context": {
+    "variants": {"CTX0": "both attentions ON, exact A1", "CTX1": "patient attention OFF", "CTX2": "window attention OFF", "CTX3": "both attentions OFF"},
+    "frozen_patient_attention_lambdas": [1.0, 0.5, 0.0],
+    "channel_dropout_fractions": [0.1, 0.25, 0.5],
+    "channel_dropout_repeats": 20,
+    "source_gate": "A-D required and (E or F): SRANK AUPRC >= +0.010, >=4/5 positive folds, MRR nondecreasing, SF1 Macro-F1 >= -0.005, and either frozen T0 same direction or >=20% less 25%-dropout instability with high-channel-count concentration"
+  },
+  "objective": {
+    "variants": ["OBJ0 exact A1", "OBJ1 A1 + fixed within-patient EZ-vs-NEZ pairwise ranking"],
+    "pairwise_margin": 0.05,
+    "pairwise_weight": 0.05,
+    "gate": "SRANK AUPRC >= +0.010; >=4/5 positive folds; MRR and Top1 nondecreasing; SF1 Macro-F1 >= -0.005"
+  },
+  "center": {
+    "variants": ["CTR0 exact A1", "CTR1 center-equal patient BCE"],
+    "weight": "N/(K*N_k), FIT-only, no per-batch renormalization",
+    "gate": "overall AUPRC >= -0.005; worst-center AUPRC >= +0.020 and Macro-F1 >= +0.010; AUPRC gap decreases >=20%; LZU or pediatric improves without substantial other-center collapse; overall Macro-F1 >= -0.005"
+  },
+  "view": {
+    "variants": ["VIEW0 original A1 shared encoder", "VIEW1 random two-branch control", "VIEW2 semantic two-branch encoder"],
+    "static_scale_indices": [0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35],
+    "change_indices": [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26],
+    "random_partition_file": "view_interference/RANDOM_VIEW_PARTITION.json",
+    "parameter_count_tolerance": 0.02,
+    "gate": "VIEW2 AUPRC >= VIEW0 +0.010 and >= VIEW1 +0.010; >=4/5 and >=3/5 positive folds respectively; MRR nondecreasing vs both; SF1 Macro-F1 >= VIEW0 -0.005"
+  },
+  "layerwise": {"layers": ["L0 patient_channel_embedding", "L1 patient-relative-z", "L2 contextual embedding", "L3 A1 logit"], "linear_probe_epochs": 20, "learning_rate": 0.001, "weight_decay": 0.0001},
+  "public_data_policy": "aggregate CSV/JSON/MD and code only; no patient or channel records, embeddings, predictions, raw cache, checkpoints, or runtime logs",
+  "terminal_positive": "RANKING_BOTTLENECK_SOURCE_IDENTIFIED",
+  "terminal_negative": "RANKING_BOTTLENECK_SOURCE_UNRESOLVED"
+}

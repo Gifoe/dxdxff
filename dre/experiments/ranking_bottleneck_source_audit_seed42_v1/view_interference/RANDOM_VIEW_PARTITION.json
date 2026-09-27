@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "method": "Python random.Random(42).shuffle(list(range(36))); first 18 versus last 18",
+  "group_A": [9, 12, 5, 27, 32, 19, 30, 25, 22, 26, 31, 10, 11, 28, 8, 20, 16, 35],
+  "group_B": [6, 24, 0, 34, 13, 18, 2, 33, 29, 21, 3, 23, 4, 14, 15, 17, 1, 7],
+  "labels_used": false
+}

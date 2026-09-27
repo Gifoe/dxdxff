@@ -51,7 +51,7 @@ def select_variant(eps,basis,grid_w,full_pool):
     return best,records
 
 
-def run_context(ctx):
+def run_context(ctx,variant=None,mode=None):
     key=context_key(ctx)
     path=tc.RUNTIME/"private"/"fit_selection"/f"{key}.pkl"
     if path.exists():
@@ -59,16 +59,42 @@ def run_context(ctx):
         if result["lock_sha"]!=tc.LOCK_SHA or result["fold"]!=ctx["fold"] or result["epoch"]!=ctx["epoch"] or result["tau"]!=ctx["tau"]:
             raise RuntimeError("FIT selection resume provenance mismatch")
         return result
-    eps=episodes(ctx)
+    if variant not in ("R64","PCA4","PCA8","PCA16") or mode not in ("b8","fullpool"):
+        raise RuntimeError("One FIT variant/mode per process is required")
+    partial=path.with_name(f"{key}_{variant}_{mode}.pkl")
+    if not partial.exists():
+        eps=episodes(ctx)
+        basis=np.eye(64) if variant=="R64" else tc.pca_basis(ctx,int(variant[3:]))
+        grid=tc.B8_GRID_W if variant=="R64" else tc.LOW_GRID_W
+        best,records=select_variant(eps,basis,grid,mode=="fullpool")
+        obj={"lock_sha":tc.LOCK_SHA,"fold":ctx["fold"],"epoch":ctx["epoch"],"tau":ctx["tau"],
+             "variant":variant,"mode":mode,"best":best,"grid":records,"basis":basis,
+             "fit_episodes":len(eps),"fit_patients":len({e['sid'] for e in eps})}
+        tc.write_private(partial,obj)
+        print(f"[FIT] f{ctx['fold']} e{ctx['epoch']} {variant} {mode} AP={best['fit_patient_equal_ap']:.4f}",flush=True)
+    else:
+        with partial.open("rb") as f:obj=pickle.load(f)
+        if obj["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("FIT partial resume mismatch")
+    all_parts={}
+    for name in ("R64","PCA4","PCA8","PCA16"):
+        for kind in ("b8","fullpool"):
+            q=path.with_name(f"{key}_{name}_{kind}.pkl")
+            if not q.exists():return obj
+            with q.open("rb") as f:part=pickle.load(f)
+            if part["lock_sha"]!=tc.LOCK_SHA or part["fold"]!=ctx["fold"] or part["epoch"]!=ctx["epoch"] or part["tau"]!=ctx["tau"]:
+                raise RuntimeError("FIT partial aggregation mismatch")
+            all_parts[(name,kind)]=part
     variants={}
-    for name,basis,grid in [("R64",np.eye(64),tc.B8_GRID_W)]+[(f"PCA{d}",tc.pca_basis(ctx,d),tc.LOW_GRID_W) for d in tc.DIMS]:
-        b8,b8_grid=select_variant(eps,basis,grid,False)
-        full,full_grid=select_variant(eps,basis,grid,True)
-        variants[name]={"b8":b8,"fullpool":full,"b8_grid":b8_grid,"fullpool_grid":full_grid,"basis":basis}
-        print(f"[FIT] f{ctx['fold']} e{ctx['epoch']} {name} B8={b8['fit_patient_equal_ap']:.4f} FULL={full['fit_patient_equal_ap']:.4f}",flush=True)
+    for name in ("R64","PCA4","PCA8","PCA16"):
+        a=all_parts[(name,"b8")];b=all_parts[(name,"fullpool")]
+        if not np.array_equal(a["basis"],b["basis"]):raise RuntimeError("FIT basis changed between modes")
+        variants[name]={"b8":a["best"],"fullpool":b["best"],"b8_grid":a["grid"],
+                        "fullpool_grid":b["grid"],"basis":a["basis"]}
+    first=all_parts[("R64","b8")]
     result={"lock_sha":tc.LOCK_SHA,"fold":ctx["fold"],"epoch":ctx["epoch"],"tau":ctx["tau"],
-            "key":key,"fit_episodes":len(eps),"fit_patients":len({e['sid'] for e in eps}),"variants":variants}
+            "key":key,"fit_episodes":first["fit_episodes"],"fit_patients":first["fit_patients"],"variants":variants}
     tc.write_private(path,result)
+    print(f"[FIT_CONTEXT_COMPLETE] fold={ctx['fold']} epoch={ctx['epoch']} key={key}",flush=True)
     return result
 
 
@@ -76,6 +102,8 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--fold",type=int,required=True)
     ap.add_argument("--context",type=int,default=-1)
+    ap.add_argument("--variant",choices=("R64","PCA4","PCA8","PCA16"),required=True)
+    ap.add_argument("--mode",choices=("b8","fullpool"),required=True)
     args=ap.parse_args()
     tc.preflight()
     if args.context>=0:
@@ -89,8 +117,8 @@ def main():
     else:
         contexts=tc.fold_contexts(args.fold)
     for i,ctx in enumerate(contexts):
-        run_context(ctx)
-        print(f"[DONE] fold={args.fold} context={args.context if args.context>=0 else i} key={context_key(ctx)}",flush=True)
+        run_context(ctx,args.variant,args.mode)
+        print(f"[DONE] fold={args.fold} context={args.context if args.context>=0 else i} {args.variant} {args.mode} key={context_key(ctx)}",flush=True)
 
 
 if __name__=="__main__":main()

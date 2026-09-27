@@ -13,7 +13,10 @@ def main():
         n=len({(int(r["selected_epoch"]),float(r["selected_threshold"])) for r in tc.selected_rows(fold)})
         print(f"[FOLD] {fold} contexts={n}",flush=True)
         for i in range(n):
-            subprocess.run([sys.executable,"-u",str(script),"--fold",str(fold),"--context",str(i)],check=True)
+            for variant in ("R64","PCA4","PCA8","PCA16"):
+                for mode in ("b8","fullpool"):
+                    subprocess.run([sys.executable,"-u",str(script),"--fold",str(fold),"--context",str(i),
+                                    "--variant",variant,"--mode",mode],check=True)
     print("[FIT_SELECTION_DONE]",flush=True)
 
 

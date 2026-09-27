@@ -6,7 +6,10 @@ import gc
 import json
 import math
 import pickle
+import subprocess
+import sys
 from collections import defaultdict
+from pathlib import Path
 
 import numpy as np
 from sklearn.linear_model import LogisticRegression
@@ -210,6 +213,28 @@ def fit_geometry(fold,variant,epoch):
     return out
 
 
+def isolated_fit_geometry(fold,variant,epoch):
+    """Same extraction, one fresh process per fold/model to bound native cache lifetime."""
+    folder=RUNTIME/"private"/"fit_r4"/f"fold_{fold}"
+    path=folder/f"{variant}_epoch_{epoch:02d}.pkl"
+    if not path.is_file():
+        command=[sys.executable,"-X","faulthandler","-u",str(Path(__file__).resolve()),
+                 "--extract-fit-r4",str(fold),variant,str(epoch)]
+        native={0xC0000005,0xC000001D,0xC0000096,0xC0000409,0x80000003,
+                -1073741819,-1073741795,-1073741674,-1073740791,-2147483645}
+        for attempt in range(3):
+            status=subprocess.run(command,check=False).returncode
+            if status==0:break
+            if status not in native or attempt==2:
+                raise RuntimeError(f"FIT R4 extraction failed status={status}: fold={fold} {variant}")
+            print(f"[DIAGNOSTIC_NATIVE_RETRY] fold={fold} {variant} status={status}",flush=True)
+    with path.open("rb") as f: row=pickle.load(f)
+    if (row["lock_sha"]!=LOCK_SHA or row["fold"]!=fold or
+            row["variant"]!=variant or row["epoch"]!=epoch):
+        raise RuntimeError("FIT R4 diagnostic cache identity mismatch")
+    return row["out"]
+
+
 def diagnostics(cells,reps):
     dispersion=[];headroom=[];reversal=[]
     byvariant=defaultdict(list)
@@ -226,7 +251,7 @@ def diagnostics(cells,reps):
             key=(fold,variant,epoch)
             if key not in fit_cache:
                 print(f"[DIAGNOSTIC_FIT_R4] fold={fold} variant={variant} epoch={epoch}",flush=True)
-                fit_cache[key]=fit_geometry(*key)
+                fit_cache[key]=isolated_fit_geometry(*key)
             fit=fit_cache[key]
             fdirs=[unit_direction(z,labels) for _,z,labels in fit]
             fdirs=[a for a in fdirs if a is not None]
@@ -396,4 +421,20 @@ def main():
     print(f"[FINAL] best={best} AP={s[best]['ap']:.6f} terminal={terminal}",flush=True)
 
 
-if __name__=="__main__":main()
+if __name__=="__main__":
+    if len(sys.argv)==5 and sys.argv[1]=="--extract-fit-r4":
+        preflight()
+        fold=int(sys.argv[2]);variant=sys.argv[3];epoch=int(sys.argv[4])
+        if fold not in range(1,6) or variant not in ALL or epoch!=30:
+            raise RuntimeError("Invalid common-checkpoint FIT R4 extraction request")
+        folder=RUNTIME/"private"/"fit_r4"/f"fold_{fold}"
+        folder.mkdir(parents=True,exist_ok=True)
+        path=folder/f"{variant}_epoch_{epoch:02d}.pkl"
+        if not path.is_file():
+            out=fit_geometry(fold,variant,epoch)
+            tmp=path.with_suffix(".tmp")
+            with tmp.open("wb") as f:
+                pickle.dump(dict(lock_sha=LOCK_SHA,fold=fold,variant=variant,epoch=epoch,out=out),f,protocol=5)
+            tmp.replace(path)
+        print(f"[EXTRACT_FIT_R4_COMPLETE] fold={fold} {variant}",flush=True)
+    else:main()

@@ -1,0 +1,23 @@
+{
+  "representations": {
+    "R1": {
+      "median_direction_cosine": 0.7578650447932108,
+      "reversed_transfer_fraction": 0.2811811114978535,
+      "local_to_cross_ap_gap": 0.31364235668142193,
+      "pass": true
+    },
+    "R3": {
+      "median_direction_cosine": 0.6736077171567125,
+      "reversed_transfer_fraction": 0.20284000464090962,
+      "local_to_cross_ap_gap": 0.316568583522719,
+      "pass": true
+    },
+    "R4": {
+      "median_direction_cosine": 0.6712481680203226,
+      "reversed_transfer_fraction": 0.1798552036199095,
+      "local_to_cross_ap_gap": 0.33109583531651937,
+      "pass": true
+    }
+  },
+  "terminal": "CROSS_PATIENT_GEOMETRY_INSTABILITY_SUPPORTED"
+}

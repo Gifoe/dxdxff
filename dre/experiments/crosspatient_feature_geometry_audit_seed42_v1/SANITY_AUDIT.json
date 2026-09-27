@@ -1,0 +1,19 @@
+{
+  "n_validation_patients": 65,
+  "random_fit_label_permutation": {
+    "source_ap": 0.5390385624051287,
+    "permuted_fit_ap": 0.3399629166064838,
+    "validation_prevalence": 0.21488372934223382,
+    "difference_from_prevalence": 0.12507918726425
+  },
+  "channel_permutation_max_metric_error": 0.0,
+  "representation_repeat_identical": true,
+  "fit_validation_overlap": false,
+  "patient_specific_cv_inner_test_labels_used_for_training": false,
+  "label_free_alignment_and_pca": true,
+  "feature_inventory_committed_before_richer_evaluation": true,
+  "outer_test_loader_constructed": false,
+  "legacy_cache_initializer_materializes_all_80_patients_including_outer_labels": true,
+  "outer_test_metric_computed": false,
+  "pass": true
+}

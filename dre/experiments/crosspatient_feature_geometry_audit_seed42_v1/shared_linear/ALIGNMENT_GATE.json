@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "patient_z": {
+      "delta_ap": 0.0063742382491566605,
+      "positive_folds": 3,
+      "pass": false
+    },
+    "patient_robust": {
+      "delta_ap": 0.014471446809972555,
+      "positive_folds": 3,
+      "pass": false
+    },
+    "patient_rank": {
+      "delta_ap": 0.004653437652946901,
+      "positive_folds": 3,
+      "pass": false
+    }
+  },
+  "terminal": "SIMPLE_FEATURE_ALIGNMENT_NOT_SUPPORTED"
+}

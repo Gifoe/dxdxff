@@ -1,0 +1,12 @@
+{
+  "mean_deltas": {
+    "delta_ap": 0.005636931363858311,
+    "delta_auc": -0.00039615190459456605,
+    "delta_mrr": -0.004519646303818847,
+    "delta_top1": -0.03076923076923077,
+    "delta_pca_ap": 0.0056479335060924726
+  },
+  "positive_folds": 4,
+  "pass": false,
+  "terminal": "RICHER_HANDCRAFTED_FEATURE_HEADROOM_NOT_SUPPORTED"
+}

@@ -1,0 +1,9 @@
+{
+  "diagnostic_only": true,
+  "baseline": "B00",
+  "delta_auprc": -0.0018745488131993726,
+  "delta_mrr": -0.010278610610887862,
+  "delta_top1": -0.03076923076923077,
+  "delta_macro_f1": 0.00710224292990258,
+  "outer_test_accessed": false
+}

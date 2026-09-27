@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "terminal": "SOURCE_A1_REPRODUCED",
+  "checkpoints": 150,
+  "patients_per_fold": 13,
+  "max_validation_grid_error": 0.0,
+  "folds": [
+    {
+      "fold": 1,
+      "observed_macro_f1": 0.6549997115717437,
+      "expected_macro_f1": 0.6549997115717437
+    },
+    {
+      "fold": 2,
+      "observed_macro_f1": 0.6410958089865288,
+      "expected_macro_f1": 0.6410958089865288
+    },
+    {
+      "fold": 3,
+      "observed_macro_f1": 0.6101185971670673,
+      "expected_macro_f1": 0.6101185971670673
+    },
+    {
+      "fold": 4,
+      "observed_macro_f1": 0.6329791804569156,
+      "expected_macro_f1": 0.6329791804569156
+    },
+    {
+      "fold": 5,
+      "observed_macro_f1": 0.5907877503876969,
+      "expected_macro_f1": 0.5907877503876969
+    }
+  ],
+  "mean_macro_f1": 0.6259962097139906,
+  "outer_test_accessed": false
+}

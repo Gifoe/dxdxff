@@ -1,0 +1,31 @@
+{
+  "pass": false,
+  "effects": {
+    "B01": {
+      "pass": false,
+      "checks": {
+        "mrr_gain_ge_0_010": false,
+        "top1_gain_ge_0_030": false,
+        "auprc_preserved": false,
+        "macro_f1_preserved": true,
+        "positive_mrr_folds_ge_4": false,
+        "hard_negative_margin_improves": true
+      }
+    },
+    "B11": {
+      "pass": false,
+      "checks": {
+        "mrr_gain_ge_0_010": false,
+        "top1_gain_ge_0_030": false,
+        "auprc_preserved": true,
+        "macro_f1_preserved": false,
+        "positive_mrr_folds_ge_4": false,
+        "hard_negative_margin_improves": true
+      }
+    }
+  },
+  "first_positive_triggered": true,
+  "first_positive_base": "original",
+  "terminal": "HARD_NEGATIVE_RANKING_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

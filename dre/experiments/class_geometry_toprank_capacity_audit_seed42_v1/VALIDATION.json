@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "source_reproduced": true,
+  "trained_fold_variant_cells": 30,
+  "trained_epochs": 900,
+  "selected_vloo_cases_per_variant": 65,
+  "paired_bootstrap_rows": 15,
+  "capacity_trajectory_rows": 450,
+  "outer_test_accessed": false,
+  "terminal": "RANKING_SOURCE_STILL_UNRESOLVED"
+}

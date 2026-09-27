@@ -1,0 +1,14 @@
+{
+  "pass": false,
+  "checks": {
+    "auprc_gain_ge_0_010": false,
+    "auprc_positive_folds_ge_4": false,
+    "mrr_nondecreasing": true,
+    "top1_nondecreasing": false,
+    "macro_f1_preserved": true,
+    "ez_f1_preserved": true
+  },
+  "imbalance_ranking_direction_supported": false,
+  "terminal": "CLASS_GEOMETRY_RANKING_BOTTLENECK_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

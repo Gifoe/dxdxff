@@ -1,0 +1,30 @@
+{
+  "pass": false,
+  "effects": {
+    "CAP1": {
+      "pass": false,
+      "checks": {
+        "auprc_gain_ge_0_010": false,
+        "positive_auprc_folds_ge_4": false,
+        "mrr_nondecreasing": false,
+        "top1_nondecreasing": false,
+        "macro_f1_preserved": true,
+        "gap_not_substantially_larger": false
+      }
+    },
+    "CAP2": {
+      "pass": false,
+      "checks": {
+        "auprc_gain_ge_0_010": false,
+        "positive_auprc_folds_ge_4": false,
+        "mrr_nondecreasing": false,
+        "top1_nondecreasing": false,
+        "macro_f1_preserved": false,
+        "gap_not_substantially_larger": false
+      }
+    }
+  },
+  "capacity_base": "CAP0_ORIGINAL",
+  "terminal": "FEATURE_ENCODER_UNDERCAPACITY_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "tests": {
+    "equal_class_mass_1v1": true,
+    "duplicate_NEZ_10x_invariant": true,
+    "duplicate_EZ_10x_invariant": true,
+    "equal_patient_weight": true,
+    "channel_permutation_invariant": true,
+    "finite_gradient": true
+  },
+  "class_support": [
+    {
+      "fold": 1,
+      "n_fit": 51,
+      "n_validation": 13,
+      "single_class_fit": 0,
+      "single_class_validation": 0
+    },
+    {
+      "fold": 2,
+      "n_fit": 51,
+      "n_validation": 13,
+      "single_class_fit": 0,
+      "single_class_validation": 0
+    },
+    {
+      "fold": 3,
+      "n_fit": 50,
+      "n_validation": 13,
+      "single_class_fit": 0,
+      "single_class_validation": 0
+    },
+    {
+      "fold": 4,
+      "n_fit": 52,
+      "n_validation": 13,
+      "single_class_fit": 0,
+      "single_class_validation": 0
+    },
+    {
+      "fold": 5,
+      "n_fit": 51,
+      "n_validation": 13,
+      "single_class_fit": 0,
+      "single_class_validation": 0
+    }
+  ],
+  "outer_test_accessed": false
+}

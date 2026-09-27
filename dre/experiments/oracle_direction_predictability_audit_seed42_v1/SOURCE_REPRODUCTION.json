@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "terminal": "SOURCE_A1_REPRODUCED",
+  "checkpoints": 150,
+  "max_grid_error": 0.0,
+  "fold_macro_f1": [
+    0.6549997115717437,
+    0.6410958089865288,
+    0.6101185971670673,
+    0.6329791804569156,
+    0.5907877503876969
+  ],
+  "mean_macro_f1": 0.6259962097139906,
+  "r3_hook": "channel_attn forward pre-hook",
+  "r4_hook": "original classifier forward pre-hook",
+  "r4_original_classifier_replay": true,
+  "outer_prediction_or_metric": false,
+  "legacy_monolithic_cache_materializes_all_80_labels": true
+}

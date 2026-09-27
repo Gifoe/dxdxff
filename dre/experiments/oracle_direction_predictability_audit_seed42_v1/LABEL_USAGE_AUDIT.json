@@ -1,0 +1,12 @@
+{
+  "fit_labels_oracle_direction": true,
+  "fit_labels_shared_logistic": true,
+  "validation_labels_target_oracle_and_metrics_only": true,
+  "validation_labels_context_input_or_predictor_fit": false,
+  "validation_labels_rank4_expressivity_upper_bound": true,
+  "outer_prediction_metric_training_or_selection": false,
+  "legacy_monolithic_cache_materializes_all_80_labels": true,
+  "strict_no_outer_label_materialization_satisfied": false,
+  "validation_target_cells": 65,
+  "unique_validation_patient_clusters": 47
+}

@@ -1,0 +1,5 @@
+context,target_cells,pair_observations_with_repeated_fit_cohorts,mean_fit_pair_spearman_rho,median_fit_pair_spearman_rho,bootstrap_ci_low,bootstrap_ci_high,bootstrap_unit
+R3_MARG,65,82888,-0.006955385709539793,0.004412597012703939,-0.013542974800245145,-0.00027872520730765565,47 patient-ID clusters; FIT pairs within repeated epochs are dependent
+R3_COV,65,82888,0.011085010057163648,0.00788247973411694,0.007305268746415064,0.015237348149878661,47 patient-ID clusters; FIT pairs within repeated epochs are dependent
+R4_MARG,65,82888,-0.04969624467613635,-0.026297083270502328,-0.06362455298880476,-0.0367077169104478,47 patient-ID clusters; FIT pairs within repeated epochs are dependent
+R4_COV,65,82888,-0.07864115073335333,-0.04611169253904822,-0.09384138533297388,-0.06310364199741446,47 patient-ID clusters; FIT pairs within repeated epochs are dependent

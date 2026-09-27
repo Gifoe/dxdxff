@@ -1,0 +1,11 @@
+{
+  "context_sources": [
+    "exact R3 channel-attention input",
+    "exact R4 original-classifier input"
+  ],
+  "pca_dim": 8,
+  "pca_fit": "all FIT patient channels, current fold and selected epoch only",
+  "MARG": "8 means + 8 population standard deviations",
+  "COV": "MARG + 36 upper covariance entries including diagonal; population normalization",
+  "validation_label_inputs": false
+}

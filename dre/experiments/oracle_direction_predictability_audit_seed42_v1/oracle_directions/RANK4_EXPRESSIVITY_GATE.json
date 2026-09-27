@@ -1,0 +1,12 @@
+{
+  "pass": false,
+  "terminal": "RANK4_ORACLE_SUBSPACE_INSUFFICIENT",
+  "checks": {
+    "median_cosine_ge_0_85": false,
+    "fraction_cosine_ge_0_75_at_least_0_75": false,
+    "ap_headroom_retention_ge_0_90": false
+  },
+  "median_cosine": 0.38166924792204227,
+  "fraction_ge_0_75": 0.015384615384615385,
+  "headroom_retention": 0.21357566418453502
+}

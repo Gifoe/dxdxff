@@ -376,7 +376,7 @@ def main():
         r=s[variant]
         report.append("| "+variant+" | "+" | ".join(f"{r[k]:.6f}" for k in METRICS)+" |")
     report.extend(["| B8 best Teacher (reference only) | 0.605291 | — | — | — | — | — | — |", "",
-        "No B8 training, target adaptation, Student distillation or outer evaluation. The legacy loader materializes all 80 labels. Exact A1 VLOO creates cross-patient label dependencies, so strict target-label sequencing is false even though all candidate score/R4 grids were frozen before the new label-using pass. Descriptive best-variant selection is uncorrected for multiplicity."]
+        "No B8 training, target adaptation, Student distillation or outer evaluation. The legacy loader materializes all 80 labels. Exact A1 VLOO creates cross-patient label dependencies, so strict target-label sequencing is false even though all candidate score/R4 grids were frozen before the new label-using pass. Geometry diagnostics use one comparable epoch-30 coordinate system per fold but do not inspect every per-cell selected checkpoint; a null epoch-30 diagnostic cannot exclude a mechanism at a different selected epoch. Descriptive best-variant selection is uncorrected for multiplicity."]
     )
     (ROOT/"FINAL_REPORT.md").write_text("\n".join(report)+"\n",encoding="utf-8")
     print(f"[FINAL] best={best} AP={s[best]['ap']:.6f} terminal={terminal}",flush=True)

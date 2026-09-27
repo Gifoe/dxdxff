@@ -221,11 +221,13 @@ def score_only_snapshot(exp, model, capture, loader):
             outputs = model(batch)
             h = capture.h.detach().cpu().numpy()
             score = outputs["score_ez"].detach().cpu().numpy()
+            score_nez = outputs["score_nez"].detach().cpu().numpy()
             nez_logits = outputs["logits"].detach().cpu().numpy()
             mask = batch["channel_mask"].detach().cpu().numpy().astype(bool)
             for i, sid in enumerate(batch["subject_id"]):
                 if sid in patients: raise RuntimeError("Duplicate validation patient")
                 patients[sid] = dict(score_ez=score[i][mask[i]].astype(np.float32),
+                                     score_nez=score_nez[i][mask[i]].astype(np.float32),
                                      logit_nez=nez_logits[i][mask[i]].astype(np.float32),
                                      R4=h[i][mask[i]].astype(np.float32),
                                      n_channels=int(mask[i].sum()))

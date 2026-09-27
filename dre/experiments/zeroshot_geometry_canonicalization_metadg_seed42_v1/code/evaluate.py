@@ -58,7 +58,7 @@ def freeze():
     print(f"SCORE_FREEZE_PASS files={len(files)}", flush=True)
 
 
-@lru_cache(maxsize=2)
+@lru_cache(maxsize=16)
 def _source_payload(fold, epoch):
     return afc.load_representation(fold, epoch)
 
@@ -91,9 +91,10 @@ def make_grid(fold, variant):
             if len(y) != row["n_channels"] or set(np.unique(y)) != {0, 1}:
                 raise RuntimeError("Source target label order/size mismatch")
             score = np.asarray(row["score_ez"], dtype=np.float64)
+            score_nez = np.asarray(row["score_nez"], dtype=np.float64)
             records.append(dict(subject_id=sid, channel_mask=np.ones(len(y), bool),
                                 labels_ez=y, labels=1-y, labels_nez=1-y,
-                                score_ez=score, score_nez=1-score))
+                                score_ez=score, score_nez=score_nez))
         payloads.append(epoch_grid(records, epoch))
     private_csv = RUNTIME / "private" / f"fold_{fold}" / f"{variant}_VLOO_PRIVATE.csv"
     public, full = finalize_fold(payloads, variant, fold, private_csv)

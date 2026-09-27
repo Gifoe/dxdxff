@@ -1,6 +1,7 @@
 """Bounded-memory FIT-only hyperparameter selection; one context per child process."""
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import teacher_core as tc
@@ -22,8 +23,15 @@ def main():
                 continue
             for variant in ("R64","PCA4","PCA8","PCA16"):
                 for mode in ("b8","fullpool"):
-                    subprocess.run([sys.executable,"-u",str(script),"--fold",str(fold),"--context",str(i),
-                                    "--variant",variant,"--mode",mode],check=True)
+                    argv=[sys.executable,"-u",str(script),"--fold",str(fold),"--context",str(i),
+                          "--variant",variant,"--mode",mode]
+                    for attempt in range(1,4):
+                        result=subprocess.run(argv,check=False)
+                        if result.returncode==0:break
+                        if result.returncode not in (-1073741819,3221225477) or attempt==3:
+                            raise subprocess.CalledProcessError(result.returncode,argv)
+                        print(f"[NATIVE_RETRY] fold={fold} context={i} {variant} {mode} attempt={attempt}",flush=True)
+                        time.sleep(2)
     print("[FIT_SELECTION_DONE]",flush=True)
 
 

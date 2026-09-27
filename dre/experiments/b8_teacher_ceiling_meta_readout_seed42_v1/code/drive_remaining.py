@@ -1,13 +1,21 @@
 """Resume-safe bounded-memory sequential meta/prototype/target evaluation."""
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import teacher_core as tc
 
 
 def call(script,*args):
-    subprocess.run([sys.executable,"-u",str(Path(__file__).with_name(script)),*map(str,args)],check=True)
+    argv=[sys.executable,"-u",str(Path(__file__).with_name(script)),*map(str,args)]
+    for attempt in range(1,4):
+        result=subprocess.run(argv,check=False)
+        if result.returncode==0:return
+        if result.returncode not in (-1073741819,3221225477) or attempt==3:
+            raise subprocess.CalledProcessError(result.returncode,argv)
+        print(f"[NATIVE_RETRY] {script} args={args} attempt={attempt} exit={result.returncode}",flush=True)
+        time.sleep(2)
 
 
 def main():

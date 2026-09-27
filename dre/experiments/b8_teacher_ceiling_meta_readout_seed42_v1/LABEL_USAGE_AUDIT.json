@@ -1,0 +1,16 @@
+{
+  "target_cells": 65,
+  "unique_patient_ids": 47,
+  "repetitions": 1300,
+  "exact_B0_identity": true,
+  "FIT_only_hyperparameter_selection": true,
+  "FIT_only_meta_training_and_validation": true,
+  "FIT_meta_validation_patients_also_contributed_to_prior_global_lambda_selection": true,
+  "deployable_target_support_labels_only_after_acquisition": true,
+  "nondeployable_FULL_POOL_and_oracle_balanced_controls_use_additional_target_candidate_labels": true,
+  "target_query_labels_only_after_all_20_repetitions_all_variant_scores_frozen": true,
+  "target_label_oracle_direction_computed_only_after_score_freeze": true,
+  "outer_predictions_metrics_selection": false,
+  "legacy_monolithic_loader_materializes_all_80_labels": true,
+  "strict_no_outer_label_materialization": false
+}

@@ -1,0 +1,15 @@
+{
+  "best_b8_teacher": "RETUNED_64D_B8",
+  "best_b8_ap": 0.6052912572363056,
+  "best_delta_ap_vs_current_b8": 0.005658989042290893,
+  "best_delta_ci_low": -0.001972231371238631,
+  "best_positive_folds": 3,
+  "rank_not_materially_worse": true,
+  "B8_TEACHER_IMPROVEMENT_SUPPORTED": false,
+  "TEACHER_AP_062_REACHED": false,
+  "TEACHER_AP_065_REACHED": false,
+  "TEACHER_AP_068_REACHED": false,
+  "TEACHER_AP_070_REACHED": false,
+  "fullpool_anomaly_terminal": "PREVIOUS_B8_FULLPOOL_REVERSAL_EXPLAINED_BY_REGULARIZATION",
+  "candidate_selection_caveat": "Best variant selected descriptively on same 65 target cells; no multiplicity correction or independent confirmation"
+}

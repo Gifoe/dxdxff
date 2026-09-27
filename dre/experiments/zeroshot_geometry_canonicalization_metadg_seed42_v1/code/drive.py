@@ -9,7 +9,8 @@ from pathlib import Path
 from train import VARIANTS, configs, preflight
 
 HERE = Path(__file__).resolve().parent
-NATIVE_CRASH = {0xC0000005, 0x80000003, -1073741819, -2147483645}
+NATIVE_CRASH = {0xC0000005, 0xC000001D, 0x80000003,
+                -1073741819, -1073741795, -2147483645}
 
 
 def call(*args):

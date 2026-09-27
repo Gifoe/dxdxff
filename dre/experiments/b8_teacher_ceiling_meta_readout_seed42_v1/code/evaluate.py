@@ -56,6 +56,9 @@ def cell_run(fold,cell_index):
     pending=[]
     for rep in range(20):
         ep=tc.target_episode(ctx,sid,rep)
+        old_split=prior["split_audit"][rep]
+        if old_split["repetition"]!=rep or old_split["candidate_n"]!=len(ep["candidate"]) or old_split["query_n"]!=len(ep["query"]):
+            raise RuntimeError("Fixed candidate/query split replay failed")
         spec=[]
         def add(name,score,b,w,support,deployable):
             score=np.asarray(score,dtype=np.float64)
@@ -128,6 +131,8 @@ def cell_run(fold,cell_index):
             if name in ("CURRENT_64D_B8","CURRENT_64D_FULLPOOL"):
                 k=(rep,"UNCERTAINTY" if name.endswith("B8") else "FULL_POOL_CALIBRATION","FULL_RESIDUAL",8 if name.endswith("B8") else len(ep["candidate"]))
                 if k not in prior_records:raise RuntimeError(f"Previous reference row missing: {k}")
+                if int(sy.sum())!=prior_records[k]["support_ez"] or int(len(sy)-sy.sum())!=prior_records[k]["support_nez"]:
+                    raise RuntimeError("Original support class composition replay failed")
                 old_ap=prior_records[k]["ap"]
                 max_replay=max(max_replay,abs(float(metrics["ap"])-float(old_ap)) if np.isfinite(metrics["ap"]) else 0.)
     if max_replay>1e-8:raise RuntimeError(f"Current B8/FULLPOOL replay disagreement {max_replay}")

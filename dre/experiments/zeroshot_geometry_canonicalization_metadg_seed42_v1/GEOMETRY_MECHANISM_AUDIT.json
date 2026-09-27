@@ -1,0 +1,43 @@
+{
+  "reference": "Z0_A1",
+  "variants": {
+    "Z1_DIRECTION_CANONICALIZATION": {
+      "gap_delta": -0.01192018817253257,
+      "cosine_delta": 0.0519945065181458,
+      "reversal_rate_delta": 0.015384615384615385,
+      "supported": false
+    },
+    "Z2_CLASS_CONDITIONAL_ALIGNMENT": {
+      "gap_delta": -0.001456354167244045,
+      "cosine_delta": -0.0003603256475142036,
+      "reversal_rate_delta": 0.0,
+      "supported": false
+    },
+    "Z2B_CROSSPATIENT_SUPCON": {
+      "gap_delta": -0.040093624539088546,
+      "cosine_delta": -0.011061418979856796,
+      "reversal_rate_delta": 0.0,
+      "supported": false
+    },
+    "Z3_PATIENT_HELDOUT_MLDG": {
+      "gap_delta": 0.001841931517168549,
+      "cosine_delta": 0.005466082086507895,
+      "reversal_rate_delta": 0.015384615384615385,
+      "supported": false
+    },
+    "Z4_GEOMETRY_PLUS_MLDG": {
+      "gap_delta": 0.002050874348041909,
+      "cosine_delta": 0.011494905065261851,
+      "reversal_rate_delta": 0.015384615384615385,
+      "supported": false
+    },
+    "C1_PATIENT_ADV": {
+      "gap_delta": 0.007112168636503824,
+      "cosine_delta": 0.005140964551546889,
+      "reversal_rate_delta": 0.0,
+      "supported": false
+    }
+  },
+  "post_score_target_labels_only": true,
+  "patient_specific_head_non_deployable": true
+}

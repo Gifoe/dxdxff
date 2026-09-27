@@ -1,0 +1,3 @@
+reference,ap,role
+CURRENT_64D_B8,0.5996322681940147,reference_only_not_zero_shot
+BEST_OBSERVED_B8_TEACHER,0.6052912572363056,reference_only_not_zero_shot

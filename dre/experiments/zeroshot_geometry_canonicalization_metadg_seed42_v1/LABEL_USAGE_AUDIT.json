@@ -1,0 +1,17 @@
+{
+  "target_cells": 65,
+  "unique_patient_ids": 47,
+  "repetitions": 1300,
+  "deployment_budget": 0,
+  "candidate_features_or_labels_for_new_model": false,
+  "fit_only_hyperparameter_selection": true,
+  "all_new_variant_score_grids_frozen_before_vloo_labels": true,
+  "five_a1_epoch30_diagnostic_r4_snapshots_frozen_before_vloo_labels": true,
+  "diagnostic_amendment_sha": "765107a265c48d139430c97d95da2aeb513dbadff6a639984ff2b04afa69e0bf",
+  "own_target_label_excluded_from_own_vloo_selection": true,
+  "strict_target_label_sequencing": false,
+  "note": "Exact cross-patient A1 VLOO reads each target label to select other targets; all score grids were frozen first, but final decisions cannot all be frozen before any target label is accessed.",
+  "legacy_loader_materializes_all_80_labels": true,
+  "strict_no_outer_label_materialization": false,
+  "outer_predictions_metrics_selection": false
+}

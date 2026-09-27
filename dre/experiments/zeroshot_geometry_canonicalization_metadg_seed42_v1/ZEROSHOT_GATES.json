@@ -1,0 +1,91 @@
+{
+  "best_zero_shot_variant": "Z2_CLASS_CONDITIONAL_ALIGNMENT",
+  "terminal": "R4_LEVEL_ZEROSHOT_CANONICALIZATION_NOT_SUPPORTED",
+  "retrospective_winner_no_multiplicity_correction": true,
+  "variants": {
+    "Z1_DIRECTION_CANONICALIZATION": {
+      "ap": 0.5679733831329203,
+      "delta_ap": -0.008770079482215032,
+      "ci_low": -0.021832009370223747,
+      "ci_high": 0.003886977764510053,
+      "positive_folds": 1,
+      "mrr_delta": -0.016237388632507344,
+      "top1_delta": -0.022498060512024742,
+      "ZEROSHOT_IMPROVEMENT_SUPPORTED": false,
+      "ZERO_SHOT_REACHES_CURRENT_B8": false,
+      "ZERO_SHOT_REACHES_BEST_B8": false,
+      "ZERO_SHOT_AP_062_REACHED": false,
+      "PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED": false
+    },
+    "Z2_CLASS_CONDITIONAL_ALIGNMENT": {
+      "ap": 0.5776670242355253,
+      "delta_ap": 0.0009235616203899595,
+      "ci_low": -0.0009172300111611415,
+      "ci_high": 0.0034079707745810327,
+      "positive_folds": 3,
+      "mrr_delta": 0.0033927613937976275,
+      "top1_delta": 0.005430566330488773,
+      "ZEROSHOT_IMPROVEMENT_SUPPORTED": false,
+      "ZERO_SHOT_REACHES_CURRENT_B8": false,
+      "ZERO_SHOT_REACHES_BEST_B8": false,
+      "ZERO_SHOT_AP_062_REACHED": false,
+      "PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED": false
+    },
+    "Z2B_CROSSPATIENT_SUPCON": {
+      "ap": 0.5749080366124105,
+      "delta_ap": -0.0018354260027248562,
+      "ci_low": -0.016355729890996436,
+      "ci_high": 0.012022534437237449,
+      "positive_folds": 3,
+      "mrr_delta": -0.006538273159857888,
+      "top1_delta": -0.010085337470907674,
+      "ZEROSHOT_IMPROVEMENT_SUPPORTED": false,
+      "ZERO_SHOT_REACHES_CURRENT_B8": false,
+      "ZERO_SHOT_REACHES_BEST_B8": false,
+      "ZERO_SHOT_AP_062_REACHED": false,
+      "PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED": false
+    },
+    "Z3_PATIENT_HELDOUT_MLDG": {
+      "ap": 0.5562480209735965,
+      "delta_ap": -0.0204954416415388,
+      "ci_low": -0.04575144107245161,
+      "ci_high": -0.0026368313576409313,
+      "positive_folds": 1,
+      "mrr_delta": -0.027320951699882134,
+      "top1_delta": -0.03335919317300229,
+      "ZEROSHOT_IMPROVEMENT_SUPPORTED": false,
+      "ZERO_SHOT_REACHES_CURRENT_B8": false,
+      "ZERO_SHOT_REACHES_BEST_B8": false,
+      "ZERO_SHOT_AP_062_REACHED": false,
+      "PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED": false
+    },
+    "Z4_GEOMETRY_PLUS_MLDG": {
+      "ap": 0.5581145143335392,
+      "delta_ap": -0.018628948281596235,
+      "ci_low": -0.04363474912203152,
+      "ci_high": -0.0007616038290447791,
+      "positive_folds": 1,
+      "mrr_delta": -0.015619828405728287,
+      "top1_delta": -0.01706749418153608,
+      "ZEROSHOT_IMPROVEMENT_SUPPORTED": false,
+      "ZERO_SHOT_REACHES_CURRENT_B8": false,
+      "ZERO_SHOT_REACHES_BEST_B8": false,
+      "ZERO_SHOT_AP_062_REACHED": false,
+      "PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED": false
+    },
+    "C1_PATIENT_ADV": {
+      "ap": 0.5712859837367685,
+      "delta_ap": -0.005457478878366832,
+      "ci_low": -0.013327176778046066,
+      "ci_high": 0.0010532878085458236,
+      "positive_folds": 1,
+      "mrr_delta": 0.005972102576954574,
+      "top1_delta": 0.013964313421256813,
+      "ZEROSHOT_IMPROVEMENT_SUPPORTED": false,
+      "ZERO_SHOT_REACHES_CURRENT_B8": false,
+      "ZERO_SHOT_REACHES_BEST_B8": false,
+      "ZERO_SHOT_AP_062_REACHED": false,
+      "PATIENT_GEOMETRY_CANONICALIZATION_SUPPORTED": false
+    }
+  }
+}

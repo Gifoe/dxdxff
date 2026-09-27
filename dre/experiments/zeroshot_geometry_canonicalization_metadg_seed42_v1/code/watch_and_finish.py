@@ -15,9 +15,13 @@ from train import RUNTIME, preflight
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--driver-pid",type=int,required=True)
+    parser.add_argument("--driver-log",default="DRIVE.log")
+    parser.add_argument("--driver-error",default="DRIVE.err")
     args=parser.parse_args()
     preflight()
-    log=RUNTIME/"DRIVE.log";err=RUNTIME/"DRIVE.err"
+    log=RUNTIME/args.driver_log;err=RUNTIME/args.driver_error
+    if log.parent != RUNTIME or err.parent != RUNTIME:
+        raise RuntimeError("Driver logs must be in the private runtime root")
     deadline=time.monotonic()+18*3600
     while True:
         lines=log.read_text(encoding="utf-8",errors="replace") if log.is_file() else ""

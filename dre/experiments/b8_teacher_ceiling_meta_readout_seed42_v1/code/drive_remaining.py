@@ -9,10 +9,10 @@ import teacher_core as tc
 
 def call(script,*args):
     argv=[sys.executable,"-u",str(Path(__file__).with_name(script)),*map(str,args)]
-    for attempt in range(1,4):
+    for attempt in range(1,6):
         result=subprocess.run(argv,check=False)
         if result.returncode==0:return
-        if result.returncode not in (-1073741819,3221225477) or attempt==3:
+        if result.returncode not in (-1073741819,3221225477,2147483651,-2147483645) or attempt==5:
             raise subprocess.CalledProcessError(result.returncode,argv)
         print(f"[NATIVE_RETRY] {script} args={args} attempt={attempt} exit={result.returncode}",flush=True)
         time.sleep(2)

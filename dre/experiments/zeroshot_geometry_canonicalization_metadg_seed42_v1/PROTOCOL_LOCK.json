@@ -1,0 +1,53 @@
+{
+  "study": "Zero-shot Patient Geometry Recovery Study",
+  "version": 1,
+  "branch": "codex/zeroshot-geometry-canonicalization-metadg-seed42-v1",
+  "source_commit": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "seed": 42,
+  "scope": {
+    "folds": 5,
+    "vloo_cells": 65,
+    "unique_validation_patients": 47,
+    "fixed_query_repetitions": 20,
+    "candidate_query_split": "exact active-fewshot 50/50 split, seed 42",
+    "deployment_budget": 0,
+    "outer_test_prediction_or_selection": false
+  },
+  "source_model": {
+    "architecture": "exact A1 R0 backbone and NEZ-positive classifier",
+    "initialization": "same saved per-fold A1 initial state for full-FIT retraining; same architecture and seed for FIT meta-train",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.001,
+    "epochs": 30,
+    "patient_batch_size": 2,
+    "base_loss": "A1 patient-equal weighted BCE with EZ-negative weight 2",
+    "r4": "input to final classifier MLP after channel attention, 64 dimensions",
+    "checkpoint_selection": "exact A1 30 epochs x 19 thresholds; VLOO excludes each scored validation patient"
+  },
+  "fit_hyperparameter_selection": {
+    "split": "deterministic seeded 80/20 patient-ID split within each fold FIT population; no overlap",
+    "primary": "patient-equal EZ-AP on FIT meta-validation",
+    "tie_break": ["MRR", "Top1", "smaller loss weight", "earlier epoch", "lexical ID"],
+    "training_epoch_selection": "best FIT meta-validation patient-equal EZ-AP over 30 epochs",
+    "full_fit": "retrain selected configuration for all 30 epochs on complete fold FIT population before A1 VLOO selection"
+  },
+  "variants": {
+    "Z0_A1": {"training": "reuse exact frozen A1"},
+    "Z1_DIRECTION_CANONICALIZATION": {"lambda_dir": [0.01, 0.03, 0.1, 0.3, 1.0], "direction": "EZ-minus-NEZ patient centroids in R4; equal patient weight; one-class patients omitted only from auxiliary"},
+    "Z2_CLASS_CONDITIONAL_ALIGNMENT": {"lambda_cca": [0.001, 0.003, 0.01, 0.03, 0.1], "normalization": "per-patient valid-channel R4 L2 normalization before class centroids"},
+    "Z2B_CROSSPATIENT_SUPCON": {"lambda_supcon": [0.01, 0.03, 0.1], "tau": [0.07, 0.1, 0.2], "positive": "same class different patient only", "negative": "opposite class"},
+    "Z3_PATIENT_HELDOUT_MLDG": {"beta": [0.1, 0.3, 1.0], "alpha": [0.00001, 0.00003, 0.0001], "virtual_update": "first-order one-step on disjoint FIT patient IDs; meta-test A1 loss"},
+    "Z4_GEOMETRY_PLUS_MLDG": {"geometry": "FIT-selected better of Z1/Z2 only", "mldg": "FIT-selected Z3 alpha and beta", "combination": "A1 plus fixed geometry penalty on meta-train plus beta times disjoint-patient meta-test A1"},
+    "C1_PATIENT_ADV": {"lambda_patient": [0.001, 0.01, 0.1], "head": "training-only linear 64-to-number-of-FIT-patients with gradient reversal"}
+  },
+  "evaluation": {
+    "target_candidate_features_or_labels_used": false,
+    "scores_and_representations_frozen_before_target_labels": true,
+    "b8_reference": [0.5996322681940147, 0.6052912572363056],
+    "bootstrap": "10000 paired patient-ID cluster resamples, seed 42; all folds and repetitions for each sampled ID",
+    "threshold_gates": "as specified in user study prompt",
+    "mechanism_diagnostics": "post-score only; target labels never select method or hyperparameters"
+  },
+  "known_limitation": "legacy monolithic loader materializes all 80 labels; strict_no_outer_label_materialization=false even though no outer predictions, metrics, or selection are computed"
+}

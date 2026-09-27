@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import gc
 import json
 import math
 import pickle
@@ -201,6 +202,11 @@ def fit_geometry(fold,variant,epoch):
                 out.append((sid,r4[i][mask[i]].astype(float),y[i][mask[i]].astype(np.int8)))
     cap.close()
     if len(out)!=len(split["fit_subjects"]):raise RuntimeError("FIT R4 extraction incomplete")
+    # This legacy experiment object owns large cached tensors. Release every
+    # instance before constructing the next diagnostic fold/model pair.
+    del cap, model, loader, fit_set, exp
+    gc.collect()
+    if torch.cuda.is_available(): torch.cuda.empty_cache()
     return out
 
 
@@ -218,7 +224,9 @@ def diagnostics(cells,reps):
             d=unit_direction(x,y)
             if d is not None:directions.append((fold,sid,d))
             key=(fold,variant,epoch)
-            if key not in fit_cache: fit_cache[key]=fit_geometry(*key)
+            if key not in fit_cache:
+                print(f"[DIAGNOSTIC_FIT_R4] fold={fold} variant={variant} epoch={epoch}",flush=True)
+                fit_cache[key]=fit_geometry(*key)
             fit=fit_cache[key]
             fdirs=[unit_direction(z,labels) for _,z,labels in fit]
             fdirs=[a for a in fdirs if a is not None]
@@ -321,11 +329,15 @@ def decisions(summary,folds,disp,head,rev):
 
 def main():
     preflight()
+    print("[FINALIZE] load private cells",flush=True)
     cells,rows,exact,reps=load()
+    print("[FINALIZE] FIT selection table",flush=True)
     fit_selection_table()
+    print("[FINALIZE] outcome and bootstrap tables",flush=True)
     summary,folds=outcome_tables(rows,exact)
     if abs(summary["Z0_A1"]["ap"]-.5767434626151353)>1e-6:
         raise RuntimeError("SOURCE_A1_MATCHED_QUERY_REPRODUCTION_FAILED")
+    print("[FINALIZE] common-checkpoint geometry diagnostics",flush=True)
     disp,head,rev=diagnostics(cells,reps)
     best,terminal,gates=decisions(summary,folds,disp,head,rev)
     afc.write_csv(ROOT/"MATCHED_B8_REFERENCE.csv",[

@@ -1,6 +1,7 @@
 """VLOO-selected wrong-context, subset robustness, and adapter mechanism controls."""
 from __future__ import annotations
 
+import argparse
 import csv
 import itertools
 import json
@@ -51,9 +52,11 @@ def score_with_context(adapter, classifier, target_h, donor_h, indices=None):
     return logits[0].cpu().numpy(), a[0].cpu().numpy(), adapted[0].cpu().numpy()
 
 
-def run_variant(variant, device):
+def run_variant(variant, device, only_fold=None):
     shuffled, robustness, diagnostics = [], [], []
     for fold in range(1, 6):
+        if only_fold is not None and fold != only_fold:
+            continue
         fold_dir = RUNTIME / "private" / f"fold_{fold}"
         selected = read_csv(fold_dir / f"{variant}_VLOO_PRIVATE.csv")
         if len(selected) != 13:
@@ -164,14 +167,19 @@ def aggregate(shuffled, robustness, diagnostics, variant):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fold", type=int, choices=range(1, 6))
+    opts = parser.parse_args()
     preflight()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     controls = []
     for variant in ("P2", "P3"):
-        shuffled, robustness, diagnostics = run_variant(variant, device)
-        rows, _ = aggregate(shuffled, robustness, diagnostics, variant)
-        controls += rows
-    write_csv(ROOT / "controls" / "SHUFFLED_CONTEXT_COMPARISON.csv", controls)
+        shuffled, robustness, diagnostics = run_variant(variant, device, opts.fold)
+        if opts.fold is None:
+            rows, _ = aggregate(shuffled, robustness, diagnostics, variant)
+            controls += rows
+    if opts.fold is None:
+        write_csv(ROOT / "controls" / "SHUFFLED_CONTEXT_COMPARISON.csv", controls)
 
 
 if __name__ == "__main__":

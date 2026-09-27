@@ -1,0 +1,12 @@
+{
+  "fit_labels_classification_supervision": true,
+  "fit_labels_geometry_teacher": "P3_only",
+  "fit_labels_as_context_input": false,
+  "validation_labels_adapter_training": false,
+  "validation_labels_context_input": false,
+  "validation_labels_geometry_teacher": false,
+  "validation_labels_only_other_12_vloo_selection_and_excluded_patient_evaluation": true,
+  "outer_predictions_metrics_training_selection": false,
+  "legacy_monolithic_loader_materializes_all_80_labels": true,
+  "strict_no_outer_label_materialization_satisfied": false
+}

@@ -1,0 +1,11 @@
+{
+  "folds": 5,
+  "source_epochs_per_fold": 30,
+  "fit_patients_per_fold": 52,
+  "fit_patient_teacher_fits": 7800,
+  "validation_patient_teacher_fits": 0,
+  "outer_patient_teacher_fits": 0,
+  "positive_label": "EZ",
+  "solver": "lbfgs",
+  "C": 1.0
+}

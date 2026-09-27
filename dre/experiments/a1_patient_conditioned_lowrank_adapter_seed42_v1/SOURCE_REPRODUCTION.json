@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "terminal": "SOURCE_A1_REPRODUCED",
+  "checkpoints": 150,
+  "max_grid_error": 0.0,
+  "mean_macro_f1": 0.6259962097139906,
+  "r4_dim": 64,
+  "r4_obtained_from_exact_classifier_input_hook": true,
+  "ordinary_a1_forward_has_contextual_channel_embedding_key": false,
+  "outer_predictions_or_metrics": false,
+  "legacy_monolithic_loader_materializes_all_80_labels": true
+}

@@ -1,0 +1,20 @@
+{
+  "frozen_a1_parameters": 27713,
+  "r4_dimension": 64,
+  "rank": 4,
+  "P1": {
+    "trainable_adapter_parameters": 516,
+    "frozen_original_classifier": true,
+    "frozen_a1": true
+  },
+  "P2": {
+    "trainable_adapter_parameters": 4020,
+    "frozen_original_classifier": true,
+    "frozen_a1": true
+  },
+  "P3": {
+    "trainable_adapter_parameters": 4020,
+    "frozen_original_classifier": true,
+    "frozen_a1": true
+  }
+}

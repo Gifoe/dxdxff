@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "ap_plus_0_005": false,
+    "positive_folds_3of5": true,
+    "mrr_nondecrease": false,
+    "top1_nondecrease": false,
+    "macro_f1_noninferior": true
+  },
+  "positive_folds": 3,
+  "pass": false,
+  "terminal": "GEOMETRY_TEACHER_NOT_SUPPORTED"
+}

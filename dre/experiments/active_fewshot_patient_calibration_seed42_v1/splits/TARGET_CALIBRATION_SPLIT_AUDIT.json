@@ -1,0 +1,62 @@
+{
+  "folds": [
+    {
+      "fold": 1,
+      "target_cells": 13,
+      "repetitions": 260,
+      "min_candidate_n": 20,
+      "max_candidate_n": 106,
+      "min_query_n": 20,
+      "query_ap_estimable": 259,
+      "budget_16_available": 260
+    },
+    {
+      "fold": 2,
+      "target_cells": 13,
+      "repetitions": 260,
+      "min_candidate_n": 22,
+      "max_candidate_n": 106,
+      "min_query_n": 23,
+      "query_ap_estimable": 257,
+      "budget_16_available": 260
+    },
+    {
+      "fold": 3,
+      "target_cells": 13,
+      "repetitions": 260,
+      "min_candidate_n": 22,
+      "max_candidate_n": 86,
+      "min_query_n": 22,
+      "query_ap_estimable": 254,
+      "budget_16_available": 260
+    },
+    {
+      "fold": 4,
+      "target_cells": 13,
+      "repetitions": 260,
+      "min_candidate_n": 22,
+      "max_candidate_n": 86,
+      "min_query_n": 23,
+      "query_ap_estimable": 259,
+      "budget_16_available": 260
+    },
+    {
+      "fold": 5,
+      "target_cells": 13,
+      "repetitions": 260,
+      "min_candidate_n": 20,
+      "max_candidate_n": 88,
+      "min_query_n": 20,
+      "query_ap_estimable": 260,
+      "budget_16_available": 260
+    }
+  ],
+  "target_cells": 65,
+  "unique_patients": 47,
+  "repetitions": 1300,
+  "fixed_label_blind_50_50": true,
+  "no_class_resampling": true,
+  "zero_budget_exact_A1": true,
+  "query_labels_read_after_all_repetition_score_vectors_fixed": true,
+  "query_ap_estimable_total": 1289
+}

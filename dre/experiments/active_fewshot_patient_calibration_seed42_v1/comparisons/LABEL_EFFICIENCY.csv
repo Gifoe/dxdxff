@@ -1,0 +1,4 @@
+acquisition_policy,min_budget_delta_ap_ge_0.01_ci_positive,min_budget_delta_ap_ge_0.02_ci_positive,min_budget_delta_ap_ge_0.03_ci_positive,min_budget_headroom_recovery_ge_0.25,min_budget_headroom_recovery_ge_0.50,min_budget_headroom_recovery_ge_0.75
+RANDOM,8,NA,NA,16,16,16
+UNCERTAINTY,8,8,NA,8,8,8
+UNCERTAINTY_DIVERSITY,4,16,NA,16,16,16

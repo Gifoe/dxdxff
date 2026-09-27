@@ -1,0 +1,50 @@
+{
+  "pass": true,
+  "candidates": {
+    "B1": {
+      "pass": false,
+      "checks": {
+        "ap_gain_random_ge_0_010": false,
+        "positive_ap_folds_ge_4": false,
+        "active_random_ci_lower_gt_0": false,
+        "mrr_nondecreasing": false,
+        "top1_nondecreasing": false,
+        "support_both_nondecreasing": true
+      }
+    },
+    "B2": {
+      "pass": false,
+      "checks": {
+        "ap_gain_random_ge_0_010": false,
+        "positive_ap_folds_ge_4": false,
+        "active_random_ci_lower_gt_0": false,
+        "mrr_nondecreasing": false,
+        "top1_nondecreasing": false,
+        "support_both_nondecreasing": true
+      }
+    },
+    "B4": {
+      "pass": true,
+      "checks": {
+        "ap_gain_random_ge_0_010": true,
+        "positive_ap_folds_ge_4": true,
+        "active_random_ci_lower_gt_0": true,
+        "mrr_nondecreasing": true,
+        "top1_nondecreasing": true,
+        "support_both_nondecreasing": true
+      }
+    },
+    "B8": {
+      "pass": false,
+      "checks": {
+        "ap_gain_random_ge_0_010": false,
+        "positive_ap_folds_ge_4": true,
+        "active_random_ci_lower_gt_0": true,
+        "mrr_nondecreasing": true,
+        "top1_nondecreasing": true,
+        "support_both_nondecreasing": true
+      }
+    }
+  },
+  "terminal": "ACTIVE_CHANNEL_SELECTION_SUPPORTED"
+}

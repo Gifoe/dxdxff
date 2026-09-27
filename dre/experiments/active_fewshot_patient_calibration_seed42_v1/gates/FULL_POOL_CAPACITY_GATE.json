@@ -1,0 +1,9 @@
+{
+  "pass": false,
+  "checks": {
+    "ap_gain_ge_0_030": false,
+    "positive_folds_ge_4": true,
+    "cluster_ci_lower_gt_0": true
+  },
+  "terminal": "FULL_POOL_RESIDUAL_CAPACITY_NOT_SUPPORTED"
+}

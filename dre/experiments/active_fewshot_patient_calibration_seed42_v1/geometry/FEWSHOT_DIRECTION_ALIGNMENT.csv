@@ -1,0 +1,25 @@
+acquisition_policy,budget,n_repetitions,mean_delta_w_norm,mean_oracle_direction_cosine,note
+FULL_POOL_CALIBRATION,FULL_POOL,1300,0.03184077972209729,0.3857834444942418,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+ORACLE_BALANCED_RANDOM,0,1300,0.0,,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+ORACLE_BALANCED_RANDOM,16,1300,0.0451208203499733,0.46794979321241936,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+ORACLE_BALANCED_RANDOM,2,1300,0.08203314046722332,0.32823138575805644,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+ORACLE_BALANCED_RANDOM,4,1300,0.06991079164729426,0.383654862443627,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+ORACLE_BALANCED_RANDOM,8,1300,0.05765861257112374,0.4371651995863143,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+RANDOM,0,1300,0.0,,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+RANDOM,1,1300,0.07178587952597225,0.14661370805646484,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+RANDOM,16,1300,0.03826917856625109,0.32482453670764866,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+RANDOM,2,1300,0.06751634513749674,0.16906532941117158,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+RANDOM,4,1300,0.05637928666461823,0.2114423957866453,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+RANDOM,8,1300,0.046601946826595915,0.26044179894985314,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY,0,1300,0.0,,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY,1,1300,0.10139308674780238,0.09976525402248933,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY,16,1300,0.05691086556691278,0.2834699778527733,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY,2,1300,0.09047955828250814,0.15472738458707147,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY,4,1300,0.07831870390201912,0.19447708886714132,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY,8,1300,0.06858765382822392,0.23523969020715216,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY_DIVERSITY,0,1300,0.0,,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY_DIVERSITY,1,1300,0.10139308674780238,0.09976525402248933,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY_DIVERSITY,16,1300,0.046145987890331856,0.3111007444133951,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY_DIVERSITY,2,1300,0.07844199300487986,0.12218565817079681,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY_DIVERSITY,4,1300,0.066695009092505,0.19955243265136083,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates
+UNCERTAINTY_DIVERSITY,8,1300,0.05454976116930251,0.27199161362630375,Oracle is target-label-using and nondeployable; raw R4 coefficient transformed to FIT-standardized coordinates

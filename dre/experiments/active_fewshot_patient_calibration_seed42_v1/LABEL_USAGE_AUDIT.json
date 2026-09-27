@@ -1,0 +1,11 @@
+{
+  "fit_labels_lambda_selection": true,
+  "target_candidate_labels_only_acquired_support_except_explicit_non_deployable_oracle_and_full_pool": true,
+  "target_query_labels_after_all_score_vectors_frozen": true,
+  "target_full_labels_non_deployable_oracle_only_after_predictions_frozen": true,
+  "outer_prediction_metric_or_selection": false,
+  "legacy_monolithic_loader_materializes_all_80_labels": true,
+  "strict_no_outer_label_materialization_satisfied": false,
+  "target_cells": 65,
+  "unique_target_patient_ids": 47
+}

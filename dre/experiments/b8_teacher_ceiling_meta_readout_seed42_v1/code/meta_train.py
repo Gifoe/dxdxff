@@ -33,7 +33,7 @@ def fold_pca(contexts,d):
 
 
 def prepared_path(fold):
-    return tc.RUNTIME/"private"/"meta"/f"fold_{fold}_episodes.pkl"
+    return tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_episodes.pkl"
 
 
 def prepare(fold):
@@ -45,7 +45,7 @@ def prepare(fold):
     contexts=tc.fold_contexts(fold)
     train=[]; val=[]
     for ctx in contexts:
-        with (tc.RUNTIME/"private"/"fit_selection"/(context_key(ctx)+".pkl")).open("rb") as f:
+        with (tc.RUNTIME/"private"/tc.FIT_SELECTION_FOLDER/(context_key(ctx)+".pkl")).open("rb") as f:
             selected=pickle.load(f)
         if selected["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("FIT lambda selection not locked")
         for sid in sorted(ctx["payload"]["fit"]):
@@ -133,8 +133,8 @@ def validation_ap(P,eps,d):
 def train(fold,d):
     tc.preflight()
     obj=prepare(fold)
-    path=tc.RUNTIME/"private"/"meta"/f"fold_{fold}_d{d}.pkl"
-    progress_path=tc.RUNTIME/"private"/"meta"/f"fold_{fold}_d{d}_progress.pkl"
+    path=tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_d{d}.pkl"
+    progress_path=tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_d{d}_progress.pkl"
     if path.exists():
         with path.open("rb") as f: result=pickle.load(f)
         if result["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("Meta projection resume mismatch")

@@ -29,6 +29,8 @@ DIMS=(4,8,16)
 B8_GRID_W=(.001,.01,.1,1.,10.,100.,1000.)
 LOW_GRID_W=(.01,.1,1.,10.,100.)
 GRID_B=(.1,1.,10.)
+FIT_SELECTION_FOLDER="fit_selection_uncertainty_tie_v2"
+META_FOLDER="meta_uncertainty_tie_v2"
 
 
 def preflight():
@@ -131,7 +133,9 @@ def fit_episode(context,sid,rep,split_tag="teacher_fit"):
     z=scaler.transform(row["R4"])
     m0=afr.margin_for(row,context["tau"])
     candidate,query=afc.split_indices(len(m0),42,fold,sid,rep,split_tag)
-    support=fixed_support(candidate,z,m0,row["y"],context["original_lambda"],fold,sid,rep,split_tag)
+    # The split tag changes only the episode partition. Acquisition and its
+    # deterministic tie breaker must be the exact deployed UNCERTAINTY rule.
+    support=fixed_support(candidate,z,m0,row["y"],context["original_lambda"],fold,sid,rep,"UNCERTAINTY")
     return {"fold":fold,"sid":sid,"epoch":context["epoch"],"tau":context["tau"],"rep":rep,
             "z":z.astype(np.float64),"m0":m0,"candidate":candidate,"query":query,
             "support":support,"y":row["y"]}

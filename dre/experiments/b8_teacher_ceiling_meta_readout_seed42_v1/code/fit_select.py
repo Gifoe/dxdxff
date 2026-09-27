@@ -53,7 +53,7 @@ def select_variant(eps,basis,grid_w,full_pool):
 
 def run_context(ctx,variant=None,mode=None):
     key=context_key(ctx)
-    path=tc.RUNTIME/"private"/"fit_selection"/f"{key}.pkl"
+    path=tc.RUNTIME/"private"/tc.FIT_SELECTION_FOLDER/f"{key}.pkl"
     if path.exists():
         with path.open("rb") as f: result=pickle.load(f)
         if result["lock_sha"]!=tc.LOCK_SHA or result["fold"]!=ctx["fold"] or result["epoch"]!=ctx["epoch"] or result["tau"]!=ctx["tau"]:

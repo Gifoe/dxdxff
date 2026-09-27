@@ -25,7 +25,7 @@ def prototype_score(ep,p,gamma):
 
 def select(fold):
     tc.preflight()
-    path=tc.RUNTIME/"private"/"meta"/f"fold_{fold}_prototype.pkl"
+    path=tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_prototype.pkl"
     if path.exists():
         with path.open("rb") as f: obj=pickle.load(f)
         if obj["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("Prototype resume mismatch")
@@ -33,7 +33,7 @@ def select(fold):
     prepared=prepare(fold)
     models={}
     for d in tc.DIMS:
-        with (tc.RUNTIME/"private"/"meta"/f"fold_{fold}_d{d}.pkl").open("rb") as f:models[d]=pickle.load(f)
+        with (tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_d{d}.pkl").open("rb") as f:models[d]=pickle.load(f)
     best_d=min(tc.DIMS,key=lambda d:(-models[d]["fit_val_ap"],d))
     p=models[best_d]["projection"].astype(np.float64)
     records=[]

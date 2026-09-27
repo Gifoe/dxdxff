@@ -67,7 +67,7 @@ def fit_selection_outputs():
     grid=defaultdict(list);chosen=defaultdict(int);count=defaultdict(int)
     for fold in range(1,6):
         for ctx in tc.fold_contexts(fold):
-            with (tc.RUNTIME/"private"/"fit_selection"/(context_key(ctx)+".pkl")).open("rb") as f:sel=pickle.load(f)
+            with (tc.RUNTIME/"private"/tc.FIT_SELECTION_FOLDER/(context_key(ctx)+".pkl")).open("rb") as f:sel=pickle.load(f)
             if sel["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("FIT selection provenance failed")
             for variant,item in sel["variants"].items():
                 for kind in ("b8","fullpool"):

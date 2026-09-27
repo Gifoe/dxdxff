@@ -14,14 +14,14 @@ from prototype_select import prototype_score
 
 def load_choices(ctx):
     key=context_key(ctx)
-    with (tc.RUNTIME/"private"/"fit_selection"/(key+".pkl")).open("rb") as f:sel=pickle.load(f)
+    with (tc.RUNTIME/"private"/tc.FIT_SELECTION_FOLDER/(key+".pkl")).open("rb") as f:sel=pickle.load(f)
     if sel["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("FIT selection changed")
     fold=ctx["fold"]
     metas={}
     for d in tc.DIMS:
-        with (tc.RUNTIME/"private"/"meta"/f"fold_{fold}_d{d}.pkl").open("rb") as f:metas[d]=pickle.load(f)
+        with (tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_d{d}.pkl").open("rb") as f:metas[d]=pickle.load(f)
         if metas[d]["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("FIT meta projection changed")
-    with (tc.RUNTIME/"private"/"meta"/f"fold_{fold}_prototype.pkl").open("rb") as f:proto=pickle.load(f)
+    with (tc.RUNTIME/"private"/tc.META_FOLDER/f"fold_{fold}_prototype.pkl").open("rb") as f:proto=pickle.load(f)
     if proto["lock_sha"]!=tc.LOCK_SHA:raise RuntimeError("FIT prototype selection changed")
     return sel,metas,proto
 

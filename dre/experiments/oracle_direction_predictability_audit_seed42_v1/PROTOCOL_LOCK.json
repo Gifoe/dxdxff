@@ -1,0 +1,23 @@
+{
+  "experiment": "oracle_direction_predictability_audit_seed42_v1",
+  "status": "FROZEN_BEFORE_TARGET_ANALYSIS",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "seed": 42,
+  "scope": "FIT plus validation development only; no outer prediction, metric, model choice or new adapter training",
+  "cohort": {"patients": 80, "folds": 5, "fit_per_fold": 52, "validation_per_fold": 13, "target_cells": 65},
+  "representation": {"R3": "exact channel-attention input after patient-relative normalization, captured by forward pre-hook", "R4": "exact original classifier input, captured by forward pre-hook", "expected_dimension": 64, "source_classifier_replay_tolerance": 1e-6},
+  "a1_vloo_selection": {"source_epochs": "1..30", "thresholds": "NEZ probability float32 linspace(0.05,0.95,19)", "other_validation_patients": 12, "tie_order": ["patient Macro-F1", "EZ-F1", "balanced accuracy", "threshold nearest 0.5", "earlier epoch"], "numeric_tie_precision": 12},
+  "oracle": {"positive_label": "EZ=1", "inner_splits": "min(5,n_EZ,n_NEZ), require >=2", "splitter": "StratifiedKFold(shuffle=True,random_state=42)", "model": "LogisticRegression(penalty=l2,C=1.0,solver=lbfgs,max_iter=2000,random_state=42)", "direction": "unit-normalize each coefficient, then unit-normalize mean", "stability": "mean pairwise inner-direction cosine", "low_stability_exclusion": false},
+  "fit_subspace": {"center": "mean FIT oracle direction", "svd_ranks": [1,2,4,8], "validation_rank4_reconstruction": "nondeployable label-using expressivity upper bound", "sufficient_median_cos_min": 0.85, "sufficient_fraction_cos_ge_0_75_min": 0.75, "sufficient_headroom_retention_min": 0.90},
+  "contexts": {"sources": ["R3","R4"], "pca_fit": "all FIT patient channels only", "pca_dim": 8, "summaries": {"MARG": "mean+population std,16D", "COV": "mean+population std+upper covariance triangle including diagonal,52D"}, "validation_labels_as_input": false},
+  "predictors": {"D0": "unit FIT oracle mean", "D1": "shared FIT logistic, equal patient mass and EZ/NEZ 0.5 each", "D2": "FIT-standardized Euclidean KNN context,k=3", "D3": "FIT-standardized multi-output Ridge(alpha=10,fit_intercept=True) to full unit oracle", "D4": "FIT-standardized Ridge(alpha=10,fit_intercept=True) to rank4 FIT coefficients"},
+  "wrong_context": "cyclic other-validation-patient context for D3/D4; target R4 unchanged; never used for selection",
+  "bootstrap": {"resamples": 10000, "seed": 42, "unit": "target patient cell", "ci": "percentile 95%"},
+  "association": "FIT-only pairwise Euclidean context distance versus oracle-direction cosine; Spearman rho, bootstrap CI; aggregate only",
+  "primary_gate": {"candidate": "any predeclared D3/D4 context", "mean_cos_min": 0.50, "median_cos_min": 0.50, "fraction_cos_improved_vs_D0_min": 0.65, "bootstrap_cos_delta_vs_D0_lower_gt": 0.0, "ap_gain_vs_D1_min": 0.020, "positive_ap_folds_vs_D1_min": 4, "bootstrap_ap_delta_vs_D1_lower_gt": 0.0, "correct_minus_wrong_ap_min": 0.010},
+  "source_replay_expected_macro_f1": [0.6549997115717437,0.6410958089865288,0.6101185971670673,0.6329791804569156,0.5907877503876969],
+  "source_replay_tolerance": 1e-6,
+  "outer_policy": "No outer loader, predictions, metrics or result inspection. Legacy monolithic cache label materialization must be disclosed if unavoidable.",
+  "public_outputs": "aggregate-only code, lock, CSV, JSON and report; patient records/representations/labels/checkpoints/cache/logs remain private"
+}

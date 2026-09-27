@@ -2,15 +2,33 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
 
-from train import VARIANTS, configs, preflight
+from train import LOCK_SHA, RUNTIME, VARIANTS, configs, preflight
 
 HERE = Path(__file__).resolve().parent
-NATIVE_CRASH = {0xC0000005, 0xC000001D, 0x80000003,
-                -1073741819, -1073741795, -2147483645}
+NATIVE_CRASH = {0xC0000005, 0xC000001D, 0xC0000096, 0x80000003,
+                -1073741819, -1073741795, -1073741674, -2147483645}
+
+
+def completed_full(fold, variant, index):
+    """Avoid importing the native ML stack only to skip an already-frozen unit."""
+    folder = RUNTIME / "full" / f"fold_{fold}" / variant / f"config_{index:02d}"
+    summary = folder / "summary.json"
+    if not summary.is_file(): return False
+    row = json.loads(summary.read_text(encoding="utf-8"))
+    if (row.get("lock_sha") != LOCK_SHA or row.get("fold") != fold or
+            row.get("variant") != variant or row.get("config_index") != index or
+            row.get("checkpoints") != 30 or not row.get("validation_scores_frozen")):
+        raise RuntimeError(f"Invalid completed full-FIT marker: {summary}")
+    if len(row.get("score_snapshot_hashes", [])) != 30:
+        raise RuntimeError(f"Incomplete frozen score list: {summary}")
+    if any(not (folder / f"epoch_{epoch:02d}_SCORES_PRIVATE.pkl").is_file() for epoch in range(1, 31)):
+        raise RuntimeError(f"Completed marker has missing scores: {summary}")
+    return True
 
 
 def call(*args):
@@ -41,6 +59,9 @@ def main():
         for fold in range(1, 6):
             for variant in VARIANTS:
                 index = selected_config(fold, variant)["config_index"]
+                if completed_full(fold, variant, index):
+                    print(f"[SKIP_COMPLETE] full fold={fold} {variant} config={index}", flush=True)
+                    continue
                 call("--stage", "full", "--fold", fold, "--variant", variant,
                      "--config-index", index)
         print("[ALL_TARGET_SCORES_FROZEN_PENDING_HASH]", flush=True)

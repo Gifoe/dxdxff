@@ -1,0 +1,22 @@
+{
+  "experiment": "a1_patient_conditioned_lowrank_adapter_seed42_v1",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "seed": 42,
+  "scope": "FIT and validation only; no outer prediction or metric",
+  "source_replay": {"folds": 5, "epochs": 30, "max_grid_error": 1e-6, "expected_macro_f1": [0.6549997115717437, 0.6410958089865288, 0.6101185971670673, 0.6329791804569156, 0.5907877503876969]},
+  "backbone": "Exact A1 frozen through R4; original classifier frozen and eval",
+  "variants": ["P0_frozen_A1", "P1_global_lowrank", "P2_patient_conditioned", "P3_patient_conditioned_geometry_teacher"],
+  "adapter": {"rank": 4, "alpha": 0.25, "basis_seed": 42, "column_normalized_UV": true, "hyper_final_zero": true, "global_a_zero": true},
+  "context_encoder": {"phi": "D-32-GELU-16", "pool": "mean and population std over valid unlabeled context channels", "rho": "32-16-GELU-LayerNorm16", "hyper": "16-16-GELU-4-tanh"},
+  "training": {"adapter_epochs": 20, "fixed_adapter_epoch": 20, "optimizer": "AdamW", "lr": 0.001, "weight_decay": 0.0001, "patient_batch_size": 8, "gradient_clip": 1.0, "context_fraction": 0.7, "query_fraction": 0.3, "min_context": 2, "min_query": 2, "query_loss": "A1 patient-equal EZ2 NEZ1 weighted BCE"},
+  "geometry_teacher": {"FIT_only": true, "model": "EZ-positive L2 LogisticRegression C1 lbfgs max_iter2000 seed42", "student_loss": "SmoothL1 within-patient standardized EZ scores on query", "lambda_geo": 0.1},
+  "identity_regularizer": {"lambda_id": 0.001, "definition": "mean patient squared L2 coefficient norm"},
+  "selection": {"source_epochs": "1..30", "adapter_epoch": 20, "vloo_validation_patients": 13, "thresholds": "float32 linspace(0.05,0.95,19)", "order": ["Macro-F1", "EZ-F1", "BA", "threshold closest to 0.5", "earlier source epoch"]},
+  "diagnostics": {"shuffled_context": "cyclic next among 13 validation patients", "context_subsets": [0.5, 0.7, 1.0], "subsets_per_fraction": 20, "patient_bootstrap": 10000},
+  "conditioning_gate": {"min_ap_vs_p0": 0.01, "min_ap_vs_p1": 0.01, "positive_folds_vs_p0": 4, "positive_folds_vs_p1": 3, "mrr_top1_nondecrease_vs_p0": true, "macro_ezf1_min_delta": -0.005, "min_correct_vs_shuffled_ap": 0.005, "noncollapsed": true},
+  "geometry_teacher_gate": {"min_ap_vs_p2": 0.005, "positive_folds": 3, "mrr_top1_nondecrease": true, "macro_f1_min_delta": -0.005},
+  "no_architecture_or_hyperparameter_search": true,
+  "historical_outer_already_viewed": true,
+  "final_heldout_evaluation": false
+}

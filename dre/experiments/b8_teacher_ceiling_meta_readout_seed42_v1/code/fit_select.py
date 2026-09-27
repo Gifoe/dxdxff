@@ -78,10 +78,16 @@ def main():
     ap.add_argument("--context",type=int,default=-1)
     args=ap.parse_args()
     tc.preflight()
-    contexts=tc.fold_contexts(args.fold)
     if args.context>=0:
-        if args.context>=len(contexts):raise RuntimeError("Context index out of range")
-        contexts=[contexts[args.context]]
+        rows=tc.selected_rows(args.fold)
+        keys=list(dict.fromkeys((int(r["selected_epoch"]),float(r["selected_threshold"])) for r in rows))
+        if args.context>=len(keys):raise RuntimeError("Context index out of range")
+        key=keys[args.context]
+        row=next(r for r in rows if (int(r["selected_epoch"]),float(r["selected_threshold"]))==key)
+        contexts=[tc.context_for_row(args.fold,row)]
+        contexts[0]["target_ids"]=[r["subject_id"] for r in rows if (int(r["selected_epoch"]),float(r["selected_threshold"]))==key]
+    else:
+        contexts=tc.fold_contexts(args.fold)
     for i,ctx in enumerate(contexts):
         run_context(ctx)
         print(f"[DONE] fold={args.fold} context={args.context if args.context>=0 else i} key={context_key(ctx)}",flush=True)

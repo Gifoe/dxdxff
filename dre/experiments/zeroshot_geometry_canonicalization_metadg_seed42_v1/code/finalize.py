@@ -235,6 +235,74 @@ def isolated_fit_geometry(fold,variant,epoch):
     return row["out"]
 
 
+def diagnostic_group(fold,variant,items):
+    """Exact former per-patient diagnostic, bounded to one fold/model process."""
+    if len(items)!=13 or any(epoch!=30 for _,epoch,_,_ in items):
+        raise RuntimeError("Common-checkpoint diagnostic group incomplete")
+    fit=isolated_fit_geometry(fold,variant,30)
+    fdirs=[unit_direction(z,labels) for _,z,labels in fit]
+    fdirs=[a for a in fdirs if a is not None]
+    shared_direction=unit_direction(np.asarray([v for d0 in fdirs for v in (d0,-d0)]),
+                                    np.asarray([v for _ in fdirs for v in (1,0)])) if fdirs else None
+    if shared_direction is None and fdirs:
+        v=np.mean(fdirs,axis=0);shared_direction=v/max(np.linalg.norm(v),1e-12)
+    fit_x=np.concatenate([z for _,z,_ in fit]);fit_y=np.concatenate([lab for _,_,lab in fit])
+    weights=np.concatenate([np.full(len(lab),1/len(lab)) for _,_,lab in fit])
+    scaler=StandardScaler().fit(fit_x);sx=scaler.transform(fit_x)
+    common=LogisticRegression(C=1.,max_iter=1000,solver="lbfgs",random_state=42)
+    common.fit(sx,fit_y,sample_weight=weights)
+    directions=[];headroom=[];reversal=[]
+    for sid,epoch,x,y in items:
+        d=unit_direction(x,y)
+        if d is not None:directions.append((fold,sid,d))
+        auc=roc_auc_score(y,x@shared_direction) if shared_direction is not None and set(np.unique(y))=={0,1} else np.nan
+        reversal.append(dict(variant=variant,fold=fold,transfer_auroc=float(auc),
+                             reversed=int(auc<.5) if np.isfinite(auc) else None))
+        # Same FIT-trained head and patient-specific OOF head as the original
+        # implementation; only process boundaries and shared-fit reuse differ.
+        tx=scaler.transform(x)
+        shared_ap=float(average_precision_score(y,common.predict_proba(tx)[:,1]))
+        k=min(5,int(y.sum()),int((1-y).sum()))
+        specific_ap=np.nan
+        if k>=2:
+            pred=np.zeros(len(y),dtype=float)
+            cv=StratifiedKFold(n_splits=k,shuffle=True,random_state=42)
+            for a,b in cv.split(tx,y):
+                own=LogisticRegression(C=1.,max_iter=1000,solver="lbfgs",random_state=42)
+                own.fit(tx[a],y[a]);pred[b]=own.predict_proba(tx[b])[:,1]
+            specific_ap=float(average_precision_score(y,pred))
+        headroom.append(dict(variant=variant,fold=fold,shared_ap=shared_ap,
+                             patient_specific_oof_ap=specific_ap,gap=specific_ap-shared_ap))
+    return dict(directions=directions,headroom=headroom,reversal=reversal)
+
+
+def isolated_diagnostic_group(fold,variant,items):
+    folder=RUNTIME/"private"/"diagnostic_group"/f"fold_{fold}"
+    folder.mkdir(parents=True,exist_ok=True)
+    inp=folder/f"{variant}_input.pkl";out=folder/f"{variant}_output.pkl"
+    if not inp.is_file():
+        tmp=inp.with_suffix(".tmp")
+        with tmp.open("wb") as f:pickle.dump(dict(lock_sha=LOCK_SHA,fold=fold,variant=variant,items=items),f,protocol=5)
+        tmp.replace(inp)
+    input_sha=afc.sha(inp)
+    if not out.is_file():
+        command=[sys.executable,"-X","faulthandler","-u",str(Path(__file__).resolve()),
+                 "--diagnostic-group",str(fold),variant]
+        native={0xC0000005,0xC000001D,0xC0000096,0xC0000409,0x80000003,
+                -1073741819,-1073741795,-1073741674,-1073740791,-2147483645}
+        for attempt in range(3):
+            status=subprocess.run(command,check=False).returncode
+            if status==0:break
+            if status not in native or attempt==2:
+                raise RuntimeError(f"Diagnostic group failed status={status}: fold={fold} {variant}")
+            print(f"[DIAGNOSTIC_GROUP_RETRY] fold={fold} {variant} status={status}",flush=True)
+    with out.open("rb") as f:row=pickle.load(f)
+    if (row["lock_sha"]!=LOCK_SHA or row["fold"]!=fold or row["variant"]!=variant or
+            row["input_sha"]!=input_sha or len(row["result"]["headroom"])!=13):
+        raise RuntimeError("Diagnostic group cache identity mismatch")
+    return row["result"]
+
+
 def diagnostics(cells,reps):
     dispersion=[];headroom=[];reversal=[]
     byvariant=defaultdict(list)
@@ -242,45 +310,15 @@ def diagnostics(cells,reps):
         for variant in ALL:
             x,y,epoch=reps[(fold,sid,variant)]
             byvariant[variant].append((fold,sid,epoch,x,y))
-    fit_cache={}
     for variant,items in byvariant.items():
         directions=[]
-        for fold,sid,epoch,x,y in items:
-            d=unit_direction(x,y)
-            if d is not None:directions.append((fold,sid,d))
-            key=(fold,variant,epoch)
-            if key not in fit_cache:
-                print(f"[DIAGNOSTIC_FIT_R4] fold={fold} variant={variant} epoch={epoch}",flush=True)
-                fit_cache[key]=isolated_fit_geometry(*key)
-            fit=fit_cache[key]
-            fdirs=[unit_direction(z,labels) for _,z,labels in fit]
-            fdirs=[a for a in fdirs if a is not None]
-            shared_direction=unit_direction(np.asarray([v for d0 in fdirs for v in (d0,-d0)]),
-                                            np.asarray([v for _ in fdirs for v in (1,0)])) if fdirs else None
-            if shared_direction is None and fdirs:
-                v=np.mean(fdirs,axis=0);shared_direction=v/max(np.linalg.norm(v),1e-12)
-            auc=roc_auc_score(y,x@shared_direction) if shared_direction is not None and set(np.unique(y))=={0,1} else np.nan
-            reversal.append(dict(variant=variant,fold=fold,transfer_auroc=float(auc),
-                                 reversed=int(auc<.5) if np.isfinite(auc) else None))
-            # Post-score diagnostic heads. A shared FIT-trained head and an
-            # out-of-fold patient-specific head both use target labels only here.
-            fit_x=np.concatenate([z for _,z,_ in fit]);fit_y=np.concatenate([lab for _,_,lab in fit])
-            weights=np.concatenate([np.full(len(lab),1/len(lab)) for _,_,lab in fit])
-            scaler=StandardScaler().fit(fit_x);sx=scaler.transform(fit_x);tx=scaler.transform(x)
-            common=LogisticRegression(C=1.,max_iter=1000,solver="lbfgs",random_state=42)
-            common.fit(sx,fit_y,sample_weight=weights)
-            shared_ap=float(average_precision_score(y,common.predict_proba(tx)[:,1]))
-            k=min(5,int(y.sum()),int((1-y).sum()))
-            specific_ap=np.nan
-            if k>=2:
-                pred=np.zeros(len(y),dtype=float)
-                cv=StratifiedKFold(n_splits=k,shuffle=True,random_state=42)
-                for a,b in cv.split(tx,y):
-                    own=LogisticRegression(C=1.,max_iter=1000,solver="lbfgs",random_state=42)
-                    own.fit(tx[a],y[a]);pred[b]=own.predict_proba(tx[b])[:,1]
-                specific_ap=float(average_precision_score(y,pred))
-            headroom.append(dict(variant=variant,fold=fold,shared_ap=shared_ap,
-                                 patient_specific_oof_ap=specific_ap,gap=specific_ap-shared_ap))
+        for fold in range(1,6):
+            group=[(sid,epoch,x,y) for f,sid,epoch,x,y in items if f==fold]
+            print(f"[DIAGNOSTIC_GROUP] fold={fold} variant={variant}",flush=True)
+            result=isolated_diagnostic_group(fold,variant,group)
+            directions.extend(result["directions"])
+            headroom.extend(result["headroom"])
+            reversal.extend(result["reversal"])
         cos=[float(a@b) for i,(fa,sa,a) in enumerate(directions)
              for fb,sb,b in directions[i+1:] if fa==fb and sa!=sb]
         if not cos:raise RuntimeError("No cross-patient R4 direction pairs")
@@ -437,4 +475,23 @@ if __name__=="__main__":
                 pickle.dump(dict(lock_sha=LOCK_SHA,fold=fold,variant=variant,epoch=epoch,out=out),f,protocol=5)
             tmp.replace(path)
         print(f"[EXTRACT_FIT_R4_COMPLETE] fold={fold} {variant}",flush=True)
+    elif len(sys.argv)==4 and sys.argv[1]=="--diagnostic-group":
+        preflight()
+        fold=int(sys.argv[2]);variant=sys.argv[3]
+        if fold not in range(1,6) or variant not in ALL:
+            raise RuntimeError("Invalid diagnostic group request")
+        folder=RUNTIME/"private"/"diagnostic_group"/f"fold_{fold}"
+        inp=folder/f"{variant}_input.pkl";out=folder/f"{variant}_output.pkl"
+        with inp.open("rb") as f:request=pickle.load(f)
+        if (request["lock_sha"]!=LOCK_SHA or request["fold"]!=fold or
+                request["variant"]!=variant or len(request["items"])!=13):
+            raise RuntimeError("Diagnostic group input identity mismatch")
+        if not out.is_file():
+            result=diagnostic_group(fold,variant,request["items"])
+            tmp=out.with_suffix(".tmp")
+            with tmp.open("wb") as f:
+                pickle.dump(dict(lock_sha=LOCK_SHA,fold=fold,variant=variant,
+                                 input_sha=afc.sha(inp),result=result),f,protocol=5)
+            tmp.replace(out)
+        print(f"[DIAGNOSTIC_GROUP_COMPLETE] fold={fold} {variant}",flush=True)
     else:main()

@@ -30,9 +30,11 @@ def private_snapshot(fold, variant, epoch):
 def freeze():
     """Read metadata and bytes of score files, not target labels/outcomes."""
     preflight()
-    files = {}
+    files = {}; selections = {}
     for fold in range(1, 6):
         for variant in VARIANTS:
+            selection_path=RUNTIME/"selection"/f"fold_{fold}"/f"{variant}.json"
+            selections[str(selection_path.relative_to(RUNTIME))]=afc.sha(selection_path)
             index = selected_config(fold, variant)["config_index"]
             folder = RUNTIME / "full" / f"fold_{fold}" / variant / f"config_{index:02d}"
             summary = json.loads((folder / "summary.json").read_text(encoding="utf-8"))
@@ -44,8 +46,9 @@ def freeze():
                 if digest != summary["score_snapshot_hashes"][epoch-1]:
                     raise RuntimeError("Score freeze digest mismatch")
                 files[str(path.relative_to(RUNTIME))] = digest
-    manifest = dict(lock_sha=LOCK_SHA, score_files=len(files), model_variants=len(VARIANTS),
-                    folds=5, epochs=30, target_labels_not_read_in_this_command=True, files=files)
+    manifest = dict(lock_sha=LOCK_SHA, score_files=len(files), fit_selection_files=len(selections),
+                    model_variants=len(VARIANTS), folds=5, epochs=30,
+                    target_labels_not_read_in_this_command=True, files=files, selections=selections)
     path = RUNTIME / "SCORE_FREEZE_BEFORE_TARGET_LABELS.json"
     if path.exists():
         prior = json.loads(path.read_text(encoding="utf-8"))
@@ -60,9 +63,20 @@ def _source_payload(fold, epoch):
     return afc.load_representation(fold, epoch)
 
 
+@lru_cache(maxsize=5)
+def _source_selected_epochs(fold):
+    rows=afc.read_csv(afc.PRIOR_RUNTIME/"private"/f"fold_{fold}"/"A1_VLOO_PRIVATE.csv")
+    if len(rows)!=13:raise RuntimeError("Source selected grid incomplete")
+    return {r["subject_id"]:int(r["selected_epoch"]) for r in rows}
+
+
 def reference_y(fold, epoch, sid):
-    payload = _source_payload(fold, epoch)
-    return np.asarray(payload["val"][sid]["y"], dtype=np.int8)
+    # Prior exact-R4 extraction materialized only the distinct A1-selected
+    # epochs, not all 30. Channel order and labels are epoch-invariant, so
+    # retrieve labels from that patient's source-selected epoch.
+    selected=_source_selected_epochs(fold)[sid]
+    payload=_source_payload(fold,selected)
+    return np.asarray(payload["val"][sid]["y"],dtype=np.int8)
 
 
 def make_grid(fold, variant):
@@ -135,8 +149,18 @@ def target_cell(fold, variant, selection):
 def evaluate(fold, variant):
     freeze_path = RUNTIME / "SCORE_FREEZE_BEFORE_TARGET_LABELS.json"
     if not freeze_path.is_file(): raise RuntimeError("All-model score freeze required")
-    if json.loads(freeze_path.read_text(encoding="utf-8"))["score_files"] != 900:
+    frozen=json.loads(freeze_path.read_text(encoding="utf-8"))
+    if frozen["score_files"] != 900 or frozen["fit_selection_files"] != 30:
         raise RuntimeError("Incomplete pre-label score freeze")
+    index=selected_config(fold,variant)["config_index"]
+    folder=RUNTIME/"full"/f"fold_{fold}"/variant/f"config_{index:02d}"
+    selection=RUNTIME/"selection"/f"fold_{fold}"/f"{variant}.json"
+    if afc.sha(selection)!=frozen["selections"][str(selection.relative_to(RUNTIME))]:
+        raise RuntimeError("FIT selection changed after target score freeze")
+    for epoch in range(1,31):
+        score=folder/f"epoch_{epoch:02d}_SCORES_PRIVATE.pkl"
+        if afc.sha(score)!=frozen["files"][str(score.relative_to(RUNTIME))]:
+            raise RuntimeError("Target score/R4 changed after freeze")
     path = RUNTIME / "private" / f"fold_{fold}" / f"{variant}_VLOO_PRIVATE.csv"
     rows = afc.read_csv(path) if path.exists() else make_grid(fold, variant)
     if len(rows) != 13: raise RuntimeError("Expected 13 VLOO target cells")

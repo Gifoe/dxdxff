@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "source_reproduced": true,
+  "trained_fold_variant_cells": 35,
+  "trained_epochs": 1050,
+  "channel_set_repeats": 15600,
+  "layerwise_fold_layer_rows": 20,
+  "summary_rows": 7,
+  "outer_test_accessed": false,
+  "terminal": "RANKING_BOTTLENECK_SOURCE_UNRESOLVED"
+}

@@ -1,0 +1,14 @@
+{
+  "pass": false,
+  "checks": {
+    "semantic_vs_source_auprc_ge_0_010": false,
+    "semantic_vs_random_auprc_ge_0_010": false,
+    "semantic_vs_source_positive_folds_ge_4": false,
+    "semantic_vs_random_positive_folds_ge_3": true,
+    "mrr_nondecreasing_vs_source": false,
+    "mrr_nondecreasing_vs_random": true,
+    "macro_f1_preserved": true
+  },
+  "terminal": "SHARED_VIEW_INTERFERENCE_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

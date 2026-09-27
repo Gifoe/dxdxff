@@ -1,0 +1,47 @@
+{
+  "pass": false,
+  "variants": {
+    "CTX1": {
+      "pass": false,
+      "checks": {
+        "srank_auprc_gain_ge_0_010": false,
+        "srank_positive_auprc_folds_ge_4": false,
+        "srank_mrr_nondecreasing": false,
+        "sf1_macro_f1_preserved": true,
+        "frozen_T0_auprc_same_direction": false,
+        "channel_set_instability_reduced_ge_20pct_with_Q4_concentration": false
+      },
+      "rank_mae_reduction_25pct": 0.3878229349852873,
+      "rank_mae_reduction_25pct_Q4": 0.3383602675586036
+    },
+    "CTX2": {
+      "pass": false,
+      "checks": {
+        "srank_auprc_gain_ge_0_010": false,
+        "srank_positive_auprc_folds_ge_4": false,
+        "srank_mrr_nondecreasing": false,
+        "sf1_macro_f1_preserved": true,
+        "frozen_T0_auprc_same_direction": false,
+        "channel_set_instability_reduced_ge_20pct_with_Q4_concentration": false
+      },
+      "rank_mae_reduction_25pct": 0.0889931275257132,
+      "rank_mae_reduction_25pct_Q4": 0.11652271384410351
+    },
+    "CTX3": {
+      "pass": false,
+      "checks": {
+        "srank_auprc_gain_ge_0_010": false,
+        "srank_positive_auprc_folds_ge_4": false,
+        "srank_mrr_nondecreasing": true,
+        "sf1_macro_f1_preserved": true,
+        "frozen_T0_auprc_same_direction": false,
+        "channel_set_instability_reduced_ge_20pct_with_Q4_concentration": false
+      },
+      "rank_mae_reduction_25pct": 0.38363461471507254,
+      "rank_mae_reduction_25pct_Q4": 0.3467069536886772
+    }
+  },
+  "harmful_layer_supported": "neither",
+  "terminal": "PATIENT_CONTEXT_RANKING_BOTTLENECK_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

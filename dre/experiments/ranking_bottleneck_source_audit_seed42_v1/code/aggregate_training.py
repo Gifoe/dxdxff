@@ -126,9 +126,15 @@ def main() -> None:
             write_csv(output / f"{variant}_SF1_BY_FOLD.csv", sf1_rows)
             write_csv(output / f"{variant}_SRANK_BY_FOLD.csv", rank_rows)
         elif variant.startswith("CTR"):
-            write_csv(EXPERIMENT / "center_optimization" / f"{variant}_BY_FOLD.csv", sf1_rows + rank_rows)
+            joined = sf1_rows + rank_rows
+            fields = list(dict.fromkeys(key for row in joined for key in row))
+            write_csv(EXPERIMENT / "center_optimization" / f"{variant}_BY_FOLD.csv",
+                      [{key: row.get(key, "") for key in fields} for row in joined])
         else:
-            write_csv(EXPERIMENT / "view_interference" / f"{variant}_BY_FOLD.csv", sf1_rows + rank_rows)
+            joined = sf1_rows + rank_rows
+            fields = list(dict.fromkeys(key for row in joined for key in row))
+            write_csv(EXPERIMENT / "view_interference" / f"{variant}_BY_FOLD.csv",
+                      [{key: row.get(key, "") for key in fields} for row in joined])
         print(f"[AGGREGATE] {variant} SRANK AUPRC={mean(rank_rows, 'patient_ez_auprc'):.6f}", flush=True)
     context = [comparison(all_sf1["CTX0"], all_rank["CTX0"], all_sf1[name], all_rank[name], name)
                for name in ("CTX1", "CTX2", "CTX3")]

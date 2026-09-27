@@ -1,3 +1,3 @@
 # Ranking bottleneck source audit (seed 42)
 
-Development-only independent tests of channel context, checkpoint/objective mismatch, center weighting, and semantic view interference, starting from exact frozen A1. All training and selection rules are in `PROTOCOL_LOCK.json`. Random view partition is frozen before training. No outer-test loader or outcomes may be used. Private patient/channel records, checkpoints, embeddings, and runtime logs stay on the server.
+Complete development-only independent source audit. Terminal: `RANKING_BOTTLENECK_SOURCE_UNRESOLVED`. See `FINAL_REPORT.md`, `RANKING_SOURCE_SUMMARY.csv`, and the frozen protocol files. No outer test or private patient artifacts were published.

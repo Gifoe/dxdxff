@@ -1,0 +1,3 @@
+metric,n_cases,mean_delta,pearson_r_n_channels,spearman_rho_n_channels,diagnostic_only
+delta_auprc_T0_minus_T1,65,-0.016387048758300767,0.03913914826566726,-0.16136833834394126,True
+delta_mrr_T0_minus_T1,65,-0.018195826562308105,-0.2206588043548914,-0.20912240295428966,True

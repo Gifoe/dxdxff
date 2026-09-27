@@ -1,0 +1,19 @@
+{
+  "pass": false,
+  "checks": {
+    "overall_auprc_preserved": false,
+    "worst_center_auprc_gain_ge_0_020": false,
+    "worst_center_macro_f1_gain_ge_0_010": false,
+    "center_auprc_gap_reduced_ge_20pct": false,
+    "weak_center_ranking_improves": true,
+    "strong_center_auprc_no_collapse": true,
+    "overall_macro_f1_preserved": false
+  },
+  "baseline_worst_center_auprc": 0.4248005149890354,
+  "candidate_worst_center_auprc": 0.39339160787138877,
+  "baseline_center_auprc_gap": 0.22165592105000892,
+  "candidate_center_auprc_gap": 0.24423536462797651,
+  "small_center_caution": true,
+  "terminal": "CENTER_OPTIMIZATION_RANKING_BOTTLENECK_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

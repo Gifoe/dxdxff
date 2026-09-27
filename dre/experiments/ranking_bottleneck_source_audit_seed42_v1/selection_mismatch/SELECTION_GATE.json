@@ -1,0 +1,10 @@
+{
+  "pass": false,
+  "checks": {
+    "auprc_gain_ge_0_010": false,
+    "auprc_positive_folds_ge_4": false,
+    "macro_f1_preserved": true
+  },
+  "terminal": "CHECKPOINT_SELECTION_MISMATCH_NOT_SUPPORTED",
+  "outer_test_accessed": false
+}

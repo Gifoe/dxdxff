@@ -1,0 +1,13 @@
+{
+  "pass": false,
+  "checks": {
+    "auprc_gain_ge_0_010": false,
+    "auprc_positive_folds_ge_4": false,
+    "mrr_nondecreasing": false,
+    "top1_nondecreasing": false,
+    "macro_f1_preserved": true
+  },
+  "terminal": "RANKING_OBJECTIVE_MISMATCH_NOT_SUPPORTED",
+  "order_improves_decision_hurts": false,
+  "outer_test_accessed": false
+}

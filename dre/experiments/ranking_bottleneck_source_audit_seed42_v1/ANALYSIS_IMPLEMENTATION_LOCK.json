@@ -1,0 +1,14 @@
+{
+  "status": "frozen before reading trained-variant validation outcomes",
+  "protocol_lock_sha256": "f32b83f02591a2fb942e4a5d6f04ae9dd888af1c3889e48820c3aa72ebeefb6b",
+  "srank_ties": "mean EZ-AUPRC, mean EZ-MRR, mean EZ-AUROC rounded to 12 decimals, then earlier epoch; threshold tie by Macro-F1, EZ-F1, BA, distance to 0.5",
+  "context_gate_boolean": "A and B and C and D and (E or F)",
+  "context_frozen_T0_same_direction": "mean selected-patient T0 minus T1.0 EZ-AUPRC strictly positive",
+  "channel_set_instability": "mean percentile-rank MAE on retained channels at 25% dropout; candidate <=0.8*CTX0 overall and improvement in n_channels Q4 >= overall fractional improvement",
+  "channel_set_mask_seed": "SHA256 first 8 bytes little-endian of 42|fold|subject|fraction|repeat; identical across variants",
+  "center_substantial_collapse": "HUP and multicenter SRANK EZ-AUPRC must each decline by no more than 0.020 absolute",
+  "center_weak_improvement": "at least one of LZU or pediatric SRANK EZ-AUPRC strictly improves",
+  "center_aggregate_protocol": "SRANK for ranking metrics; SF1 for Macro-F1 and EZ-F1",
+  "view_aggregate_protocol": "SRANK for ranking metrics; SF1 for Macro-F1",
+  "outer_test_accessed": false
+}

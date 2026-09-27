@@ -1,0 +1,19 @@
+{
+  "experiment": "crosspatient_feature_geometry_audit_seed42_v1",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_tip": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "seed": 42,
+  "scope": "FIT and validation only; outer test prohibited",
+  "source_reproduction": {"folds": 5, "epochs_per_fold": 30, "max_grid_error": 1e-6, "expected_mean_macro_f1": 0.6259962097139906},
+  "representations": ["R0_raw36_mean", "R1_raw72_meanstd", "R2_pre_patient_z", "R3_patient_z", "R4_contextual", "R5_a1_score"],
+  "alignments": ["global_fit", "patient_z", "patient_robust", "patient_rank_gaussian"],
+  "shared_probe": {"model": "LogisticRegression", "penalty": "l2", "C": 1.0, "solver": "lbfgs", "max_iter": 2000, "random_state": 42, "weights": "patient_equal_class_equal"},
+  "patient_probe": {"representations": ["R1", "R3", "R4"], "folds": "min(5,n_EZ,n_NEZ); require >=2", "shuffle": true, "seed": 42, "aggregation": "heldout-fold metric weighted by heldout channel count"},
+  "patient_mlp": {"architecture": "D-16-GELU-1", "epochs": 50, "optimizer": "AdamW", "lr": 0.001, "weight_decay": 0.001, "seed": 42, "early_stop": false},
+  "bootstrap": {"patient_resamples": 10000, "seed": 42},
+  "geometry_gate": {"min_ap_delta": 0.05, "ci_low_strictly_positive": true, "min_positive_patient_fraction": 0.65, "min_patient_ap": 0.6, "max_direction_median_cosine": 0.4, "min_reversed_transfer_fraction": 0.2, "min_local_cross_ap_gap": 0.05},
+  "alignment_gate": {"min_ap_delta": 0.02, "min_positive_folds": 4, "auroc_mrr_top1_nondecrease": true},
+  "richer_gate": {"min_ap_delta": 0.02, "min_positive_folds": 4, "auroc_nondecrease": true, "min_mrr_delta": -0.005, "top1_nondecrease": true, "min_pca_matched_ap_delta": 0.01},
+  "richer_inventory_must_be_committed_before_label_evaluation": true,
+  "final_heldout_accessed": false
+}

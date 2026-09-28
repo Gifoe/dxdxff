@@ -1,0 +1,35 @@
+{
+  "study": "FullPool Privileged Patient Geometry Distillation Study",
+  "branch": "codex/fullpool-privileged-ranking-distillation-seed42-v1",
+  "seed": 42,
+  "source_a1_commit": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "reference_b8_branch": "codex/b8-teacher-ceiling-meta-readout-seed42-v1",
+  "prior_relational_tip": "274a53e3c0733ea2bf247db08b52d69ec757f019",
+  "scope": {"folds": 5, "target_cells": 65, "unique_target_ids": 47, "fixed_query_repetitions": 20, "target_label_budget": 0, "outer_predictions_metrics_or_selection": false},
+  "source_reproduction": {"a1_checkpoints": 150, "a1_ap": 0.5767434626151353, "fullpool_ap": 0.6924644868, "replay_tolerance": 1e-6},
+  "teacher": {
+    "architecture": "exact RETUNED_64D_FULLPOOL convex residual m0 + b + z@w",
+    "fit_only_scaler": "exact B8 StandardScaler fitted on current outer-fold FIT R4",
+    "regularization_grid_w": [0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
+    "regularization_grid_b": [0.1, 1.0, 10.0],
+    "regularization_selection": "three deterministic 50/50 FIT episodes per patient; for each scored FIT patient choose lambda using only other FIT patients in the same outer fold/context; patient-equal AP; near-tie <=1e-6 resolved by larger lambda_w then lambda_b",
+    "channel_crossfit": "five deterministic label-blind channel folds; fit each teacher on other four folds, predict held-out fold only",
+    "teacher_target_label_excluded_from_fit_and_lambda_selection": true,
+    "teacher_signal_gate": "mean FIT-OOF delta AP >0.03, at least four of five folds positive, MRR and Top1 not materially decreased; require Teacher AP>A1",
+    "metric_scope": "all FIT patient channels scored OOF; patient-equal mean across FIT patients and then fold consistency"
+  },
+  "student_if_teacher_gate_passes": {
+    "architectural_invariant": "exact original A1 network, initialized from corresponding exact A1 checkpoint; no adapter or target conditioning",
+    "variants": ["D0_ORIGINAL_A1", "D0_CONTINUED_HARDLABEL", "D1_PAIRWISE_KD", "D2_LISTWISE_KD", "D3_CORRECTION_FOCUSED_KD", "D4_PAIR_LIST_KD_IF_FIT_ELIGIBLE"],
+    "meta_split": "deterministic patient-disjoint 80/20 split within each outer-fold FIT group",
+    "temperature_grid": [0.5, 1.0, 2.0],
+    "kd_weight_grid": [0.03, 0.1, 0.3, 1.0],
+    "lower_to_upper_lr_grid": [0.03, 0.1, 0.3],
+    "primary_selection": "FIT-meta patient-equal AP, then MRR, Top1, simpler/lower KD weight",
+    "D4_fit_gate": "only if D1 or D2 has clear positive FIT-meta AP versus matched D0+",
+    "target_selection": "all Student hyperparameters and checkpoints frozen before any new target outcome metrics",
+    "primary_kd_comparison": "KD versus D0+ continued hard-label control, not merely original A1"
+  },
+  "statistics": {"patient_id_cluster_bootstrap": 10000, "bootstrap_seed": 42, "fixed_query": "exact active-fewshot deterministic 50/50 assignments; candidate labels ignored by Student"},
+  "caveat": "Inherited A1 VLOO checkpoint selection depends on other validation patients' labels and legacy loader materializes all 80 labels; strict_target_label_sequencing=false. No new target labels are used for Teacher/Student fitting or selection."
+}

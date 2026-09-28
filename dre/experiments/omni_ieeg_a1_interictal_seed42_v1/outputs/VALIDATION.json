@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "supervised_train_patients": 139,
+  "supervised_test_patients": 94,
+  "supervised_test_edfs": 102,
+  "test_patient_channels": 9215,
+  "test_soz_channels": 764,
+  "test_used_for_tuning": false
+}

@@ -8,5 +8,6 @@ modification.
 
 Server-only waveform and feature caches, checkpoints, optimizer states, and
 runtime logs belong outside this repository. Compact metadata audits and
-aggregate results belong here. `FINAL_REPORT.md` will be written only after
-the final checkpoint is frozen and the official test has been evaluated once.
+results belong here. The seed-42 run is complete; see `FINAL_REPORT.md` and
+`outputs/VALIDATION.json`. Unknown SOZ labels leave all Zurich records outside
+the supervised evaluation; this limitation is reported explicitly.

@@ -1,0 +1,8 @@
+{
+  "official_test_accessed": true,
+  "test_used_for_tuning": false,
+  "model_frozen_before_test": true,
+  "patients": 94,
+  "final_checkpoint_sha256": "24b4e7caf3460f7544dda65528629483d2db7c1760075d830de7b5f32bd6a8c0",
+  "predictions_sha256": "02204095d3bdd32422ff722f7bbd41c1bca1dda114e47c886e0249f487494bd7"
+}

@@ -1,0 +1,20 @@
+{
+  "patients": 94,
+  "channels": 9215,
+  "soz_channels": 764,
+  "soz_prevalence": 0.08290830168204015,
+  "pooled_ez_ap": 0.22792361015011872,
+  "pooled_auroc": 0.7096217895462663,
+  "patient_equal_mean_ap": 0.310190907252575,
+  "patient_median_ap": 0.24248907582873103,
+  "patient_ap_q1": 0.09675716115639792,
+  "patient_ap_q3": 0.4805795505431728,
+  "patient_equal_mrr": 0.43346520234369174,
+  "patient_equal_top1": 0.30851063829787234,
+  "patient_equal_ndcg": 0.5398964465946744,
+  "macro_f1": 0.6030478529329627,
+  "ez_f1": 0.28617536309844,
+  "balanced_accuracy": 0.6250363196275914,
+  "predicted_soz_fraction": 0.11882799782962561,
+  "patients_without_soz": 6
+}

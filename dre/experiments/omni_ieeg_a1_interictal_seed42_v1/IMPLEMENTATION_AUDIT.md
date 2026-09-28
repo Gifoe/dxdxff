@@ -1,4 +1,4 @@
-# Implementation audit (in progress)
+# Implementation audit (completed)
 
 - Official split and Task-2 inclusion code reviewed at Omni commit
   `57c22a75a59b5c3a98006806ad42000f6a3fa5b6`.
@@ -21,8 +21,14 @@
   passed on the server. Trainable parameter count: 27,713.
 - Inner validation is a deterministic official-train-only patient split:
   111 fit, 28 validation, stratified by dataset and SOZ presence.
-- As of this audit, official test features and model outcomes have not been
-  accessed. Training and final evaluation remain pending.
+- Train-side label sign audit passed for 20 patients; feature distribution
+  sanity passed for 5 patients; a three-patient training smoke passed before
+  the official test. Tied-score AP/AUROC bootstrap arithmetic passed against
+  an independent expanded-sample calculation.
+- The final model/normalizer were frozen and their hashes committed before
+  official test scoring. Official test was scored once; no test tuning was
+  performed. Independent `code/validate_results.py` checks the output and
+  writes `outputs/VALIDATION.json` with `pass=true`.
 
 The official Omni reference channel benchmark constructs some labels using
 resection and surgical outcome. This experiment deliberately uses strict SOZ

@@ -1,0 +1,11 @@
+{
+  "experiment": "unified_a1_tf_two_benchmark_seed42_v1",
+  "base_protocol_sha256": "ace2017e01d0d21e3dda8ddd4d42551366704430b8a10f3666f955150150630d",
+  "status": "FROZEN_BEFORE_ANY_I1_TRAINING_OR_I1_TARGET_OUTCOME_ACCESS",
+  "reason": "The source A1 fixed-query comparator uses leave-one-validation-patient-out selection. A fold-wide stage-2 gate on all 13 validation patients would reuse each target patient's own label for its own gate, making the fixed-query comparison non-comparable. The original lock's short selection description did not specify this collision.",
+  "stage_2_gate": "For each of the 13 fixed validation target patients, compute Stage-1 patient-equal EZ AP on the other 12 validation patients. Permit a Stage-2 candidate for that target only when this AP is at least historical original-A1 AP on the same 12 others minus 0.01. Train Stage-2 weights on FIT patients only if at least one target is eligible; never use the target patient's own labels for its gate.",
+  "selection": "For each target patient, use only the other 12 validation patients to select candidate stage, epoch and classification threshold, with exact historical A1 VLOO metric ordering where applicable. The target's own channels are only scored after this selection. Use 20 historical fixed query repetitions and 47-ID paired bootstrap.",
+  "unchanged": ["all model modules", "both caches and reference operators", "TF preprocessing", "loss weights", "optimizer and learning rates", "fit/validation/test memberships", "no new outer test"],
+  "historical_outcomes_already_seen": true,
+  "test_tuning": false
+}

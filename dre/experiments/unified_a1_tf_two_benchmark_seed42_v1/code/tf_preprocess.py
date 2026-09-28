@@ -13,24 +13,16 @@ HOP_SECONDS = 1
 EPS = 1e-8
 
 
-def log_frequency_stft(waveform: np.ndarray, sample_rate: int) -> np.ndarray:
-    """Return [59,C,32] from a [C,60*sample_rate] physical-uV clip.
-
-    Each row is the Hann-windowed STFT power at its 2-second, 1-second-hop
-    frame, averaged into frozen physical-frequency log bins. No per-record or
-    per-window variance normalization is performed.
-    """
-    x = np.asarray(waveform, dtype=np.float32)
-    if x.ndim != 2 or x.shape[1] != 60 * sample_rate:
-        raise ValueError(f"Expected [channels,{60 * sample_rate}], got {x.shape}")
+def log_frequency_stft_windows(windows: np.ndarray, sample_rate: int) -> np.ndarray:
+    """Return [W,C,32] from exact A1-aligned [W,C,2*sample_rate] windows."""
+    frames = np.asarray(windows, dtype=np.float32)
+    width = 2 * sample_rate
+    if frames.ndim != 3 or frames.shape[-1] != width:
+        raise ValueError(f"Expected [windows,channels,{width}], got {frames.shape}")
     if sample_rate < 240:
         raise ValueError("The frozen 120 Hz upper bin requires Nyquist >=120 Hz")
-    if not np.isfinite(x).all():
+    if not np.isfinite(frames).all():
         raise ValueError("Nonfinite input signal")
-    width, hop = 2 * sample_rate, sample_rate
-    frames = np.lib.stride_tricks.sliding_window_view(x, width, axis=-1)[:, ::hop]
-    if frames.shape[1] != 59:
-        raise RuntimeError(f"A1 window grid mismatch: {frames.shape}")
     window = np.hanning(width).astype(np.float32)
     power = np.abs(np.fft.rfft(frames * window, axis=-1)) ** 2
     frequencies = np.fft.rfftfreq(width, 1.0 / sample_rate)
@@ -42,10 +34,22 @@ def log_frequency_stft(waveform: np.ndarray, sample_rate: int) -> np.ndarray:
                               out=np.zeros_like(centers), where=span > 0)
     sampled_power = ((1.0 - interpolation) * power[:, :, lower] +
                      interpolation * power[:, :, upper])
-    output = np.log(sampled_power.transpose(1, 0, 2) + EPS).astype(np.float32)
+    output = np.log(sampled_power + EPS).astype(np.float32)
     if not np.isfinite(output).all():
         raise RuntimeError("Nonfinite log STFT output")
     return output
+
+
+def log_frequency_stft(waveform: np.ndarray, sample_rate: int) -> np.ndarray:
+    """Return [59,C,32] from [C,60*rate] using 2-s/1-s-hop STFT."""
+    x = np.asarray(waveform, dtype=np.float32)
+    if x.ndim != 2 or x.shape[1] != 60 * sample_rate:
+        raise ValueError(f"Expected [channels,{60 * sample_rate}], got {x.shape}")
+    width, hop = 2 * sample_rate, sample_rate
+    frames = np.lib.stride_tricks.sliding_window_view(x, width, axis=-1)[:, ::hop]
+    if frames.shape[1] != 59:
+        raise RuntimeError(f"A1 window grid mismatch: {frames.shape}")
+    return log_frequency_stft_windows(frames.transpose(1, 0, 2), sample_rate)
 
 
 def fit_train_frequency_normalizer(train_arrays: list[np.ndarray]) -> tuple[np.ndarray, np.ndarray]:

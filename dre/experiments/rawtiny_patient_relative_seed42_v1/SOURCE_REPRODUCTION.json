@@ -1,0 +1,11 @@
+{
+  "status": "REUSED_VERIFIED_SOURCE",
+  "source_experiment": "zeroshot_geometry_canonicalization_metadg_seed42_v1",
+  "source_reproduction_file": "dre/experiments/zeroshot_geometry_canonicalization_metadg_seed42_v1/SOURCE_REPRODUCTION.json",
+  "a1_checkpoints_replayed": 150,
+  "a1_max_grid_error": 0.0,
+  "a1_R4_max_logit_replay_error": 0.0,
+  "a1_fixed_query_ap": 0.5767434626151353,
+  "outer_predictions_or_metrics_read_for_this_study": false,
+  "new_rawtiny_outcome_reproduction": "NOT_RUN_YET"
+}

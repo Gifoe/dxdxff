@@ -1,0 +1,11 @@
+{
+  "stage_a_target_outcomes_evaluated": false,
+  "stage_a_fit_patients_used": 51,
+  "legacy_loader_materializes_all_80_labels": true,
+  "new_score_snapshot_code_indexes_validation_labels": false,
+  "planned_vloo_uses_other_validation_patients_labels": true,
+  "own_validation_patient_label_used_for_own_selection": false,
+  "strict_fit_only_epoch_selection": false,
+  "outer_test_predictions_or_metrics_accessed": false,
+  "interpretation": "historically viewed exploratory development"
+}

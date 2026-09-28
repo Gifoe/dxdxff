@@ -1,0 +1,18 @@
+{
+  "status": "STAGE_A_PREDECLARED",
+  "raw_cache_sampling_rate_hz": 250,
+  "raw_cache_duration_seconds": 60,
+  "raw_cache_samples_per_record_channel": 15000,
+  "raw_window_sampling_rate_hz": 250,
+  "raw_window_duration_seconds": 2,
+  "raw_window_samples": 500,
+  "raw_window_alignment": "Validated neuroez_c.dual_view_data.RawAlignmentStore: feature relative centers, compound seizure key, exact channel-name mapping",
+  "raw_window_normalization": "channel-window temporal mean and standard deviation, minimum denominator 1e-6, clip [-8,8]",
+  "new_filtering": "none",
+  "new_resampling": "none",
+  "fit_only_global_statistics": "none required",
+  "onset_metadata_explicit_centered_flag": false,
+  "onset_metadata_fields_present": ["seizure_onset_sec", "raw_valid_start_sample", "raw_valid_samples"],
+  "onset_temporal_provenance": "Source _build_centered_raw_waveform places center_sec=seizure_onset_sec at the 60-second raw midpoint; a cache-creation provenance hash was not embedded in the pickle, so this is source-code evidence rather than independent waveform-to-EDF verification.",
+  "onset_alignment_claim": "SOURCE_CODE_SUPPORTED_NOT_INDEPENDENTLY_VERIFIED"
+}

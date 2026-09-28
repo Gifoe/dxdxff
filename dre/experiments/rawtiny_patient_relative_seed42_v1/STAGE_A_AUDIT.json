@@ -1,0 +1,23 @@
+{
+  "stage": "A_FIT_ONLY_IMPLEMENTATION_SANITY",
+  "pass": true,
+  "a1_fold": 1,
+  "fit_patients": 51,
+  "raw_alignment_patient_match_rate": 1.0,
+  "raw_alignment_window_match_rate": 1.0,
+  "M3_alpha0_A1_max_logit_error": 0.0,
+  "M3_alpha0_prediction_mismatch": 0,
+  "parameter_counts": {
+    "M1_RAWTINY_NOPR": 5729,
+    "M2_RAWTINY_PR": 32993,
+    "M3_HYBRID_PR": 34018
+  },
+  "finite_gradient_parameter_tensors": {
+    "M1_RAWTINY_NOPR": 23,
+    "M2_RAWTINY_PR": 32,
+    "M3_HYBRID_PR": 34
+  },
+  "target_outcomes_evaluated": false,
+  "outer_test_accessed": false,
+  "legacy_loader_materialized_validation_labels": true
+}

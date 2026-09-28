@@ -1,0 +1,4 @@
+model,trainable_parameters,source
+M1_RAWTINY_NOPR,5729,server model instantiation
+M2_RAWTINY_PR,32993,server model instantiation
+M3_HYBRID_PR,34018,server exact A1 epoch30 load with frozen A1 pathway

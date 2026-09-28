@@ -1,0 +1,78 @@
+{
+  "experiment": "rawtiny_patient_relative_seed42_v1",
+  "status": "FROZEN_BEFORE_NEW_TARGET_OUTCOMES",
+  "source_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "source_commit": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "seed": 42,
+  "cohort": {
+    "patients": 80,
+    "seizure_records": 256,
+    "unique_channels": 7635,
+    "folds": 5,
+    "validation_patients_per_fold": 13,
+    "fixed_query_repetitions": 20,
+    "expected_target_cells": 65,
+    "expected_unique_target_patients": 47
+  },
+  "input_sha256": {
+    "feature_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "raw_cache": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "partition_manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "a1_model_py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "raw_alignment_py": "3d661a06eaf5eab8561eb1dd37133ce62d7eb0f3a75391329d887e42c4ae791c"
+  },
+  "raw_preprocessing": {
+    "alignment": "neuroez_c.dual_view_data.RawAlignmentStore compound subject/run/sample/seizure key",
+    "sampling_hz": 250,
+    "segment_seconds": 2,
+    "segment_samples": 500,
+    "center": "feature cache window_relative_centers_sec, nominal onset midpoint of 60-second raw cache",
+    "normalization": "per-channel-window temporal mean and standard deviation with 1e-6 minimum; clip to [-8,8]",
+    "additional_filtering": "none",
+    "resampling": "none; cache is already 250 Hz",
+    "onset_provenance_limitation": "cache fields include onset and valid interval but no explicit onset-centered flag; source constructor places onset at raw midpoint, subject to provenance verification"
+  },
+  "models": {
+    "M0_A1": "existing exact A1 source and fixed-query replay",
+    "M1_RAWTINY_NOPR": "parallel depthwise convolution raw 32D -> exact A1 temporal/seizure mean pooling -> shared channel classifier, no patient context",
+    "M2_RAWTINY_PR": "same raw encoder/init as M1 -> exact A1 temporal/seizure mean pooling -> absolute+z+detached-percentile -> one attention block -> classifier",
+    "M3_HYBRID_PR": "A1 fold epoch30 checkpoint frozen; zero alpha raw 32D residual at A1 window embedding; zero-output absolute+z+rank attention logit residual; train only raw and residual parameters"
+  },
+  "rawtiny": {
+    "stem": "1->16 Conv1D kernel15 stride2 GroupNorm GELU",
+    "branches": [[7, 1, 16], [15, 2, 16], [31, 4, 16]],
+    "projection": "48->32 LayerNorm",
+    "chunk_size": 256,
+    "rank": "exact label-free percentile forward; smooth-rank straight-through gradient with fixed temperature 0.1 trains shared scalar scorer; no label input",
+    "attention": "one 2-head channel self-attention block, no positional encoding"
+  },
+  "training": {
+    "loss": "exact A1 patient-equal weighted BCE, EZ:NEZ 2:1",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.001,
+    "patient_batch_size": 2,
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "hyperparameter_grid": "none",
+    "M1_M2_raw_initialization": "same fold seed 42+fold",
+    "M3_initialization": "A1 fold epoch30 trained only on FIT subjects; alpha and PR correction exactly zero at step0",
+    "resume": "private epoch checkpoints only; no checkpoint/cache on Git"
+  },
+  "selection": {
+    "rule": "exact A1 leave-one-validation-patient-out checkpoint and threshold selection on 30 epoch score grids",
+    "own_target_label_used_for_own_selection": false,
+    "other_validation_patient_labels_used_for_selection": true,
+    "strict_FIT_only_epoch_selection": false,
+    "deviation_reason": "The request also requires exact A1 fixed-query/VLOO reproduction; FIT-only epoch selection is incompatible with that frozen baseline. Matched A1 VLOO takes precedence for the primary comparison. This is an explicit protocol limitation, not a concealed change."
+  },
+  "evaluation": {
+    "no_outer_test": true,
+    "no_target_adaptation": true,
+    "same_65_target_cells": true,
+    "same_20_fixed_queries": true,
+    "patient_id_cluster_bootstrap_resamples": 10000,
+    "historical_target_outcomes_already_viewed": true,
+    "interpretation": "exploratory development, not fresh sealed confirmation"
+  }
+}

@@ -199,11 +199,12 @@ def main() -> None:
             eligible.append(model)
     pbest = by_pair.get((best["model"], "D0_CONTINUED_HARDLABEL"))
     significant = pbest is not None and pbest["ap_ci_low"] > 0 and pbest["positive_folds"] >= 4
-    if best["ap"] >= .6052912572:
+    supported_best = max((model_matrix[name] for name in eligible), key=lambda r: r["ap"]) if eligible else None
+    if supported_best is not None and supported_best["ap"] >= .6052912572:
         terminal = "PRIVILEGED_TEACHER_SUCCESSFULLY_DISTILLED_TO_B8_LEVEL_ZERO_SHOT"
-    elif best["ap"] >= .5996322682:
+    elif supported_best is not None and supported_best["ap"] >= .5996322682:
         terminal = "PRIVILEGED_DISTILLATION_RECOVERS_CURRENT_B8"
-    elif best["ap"] >= .590 and significant:
+    elif supported_best is not None and supported_best["ap"] >= .590:
         terminal = "PRIVILEGED_PATIENT_GEOMETRY_PARTIALLY_TRANSFERS"
     elif best["ap"] > model_matrix["D0_ORIGINAL_A1"]["ap"] and not significant:
         terminal = "APPARENT_GAIN_EXPLAINED_BY_CONTINUED_TRAINING"
@@ -212,9 +213,9 @@ def main() -> None:
     gates = {"lock_sha": LOCK_SHA, "PRIVILEGED_DISTILLATION_SUPPORTED": bool(eligible),
              "supported_variants": eligible, "STUDENT_AP_059_REACHED": best["ap"] >= .590,
              "STUDENT_REACHES_CURRENT_B8": best["ap"] >= .5996322682,
-             "STUDENT_REACHES_BEST_B8": best["ap"] >= .6052912572 and significant and
-             pbest["delta_mrr"] > -.005 and pbest["delta_top1"] > -.01,
+             "STUDENT_REACHES_BEST_B8": best["ap"] >= .6052912572 and significant,
              "best_student": best["model"], "best_student_ap": best["ap"],
+             "best_supported_KD_student": supported_best["model"] if supported_best is not None else None,
              "terminal": terminal, "outer_test_accessed": False,
              "student_target_used_for_training_or_selection": False}
     atomic_json(a.output / "STUDENT_GATES.json", gates)

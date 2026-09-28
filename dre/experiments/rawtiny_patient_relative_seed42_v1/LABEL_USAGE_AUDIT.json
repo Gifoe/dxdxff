@@ -7,5 +7,10 @@
   "own_validation_patient_label_used_for_own_selection": false,
   "strict_fit_only_epoch_selection": false,
   "outer_test_predictions_or_metrics_accessed": false,
-  "interpretation": "historically viewed exploratory development"
+  "interpretation": "historically viewed exploratory development",
+  "primary_score_files_frozen_before_target_metrics": 450,
+  "posthoc_target_labels_used_for_inference_only_intervention_metrics": true,
+  "posthoc_interventions_used_for_model_selection_or_retraining": false,
+  "representation_linear_probes_use_FIT_labels_only": true,
+  "patient_specific_linear_probes_use_own_FIT_patient_support_labels": true
 }

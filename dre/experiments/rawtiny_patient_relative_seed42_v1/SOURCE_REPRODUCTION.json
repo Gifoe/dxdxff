@@ -7,5 +7,5 @@
   "a1_R4_max_logit_replay_error": 0.0,
   "a1_fixed_query_ap": 0.5767434626151353,
   "outer_predictions_or_metrics_read_for_this_study": false,
-  "new_rawtiny_outcome_reproduction": "NOT_RUN_YET"
+  "new_rawtiny_outcome_reproduction": "COMPLETED_STAGE_B_65_CELLS_20_FIXED_QUERIES; A1_AP_EXACT_REPLAY_0.5767434626151353"
 }

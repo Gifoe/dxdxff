@@ -1,0 +1,9 @@
+model,representation_stage,fold,source_fit_patients,shared_probe_train_patients,shared_probe_query_patients,patient_specific_probe_patients,shared_linear_ez_ap,patient_specific_linear_ez_ap,patient_specific_minus_shared_ap,patient_specific_uses_own_FIT_labels,independent_generalization_estimate,target_or_outer_labels_used
+M1_RAWTINY_NOPR,raw_window_mean,1,51,40,11,11,0.48387294211765414,0.5533411512371036,0.06946820911944945,True,False,False
+M1_RAWTINY_NOPR,cross_seizure,1,51,40,11,11,0.4706448939659236,0.6191216551113243,0.1484767611454007,True,False,False
+M2_RAWTINY_PR,raw_window_mean,1,51,40,11,11,0.3900435918789451,0.6065692443145841,0.21652565243563904,True,False,False
+M2_RAWTINY_PR,cross_seizure,1,51,40,11,11,0.43103664059571645,0.6107379758733887,0.1797013352776723,True,False,False
+M2_RAWTINY_PR,post_patient_relative,1,51,40,11,11,0.577584180453877,0.5992721326769209,0.02168795222304387,True,False,False
+M3_HYBRID_PR,raw_window_mean,1,51,40,11,11,0.44390520072984274,0.5610352927351875,0.11713009200534474,True,False,False
+M3_HYBRID_PR,cross_seizure,1,51,40,11,11,0.5109172786763865,0.6475005970039521,0.13658331832756565,True,False,False
+M3_HYBRID_PR,post_patient_relative,1,51,40,11,11,0.5269505192104105,0.6715999137495513,0.14464939453914083,True,False,False

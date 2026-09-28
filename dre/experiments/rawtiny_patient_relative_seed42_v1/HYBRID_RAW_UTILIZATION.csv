@@ -1,0 +1,2 @@
+model,n_target_cells,mean_abs_alpha,mean_raw_residual_rms,mean_raw_to_engineered_rms_ratio,full_ap,alpha_zero_ap,delta_alpha_zero_minus_full,retrained,model_selected_from_ablation
+M3_HYBRID_PR,65,0.02859665370331361,0.021641978555663417,0.021332775519250852,0.5571614230155502,0.5535779964813602,-0.0035834265341899707,False,False

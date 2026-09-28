@@ -43,9 +43,10 @@ EXPECTED_LOCK = "ace2017e01d0d21e3dda8ddd4d42551366704430b8a10f3666f955150150630
 
 
 class V2TFBank(V2Bank):
-    def __init__(self, cohort: Path, features: Path, tf_root: Path, split: Path,
-                 v2_protocol: Path, tf_protocol: Path):
-        super().__init__(cohort, features, split, protocol=v2_protocol)
+    def __init__(self, cohort: Path, features: Path, tf_root: Path, split: Path | None,
+                 v2_protocol: Path, tf_protocol: Path, official_split: str = "train"):
+        super().__init__(cohort, features, split, official_split=official_split,
+                         protocol=v2_protocol)
         self.tf_mean = None
         self.tf_std = None
         protocol_sha = sha256(tf_protocol)

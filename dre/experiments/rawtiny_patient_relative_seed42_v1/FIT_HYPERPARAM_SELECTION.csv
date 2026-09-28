@@ -1,0 +1,4 @@
+model,selection_source,grid_size,raw_sampling_hz,raw_segment_seconds,branch_width,learning_rate,weight_decay,patient_batch_size,epochs,checkpoint_selection
+M1_RAWTINY_NOPR,predeclared_protocol_no_FIT_grid,1,250,2,16,0.0001,0.001,2,30,matched_A1_VLOO
+M2_RAWTINY_PR,predeclared_protocol_no_FIT_grid,1,250,2,16,0.0001,0.001,2,30,matched_A1_VLOO
+M3_HYBRID_PR,predeclared_protocol_no_FIT_grid,1,250,2,16,0.0001,0.001,2,30,matched_A1_VLOO

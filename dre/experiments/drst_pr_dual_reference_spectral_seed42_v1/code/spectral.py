@@ -94,6 +94,8 @@ def spectral_views(
         raise ValueError("Mask or center shape mismatch")
     if frequency_mean.shape != (51,) or frequency_std.shape != (51,) or (frequency_std <= 0).any():
         raise ValueError("Invalid FIT-only frequency moments")
+    frequency_mean = frequency_mean.to(device=log_power.device)
+    frequency_std = frequency_std.to(device=log_power.device)
     a = (log_power - frequency_mean.view(1, 1, 1, 1, 51, 1)) / (frequency_std.view(1, 1, 1, 1, 51, 1) + 1e-6)
     baseline = window_mask & (centers[:, :, None, :] <= -5.0)
     baseline_count = baseline.sum(dim=3)

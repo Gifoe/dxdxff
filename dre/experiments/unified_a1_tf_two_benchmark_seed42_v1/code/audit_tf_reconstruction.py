@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import DataLoader
+from sklearn.metrics import average_precision_score
 
 from a1_tf import A1TFModel
 from gate_tf_ictal_stage2 import sha256
@@ -62,10 +63,12 @@ class MomentAudit:
 
 
 def accumulate(model, batch, audit):
-    output = model(batch)["tf_descriptor_prediction"]
+    result = model(batch)
+    output = result["tf_descriptor_prediction"]
     valid = batch["window_mask"][:, :, :, None] & batch["seizure_channel_mask"][:, :, None, :]
     audit.update(batch["b0_features"][..., :9][valid].detach().cpu().numpy(),
                  output[valid].detach().cpu().numpy())
+    return result
 
 
 def omni(a):
@@ -120,6 +123,7 @@ def ictal(a):
     assert_sources()
     install_interleaved_hlv_view()
     rows = []
+    intervention_rows = []
     gate = json.loads(a.gate_audit.read_text(encoding="utf-8"))
     for fold in range(1, 6):
         args = make_args("R0", a.ictal_runtime / "scratch")
@@ -161,10 +165,40 @@ def ictal(a):
                 audit = MomentAudit()
                 for batch in DataLoader(dataset, batch_size=2, shuffle=False,
                                         num_workers=0, collate_fn=collate):
-                    accumulate(model, core._move_tensors_to_device(batch, exp.device), audit)
+                    batch = core._move_tensors_to_device(batch, exp.device)
+                    full = accumulate(model, batch, audit)
+                    if split_name == "fold_validation":
+                        original_alpha = model.alpha.detach().clone()
+                        model.alpha.zero_()
+                        zero = model(batch)["logits"]
+                        model.alpha.copy_(original_alpha)
+                        for index, sid in enumerate(batch["subject_id"]):
+                            mask = batch["channel_mask"][index]
+                            y = batch["labels_ez"][index][mask].detach().cpu().numpy().astype(np.int8)
+                            scores_full = torch.sigmoid(-full["logits"][index][mask]).detach().cpu().numpy()
+                            scores_zero = torch.sigmoid(-zero[index][mask]).detach().cpu().numpy()
+                            if y.min() == y.max():
+                                raise RuntimeError("Historical ictal validation patient lacks both classes")
+                            intervention_rows.append({"fold": fold, "patient_private": sid,
+                                "checkpoint": f"stage{stage}_endpoint_epoch15_not_VLOO_selected",
+                                "alpha": float(original_alpha),
+                                "full_patient_ap": float(average_precision_score(y, scores_full)),
+                                "alpha_zero_patient_ap": float(average_precision_score(y, scores_zero))})
                 rows += audit.rows("Ictal", f"fold_{fold}_{split_name}",
                                    f"stage{stage}_endpoint_epoch15_not_VLOO_selected")
         print(f"I1 reconstruction fold={fold}/5 stage_endpoint={stage}", flush=True)
+    private = a.ictal_runtime / "private/ICTAL_ENDPOINT_INTERVENTION_PRIVATE.csv"
+    private.parent.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(intervention_rows).to_csv(private, index=False)
+    public = []
+    for fold, data in pd.DataFrame(intervention_rows).groupby("fold"):
+        public.append({"fold": fold, "scope": "endpoint_validation_full_channels_not_VLOO_selected",
+                       "patients": len(data), "alpha": float(data["alpha"].iloc[0]),
+                       "full_patient_equal_ap": float(data["full_patient_ap"].mean()),
+                       "alpha_zero_patient_equal_ap": float(data["alpha_zero_patient_ap"].mean()),
+                       "delta_full_minus_zero": float((data["full_patient_ap"]-
+                                                        data["alpha_zero_patient_ap"]).mean())})
+    pd.DataFrame(public).to_csv(a.output.parent / "ICTAL_TF_INTERVENTION.csv", index=False)
     return rows
 
 

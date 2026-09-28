@@ -14,6 +14,6 @@ $raw = 'D:\nips-temp\neuroez_c_four_center_caches_success_failure_raw_v1\all_win
 $lock = Join-Path $experiment 'PROTOCOL_LOCK.json'
 $amendment = Join-Path $experiment 'PROTOCOL_AMENDMENT_01.json'
 $args = @($runner, '--raw-cache', $raw, '--runtime', $private, '--lock', $lock, '--amendment', $amendment)
-$process = Start-Process -FilePath $python -ArgumentList $args -RedirectStandardOutput (Join-Path $private 'training_grid.log') -RedirectStandardError (Join-Path $private 'training_grid.err') -WindowStyle Hidden -PassThru
-$process.Id | Set-Content -LiteralPath (Join-Path $private 'training_grid.pid')
+$process = Start-Process -FilePath $python -ArgumentList $args -RedirectStandardOutput (Join-Path $private 'training_grid_first_round.log') -RedirectStandardError (Join-Path $private 'training_grid_first_round.err') -WindowStyle Hidden -PassThru
+$process.Id | Set-Content -LiteralPath (Join-Path $private 'training_grid_first_round.pid')
 Write-Output "DRST_GRID_PID=$($process.Id)"

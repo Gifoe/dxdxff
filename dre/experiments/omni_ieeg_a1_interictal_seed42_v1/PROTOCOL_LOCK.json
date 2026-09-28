@@ -1,0 +1,83 @@
+{
+  "experiment": "omni_ieeg_a1_interictal_seed42_v1",
+  "status": "FROZEN_BEFORE_FEATURE_EXTRACTION_OR_TEST_OUTCOME",
+  "seed": 42,
+  "omni_dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "omni_official_code_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "a1_source_commit": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "a1_source_sha256": {
+    "ez_features.py": "18ec360e9d9ec7e5b56b05208c0ef6575c13769ab6866ef241e4d65e8a554c72",
+    "neuroez_c/model.py": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "neuroez_c/dataset.py": "ccb4fadd9416a63bdceb46fe7edb515a67008f896435e622059b5713cbb42702",
+    "neuroez_c/evidence_views.py": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+    "exp_ez_hybrid.py": "d28eeac13ad3ad1916eae03397796f5ba45118b38a30853b8507b7aee67d238d"
+  },
+  "cohort": {
+    "official_split": "derivatives/datasplit/final_split.csv",
+    "include": "split in train/test; frequency > 900; interictal == true; length >= 62; dataset != Multicenter",
+    "channel_include": "channels.tsv good == 1 and soz exactly 0 or 1 and exact EDF name present",
+    "patient_split_disjoint": true,
+    "do_not_redefine_cohort_by_outcome": true
+  },
+  "labels": {
+    "clinical_positive": "EZ = SOZ = 1",
+    "a1_internal_positive": "NEZ = 1, EZ = 0",
+    "source": "channels.tsv:soz only",
+    "exclude_unknown": true,
+    "resection_or_outcome_used": false
+  },
+  "preprocessing": {
+    "source": "validated native digital HDF5 cache",
+    "physical_unit": "microvolts",
+    "full_record_notch_hz": 60,
+    "notch_width_hz": 2,
+    "resample_hz": 300,
+    "resampling": "MNE anti-aliased full-record resample after notch; channel-separable",
+    "segment_sec": 60,
+    "drop_start_and_end_sec": 1,
+    "train_segments_per_edf": "Omni extract_random_samples count/start algorithm, max 5; deterministic per-EDF SHA256-derived RNG seed; shared starts across channels for synchronous A1 channel attention",
+    "test_segments_per_edf": "Omni extract_uniform_samples; every complete nonoverlapping 60-s segment after edge exclusion",
+    "window_sec": 2,
+    "stride_sec": 1,
+    "windows_per_segment": 59,
+    "descriptor_source": "exact ez_features.compute_spectral_channel_features then original PRUNED_SPECTRAL_FEATURE_NAMES selection",
+    "four_views": "ABS=f, DELTA=f-median_w(f), ZDELTA=(f-median)/[1.4826*MAD+1e-5], RATIO=log((abs(f)+1e-5)/(abs(median)+1e-5))",
+    "features_dim": 36
+  },
+  "architecture": {
+    "name": "A1_OMNI_INTERICTAL",
+    "source": "exact historical NeuroEZCModel R0 backbone; all auxiliary mechanisms off",
+    "model_dim": 32,
+    "num_heads": 2,
+    "dropout": 0.4,
+    "temporal_pooling": "mean",
+    "record_pooling": "mean",
+    "patient_relative_z": true,
+    "patient_channel_attention": true,
+    "classifier": "original nonlinear patient-channel classifier",
+    "record_semantics": "interictal 60-s segments, not seizures"
+  },
+  "optimization": {
+    "loss": "exact A1 patient-equal weighted BCE",
+    "ez_to_nez_loss_weight": "2:1",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.001,
+    "max_inner_epochs": 30,
+    "patient_batch_size": 2,
+    "train_sampling": "uniform patient; per epoch one deterministic 60-s segment per available EDF, rotating across frozen five train-side segments",
+    "inner_validation": "deterministic dataset/SOZ-presence stratified patient 80/20 split, seed 42; no test patient",
+    "selection": "maximum patient-equal EZ average precision on inner validation, earlier epoch on ties",
+    "final_fit": "reinitialize and fit all official train patients for selected number of epochs using same optimizer and patient-equal objective",
+    "threshold": 0.5,
+    "normalization": "exact historical A1 pooled feature mean/std, fit on corresponding training patients only"
+  },
+  "evaluation": {
+    "official_test_once_after_freeze": true,
+    "all_uniform_60s_test_segments": true,
+    "primary": "patient-equal EZ average precision",
+    "secondary": ["pooled_AP", "pooled_AUROC", "patient_MRR", "patient_Top1", "patient_NDCG", "Macro_F1", "EZ_F1", "balanced_accuracy"],
+    "bootstrap": "10000 patient cluster draws, seed 42",
+    "no_test_tuning": true
+  }
+}

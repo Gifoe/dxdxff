@@ -1,0 +1,170 @@
+{
+  "pass": true,
+  "random_seed": 42,
+  "train_patients_checked": 20,
+  "mapping": "channels.tsv soz=1 -> clinical EZ=1 -> internal A1 NEZ=0 -> evaluation EZ=1",
+  "resection_used": false,
+  "outcome_used": false,
+  "samples": [
+    {
+      "patient": "sub-openieegUCLA05",
+      "edf": "sub-openieegUCLA05/ses-01/ieeg/sub-openieegUCLA05_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 99,
+      "soz_1": 10,
+      "nez_1_internal": 89,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegUCLA11",
+      "edf": "sub-openieegUCLA11/ses-01/ieeg/sub-openieegUCLA11_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 75,
+      "soz_1": 5,
+      "nez_1_internal": 70,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit022",
+      "edf": "sub-openieegDetroit022/ses-01/ieeg/sub-openieegDetroit022_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 58,
+      "soz_1": 2,
+      "nez_1_internal": 56,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-sourcesinkPY18N013",
+      "edf": "sub-sourcesinkPY18N013/ses-extraoperative/ieeg/sub-sourcesinkPY18N013_ses-extraoperative_task-interictal_run-01_ieeg.edf",
+      "valid_channels": 104,
+      "soz_1": 7,
+      "nez_1_internal": 97,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegUCLA43",
+      "edf": "sub-openieegUCLA43/ses-01/ieeg/sub-openieegUCLA43_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 37,
+      "soz_1": 9,
+      "nez_1_internal": 28,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegUCLA21",
+      "edf": "sub-openieegUCLA21/ses-01/ieeg/sub-openieegUCLA21_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 107,
+      "soz_1": 5,
+      "nez_1_internal": 102,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit013",
+      "edf": "sub-openieegDetroit013/ses-01/ieeg/sub-openieegDetroit013_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 123,
+      "soz_1": 2,
+      "nez_1_internal": 121,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit003",
+      "edf": "sub-openieegDetroit003/ses-01/ieeg/sub-openieegDetroit003_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 128,
+      "soz_1": 5,
+      "nez_1_internal": 123,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit117",
+      "edf": "sub-openieegDetroit117/ses-01/ieeg/sub-openieegDetroit117_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 125,
+      "soz_1": 0,
+      "nez_1_internal": 125,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit099",
+      "edf": "sub-openieegDetroit099/ses-01/ieeg/sub-openieegDetroit099_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 102,
+      "soz_1": 7,
+      "nez_1_internal": 95,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-sourcesinkNIH3",
+      "edf": "sub-sourcesinkNIH3/ses-extraoperative/ieeg/sub-sourcesinkNIH3_ses-extraoperative_task-interictal_run-01_ieeg.edf",
+      "valid_channels": 71,
+      "soz_1": 14,
+      "nez_1_internal": 57,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-sourcesinkNIH7",
+      "edf": "sub-sourcesinkNIH7/ses-extraoperative/ieeg/sub-sourcesinkNIH7_ses-extraoperative_task-interictal_run-01_ieeg.edf",
+      "valid_channels": 87,
+      "soz_1": 4,
+      "nez_1_internal": 83,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit088",
+      "edf": "sub-openieegDetroit088/ses-01/ieeg/sub-openieegDetroit088_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 125,
+      "soz_1": 23,
+      "nez_1_internal": 102,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegUCLA29",
+      "edf": "sub-openieegUCLA29/ses-01/ieeg/sub-openieegUCLA29_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 91,
+      "soz_1": 9,
+      "nez_1_internal": 82,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit006",
+      "edf": "sub-openieegDetroit006/ses-01/ieeg/sub-openieegDetroit006_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 88,
+      "soz_1": 2,
+      "nez_1_internal": 86,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegUCLA14",
+      "edf": "sub-openieegUCLA14/ses-01/ieeg/sub-openieegUCLA14_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 83,
+      "soz_1": 2,
+      "nez_1_internal": 81,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegUCLA28",
+      "edf": "sub-openieegUCLA28/ses-01/ieeg/sub-openieegUCLA28_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 108,
+      "soz_1": 1,
+      "nez_1_internal": 107,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit072",
+      "edf": "sub-openieegDetroit072/ses-01/ieeg/sub-openieegDetroit072_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 130,
+      "soz_1": 14,
+      "nez_1_internal": 116,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit134",
+      "edf": "sub-openieegDetroit134/ses-01/ieeg/sub-openieegDetroit134_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 80,
+      "soz_1": 5,
+      "nez_1_internal": 75,
+      "evaluation_positive": "SOZ=1"
+    },
+    {
+      "patient": "sub-openieegDetroit098",
+      "edf": "sub-openieegDetroit098/ses-01/ieeg/sub-openieegDetroit098_ses-01_task-sleep_ieeg.edf",
+      "valid_channels": 97,
+      "soz_1": 6,
+      "nez_1_internal": 91,
+      "evaluation_positive": "SOZ=1"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_role_counts": {
+    "hup|inner_train": 7,
+    "hup|inner_val": 2,
+    "openieeg|inner_train": 89,
+    "openieeg|inner_val": 22,
+    "sourcesink|inner_train": 15,
+    "sourcesink|inner_val": 4
+  },
+  "inner_train_patients": 111,
+  "inner_val_patients": 28,
+  "seed": 42,
+  "stratification": "dataset_x_soz_presence"
+}

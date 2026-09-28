@@ -1,0 +1,12 @@
+{
+  "internal_A1_label": "EZ=0, NEZ=1",
+  "non_soz_channels": 20829,
+  "outcome_used": false,
+  "patient_channel_label_conflicts": [],
+  "positive_clinical_class": "EZ=SOZ=1",
+  "resection_used": false,
+  "source": "channels.tsv:soz only",
+  "soz_channels": 2195,
+  "unique_patient_channels": 23024,
+  "unknown_soz_excluded": true
+}

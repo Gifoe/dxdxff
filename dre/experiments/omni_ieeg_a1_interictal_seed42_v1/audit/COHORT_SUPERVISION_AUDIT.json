@@ -1,0 +1,23 @@
+{
+  "edfs_with_at_least_one_good_known_soz_channel": {
+    "test": 102,
+    "train": 149
+  },
+  "edfs_without_supervised_channels_by_dataset": {
+    "zurich": 385
+  },
+  "official_filtered_edfs": {
+    "test": 237,
+    "train": 399
+  },
+  "official_filtered_patients": {
+    "test": 102,
+    "train": 151
+  },
+  "patients_with_at_least_one_good_known_soz_channel": {
+    "test": 94,
+    "train": 139
+  },
+  "resection_or_outcome_fallback": false,
+  "rule": "Keep official split and all metadata; exclude only channels with soz unknown/-1, and therefore records/patients with no known supervised label cannot enter supervised training/evaluation."
+}

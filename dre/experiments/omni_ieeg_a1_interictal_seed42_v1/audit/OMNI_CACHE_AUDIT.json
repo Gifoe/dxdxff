@@ -1,0 +1,49 @@
+{
+  "all_cache_bytes": 94660445673,
+  "all_cache_edfs": 1049,
+  "all_cache_sidecars": 3228,
+  "cache_root": "F:\\Omni-iEEG\\signal_cache",
+  "cache_schema": "omni-ieeg-native-digital-v1",
+  "cohort_edfs": {
+    "test": 237,
+    "train": 399
+  },
+  "cohort_edfs_total": 636,
+  "cohort_patients": {
+    "test": 102,
+    "train": 151
+  },
+  "cohort_valid_channel_records": 24936,
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "duration_sec_max": 7201.0,
+  "duration_sec_min": 62.974044,
+  "edfs_without_supervised_labels_by_dataset": {
+    "zurich": 385
+  },
+  "expected_uniform_60s_channel_segments": 510478,
+  "label_conflicts": [],
+  "missing_metadata": [],
+  "official_code_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "official_split_sha256": "e329bab57037d649a1995074a7e5ee31c7c002f00ea6f0ee54bd48d67be1dc42",
+  "participants_tsv_sha256": "45df8eafcdfe590d11690c0bc0f937eedd420981a477eb4041141751f1db919c",
+  "pass": true,
+  "sampling_rates_in_headers": {
+    "1000.0": 17641,
+    "1024.0": 4274,
+    "1024.5993906435265": 34,
+    "2000.0": 22804,
+    "999.4117576441494": 76
+  },
+  "source_root": "F:\\Omni-iEEG\\data",
+  "supervised_edfs": {
+    "test": 102,
+    "train": 149
+  },
+  "supervised_patients": {
+    "test": 94,
+    "train": 139
+  },
+  "unique_non_soz_channels": 20829,
+  "unique_soz_channels": 2195,
+  "unique_supervised_patient_channels": 23024
+}

@@ -43,8 +43,18 @@ def main() -> None:
                     command = [sys.executable, str(Path(__file__).with_name("train_cell.py")),
                                "--fold", str(fold), "--variant", variant, "--lr", str(lr), "--wd", str(wd),
                                "--raw-cache", str(a.raw_cache), "--runtime", str(a.runtime), "--lock", str(a.lock)]
-                    with (cell / "train.log").open("a", encoding="utf-8") as out, (cell / "train.err").open("a", encoding="utf-8") as err:
-                        status = subprocess.run(command, stdout=out, stderr=err, env=os.environ.copy(), check=False).returncode
+                    # Windows/CUDA can terminate a process with 0xC0000005
+                    # without a Python traceback. Retry only this process-level
+                    # failure from the last atomically saved model+optimizer+RNG
+                    # checkpoint. Other errors require engineering inspection.
+                    for attempt in range(4):
+                        with (cell / "train.log").open("a", encoding="utf-8") as out, (cell / "train.err").open("a", encoding="utf-8") as err:
+                            status = subprocess.run(command, stdout=out, stderr=err, env=os.environ.copy(), check=False).returncode
+                        if status != 3221225477:
+                            break
+                        if not (cell / "resume_private.pt").is_file() or attempt == 3:
+                            break
+                        print(f"TRANSIENT_WINDOWS_ACCESS_VIOLATION attempt={attempt+1} resume={variant} fold={fold}", flush=True)
                     if status != 0:
                         write_json(a.runtime / "TRAINING_GRID_STATUS.json", {"complete": False, "completed_cells": completed,
                                    "expected_cells": 80, "failed_cell": [variant, fold, lr, wd], "exit_code": status,

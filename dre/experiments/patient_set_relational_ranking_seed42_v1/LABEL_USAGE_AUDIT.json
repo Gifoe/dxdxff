@@ -1,0 +1,11 @@
+{
+  "lock_sha": "66f8468cf0987e0f53ee9cff204f1caefc12886a5cc3737d568c4a402920865b",
+  "final_inference_B": 0,
+  "target_gradient_updates": 0,
+  "target_labels_used_for_FIT_selection": false,
+  "target_labels_indexed_before_new_score_freeze": false,
+  "legacy_loader_materializes_target_labels": true,
+  "strict_target_label_sequencing": false,
+  "reason": "Exact A1 VLOO uses other-target labels in source checkpoint selection; legacy representation loader materializes y.",
+  "score_manifest_sha": "4fcee6af5d629df0f3220fc30e65996bf89283615a8cee67386967db34df0d9c"
+}

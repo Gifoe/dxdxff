@@ -227,9 +227,32 @@ def report(matrix,comparisons,ranks,strata,g):
         lines.append("")
     lines.extend(["## Decision", "",f"- Terminal: `{g['terminal']}`.",
                   f"- FIT-frozen primary: `{g['fit_frozen_primary']}`; Stage 2 allowed: `{g['stage2_allowed']}`.",
-                  "- R3 was run only if the FIT-only R2-versus-R1 gate passed; see `FIT_SELECTION_LOCK.json`.",
-                  "- Channel-rank changes and frozen-A1 failure strata are in the compact audit CSVs.",
+                  "- R3: NOT_RUN_FIT_GATE. R2 minus R1 FIT AP = -0.003166 on average, positive in 1/5 folds.",
                   "- Current B8 AP 0.599632; best B8 AP 0.605291. No B8 target support was used.",
+                  ""])
+    primary=g["fit_frozen_primary"]
+    full={r["variant"]:r for r in matrix if r["context"]=="full"}
+    best=max((r for r in matrix if r["variant"]!="R0_A1" and r["context"]=="full"),key=lambda r:r["ap"])
+    rank={r["variant"]:r for r in ranks}[primary]
+    poor=next(r for r in strata if r["variant"]==primary and r["stratum"]=="poor_A1")
+    medium=next(r for r in strata if r["variant"]==primary and r["stratum"]=="medium_A1")
+    strong=next(r for r in strata if r["variant"]==primary and r["stratum"]=="strong_A1")
+    q=next(r for r in matrix if r["variant"]==primary and r["context"]=="query_only")
+    wrong=next(r for r in comparisons["CORRECT_VS_WRONG_CONTEXT"] if r["variant"]==primary)
+    shuffle=next(r for r in comparisons["CORRECT_CONTEXT_VS_SHUFFLED_RELATION"] if r["variant"]==primary)
+    lines.extend(["## Direct answers to the study questions", "",
+                  "1. A1/B0 replay: PASS; exact fixed-query AP 0.576743463 and the prior 150-checkpoint audit passed within 1e-6.",
+                  f"2. R1 DeepSets: no AP gain. FIT-frozen ranking arm AP {full[primary]['ap']:.6f}, delta {full[primary]['delta_ap_vs_a1']:+.6f}.",
+                  f"3. R2 pairwise: no AP gain. Best R2 arm AP {max(r['ap'] for r in matrix if r['arch']==p.R2 and r['context']=='full'):.6f}.",
+                  "4. R3 weighting: not tested because its prespecified FIT-only gate failed.",
+                  f"5. Full versus query-only context for the primary arm: {full[primary]['ap']-q['ap']:+.6f} AP; too small to rescue A1.",
+                  f"6. Correct versus wrong-patient context: {wrong['delta_ap']:+.6f}, CI [{wrong['ci_low']:+.6f}, {wrong['ci_high']:+.6f}]; not supported.",
+                  f"7. Correct versus shuffled relation: {shuffle['delta_ap']:+.6f}; R1's pairing shuffle is an exact identity by design, and R2's difference is negligible.",
+                  f"8. Primary rank changes: Kendall tau {rank['kendall_tau']:.3f}; {rank['changed_top5_channels']:.3f} top-5 positions changed per cell; {rank['total_ez_promoted_top5']} true-EZ promotions versus {rank['total_ez_demoted_top5']} demotions across 65 cells.",
+                  f"9. Frozen-A1 failure strata (primary delta AP): poor {poor['delta_ap']:+.6f}, medium {medium['delta_ap']:+.6f}, strong {strong['delta_ap']:+.6f}; improvement is not concentrated in failures.",
+                  f"10–12. No relational arm reaches 0.590, current B8 0.599632, or best B8 0.605291. Best relational AP is {best['ap']:.6f} ({best['variant']}).",
+                  "13–14. Stage 2 is not eligible and was not executed; no end-to-end result is claimed.",
+                  "15. The prespecified negative terminal stops this R4-only zero-shot patient-set route. Richer observables, not further tuning on these target outcomes, would be a separate study.",
                   ""])
     (p.ROOT/"FINAL_REPORT.md").write_text("\n".join(lines),encoding="utf-8")
 

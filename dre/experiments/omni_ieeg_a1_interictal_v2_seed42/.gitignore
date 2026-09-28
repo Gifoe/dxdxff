@@ -1,0 +1,17 @@
+# Reproducible metadata audit with per-patient clinical fields; regenerate on server.
+audit/OFFICIAL_COHORT_AUDIT.csv
+
+# Private signals, intermediate tensors, checkpoints, and runtime artifacts.
+*.npz
+*.npy
+*.pt
+*.pth
+*.h5
+*.edf
+*.log
+*.err
+*.tmp
+*.partial
+features_train/
+features_test/
+runtime/

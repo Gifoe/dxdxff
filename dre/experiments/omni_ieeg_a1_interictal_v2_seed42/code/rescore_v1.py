@@ -39,6 +39,7 @@ def main():
             "patient", "channel", "score_ez", "soz"} <= set(v1):
         raise RuntimeError("Unexpected frozen v1 prediction schema")
     v1_map = v1.set_index(["patient", "channel"])["score_ez"].to_dict()
+    v1_label_map = v1.set_index(["patient", "channel"])["soz"].to_dict()
     official = pd.read_csv(args.cohort)
     official = official.loc[(official["official_split"] == "test") &
                             (official["official_labeled_channels"] > 0)]
@@ -69,7 +70,7 @@ def main():
             totals["v1_scored_official_edf_channel_records"] += 1
             overlap.append({"patient": key[0], "dataset": str(row.dataset),
                             "edf": str(row.edf), "channel": key[1],
-                            "pathology": label,
+                            "pathology": label, "v1_soz": int(v1_label_map[key]),
                             "score_pathology": float(v1_map[key])})
     overlap = pd.DataFrame(overlap)
     if overlap.empty or overlap.duplicated(["edf", "channel"]).any():
@@ -77,6 +78,13 @@ def main():
     unique = unique_patient_channels(overlap)
     patient = pd.DataFrame([patient_metrics(group) for _, group in unique.groupby("patient")])
     estimable = patient.loc[patient["estimable_for_ranking"]]
+    original = overlap.drop(columns="pathology").rename(columns={"v1_soz": "pathology"})
+    original_unique = unique.drop(columns="pathology").rename(columns={"v1_soz": "pathology"})
+    original_patient = pd.DataFrame([patient_metrics(group)
+                                     for _, group in original_unique.groupby("patient")])
+    original_estimable = original_patient.loc[original_patient["estimable_for_ranking"]]
+    original_metrics = classification_metrics(original, 0.5)
+    official_metrics = classification_metrics(overlap, 0.5)
     summary = {
         "status": "INTERSECTION_ONLY_NOT_FULL_OFFICIAL_COHORT",
         "interpretation": "Frozen v1 predictions do not cover all official-labeled channels; this isolates official labels only on the score-observable intersection.",
@@ -93,8 +101,14 @@ def main():
         "intersection_coverage_of_official_unique_channels": len(unique) / len(totals["official_unique_patient_channels"]),
         "intersection_estimable_ranking_patients": len(estimable),
         "intersection_patient_equal_ap": float(estimable["ap"].mean()),
+        "intersection_v1_soz_estimable_ranking_patients": len(original_estimable),
+        "intersection_v1_soz_patient_equal_ap": float(original_estimable["ap"].mean()),
+        "intersection_v1_soz_edf_channel_pair_metrics_at_0_5": original_metrics,
         "unique_patient_channel_metrics_at_0_5": classification_metrics(unique, 0.5),
-        "official_edf_channel_pair_metrics_at_0_5_on_overlap": classification_metrics(overlap, 0.5),
+        "official_edf_channel_pair_metrics_at_0_5_on_overlap": official_metrics,
+        "paired_label_only_delta_macro_f1_on_overlap": official_metrics["macro_f1"] - original_metrics["macro_f1"],
+        "paired_label_only_delta_pooled_ap_on_overlap": official_metrics["pooled_ap"] - original_metrics["pooled_ap"],
+        "paired_label_only_delta_auroc_on_overlap": official_metrics["pooled_auroc"] - original_metrics["pooled_auroc"],
         "full_cohort_D1_attribution_identifiable": False,
     }
     atomic_json(args.output, summary)

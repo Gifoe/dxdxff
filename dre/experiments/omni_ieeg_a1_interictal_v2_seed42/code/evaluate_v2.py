@@ -258,7 +258,15 @@ def summarize(args):
     for dataset, subset in frame.groupby("dataset", sort=True):
         group_patients = patient.loc[patient["dataset"] == dataset]
         group_estimable = group_patients.loc[group_patients["estimable_for_ranking"]]
+        classification = classification_metrics(subset, frozen_threshold["threshold"])
+        binary_evaluable = 0 < classification["pathological_records"] < len(subset)
+        if not binary_evaluable:
+            for metric in ("macro_f1", "pathological_f1", "sensitivity",
+                           "balanced_accuracy", "pooled_ap", "pooled_auroc"):
+                classification[metric] = float("nan")
         strata.append({"dataset": dataset, "patients": len(group_patients),
+                       "binary_evaluable": binary_evaluable,
+                       "non_evaluable_reason": "" if binary_evaluable else "single_class_official_labels",
                        "estimable_ranking_patients": len(group_estimable),
                        "patient_equal_ap": float(group_estimable["ap"].mean())
                        if len(group_estimable) else float("nan"),
@@ -266,7 +274,7 @@ def summarize(args):
                        if len(group_estimable) else float("nan"),
                        "top1": float(group_estimable["top1"].mean())
                        if len(group_estimable) else float("nan"),
-                       **classification_metrics(subset, frozen_threshold["threshold"])})
+                       **classification})
     pd.DataFrame(strata).to_csv(args.output / "DATASET_STRATIFIED_METRICS.csv", index=False)
     ci = bootstrap(frame, patient, frozen_threshold["threshold"], draws=10000)
     ci.to_csv(args.output / "PATIENT_CLUSTER_BOOTSTRAP.csv", index=False)

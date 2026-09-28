@@ -1,0 +1,16 @@
+{
+  "estimable_ranking_patients": 88,
+  "non_estimable_ranking_patients": 8,
+  "normal_precedes_soz_conflicts": {
+    "test": 66,
+    "train": 185
+  },
+  "official_evaluation_rule": "good=1; if outcome=1 and resection=0 then normal; elif soz=1 then pathological; else excluded",
+  "official_test_labeled_edf_channel_records": 8104,
+  "official_test_normal_records": 7297,
+  "official_test_pathological_records": 807,
+  "official_test_unique_patient_channels": 5055,
+  "official_test_used_for_training_or_threshold": false,
+  "source_of_labels": "frozen Omni channels.tsv and final_split.csv",
+  "unlabeled_good_channels_used_only_for_label_free_reference": true
+}

@@ -3,3 +3,6 @@ PROTOCOL_LOCK.json text eol=lf
 *.json text eol=lf
 *.md text eol=lf
 *.csv text eol=lf
+
+# Preserve exact server bytes for hashed result artifacts (Windows CSV/JSON CRLF).
+outputs/* -text

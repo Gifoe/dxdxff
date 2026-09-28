@@ -1,0 +1,19 @@
+{
+  "final_checkpoint_sha256": "273b918a87f01cf4bd9740cb211052054f5f8035a21a8c59ce1013fba001546c",
+  "final_normalizer_sha256": "3534c3288338cac87b7d04801529a127ec813b6bbb119d380766cb999e875c39",
+  "frozen_threshold": 0.515586256980896,
+  "inner_checkpoint_sha256": "107ba6d6e732a66778bf75217a8c27bebf326a4192ed1db713fa1f4c541fb792",
+  "inner_train_patients": 112,
+  "inner_val_patients": 29,
+  "inner_validation_estimable_pathology_ap": 0.7024352085487242,
+  "model_frozen_before_official_test": true,
+  "model_parameters": 27713,
+  "official_test_accessed": false,
+  "official_train_patients": 141,
+  "protocol_sha256": "68aa2ffe40cff05abf32a1d8eac92111bf4092b1c12a00552218ecd806f2f082",
+  "selected_inner_epoch": 9,
+  "test_used_for_tuning": false,
+  "threshold_frozen_before_official_test": true,
+  "threshold_json_sha256": "21d170bf6fa697e21cec9d885566605b8abfb565ef500dc5c8f85fc740ebe94b",
+  "train_val_split_sha256": "0c4ab5327031410b0a02f8d36278db59e1aef3e591f7fb632e7f7cfaaf8bbec9"
+}

@@ -1,0 +1,31 @@
+{
+  "final": {
+    "model_parameters": 27713,
+    "normalizer_sha256": "4fba8d13a7b50147d6431e6ffa798a88048de3dd93d648d793645b5339bf119a"
+  },
+  "freeze": {
+    "final_checkpoint_sha256": "24b4e7caf3460f7544dda65528629483d2db7c1760075d830de7b5f32bd6a8c0",
+    "final_normalizer_sha256": "4fba8d13a7b50147d6431e6ffa798a88048de3dd93d648d793645b5339bf119a",
+    "inner_checkpoint_sha256": "3a53dc4c101e46834a25fd2df41715ca89c2c3b58813364d9ee181ff60a7f19b",
+    "inner_train_patients": 111,
+    "inner_val_patients": 28,
+    "inner_validation_patient_equal_ez_ap": 0.3564449156326014,
+    "model_frozen_before_official_test": true,
+    "model_parameters": 27713,
+    "official_test_accessed": false,
+    "protocol_sha256": "bbaccd20088eaa257d69b6fe17dd0f7e29462fc17ee4aebe04e4764d75b29b3a",
+    "selected_inner_epoch": 30,
+    "train_patients": 139,
+    "train_val_split_sha256": "48b9bfd111926995fd04cd8633658685b304685a0800923b7f4014edcf2b94a8"
+  },
+  "inner": {
+    "model_parameters": 27713,
+    "normalizer_sha256": "9ca4a998948e7bc26c42f1f200ea9c7bd051f9d5b5154e8b4baf602dd8a74677"
+  },
+  "selection": {
+    "checkpoint_sha256": "3a53dc4c101e46834a25fd2df41715ca89c2c3b58813364d9ee181ff60a7f19b",
+    "epoch": 30,
+    "no_soz_val_patients": 2,
+    "patient_equal_ez_ap": 0.3564449156326014
+  }
+}

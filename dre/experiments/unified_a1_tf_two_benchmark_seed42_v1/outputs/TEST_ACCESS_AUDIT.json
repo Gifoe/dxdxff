@@ -1,0 +1,11 @@
+{
+  "ictal_historical_fixed_query_evaluated": true,
+  "ictal_new_outer_test_accessed": false,
+  "omni_official_test_accessed": true,
+  "omni_test_patients": 96,
+  "omni_test_edf_channel_records": 8104,
+  "N1_model_frozen_before_test": true,
+  "N1_threshold_frozen_before_test": true,
+  "test_used_for_tuning": false,
+  "fresh_sealed_confirmation": false
+}

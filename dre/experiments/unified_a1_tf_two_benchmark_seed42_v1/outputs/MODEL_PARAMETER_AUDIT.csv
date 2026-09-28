@@ -1,0 +1,3 @@
+benchmark,model,parameters,parameter_topology_identical
+Ictal,I1,67403,True
+Omni_interictal,N1,67403,True

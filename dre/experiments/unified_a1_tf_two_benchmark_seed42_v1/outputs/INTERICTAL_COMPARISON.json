@@ -1,0 +1,11 @@
+{
+  "N0_auroc": 0.6886896025407396,
+  "N0_macro_f1": 0.5936617063571117,
+  "N0_patient_equal_ap": 0.550466178919788,
+  "N1_auroc": 0.732192398329065,
+  "N1_frozen_threshold": 0.5003803372383118,
+  "N1_macro_f1": 0.6157825104005208,
+  "N1_patient_equal_ap": 0.5636458985619123,
+  "checkpoint_sha256": "331f0512f437f82ef23b54178e9359c551ea842d00f95feff1ea80b4e9a2289a",
+  "test_used_for_tuning": false
+}

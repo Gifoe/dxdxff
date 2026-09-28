@@ -1,0 +1,10 @@
+{
+  "ictal_FIT_labels_used_for_training": true,
+  "ictal_validation_other_12_labels_used_for_each_target_gate_and_selection": true,
+  "ictal_target_own_labels_used_for_own_gate_or_selection": false,
+  "ictal_target_query_labels_used_only_for_evaluation": true,
+  "omni_official_train_labels_used_for_training_selection_threshold": true,
+  "omni_official_test_labels_used_for_training_or_selection": false,
+  "omni_official_test_labels_used_for_final_metrics": true,
+  "historical_I0_and_N0_outcomes_seen_before_new_model_development": true
+}

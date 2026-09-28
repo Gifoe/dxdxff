@@ -1,0 +1,8 @@
+{
+  "reference": "exact historical same-channel pre-onset A1 four-view constructor",
+  "historical_a1_model_sha256": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+  "real_train_batch_alpha_zero_logit_error_below_1e_6_all_folds": true,
+  "raw_alignment_formal_coverage_all_active_channels_and_windows": true,
+  "no_new_ictal_outer_test": true,
+  "fixed_query_baseline_replay_ap": 0.5767434626151353
+}

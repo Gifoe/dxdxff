@@ -1,0 +1,13 @@
+{
+  "reference": "same-patient/EDF/window contemporaneous cross-channel median and 1.4826 MAD",
+  "descriptor_views": [
+    "ABS",
+    "DELTA",
+    "ZDELTA",
+    "LOGR"
+  ],
+  "historical_v2_feature_cache_reused_exactly": true,
+  "tf_alignment_check": "EDF, channel order, 59 windows and original clip starts",
+  "official_test_patients": 96,
+  "official_test_edf_channel_rows": 8104
+}

@@ -1,0 +1,3 @@
+# TF preprocessing audit
+
+Both branches use the same 32 physical-frequency log-power centers (1–120 Hz), symmetric Hann 2-second STFT, 1-second hop, linear interpolation on the physical frequency axis, and train-only per-bin normalization. Ictal source sampling is 250 Hz; Omni v2 source sampling is 300 Hz. Their Nyquist limits are 125 Hz and 150 Hz, so both cover the locked 120 Hz upper bin. There is no per-window variance normalization, label-dependent preprocessing, patient ID embedding, or center embedding. Ictal TF comes from formally aligned raw 2-second windows; Omni TF matches each v2 EDF channel and clip start. The fixed preprocessing is recorded in PROTOCOL_LOCK.json.

@@ -1,0 +1,18 @@
+{
+  "ictal_AP_noninferiority": false,
+  "ictal_MRR_within_0_01": true,
+  "ictal_Top1_within_0_01_or_CI_includes_zero": true,
+  "ictal_overall_noninferiority": false,
+  "ictal_improvement": false,
+  "interictal_macroF1_at_least_0_65": false,
+  "interictal_macroF1_at_least_0_68": false,
+  "interictal_macroF1_at_least_0_70": false,
+  "interictal_AUROC_at_least_0_78": false,
+  "interictal_AUROC_at_least_0_80": false,
+  "interictal_N1_vs_N0_AUROC_point_gain": true,
+  "interictal_N1_vs_N0_patient_equal_AP_point_gain": true,
+  "interictal_patient_equal_AP_delta_CI_lower_above_zero": true,
+  "interictal_TF_branch_isolated_benefit_proven": false,
+  "one_architecture_meets_both_predeclared_performance_gates": false,
+  "terminal": "A1_TF_UNIFIED_VIABILITY_NOT_SUPPORTED"
+}

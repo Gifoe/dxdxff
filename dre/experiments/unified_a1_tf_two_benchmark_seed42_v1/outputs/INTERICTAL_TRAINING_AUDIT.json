@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "official_train_patients": 141,
+  "inner_fit_patients": 112,
+  "inner_validation_patients": 29,
+  "inner_max_epochs": 30,
+  "selected_inner_epoch": 13,
+  "inner_validation_patient_equal_ap": 0.712935969590266,
+  "final_all_train_refit_epochs": 13,
+  "final_checkpoint_sha256": "331f0512f437f82ef23b54178e9359c551ea842d00f95feff1ea80b4e9a2289a",
+  "frozen_threshold": 0.5003803372383118,
+  "model_frozen_before_test": true,
+  "test_used_for_tuning": false
+}

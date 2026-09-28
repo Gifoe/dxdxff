@@ -1,0 +1,6 @@
+{
+  "pass": true,
+  "score_files": 135,
+  "private_manifest_sha256": "99cf43913b7c006adf2dd085eaca5e265489a0a26d441678fc1b51333f4bbeea",
+  "target_labels_indexed_during_score_freeze": false
+}

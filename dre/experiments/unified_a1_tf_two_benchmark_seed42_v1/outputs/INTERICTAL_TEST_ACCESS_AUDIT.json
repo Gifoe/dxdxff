@@ -1,0 +1,11 @@
+{
+  "edf_channel_records": 8104,
+  "final_checkpoint_sha256": "331f0512f437f82ef23b54178e9359c551ea842d00f95feff1ea80b4e9a2289a",
+  "model_frozen_before_test": true,
+  "official_test_accessed": true,
+  "patients": 96,
+  "prediction_rows_private_not_published": true,
+  "predictions_sha256": "afa4578ad862f267aae964508d20dd0cde9dc8deffaf10a1a230f0749fadd66e",
+  "test_used_for_tuning": false,
+  "threshold_frozen_before_test": true
+}

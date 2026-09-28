@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "original_A1_model_sha256": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+  "alpha_zero_max_logit_difference": 0.0,
+  "alpha_zero_prediction_mismatch": 0,
+  "I1_parameters": 67403,
+  "N1_parameters": 67403,
+  "parameter_topology_identical": true,
+  "model_class": "A1TFModel",
+  "benchmark_specific_module": false,
+  "physical_stft_rates_tested_hz": [
+    250,
+    300
+  ],
+  "outcomes_accessed": false
+}

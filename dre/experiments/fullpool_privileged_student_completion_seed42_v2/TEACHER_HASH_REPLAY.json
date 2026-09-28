@@ -1,0 +1,19 @@
+{
+  "v1_source_commit": "bea299edc88cedbeb6e674ab0e4a7217b78ea509",
+  "v1_terminal_preserved": "PRIVILEGED_TEACHER_SIGNAL_GATE_FAILED",
+  "v1_protocol_lock_sha256": "43b7680413d360163eb9428bc03f0816c46e8a83fbc93465a10abd131aafbcb9",
+  "v1_teacher_audit_sha256": "3fc3244423ce4b090557664a03ab24d6b77c42474df843a27f797008aa9b2abe",
+  "v1_teacher_bootstrap_sha256": "87f29d22999574c33559c666fe5634d91d72510261d45ef2cc659792f6142392",
+  "v1_teacher_grid_files": 869,
+  "v1_oof_target_files": 869,
+  "private_file_manifest_sha256": "53bffce7c7d191faa98fa8e27e46b64e504b3d71c1cc35a2585bc69e6773c458",
+  "historical_per_file_hash_manifest_present": false,
+  "new_manifest_frozen_before_any_v2_student_target_outcome": true,
+  "n_source_contexts": 17,
+  "n_fit_patient_contexts": 869,
+  "n_unique_fit_patient_ids": 79,
+  "n_recomputed_channel_crossfit_heads": 4345,
+  "max_abs_teacher_score_replay_error": 0.0,
+  "numerical_target_replay_pass": true,
+  "hash_exact_to_historical_per_file_manifest": "NOT_VERIFIABLE_NO_V1_MANIFEST"
+}

@@ -1,0 +1,93 @@
+{
+  "study": "FullPool Privileged Student Completion seed42 v2",
+  "branch": "codex/fullpool-privileged-student-completion-seed42-v2",
+  "base_commit": "bea299edc88cedbeb6e674ab0e4a7217b78ea509",
+  "locked_before_new_student_target_outcomes": true,
+  "seed": 42,
+  "v1_terminal_unchanged": "PRIVILEGED_TEACHER_SIGNAL_GATE_FAILED",
+  "source": {
+    "v1_protocol_lock_sha256_on_server": "43b7680413d360163eb9428bc03f0816c46e8a83fbc93465a10abd131aafbcb9",
+    "teacher_input_private_manifest_sha256": "53bffce7c7d191faa98fa8e27e46b64e504b3d71c1cc35a2585bc69e6773c458",
+    "teacher_target_numerical_replay_max_error": 0.0,
+    "historical_per_file_hash_manifest_present": false,
+    "teacher_patient_contexts": 869,
+    "teacher_channel_crossfit_heads": 4345,
+    "fit_oof_teacher_delta_ap": 0.07798221257940927,
+    "teacher_delta_ap_ci_low": 0.04809606797224793,
+    "teacher_positive_outer_folds": 5,
+    "teacher_ap_eligible_recomputed_from_frozen_aggregates": true
+  },
+  "cohort_and_evaluation": {
+    "exact_a1_successful_patient_cohort": 80,
+    "outer_folds": 5,
+    "target_cells": 65,
+    "unique_target_patient_ids": 47,
+    "fixed_query_repetitions": 20,
+    "candidate_label_budget": 0,
+    "no_outer_test": true,
+    "target_labels_only_after_all_student_models_scores_and_selections_frozen": true
+  },
+  "student_source_state": {
+    "architecture": "exact A1, no added module",
+    "initialization": "fold-specific A1 epoch30 checkpoint for every Student/control in that fold",
+    "one_shared_student_per_outer_fold": true,
+    "source_state_caveat": "The inherited A1 epoch30 checkpoint was previously trained on all fold-FIT patients, including subsequent FIT-meta patients; FIT-meta is held out only from v2 updates, not from source initialization. This is FIT-only selection but not an independent meta holdout."
+  },
+  "teacher_views": {
+    "rule": "use all frozen v1 OOF Teacher contexts for each outer fold; compute context-specific patient-standardized Teacher and A1 margins; average each context's KD loss weighted by its inherited target-cell multiplicity, summing to 13 per fold",
+    "reason": "v1 has 17 source contexts for 65 cells, whereas v2 specifies one shared Student per outer fold; this preserves all frozen Teacher views without selecting a context by new target outcome",
+    "reliability_gain": "FIT-patient context-weighted mean OOF Teacher AP minus corresponding A1 AP",
+    "weighted_D3_patient_weight": "clip(reliability_gain, 0, 0.2), then divide by mean positive clipped weight over Student-train patients; if all zero, stop weighted variant as noninformative",
+    "own_channel_label_used_for_own_teacher_target": false
+  },
+  "fit_meta_split": {
+    "rule": "sort fold-FIT patient IDs by SHA256(seed|fold|patient_id|student_meta); first ceil(0.2*N) are meta-validation, remainder Student-train",
+    "patient_overlap": 0,
+    "meta_labels_used_for": "Student hyperparameter/epoch selection and posthoc diagnostics only",
+    "target_validation_patients_used_for_selection": false
+  },
+  "variants": [
+    "D0_ORIGINAL_A1",
+    "D0_CONTINUED_HARDLABEL",
+    "D1_PAIRWISE_KD",
+    "D2_LISTWISE_KD",
+    "D3_CORRECTION_FOCUSED_KD_ALL",
+    "D3_CORRECTION_FOCUSED_KD_TEACHER_WEIGHTED",
+    "D4_PAIR_LIST_KD_IF_FIT_ELIGIBLE"
+  ],
+  "training": {
+    "hard_label_loss": "exact A1 patient-equal weighted BCE with EZ:NEZ 2:1",
+    "optimizer": "AdamW",
+    "lr_upper": 0.0001,
+    "lr_lower_to_upper_ratio": 0.1,
+    "rationale_for_fixed_ratio": "protocol permits fixing r=0.1 when full grid is computationally excessive",
+    "weight_decay": 0.001,
+    "patient_batch_size": 2,
+    "gradient_clip": 1.0,
+    "max_epochs": 30,
+    "selection": "FIT-meta patient-equal EZ-AP, then MRR, Top1, lower KD weight; epoch0 is legal",
+    "early_stopping": "after epoch5, patience6 on FIT-meta EZ-AP; never exceed 30 epochs",
+    "candidate_schedule": "FIT-only successive halving: train all 12 tau/lambda candidates to epoch2, top3 by FIT-meta selection to epoch8, top1 to epoch30; D0+ trained to epoch30 under same optimizer/batch/selection rule",
+    "temperature_grid": [0.5, 1.0, 2.0],
+    "kd_weight_grid": [0.03, 0.1, 0.3, 1.0],
+    "pair_limit_per_patient_step": 128,
+    "pair_seed": "SHA256(seed|fold|epoch|step|patient_id|pair)",
+    "no_target_teacher_or_target_adaptation": true,
+    "D4_gate": "run D4 on all folds only when the five-fold mean FIT-meta AP of selected D1 or D2 exceeds matched D0+; do not inspect target outcomes"
+  },
+  "target_scoring": {
+    "threshold_for_secondary_classification_metrics": "fixed NEZ probability 0.5 for all v2 Students; no target calibration",
+    "primary_metric": "EZ-AP",
+    "paired_bootstrap_unit": "unique patient ID",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 42,
+    "headroom_fullpool_ap": 0.6924644868,
+    "headroom_original_a1_ap": 0.5767434626
+  },
+  "limitations_predeclared": [
+    "v1 has no historical per-file SHA256 manifest, so byte-for-byte comparison to a v1-era manifest is impossible; numerical target replay is exact and a v2 pretraining input manifest is hash-locked",
+    "FIT-meta was used during inherited A1 source training; it is not an independent unseen meta cohort",
+    "v1 context membership derives from inherited A1 VLOO selection, which used other validation patients' labels; no new Student target labels are used for fitting or selection",
+    "successive halving can miss late-improving hyperparameters and must be reported as an efficiency limitation"
+  ]
+}

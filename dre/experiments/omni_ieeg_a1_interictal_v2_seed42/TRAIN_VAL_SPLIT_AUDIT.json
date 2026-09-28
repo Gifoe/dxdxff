@@ -1,0 +1,21 @@
+{
+  "inner_train_patients": 112,
+  "inner_val_estimable_patients": 26,
+  "inner_val_patients": 29,
+  "seed": 42,
+  "stratification": "dataset_x_pathology_presence",
+  "stratum_role_counts": {
+    "hup|True|inner_train": 7,
+    "hup|True|inner_val": 2,
+    "openieeg|False|inner_train": 6,
+    "openieeg|False|inner_val": 1,
+    "openieeg|True|inner_train": 79,
+    "openieeg|True|inner_val": 21,
+    "sourcesink|False|inner_train": 2,
+    "sourcesink|False|inner_val": 1,
+    "sourcesink|True|inner_train": 13,
+    "sourcesink|True|inner_val": 3,
+    "zurich|False|inner_train": 5,
+    "zurich|False|inner_val": 1
+  }
+}

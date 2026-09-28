@@ -1,0 +1,65 @@
+{
+  "experiment": "omni_ieeg_a1_interictal_v2_seed42",
+  "status": "FROZEN_AFTER_METADATA_AUDIT_BEFORE_V2_FEATURE_EXTRACTION_OR_V2_TEST_SCORES",
+  "seed": 42,
+  "source_branch": "codex/omni-ieeg-a1-interictal-seed42-v1",
+  "omni_dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "omni_code_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "official_evaluation_channel_sha256": "af99078c27932e8aa8770c71fc0720f257242f25574f4d6e2fe26feb7955460f",
+  "official_training_features_sha256": "b319e9189a102ba28c811714444d34f3e6492e7d49d8fbdbfd7b2b66ed856a5",
+  "official_split_sha256": "e329bab57037d649a1995074a7e5ee31c7c002f00ea6f0ee54bd48d67be1dc42",
+  "signal_cache": "F:/Omni-iEEG/signal_cache",
+  "scientific_changes_from_v1": [
+    "exact official evaluation_channel.py pathological/normal labels instead of SOZ vs all known SOZ=0",
+    "contemporaneous within-record cross-channel 9-descriptor median/MAD reference instead of within-channel temporal reference",
+    "classification threshold chosen from inner validation Macro-F1 and frozen before official test"
+  ],
+  "cohort": {
+    "filter": "split train/test; dataset != Multicenter; frequency > 900; interictal true; length >= 62",
+    "official_label_order": "good=1; if outcome=1 and resection=0 then normal; elif soz=1 then pathological; else excluded",
+    "clinical_positive": "pathological=1; official ground_truth=0",
+    "classification_unit": "labeled EDF-channel pair, as in official evaluation_channel.py",
+    "patient_ranking_unit": "unique patient-channel; only patients with >=1 pathological channel estimable",
+    "label_free_channels_for_reference": "all good=1 channels with cache signal, regardless of outcome/resection/SOZ label",
+    "audited_eligible_patients": {"train": 141, "test": 96},
+    "audited_eligible_edfs": {"train": 296, "test": 174},
+    "audited_labeled_edf_channel_records": {"train": 13350, "test": 8104},
+    "audited_normal_precedes_soz_conflicts": {"train": 185, "test": 66}
+  },
+  "preprocessing": {
+    "source": "validated native-digital signal HDF5 and byte-identical official sidecars",
+    "physical_unit": "microvolts",
+    "full_record_notch_hz": 60,
+    "notch_width_hz": 2,
+    "resample_hz": 300,
+    "train_60s_starts": "exact v1 count/start algorithm, max five, frozen per-EDF seed; shared across channels",
+    "test_60s_starts": "all complete nonoverlapping 60s clips after one-second edge exclusion",
+    "window_sec": 2,
+    "stride_sec": 1,
+    "windows_per_clip": 59,
+    "descriptor_source": "exact historical A1 ez_features.compute_spectral_channel_features, nine pruned descriptors",
+    "feature_shape": "[clip, 59, labeled_channel, 36]",
+    "reference_population": "all good=1 signal-present channels in same EDF and clip/window, descriptor-wise",
+    "four_views": "ABS=f; DELTA=f-median_channels(f); ZDELTA=(f-median)/[1.4826*MAD_channels+1e-5]; LOGR=log((abs(f)+1e-5)/(abs(median)+1e-5))"
+  },
+  "architecture_and_training": {
+    "model": "exact historical A1 NeuroEZCModel R0, 27713 parameters, original auxiliary mechanisms off",
+    "loss": "exact v1 patient-equal weighted BCE; pathological:normal=2:1",
+    "optimizer": "AdamW", "lr": 0.0001, "weight_decay": 0.001,
+    "patient_batch_size": 2, "max_inner_epochs": 30,
+    "sampling": "uniform patient, one frozen train clip per available EDF each epoch",
+    "inner_split": "seed42 deterministic 80/20 patient split, dataset x pathology presence stratified where feasible; official train only",
+    "checkpoint_selection": "patient-equal pathological AP on estimable inner-validation patients; earlier epoch on ties",
+    "threshold_selection": "after inner checkpoint selection, all unique validation pathological scores on official-labeled EDF-channel pairs; maximize Macro-F1, then pathological-F1, then BA, then proximity to 0.5",
+    "final_fit": "reinitialize and refit all eligible official-train patients for selected epoch count; no threshold reselection",
+    "normalization": "exact v1 feature mean/std fitted on corresponding official-train patients only"
+  },
+  "evaluation": {
+    "official_test_only_after_checkpoint_normalizer_threshold_protocol_freeze": true,
+    "primary_classification": "Macro-F1 at frozen validation threshold on official-labeled test EDF-channel pairs",
+    "secondary": "pathological F1, sensitivity, specificity, BA, AUROC, AP, patient-equal AP/MRR/Top1/NDCG",
+    "test_derived_youden_threshold": "posthoc reproduction-only, never model/threshold selection",
+    "bootstrap": "10000 patient-cluster draws, seed42; ranking only estimable patients",
+    "no_test_tuning": true
+  }
+}

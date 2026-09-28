@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "protocol": "same patient/EDF/60s segment/window, median and MAD over all good=1 signal-present channels for each of nine descriptors",
+  "labels_used_for_reference": false,
+  "unknown_label_channels_in_reference": true,
+  "view_shape": [59, "labeled_channels", 36],
+  "synthetic_test": {
+    "pass": true,
+    "persistent_abnormal_channel_delta": 8.0,
+    "channel_permutation_equivariant": true
+  },
+  "real_train_pilot": {
+    "edf": "sub-openieegDetroit006/ses-01/ieeg/sub-openieegDetroit006_ses-01_task-sleep_ieeg.edf",
+    "segments": 5,
+    "good_reference_channels": 88,
+    "official_labeled_channels": 76,
+    "pathological_channels": 2,
+    "features_shape": [5, 59, 76, 36],
+    "all_finite": true
+  },
+  "pilot_runtime_private": "F:/Omni-iEEG/a1_interictal_v2_seed42_runtime/features_pilot"
+}

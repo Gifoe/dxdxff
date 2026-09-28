@@ -1,0 +1,66 @@
+{
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "datasets_with_labeled_channels": {
+    "test|hup": 6,
+    "test|openieeg": 72,
+    "test|sourcesink": 14,
+    "test|zurich": 4,
+    "train|hup": 9,
+    "train|openieeg": 107,
+    "train|sourcesink": 19,
+    "train|zurich": 6
+  },
+  "eligible_edfs": {
+    "test": 174,
+    "train": 296
+  },
+  "eligible_patients": {
+    "test": 96,
+    "train": 141
+  },
+  "filtered_edfs": {
+    "test": 237,
+    "train": 399
+  },
+  "filtered_patients": {
+    "test": 102,
+    "train": 151
+  },
+  "good_channel_records": {
+    "test": 16543,
+    "train": 26015
+  },
+  "labeled_channel_records": {
+    "test": 8104,
+    "train": 13350
+  },
+  "normal_channel_records": {
+    "test": 7297,
+    "train": 11995
+  },
+  "normal_precedes_soz_conflict_records": {
+    "test": 66,
+    "train": 185
+  },
+  "official_ground_truth_mapping": "normal=1, pathological=0; exported clinical pathological=1",
+  "official_rule": "good=1; if outcome=1 and resection=0 then normal; elif soz=1 then pathological; else excluded",
+  "official_split_sha256": "e329bab57037d649a1995074a7e5ee31c7c002f00ea6f0ee54bd48d67be1dc42",
+  "omni_code_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "pathological_channel_records": {
+    "test": 807,
+    "train": 1355
+  },
+  "patient_channel_label_conflicts": [],
+  "unique_pathological_patient_channels": {
+    "test": 722,
+    "train": 1279
+  },
+  "unique_patient_channels": {
+    "test": 5055,
+    "train": 7322
+  },
+  "unknown_good_channel_records": {
+    "test": 8439,
+    "train": 12665
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "audit_scope": "all raw-cache records, label/outcome-free",
+  "raw_cache": "D:\\nips-temp\\neuroez_c_four_center_caches_success_failure_raw_v1\\all_window_cache.pkl",
+  "records_with_waveform": 501,
+  "all_waveforms_finite": true,
+  "sample_rate_counts": {
+    "250.0": 501
+  },
+  "centers": {
+    "HUP": {
+      "subjects": 56,
+      "records": 183,
+      "sampled_full_waveform_channel_MAD": {
+        "n": 1464,
+        "q05": 2.3651317787739907e-05,
+        "median": 5.817265249752381e-05,
+        "q95": 0.0001740137776247773
+      }
+    },
+    "LZU": {
+      "subjects": 60,
+      "records": 183,
+      "sampled_full_waveform_channel_MAD": {
+        "n": 1464,
+        "q05": 1.6982167040487183e-05,
+        "median": 6.815363667992641e-05,
+        "q95": 0.00018831431174608037
+      }
+    },
+    "multi-site": {
+      "subjects": 21,
+      "records": 76,
+      "sampled_full_waveform_channel_MAD": {
+        "n": 608,
+        "q05": 3.4011177487491504e-05,
+        "median": 7.84772131300997e-05,
+        "q95": 0.00025007825157175826
+      }
+    },
+    "pediatric (Fudan identity unverified)": {
+      "subjects": 18,
+      "records": 59,
+      "sampled_full_waveform_channel_MAD": {
+        "n": 472,
+        "q05": 2.2926045134514653e-05,
+        "median": 8.394701094468927e-05,
+        "q95": 0.00023941979094386617
+      }
+    }
+  },
+  "ratio_largest_to_smallest_center_median_MAD": 1.4430665843931145,
+  "unit_scale_reference_metadata_fields": {
+    "feature_scale_used_secs": 501,
+    "feature_scales_sec": 501
+  },
+  "source_center_field_counts": {
+    "MISSING": 501
+  },
+  "subject_id_prefix_record_counts": {
+    "lzu": 183,
+    "hup": 183,
+    "multicenter": 76,
+    "pediatric": 59
+  },
+  "common_physical_unit_verified": false,
+  "per_record_scaling_at_cache_creation_verified_absent": false,
+  "reference_or_rereference_provenance_verified": false,
+  "preprocessing_choice": "per-patient-seizure-channel 60s fixed 1.4826*MAD scale",
+  "choice_reason": "Common physical units and recording reference cannot be verified from cache metadata; no target outcomes used.",
+  "no_label_or_performance_field_indexed": true
+}

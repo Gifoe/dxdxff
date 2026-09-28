@@ -1,0 +1,77 @@
+{
+  "experiment": "unified_a1_tf_two_benchmark_seed42_v1",
+  "status": "FROZEN_BEFORE_NEW_TF_EXTRACTION_TRAINING_OR_NEW_TEST_ACCESS",
+  "seed": 42,
+  "source": {
+    "ictal_branch": "codex/a1-a2-patient-equal-objective-seed42-v1",
+    "ictal_commit": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+    "interictal_branch": "codex/omni-ieeg-a1-interictal-v2-seed42",
+    "omni_dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+    "omni_official_code_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+    "historical_a1_model_sha256": "c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c",
+    "ictal_feature_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "ictal_partition_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "interictal_v2_lock_sha256": "68aa2ffe40cff05abf32a1d8eac92111bf4092b1c12a00552218ecd806f2f082"
+  },
+  "architectural_identity": {
+    "same_A1_core_source_both_benchmarks": true,
+    "same_TF_encoder_and_residual_fusion_both_benchmarks": true,
+    "only_representation_specific_operator": "ictal same-channel pre-onset versus interictal within-EDF contemporaneous cross-channel",
+    "A1_input": "exact historical 9 descriptors x ABS, DELTA, ZDELTA, LOGR; 36 dimensions",
+    "TF_input": "32 physical-frequency log-power bins on exact A1 2-second/1-second-hop window grid",
+    "TF_encoder": "Linear(32,64)-GELU-LayerNorm; four LayerNorm-depthwise3-pointwise64to128-GLU-dropout0.1-residual blocks with dilation 1,2,4,8",
+    "fusion": "A1 window embedding + alpha * Linear(64,A1 model_dim,bias=False)(TF latent)",
+    "alpha_initial": 0,
+    "descriptor_reconstruction": "Linear(64,9) on TF latent, predicts historical nine ABS descriptors",
+    "A1_model_dim": 32,
+    "benchmark_specific_heads": false
+  },
+  "TF_preprocessing": {
+    "ictal_rate_hz": 250,
+    "interictal_rate_hz": 300,
+    "clip_seconds": 60,
+    "stft_window_seconds": 2,
+    "stft_hop_seconds": 1,
+    "STFT_window": "symmetric Hann (numpy.hanning)",
+    "STFT_detrend": false,
+    "power": "abs(rfft(windowed signal))**2",
+    "physical_frequency_centers_hz": "32 geomspace centers from 1 through 120 inclusive; linearly interpolate power on physical FFT axis",
+    "log_epsilon": 1e-8,
+    "frequency_normalization": "global per-bin mean and std fit on respective train subjects only; no per-clip normalization",
+    "window_count": 59,
+    "no_label_or_patient_id_features": true
+  },
+  "ictal": {
+    "cohort_folds_queries_labels": "exact historical A1; 80-patient development cohort, 5 fixed folds, 65 matched cells, 47-ID fixed-query evaluation",
+    "I0": "reuse historical A1 predictions/checkpoints, no retraining",
+    "I1": "independent A1-TF training initialized from fold-specific historical A1 checkpoint where provenance matches",
+    "stage1": "freeze entire original A1 core; train TF branch, projection, reconstruction and alpha for at most 15 epochs",
+    "stage2_gate": "stage1 train-side validation AP >= matched historical A1 train-side validation AP - 0.01",
+    "stage2": "if gate passes, freeze A1 window encoder and unfreeze A1 temporal encoder, cross-record aggregator, patient classifier for at most 15 more epochs",
+    "optimizer": "AdamW; TF/alpha/reconstruction LR=1e-4, weight_decay=1e-3; upper A1 LR=1e-5; patient batch size 2",
+    "loss": "patient-equal weighted BCE, EZ:NEZ=2:1; plus 0.1 SmoothL1 normalized ABS descriptor reconstruction plus 0.5 MSE original-A1 EZ margin anchor on train patients",
+    "selection": "original canonical train-side validation AP, earlier epoch on ties; no test-guided selection",
+    "test": "one matched fixed-query evaluation after checkpoint selection and code/lock freeze",
+    "bootstrap": "exact historical 47-ID paired cluster bootstrap and 20 fixed query repetitions"
+  },
+  "interictal": {
+    "cohort_labels_split": "exact official Omni Task-2 v2 split, filters, label ordering, train/validation partition and test cohort",
+    "N0": "reuse finalized Omni A1 v2 checkpoint/predictions; no retraining",
+    "N1": "same A1-TF topology, initialized independently from scratch; no ictal checkpoint transfer",
+    "optimizer": "AdamW LR=1e-4, weight_decay=1e-3, patient batch size 2, max 30 inner epochs; train all A1 and TF modules from scratch because freezing a random A1 core is invalid",
+    "loss": "patient-equal weighted BCE, pathological:normal=2:1; plus 0.1 SmoothL1 normalized ABS descriptor reconstruction",
+    "selection": "patient-equal pathological AP on official-train inner-validation patients; earlier epoch on ties",
+    "threshold": "maximize validation Macro-F1 with historical v2 tie-breaks, then freeze before any new official test access",
+    "final_fit": "reinitialize and fit all official-train patients for selected epoch count, preserving frozen threshold and train-only normalizer",
+    "bootstrap": "paired patient-cluster bootstrap 10000 draws seed42; zero-positive patients are not estimable for ranking"
+  },
+  "tests_and_interventions": {
+    "alpha_zero_replay_before_training": "max abs logit diff <1e-6 and zero prediction mismatch",
+    "I1_and_N1_parameter_topology_identical": true,
+    "inference_only_alpha_zero_after_training": true,
+    "never_refit_or_tune_on_test": true,
+    "historical_ictal_outcomes_already_seen": true,
+    "historical_Omni_N0_official_test_outcomes_already_seen": true,
+    "interpretation": "posthoc exploratory independent training comparison; neither benchmark provides a fresh sealed confirmation"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "amendment": "DRST-PR FIRST-ROUND REDUCTION",
+  "reason": "User explicitly requested a smaller first comparison and S4 priority before any new DRST target scores were generated or target outcomes evaluated.",
+  "original_protocol_lock_sha256": "d89fd83a847fc1d217a4d5556862b5660b9f45dbcab7e29a8bd1b08fd53fa1eb",
+  "amendment_order": 1,
+  "timing": "before target-score freeze and target-outcome access; only FIT-meta training values had been observed",
+  "first_round_models_in_order": ["S4_DRST_PR", "S1_ABS_SPECTRAL", "B0_A1_REUSE"],
+  "A1": "Reuse exact historical A1 fixed-query reference; do not retrain A1",
+  "training": "Retain original frozen FIT-only normalization, 5 folds, 2x2 optimizer grid, max50 and early stopping; complete S4 first, then S1",
+  "evaluation": "After both spectral score grids are FIT-selected and score-frozen, compare S4, S1 and exact A1 on the same 65 cells x 20 fixed queries with patient-ID clustered 10000-draw bootstrap",
+  "deferred_not_run_first_round": ["S2_ABS_SELF", "S3_DUAL_REFERENCE", "F1_A1_DRST_PR", "A1_REPLICATE", "F0_A1_A1_ENSEMBLE", "SSL"],
+  "claim_limits": [
+    "No S2/S3 means no isolated attribution to self-reference or patient-reference views.",
+    "No F0 or F1 means no unique-complementarity or ensemble-control claim.",
+    "A1 reference uses historical VLOO selection while S1/S4 use FIT-only selection; comparisons are exploratory.",
+    "No outer test may be accessed."
+  ],
+  "preserve_existing_partial_S1_checkpoints": true,
+  "target_outcomes_used_to_choose_reduction": false
+}

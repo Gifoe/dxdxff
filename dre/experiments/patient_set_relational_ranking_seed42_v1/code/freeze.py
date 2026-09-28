@@ -70,38 +70,41 @@ def score_cell(fold,ctx,sid,arch,arm,model,ckpt):
     source=p.payload(fold,ctx["epoch"])
     row=source["val"][sid]
     z,m0=features(row,ckpt,ctx["threshold"])
+    device=next(model.parameters()).device
+    z=z.to(device);m0=m0.to(device)
     n=len(z)
     if n<4:raise RuntimeError("Too few target channels")
-    all_index=torch.arange(n)
+    all_index=torch.arange(n,device=device)
     with torch.no_grad():
-        full_all=model(z,m0,self_index=all_index).numpy()
+        full_all=model(z,m0,self_index=all_index).cpu().numpy()
     reps=[]
     for rep in range(20):
         candidate,query=p.afc.split_indices(n,42,fold,sid,rep)
         if set(candidate)&set(query) or len(candidate)+len(query)!=n:
             raise RuntimeError("Fixed query partition changed")
-        q=torch.as_tensor(query,dtype=torch.long)
+        q=torch.as_tensor(query,dtype=torch.long,device=device)
         zq,mq=z[q],m0[q]
         wrong_row,donor_sid=donor(source["fit"],n,fold,sid,rep)
         dz,dm=features(wrong_row,ckpt,ctx["threshold"])
+        dz=dz.to(device);dm=dm.to(device)
         perm=np.random.default_rng(p.afc.stable_seed(42,fold,sid,rep,"shuffle_relation")).permutation(n)
         if np.array_equal(perm,np.arange(n)):perm=np.roll(perm,1)
         with torch.no_grad():
-            query_only=model(zq,mq,self_index=torch.arange(len(q))).numpy()
-            wrong=model(zq,mq,dz,dm).numpy()
-            shuffled=model(zq,mq,z,m0[torch.as_tensor(perm)] ,q).numpy()
+            query_only=model(zq,mq,self_index=torch.arange(len(q),device=device)).cpu().numpy()
+            wrong=model(zq,mq,dz,dm).cpu().numpy()
+            shuffled=model(zq,mq,z,m0[torch.as_tensor(perm,device=device)],q).cpu().numpy()
         reps.append(dict(rep=rep,query=query.astype(np.int32),
                          full=np.asarray(full_all[query],dtype=np.float32),
                          query_only=np.asarray(query_only,dtype=np.float32),
                          wrong=np.asarray(wrong,dtype=np.float32),
                          shuffled=np.asarray(shuffled,dtype=np.float32),
-                         a1=np.asarray(m0[query],dtype=np.float32),
+                         a1=m0[q].cpu().numpy().astype(np.float32),
                          donor_hash=hashlib.sha256(donor_sid.encode()).hexdigest()[:12]))
     return dict(lock_sha=p.LOCK_SHA,fold=fold,context_id=ctx["context_id"],
                 epoch=ctx["epoch"],threshold=ctx["threshold"],sid=sid,
                 arch=arch,arm=arm,n_channels=n,
                 full_all=np.asarray(full_all,dtype=np.float32),
-                a1_all=np.asarray(m0,dtype=np.float32),reps=reps)
+                a1_all=m0.cpu().numpy().astype(np.float32),reps=reps)
 
 
 def run_scores():
@@ -113,6 +116,7 @@ def run_scores():
         for arch in active:
             for arm in p.ARMS:
                 model,ckpt,_=full_checkpoint(fold,ctx,arch,arm,locked["selections"])
+                model=model.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
                 for sid in ctx["target_ids"]:
                     stem=hashlib.sha256(sid.encode()).hexdigest()[:16]
                     folder=p.RUNTIME/"private"/"scores"/f"fold_{fold}"/ctx["context_id"]

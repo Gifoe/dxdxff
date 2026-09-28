@@ -72,6 +72,9 @@
     "kd_weight_grid": [0.03, 0.1, 0.3, 1.0],
     "pair_limit_per_patient_step": 128,
     "pair_seed": "SHA256(seed|fold|epoch|step|patient_id|pair)",
+    "D4_loss": "hard-label BCE + lambda * (0.5 * pairwise_KL + 0.5 * listwise_KL) with the same tau/lambda grid",
+    "normalization": "reuse the exact A1 full fold-FIT normalizer associated with the inherited A1 source checkpoint; construct a patient Subset so only Student-train IDs receive v2 gradient updates",
+    "discriminative_groups": "upper=channel_classifier, seizure_aggregator, final_norm; lower=b0_encoder, temporal_encoder, m1_norm",
     "no_target_teacher_or_target_adaptation": true,
     "D4_gate": "run D4 on all folds only when the five-fold mean FIT-meta AP of selected D1 or D2 exceeds matched D0+; do not inspect target outcomes"
   },

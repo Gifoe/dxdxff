@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "lock_sha256": "028a951709f095459c39986f3823110fa9826078f24290d6afe9017c2ed621d2",
+  "n_variants": 3,
+  "folds": 5,
+  "epochs": 30,
+  "n_score_files": 450,
+  "private_manifest_sha256": "3ae82e74ce65711c9f122b7005bc4537bc08eb47904387abf03099cc41d542bf",
+  "target_labels_indexed_during_freeze": false,
+  "legacy_loader_materialized_validation_labels_during_training": true
+}

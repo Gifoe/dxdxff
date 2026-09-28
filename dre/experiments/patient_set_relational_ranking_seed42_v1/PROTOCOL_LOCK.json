@@ -1,0 +1,77 @@
+{
+  "study": "Patient-set Relational Ranking Zero-shot Study",
+  "version": 1,
+  "branch": "codex/patient-set-relational-ranking-seed42-v1",
+  "source_a1_commit": "b2871b32873b67d0e6155d2766ef040ee1e9df01",
+  "previous_zero_shot_commit": "b04540ef0ef6350b6bbe68b543c6c03f404640fd",
+  "seed": 42,
+  "scope": {
+    "folds": 5,
+    "target_cells": 65,
+    "unique_target_patient_ids": 47,
+    "fixed_query_repetitions": 20,
+    "fixed_query_split": "exact active-fewshot split_indices(n,42,fold,sid,rep)",
+    "deployment_label_budget": 0,
+    "outer_predictions_metrics_or_selection": false
+  },
+  "source": {
+    "architecture": "exact frozen A1 64D selected-epoch R4 and EZ-oriented margin",
+    "selected_epoch_threshold": "reuse exact A1 per-cell VLOO-selected epoch and threshold without new target outcome selection",
+    "contexts": "distinct (fold,selected_epoch,selected_threshold) pairs; relational readout trained in that exact A1 coordinate system",
+    "source_reproduction": "prior 150-checkpoint and exact R4 replay; matched B0 AP must equal 0.5767434626151353 within 1e-6"
+  },
+  "fit_selection": {
+    "split": "deterministic 80/20 patient-ID split within each fold FIT population, shared across all contexts and methods",
+    "criterion": "mean patient-equal EZ-AP across distinct selected A1 contexts within each fold",
+    "tie_break": ["MRR", "Top1", "smaller ranking loss", "earlier epoch"],
+    "lambda_rank_grid": [0.0, 0.03, 0.1, 0.3],
+    "lambda_selection": "one lambda per fold and architecture using FIT only; separately retain BCE-only and best positive-lambda arms",
+    "r3_gate": "run R3 only if R2 best FIT AP exceeds R1 best FIT AP by at least 0.01 on average and in at least 4 of 5 folds",
+    "r3_architecture": "single learned scalar attention over pairwise relation embeddings, no Transformer",
+    "r3_if_not_run": "report NOT_RUN_FIT_GATE, no target scores"
+  },
+  "readout": {
+    "R1": "DeepSets 64-32-32 GELU phi, 97-32-1 GELU residual head",
+    "R2": "all-pairs 193-64-32 GELU relation encoder, mean other-channel relations, 97-32-1 GELU residual head",
+    "R3": "R2 plus 32-16-1 attention logit and softmax over other-channel references",
+    "alpha": 1.0,
+    "residual_output_initialization": "exact zero weight and bias; epoch0 exact A1 margin",
+    "R4_normalization": "FIT-only per-dimension StandardScaler, separately for each A1 fold/epoch context; no target-derived statistics",
+    "training_reference_sampling": "exact all-pairs; no K subsampling",
+    "inference_reference_sampling": "exact all-pairs",
+    "training": {
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "max_epochs": 20,
+      "patience": 5,
+      "selection": "best FIT meta-validation patient-equal EZ-AP, epoch0 eligible",
+      "patient_batch": 1,
+      "classification": "exact A1 patient-equal weighted BCE: EZ weight 2, NEZ weight 1",
+      "ranking": "mean softplus(NEZ margin minus EZ margin) over all within-patient EZ/NEZ pairs",
+      "gradient_clip": 5.0,
+      "full_fit_training_epochs": "FIT-selected best epoch per context/lambda, no target early stopping"
+    }
+  },
+  "context_controls": {
+    "full": "all unlabeled channels of the target patient, including candidate and query channels; transductive B=0",
+    "query_only": "only frozen fixed-query channels",
+    "wrong_patient": "deterministic nearest-size FIT patient from same A1 context, without any donor labels",
+    "shuffled_relation": "deterministic permutation of reference R4-to-A1-margin pairing; anchor R4/margin unchanged",
+    "correct_wrong_and_shuffle": "all scores and deterministic control choices frozen before new target label-using evaluation"
+  },
+  "diagnostics": {
+    "rank_top_k": 5,
+    "A1_failure_strata": "terciles of frozen A1 fixed-query patient AP, defined before any relational-outcome subgroup analysis",
+    "bootstrap": "10000 paired unique-patient-ID cluster resamples, seed 42; 20 repetitions and all folds retained per sampled ID",
+    "gates": "exact thresholds and conditions in attached user prompt"
+  },
+  "stage2": {
+    "eligibility": "only if frozen R1/R2/R3 meets PROMISING or REACHES_B8 phase-1 gate",
+    "model": "FIT-selected best relational architecture; end-to-end A1 initialized from exact source with residual head near zero",
+    "backbone_lr_ratio_grid": [0.03, 0.1, 0.3],
+    "selection": "FIT-only patient meta-validation; no target-result changes",
+    "not_eligible": "do not unfreeze backbone or produce end-to-end outcome"
+  },
+  "caveat": "exact A1 VLOO uses other target patients' labels for a scored patient's epoch/threshold selection; strict_target_label_sequencing=false; legacy monolithic loader materializes all 80 labels; strict_no_outer_label_materialization=false, while no outer predictions, metrics, or selection are computed"
+}

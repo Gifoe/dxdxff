@@ -1,0 +1,12 @@
+{
+  "lock_sha": "43b7680413d360163eb9428bc03f0816c46e8a83fbc93465a10abd131aafbcb9",
+  "student_inference_budget": 0,
+  "teacher_fit_uses_only_other_four_channel_folds": true,
+  "teacher_lambda_for_each_fit_patient_selected_from_other_fit_patients": true,
+  "fit_labels_used_for_teacher_training_and_audit": true,
+  "validation_target_labels_used_for_new_teacher_or_student": false,
+  "no_new_target_student_predictions": true,
+  "legacy_loader_materializes_all_80_labels": true,
+  "strict_target_label_sequencing": false,
+  "reason": "Inherited A1 VLOO source selector has cross-target label dependencies; legacy loader materializes labels."
+}

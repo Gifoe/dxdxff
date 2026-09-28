@@ -1,0 +1,10 @@
+{
+  "source": "existing exact B8 teacher-ceiling matched fixed-query replay",
+  "variant": "RETUNED_64D_FULLPOOL",
+  "mean_ap": 0.6924644867818666,
+  "n_cells": 65,
+  "n_repetitions": 1300,
+  "absolute_error_vs_protocol": 1.8133383683505144e-11,
+  "pass_reference": true,
+  "nondeployable": true
+}

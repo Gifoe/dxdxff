@@ -25,7 +25,7 @@ def patient_row(ctx,sid):
         raise RuntimeError("Teacher OOF provenance/crossfit invalid")
     base=p.afc.query_metrics(row["y"],row["a1_score"])
     teacher=p.afc.query_metrics(row["y"],row["teacher_score"])
-    return dict(base=base,teacher=teacher,n_channels=row["n_channels"],lambda_index=row["lambda_index"])
+    return dict(sid=sid,base=base,teacher=teacher,n_channels=row["n_channels"],lambda_index=row["lambda_index"])
 
 
 def run():
@@ -73,6 +73,31 @@ def run():
                     for prefix in ("a1","teacher","delta") for m in METRICS})
     p.afc.write_csv(p.ROOT/"FIT_OOF_TEACHER_METRICS.csv",context_rows+folds+[overall])
     p.afc.write_csv(p.ROOT/"FIT_OOF_TEACHER_PATIENT_GAINS.csv",gain_rows)
+    # Bootstrap source FIT patient IDs, not channels, contexts, or folds. A
+    # patient appearing in multiple FIT folds stays in one resampled cluster.
+    ids=sorted({item["sid"] for block in detail for item in block["patients"]})
+    index={sid:i for i,sid in enumerate(ids)}
+    sample=np.random.default_rng(42).integers(0,len(ids),size=(10000,len(ids)))
+    counts=np.zeros((10000,len(ids)),dtype=np.int16)
+    np.add.at(counts,(np.arange(10000)[:,None],sample),1)
+    counts=counts.astype(np.float32)
+    boot=[]
+    for metric in ("ap","mrr","top1"):
+        numerator=np.zeros(len(ids));denominator=np.zeros(len(ids))
+        for block in detail:
+            weight=block["target_cell_weight"]/(5*13*block["n_fit_patients"])
+            for item in block["patients"]:
+                value=item["teacher"][metric]-item["base"][metric]
+                if np.isfinite(value):
+                    at=index[item["sid"]];numerator[at]+=weight*value;denominator[at]+=weight
+        draw_n=counts@numerator;draw_d=counts@denominator
+        draws=np.divide(draw_n,draw_d,out=np.full(len(draw_d),np.nan),where=draw_d>0)
+        finite=draws[np.isfinite(draws)]
+        if len(finite)<9900:raise RuntimeError("Degenerate FIT patient-ID bootstrap")
+        boot.append(dict(metric=metric,delta_mean=float(numerator.sum()/denominator.sum()),
+                         ci_low=float(np.quantile(finite,.025)),ci_high=float(np.quantile(finite,.975)),
+                         unique_fit_patient_ids=len(ids),resamples=10000,seed=42))
+    p.afc.write_csv(p.ROOT/"FIT_OOF_TEACHER_BOOTSTRAP.csv",boot)
     positive=sum(r["delta_ap"]>0 for r in folds)
     signal=bool(overall["delta_ap"]>.03 and positive>=4 and overall["teacher_ap"]>overall["a1_ap"] and
                 overall["delta_mrr"]>-.005 and overall["delta_top1"]>-.005)

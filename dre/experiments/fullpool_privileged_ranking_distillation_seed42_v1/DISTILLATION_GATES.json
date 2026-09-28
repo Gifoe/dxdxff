@@ -1,0 +1,17 @@
+{
+  "lock_sha": "43b7680413d360163eb9428bc03f0816c46e8a83fbc93465a10abd131aafbcb9",
+  "terminal": "PRIVILEGED_TEACHER_SIGNAL_GATE_FAILED",
+  "stop_stage": "FIT_OOF_TEACHER",
+  "teacher_fit_oof_delta_ap": 0.07798221257940927,
+  "teacher_delta_mrr": -0.007661393134635689,
+  "teacher_delta_top1": -0.039099663534052656,
+  "teacher_positive_outer_folds": 5,
+  "PRIVILEGED_TEACHER_SIGNAL_VALID": false,
+  "PRIVILEGED_DISTILLATION_SUPPORTED": "NOT_EVALUATED_GATE0",
+  "PRIVILEGED_STUDENT_AP_059_REACHED": "NOT_EVALUATED_GATE0",
+  "PRIVILEGED_STUDENT_REACHES_CURRENT_B8": "NOT_EVALUATED_GATE0",
+  "PRIVILEGED_STUDENT_REACHES_BEST_B8": "NOT_EVALUATED_GATE0",
+  "student_training_started": false,
+  "target_student_scores_created": false,
+  "target_student_outcomes_accessed": false
+}

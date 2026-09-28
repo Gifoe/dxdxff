@@ -20,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from model import DRSTPatientModel
 from run_training_grid import AMENDMENT_SHA, FIRST_ROUND
+from run_s4_feasibility import AMENDMENT_SHA as S4_AMENDMENT_SHA
 from spectral import FixedScaleRawAlignmentStore
 from stage0_source import file_sha, write_json
 
@@ -31,13 +32,20 @@ def main() -> None:
     p.add_argument("--lock", type=Path, required=True)
     p.add_argument("--amendment", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
+    p.add_argument("--s4-feasibility", action="store_true")
     a = p.parse_args()
     lock_sha = file_sha(a.lock)
-    selection = json.loads((a.runtime / "FIT_SELECTION_PRIVATE.json").read_text(encoding="utf-8"))
-    if (file_sha(a.amendment) != AMENDMENT_SHA or selection["lock_sha256"] != lock_sha or
-            selection["amendment_sha256"] != AMENDMENT_SHA or len(selection["rows"]) != 10):
+    amendment_sha = S4_AMENDMENT_SHA if a.s4_feasibility else AMENDMENT_SHA
+    selection_path = (a.runtime / "S4_FEASIBILITY_SELECTION_PRIVATE.json" if a.s4_feasibility
+                      else a.runtime / "FIT_SELECTION_PRIVATE.json")
+    selection = json.loads(selection_path.read_text(encoding="utf-8"))
+    selection_rows = selection["selected_checkpoints"] if a.s4_feasibility else selection["rows"]
+    variants = ("S4_DRST_PR",) if a.s4_feasibility else FIRST_ROUND
+    expected = 5 if a.s4_feasibility else 10
+    if (file_sha(a.amendment) != amendment_sha or selection["lock_sha256"] != lock_sha or
+            selection["amendment_sha256"] != amendment_sha or len(selection_rows) != expected):
         raise RuntimeError("Complete source-only selection must precede target scoring")
-    by_key = {(row["variant"], int(row["fold"])): row for row in selection["rows"]}
+    by_key = {(row["variant"], int(row["fold"])): row for row in selection_rows}
     source = Path(os.environ["R1_HLV_SOURCE_ROOT"])
     sys.path[:0] = [str(source), str(source / "neuroez_c"),
                     str(source / "r1_hlv_ictal_dynamics_seed42_v1" / "code")]
@@ -67,7 +75,7 @@ def main() -> None:
         moments = json.loads((a.runtime / f"fold_{fold}" / "FIT_GLOBAL_SPECTRAL_NORMALIZER.json").read_text(encoding="utf-8"))
         if moments["lock_sha256"] != lock_sha or not moments["fit_only"]:
             raise RuntimeError("FIT normalizer changed")
-        for variant in FIRST_ROUND:
+        for variant in variants:
             entry = by_key[(variant, fold)]
             checkpoint = Path(entry["checkpoint"])
             if file_sha(checkpoint) != entry["checkpoint_sha256"]:
@@ -110,18 +118,19 @@ def main() -> None:
                 temporary.replace(destination)
             manifest[f"{variant}/fold_{fold}.pkl"] = file_sha(destination)
             print(f"SCORES_FROZEN {variant} fold={fold} n_patients={len(snapshot)}", flush=True)
-    if len(manifest) != 10:
-        raise RuntimeError("Expected 10 first-round spectral target score files")
-    private_manifest = a.runtime / "SPECTRAL_SCORE_FREEZE_PRIVATE.json"
-    write_json(private_manifest, {"lock_sha256": lock_sha, "amendment_sha256": AMENDMENT_SHA,
+    if len(manifest) != expected:
+        raise RuntimeError("Incomplete spectral target score freeze")
+    private_manifest = a.runtime / ("S4_FEASIBILITY_SCORE_FREEZE_PRIVATE.json" if a.s4_feasibility
+                                    else "SPECTRAL_SCORE_FREEZE_PRIVATE.json")
+    write_json(private_manifest, {"lock_sha256": lock_sha, "amendment_sha256": amendment_sha,
                 "files": manifest,
                 "target_label_keys_indexed": False, "outer_test_accessed": False})
     write_json(a.output, {"pass": True, "lock_sha256": lock_sha,
-                "amendment_sha256": AMENDMENT_SHA, "n_score_files": 10,
+                "amendment_sha256": amendment_sha, "n_score_files": expected,
                 "target_cells": 65, "target_labels_indexed_before_freeze": False,
                 "legacy_loader_materialized_target_label_tensors": True,
                 "private_manifest_sha256": file_sha(private_manifest), "outer_test_accessed": False})
-    print("SPECTRAL_SCORE_FREEZE_PASS 10/10", flush=True)
+    print(f"SPECTRAL_SCORE_FREEZE_PASS {expected}/{expected}", flush=True)
 
 
 if __name__ == "__main__":

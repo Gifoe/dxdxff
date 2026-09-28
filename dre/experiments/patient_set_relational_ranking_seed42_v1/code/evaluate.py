@@ -1,6 +1,7 @@
 """Evaluate only after every score and control is hash-frozen."""
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import pickle
@@ -53,16 +54,28 @@ def evaluate_cell(ctx,sid,arch,arm,manifest):
                             y=y,full_all=score["full_all"],a1_all=score["a1_all"])
 
 
-def main():
+def evaluate_context(index):
     manifest=frozen()
     rows=[];rank=[]
-    for ctx in p.all_contexts():
-        for sid in ctx["target_ids"]:
-            for arch in manifest["active_architectures"]:
-                for arm in p.ARMS:
-                    metrics,rank_row=evaluate_cell(ctx,sid,arch,arm,manifest)
-                    rows.extend(metrics);rank.append(rank_row)
-        print(f"[LABEL_EVALUATED] fold={ctx['fold']} {ctx['context_id']}",flush=True)
+    ctx=p.all_contexts()[index]
+    for sid in ctx["target_ids"]:
+        for arch in manifest["active_architectures"]:
+            for arm in p.ARMS:
+                metrics,rank_row=evaluate_cell(ctx,sid,arch,arm,manifest)
+                rows.extend(metrics);rank.append(rank_row)
+    path=p.RUNTIME/"private"/"evaluated_contexts"/f"{index:02d}.pkl"
+    p.atomic_pickle(path,dict(lock_sha=p.LOCK_SHA,context_id=ctx["context_id"],rows=rows,rank=rank))
+    print(f"[LABEL_EVALUATED] index={index} fold={ctx['fold']} {ctx['context_id']} rows={len(rows)}",flush=True)
+
+
+def combine():
+    manifest=frozen();rows=[];rank=[]
+    for index,ctx in enumerate(p.all_contexts()):
+        path=p.RUNTIME/"private"/"evaluated_contexts"/f"{index:02d}.pkl"
+        with path.open("rb") as f:block=pickle.load(f)
+        if block["lock_sha"]!=p.LOCK_SHA or block["context_id"]!=ctx["context_id"]:
+            raise RuntimeError("Evaluated context provenance mismatch")
+        rows.extend(block["rows"]);rank.extend(block["rank"])
     expected=65*len(manifest["active_architectures"])*2*20*5
     if len(rows)!=expected or len({r["sid"] for r in rows})!=47:
         raise RuntimeError("Evaluated cell/ID grid incomplete")
@@ -73,6 +86,16 @@ def main():
                        metric_rows=len(rows),rank_rows=len(rank),unique_patient_ids=47,
                        target_labels_used_for_metrics_after_score_freeze=True))
     print(f"[EVALUATION_COMPLETE] rows={len(rows)}",flush=True)
+
+
+def main():
+    parser=argparse.ArgumentParser()
+    group=parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--context-index",type=int,choices=range(17))
+    group.add_argument("--combine",action="store_true")
+    args=parser.parse_args()
+    if args.combine:combine()
+    else:evaluate_context(args.context_index)
 
 
 if __name__=="__main__":main()

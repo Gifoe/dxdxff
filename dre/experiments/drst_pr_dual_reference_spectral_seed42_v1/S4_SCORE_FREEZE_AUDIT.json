@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "lock_sha256": "d89fd83a847fc1d217a4d5556862b5660b9f45dbcab7e29a8bd1b08fd53fa1eb",
+  "amendment_sha256": "7cd2ec5d054baf853a3a72ce5dc79ef456b4dd0d1047ff4d871650e02a506345",
+  "n_score_files": 5,
+  "target_cells": 65,
+  "target_labels_indexed_before_freeze": false,
+  "legacy_loader_materialized_target_label_tensors": true,
+  "private_manifest_sha256": "0a3940f04f66b9c6893e73224b457a64d76b12e768eef0faa626ca853307ec9b",
+  "outer_test_accessed": false
+}

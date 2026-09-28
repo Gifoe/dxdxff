@@ -1,0 +1,8 @@
+{
+  "spectral_score_freeze_manifest_verified_before_label_read": true,
+  "legacy_loader_materialized_target_label_tensors_during_scoring": true,
+  "target_labels_used_for_training_or_checkpoint_selection": false,
+  "target_labels_used_for_evaluation_after_freeze": true,
+  "historical_A1_target_outcomes_previously_viewed": true,
+  "outer_test_accessed": false
+}

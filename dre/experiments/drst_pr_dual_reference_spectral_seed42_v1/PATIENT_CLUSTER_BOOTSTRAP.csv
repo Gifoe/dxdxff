@@ -1,0 +1,2 @@
+comparison,mean,ci_low,ci_high,n_estimable_query_rows,patient_clusters,draws,seed,delta_mrr,delta_top1,positive_folds
+S4_MINUS_A1,-0.043510061471381804,-0.0956218672711614,0.008428520310126293,1289,47,10000,42,-0.09361783546274582,-0.1582622187742436,1

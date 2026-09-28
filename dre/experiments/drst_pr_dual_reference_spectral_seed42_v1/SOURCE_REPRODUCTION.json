@@ -1,0 +1,8 @@
+{
+  "exact_A1_fixed_query_AP": 0.5767434626151353,
+  "expected": 0.5767434626151353,
+  "pass": true,
+  "A1_selection": "historical VLOO",
+  "S4_selection": "FIT-only",
+  "historical_A1_target_outcomes_previously_viewed": true
+}

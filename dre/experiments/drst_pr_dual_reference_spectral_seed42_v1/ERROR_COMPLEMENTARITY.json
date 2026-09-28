@@ -1,0 +1,8 @@
+{
+  "patient_ap_correlation": 0.7327177613190369,
+  "s4_top1_rescues": 4,
+  "s4_top1_destructions": 14,
+  "mean_rank_position_disagreement": 0.9760742838121027,
+  "n_target_cells": 65,
+  "posthoc_only": true
+}

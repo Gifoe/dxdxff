@@ -1,0 +1,15 @@
+{
+  "s4_ap": 0.5332334011437535,
+  "a1_ap": 0.5767434626151353,
+  "delta_ap": -0.043510061471381804,
+  "delta_ap_ci": [
+    -0.0956218672711614,
+    0.008428520310126293
+  ],
+  "positive_folds": 1,
+  "decision": "STOP_NO_FUSION",
+  "A1_retrained": false,
+  "S1_run_in_this_round": false,
+  "new_target_outcomes_used_for_training_or_selection": false,
+  "outer_test_accessed": false
+}

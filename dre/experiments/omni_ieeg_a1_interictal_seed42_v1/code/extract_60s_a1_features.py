@@ -199,6 +199,10 @@ def main():
     sys.path.insert(0, str(args.source_code))
     import ez_features  # noqa: E402
     protocol_sha = sha256(args.protocol)
+    if args.split == "test":
+        freeze = json.loads(args.test_freeze.read_text(encoding="utf-8"))
+        if not freeze.get("model_frozen_before_official_test") or freeze.get("protocol_sha256") != protocol_sha:
+            raise RuntimeError("Official test feature extraction needs a matching frozen protocol/model")
     cohort = pd.read_csv(args.cohort)
     cohort = cohort.loc[cohort["official_split"] == args.split].copy()
     if args.num_shards < 1 or not 0 <= args.shard_index < args.num_shards:

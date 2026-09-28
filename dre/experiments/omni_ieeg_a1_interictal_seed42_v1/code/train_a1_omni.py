@@ -128,7 +128,7 @@ class Bank:
         if count == 0:
             raise RuntimeError("No train features for normalizer")
         mean = total / count
-        std = np.sqrt(np.clip(total_sq / count - mean.square(), 1e-8, None))
+        std = np.sqrt(np.clip(total_sq / count - np.square(mean), 1e-8, None))
         return mean.astype(np.float32), std.astype(np.float32)
 
     def example(self, patient: str, mean: np.ndarray, std: np.ndarray,

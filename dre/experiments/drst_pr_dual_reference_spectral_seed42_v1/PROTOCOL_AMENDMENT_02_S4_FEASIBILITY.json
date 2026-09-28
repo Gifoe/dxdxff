@@ -1,0 +1,42 @@
+{
+  "amendment": "S4 SINGLE-CONFIG FIVE-FOLD FEASIBILITY",
+  "original_protocol_lock_sha256": "d89fd83a847fc1d217a4d5556862b5660b9f45dbcab7e29a8bd1b08fd53fa1eb",
+  "previous_amendment_sha256": "a0703d9f3ba246e3ebd5962c338597798b43323016e28144a0d87d675fd4b73f",
+  "source": "User explicitly replaced the 40-cell S4-then-S1 schedule with a fixed-configuration S4 feasibility run before any new S4 target scores were generated.",
+  "timing_and_information": {
+    "new_target_scores_generated": false,
+    "new_target_outcomes_read": false,
+    "some_old_grid_FIT_meta_AP_observed_by_agent": true,
+    "fixed_configuration_chosen_by_user_for_runtime_reduction": true,
+    "this_is_not_a_blind_hyperparameter_choice": true
+  },
+  "first_round_train": {
+    "variant": "S4_DRST_PR",
+    "folds": [1, 2, 3, 4, 5],
+    "learning_rate": 0.0003,
+    "weight_decay": 0.001,
+    "max_epochs": 50,
+    "minimum_selection_epoch": 8,
+    "patience": 8,
+    "checkpoint_selection": "FIT-meta patient-equal EZ-AP per fold; one globally fixed hyperparameter configuration",
+    "reuse_other_hyperparameter_checkpoints": false,
+    "reuse_completed_same_configuration_checkpoints": true
+  },
+  "deferred": ["S1_ABS_SPECTRAL", "S2_ABS_SELF", "S3_DUAL_REFERENCE", "A1_REPLICATE", "F0_A1_A1_ENSEMBLE", "SSL"],
+  "A1": "Reuse exact historical A1 fixed-query reference without retraining",
+  "first_round_evaluation": "After FIT-only checkpoint selection and target-score hash freeze, calculate S4 standalone matched AP on 65 cells x 20 fixed queries, patient-ID cluster bootstrap, and compare to exact A1 AP=0.5767434626151353.",
+  "post_result_decision_thresholds": {
+    "ap_below_0_55": "stop; do not run fusion",
+    "ap_0_55_to_below_0_57": "inspect predeclared error complementarity before deciding any fusion",
+    "ap_0_57_to_below_0_59": "attempt A1+S4 late fusion only with provenance-valid source-only fusion selection; do not retrain A1",
+    "ap_at_least_0_59": "promising route; attempt same provenance-valid fusion and continue only after an explicit next protocol decision"
+  },
+  "fusion_guard": "No new A1 training. If existing A1 scores cannot support leakage-free FIT-only beta selection, report the constraint instead of fitting beta on target labels or inventing a source score.",
+  "claim_limits": [
+    "No S1/S2/S3 attribution in this feasibility round.",
+    "No A1 replicate control or unique complementarity claim.",
+    "A1 historical VLOO selection and S4 FIT-only selection are asymmetric.",
+    "Historical A1 target outcomes were viewed before this study; this is exploratory development, not sealed confirmation.",
+    "No outer test access."
+  ]
+}

@@ -112,7 +112,14 @@ def run() -> None:
     split = next(s for s in exp.outer_splits if int(s["fold_idx"]) == args.fold)
     fit = list(split["fit_subjects"])
     val = list(split["validation_subjects"])
-    if len(fit) != 51 or len(val) != 13 or set(fit) & set(val) or (set(fit) | set(val)) & set(split["test_subjects"]):
+    # The frozen A1 folds are not all 51/13/16: their FIT counts are
+    # 51, 51, 50, 52, 51 (see A1 CLASS_SUPPORT_AUDIT.json).  The previous
+    # blanket 51 check incorrectly rejected folds 3 and 4 before training.
+    expected_fit = {1: 51, 2: 51, 3: 50, 4: 52, 5: 51}
+    test = set(split["test_subjects"])
+    if (len(fit) != expected_fit[args.fold] or len(val) != 13 or
+            len(fit) + len(val) + len(test) != 80 or
+            set(fit) & set(val) or (set(fit) | set(val)) & test):
         raise RuntimeError("Frozen fold role mismatch")
     store = RawAlignmentStore(
         exp.run_records,

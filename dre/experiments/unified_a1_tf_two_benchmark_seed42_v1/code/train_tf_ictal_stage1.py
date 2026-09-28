@@ -35,13 +35,15 @@ def augment(dataset, mean=None, std=None):
         if len(example["raw_windows"]) != len(example["b0_features"]):
             raise RuntimeError("A1/raw record count mismatch")
         items = []
-        for raw, raw_mask, feature in zip(example["raw_windows"],
-                                          example["raw_window_mask"],
-                                          example["b0_features"]):
+        for raw, raw_mask, feature, channel_mask in zip(example["raw_windows"],
+                                                        example["raw_window_mask"],
+                                                        example["b0_features"],
+                                                        example["seizure_channel_mask"]):
             if raw.shape[:2] != feature.shape[:2] or raw.shape[-1] != 500:
                 raise RuntimeError("Ictal raw/A1 window or channel mismatch")
-            if not np.asarray(raw_mask, dtype=bool).all():
-                raise RuntimeError("Ictal raw cache does not cover every A1 window")
+            active = np.asarray(channel_mask, dtype=bool)
+            if not np.asarray(raw_mask, dtype=bool)[:, active].all():
+                raise RuntimeError("Ictal raw cache does not cover every active A1 window")
             tf = log_frequency_stft_windows(raw, 250)
             items.append(tf)
         example["tf_log_power"] = items
@@ -122,7 +124,9 @@ def main():
     exp.use_n6_dual_view_ema = False
     augment(train_set)
     mean, std = fit_train_frequency_normalizer(
-        [tf for example in train_set.patient_examples for tf in example["tf_log_power"]])
+        [tf[:, np.asarray(mask, dtype=bool), :]
+         for example in train_set.patient_examples
+         for tf, mask in zip(example["tf_log_power"], example["seizure_channel_mask"])])
     augment(val_set)
     for dataset in (train_set, val_set):
         for example in dataset.patient_examples:

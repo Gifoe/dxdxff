@@ -1,0 +1,11 @@
+{
+  "final_checkpoint_sha256": "331f0512f437f82ef23b54178e9359c551ea842d00f95feff1ea80b4e9a2289a",
+  "model_frozen_before_official_test": true,
+  "official_test_accessed_by_this_run": false,
+  "protocol_sha256": "ace2017e01d0d21e3dda8ddd4d42551366704430b8a10f3666f955150150630d",
+  "selected_inner_epoch": 13,
+  "selected_inner_patient_equal_AP": 0.712935969590266,
+  "threshold": 0.5003803372383118,
+  "threshold_frozen_before_official_test": true,
+  "threshold_json_sha256": "4d9c802956791126602f87869a16f5d692f041a784e1b4c31230fcc5f3a8b36c"
+}

@@ -1,0 +1,13 @@
+{
+  "candidate_thresholds": 1368,
+  "inner_checkpoint_sha256": "9cdb6b88b227cdd46737ddd84740a1a63e0af397250132e3ea65badcf6ab54f9",
+  "protocol_sha256": "ace2017e01d0d21e3dda8ddd4d42551366704430b8a10f3666f955150150630d",
+  "selection": "macro-F1, pathology-F1, BA, |threshold-0.5|; final exact tie larger threshold",
+  "threshold": 0.5003803372383118,
+  "validation_ba": 0.6514002287669405,
+  "validation_edf_channel_records": 2700,
+  "validation_macro_f1": 0.6412350212601469,
+  "validation_pathological_f1": 0.36538461538461536,
+  "validation_sensitivity": 0.3944636678200692,
+  "validation_specificity": 0.9083367897138117
+}

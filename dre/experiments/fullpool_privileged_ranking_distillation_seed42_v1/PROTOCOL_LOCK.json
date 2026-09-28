@@ -15,8 +15,8 @@
     "regularization_selection": "three deterministic 50/50 FIT episodes per patient; for each scored FIT patient choose lambda using only other FIT patients in the same outer fold/context; patient-equal AP; near-tie <=1e-6 resolved by larger lambda_w then lambda_b",
     "channel_crossfit": "five deterministic label-blind channel folds; fit each teacher on other four folds, predict held-out fold only",
     "teacher_target_label_excluded_from_fit_and_lambda_selection": true,
-    "teacher_signal_gate": "mean FIT-OOF delta AP >0.03, at least four of five folds positive, MRR and Top1 not materially decreased; require Teacher AP>A1",
-    "metric_scope": "all FIT patient channels scored OOF; patient-equal mean across FIT patients and then fold consistency"
+    "teacher_signal_gate": "mean FIT-OOF delta AP >0.03, at least four of five folds positive, MRR decline <0.005 and Top1 decline <0.005; require Teacher AP>A1",
+    "metric_scope": "all FIT patient channels scored OOF; patient-equal within context, then context weighted by its number of inherited target cells, then equal five-fold mean"
   },
   "student_if_teacher_gate_passes": {
     "architectural_invariant": "exact original A1 network, initialized from corresponding exact A1 checkpoint; no adapter or target conditioning",

@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "lock_sha": "acfcbd600fbbd666ce5ccc8d480b50b6e131a7f7358da697860bb9d6db81fcb2",
+  "n_variants": 6,
+  "n_fold_models": 30,
+  "n_target_score_files": 30,
+  "target_labels_indexed_for_scoring": false,
+  "legacy_loader_materialized_target_labels": true,
+  "private_manifest_sha256": "2eb40730572730a40ec48a2b745d55763b9a114c17a5fa6ee0718cfb2fe10b6b",
+  "outer_test_accessed": false
+}

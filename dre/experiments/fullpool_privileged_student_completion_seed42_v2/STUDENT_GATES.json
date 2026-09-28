@@ -1,0 +1,14 @@
+{
+  "lock_sha": "acfcbd600fbbd666ce5ccc8d480b50b6e131a7f7358da697860bb9d6db81fcb2",
+  "PRIVILEGED_DISTILLATION_SUPPORTED": false,
+  "supported_variants": [],
+  "STUDENT_AP_059_REACHED": false,
+  "STUDENT_REACHES_CURRENT_B8": false,
+  "STUDENT_REACHES_BEST_B8": false,
+  "best_student": "D1_PAIRWISE_KD",
+  "best_student_ap": 0.5619990693710303,
+  "best_supported_KD_student": null,
+  "terminal": "STRONG_PRIVILEGED_SIGNAL_NOT_ZEROSHOT_DISTILLABLE",
+  "outer_test_accessed": false,
+  "student_target_used_for_training_or_selection": false
+}

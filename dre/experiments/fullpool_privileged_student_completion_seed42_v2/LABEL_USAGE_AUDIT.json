@@ -1,0 +1,16 @@
+{
+  "protocol_lock_sha256": "acfcbd600fbbd666ce5ccc8d480b50b6e131a7f7358da697860bb9d6db81fcb2",
+  "student_train_labels": "fold FIT Student-train patients only",
+  "fit_meta_labels": "FIT-only hyperparameter and epoch selection, and mechanism diagnostics",
+  "fit_meta_independence_limitation": "Inherited A1 epoch30 initialization and fold normalizer had already used all fold-FIT patients, including FIT-meta; only v2 gradient updates exclude FIT-meta.",
+  "teacher_targets": "frozen v1 patient-internal channel-cross-fitted FIT OOF targets",
+  "teacher_own_scored_channel_label_used_for_target": false,
+  "target_labels_before_student_model_and_score_freeze": false,
+  "target_labels_for_student_training_selection_or_calibration": false,
+  "target_labels_after_score_freeze": "65 pre-existing VLOO target cells x 20 fixed queries for one planned evaluation and predefined A1-AP strata",
+  "target_teacher_or_target_support_training": false,
+  "outer_or_external_test_accessed": false,
+  "legacy_target_loader_materialized_labels_during_score_freeze": true,
+  "target_score_freeze_code_indexed_those_labels": false,
+  "historical_A1_VLOO_dependency": "Inherited v1 A1 target-specific choices had used other validation patients' labels; v2 did not make a new choice from its Student target outcomes."
+}

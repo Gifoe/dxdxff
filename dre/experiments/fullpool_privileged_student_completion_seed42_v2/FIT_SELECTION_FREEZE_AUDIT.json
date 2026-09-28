@@ -1,0 +1,8 @@
+{
+  "lock_sha": "acfcbd600fbbd666ce5ccc8d480b50b6e131a7f7358da697860bb9d6db81fcb2",
+  "n_variants": 6,
+  "n_fold_models": 30,
+  "all_models_fit_selected_before_target_outcomes": true,
+  "outer_test_accessed": false,
+  "D4_FIT_ELIGIBLE": true
+}

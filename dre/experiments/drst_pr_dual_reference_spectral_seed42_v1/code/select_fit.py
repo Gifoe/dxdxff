@@ -8,22 +8,25 @@ import json
 from pathlib import Path
 
 from stage0_source import file_sha, write_json
-from run_training_grid import VARIANTS
+from run_training_grid import AMENDMENT_SHA, FIRST_ROUND
 
 
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--runtime", type=Path, required=True)
     p.add_argument("--lock", type=Path, required=True)
+    p.add_argument("--amendment", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     a = p.parse_args()
     lock_sha = file_sha(a.lock)
     status = json.loads((a.runtime / "TRAINING_GRID_STATUS.json").read_text(encoding="utf-8"))
-    if not status["complete"] or status["completed_cells"] != 80 or status["lock_sha256"] != lock_sha:
+    if (file_sha(a.amendment) != AMENDMENT_SHA or not status["complete"] or
+            status["completed_cells"] != 40 or status["lock_sha256"] != lock_sha or
+            status["amendment_sha256"] != AMENDMENT_SHA):
         raise RuntimeError("Complete locked FIT-only grid required")
     rows = []
     selected_private = []
-    for variant in VARIANTS:
+    for variant in FIRST_ROUND:
         for fold in range(1, 6):
             candidates = []
             for lr in (1e-4, 3e-4):
@@ -49,13 +52,14 @@ def main() -> None:
                          "checkpoint_sha256": file_sha(checkpoint),
                          "selection_scope": "FIT_ONLY", "target_labels_accessed": False})
     write_json(a.runtime / "FIT_SELECTION_PRIVATE.json", {"lock_sha256": lock_sha,
+               "amendment_sha256": AMENDMENT_SHA,
                "selection_complete_before_target_scoring": True, "rows": selected_private})
     a.output.parent.mkdir(parents=True, exist_ok=True)
     with a.output.open("w", encoding="utf-8", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
-    print("FIT_SELECTION_PASS 20/20", flush=True)
+    print("FIT_SELECTION_PASS 10/10", flush=True)
 
 
 if __name__ == "__main__":

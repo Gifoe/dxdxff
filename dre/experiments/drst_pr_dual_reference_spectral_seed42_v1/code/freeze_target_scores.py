@@ -19,7 +19,7 @@ import torch
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from model import DRSTPatientModel
-from run_training_grid import VARIANTS
+from run_training_grid import AMENDMENT_SHA, FIRST_ROUND
 from spectral import FixedScaleRawAlignmentStore
 from stage0_source import file_sha, write_json
 
@@ -29,11 +29,13 @@ def main() -> None:
     p.add_argument("--raw-cache", type=Path, required=True)
     p.add_argument("--runtime", type=Path, required=True)
     p.add_argument("--lock", type=Path, required=True)
+    p.add_argument("--amendment", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     a = p.parse_args()
     lock_sha = file_sha(a.lock)
     selection = json.loads((a.runtime / "FIT_SELECTION_PRIVATE.json").read_text(encoding="utf-8"))
-    if selection["lock_sha256"] != lock_sha or len(selection["rows"]) != 20:
+    if (file_sha(a.amendment) != AMENDMENT_SHA or selection["lock_sha256"] != lock_sha or
+            selection["amendment_sha256"] != AMENDMENT_SHA or len(selection["rows"]) != 10):
         raise RuntimeError("Complete source-only selection must precede target scoring")
     by_key = {(row["variant"], int(row["fold"])): row for row in selection["rows"]}
     source = Path(os.environ["R1_HLV_SOURCE_ROOT"])
@@ -65,7 +67,7 @@ def main() -> None:
         moments = json.loads((a.runtime / f"fold_{fold}" / "FIT_GLOBAL_SPECTRAL_NORMALIZER.json").read_text(encoding="utf-8"))
         if moments["lock_sha256"] != lock_sha or not moments["fit_only"]:
             raise RuntimeError("FIT normalizer changed")
-        for variant in VARIANTS:
+        for variant in FIRST_ROUND:
             entry = by_key[(variant, fold)]
             checkpoint = Path(entry["checkpoint"])
             if file_sha(checkpoint) != entry["checkpoint_sha256"]:
@@ -108,16 +110,18 @@ def main() -> None:
                 temporary.replace(destination)
             manifest[f"{variant}/fold_{fold}.pkl"] = file_sha(destination)
             print(f"SCORES_FROZEN {variant} fold={fold} n_patients={len(snapshot)}", flush=True)
-    if len(manifest) != 20:
-        raise RuntimeError("Expected 20 spectral target score files")
+    if len(manifest) != 10:
+        raise RuntimeError("Expected 10 first-round spectral target score files")
     private_manifest = a.runtime / "SPECTRAL_SCORE_FREEZE_PRIVATE.json"
-    write_json(private_manifest, {"lock_sha256": lock_sha, "files": manifest,
+    write_json(private_manifest, {"lock_sha256": lock_sha, "amendment_sha256": AMENDMENT_SHA,
+                "files": manifest,
                 "target_label_keys_indexed": False, "outer_test_accessed": False})
-    write_json(a.output, {"pass": True, "lock_sha256": lock_sha, "n_score_files": 20,
+    write_json(a.output, {"pass": True, "lock_sha256": lock_sha,
+                "amendment_sha256": AMENDMENT_SHA, "n_score_files": 10,
                 "target_cells": 65, "target_labels_indexed_before_freeze": False,
                 "legacy_loader_materialized_target_label_tensors": True,
                 "private_manifest_sha256": file_sha(private_manifest), "outer_test_accessed": False})
-    print("SPECTRAL_SCORE_FREEZE_PASS 20/20", flush=True)
+    print("SPECTRAL_SCORE_FREEZE_PASS 10/10", flush=True)
 
 
 if __name__ == "__main__":

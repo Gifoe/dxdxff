@@ -69,6 +69,7 @@ def donor(fit,target_n,fold,sid,rep):
 def score_cell(fold,ctx,sid,arch,arm,model,ckpt):
     source=p.payload(fold,ctx["epoch"])
     row=source["val"][sid]
+    a1_exact=math.log(ctx["threshold"]/(1-ctx["threshold"]))+np.asarray(row["source_ez"],dtype=np.float64)
     z,m0=features(row,ckpt,ctx["threshold"])
     device=next(model.parameters()).device
     z=z.to(device);m0=m0.to(device)
@@ -98,13 +99,13 @@ def score_cell(fold,ctx,sid,arch,arm,model,ckpt):
                          query_only=np.asarray(query_only,dtype=np.float32),
                          wrong=np.asarray(wrong,dtype=np.float32),
                          shuffled=np.asarray(shuffled,dtype=np.float32),
-                         a1=m0[q].cpu().numpy().astype(np.float32),
+                         a1=np.asarray(a1_exact[query],dtype=np.float64),
                          donor_hash=hashlib.sha256(donor_sid.encode()).hexdigest()[:12]))
     return dict(lock_sha=p.LOCK_SHA,fold=fold,context_id=ctx["context_id"],
                 epoch=ctx["epoch"],threshold=ctx["threshold"],sid=sid,
                 arch=arch,arm=arm,n_channels=n,
                 full_all=np.asarray(full_all,dtype=np.float32),
-                a1_all=m0.cpu().numpy().astype(np.float32),reps=reps)
+                a1_all=np.asarray(a1_exact,dtype=np.float64),reps=reps)
 
 
 def run_scores():

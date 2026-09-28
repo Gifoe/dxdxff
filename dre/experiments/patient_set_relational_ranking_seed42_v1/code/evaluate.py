@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import json
 import pickle
+from pathlib import Path
 
 import numpy as np
 
@@ -28,8 +29,8 @@ def frozen():
 def evaluate_cell(ctx,sid,arch,arm,manifest):
     fold=ctx["fold"]
     stem=hashlib.sha256(sid.encode()).hexdigest()[:16]
-    rel=(f"private/scores/fold_{fold}/{ctx['context_id']}/"
-         f"{stem}_{arch}_{arm}.pkl")
+    rel=str(Path("private")/"scores"/f"fold_{fold}"/ctx["context_id"]/
+            f"{stem}_{arch}_{arm}.pkl")
     if rel not in manifest["files"]:raise RuntimeError("Cell missing from score freeze")
     with (p.RUNTIME/rel).open("rb") as f:score=pickle.load(f)
     if score["sid"]!=sid or score["fold"]!=fold or len(score["reps"])!=20:

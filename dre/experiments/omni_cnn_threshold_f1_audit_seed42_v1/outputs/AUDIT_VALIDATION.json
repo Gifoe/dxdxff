@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "source_prediction_sha256": "d8a500a578c613d177e6513c8692040ab25d5fe0da64fba22631b7b9ae4eaa14",
+  "source_result_sha256": "beb246ba01ebd3df929cee97c36438f6947a99377473b715c5b791e4c5049e41",
+  "n_patients": 96,
+  "n_labeled_pairs": 8104,
+  "n_thresholds": 7930,
+  "n_bootstrap_draws": 10000,
+  "youden_macro_f1": 0.5992673408633654,
+  "half_macro_f1": 0.6597535251408214,
+  "posthoc_oracle_macro_f1_diagnostic_only": 0.6636453995006992,
+  "paired_difference_ci95": [
+    0.010071238673405173,
+    0.11047687926950434
+  ],
+  "prior_hard_gate_changed": false
+}

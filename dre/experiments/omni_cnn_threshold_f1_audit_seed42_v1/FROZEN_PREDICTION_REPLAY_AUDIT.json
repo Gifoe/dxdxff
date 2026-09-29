@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "source_result_sha256": "beb246ba01ebd3df929cee97c36438f6947a99377473b715c5b791e4c5049e41",
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "source_protocol_sha256": "3ea18e0a5558a9c3e0295dd1a8535709a4f70a5bb8168bc3793020a7e1e1ed7e",
+  "segment_rows": 240074,
+  "labeled_edf_channel_pairs": 8104,
+  "normal_pairs": 7297,
+  "pathological_pairs": 807,
+  "youden_threshold": 0.016663268208503723,
+  "macro_f1_youden": 0.5992673408633654,
+  "macro_f1_fixed_half": 0.6597535251408214,
+  "auroc": 0.7987673466324111,
+  "patient_clusters": 96,
+  "segment_predictions_sha256": "18b9b1660762daffb2a6eb1120c47a5f497c746c3d612ef24949da93586d9ab9",
+  "channel_predictions_sha256": "d8a500a578c613d177e6513c8692040ab25d5fe0da64fba22631b7b9ae4eaa14",
+  "test_predictions_adjusted": false,
+  "individual_predictions_kept_private": true
+}

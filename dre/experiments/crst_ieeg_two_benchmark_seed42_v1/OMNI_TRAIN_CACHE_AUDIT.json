@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "official_train_patients": 141,
+  "official_train_edfs": 296,
+  "official_train_labeled_edf_channels": 13350,
+  "official_train_pathological_edf_channels": 1355,
+  "spectral_clips": 1449,
+  "edfs_by_center": {
+    "openieeg": 107,
+    "zurich": 151,
+    "hup": 18,
+    "sourcesink": 20
+  },
+  "cross_edf_patient_channel_label_conflicts": 0,
+  "test_split_accessed": false,
+  "no_patient_edf_channel_rows_exported": true
+}

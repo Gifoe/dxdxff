@@ -1,0 +1,2 @@
+benchmark,variant,fold,selected_epoch,inner_validation_patients,patient_equal_auroc,auroc_estimable_patients,patient_equal_ap,ap_estimable_patients,mrr,top1,frozen_validation_threshold,validation_macro_f1,validation_pathological_f1,validation_balanced_accuracy,official_test_accessed
+Omni-iEEG,CRST-0,1,6,26,0.8302407806787144,13,0.7551561711464857,26,0.8173206423206423,0.7692307692307693,0.1982421875,0.673795918367347,0.408,0.6538658599067997,false

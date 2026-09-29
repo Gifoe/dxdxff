@@ -1,0 +1,16 @@
+{
+  "status": "USER_STOPPED_PARTIAL_RUN",
+  "stopped_at_date": "2026-09-30",
+  "seed": 42,
+  "ictal_historical_47_id_vloo_complete": true,
+  "omni_crst0_inner_validation_complete": true,
+  "omni_crstfull_complete": false,
+  "omni_crstfull_last_logged_phase": "SSL",
+  "omni_crstfull_last_logged_epoch": 1,
+  "ictal_outer_test_accessed": false,
+  "omni_official_test_accessed": false,
+  "ablations_complete": false,
+  "matching_training_processes_after_stop": 0,
+  "private_checkpoints_and_logs_retained": true,
+  "two_benchmark_claim_supported": false
+}

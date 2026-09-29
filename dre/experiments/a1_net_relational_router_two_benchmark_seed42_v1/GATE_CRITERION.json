@@ -1,0 +1,13 @@
+{
+  "frozen_before_official_test": true,
+  "published_macro_f1": 0.6469,
+  "published_channel_auroc": 0.8061,
+  "near_public_benchmark_tolerance_absolute": 0.03,
+  "pass_if_both": {
+    "macro_f1_official_test_youden_at_least": 0.6169,
+    "channel_auroc_at_least": 0.7761
+  },
+  "if_fail": "RAW_ENCODER_REPRODUCTION_FAILED; no AEC graph or patient router training",
+  "threshold_note": "test-derived Youden is only the pinned official reproduction diagnostic, never a trained A1-NET selection threshold",
+  "prior_test_outcomes_already_viewed": true
+}

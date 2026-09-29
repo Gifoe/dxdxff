@@ -150,7 +150,9 @@ def evaluate(model, preprocessor, bank, patients, benchmark, epoch, frozen, devi
 def restore_rng(state, device):
     random.setstate(state["python_rng"])
     np.random.set_state(state["numpy_rng"])
-    torch.set_rng_state(state["torch_rng"])
+    # torch.load(..., map_location=cuda) also remaps saved CPU RNG bytes to
+    # CUDA; the CPU generator only accepts a CPU ByteTensor on resume.
+    torch.set_rng_state(state["torch_rng"].detach().cpu())
     if device.type == "cuda":
         torch.cuda.set_rng_state(state["cuda_rng"].detach().cpu())
 

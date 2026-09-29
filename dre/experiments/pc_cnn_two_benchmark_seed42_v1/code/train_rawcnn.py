@@ -180,7 +180,9 @@ def main():
         optimizer.load_state_dict(state["optimizer_state"])
         random.setstate(state["python_rng"])
         np.random.set_state(state["numpy_rng"])
-        torch.set_rng_state(state["torch_rng"])
+        # Keep the CPU generator state on CPU even when checkpoint tensors
+        # were remapped to CUDA for model/optimizer recovery.
+        torch.set_rng_state(state["torch_rng"].detach().cpu())
         if device.type == "cuda":
             torch.cuda.set_rng_state(state["cuda_rng"].detach().cpu())
         selected, start_epoch = state["selected"], state["epoch"] + 1

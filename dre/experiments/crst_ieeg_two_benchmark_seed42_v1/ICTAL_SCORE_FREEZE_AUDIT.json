@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "private_freeze_sha256": "e936f6675b78a8cd8a7fbe0a2311deccef188f17c55b436cdcaade0c068cfed2",
+  "private_query_sha256": "337bd77e918386068e164d8b70354c1c39ba5fb7952f470ded348c4e1cf860cb",
+  "historical_a1_query_sha256": "ee38c583825418e58f2226e2a16b828372ab3815d4839781eebcdf4fac7394ac",
+  "matched_cells": 65,
+  "query_repetitions": 1300,
+  "unique_patient_ids": 47,
+  "target_labels_used_for_checkpoint_or_threshold_selection": false,
+  "outer_test_waveforms_accessed": false
+}

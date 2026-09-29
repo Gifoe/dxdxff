@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "benchmark": "Ictal",
+  "source_role": "fit_only",
+  "real_sample_channels": 4,
+  "logit_max_abs_difference": 0.0,
+  "prediction_mismatch": 0,
+  "seconds_two_forward_passes": 5.62395030001062,
+  "peak_gpu_memory_bytes": 802502656,
+  "gate_effective_initial": {
+    "gamma": 0.019999999552965164,
+    "beta": 0.019999999552965164,
+    "context": 0.019999999552965164
+  },
+  "test_accessed": false
+}

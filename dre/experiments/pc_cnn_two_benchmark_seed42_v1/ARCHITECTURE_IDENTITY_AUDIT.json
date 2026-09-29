@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "same_parameter_names_and_shapes": true,
+  "total_parameters_each_benchmark": 11318404,
+  "separately_initialized_weight_instances": true,
+  "raw_backbone": "pinned official modified ImageNet ResNet18",
+  "classification_heads": 1,
+  "score_level_fusion": false,
+  "stage_b_trainable_parameter_names": 19,
+  "stage_c_trainable_parameter_names": 44,
+  "ictal_max_frequency_hz": 112.5,
+  "omni_max_frequency_hz": 300.0,
+  "native_frequency_bins_each": 224,
+  "test_accessed": false
+}

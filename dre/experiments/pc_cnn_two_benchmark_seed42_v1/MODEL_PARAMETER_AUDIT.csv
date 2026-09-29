@@ -1,0 +1,7 @@
+component,parameters,benchmark_topology
+TimeConv_and_ResNet18,11302241,identical
+Physiology_FiLM,10816,identical
+Context_LayerNorm,64,identical
+Context_MHA,4224,identical
+Context_Residual,1056,identical
+three_bounded_scalar_gates,3,identical

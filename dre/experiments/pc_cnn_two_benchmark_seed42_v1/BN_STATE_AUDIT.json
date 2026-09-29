@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "benchmark": "Ictal",
+  "source_role": "fit_only",
+  "one_step_only": true,
+  "film_projector_gradient_l1": 0.05624786764383316,
+  "context_projector_gradient_l1": 0.07113619148731232,
+  "batch_norm_running_state_unchanged": true,
+  "raw_cnn_parameters_frozen": true,
+  "test_accessed": false
+}

@@ -1,0 +1,3 @@
+benchmark,model,status,ap,auroc,macro_f1,mrr,top1,metric_note
+Ictal,A1-NET,NOT_RUN_HARD_GATE,,,,,,RAW_ENCODER_REPRODUCTION_FAILED
+Omni,A1-NET,NOT_RUN_HARD_GATE,,,,,,RAW_ENCODER_REPRODUCTION_FAILED

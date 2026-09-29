@@ -1,0 +1,11 @@
+{
+  "terminal": "RAW_ENCODER_REPRODUCTION_FAILED",
+  "raw_encoder_reproduction_gate_pass": false,
+  "macro_f1_test_youden": {"observed": 0.5992673408633654, "minimum": 0.6169, "pass": false},
+  "channel_auroc": {"observed": 0.7987673466324111, "minimum": 0.7761, "pass": true},
+  "a1_net_ictal_safety": "NOT_RUN_HARD_GATE",
+  "a1_net_omni_minimum": "NOT_RUN_HARD_GATE",
+  "a1_net_omni_target": "NOT_RUN_HARD_GATE",
+  "graph_ablation": "NOT_RUN_HARD_GATE",
+  "official_test_used_for_tuning": false
+}

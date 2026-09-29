@@ -60,7 +60,7 @@ def load_patient(bank, name, epoch, validation=False):
     return bank.load(name, epoch, all_clips=validation)
 
 
-def evaluation(model, bank, names, device, epoch):
+def evaluation(model, bank, names, device, epoch, intervention=None):
     model.eval()
     rows, threshold_rows, private_scores = [], [], {}
     with torch.inference_mode(), torch.autocast(device.type, dtype=torch.bfloat16,
@@ -68,7 +68,8 @@ def evaluation(model, bank, names, device, epoch):
         for name in names:
             sample = to_device(load_patient(bank, name, epoch, validation=True), device)
             logits = model(sample["patches"], sample["frequency_mask"],
-                           sample["window_mask"], sample["edges"])[0]
+                           sample["window_mask"], sample["edges"],
+                           intervention=intervention)[0]
             truth = sample["labels"][0]
             valid = truth >= 0
             rows.append((truth[valid].int().cpu().numpy(),
@@ -77,9 +78,16 @@ def evaluation(model, bank, names, device, epoch):
                                     "scores": rows[-1][1].tolist()}
             if "record_labels" in sample:
                 rtruth = sample["record_labels"][0]
-                rvalid = rtruth >= 0
-                repeated_score = logits[None].expand_as(rtruth)
-                threshold_rows.append((rtruth[rvalid].int().cpu().numpy(),
+                # Official classification is one (EDF, channel), not one
+                # (clip, channel).  Multiple clips from an EDF must not give
+                # that EDF extra weight in threshold selection.
+                edf_ids = np.asarray(sample["record_edf_ids"])
+                first = [int(np.flatnonzero(edf_ids == edf)[0])
+                         for edf in np.unique(edf_ids)]
+                edf_truth = rtruth[first]
+                rvalid = edf_truth >= 0
+                repeated_score = logits[None].expand_as(edf_truth)
+                threshold_rows.append((edf_truth[rvalid].int().cpu().numpy(),
                                        repeated_score[rvalid].sigmoid().float().cpu().numpy()))
             else:
                 threshold_rows.append(rows[-1])
@@ -94,7 +102,7 @@ def fixed_ssl_roles(names, fold):
 
 
 def run_ssl(bank, names, fold, work: Path, protocol_sha: str, train_sha: str,
-            device, *, max_epochs=50):
+            device, *, max_epochs=50, intervention=None):
     work.mkdir(parents=True, exist_ok=True)
     train_names, heldout_names = fixed_ssl_roles(names, fold)
     seed_everything(420000 + fold)
@@ -106,7 +114,8 @@ def run_ssl(bank, names, fold, work: Path, protocol_sha: str, train_sha: str,
     if last.exists():
         state = torch.load(last, map_location=device, weights_only=False)
         if (state["protocol_sha"] != protocol_sha or state["train_sha"] != train_sha or
-                state["fold"] != fold or state["phase"] != "SSL"):
+                state["fold"] != fold or state["phase"] != "SSL" or
+                state.get("intervention") != intervention):
             raise RuntimeError("SSL resume identity mismatch")
         model.load_state_dict(state["model"])
         optimizer.load_state_dict(state["optimizer"])
@@ -138,7 +147,8 @@ def run_ssl(bank, names, fold, work: Path, protocol_sha: str, train_sha: str,
             with torch.autocast(device.type, dtype=torch.bfloat16,
                                 enabled=device.type == "cuda"):
                 parts = ssl_objective(model, sample["patches"], sample["frequency_mask"],
-                                      sample["window_mask"], sample["edges"], seed=seed)
+                                      sample["window_mask"], sample["edges"], seed=seed,
+                                      intervention=intervention)
             loss = parts["total"]
             if not torch.isfinite(loss):
                 raise RuntimeError("Nonfinite SSL training loss")
@@ -154,22 +164,25 @@ def run_ssl(bank, names, fold, work: Path, protocol_sha: str, train_sha: str,
                 sample = to_device(load_patient(bank, name, 0, validation=False), device)
                 result = ssl_objective(model, sample["patches"],
                                        sample["frequency_mask"], sample["window_mask"],
-                                       sample["edges"], seed=42000000 + fold * 100 + ordinal)
+                                       sample["edges"], seed=42000000 + fold * 100 + ordinal,
+                                       intervention=intervention)
                 val_losses.append(float(result["total"]))
         val = float(np.mean(val_losses))
         if val < best_loss - 1e-7:
             best_loss, no_gain = val, 0
             save_atomic(best, {"model": model.state_dict(), "epoch": epoch,
                                "validation_ssl_loss": val, "protocol_sha": protocol_sha,
-                               "train_sha": train_sha, "fold": fold, "phase": "SSL"})
+                               "train_sha": train_sha, "fold": fold, "phase": "SSL",
+                               "intervention": intervention})
         else:
             no_gain += 1
         save_atomic(last, {"model": model.state_dict(), "optimizer": optimizer.state_dict(),
                            "epoch": epoch, "best_loss": best_loss, "no_gain": no_gain,
                            "protocol_sha": protocol_sha, "train_sha": train_sha,
-                           "fold": fold, "phase": "SSL"})
+                           "fold": fold, "phase": "SSL", "intervention": intervention})
         print(json.dumps({"benchmark": "ictal" if isinstance(bank, IctalPatientBank) else "omni",
                           "fold": fold, "phase": "SSL", "epoch": epoch,
+                          "intervention": intervention,
                           "train_ssl": float(np.mean(epoch_loss)), "heldout_ssl": val,
                           "best_ssl": best_loss, "seconds": round(time.perf_counter()-started, 2)}),
               flush=True)
@@ -178,6 +191,7 @@ def run_ssl(bank, names, fold, work: Path, protocol_sha: str, train_sha: str,
     json_atomic(work / "ssl_complete.json", {"best_checkpoint_sha256": sha(best),
                                              "best_validation_ssl_loss": best_loss,
                                              "last_epoch": epoch, "heldout_patients": len(heldout_names),
+                                             "intervention": intervention,
                                              "test_waveforms_used": False})
     return best
 
@@ -215,7 +229,8 @@ def supervised_optimizer(model, stage):
 
 
 def run_supervised(bank, train_names, val_names, fold, variant, work: Path,
-                   protocol_sha: str, train_sha: str, device, ssl_best: Path | None):
+                   protocol_sha: str, train_sha: str, device, ssl_best: Path | None,
+                   intervention=None):
     work.mkdir(parents=True, exist_ok=True)
     seed_everything(42000 + fold)
     model = CRSTiEEG(activation_checkpointing=False).to(device)
@@ -232,7 +247,8 @@ def run_supervised(bank, train_names, val_names, fold, variant, work: Path,
     if last.exists():
         state = torch.load(last, map_location=device, weights_only=False)
         if (state["protocol_sha"] != protocol_sha or state["train_sha"] != train_sha or
-                state["fold"] != fold or state["variant"] != variant):
+                state["fold"] != fold or state["variant"] != variant or
+                state.get("intervention") != intervention):
             raise RuntimeError("Supervised resume identity mismatch")
         model.load_state_dict(state["model"])
         start = state["epoch"] + 1
@@ -265,7 +281,8 @@ def run_supervised(bank, train_names, val_names, fold, variant, work: Path,
             with torch.autocast(device.type, dtype=torch.bfloat16,
                                 enabled=device.type == "cuda"):
                 output = model(sample["patches"], sample["frequency_mask"],
-                               sample["window_mask"], sample["edges"], return_aux=True)
+                               sample["window_mask"], sample["edges"],
+                               intervention=intervention, return_aux=True)
                 parts = supervised_parts(output["logits"], sample["labels"],
                                          output["record_logits"], sample["window_mask"], seed,
                                          sample.get("record_labels"))
@@ -285,9 +302,10 @@ def run_supervised(bank, train_names, val_names, fold, variant, work: Path,
         denom = sum(updated.values())
         q = {center: value / denom for center, value in updated.items()}
         validation, val_rows, threshold_rows, private_scores = evaluation(
-            model, bank, val_names, device, epoch)
+            model, bank, val_names, device, epoch, intervention=intervention)
         json_atomic(work / f"epoch_{epoch:02d}_validation_private.json",
                     {"fold": fold, "variant": variant, "epoch": epoch,
+                     "intervention": intervention,
                      "protocol_sha": protocol_sha, "train_sha": train_sha,
                      "clinical_positive": "EZ" if isinstance(bank, IctalPatientBank)
                      else "official_pathological",
@@ -301,16 +319,18 @@ def run_supervised(bank, train_names, val_names, fold, variant, work: Path,
             save_atomic(best, {"model": model.state_dict(), "epoch": epoch,
                                "validation": validation, "threshold": threshold,
                                "group_q": q, "fold": fold, "variant": variant,
-                               "protocol_sha": protocol_sha, "train_sha": train_sha})
+                               "protocol_sha": protocol_sha, "train_sha": train_sha,
+                               "intervention": intervention})
         else:
             no_gain += 1
         save_atomic(last, {"model": model.state_dict(), "optimizer": optimizer.state_dict(),
                            "epoch": epoch, "best_rank": best_rank,
                            "no_gain": no_gain, "group_q": q, "fold": fold,
                            "variant": variant, "protocol_sha": protocol_sha,
-                           "train_sha": train_sha})
+                           "train_sha": train_sha, "intervention": intervention})
         print(json.dumps({"benchmark": "ictal" if isinstance(bank, IctalPatientBank) else "omni",
                           "fold": fold, "variant": variant, "stage": stage,
+                          "intervention": intervention,
                           "epoch": epoch, "train_loss": float(np.mean(loss_parts["total"])),
                           "val_patient_equal_auroc": validation["auroc"],
                           "val_patient_equal_ap": validation["ap"],
@@ -322,6 +342,7 @@ def run_supervised(bank, train_names, val_names, fold, variant, work: Path,
     json_atomic(work / "supervised_complete.json",
                 {"best_checkpoint_sha256": sha(best), "selected_epoch": -best_rank[3],
                  "last_epoch": epoch, "variant": variant, "fold": fold,
+                 "intervention": intervention,
                  "validation_only_selection": True, "test_accessed": False})
     return best
 
@@ -331,6 +352,7 @@ def main():
     p.add_argument("--benchmark", choices=("ictal", "omni"), required=True)
     p.add_argument("--fold", type=int, default=1)
     p.add_argument("--variant", choices=("CRST-0", "CRST-FULL"), required=True)
+    p.add_argument("--ablation", choices=("A_ONLY", "NO_CHANNEL_ATTENTION"))
     p.add_argument("--spectral-cache", type=Path, required=True)
     p.add_argument("--manifest", type=Path)
     p.add_argument("--feature-cache", type=Path)
@@ -339,6 +361,8 @@ def main():
     p.add_argument("--training-lock", type=Path, required=True)
     p.add_argument("--runtime", type=Path, required=True)
     args = p.parse_args()
+    if args.ablation and args.variant != "CRST-FULL":
+        raise RuntimeError("B1/B2 ablations must use the full SSL/objective recipe")
     if not torch.cuda.is_available():
         raise RuntimeError("CRST training requires server GPU")
     device = torch.device("cuda")
@@ -356,17 +380,23 @@ def main():
         bank = OmniPatientBank(args.spectral_cache, args.train_val_split)
         train_names = [name for name, role in bank.roles.items() if role == "inner_train"]
         val_names = [name for name, role in bank.roles.items() if role == "inner_val"]
-    work = args.runtime / args.benchmark / f"fold{args.fold}" / args.variant
+    root = args.runtime / args.benchmark / f"fold{args.fold}"
+    if args.ablation:
+        root = root / "ablation" / args.ablation
+    work = root / args.variant
     ssl_best = None
     if args.variant == "CRST-FULL":
-        ssl_work = args.runtime / args.benchmark / f"fold{args.fold}" / "SSL"
+        ssl_work = root / "SSL"
         ssl_best = run_ssl(bank, train_names, args.fold, ssl_work,
-                           protocol_sha, train_sha, device)
+                           protocol_sha, train_sha, device,
+                           intervention=args.ablation)
     best = run_supervised(bank, train_names, val_names, args.fold, args.variant,
-                          work, protocol_sha, train_sha, device, ssl_best)
+                          work, protocol_sha, train_sha, device, ssl_best,
+                          intervention=args.ablation)
     state = torch.load(best, map_location="cpu", weights_only=False)
     print(json.dumps({"status": "TRAIN_VALIDATION_COMPLETE", "benchmark": args.benchmark,
                       "fold": args.fold, "variant": args.variant,
+                      "intervention": args.ablation,
                       "selected_epoch": state["epoch"],
                       "validation": state["validation"],
                       "frozen_validation_threshold": state["threshold"],

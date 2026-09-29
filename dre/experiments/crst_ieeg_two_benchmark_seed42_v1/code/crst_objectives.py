@@ -68,7 +68,8 @@ def vicreg(x: Tensor, y: Tensor) -> Tensor:
 
 
 def ssl_objective(model, patches: Tensor, frequency_mask: Tensor,
-                  window_mask: Tensor, edges: Tensor, *, seed: int):
+                  window_mask: Tensor, edges: Tensor, *, seed: int,
+                  intervention: str | None = None):
     gen = torch.Generator(device=patches.device).manual_seed(seed)
     token_valid = window_mask
     random_mask = torch.rand(token_valid.shape, generator=gen,
@@ -80,7 +81,8 @@ def ssl_objective(model, patches: Tensor, frequency_mask: Tensor,
     with torch.no_grad():
         target = model.tokenizer(patches, frequency_mask).detach()
     input_patch = patches.masked_fill(masked[..., None, None], 0)
-    first = model(input_patch, frequency_mask, window_mask, edges, return_aux=True)
+    first = model(input_patch, frequency_mask, window_mask, edges,
+                  intervention=intervention, return_aux=True)
     reconstruction = model.mask_decoder(first["contextual"])
     mask_loss = F.smooth_l1_loss(reconstruction[masked].float(), target[masked].float())
     # Mild morphology-preserving amplitude and Gaussian-noise views, plus
@@ -98,7 +100,8 @@ def ssl_objective(model, patches: Tensor, frequency_mask: Tensor,
                               device=patches.device) < 0.05
     second_patch = second_patch.masked_fill(channel_drop[..., None, None, None], 0)
     second_patch = second_patch * window_mask[..., None, None]
-    second = model(second_patch, frequency_mask, window_mask, edges, return_aux=True)
+    second = model(second_patch, frequency_mask, window_mask, edges,
+                   intervention=intervention, return_aux=True)
     present = window_mask.any(-1)[0]
     within = vicreg(first["record_embedding"][0, present],
                     second["record_embedding"][0, present])

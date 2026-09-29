@@ -107,7 +107,8 @@ class CRSTBlock(nn.Module):
 
     def forward(self, x: Tensor, mask: Tensor, edges: Tensor,
                 channel_attention: bool = True,
-                connectivity_on: bool = True) -> Tensor:
+                connectivity_on: bool = True,
+                record_attention: bool = True) -> Tensor:
         b, r, c, w, d = x.shape
         if w > (self.time_relative_bias.shape[1] + 1) // 2:
             raise ValueError("Window count exceeds frozen temporal-bias support")
@@ -131,10 +132,11 @@ class CRSTBlock(nn.Module):
             x = x + delta.reshape(b, r, w, c, d).permute(0, 1, 3, 2, 4)
             x = x * mask.unsqueeze(-1)
 
-        xr = self.norms[2](x).permute(0, 2, 3, 1, 4).reshape(b * c * w, r, d)
-        mr = mask.permute(0, 2, 3, 1).reshape(b * c * w, r)
-        delta = self.record(xr, mr).reshape(b, c, w, r, d).permute(0, 3, 1, 2, 4)
-        x = (x + delta) * mask.unsqueeze(-1)
+        if record_attention:
+            xr = self.norms[2](x).permute(0, 2, 3, 1, 4).reshape(b * c * w, r, d)
+            mr = mask.permute(0, 2, 3, 1).reshape(b * c * w, r)
+            delta = self.record(xr, mr).reshape(b, c, w, r, d).permute(0, 3, 1, 2, 4)
+            x = (x + delta) * mask.unsqueeze(-1)
         return (x + self.ff(self.norms[3](x))) * mask.unsqueeze(-1)
 
 
@@ -199,7 +201,8 @@ class CRSTiEEG(nn.Module):
             def run_block(value, block=block):
                 return block(value, window_mask, edges,
                              channel_attention=intervention != "NO_CHANNEL_ATTENTION",
-                             connectivity_on=intervention != "CONNECTIVITY_ZERO")
+                             connectivity_on=intervention != "CONNECTIVITY_ZERO",
+                             record_attention=intervention != "NO_RECORD_ATTENTION")
             if self.training and self.activation_checkpointing:
                 x = torch.utils.checkpoint.checkpoint(run_block, x, use_reentrant=False)
             else:

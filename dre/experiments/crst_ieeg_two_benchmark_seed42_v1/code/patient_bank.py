@@ -78,13 +78,15 @@ class OmniPatientBank:
     def load(self, patient: str, epoch: int, *, all_clips: bool = False) -> dict:
         paths = sorted(self.patient_files[patient])
         records = []
+        edf_names = []
         labels = {}
         center = None
-        for path in paths:
+        for edf_idx, path in enumerate(paths):
             with np.load(path) as z:
                 patches = np.asarray(z["patches"])
                 edges = np.asarray(z["edges"])
                 names = [str(n) for n in z["channel_names"]]
+                edf_names.append(str(z["edf"]))
                 current_labels = np.asarray(z["labels"], dtype=np.int8)
                 if center is None:
                     center = str(z["dataset"])
@@ -100,15 +102,15 @@ class OmniPatientBank:
                     selected = [int(hashlib.sha256(f"42|{patient}|{path.name}|{epoch}".encode()).hexdigest()[:8], 16)
                                 % len(patches)]
                 for clip in selected:
-                    records.append((names, patches[clip], edges[clip], current_labels))
-        canonical = sorted({name for names, _, _, _ in records for name in names})
+                    records.append((edf_idx, names, patches[clip], edges[clip], current_labels))
+        canonical = sorted({name for _, names, _, _, _ in records for name in names})
         idx = {name: i for i, name in enumerate(canonical)}
         r, c = len(records), len(canonical)
         patches = np.zeros((r, c, 59, 64, 8), dtype=np.float16)
         edges = np.zeros((r, c, c, 15), dtype=np.float16)
         mask = np.zeros((r, c, 59), dtype=bool)
         record_labels = np.full((r, c), -1, dtype=np.int8)
-        for ri, (names, p, e, labels_in_edf) in enumerate(records):
+        for ri, (_, names, p, e, labels_in_edf) in enumerate(records):
             local = [idx[name] for name in names]
             patches[ri, local] = p
             edges[ri][np.ix_(local, local)] = e
@@ -127,8 +129,38 @@ class OmniPatientBank:
         return {"patches": patches, "edges": edges, "window_mask": mask,
                 "frequency_mask": np.ones(64, dtype=np.float32),
                 "labels": target, "record_labels": record_labels,
+                "record_edf_ids": np.asarray([row[0] for row in records], dtype=np.int32),
+                "channel_names": canonical,
+                "edf_keys": edf_names,
                 "center": center, "patient": patient,
                 "label_conflicts": conflicts, "records": r}
+
+
+class OmniTestPatientBank(OmniPatientBank):
+    """Test-only loader; constructing it requires a validated pre-test freeze."""
+
+    def __init__(self, cache: Path, freeze_path: Path):
+        self.cache = Path(cache)
+        freeze = json.loads(Path(freeze_path).read_text(encoding="utf-8"))
+        if freeze.get("status") != "FROZEN_BEFORE_OFFICIAL_TEST":
+            raise RuntimeError("Official test cannot be loaded without prior freeze")
+        freeze_sha = hashlib.sha256(Path(freeze_path).read_bytes()).hexdigest()
+        self.patient_files = defaultdict(list)
+        paths = sorted(self.cache.glob("edf_*.npz"))
+        for path in paths:
+            marker = path.with_suffix(".json")
+            if not marker.is_file():
+                raise RuntimeError("Partial official test cache")
+            record = json.loads(marker.read_text(encoding="utf-8"))
+            if record.get("freeze_sha256") != freeze_sha:
+                raise RuntimeError("Test cache extracted against different model freeze")
+            with np.load(path) as z:
+                if str(z["official_split"]) != "test":
+                    raise RuntimeError("Train file in official test cache")
+                patient = str(z["patient"])
+            self.patient_files[patient].append(path)
+        if len(self.patient_files) != 96 or len(paths) != 174:
+            raise RuntimeError("Frozen 96-patient/174-EDF official test cohort incomplete")
 
 
 def to_device(sample: dict, device: torch.device) -> dict:
@@ -139,6 +171,10 @@ def to_device(sample: dict, device: torch.device) -> dict:
             "labels": torch.from_numpy(sample["labels"].astype(np.float32))[None].to(device),
             "center": sample["center"], "patient": sample["patient"],
             "label_conflicts": sample.get("label_conflicts", 0)}
+    if "channel_names" in sample:
+        result["channel_names"] = sample["channel_names"]
+        result["edf_keys"] = sample["edf_keys"]
     if "record_labels" in sample:
         result["record_labels"] = torch.from_numpy(sample["record_labels"].astype(np.float32))[None].to(device)
+        result["record_edf_ids"] = sample["record_edf_ids"]
     return result

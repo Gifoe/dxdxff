@@ -1,0 +1,8 @@
+{
+  "epochs_each": 30,
+  "folds": 5,
+  "historical_loader_materialized_validation_labels": true,
+  "private_freeze_sha256": "722ae113c3c474197372867da5e6ca6902b018351f4508b9e9c660f2daddff68",
+  "score_snapshots": 150,
+  "target_labels_used_for_own_selection": false
+}

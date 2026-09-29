@@ -1,0 +1,7 @@
+{
+  "ictal_beta_zero_max_abs_error": 0.0,
+  "ictal_original_AP_replay": 0.5767434626151353,
+  "omni_beta_zero_Nbase_predictions_same_source": true,
+  "omni_beta_zero_margin_max_abs_error": 0.0,
+  "pass": true
+}

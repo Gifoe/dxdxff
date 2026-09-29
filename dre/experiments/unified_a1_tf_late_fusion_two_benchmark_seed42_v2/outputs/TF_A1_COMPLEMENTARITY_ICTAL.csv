@@ -1,0 +1,2 @@
+benchmark,patients,a1_fail_tf_rescue,a1_correct_tf_wrong,a1_correct_fusion_destroyed,a1_fail_fusion_rescue,mean_score_correlation
+ictal,65,6,11,4,4,0.5854655810868422

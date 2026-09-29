@@ -1,0 +1,18 @@
+{
+  "final": {
+    "model_parameters": 45377,
+    "normalizer_sha256": "7467e3cf42c051853e4de3652b2b776ecd50d2b3f07798c732176c88047ccfa5"
+  },
+  "final_checkpoint_sha256": "48489ab4e0d105dd43757e35deffee190a3c056dd22f229ea699777fbb04d259",
+  "inner": {
+    "model_parameters": 45377,
+    "normalizer_sha256": "a4643d7e39f44eca8d4c5312d935c599aecb1bfb412784b355541c863acbc7b7"
+  },
+  "inner_checkpoint_sha256": "2eda17cf60f373978f7a8f31c9c1a76f45b1a540ab15c409589a41c75dfb5632",
+  "model_frozen_before_official_test": true,
+  "official_test_accessed": false,
+  "protocol_sha256": "6d69b9239959ab9fb6421f5e13fc830b81b912b2aa45b2995aa83c8bb28110eb",
+  "selected_epoch": 8,
+  "selected_inner_patient_equal_AP": 0.7055567988817776,
+  "test_used_for_tuning": false
+}

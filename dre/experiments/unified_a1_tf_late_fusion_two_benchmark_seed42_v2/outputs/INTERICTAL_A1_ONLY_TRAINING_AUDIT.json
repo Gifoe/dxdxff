@@ -1,0 +1,48 @@
+{
+  "final": {
+    "model_parameters": 27713,
+    "normalizer_sha256": "3534c3288338cac87b7d04801529a127ec813b6bbb119d380766cb999e875c39"
+  },
+  "freeze": {
+    "final_checkpoint_sha256": "0ba7ce5593249482f224540e679f31a8d5503f423080308ee789fd0b3380ad66",
+    "final_normalizer_sha256": "3534c3288338cac87b7d04801529a127ec813b6bbb119d380766cb999e875c39",
+    "frozen_threshold": 0.5155861377716064,
+    "inner_checkpoint_sha256": "91e4559e1bebb9d8dc97c6408c4d4d4880e34bdb429b8100730a76f145bb70c3",
+    "inner_train_patients": 112,
+    "inner_val_patients": 29,
+    "inner_validation_estimable_pathology_ap": 0.7024352085487242,
+    "model_frozen_before_official_test": true,
+    "model_parameters": 27713,
+    "official_test_accessed": false,
+    "official_train_patients": 141,
+    "protocol_sha256": "68aa2ffe40cff05abf32a1d8eac92111bf4092b1c12a00552218ecd806f2f082",
+    "selected_inner_epoch": 9,
+    "test_used_for_tuning": false,
+    "threshold_frozen_before_official_test": true,
+    "threshold_json_sha256": "305c5e3032ee3647b9fa83a1f1f8e2c53f683672519500d3bae460597e3497ca",
+    "train_val_split_sha256": "0c4ab5327031410b0a02f8d36278db59e1aef3e591f7fb632e7f7cfaaf8bbec9"
+  },
+  "inner": {
+    "model_parameters": 27713,
+    "normalizer_sha256": "a9a245e30ed8b4afc7459846a06fc5270b43ead0722b19d9e0768e27de27d92f"
+  },
+  "selection": {
+    "checkpoint_sha256": "91e4559e1bebb9d8dc97c6408c4d4d4880e34bdb429b8100730a76f145bb70c3",
+    "epoch": 9,
+    "patient_equal_pathology_ap": 0.7024352085487242,
+    "val_non_estimable_patients": 3
+  },
+  "threshold": {
+    "candidate_thresholds": 1367,
+    "inner_checkpoint_sha256": "91e4559e1bebb9d8dc97c6408c4d4d4880e34bdb429b8100730a76f145bb70c3",
+    "protocol_sha256": "68aa2ffe40cff05abf32a1d8eac92111bf4092b1c12a00552218ecd806f2f082",
+    "selection": "macro-F1, pathology-F1, BA, |threshold-0.5|; final exact tie larger threshold",
+    "threshold": 0.5155861377716064,
+    "validation_ba": 0.6201758376759345,
+    "validation_edf_channel_records": 2700,
+    "validation_macro_f1": 0.6271568014687001,
+    "validation_pathological_f1": 0.3290203327171904,
+    "validation_sensitivity": 0.3079584775086505,
+    "validation_specificity": 0.9323931978432186
+  }
+}

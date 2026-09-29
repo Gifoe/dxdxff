@@ -1,0 +1,39 @@
+{
+  "experiment": "unified_a1_tf_late_fusion_two_benchmark_seed42_v2",
+  "seed": 42,
+  "status": "frozen_before_new_official_test_scoring",
+  "prior_outcomes_already_seen": true,
+  "source_branch": "codex/unified-a1-tf-two-benchmark-seed42-v1",
+  "source_commit": "845160435a3e47a170605ff3aea8b1a680cd67b4",
+  "ictal": {
+    "A1": "exact historical A1; frozen checkpoint; 5 fixed folds and 65 matched cells; target labels excluded from own epoch and beta selection",
+    "TF_fit": "FIT patients only, patient-equal pathology BCE positive:negative=2:1, max 30 epochs, patient-equal validation AP",
+    "beta_selection": "VLOO AP then MRR then Top1 then smaller beta; beta zero when no AP improvement",
+    "evaluation": "20 repetitions, 47 patient-ID cluster paired bootstrap"
+  },
+  "interictal": {
+    "Nbase": "independently train original A1-only v2 with original 112/29 split, AdamW lr=1e-4 wd=1e-3 batch=2 max_epochs=30, patient-equal AP selection, full-train refit, validation macro-F1 threshold",
+    "TF_fit": "official train inner 112/29, patient-equal pathology BCE positive:negative=2:1, AdamW lr=1e-4 wd=1e-3 batch=2 max_epochs=30, validation patient-equal AP selection, all-train refit selected epochs",
+    "beta_selection": "validation AUROC and patient-equal AP each >= beta0 minus 0.002; maximize validation macro-F1; then pathological F1, BA and threshold proximity to 0.5",
+    "evaluation": "one frozen official-test scoring, 10000 patient-cluster paired bootstrap"
+  },
+  "TF": {
+    "input": "exact prior 32-bin 1-120Hz log-power STFT, 2s windows, 1s hop, 59 windows; train-only per-bin normalization",
+    "encoder": "TimeFrequencyEncoder from v1: 32->64 spectral and 4 gated depthwise residual temporal blocks dilation 1,2,4,8",
+    "temporal_pool": "masked mean",
+    "cross_record_pool": "masked mean",
+    "patient_embedding_normalization": "channel median and 1.4826*MAD+1e-6",
+    "head": "Linear(128,64)-GELU-Dropout(0.1)-Linear(64,1)",
+    "descriptor_reconstruction": false,
+    "A1_gradient": false
+  },
+  "fusion": {
+    "score": "m_final=m_A1+beta*z_TF where z_TF is within-patient robust normalized TF margin",
+    "beta_grid": [0,0.02,0.05,0.1,0.2,0.35,0.5,0.75,1.0],
+    "beta_zero_exact_identity_tolerance": 1e-7,
+    "no_joint_optimization": true,
+    "no_local_refinement": true
+  },
+  "caveat": "The shared topology is TF scorer/fusion; A1 training differs: ictal A1 is frozen historical while Omni A1-only is retrained. Hence the claim that reference operator is the only benchmark difference is not literally true.",
+  "final_test_tuning": false
+}

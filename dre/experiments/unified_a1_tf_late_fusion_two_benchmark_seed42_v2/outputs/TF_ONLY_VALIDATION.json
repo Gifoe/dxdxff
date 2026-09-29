@@ -1,0 +1,17 @@
+{
+  "balanced_accuracy": 0.693531234437318,
+  "edf_channel_records": 2700,
+  "macro_f1": 0.6174169974562638,
+  "mrr": 0.7569885242962167,
+  "pathological_f1": 0.3646288209606987,
+  "pathological_prevalence": 0.10703703703703704,
+  "pathological_records": 289,
+  "patient_equal_ap": 0.7055567988817776,
+  "pooled_ap": 0.3913564119030871,
+  "pooled_auroc": 0.7246960657539909,
+  "predicted_pathological_fraction": 0.23222222222222222,
+  "sensitivity": 0.5778546712802768,
+  "specificity": 0.8092077975943592,
+  "threshold": 0.5,
+  "top1": 0.6923076923076923
+}

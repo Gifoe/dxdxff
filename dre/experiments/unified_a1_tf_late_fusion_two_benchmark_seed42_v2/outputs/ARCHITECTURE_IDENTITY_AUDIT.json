@@ -1,0 +1,11 @@
+{
+  "A1_only_trained_independently_for_Omni": true,
+  "A1_weights_frozen_for_ictal": true,
+  "TF_parameters_each": 45377,
+  "benchmark_specific_head": false,
+  "caveat": "A1 training status differs across benchmarks; reference operator is not literally the only difference.",
+  "fusion": "A1 margin + beta * robust_patient_normalize(TF margin)",
+  "pass": true,
+  "same_TF_class_both_benchmarks": "TFScorer",
+  "tf_source_sha256": "97c9bc699db7afd890fe9f74f598ff19098f49deb530c0efbb1ef0bbf464e66c"
+}

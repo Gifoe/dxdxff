@@ -1,0 +1,15 @@
+{
+  "beta": 0.35,
+  "model_frozen_before_official_test": true,
+  "nbase_checkpoint_sha256": "0ba7ce5593249482f224540e679f31a8d5503f423080308ee789fd0b3380ad66",
+  "official_test_accessed": false,
+  "protocol_sha256": "6d69b9239959ab9fb6421f5e13fc830b81b912b2aa45b2995aa83c8bb28110eb",
+  "selection": "ranking constrained, max macro-F1, pathological-F1, BA, smaller beta",
+  "test_used_for_tuning": false,
+  "tf_checkpoint_sha256": "48489ab4e0d105dd43757e35deffee190a3c056dd22f229ea699777fbb04d259",
+  "threshold": 0.5798109023753569,
+  "validation_beta_zero_auroc": 0.7040596803290571,
+  "validation_beta_zero_patient_equal_ap": 0.7024352085487242,
+  "validation_selected_auroc": 0.7116761555672604,
+  "validation_selected_patient_equal_ap": 0.7188076273359029
+}

@@ -1,0 +1,11 @@
+{
+  "Omni_AUROC_0_77": false,
+  "Omni_AUROC_0_80": false,
+  "Omni_AUROC_delta_vs_Nbase": -0.023384871207956848,
+  "Omni_macro_F1_0_64": false,
+  "Omni_macro_F1_0_67": false,
+  "Omni_macro_F1_0_70": false,
+  "ictal_AP_minimum_0_574743": true,
+  "official_test_used_for_tuning": false,
+  "terminal": "STOP_TF_ROUTE"
+}

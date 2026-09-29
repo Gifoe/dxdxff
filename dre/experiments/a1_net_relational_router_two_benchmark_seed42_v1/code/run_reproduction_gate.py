@@ -43,6 +43,56 @@ def run(name: str, args: list[str]):
         raise RuntimeError(f"{name} exit code {code}; inspect private log/err")
 
 
+def repair_first_unseeded_files(protocol_sha: str):
+    """Quarantine initial five pilot NPZs generated before per-EDF RNG fix.
+
+    This is a recoverable move of only exact own-experiment files, not source
+    EEG, and preserves their private provenance. Re-running shards regenerates
+    these few clips with the finalized order-independent deterministic seed.
+    """
+    audit_path = RUN / "RNG_REPAIR_AUDIT.json"
+    if audit_path.is_file():
+        old = json.loads(audit_path.read_text(encoding="utf-8"))
+        if old["protocol_sha256"] != protocol_sha or not old["completed"]:
+            raise RuntimeError("Prior RNG repair audit differs")
+        return
+    original_log = RUN / "extract_train.log"
+    rows = [json.loads(line) for line in original_log.read_text(encoding="utf-8").splitlines()
+            if line.strip().startswith("{")]
+    if len(rows) != 5 or [row["ordinal"] for row in rows] != list(range(1, 6)):
+        raise RuntimeError("Unexpected initial pilot extraction count; cannot repair automatically")
+    quarantine = RUN / "quarantine_initial_global_rng"
+    moved = []
+    for row in rows:
+        edf = Path(row["edf"])
+        if edf.is_absolute() or ".." in edf.parts or edf.suffix != ".edf":
+            raise RuntimeError("Unsafe pilot EDF path")
+        basename = edf.with_suffix(".npz").name
+        for branch in ("positive", "negative"):
+            source = TRAIN / branch / basename
+            marker = source.with_suffix(".json")
+            dest = quarantine / branch / basename
+            dest_marker = dest.with_suffix(".json")
+            if not source.exists() and not marker.exists():
+                if dest.exists() and dest_marker.exists():
+                    moved.append(str(dest.relative_to(RUN)))
+                continue
+            if not source.is_file() or not marker.is_file() or dest.exists() or dest_marker.exists():
+                raise RuntimeError(f"Unexpected partial pilot move state: {source}")
+            payload = json.loads(marker.read_text(encoding="utf-8"))
+            if payload["edf"] != row["edf"] or payload["protocol_sha256"] != protocol_sha:
+                raise RuntimeError(f"Pilot marker identity mismatch: {source}")
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            source.replace(dest)
+            marker.replace(dest_marker)
+            moved.append(str(dest.relative_to(RUN)))
+    audit = {"completed": True, "protocol_sha256": protocol_sha,
+             "initial_edfs": len(rows), "quarantined_npz": len(moved),
+             "quarantined_relative_paths": moved,
+             "source_EEG_untouched": True}
+    audit_path.write_text(json.dumps(audit, indent=2) + "\n", encoding="utf-8")
+
+
 def main():
     RUN.mkdir(parents=True, exist_ok=True)
     protocol_sha = hashlib.sha256(LOCK.read_bytes()).hexdigest()
@@ -53,6 +103,32 @@ def main():
     shard_files = [TRAIN / f"EXTRACTION_TRAIN_SHARD{i}OF4.json" for i in range(4)]
     while not all(file.is_file() for file in shard_files):
         time.sleep(60)
+    status("QUARANTINING_INITIAL_GLOBAL_RNG_CLIPS")
+    repair_first_unseeded_files(protocol_sha)
+    # Every shard is rerun once, resuming all unchanged verified outputs and
+    # regenerating only quarantined pilot files. Audit files are overwritten
+    # after their full own-shard pass, so finalization sees uniform RNG.
+    status("RECONCILING_DETERMINISTIC_TRAIN_EXTRACTION")
+    processes = []
+    handles = []
+    try:
+        for i in range(4):
+            out = (RUN / f"extract_train_reconcile_shard{i}.log").open("a", encoding="utf-8")
+            err = (RUN / f"extract_train_reconcile_shard{i}.err").open("a", encoding="utf-8")
+            handles.extend([out, err])
+            process = subprocess.Popen([sys.executable,
+                str(CODE / "prepare_official_cnn_waveforms.py"),
+                "--split", "train", "--official-split", str(SPLIT),
+                "--source", str(SOURCE), "--cache", str(CACHE),
+                "--output", str(TRAIN), "--protocol", str(LOCK),
+                "--num-shards", "4", "--shard-index", str(i)], stdout=out, stderr=err)
+            processes.append(process)
+        codes = [process.wait() for process in processes]
+        if any(code != 0 for code in codes):
+            raise RuntimeError(f"Train RNG reconciliation shard exits: {codes}")
+    finally:
+        for handle in handles:
+            handle.close()
     status("VERIFYING_TRAIN_EXTRACTION")
     run("finalize_train", [str(CODE / "finalize_waveform_extraction.py"),
                            "--split", "train", "--official-split", str(SPLIT),

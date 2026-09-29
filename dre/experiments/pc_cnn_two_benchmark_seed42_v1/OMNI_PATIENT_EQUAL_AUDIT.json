@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "benchmark": "omni",
+  "folds": {
+    "inner_train": {
+      "fit_patients": 112,
+      "min_labeled_observations_per_patient": 1,
+      "max_labeled_observations_per_patient": 1496,
+      "patient_optimizer_steps_per_epoch": 112
+    }
+  },
+  "loss_rule": "weighted_BCE_sum_within_patient / labeled_channel_record_count",
+  "positive_weight": 2.0,
+  "negative_weight": 1.0,
+  "optimizer_steps_per_patient_per_epoch": 1,
+  "patients_given_equal_epoch_step_weight": true,
+  "test_accessed": false
+}

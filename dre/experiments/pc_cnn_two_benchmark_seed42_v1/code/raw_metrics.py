@@ -75,8 +75,21 @@ def omni_validation(patient_records):
         score = np.asarray([np.mean(by_edf_channel[k]) for k in keys], float)
         pooled_y.extend(y.tolist())
         pooled_score.extend(score.tolist())
-        patient_rows.append(binary_metrics(y, score))
-        private[patient] = {"labels": y.tolist(), "scores": score.tolist()}
+        by_channel, channel_labels, conflicts = defaultdict(list), {}, set()
+        for (_, channel), label, value in zip(keys, y, score):
+            if channel in channel_labels and channel_labels[channel] != label:
+                conflicts.add(channel)
+            channel_labels[channel] = int(label)
+            by_channel[channel].append(float(value))
+        canonical = sorted(set(by_channel) - conflicts)
+        if not canonical:
+            raise RuntimeError("No consistent patient-channel labels for ranking")
+        patient_rows.append(binary_metrics(
+            [channel_labels[channel] for channel in canonical],
+            [np.mean(by_channel[channel]) for channel in canonical]))
+        private[patient] = {"labels": y.tolist(), "scores": score.tolist(),
+                            "edf": [key[0] for key in keys],
+                            "channel": [key[1] for key in keys]}
     pooled = binary_metrics(pooled_y, pooled_score)
     return {"auroc": pooled["auroc"], "ap": pooled["ap"],
             "macro_f1_0_5": pooled["macro_f1"],

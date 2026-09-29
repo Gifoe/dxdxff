@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "benchmark": "omni",
+  "fold": 1,
+  "fit_patients": 112,
+  "validation_patients": 29,
+  "fit_val_disjoint": true,
+  "feature_coordinates": 36,
+  "nonempty_fitted_coordinates": 36,
+  "source_role_for_example": "fit_only",
+  "validation_or_test_used_for_fit": false,
+  "final_test_accessed": false
+}

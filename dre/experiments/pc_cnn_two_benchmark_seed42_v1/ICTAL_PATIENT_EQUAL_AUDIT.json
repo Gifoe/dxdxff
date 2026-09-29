@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "benchmark": "ictal",
+  "folds": {
+    "fold1": {
+      "fit_patients": 51,
+      "min_labeled_observations_per_patient": 44,
+      "max_labeled_observations_per_patient": 620,
+      "patient_optimizer_steps_per_epoch": 51
+    },
+    "fold2": {
+      "fit_patients": 51,
+      "min_labeled_observations_per_patient": 83,
+      "max_labeled_observations_per_patient": 820,
+      "patient_optimizer_steps_per_epoch": 51
+    },
+    "fold3": {
+      "fit_patients": 50,
+      "min_labeled_observations_per_patient": 52,
+      "max_labeled_observations_per_patient": 820,
+      "patient_optimizer_steps_per_epoch": 50
+    },
+    "fold4": {
+      "fit_patients": 52,
+      "min_labeled_observations_per_patient": 44,
+      "max_labeled_observations_per_patient": 820,
+      "patient_optimizer_steps_per_epoch": 52
+    },
+    "fold5": {
+      "fit_patients": 51,
+      "min_labeled_observations_per_patient": 44,
+      "max_labeled_observations_per_patient": 820,
+      "patient_optimizer_steps_per_epoch": 51
+    }
+  },
+  "loss_rule": "weighted_BCE_sum_within_patient / labeled_channel_record_count",
+  "positive_weight": 2.0,
+  "negative_weight": 1.0,
+  "optimizer_steps_per_patient_per_epoch": 1,
+  "patients_given_equal_epoch_step_weight": true,
+  "test_accessed": false
+}

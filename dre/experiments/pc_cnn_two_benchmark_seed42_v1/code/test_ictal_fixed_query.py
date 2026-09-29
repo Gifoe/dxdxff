@@ -3,7 +3,8 @@
 import numpy as np
 
 from evaluate_ictal_frozen import (fixed_query, fixed_query_rows,
-                                   paired_query_bootstrap, query_metrics)
+                                   original_channel_order, paired_query_bootstrap,
+                                   query_metrics)
 
 
 def test_historical_membership_and_paired_20_queries():
@@ -23,3 +24,20 @@ def test_nonestimable_rank_and_threshold_tie_rule():
     assert row["auroc"] is None and row["ap"] is None
     assert np.isclose(query_metrics([0, 1, 1, 0], [.2, .5, .8, .1])["macro_f1"],
                       (2 / 3 + 4 / 5) / 2)
+
+
+def test_historical_query_uses_original_channel_order(tmp_path):
+    source = tmp_path / "synthetic.npz"
+    np.savez(source, channel_names=["Z", "A", "M", "B"], labels=[1, 0, 1, 0])
+
+    class Bank:
+        def path(self, patient):
+            assert patient == "synthetic"
+            return source
+
+    # Training metrics store alphabetically: A, B, M, Z.
+    ordered = original_channel_order(Bank(), "synthetic",
+                                     {"labels": [0, 0, 1, 1],
+                                      "scores": [.1, .2, .8, .9]})
+    assert ordered == {"labels": [1, 0, 1, 0],
+                       "scores": [.9, .1, .8, .2]}

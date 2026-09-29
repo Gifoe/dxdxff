@@ -229,7 +229,9 @@ def main():
     b0_selected = json.loads((b0_dir / "RAW_B0_SELECTION.json").read_text(encoding="utf-8"))
     b0_ckpt = torch.load(b0_dir / "selected_best.pt", map_location="cpu", weights_only=False)
     if b0_selected["protocol_sha256"] != protocol_sha or b0_ckpt["protocol_sha256"] != protocol_sha or \
-            b0_selected["selected"] != b0_ckpt["selected"]:
+            b0_selected["selected"]["epoch"] != b0_ckpt["selected"]["epoch"] or \
+            b0_selected["selected"]["metrics"] != b0_ckpt["selected"]["metrics"] or \
+            list(b0_selected["selected"]["rank"]) != list(b0_ckpt["selected"]["rank"]):
         raise RuntimeError("Matched B0 not fully selected under same protocol")
     frozen = normalization(bank, fit, args, work, protocol_sha)
     random.seed(4200 + args.fold)

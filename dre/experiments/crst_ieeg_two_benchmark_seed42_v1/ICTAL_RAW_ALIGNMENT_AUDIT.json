@@ -1,0 +1,71 @@
+{
+  "status": "PASS_WITH_MASKED_PARTIAL_RECORDS",
+  "reason": "Exact cohort alignment; source-short records require valid-window masking",
+  "input_sha256": {
+    "feature": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "manifest": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733"
+  },
+  "manifest_subjects": 80,
+  "manifest_folds": 5,
+  "fold_role_counts": {
+    "1": {
+      "fit": 51,
+      "test": 16,
+      "validation": 13
+    },
+    "2": {
+      "fit": 51,
+      "test": 16,
+      "validation": 13
+    },
+    "3": {
+      "fit": 50,
+      "test": 17,
+      "validation": 13
+    },
+    "4": {
+      "fit": 52,
+      "test": 15,
+      "validation": 13
+    },
+    "5": {
+      "fit": 51,
+      "test": 16,
+      "validation": 13
+    }
+  },
+  "feature_cache_all_subjects": 90,
+  "feature_cache_all_records": 281,
+  "raw_cache_all_subjects": 155,
+  "raw_cache_all_records": 501,
+  "historical_a1_feature_records": 256,
+  "historical_a1_raw_records": 256,
+  "matched_records": 256,
+  "unmatched_feature_records": 0,
+  "extra_raw_records_in_80_subjects": 0,
+  "matched_record_channels": 24995,
+  "unique_patient_channels": 7635,
+  "historical_canonical_patient_channels": 7635,
+  "historical_canonical_labeled_channels": 7635,
+  "historical_canonical_positive_channels": 1743,
+  "incomplete_60_second_records": 3,
+  "valid_raw_duration_seconds_distribution": {
+    "41.0": 1,
+    "52.0": 1,
+    "57.0": 1,
+    "60.0": 253
+  },
+  "fully_valid_two_second_windows_distribution": {
+    "40": 1,
+    "51": 1,
+    "56": 1,
+    "59": 253
+  },
+  "cross_record_source_label_conflicts_inherited_from_historical_cache": 70,
+  "historical_canonical_patient_labels_required": true,
+  "partial_record_policy": "Use 60-s tensor with exact raw_valid_start_sample/raw_valid_samples masks; never treat zero padding as observed EEG",
+  "other_alignment_failures": {},
+  "compound_record_key_sha256": "6fa8a93a236160d9cac9fc3d8f455325a1a03e98754e9c86c8604db6a0ad7bd5",
+  "no_patient_seizure_channel_or_label_rows_exported": true
+}

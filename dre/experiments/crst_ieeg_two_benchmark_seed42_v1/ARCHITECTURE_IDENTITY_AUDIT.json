@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "architecture": "CRSTiEEG",
+  "trainable_parameters_each_benchmark": 1550103,
+  "parameter_shapes_identical": true,
+  "parameter_names_identical": true,
+  "parameter_tensors": 147,
+  "same_class_and_module_topology": true,
+  "different_only": [
+    "dataset",
+    "frequency availability mask",
+    "record count",
+    "channel count",
+    "frozen train/test membership",
+    "independently learned weights"
+  ],
+  "batch_norm_present": false,
+  "patient_or_center_embedding": false,
+  "test_outcome_accessed_by_this_audit": false
+}

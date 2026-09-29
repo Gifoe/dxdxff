@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "sampling_rates": {
+    "200": {
+      "valid_frequency_bins": 50,
+      "valid_connectivity_bands": 4
+    },
+    "250": {
+      "valid_frequency_bins": 53,
+      "valid_connectivity_bands": 5
+    },
+    "300": {
+      "valid_frequency_bins": 55,
+      "valid_connectivity_bands": 5
+    },
+    "1000": {
+      "valid_frequency_bins": 64,
+      "valid_connectivity_bands": 5
+    }
+  },
+  "partial_41_second_valid_windows": 40
+}

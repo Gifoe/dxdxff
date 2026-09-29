@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_BEFORE_SSL_OR_SUPERVISED_TRAINING",
+  "seed": 42,
+  "patient_batch_size": 1,
+  "channel_sampling": "none; all available positive, negative and unlabeled context channels retained",
+  "ictal_record_sampling": "all available historical records per patient",
+  "omni_train_record_sampling": "one deterministically selected 60-s clip per EDF per epoch, all EDFs per selected patient",
+  "omni_validation_record_sampling": "all complete 60-s clips per EDF",
+  "activation_checkpointing": false,
+  "mixed_precision": "CUDA bfloat16",
+  "ssl_train_only_heldout": "lowest SHA256('42|fold|patient') 10 percent of fit patients, minimum 5",
+  "ssl_patience_after_epoch_10": 8,
+  "supervised_patience_after_unfrozen_epoch_10": 8,
+  "checkpoint_resume": "atomic last and best at each epoch with protocol and training lock hashes",
+  "omni_final_refit": "after inner checkpoint/threshold freeze, refit all 141 official train patients for selected epoch count with threshold unchanged",
+  "test_access_before_freeze": false,
+  "test_tuning": false
+}

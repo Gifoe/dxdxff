@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "seed": 42,
+  "parameters": 1550103,
+  "channel_permutation_max_abs_error": 0.0013664960861206055,
+  "padded_channel_max_abs_error": 0.0,
+  "connectivity_lambda0_max_abs_error": 0.0,
+  "single_record_relative_R_rms": 0.0,
+  "no_batch_norm": true
+}

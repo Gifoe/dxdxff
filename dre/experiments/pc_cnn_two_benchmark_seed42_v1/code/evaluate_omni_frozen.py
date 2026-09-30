@@ -145,6 +145,7 @@ def main():
     p.add_argument("--official-cnn", type=Path, required=True)
     p.add_argument("--omni-test-cache", type=Path, required=True)
     p.add_argument("--omni-official-split", type=Path, required=True)
+    p.add_argument("--cohort-audit", type=Path, required=True)
     p.add_argument("--runtime", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     args = p.parse_args()
@@ -158,7 +159,7 @@ def main():
         if digest(Path(model["private_path"])) != model["sha256"]:
             raise RuntimeError("Omni selected checkpoint changed after freeze")
     bank = FrozenOmniTestBank(args.omni_test_cache, args.omni_official_split,
-                              args.freeze, args.protocol)
+                              args.cohort_audit, args.freeze, args.protocol)
     patients = bank.patients()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     module = load_official_module(args.official_cnn)

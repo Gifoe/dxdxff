@@ -13,6 +13,9 @@ from train_rawcnn import digest
 from prepare_omni_train import flag
 
 
+HISTORICAL_COHORT_SHA256 = "e10241ce0e823ced7dd262ed6eda4eeb0ffdbe52082aa4ec771590e253ffaf00"
+
+
 def numeric(value):
     try:
         return float(value)
@@ -21,8 +24,8 @@ def numeric(value):
 
 
 class FrozenOmniTestBank:
-    def __init__(self, cache: Path, official_split: Path, freeze_path: Path,
-                 protocol_path: Path):
+    def __init__(self, cache: Path, official_split: Path, cohort_audit: Path,
+                 freeze_path: Path, protocol_path: Path):
         self.cache = Path(cache)
         freeze = json.loads(Path(freeze_path).read_text(encoding="utf-8"))
         protocol = json.loads(Path(protocol_path).read_text(encoding="utf-8"))
@@ -31,17 +34,30 @@ class FrozenOmniTestBank:
                 not freeze.get("model_frozen_before_final_test") or \
                 digest(official_split) != protocol["omni_official_split_sha256"]:
             raise RuntimeError("Omni official TEST cannot be opened before valid freeze")
+        if digest(cohort_audit) != HISTORICAL_COHORT_SHA256:
+            raise RuntimeError("Historical supervised test cohort audit changed")
         with Path(official_split).open(newline="", encoding="utf-8-sig") as stream:
             rows = list(csv.DictReader(stream))
         rows = [row for row in rows if row["split"] == "test" and
                 row["dataset"] != "Multicenter" and numeric(row["frequency"]) > 900 and
                 flag(row["interictal"]) and numeric(row["length"]) >= 62]
-        if len(rows) != 174 or len({row["patient_name"] for row in rows}) != 96:
-            raise RuntimeError("Frozen official Omni test cohort differs")
-        self.official = {row["edf_name"]: row for row in rows}
+        if len(rows) != 237 or len({row["patient_name"] for row in rows}) != 102:
+            raise RuntimeError("Frozen official Omni metadata cohort differs")
+        with Path(cohort_audit).open(newline="", encoding="utf-8-sig") as stream:
+            audit_rows = list(csv.DictReader(stream))
+        audited = {row["edf"]: row["patient"] for row in audit_rows
+                   if row["official_split"] == "test" and
+                   numeric(row["official_labeled_channels"]) > 0}
+        if len(audited) != 174 or len(set(audited.values())) != 96:
+            raise RuntimeError("Historical 174-EDF/96-patient cohort differs")
+        self.official = {row["edf_name"]: row for row in rows
+                         if row["edf_name"] in audited and
+                         row["patient_name"] == audited[row["edf_name"]]}
+        if len(self.official) != 174:
+            raise RuntimeError("Audited cohort is not an official-split subset")
         self.center_by_patient = {}
         self.patient_files = defaultdict(list)
-        provenance = digest(protocol_path) + "|" + digest(freeze_path)
+        provenance = digest(protocol_path) + "|" + digest(freeze_path) + "|" + digest(cohort_audit)
         for path in sorted(self.cache.glob("edf_*.npz")):
             marker = path.with_suffix(".json")
             if not marker.is_file():

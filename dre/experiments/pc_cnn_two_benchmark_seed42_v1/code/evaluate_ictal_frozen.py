@@ -168,29 +168,44 @@ def main():
             if digest(Path(selected["private_path"])) != selected["sha256"]:
                 raise RuntimeError("A selected Ictal checkpoint changed after freeze")
         test_patients = bank.folds[fold]["test"]
-        raw_state = torch.load(models["RawCNN"]["private_path"],
+        fold_cache = args.runtime / "ictal" / f"FROZEN_OUTER_FOLD{fold}_PRIVATE.json"
+        if fold_cache.is_file():
+            cached = json.loads(fold_cache.read_text(encoding="utf-8"))
+            if cached.get("freeze_sha256") != digest(args.freeze) or \
+                    cached.get("checkpoint_sha256") != {name: item["sha256"] for name, item in models.items()} or \
+                    set(cached.get("patient_scores", {})) != set(private_by_model) or \
+                    any(set(value) != set(test_patients) for value in cached["patient_scores"].values()):
+                raise RuntimeError("Frozen outer fold resume provenance differs")
+            snapshots = {name: (None, private) for name, private in cached["patient_scores"].items()}
+        else:
+            raw_state = torch.load(models["RawCNN"]["private_path"],
                                map_location=device, weights_only=False)
-        raw = module.NeuralCNN(in_channels=1, outputs=1).to(device)
-        raw.load_state_dict(raw_state["raw_state"])
-        raw_metrics, raw_private = evaluate_raw(raw, preprocessor, bank,
-                                                test_patients, "ictal", 0, device)
-        normalizer_path = args.runtime / "ictal" / f"fold{fold}" / "descriptor_normalization.json"
-        if digest(normalizer_path) != models["PC-CNN"]["train_fit_descriptor_norm_sha256"]:
-            raise RuntimeError("Train-fit descriptor normalization changed after freeze")
-        normalizer = json.loads(normalizer_path.read_text(encoding="utf-8"))
-        pc_state = torch.load(models["PC-CNN"]["private_path"],
-                              map_location=device, weights_only=False)
-        pc = PCCNN(module.NeuralCNN(in_channels=1, outputs=1)).to(device)
-        pc.load_state_dict(pc_state["model_state"])
-        variants = (("PC-CNN", True, True),
-                    ("PC_no_physiology", False, True),
-                    ("PC_no_context", True, False),
-                    ("PC_all_disabled", False, False))
-        snapshots = {"RawCNN": (raw_metrics, raw_private)}
-        for name, physiology, context in variants:
-            snapshots[name] = evaluate_pc(pc, preprocessor, bank, test_patients,
-                                          "ictal", 0, normalizer, device,
-                                          physiology=physiology, context=context)
+            raw = module.NeuralCNN(in_channels=1, outputs=1).to(device)
+            raw.load_state_dict(raw_state["raw_state"])
+            raw_metrics, raw_private = evaluate_raw(raw, preprocessor, bank,
+                                                    test_patients, "ictal", 0, device)
+            normalizer_path = args.runtime / "ictal" / f"fold{fold}" / "descriptor_normalization.json"
+            if digest(normalizer_path) != models["PC-CNN"]["train_fit_descriptor_norm_sha256"]:
+                raise RuntimeError("Train-fit descriptor normalization changed after freeze")
+            normalizer = json.loads(normalizer_path.read_text(encoding="utf-8"))
+            pc_state = torch.load(models["PC-CNN"]["private_path"],
+                                  map_location=device, weights_only=False)
+            pc = PCCNN(module.NeuralCNN(in_channels=1, outputs=1)).to(device)
+            pc.load_state_dict(pc_state["model_state"])
+            variants = (("PC-CNN", True, True),
+                        ("PC_no_physiology", False, True),
+                        ("PC_no_context", True, False),
+                        ("PC_all_disabled", False, False))
+            snapshots = {"RawCNN": (raw_metrics, raw_private)}
+            for name, physiology, context in variants:
+                snapshots[name] = evaluate_pc(pc, preprocessor, bank, test_patients,
+                                              "ictal", 0, normalizer, device,
+                                              physiology=physiology, context=context)
+            if any(set(private) != set(test_patients) for _, private in snapshots.values()):
+                raise RuntimeError("Frozen outer fold patient coverage differs before resume save")
+            save_json(fold_cache, {"freeze_sha256": digest(args.freeze),
+                                   "checkpoint_sha256": {name: item["sha256"] for name, item in models.items()},
+                                   "patient_scores": {name: private for name, (_, private) in snapshots.items()}})
         for name, (_, private) in snapshots.items():
             if set(private) != set(test_patients):
                 raise RuntimeError("Frozen outer patient coverage differs")

@@ -90,3 +90,38 @@ because this native code was absent from its allowlist. The allowlist now
 includes `0x80000003`; bounded exact-checkpoint resume remains unchanged.
 The supervisor also starts from the next unused attempt number so the earlier
 private attempt logs cannot be overwritten when the supervisor itself resumes.
+
+## Post-freeze Omni test extraction cohort gate
+
+After all six benchmark/fold selections and the Omni validation threshold were
+hash-frozen, the first test-extraction attempts stopped before reading signals:
+the stable training environment had an unrelated `h5py`/NumPy binary mismatch,
+and the compatible extraction environment exposed a pre-extraction count-gate
+error. The frozen official split has 237 metadata-eligible EDF rows across
+102 patients under the specified filters. The pre-existing historical A1-v2
+`OFFICIAL_COHORT_AUDIT.csv` identifies the 174 EDF/96 patient supervised scope
+used in earlier matched benchmarks (SHA-256
+`e10241ce0e823ced7dd262ed6eda4eeb0ffdbe52082aa4ec771590e253ffaf00`).
+That scope is based on strict known SOZ labels, whereas the PC-CNN classifier
+still uses the previously frozen official outcome/resection/SOZ label rule.
+All 174 audited test EDFs also have at least one label under that official
+rule. Extraction now checks the 237/102 metadata cohort and exact audited
+174/96 subset before any waveform conversion; the frozen test bank verifies
+the same audit hash/membership and requires all 174 files. This fixes the
+cohort gate without choosing a new population from model outcomes. CSV
+`True`/`False` flag strings are parsed identically to pandas booleans; this
+does not alter the completed train extraction. No model, checkpoint,
+threshold, or prediction was changed, and both failed attempts produced zero
+test NPZ files.
+
+## Ictal frozen outer inference interruption
+
+The first post-freeze Ictal inference process completed folds 1–2, then
+exited natively with Windows access violation `0xC0000005` in NumPy; Python
+stderr was empty. The original evaluator wrote final results only after all
+five folds, so the first two folds' in-memory predictions were lost. No
+aggregate outcomes were read or used to change the model. A fold-level
+private, freeze/checkpoint-hash-verified resume cache was added so a future
+native interruption cannot erase completed fold predictions. Folds 1–2 must
+be inferred again once for engineering recovery; this is disclosed as a
+replay, not a fresh independently blinded test.

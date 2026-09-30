@@ -48,6 +48,10 @@ def exact_descriptor_module(path: Path):
 
 
 def flag(value) -> bool:
+    if isinstance(value, str):
+        lowered = value.strip().lower()
+        if lowered in ("true", "false"):
+            return lowered == "true"
     try:
         return float(value) == 1.0
     except (TypeError, ValueError):

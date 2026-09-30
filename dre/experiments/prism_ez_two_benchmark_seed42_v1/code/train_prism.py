@@ -342,7 +342,7 @@ def train_one(args, lock, bank, fit, val, store: TokenStore, protocol_sha: str):
         raise RuntimeError("PRiSM parameter gate failed before training")
     optimizer = torch.optim.AdamW(model.parameters(), lr=float(lock["training"]["lr"]),
                                   weight_decay=float(lock["training"]["weight_decay"]))
-    last, best = work / "last.pt", work / "selected_best.pt"
+    last, best, in_epoch = work / "last.pt", work / "selected_best.pt", work / "in_epoch.pt"
     selected, start, stale = None, 1, 0
     runtime_rows = []
     if last.exists():
@@ -354,6 +354,25 @@ def train_one(args, lock, bank, fit, val, store: TokenStore, protocol_sha: str):
         torch.set_rng_state(state["torch_rng"].detach().cpu())
         if device.type == "cuda": torch.cuda.set_rng_state(state["cuda_rng"].detach().cpu())
         selected, start, stale = state["selected"], int(state["epoch"]) + 1, int(state["stale"])
+        runtime_rows = list(state.get("runtime_rows", []))
+    # GPU driver interruptions on this host can terminate a process without a
+    # Python exception.  This state is written only after a completed patient
+    # optimizer step, so a restart resumes the exact epoch/order/optimizer
+    # state rather than re-running an incomplete epoch.  It is an engineering
+    # recovery point; it neither selects models nor reads any held-out data.
+    resume = None
+    if in_epoch.exists():
+        state = torch.load(in_epoch, map_location=device, weights_only=False)
+        if state["protocol_sha256"] != protocol_sha or state["benchmark"] != args.benchmark or state["fold"] != args.fold:
+            raise RuntimeError("in-epoch resume checkpoint provenance mismatch")
+        if int(state["epoch"]) >= start:
+            model.load_state_dict(state["model_state"]); optimizer.load_state_dict(state["optimizer_state"])
+            random.setstate(state["python_rng"]); np.random.set_state(state["numpy_rng"])
+            torch.set_rng_state(state["torch_rng"].detach().cpu())
+            if device.type == "cuda": torch.cuda.set_rng_state(state["cuda_rng"].detach().cpu())
+            selected, stale = state["selected"], int(state["stale"])
+            runtime_rows = list(state.get("runtime_rows", runtime_rows))
+            start, resume = int(state["epoch"]), state
     max_epochs, patience = int(lock["training"]["max_epochs"]), int(lock["training"]["patience"])
     for epoch in range(start, max_epochs + 1):
         if epoch <= 2:
@@ -361,13 +380,31 @@ def train_one(args, lock, bank, fit, val, store: TokenStore, protocol_sha: str):
         else:
             factor = 0.5 * (1.0 + math.cos(math.pi * (epoch - 2) / max(max_epochs - 2, 1)))
         for group in optimizer.param_groups: group["lr"] = float(lock["training"]["lr"]) * factor
-        model.train(); started = time.perf_counter(); patient_seconds, observed = 0.0, 0
-        shuffled = list(fit); random.shuffle(shuffled)
-        for patient in shuffled:
+        model.train(); started = time.perf_counter()
+        if resume is not None and epoch == int(resume["epoch"]):
+            shuffled = list(resume["patient_order"])
+            patient_start = int(resume["next_patient_index"])
+            observed = int(resume["observed"])
+            elapsed_before = float(resume["elapsed_seconds"])
+        else:
+            shuffled = list(fit); random.shuffle(shuffled)
+            patient_start, observed, elapsed_before = 0, 0, 0.0
+        for patient_index in range(patient_start, len(shuffled)):
+            patient = shuffled[patient_index]
             optimizer.zero_grad(set_to_none=True)
             loss, count = patient_loss(model, patient_groups(store, patient, scaler, device), positive_weight)
             loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), float(lock["training"]["gradient_clip"]))
             optimizer.step(); observed += count
+            atomic_torch(in_epoch, {"protocol_sha256": protocol_sha, "benchmark": args.benchmark,
+                                    "fold": args.fold, "epoch": epoch, "stale": stale,
+                                    "selected": selected, "model_state": model.state_dict(),
+                                    "optimizer_state": optimizer.state_dict(),
+                                    "python_rng": random.getstate(), "numpy_rng": np.random.get_state(),
+                                    "torch_rng": torch.get_rng_state(),
+                                    "cuda_rng": torch.cuda.get_rng_state().detach().cpu() if device.type == "cuda" else None,
+                                    "patient_order": shuffled, "next_patient_index": patient_index + 1,
+                                    "observed": observed, "elapsed_seconds": elapsed_before + time.perf_counter() - started,
+                                    "runtime_rows": runtime_rows, "test_accessed": False})
         metrics, private, _ = prediction(model, store, val, scaler, device)
         current_rank = selection_rank(metrics, epoch, args.benchmark)
         improved = selected is None or tuple(current_rank) > tuple(selected["rank"])
@@ -377,7 +414,7 @@ def train_one(args, lock, bank, fit, val, store: TokenStore, protocol_sha: str):
                                 "selected": selected, "model_state": model.state_dict(), "test_accessed": False})
         else:
             stale += 1
-        seconds = time.perf_counter() - started
+        seconds = elapsed_before + time.perf_counter() - started
         runtime_rows.append({"benchmark": args.benchmark, "fold": args.fold, "epoch": epoch,
                              "seconds_per_epoch": seconds, "train_patients": len(fit),
                              "supervised_train_group_channels": observed, "peak_gpu_memory_bytes":
@@ -389,12 +426,14 @@ def train_one(args, lock, bank, fit, val, store: TokenStore, protocol_sha: str):
                             "optimizer_state": optimizer.state_dict(), "python_rng": random.getstate(),
                             "numpy_rng": np.random.get_state(), "torch_rng": torch.get_rng_state(),
                             "cuda_rng": torch.cuda.get_rng_state().detach().cpu() if device.type == "cuda" else None,
+                            "runtime_rows": runtime_rows,
                             "test_accessed": False})
         print(json.dumps({"status": "EPOCH_COMPLETE", "benchmark": args.benchmark, "fold": args.fold,
                           "epoch": epoch, "validation": metrics, "selected_epoch": selected["epoch"],
                           "early_stop_stale": stale, "seconds": seconds, "test_accessed": False}), flush=True)
         if epoch >= 2 and stale >= patience:
             break
+        resume = None
     if selected is None or not best.exists():
         raise RuntimeError("no PRiSM checkpoint selected")
     state = torch.load(best, map_location=device, weights_only=False); model.load_state_dict(state["model_state"])

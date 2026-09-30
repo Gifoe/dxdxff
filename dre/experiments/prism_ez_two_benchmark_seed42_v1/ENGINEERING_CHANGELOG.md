@@ -15,3 +15,14 @@ rule on irregular masks and singleton support, and verifies finite gradients.
 No data, feature, architecture, loss, optimizer, selection, threshold, or
 split setting changed. Any pre-epoch partial computation is discarded; the
 label-independent token cache and train-only scaler are retained.
+
+## 2026-09-30 — patient-step crash recovery
+
+The server's NVIDIA driver terminated the Ictal process with a native
+`nvcuda64.dll` breakpoint before its first epoch completed. This was not a
+Python/model error and produced no checkpoint or validation result. Training
+now atomically records the model, optimizer, RNG states, fixed shuffled patient
+order, cursor, and accumulated observed labels after each completed patient
+optimizer step. A restart resumes that exact state; it does not replay a
+different epoch order, alter an optimizer update, select a checkpoint, or read
+test data. Epoch-level selection and early stopping remain unchanged.

@@ -31,3 +31,14 @@ The restart supervisor is bounded and only retries the exact development command
 when its captured stderr contains the already observed native Windows/NVIDIA
 failure signature. Python-level and unknown failures stop for diagnosis rather
 than being retried as though they were transient.
+
+## 2026-09-30 — host-level recovery of killed supervisors
+
+On this Windows host, a native GPU interruption can also terminate the Python
+supervisor before it has a chance to record the child exit code or terminal
+status. A separate standard-library host watchdog now relaunches that exact
+supervisor, keeps host-attempt logs separate, and fingerprints the private
+patient-step state after every interruption. It stops after three consecutive
+interruptions that made no resumable progress, and immediately stops on any
+inner Python/non-native failure recorded by the supervisor. It does not import
+the model, load data, or alter training, validation selection, or test access.

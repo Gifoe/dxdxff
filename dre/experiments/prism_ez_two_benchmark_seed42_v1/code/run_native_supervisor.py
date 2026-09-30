@@ -46,6 +46,7 @@ def main() -> None:
     parser.add_argument("--runtime", type=Path, required=True)
     parser.add_argument("--max-native-retries", type=int, default=96)
     parser.add_argument("--retry-delay-seconds", type=float, default=8.0)
+    parser.add_argument("--attempt-prefix", type=str, default="")
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     command = list(args.command)
@@ -60,8 +61,9 @@ def main() -> None:
     status_path = args.runtime / "ictal_native_supervisor_status.json"
     log_dir.mkdir(parents=True, exist_ok=True)
     for attempt in range(1, args.max_native_retries + 1):
-        stdout_path = log_dir / f"attempt_{attempt:03d}.log"
-        stderr_path = log_dir / f"attempt_{attempt:03d}.err"
+        stem = f"{args.attempt_prefix}_attempt_{attempt:03d}" if args.attempt_prefix else f"attempt_{attempt:03d}"
+        stdout_path = log_dir / f"{stem}.log"
+        stderr_path = log_dir / f"{stem}.err"
         atomic_json(status_path, {"status": "RUNNING", "attempt": attempt,
                                   "started_utc": utc_now(), "test_accessed": False})
         with stdout_path.open("w", encoding="utf-8") as stdout, stderr_path.open("w", encoding="utf-8") as stderr:

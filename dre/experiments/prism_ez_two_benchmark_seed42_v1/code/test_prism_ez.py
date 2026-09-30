@@ -105,3 +105,11 @@ def test_native_supervisor_allows_only_known_host_crashes():
     assert is_known_native_failure("returned non-zero exit status 2147483651")
     assert is_known_native_failure("faulting module nvcuda64.dll")
     assert not is_known_native_failure("ValueError: invalid split manifest")
+
+
+def test_host_watchdog_terminal_status_rules():
+    from run_host_watchdog import terminal_state
+    assert terminal_state({"status": "COMPLETE"}) == "complete"
+    assert terminal_state({"status": "STOPPED_NON_NATIVE_FAILURE"}) == "non_native_failure"
+    assert terminal_state({"status": "RUNNING"}) is None
+    assert terminal_state(None) is None

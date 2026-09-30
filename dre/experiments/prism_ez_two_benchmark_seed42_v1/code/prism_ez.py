@@ -156,17 +156,17 @@ def _quantile_statistics(value: Tensor, valid: Tensor, *, dimension: int) -> Ten
             raise RuntimeError("channel without valid windows reached pooling")
         masked = value.masked_fill(~valid[..., None], float("nan"))
         maximum = masked.nan_to_num(nan=float("-inf")).max(dim=1).values
+        quantiles = torch.nanquantile(masked, torch.tensor((0.25, 0.50, 0.75),
+                                                            device=masked.device, dtype=masked.dtype), dim=1)
         return torch.cat((torch.nanmean(masked, dim=1),
-                          torch.nanquantile(masked, 0.25, dim=1),
-                          torch.nanquantile(masked, 0.50, dim=1),
-                          torch.nanquantile(masked, 0.75, dim=1), maximum), dim=1)
+                          quantiles[0], quantiles[1], quantiles[2], maximum), dim=1)
     if not bool(valid.any()):
         raise RuntimeError("record pooling received no valid records")
     masked = value.masked_fill(~valid[:, None], float("nan"))
+    quantiles = torch.nanquantile(masked, torch.tensor((0.25, 0.50, 0.75),
+                                                        device=masked.device, dtype=masked.dtype), dim=0)
     return torch.cat((torch.nanmean(masked, dim=0),
-                      torch.nanquantile(masked, 0.25, dim=0),
-                      torch.nanquantile(masked, 0.50, dim=0),
-                      torch.nanquantile(masked, 0.75, dim=0),
+                      quantiles[0], quantiles[1], quantiles[2],
                       masked.nan_to_num(nan=float("-inf")).max(dim=0).values))
 
 

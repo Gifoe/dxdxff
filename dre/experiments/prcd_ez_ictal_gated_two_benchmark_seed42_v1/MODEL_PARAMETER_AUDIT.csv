@@ -1,0 +1,5 @@
+model,k,input_dimensions_B1,input_dimensions_B2,max_trainable_parameters,budget_lt_25000
+H0,128,128,158,159,True
+H0,256,256,286,287,True
+H1,128,128,158,5121,True
+H1,256,256,286,9217,True

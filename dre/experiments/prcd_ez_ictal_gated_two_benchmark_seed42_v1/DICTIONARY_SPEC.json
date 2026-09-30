@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "groups": 48,
+  "kernels_per_group": 6,
+  "total_kernels": 288,
+  "kernel_length": 9,
+  "input_dimensions": 52,
+  "subset_sizes": [1, 2, 4],
+  "requested_dilations": [1, 2, 4, 8],
+  "valid_dilations_for_59_windows": [1, 2, 4],
+  "dilation_8_exclusion_reason": "length-9 span is 65 and exceeds the frozen 59-window sequence",
+  "weight_pattern": "three +2 and six -1 positions per selected dimension, independently permuted, then whole-kernel L2 normalized",
+  "weight_sum_tolerance": 1e-7,
+  "bias_quantiles": [0.1, 0.25, 0.5, 0.75, 0.9],
+  "bias_quantile_assignment": "SHA256(seed, kernel_id) only",
+  "bias_fit_sample": "lowest 512 SHA256-ranked FIT patient-record-channel sequences",
+  "group_statistics": ["six_winner_occupancies", "six_positive_winner_occupancies", "mean_top1_minus_top2_margin", "longest_positive_run_ratio"],
+  "per_group_dimensions": 14,
+  "per_view_dimensions": 672,
+  "two_view_record_dimensions": 1344,
+  "four_stat_record_pool_dimensions": 5376,
+  "trainable": false
+}

@@ -1,0 +1,24 @@
+{
+  "speed_gate_real_patient": {
+    "records": 3,
+    "channels": 115,
+    "base_feature_seconds": 3.1529384999885224,
+    "dictionary_seconds": 2.07878849998815,
+    "total_seconds": 5.231726999976672
+  },
+  "shared_base_cache": {"patients": 80, "workers": 8, "active_wall_seconds_approx": 30},
+  "clean_parallel_fold_dictionary_wall_seconds": {
+    "fold2": 170.16,
+    "fold3": 159.01,
+    "fold4": 171.75,
+    "fold5": 172.06,
+    "fold1_excluded_reason": "engineering pauses and resume attempts make timestamp span nonrepresentative"
+  },
+  "mrmr_seconds_per_fold_range": [0.55, 0.63],
+  "classifier_candidate_seconds_per_fold_range": [78.45, 88.60],
+  "execution": "five folds concurrent on CPU",
+  "peak_gpu_bytes": 0,
+  "observed_peak_process_ram_bytes": 1301450752,
+  "observed_peak_five_process_aggregate_ram_bytes_approx": 6400000000,
+  "test_accessed": false
+}

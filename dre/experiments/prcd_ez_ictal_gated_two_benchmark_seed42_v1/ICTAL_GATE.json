@@ -1,0 +1,50 @@
+{
+  "status": "STOP_ICTAL_GATE_FAILED",
+  "pass": false,
+  "checks": {
+    "auroc_ge_0_751382": false,
+    "ap_ge_0_576743": false,
+    "positive_folds_ge_3": false,
+    "mrr_ge_0_730038": false,
+    "macro_f1_ge_0_605810": true
+  },
+  "positive_folds": 2,
+  "selected_B1": {
+    "variant": "B1_CD",
+    "config": "K128_H1",
+    "head": "H1",
+    "k": 128,
+    "parameters": 4161,
+    "auroc": 0.6805946201055644,
+    "ap": 0.4848804777122443,
+    "macro_f1": 0.5452211292732554,
+    "ez_f1": 0.292202875539638,
+    "balanced_accuracy": 0.5934080318246405,
+    "mrr": 0.6632314942272077,
+    "top1": 0.5577967416602017
+  },
+  "selected_B2": {
+    "variant": "B2_PRCD",
+    "config": "K128_H1",
+    "head": "H1",
+    "k": 128,
+    "parameters": 5121,
+    "auroc": 0.7300627555652058,
+    "ap": 0.5504349742266617,
+    "macro_f1": 0.6109549331326033,
+    "ez_f1": 0.37551883533013175,
+    "balanced_accuracy": 0.6642480347844055,
+    "mrr": 0.7215368743489817,
+    "top1": 0.6276183087664856
+  },
+  "historical_A1": {
+    "auroc": 0.746382,
+    "ap": 0.576743,
+    "macro_f1": 0.62081,
+    "mrr": 0.740038,
+    "top1": 0.654771
+  },
+  "omni_authorized": false,
+  "outer_test_accessed": false,
+  "test_used_for_tuning": false
+}

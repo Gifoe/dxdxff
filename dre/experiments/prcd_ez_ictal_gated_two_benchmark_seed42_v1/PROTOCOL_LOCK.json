@@ -1,0 +1,48 @@
+{
+  "experiment": "prcd_ez_ictal_gated_two_benchmark_seed42_v1",
+  "status": "ICTAL_DEVELOPMENT_ONLY_UNTIL_GATE",
+  "seed": 42,
+  "source_protocol": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "ictal_fold_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "cohort": {"patients": 80, "seizures": 256, "patient_channels": 7635, "ez_channels": 1743, "folds": 5},
+  "window_input": {
+    "physiology_dimensions": 36,
+    "spectrum_dimensions": 16,
+    "seconds": 2,
+    "hop_seconds": 1,
+    "scaler": "FIT-only median/IQR, clip [-8,8]"
+  },
+  "dictionary": {
+    "groups": 48,
+    "kernels_per_group": 6,
+    "kernel_length": 9,
+    "requested_dilations": [1, 2, 4, 8],
+    "valid_dilations_for_59_windows": [1, 2, 4],
+    "subset_sizes": [1, 2, 4],
+    "views": ["original", "first_difference"],
+    "bias_quantiles": [0.1, 0.25, 0.5, 0.75, 0.9],
+    "bias_source": "FIT-only deterministic activation sample"
+  },
+  "record_pooling": ["mean", "median", "q75", "max"],
+  "patient_coordinates": ["absolute", "median_deviation_without_division", "average_tie_percentile_rank_minus1_plus1"],
+  "feature_selection": {
+    "method": "deterministic patient-balanced relevance plus correlation-redundancy mRMR",
+    "k_candidates": [128, 256],
+    "fit_only": true
+  },
+  "heads": {
+    "H0": {"type": "elastic_net_logistic", "C": [0.1, 1.0, 10.0], "l1_ratio": [0.0, 0.5]},
+    "H1": {"type": "tiny_mlp", "hidden": 32, "dropout": 0.1, "optimizer": "AdamW", "lr": 0.0003, "weight_decay": 0.001, "max_epochs": 40, "patience": 6}
+  },
+  "selection": "validation-only historical fixed-query VLOO with target-excluded epoch and threshold selection",
+  "gate": {
+    "auroc_min": 0.751382,
+    "ap_min": 0.576743,
+    "positive_folds_min": 3,
+    "mrr_min": 0.730038,
+    "macro_f1_min": 0.605810
+  },
+  "omni_authorized_before_gate": false,
+  "outer_test_accessed": false,
+  "test_used_for_tuning": false
+}

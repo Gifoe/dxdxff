@@ -1,0 +1,4 @@
+model,params,benchmark,scope,auroc,ap,macro_f1,ez_f1,balanced_accuracy,mrr,top1,status,test_accessed
+A1,historical,Ictal,historical validation-only 65-target fixed-query VLOO,0.746382,0.576743,0.620810,,,0.740038,0.654771,reference,false
+PRiSM-EZ,75473,Ictal,validation-only historical 65-target fixed-query VLOO,0.7455638496207849,0.5778952161591427,0.6011442132681771,0.3746727012079382,0.6458054449217802,0.7567322726352409,0.669511249030256,complete_validation_only,false
+PRiSM-EZ,75473,Omni,not run,,,,,,,,user_stopped_before_omni,false

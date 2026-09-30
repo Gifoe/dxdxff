@@ -1,0 +1,26 @@
+{
+  "status": "USER_STOPPED_AFTER_ICTAL_DEVELOPMENT",
+  "seed": 42,
+  "trainable_parameters": 75473,
+  "ictal": {
+    "scope": "validation-only historical 65-target fixed-query VLOO",
+    "auroc": 0.7455638496207849,
+    "historical_a1_auroc": 0.746382,
+    "auroc_delta": -0.0008181503792150668,
+    "minimum_auroc_gate_pass": false,
+    "ap": 0.5778952161591427,
+    "historical_a1_ap": 0.576743,
+    "ap_delta": 0.001152216159142627,
+    "ap_preservation_gate_pass": true,
+    "combined_minimum_gate_pass": false
+  },
+  "omni": {
+    "status": "NOT_RUN_USER_STOP",
+    "inner_validation_complete": false,
+    "official_test_accessed": false
+  },
+  "formal_test_accessed": false,
+  "terminal": "INCOMPLETE_USER_STOP",
+  "two_benchmark_terminal_assigned": false,
+  "reason": "Omni development was not run, so PRISM_TWO_BENCHMARK_VIABLE, PRISM_ONE_BENCHMARK_ONLY, and PRISM_ROUTE_FAILED cannot be assigned."
+}

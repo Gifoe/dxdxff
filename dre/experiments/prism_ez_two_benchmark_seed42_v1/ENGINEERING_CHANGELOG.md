@@ -88,3 +88,26 @@ rows for validation-only threshold selection. This changes no metric formula,
 prediction, selection criterion, model state, or data membership. Epoch 1's
 completed patient optimizer steps and their atomic checkpoint are reused;
 validation is simply replayed from that frozen state, with no test access.
+
+## 2026-09-30 — VLOO private-row schema adapter
+
+The validation-only VLOO finalizer initially expected each epoch's private
+prediction payload to already contain one labels/scores vector per patient.
+The trainer intentionally stores the earlier record-level rows instead. The
+finalizer now converts those rows using the exact existing Ictal evaluation
+rule: group by channel, verify label consistency, average record probabilities,
+and sort channel names deterministically. A unit test covers repeated records
+and reordered channels. This is a schema adapter only; VLOO epoch/threshold
+selection, fixed queries, metrics, memberships, and labels are unchanged. The
+failed attempt stopped before writing a public metric file and never opened an
+outer/test source.
+
+The historical fixed-query evaluator permits a random half-channel query to
+contain only one class. In that case its ranking metrics and balanced accuracy
+are undefined and are stored as NaN, while Macro-F1/EZ-F1 remain defined;
+aggregate metrics use `nanmean`. The PRiSM finalizer now exactly reuses this
+established behavior instead of rejecting such a query. It also restores the
+frozen source channel order from each validation patient's already-built token
+cache before applying deterministic query membership. This is necessary
+because query membership is order-sensitive; alphabetical order would not be
+the historical protocol. Token-file hashes are added to the score freeze.

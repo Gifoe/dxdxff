@@ -1,0 +1,6 @@
+benchmark,fold,epochs,mean_seconds_per_epoch,post_vectorization_mean_seconds_per_epoch,peak_gpu_memory_bytes,train_patients,trainable_parameters,note
+Ictal,1,12,157.117022,4.873678,230163456,51,75473,epoch1 includes pre-vectorization interrupted runtime
+Ictal,2,25,4.825833,4.825833,278219776,51,75473,vectorized implementation
+Ictal,3,14,4.550296,4.550296,278219776,50,75473,vectorized implementation
+Ictal,4,14,4.953858,4.953858,278219776,52,75473,vectorized implementation
+Ictal,5,8,4.985380,4.985380,278219776,51,75473,vectorized implementation

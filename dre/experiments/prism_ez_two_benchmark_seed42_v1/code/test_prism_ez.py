@@ -6,7 +6,7 @@ import torch
 
 from prism_ez import (FEATURE_DIM, PRiSMEZ, _quantile_statistics, empirical_rank,
                       parameter_audit, spectral_availability, spectral_sketch)
-from finalize_ictal_vloo import choose_excluding, fixed_query
+from finalize_ictal_vloo import canonical_patient, choose_excluding, fixed_query
 
 
 def test_parameter_gate():
@@ -104,6 +104,22 @@ def test_vloo_epoch_choice_excludes_the_target_labels():
     epoch, threshold = choose_excluding([first, second], ids, ids[0])
     assert epoch == 0 and 0.05 <= threshold <= 0.95
     assert np.array_equal(fixed_query(8, 1, ids[0], 0), fixed_query(8, 1, ids[0], 0))
+
+
+def test_vloo_record_rows_use_historical_patient_channel_mean():
+    rows = [{"channel": ["B", "A"], "label": [0, 1], "score": [.2, .7]},
+            {"channel": ["A", "B"], "label": [1, 0], "score": [.9, .4]}]
+    assert canonical_patient(rows, ["B", "A"]) == {
+        "labels": [0, 1], "scores": [.30000000000000004, .8]}
+
+
+def test_vloo_one_class_query_matches_historical_nan_semantics():
+    from finalize_ictal_vloo import query_metrics
+    metrics = query_metrics(np.zeros(4, dtype=np.int8), np.asarray([-.4, -.1, .2, .3]))
+    assert np.isnan(metrics["auroc"]) and np.isnan(metrics["ap"])
+    assert np.isnan(metrics["mrr"]) and np.isnan(metrics["top1"])
+    assert np.isnan(metrics["balanced_accuracy"])
+    assert np.isfinite(metrics["macro_f1"]) and metrics["ez_f1"] == 0.0
 
 
 def _loop_quantiles(value, valid, dimension):

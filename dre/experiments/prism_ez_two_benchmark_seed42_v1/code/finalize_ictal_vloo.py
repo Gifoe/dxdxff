@@ -14,6 +14,7 @@ import argparse
 import csv
 import hashlib
 import json
+from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -71,19 +72,65 @@ def threshold_metrics(labels: np.ndarray, scores: np.ndarray, threshold: float) 
 
 def query_metrics(labels: np.ndarray, margin: np.ndarray) -> dict[str, float]:
     prediction = margin > 0.0
-    ranking = ranking_metrics(labels, margin)
-    return {
-        "auroc": ranking["auroc"],
-        "ap": ranking["ap"],
-        "mrr": ranking["mrr"],
-        "top1": ranking["top1"],
+    result = {
         "macro_f1": float(f1_score(labels, prediction, average="macro", zero_division=0)),
         "ez_f1": float(f1_score(labels, prediction, pos_label=1, zero_division=0)),
-        "balanced_accuracy": float(balanced_accuracy_score(labels, prediction)),
+        "balanced_accuracy": (float(balanced_accuracy_score(labels, prediction))
+                              if len(np.unique(labels)) == 2 else float("nan")),
     }
+    if len(np.unique(labels)) < 2:
+        result.update({name: float("nan") for name in ("auroc", "ap", "mrr", "top1")})
+        return result
+    result.update(ranking_metrics(labels, margin))
+    return result
 
 
-def load_grid(work: Path, fold: int, protocol_sha: str) -> tuple[list[dict[str, dict]], list[str], dict[str, str]]:
+def canonical_patient(values, channel_order: list[str] | None = None) -> dict[str, list]:
+    """Mean repeated records while retaining historical source channel order."""
+    if isinstance(values, dict) and set(("labels", "scores")) <= set(values):
+        labels = np.asarray(values["labels"], dtype=np.int8)
+        scores = np.asarray(values["scores"], dtype=np.float64)
+    elif isinstance(values, list):
+        by_channel, label = defaultdict(list), {}
+        for record in values:
+            for channel, current_label, score in zip(record["channel"], record["label"], record["score"]):
+                if int(current_label) < 0:
+                    continue
+                if channel in label and label[channel] != int(current_label):
+                    raise RuntimeError("Conflicting ictal channel labels in validation grid")
+                label[channel] = int(current_label)
+                by_channel[channel].append(float(score))
+        channels = ([channel for channel in channel_order if channel in by_channel]
+                    if channel_order is not None else list(by_channel))
+        if len(channels) != len(by_channel) or set(channels) != set(by_channel):
+            raise RuntimeError("Validation rows differ from frozen source channel order")
+        labels = np.asarray([label[channel] for channel in channels], dtype=np.int8)
+        scores = np.asarray([np.mean(by_channel[channel]) for channel in channels], dtype=np.float64)
+    else:
+        raise RuntimeError("Unsupported private validation prediction structure")
+    ranking_metrics(labels, scores)
+    return {"labels": labels.tolist(), "scores": scores.tolist()}
+
+
+def _patient_hash(value: str, size: int = 20) -> str:
+    return hashlib.sha256(value.encode()).hexdigest()[:size]
+
+
+def frozen_channel_order(feature_root: Path, patient: str) -> tuple[list[str], str]:
+    paths = sorted((feature_root / "ictal").glob(f"{_patient_hash(patient)}_*.npz"))
+    if len(paths) != 1:
+        raise RuntimeError("Expected one frozen Ictal token group per validation patient")
+    with np.load(paths[0], allow_pickle=False) as item:
+        if str(item["patient"]) != patient:
+            raise RuntimeError("Frozen token patient hash collision")
+        names = [str(value) for value in item["channel_names"]]
+    if len(names) != len(set(names)):
+        raise RuntimeError("Frozen source channel order contains duplicates")
+    return names, digest(paths[0])
+
+
+def load_grid(work: Path, fold: int, protocol_sha: str,
+              feature_root: Path) -> tuple[list[dict[str, dict]], list[str], dict[str, str]]:
     selection = json.loads((work / "PRISM_VALIDATION_SELECTION.json").read_text(encoding="utf-8"))
     if selection.get("status") != "TRAIN_VALIDATION_COMPLETE" or selection.get("test_accessed"):
         raise RuntimeError(f"Fold {fold} is not a completed validation-only run")
@@ -93,7 +140,7 @@ def load_grid(work: Path, fold: int, protocol_sha: str) -> tuple[list[dict[str, 
     paths = [work / f"validation_epoch_{epoch:02d}_private.json" for epoch in range(1, completed + 1)]
     if not paths or any(not path.is_file() for path in paths):
         raise RuntimeError(f"Fold {fold} has an incomplete validation-prediction grid")
-    grid, hashes = [], {}
+    raw_grid, hashes = [], {}
     for epoch, path in enumerate(paths, 1):
         payload = json.loads(path.read_text(encoding="utf-8"))
         if int(payload.get("epoch", -1)) != epoch:
@@ -101,17 +148,22 @@ def load_grid(work: Path, fold: int, protocol_sha: str) -> tuple[list[dict[str, 
         private = payload.get("private", {})
         if len(private) != 13:
             raise RuntimeError(f"Fold {fold} must have 13 validation patients for historical VLOO")
-        grid.append(private)
+        raw_grid.append(private)
         hashes[path.name] = digest(path)
-    patient_ids = sorted(grid[0])
-    if any(sorted(snapshot) != patient_ids for snapshot in grid):
+    patient_ids = sorted(raw_grid[0])
+    if any(sorted(snapshot) != patient_ids for snapshot in raw_grid):
         raise RuntimeError(f"Fold {fold} validation membership changed across epochs")
+    orders = {}
+    for index, patient in enumerate(patient_ids):
+        orders[patient], order_hash = frozen_channel_order(feature_root, patient)
+        hashes[f"channel_order_source_{index:02d}"] = order_hash
+    grid = [{patient: canonical_patient(snapshot[patient], orders[patient])
+             for patient in patient_ids} for snapshot in raw_grid]
     for snapshot in grid:
         for patient in patient_ids:
             values = snapshot[patient]
-            labels = np.asarray(values["labels"], dtype=np.int8)
-            scores = np.asarray(values["scores"], dtype=np.float64)
-            ranking_metrics(labels, scores)
+            ranking_metrics(np.asarray(values["labels"], dtype=np.int8),
+                            np.asarray(values["scores"], dtype=np.float64))
     return grid, patient_ids, hashes
 
 
@@ -152,13 +204,15 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--runtime", type=Path, required=True)
+    parser.add_argument("--feature-cache", type=Path, required=True)
     parser.add_argument("--protocol", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     protocol_sha = digest(args.protocol)
     freezes, private_selection, private_queries, summary = {}, [], [], []
     for fold in range(1, 6):
-        grid, patient_ids, hashes = load_grid(args.runtime / "ictal" / f"fold{fold}", fold, protocol_sha)
+        grid, patient_ids, hashes = load_grid(args.runtime / "ictal" / f"fold{fold}", fold,
+                                              protocol_sha, args.feature_cache)
         freezes[f"fold{fold}"] = hashes
         rows = []
         for patient in patient_ids:
@@ -180,12 +234,12 @@ def main() -> None:
         summary.append({"benchmark": "Ictal", "fold": fold, "validation_patients": len(patient_ids),
                         "query_cells": len(rows), "mean_selected_epoch": float(np.mean([row["selected_epoch"] for row in selected_rows]),
                         ), "mean_selected_threshold": float(np.mean([row["selected_threshold"] for row in selected_rows]),
-                        ), **{name: float(np.mean([row[name] for row in rows])) for name in METRICS}})
+                        ), **{name: float(np.nanmean([row[name] for row in rows])) for name in METRICS}})
     if len(private_queries) != 1300 or len({row["patient_private"] for row in private_queries}) != 47:
         raise RuntimeError("Historical 65-target x 20-query structure was not reproduced")
     public = {"benchmark": "Ictal", "scope": "validation-only historical 65-target fixed-query VLOO",
               "matched_cells": 65, "query_repetitions": 20, "unique_patients": 47,
-              **{name: float(np.mean([row[name] for row in private_queries])) for name in METRICS}}
+              **{name: float(np.nanmean([row[name] for row in private_queries])) for name in METRICS}}
     freeze = {"status": "ICTAL_VALIDATION_SCORE_FREEZE_COMPLETE", "protocol_sha256": protocol_sha,
               "validation_prediction_hashes": freezes, "matched_cells": 65, "query_repetitions": 20,
               "target_labels_used_for_epoch_or_threshold_selection": False,

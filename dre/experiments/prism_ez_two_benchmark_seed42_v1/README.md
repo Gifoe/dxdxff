@@ -22,3 +22,17 @@ The historical A1 Ictal number is VLOO development and must not be described as
 a paired comparison to a later outer evaluation. Omni official outcomes have
 previously been viewed, so any formal test result is exploratory repeated-test
 evidence, not blind confirmation.
+
+## Stopped scope
+
+The user stopped the experiment after all five Ictal train/validation folds and
+the historical validation-only VLOO summary completed. PRiSM-EZ achieved Ictal
+AUROC `0.745564`, AP `0.577895`, and Macro-F1 `0.601144`. It did not exceed the
+predeclared A1 AUROC gate (`0.746382`), although AP was preserved. Omni
+train/inner-validation was not started, and no outer or official test was
+accessed. This is an incomplete two-benchmark experiment, not evidence for a
+two-benchmark success/failure terminal.
+
+See `FINAL_REPORT.md`, `ICTAL_VALIDATION.csv`, and
+`ICTAL_VALIDATION_SCORE_FREEZE.json`. Private score grids, patient identifiers,
+checkpoints, feature caches, and runtime logs remain off GitHub.

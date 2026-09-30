@@ -125,3 +125,14 @@ private, freeze/checkpoint-hash-verified resume cache was added so a future
 native interruption cannot erase completed fold predictions. Folds 1–2 must
 be inferred again once for engineering recovery; this is disclosed as a
 replay, not a fresh independently blinded test.
+
+## Frozen Omni evaluator import isolation
+
+After extraction, the frozen test evaluator's bank imported `flag` from the
+training-side extraction module. That module imports `h5py` even though the
+evaluator reads only completed NPZ files; the stable PyTorch runtime has an
+unrelated `h5py`/NumPy ABI mismatch. The frozen test bank now contains an exact
+copy of the eight-line boolean parser and no longer imports the extraction
+module. This changes no cohort predicate, label, signal, model, checkpoint,
+numeric threshold, or prediction. The parser equivalence and stable-runtime
+import are checked before launching official inference.

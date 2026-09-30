@@ -10,10 +10,19 @@ from pathlib import Path
 import numpy as np
 
 from train_rawcnn import digest
-from prepare_omni_train import flag
-
-
 HISTORICAL_COHORT_SHA256 = "e10241ce0e823ced7dd262ed6eda4eeb0ffdbe52082aa4ec771590e253ffaf00"
+
+
+def flag(value) -> bool:
+    """Exact official boolean parser, local to avoid extraction-only HDF5 imports."""
+    if isinstance(value, str):
+        lowered = value.strip().lower()
+        if lowered in ("true", "false"):
+            return lowered == "true"
+    try:
+        return float(value) == 1.0
+    except (TypeError, ValueError):
+        return False
 
 
 def numeric(value):

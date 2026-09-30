@@ -66,3 +66,18 @@ selection, and completed checkpoints were not edited. The remaining Omni
 training is resumed with the stable runtime as an engineering workaround.
 The PyTorch runtime change and its numerical audit are disclosed here rather
 than represented as bitwise-identical training.
+
+## Bounded native-failure supervisor for Omni PC-CNN
+
+The stable environment completed Omni RawCNN 10/10 and selected epoch 7
+using only inner validation. Omni PC-CNN Stage B completed and saved epoch 1,
+then its process exited with native Windows access-violation code
+`0xC0000005`; no Python exception or test access occurred. The Stage B
+`last.pt` and selected checkpoint remain intact.
+
+`resume_native_supervisor.py` launches the unmodified Omni PC trainer with
+the same frozen arguments. It retries only known native Windows exit codes,
+resuming from the last complete epoch and retaining separate private logs.
+It stops on a Python-level error, three consecutive failures without a new
+completed checkpoint, or the bounded attempt limit. It does not inspect
+validation scores, change training parameters, or launch any test evaluation.

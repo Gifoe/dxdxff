@@ -1,0 +1,73 @@
+{
+  "experiment": "scm_ez_ictal_gated_two_benchmark_seed42_v1",
+  "status": "ICTAL_FULL_ONLY_UNTIL_GATE",
+  "seed": 42,
+  "source_protocol": "codex/a1-a2-patient-equal-objective-seed42-v1",
+  "ictal_fold_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "ictal_raw_cache_sha256": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+  "ictal_feature_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "cohort": {
+    "patients": 80,
+    "seizures": 256,
+    "patient_channels": 7635,
+    "ez_channels": 1743,
+    "folds": 5,
+    "validation_patients_per_fold": 13,
+    "fixed_query_repetitions": 20
+  },
+  "spectrum": {
+    "window_seconds": 2,
+    "hop_seconds": 1,
+    "window": "periodic Hann",
+    "transform": "rFFT power divided by Hann energy, physical-bin sum, log1p",
+    "fixed_bins": 16,
+    "edges": "log-spaced 1 to 300 Hz",
+    "visibility": "complete bin upper edge <= 0.45*fs; invisible value 0",
+    "normalization": "FIT-only per-visible-bin median/IQR, clip [-8,8]"
+  },
+  "states": [
+    "PRE_EARLY: t<0 and t<=midpoint(min_pre,max_pre)",
+    "PRE_LATE: t<0 and t>midpoint(min_pre,max_pre)",
+    "ONSET_EARLY: 0<=t<5",
+    "ONSET_LATE: 5<=t<10",
+    "SPREAD: 10<=t<30",
+    "LATE: t>=30"
+  ],
+  "matrix": {
+    "self": "C_j-C_k",
+    "patient": "C_j-P_excluding_current_k",
+    "reference": "record-state-frequency median; leave current channel out when >=3 valid channels, all-valid fallback otherwise",
+    "input_shape": [34, 6, 6],
+    "absolute_spectrum_concatenated": false
+  },
+  "model": {
+    "topology": "Conv1x1(34,24)-GELU-DWConv3x3(24)-GELU-Conv1x1(24,24)-GELU-mean+max-mean/std/max seizures-MLP(144,32,1)",
+    "trainable_parameters": 6353,
+    "parameter_budget_strictly_less_than": 15000,
+    "dropout": 0.1
+  },
+  "training": {
+    "objective": "patient-equal weighted BCE",
+    "EZ_to_NEZ_weight": "2:1",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.001,
+    "max_epochs": 40,
+    "patience": 7,
+    "gradient_clip": 1.0,
+    "target_excluded_selection": true,
+    "threshold_grid": "historical 0.05 to 0.95 step 0.05"
+  },
+  "gate": {
+    "auroc_min": 0.751382,
+    "ap_min": 0.576743,
+    "positive_folds_min": 3,
+    "mrr_min": 0.73,
+    "macro_f1_min": 0.606,
+    "strong_auroc_min": 0.77,
+    "strong_ap_min": 0.585
+  },
+  "phase_rule": "FULL Ictal only before gate; no ablation or Omni file when gate fails",
+  "outer_test_accessed": false,
+  "test_used_for_tuning": false
+}

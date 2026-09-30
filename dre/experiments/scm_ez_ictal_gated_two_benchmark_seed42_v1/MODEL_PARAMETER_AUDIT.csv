@@ -1,0 +1,7 @@
+module,parameters,trainable,budget_lt_15000
+conv1x1_34_to_24,840,840,true
+depthwise_conv3x3_24,240,240,true
+conv1x1_24_to_24,600,600,true
+classifier_linear_144_to_32,4640,4640,true
+classifier_linear_32_to_1,33,33,true
+TOTAL,6353,6353,true

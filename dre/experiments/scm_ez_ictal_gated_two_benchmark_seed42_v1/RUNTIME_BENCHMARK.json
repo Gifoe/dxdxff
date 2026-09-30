@@ -1,0 +1,13 @@
+{
+  "device": "CPU",
+  "gpu_memory_bytes": 0,
+  "repetitions": 100,
+  "real_patient_channels": 176,
+  "real_patient_record_channel_matrices": 528,
+  "elapsed_seconds": 0.9275471000000834,
+  "patient_passes_per_second": 107.81123675551463,
+  "channel_scores_per_second": 18974.777668970575,
+  "process_rss_bytes_after_loaded_benchmark": 715952128,
+  "peak_process_rss_bytes": null,
+  "outer_test_accessed": false
+}

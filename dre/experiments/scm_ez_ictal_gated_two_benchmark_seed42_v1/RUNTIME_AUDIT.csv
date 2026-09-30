@@ -1,0 +1,11 @@
+component,fold,device,total_seconds,mean_seconds_per_epoch,channels_or_patients,throughput,notes
+largest_real_patient_feature_and_matrix_speed_gate,,CPU,0.3432921,,164,,5 synchronized records; source-cache load excluded
+private_80_patient_spectral_cache,,CPU,21.0474826,,80,,256 records and 7635 patient-channels
+training,1,CPU,54.6763261,1.2364860,51,,40 epochs
+training,2,CPU,106.1561989,2.3287072,51,,40 epochs; parallel contention
+training,3,CPU,100.4140103,2.2173144,50,,40 epochs; parallel contention
+training,4,CPU,107.4420925,2.3582386,52,,40 epochs; parallel contention
+training,5,CPU,108.6550849,2.3735333,51,,40 epochs; parallel contention
+inference_real_patient,,CPU,0.009275471,,,107.8112 patient passes/s,176 channels and 528 record-channel matrices; 18974.78 channel scores/s
+loaded_inference_process_memory,,CPU,,,715952128 bytes RSS,,peak RSS was not instrumented
+model_memory,,CPU,,,0 GPU bytes,,GPU not used because this 6353-parameter model is faster without launch contention

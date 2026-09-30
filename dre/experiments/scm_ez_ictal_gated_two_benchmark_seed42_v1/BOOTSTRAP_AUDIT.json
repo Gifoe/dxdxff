@@ -1,0 +1,11 @@
+{
+  "status": "SCM_CLUSTER_BOOTSTRAP_COMPLETE_A1_PAIRED_NOT_ESTIMABLE",
+  "draws": 10000,
+  "seed": 42,
+  "cluster_unit": "patient ID across repeated fold targets",
+  "unique_patient_clusters": 47,
+  "SCM_query_cells": 1300,
+  "reason_unpaired": "Only compact A1 fold/overall aggregates are retained; matched A1 patient-query cells are absent. A paired CI cannot be reconstructed without fabrication.",
+  "A1_values_in_csv_are_fixed_public_points": true,
+  "outer_test_accessed": false
+}

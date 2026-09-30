@@ -1,0 +1,23 @@
+{
+  "components": [
+    "16_self_frequency_channels",
+    "16_patient_frequency_channels",
+    "1_self_validity_mask",
+    "1_patient_validity_mask"
+  ],
+  "full_replay_max_abs_difference_by_fold": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "input_shape": [
+    34,
+    6,
+    6
+  ],
+  "interventions_retrained": false,
+  "outer_test_accessed": false,
+  "status": "PASS"
+}

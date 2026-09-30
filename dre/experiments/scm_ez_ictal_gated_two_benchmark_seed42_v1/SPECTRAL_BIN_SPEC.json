@@ -1,0 +1,13 @@
+{
+  "bin_edges_hz": [1.0, 1.428302112142417, 2.0400469235504897, 2.9138033297768047, 4.161791450287818, 5.944295518742343, 8.490249844618393, 12.12664178568528, 17.320508075688775, 24.73891826788607, 35.3346492141403, 50.46855410436799, 72.08434242404265, 102.95821853665736, 147.05544099832827, 210.03959697994685, 300.0],
+  "ictal_sampling_rate_hz": 250.0,
+  "ictal_cutoff_hz": 112.5,
+  "ictal_visible_bins": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+  "invisible_value": 0,
+  "bin_visibility_rule": "complete bin upper edge <= 0.45*fs",
+  "window_seconds": 2,
+  "window_function": "periodic Hann",
+  "power_definition": "abs(rFFT)^2 / sum(Hann^2)",
+  "aggregation": "sum native physical-frequency power within [lower,upper), then log1p",
+  "fit_only_scaler": "median/IQR per visible bin, minimum IQR 1e-6, clip [-8,8]"
+}

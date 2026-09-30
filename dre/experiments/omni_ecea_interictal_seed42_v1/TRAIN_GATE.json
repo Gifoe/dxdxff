@@ -1,0 +1,11 @@
+{
+  "status": "NOT_REACHED_EVENT_EVIDENCE_UNAVAILABLE",
+  "event_source_gate_pass": false,
+  "baseline_replay_pass": true,
+  "train_oof_started": false,
+  "train_oof_predictions_created": false,
+  "adapter_parameters_fit": false,
+  "model_frozen_before_test": false,
+  "official_test_accessed_for_ecea": false,
+  "reason": "The protocol forbids fitting ECEA without a frozen official pathological-event checkpoint or existing 3label predictions."
+}

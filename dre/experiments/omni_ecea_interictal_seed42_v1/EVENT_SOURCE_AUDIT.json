@@ -1,0 +1,52 @@
+{
+  "annotation_parquet_files": 54,
+  "annotation_schemas": [
+    [
+      "artifact",
+      "detector",
+      "edf_file",
+      "hfo_waveforms",
+      "method",
+      "spike"
+    ]
+  ],
+  "annotations_are_task2_inference_outputs": false,
+  "checkpoint_files_scanned": 970,
+  "cnn_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "event_checkpoint_candidates": [],
+  "event_output_files_scanned": 17898,
+  "event_output_hits": [],
+  "frozen_segment_predictions_sha256": "18b9b1660762daffb2a6eb1120c47a5f497c746c3d612ef24949da93586d9ab9",
+  "hard_event_evidence_available": false,
+  "hfo_candidate_columns": [
+    "detector",
+    "end",
+    "file_name",
+    "name",
+    "participant",
+    "session",
+    "start"
+  ],
+  "hfo_candidate_files": 1014,
+  "hfo_candidates_are_three_class_predictions": false,
+  "new_event_model_trained": false,
+  "official_inference_requires_model_path": true,
+  "official_inference_source": "E:\\DRE-nips\\new-pipeline\\7-11\\omni_ecea_interictal_seed42_v1\\code\\official_inference_3label.py",
+  "official_inference_source_exists": true,
+  "official_inference_source_sha256": "29c19a70cffe96a3d74550db61d0cf3e0bff576e9030196451ddc3e8c85dc7ac",
+  "official_repository_bundles_event_checkpoint": false,
+  "official_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "reason": "No official event checkpoint and no existing per-event 3label_pred or pathological_probability outputs were found. HFO candidate timestamps and limited artifact/spike annotation tables do not satisfy the protocol fallback.",
+  "searched_roots": [
+    "F:\\Omni-iEEG",
+    "E:\\DRE-nips\\new-pipeline\\7-11",
+    "C:\\omni_pr_residual_seed42_runtime",
+    "C:\\pc_cnn_seed42_runtime",
+    "C:\\prcd_ez_seed42_runtime",
+    "C:\\prism_ez_seed42_runtime",
+    "C:\\scm_ez_seed42_runtime"
+  ],
+  "soft_event_evidence_available": false,
+  "status": "EVENT_EVIDENCE_UNAVAILABLE",
+  "task2_test_accessed": false
+}

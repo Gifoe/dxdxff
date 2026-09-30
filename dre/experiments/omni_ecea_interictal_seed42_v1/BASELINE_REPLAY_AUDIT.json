@@ -1,0 +1,20 @@
+{
+  "status": "PASS_REUSED_FROZEN_PREDICTIONS",
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected_auroc": 0.7987673466324111,
+  "observed_auroc": 0.7987673466324111,
+  "absolute_error": 0.0,
+  "tolerance": 1e-05,
+  "segment_rows": 240074,
+  "labeled_edf_channel_pairs": 8104,
+  "pathological_pairs": 807,
+  "normal_pairs": 7297,
+  "patient_clusters": 96,
+  "aggregation": "sigmoid segment logits, then mean within (edf_name, channel)",
+  "segment_predictions_sha256": "18b9b1660762daffb2a6eb1120c47a5f497c746c3d612ef24949da93586d9ab9",
+  "channel_predictions_sha256": "d8a500a578c613d177e6513c8692040ab25d5fe0da64fba22631b7b9ae4eaa14",
+  "source_audit": "../omni_cnn_threshold_f1_audit_seed42_v1/FROZEN_PREDICTION_REPLAY_AUDIT.json",
+  "source_audit_sha256": "17cadd171cc75347359e7e90f4f957f205a1170e4534bb302ee4c1d991190308",
+  "model_rerun": false,
+  "predictions_adjusted": false
+}

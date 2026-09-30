@@ -1,0 +1,53 @@
+{
+  "experiment": "omni_ecea_interictal_seed42_v1",
+  "branch": "codex/omni-ecea-interictal-seed42-v1",
+  "seed": 42,
+  "prompt_sha256": "b7b1019b99f9e710e6e3b03966f4058c1234710a8cbcbad4d190b86e6fcea4a8",
+  "official_code_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "benchmark": "Omni-iEEG Task 2 interictal only",
+  "frozen_cnn_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected_baseline_auroc": 0.7987673466324111,
+  "baseline_absolute_tolerance": 1e-05,
+  "baseline_aggregation": "sigmoid each segment logit, then arithmetic mean within (edf_name, channel)",
+  "pathological_positive_orientation": true,
+  "adapter": {
+    "trainable_parameters": ["a", "beta", "gamma"],
+    "parameter_count": 3,
+    "lambda": "3*tanh(a)",
+    "initialization": {"a": 0.0, "beta": 0.0, "gamma": 0.0},
+    "tail_fraction": 0.2,
+    "intercept": false
+  },
+  "event_evidence_gate": {
+    "allowed": [
+      "frozen official event checkpoint with soft pathological_probability",
+      "existing frozen hard 3label_pred output"
+    ],
+    "forbidden": [
+      "training a new Task-2-specific event detector",
+      "using Task-2 TEST channel labels for event evidence",
+      "treating raw HFO candidates as pathological predictions"
+    ],
+    "terminal_if_missing": "EVENT_EVIDENCE_UNAVAILABLE"
+  },
+  "train_cv": {
+    "folds": 5,
+    "patient_disjoint": true,
+    "optimizer": "AdamW",
+    "learning_rate": 0.01,
+    "weight_decay": 0.0,
+    "max_epochs": 500,
+    "patience": 50,
+    "patient_equal_bce": true,
+    "pathological_class_weight": 2.0
+  },
+  "oof_gate": {
+    "minimum_delta_auroc": 0.003,
+    "minimum_delta_ap": 0.0,
+    "minimum_nonnegative_fold_deltas": 4,
+    "full_vs_best_component_tolerance": -0.001
+  },
+  "test_policy": "No official TEST evaluation unless event source, baseline, OOF viability, and mechanism gates all pass; then exactly one frozen pass.",
+  "test_driven_tuning": false
+}

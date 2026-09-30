@@ -1,0 +1,27 @@
+{
+  "terminal": "EVENT_EVIDENCE_UNAVAILABLE",
+  "produced": [
+    "PROTOCOL_LOCK.json",
+    "BASELINE_REPLAY_AUDIT.json",
+    "EVENT_SOURCE_AUDIT.json",
+    "EVENT_SOURCE_AUDIT.md",
+    "SCORE_SEMANTICS.md",
+    "TRAIN_GATE.json",
+    "FINAL_REPORT.md"
+  ],
+  "not_produced_by_protocol": {
+    "EVENT_ALIGNMENT_AUDIT.json": "No allowed event predictions exist to align.",
+    "EVENT_SCALER.json": "No allowed TRAIN event burden exists to fit a scaler.",
+    "TRAIN_OOF_FOLD_METRICS.csv": "OOF fitting is downstream of the failed event-source gate.",
+    "TRAIN_OOF_SUMMARY.csv": "OOF fitting is downstream of the failed event-source gate.",
+    "TRAIN_OOF_PARAMETERS.csv": "No adapter parameter was fitted.",
+    "FINAL_ADAPTER_PARAMETERS.json": "The OOF gate was never reached.",
+    "MODEL_FREEZE_BEFORE_TEST.json": "No adapter exists to freeze.",
+    "TEST_METRICS.csv": "Official TEST was not accessed for ECEA.",
+    "PAIRED_BOOTSTRAP.csv": "No ECEA TEST predictions exist.",
+    "EVENT_SEGMENT_SHUFFLE.csv": "No ECEA TEST predictions exist.",
+    "EVENT_EVIDENCE_ANALYSIS.csv": "No pathological-event predictions exist.",
+    "CENTER_METRICS.csv": "No ECEA TEST predictions exist.",
+    "ABLATION_SUMMARY.csv": "No ECEA model was fitted."
+  }
+}

@@ -277,7 +277,10 @@ def prediction(model: PRiSMEZ, store: TokenStore, patients: list[str], scaler: R
                              "score": torch.sigmoid(logits[chosen]).cpu().numpy().astype(float).tolist(),
                              "edf": group["group"] if group["is_edf"] else ""})
             result[patient] = rows
-    metrics = ictal_validation(result) if store.benchmark == "ictal" else omni_validation(result)
+    # The shared validated metric functions return ``(aggregate, private)``.
+    # PRiSM retains its own record-level ``result`` for validation-only
+    # threshold selection, so only the aggregate half is consumed here.
+    metrics, _ = ictal_validation(result) if store.benchmark == "ictal" else omni_validation(result)
     diag = {"gate": np.concatenate(gate_values) if gate_values else np.empty((0, 48)),
             "spectral_rank": np.concatenate(spectral_rank) if spectral_rank else np.empty((0, 32))}
     return metrics, result, diag

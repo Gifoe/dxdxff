@@ -30,6 +30,42 @@ def test_rank_single_ties_and_permutation_equivariance():
                           rank[permutation])
 
 
+def _scalar_empirical_rank(values, channel_mask, window_mask):
+    channels, steps, features = values.shape
+    out = torch.zeros_like(values)
+    for step in range(steps):
+        active = torch.nonzero(channel_mask & window_mask[:, step], as_tuple=False).flatten()
+        count = int(active.numel())
+        if count <= 1:
+            continue
+        table = values[active, step]
+        ordered, order = torch.sort(table, dim=0, stable=True)
+        ranks = torch.empty_like(table)
+        for feature in range(features):
+            cursor = 0
+            while cursor < count:
+                end = cursor + 1
+                while end < count and bool(ordered[end, feature] == ordered[cursor, feature]):
+                    end += 1
+                average = (float(cursor + 1) + float(end)) / 2.0
+                ranks[order[cursor:end, feature], feature] = average
+                cursor = end
+        out[active, step] = 2.0 * (ranks - 1.0) / float(count - 1) - 1.0
+    return out
+
+
+def test_batched_rank_matches_scalar_rule_with_masks_and_ties():
+    torch.manual_seed(19)
+    values = torch.randint(-2, 3, (11, 9, 7), dtype=torch.int64).float()
+    channel_mask = torch.tensor([True, False, True, True, True, False, True, True, True, True, True])
+    window_mask = torch.rand(11, 9) > .25
+    window_mask[:, 0] = False
+    window_mask[0, 0] = True  # singleton slice must remain zero
+    window_mask[:, 1] = True
+    assert torch.equal(empirical_rank(values, channel_mask, window_mask),
+                       _scalar_empirical_rank(values, channel_mask, window_mask))
+
+
 def test_spectral_native_frequency_mask_and_finiteness():
     waveform = np.random.default_rng(42).normal(size=(2, 15000)).astype(np.float32)
     valid = np.ones((2, 59), dtype=bool)
@@ -89,15 +125,28 @@ def test_vectorized_masked_quantiles_match_the_original_rule_and_gradients():
                               [False, True, True, True, True, True, True],
                               [True, False, True, False, True, False, True],
                               [True, False, False, False, False, False, False]])
-    expected_time = _loop_quantiles(time_value, time_mask, 1)
+    expected_input = time_value.detach().clone().requires_grad_(True)
+    expected_time = _loop_quantiles(expected_input, time_mask, 1)
     actual_time = _quantile_statistics(time_value, time_mask, dimension=1)
     assert torch.allclose(actual_time, expected_time, atol=1e-6, rtol=0.0)
-    actual_time.sum().backward()
+    actual_time.sum().backward(); expected_time.sum().backward()
     assert torch.isfinite(time_value.grad).all()
+    assert torch.allclose(time_value.grad, expected_input.grad, atol=1e-6, rtol=0.0)
     record_value = torch.randn(5, 3)
     record_mask = torch.tensor([True, False, True, True, False])
     assert torch.allclose(_quantile_statistics(record_value, record_mask, dimension=0),
                           _loop_quantiles(record_value, record_mask, 0), atol=1e-6, rtol=0.0)
+    # The production record path pools all channels in one call.
+    record_batch = torch.randn(5, 4, 3)
+    batch_mask = torch.tensor([[True, True, False, True], [True, False, True, True],
+                               [False, True, True, False], [True, False, False, True],
+                               [False, True, True, False]])
+    expected_batch = torch.stack([
+        _loop_quantiles(record_batch[:, channel], batch_mask[:, channel], 0)
+        for channel in range(record_batch.shape[1])
+    ])
+    assert torch.allclose(_quantile_statistics(record_batch, batch_mask, dimension=0),
+                          expected_batch, atol=1e-6, rtol=0.0)
 
 
 def test_native_supervisor_allows_only_known_host_crashes():

@@ -96,32 +96,43 @@ def empirical_rank(values: Tensor, channel_mask: Tensor, window_mask: Tensor) ->
     if values.ndim != 3 or channel_mask.shape != values.shape[:1] or \
             window_mask.shape != values.shape[:2]:
         raise ValueError("rank input shape mismatch")
-    channels, steps, features = values.shape
+    channels = values.shape[0]
+    active = channel_mask[:, None] & window_mask
+    counts = active.sum(dim=0)
+
+    # Sort all window/feature columns in one launch.  Invalid channels are
+    # placed after the signal-valid values and removed again below.  This is
+    # the exact average-tie rank used by the former scalar grouping loop, but
+    # it avoids thousands of Python-driven CUDA synchronizations per record.
+    ordered, order = torch.sort(
+        values.masked_fill(~active[..., None], float("inf")), dim=0, stable=True
+    )
+    position = torch.arange(channels, device=values.device, dtype=torch.long)[:, None, None]
+    valid_sorted = (position < counts[None, :, None]).expand_as(ordered)
+    previous_differs = torch.ones_like(ordered, dtype=torch.bool)
+    if channels > 1:
+        previous_differs[1:] = ordered[1:] != ordered[:-1]
+    group_start_marker = valid_sorted & previous_differs
+    group_start = torch.where(group_start_marker, position, 0).cummax(dim=0).values
+
+    next_differs = torch.ones_like(ordered, dtype=torch.bool)
+    if channels > 1:
+        next_differs[:-1] = ordered[:-1] != ordered[1:]
+    group_end_marker = valid_sorted & next_differs
+    sentinel = torch.full_like(position, channels)
+    group_end = torch.flip(
+        torch.flip(torch.where(group_end_marker, position, sentinel), dims=(0,))
+        .cummin(dim=0).values,
+        dims=(0,),
+    )
+    average_rank = (group_start.to(values.dtype) + group_end.to(values.dtype) + 2.0) / 2.0
+    denominator = (counts - 1).clamp_min(1).to(values.dtype)[None, :, None]
+    sorted_rank = 2.0 * (average_rank - 1.0) / denominator - 1.0
+    sorted_rank = torch.where(valid_sorted & (counts[None, :, None] > 1), sorted_rank,
+                              torch.zeros((), device=values.device, dtype=values.dtype))
     out = torch.zeros_like(values)
-    for step in range(steps):
-        active = torch.nonzero(channel_mask & window_mask[:, step], as_tuple=False).flatten()
-        count = int(active.numel())
-        if count <= 1:
-            continue
-        table = values[active, step]
-        ordered, order = torch.sort(table, dim=0, stable=True)
-        ranks = torch.empty_like(table)
-        # ``torch.unique_consecutive`` does not return group starts per column;
-        # dimensions are small (68), so the transparent scalar grouping is
-        # preferable to a label-dependent or unstable shortcut.
-        for feature in range(features):
-            column = ordered[:, feature]
-            cursor = 0
-            while cursor < count:
-                end = cursor + 1
-                while end < count and bool(column[end] == column[cursor]):
-                    end += 1
-                # ranks are one-based before the prescribed [-1, 1] mapping.
-                average = (float(cursor + 1) + float(end)) / 2.0
-                ranks[order[cursor:end, feature], feature] = average
-                cursor = end
-        out[active, step] = 2.0 * (ranks - 1.0) / float(count - 1) - 1.0
-    return out
+    out.scatter_(0, order, sorted_rank)
+    return out * active[..., None].to(out.dtype)
 
 
 class DepthwiseTemporalMixer(nn.Module):
@@ -146,28 +157,39 @@ def _quantile_statistics(value: Tensor, valid: Tensor, *, dimension: int) -> Ten
     """Mean/Q25/Q50/Q75/max with explicit masking and finite singletons."""
     if dimension not in (0, 1):
         raise ValueError("only record/time pooling is supported")
-    # In the model this helper is called on either [C,T,D] (time) or [R,D]
-    # (records).  NaN-aware reductions exactly exclude padded entries, while
-    # keeping the reductions batched.  The old channel-by-channel implementation
-    # made three separate GPU quantile launches per channel and was needlessly
-    # slow without changing the mathematical pooling rule.
-    if dimension == 1:
-        if not bool(valid.any(dim=1).all()):
-            raise RuntimeError("channel without valid windows reached pooling")
-        masked = value.masked_fill(~valid[..., None], float("nan"))
-        maximum = masked.nan_to_num(nan=float("-inf")).max(dim=1).values
-        quantiles = torch.nanquantile(masked, torch.tensor((0.25, 0.50, 0.75),
-                                                            device=masked.device, dtype=masked.dtype), dim=1)
-        return torch.cat((torch.nanmean(masked, dim=1),
-                          quantiles[0], quantiles[1], quantiles[2], maximum), dim=1)
-    if not bool(valid.any()):
-        raise RuntimeError("record pooling received no valid records")
-    masked = value.masked_fill(~valid[:, None], float("nan"))
-    quantiles = torch.nanquantile(masked, torch.tensor((0.25, 0.50, 0.75),
-                                                        device=masked.device, dtype=masked.dtype), dim=0)
-    return torch.cat((torch.nanmean(masked, dim=0),
-                      quantiles[0], quantiles[1], quantiles[2],
-                      masked.nan_to_num(nan=float("-inf")).max(dim=0).values))
+    if value.ndim != valid.ndim + 1 or value.shape[:-1] != valid.shape:
+        raise ValueError("pooling value/mask shape mismatch")
+    # Move the pooled axis next to the feature axis, yielding [..., N, D].
+    # One stable sort supplies all three linearly interpolated quantiles and
+    # the maximum.  It is algebraically identical to torch.quantile's default
+    # linear rule and avoids nanquantile's slow CUDA path.
+    moved = value.movedim(dimension, -2)
+    moved_valid = valid.movedim(dimension, -1)
+    counts = moved_valid.sum(dim=-1)
+    if not bool((counts > 0).all()):
+        raise RuntimeError("pooling received an empty valid slice")
+    expanded_valid = moved_valid[..., None]
+    ordered = torch.sort(moved.masked_fill(~expanded_valid, float("inf")),
+                         dim=-2, stable=True).values
+    mean = moved.masked_fill(~expanded_valid, 0.0).sum(dim=-2) / counts[..., None].to(value.dtype)
+    q = torch.tensor((0.25, 0.50, 0.75), device=value.device, dtype=value.dtype)
+    location = (counts.to(value.dtype) - 1.0)[..., None] * q
+    lower, upper = location.floor().long(), location.ceil().long()
+    fraction = (location - lower.to(value.dtype))[..., None]
+    feature_count = value.shape[-1]
+    lower_value = torch.gather(
+        ordered, -2, lower[..., None].expand(*lower.shape, feature_count)
+    )
+    upper_value = torch.gather(
+        ordered, -2, upper[..., None].expand(*upper.shape, feature_count)
+    )
+    quantiles = lower_value + (upper_value - lower_value) * fraction
+    last = (counts - 1).long()
+    maximum = torch.gather(
+        ordered, -2, last[..., None, None].expand(*last.shape, 1, feature_count)
+    ).squeeze(-2)
+    return torch.cat((mean, quantiles[..., 0, :], quantiles[..., 1, :],
+                      quantiles[..., 2, :], maximum), dim=-1)
 
 
 class PRiSMEZ(nn.Module):
@@ -235,11 +257,11 @@ class PRiSMEZ(nn.Module):
         stacked, available = torch.stack(embeddings), torch.stack(masks)
         channel_available = available.any(0)
         record_statistics = stacked.new_zeros((expected_channels, EMBEDDING_DIM * 5))
-        for channel in range(expected_channels):
-            if bool(channel_available[channel]):
-                record_statistics[channel] = _quantile_statistics(
-                    stacked[:, channel], available[:, channel], dimension=0
-                )
+        # Pool every available channel over records in a single batched sort.
+        # Missing channels remain zero and outside the projection/classifier.
+        record_statistics[channel_available] = _quantile_statistics(
+            stacked[:, channel_available], available[:, channel_available], dimension=0
+        )
         representation = stacked.new_zeros((expected_channels, EMBEDDING_DIM))
         representation[channel_available] = self.record_projection(record_statistics[channel_available])
         context = representation[channel_available]
@@ -264,4 +286,3 @@ def parameter_audit() -> dict[str, int | bool]:
             "in_recommended_range": bool(50000 <= count <= 90000),
             "no_batchnorm": not any(isinstance(module, nn.modules.batchnorm._BatchNorm)
                                      for module in model.modules())}
-

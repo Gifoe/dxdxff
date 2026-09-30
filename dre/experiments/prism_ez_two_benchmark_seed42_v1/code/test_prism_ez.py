@@ -48,3 +48,8 @@ def test_variable_record_pooling_and_valid_window_mask():
     with torch.no_grad():
         logits = model.forward_group([record, record])
     assert logits.shape == (3,) and torch.isfinite(logits).all()
+    # Missing canonical channels must not be assigned fabricated time quantiles.
+    record["channel_mask"][-1] = False
+    with torch.no_grad():
+        logits = model.forward_group([record, record])
+    assert torch.isfinite(logits).all() and logits[-1].item() == 0.0

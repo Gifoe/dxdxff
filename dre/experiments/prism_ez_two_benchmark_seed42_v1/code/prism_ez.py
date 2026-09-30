@@ -197,7 +197,14 @@ class PRiSMEZ(nn.Module):
         hidden = hidden * window_mask[..., None].to(hidden.dtype)
         for mixer in self.mixers:
             hidden = mixer(hidden) * window_mask[..., None].to(hidden.dtype)
-        embedding = self.time_projection(_quantile_statistics(hidden, window_mask.bool(), dimension=1))
+        active_channels = channel_mask.bool() & window_mask.bool().any(dim=1)
+        # A source record may omit a canonical channel.  It remains outside
+        # rank, pooling, context, loss, and output; padding it with a fake
+        # quantile would violate the valid-channel contract.
+        embedding = hidden.new_zeros((features.shape[0], EMBEDDING_DIM))
+        embedding[active_channels] = self.time_projection(
+            _quantile_statistics(hidden[active_channels], window_mask.bool()[active_channels], dimension=1)
+        )
         if return_gate:
             return embedding, gate, rank
         return embedding

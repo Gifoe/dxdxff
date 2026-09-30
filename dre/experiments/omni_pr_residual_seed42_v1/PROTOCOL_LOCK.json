@@ -1,0 +1,52 @@
+{
+  "experiment": "omni_pr_residual_seed42_v1",
+  "seed": 42,
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "official_cnn_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "frozen_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected_baseline_auroc": 0.7987673466324111,
+  "baseline_absolute_tolerance": 1e-5,
+  "expected_test_pairs": 8104,
+  "expected_test_patients": 96,
+  "expected_test_normal": 7297,
+  "expected_test_pathological": 807,
+  "official_split_sha256": "e329bab57037d649a1995074a7e5ee31c7c002f00ea6f0ee54bd48d67be1dc42",
+  "train_validation_split_sha256": "e0a78307f9f9c172c01353479e45836b6ef15faf28963bdf8be2c2af51e4b12e",
+  "embedding_dimension": 32,
+  "reference": {
+    "unit": "one EDF",
+    "membership": "all signal-valid good channels independent of labels",
+    "median": "leave-one-channel-out; all-channel fallback below three channels",
+    "rank": "per-dimension average-tie percentile mapped to [-1,1]",
+    "scale_division": false
+  },
+  "head": {
+    "input_dimension": 96,
+    "hidden_dimension": 16,
+    "dropout": 0.1,
+    "last_linear_zero_initialized": true,
+    "literal_double_tanh": true,
+    "residual_cap": 0.5,
+    "maximum_trainable_parameters": 2500
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.001,
+    "max_epochs": 20,
+    "patient_equal": true,
+    "pathological_to_normal_weight": "2:1",
+    "checkpoint_primary": "validation pooled EDF-channel AUROC",
+    "checkpoint_ties": ["validation pooled AP", "earlier epoch"],
+    "threshold_source": "validation only"
+  },
+  "aggregation_resolution": {
+    "primary": "mean over segment sigmoid probabilities after adding one EDF-channel residual shift",
+    "reason": "This is the frozen official aggregation that produced 0.7987673466 and preserves exact baseline identity at delta=0.",
+    "mean_logit_then_sigmoid": "diagnostic only because it yields 0.7901418977 on the frozen baseline predictions and contradicts the hard replay gate"
+  },
+  "models": ["FrozenCNN", "ABS-ONLY", "PR-CNN"],
+  "official_test_used_for_selection": false,
+  "historical_test_previously_viewed": true
+}

@@ -81,3 +81,12 @@ resuming from the last complete epoch and retaining separate private logs.
 It stops on a Python-level error, three consecutive failures without a new
 completed checkpoint, or the bounded attempt limit. It does not inspect
 validation scores, change training parameters, or launch any test evaluation.
+
+During Omni PC-CNN Stage C, the driver raised native breakpoint exception
+`0x80000003` in `nvcuda64.dll` after epoch 2. Windows Application Error 1000
+identified the faulting module and exception; trainer stderr was empty, and
+the Stage C epoch-2 checkpoint was complete. The supervisor initially stopped
+because this native code was absent from its allowlist. The allowlist now
+includes `0x80000003`; bounded exact-checkpoint resume remains unchanged.
+The supervisor also starts from the next unused attempt number so the earlier
+private attempt logs cannot be overwritten when the supervisor itself resumes.

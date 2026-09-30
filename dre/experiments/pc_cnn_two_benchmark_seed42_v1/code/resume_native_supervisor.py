@@ -15,7 +15,7 @@ import time
 from pathlib import Path
 
 
-NATIVE_EXITS = {3221225477, 3221225501, 3221226505}  # Windows NTSTATUS
+NATIVE_EXITS = {2147483651, 3221225477, 3221225501, 3221226505}  # Windows NTSTATUS
 
 
 def stamp(paths):
@@ -52,8 +52,11 @@ def main():
                "--omni-official-split", str(args.omni_official_split),
                "--omni-inner-split", str(args.omni_inner_split),
                "--protocol", str(args.protocol), "--runtime", str(args.runtime)]
+    existing_attempts = [int(path.stem.rsplit("_", 1)[-1])
+                         for path in args.runtime.glob("omni_pc_native_attempt_*.log")]
+    first_attempt = max(existing_attempts, default=0) + 1
     no_progress = 0
-    for attempt in range(1, args.max_attempts + 1):
+    for attempt in range(first_attempt, args.max_attempts + 1):
         if marker.is_file():
             published = json.loads(marker.read_text(encoding="utf-8"))
             if published.get("status") == "TRAIN_VALIDATION_COMPLETE" and not published.get("test_accessed"):
@@ -66,6 +69,8 @@ def main():
                          "checkpoint_stamp": before, "test_accessed": False})
         out = args.runtime / f"omni_pc_native_attempt_{attempt:02d}.log"
         err = args.runtime / f"omni_pc_native_attempt_{attempt:02d}.err"
+        if out.exists() or err.exists():
+            raise RuntimeError("Refusing to overwrite an existing native-attempt log")
         with out.open("wb") as output, err.open("wb") as errors:
             result = subprocess.run(command, stdout=output, stderr=errors,
                                     check=False)

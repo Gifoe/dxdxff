@@ -3,12 +3,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
 from pathlib import Path
 
-from common import atomic_json
+
+def atomic_json(path: Path, value) -> None:
+    """Keep the supervisor stdlib-only so it can run outside the GPU env."""
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    os.replace(temporary, path)
 
 
 def main():

@@ -1,0 +1,4 @@
+model,trainable_parameters,frozen_cnn_parameters,under_2500,residual_training_seconds,inference_seconds_from_frozen_cache,residual_inference_overhead_seconds
+FrozenCNN,0,11302241,True,0.0,0.25731090002227575,0.0
+ABS-ONLY,1761,11302241,True,24.59299999999348,1.3789235000149347,1.121612599992659
+PR-CNN,1761,11302241,True,24.67199999996228,0.3163152000051923,0.05900429998291656

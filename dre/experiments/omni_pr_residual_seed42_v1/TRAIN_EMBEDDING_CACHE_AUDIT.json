@@ -1,0 +1,19 @@
+{
+  "all_channels": 21438,
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "cnn_parameter_count_unchanged": true,
+  "edfs": 296,
+  "elapsed_seconds": 351.75,
+  "identity_real_max_abs_error": 0.0,
+  "individual_records_private": true,
+  "labeled_edf_channel_pairs": 13350,
+  "labeled_patients": 141,
+  "mode": "train",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "output_files": 296,
+  "patients": 141,
+  "protocol_sha256": "01c8518b4d0d2317abf9303bf5f95de8c455db5702a5292c9f897be26fc50c3a",
+  "segments": 105753,
+  "source_files": 296,
+  "status": "COMPLETE"
+}

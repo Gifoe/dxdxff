@@ -72,17 +72,18 @@ def main():
     lines = [
         "# Omni PR-Residual seed42 final report", "",
         "This is an exploratory repeated-test benchmark because this official test cohort was viewed in earlier experiments. The residual heads and validation thresholds were frozen before the single residual evaluation; TEST was not used for training, checkpoint selection, threshold selection, or iteration.", "",
-        "| Model | AUROC | AP | Macro-F1 | pathological F1 | BA | sensitivity | specificity | patient-equal AP | MRR | Top1 |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Model | New trainable params | AUROC | AP | Macro-F1 | pathological F1 | BA | sensitivity | specificity | patient-equal AP | MRR | Top1 |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for name in ("FrozenCNN", "ABS-ONLY", "PR-CNN"):
         row = metrics.loc[name]
-        lines.append(f"| {name} | {fmt(row.auroc)} | {fmt(row.ap)} | {fmt(row.macro_f1)} | "
+        lines.append(f"| {name} | {int(parameters.loc[name, 'trainable_parameters'])} | {fmt(row.auroc)} | {fmt(row.ap)} | {fmt(row.macro_f1)} | "
                      f"{fmt(row.pathological_f1)} | {fmt(row.balanced_accuracy)} | {fmt(row.sensitivity)} | "
                      f"{fmt(row.specificity)} | {fmt(row.patient_equal_ap)} | {fmt(row.mrr)} | {fmt(row.top1)} |")
     lines += ["", "## Result", "",
               f"Terminal: **{terminal}**.", "",
               f"PR-CNN AUROC is **{fmt(full.auroc)}**, a delta of **{fmt(full.auroc - baseline.auroc)}** versus the exact frozen CNN. The patient-cluster bootstrap 95% CI is **[{fmt(primary.ci_low)}, {fmt(primary.ci_high)}]**.", "",
+              f"The patient-cluster bootstrap probability Pr(delta > 0) is **{fmt(primary.pr_delta_gt_zero)}**.", "",
               f"Against ABS-ONLY, the AUROC delta is **{fmt(full.auroc - absolute.auroc)}**, with 95% CI **[{fmt(vs_abs.ci_low)}, {fmt(vs_abs.ci_high)}]**.", "",
               "## Required questions", "",
               f"1. **Exact baseline replay?** Yes. AUROC {fmt(baseline.auroc)}; absolute error from 0.7987673466 is {abs(baseline.auroc - 0.7987673466324111):.3g}.",

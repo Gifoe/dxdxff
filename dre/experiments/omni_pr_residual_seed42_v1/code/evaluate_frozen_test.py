@@ -10,21 +10,44 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import torch
+from scipy.special import erf
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 from common import (atomic_json, binary_metrics, center_name, mean_logit_score,
                     percentile_summary, ranking_metrics, relative_features,
                     score_from_segment_logits, sha256, table)
-from official_embedding import ResidualHead
 
 
 MODELS = ("FrozenCNN", "ABS-ONLY", "PR-CNN")
 
 
+class NumpyResidualHead:
+    """Inference-only export of the frozen PyTorch residual head."""
+    def __init__(self, archive, name):
+        key = lambda field: np.asarray(archive[f"{name}::{field}"], dtype=np.float32)
+        self.ln_weight = key("network.0.weight")
+        self.ln_bias = key("network.0.bias")
+        self.fc1_weight = key("network.1.weight")
+        self.fc1_bias = key("network.1.bias")
+        self.fc2_weight = key("network.4.weight")
+        self.fc2_bias = key("network.4.bias")
+
+    def __call__(self, features):
+        value = np.asarray(features, dtype=np.float32)
+        mean = value.mean(axis=1, keepdims=True)
+        variance = ((value - mean) ** 2).mean(axis=1, keepdims=True)
+        value = (value - mean) / np.sqrt(variance + np.float32(1e-5))
+        value = value * self.ln_weight + self.ln_bias
+        value = value @ self.fc1_weight.T + self.fc1_bias
+        value = np.float32(0.5) * value * (np.float32(1.0) + erf(value / np.float32(np.sqrt(2.0))))
+        value = value @ self.fc2_weight.T + self.fc2_bias
+        return (np.float32(0.5) * np.tanh(np.tanh(value))).reshape(-1)
+
+
 def load_records(cache: Path):
     records = []
-    for path in sorted(cache.glob("*.npz")):
+    paths = sorted(cache.glob("*.npz"))
+    for index, path in enumerate(paths, start=1):
         marker = path.with_suffix(".json")
         if not marker.is_file() or json.loads(marker.read_text(encoding="utf-8"))["output_sha256"] != sha256(path):
             raise RuntimeError("Private TEST embedding cache marker mismatch")
@@ -42,6 +65,8 @@ def load_records(cache: Path):
                                    for i in range(len(offsets) - 1)],
                 "fallback": fallback,
             })
+        if index % 25 == 0 or index == len(paths):
+            print(f"loaded_test_embeddings={index}/{len(paths)}", flush=True)
     return records
 
 
@@ -60,26 +85,23 @@ def input_features(record, variant, permutation=None):
 def predict(records, head=None, variant="FrozenCNN", rng=None):
     rows, deltas = [], []
     started = time.perf_counter()
-    if head is not None:
-        head.eval()
-    with torch.inference_mode():
-        for record in records:
-            if variant == "FrozenCNN":
-                delta = np.zeros(len(record["channel"]), dtype=np.float32)
-            else:
-                permutation = rng.permutation(len(record["channel"])) if variant == "shuffle" else None
-                delta = head(torch.from_numpy(input_features(record, variant, permutation))).numpy()
-            normal = score_from_segment_logits(record["segment_logits"], delta)
-            literal = mean_logit_score(record["segment_logits"], delta)
-            deltas.extend(delta.tolist())
-            for channel, label, score, diagnostic, change in zip(
-                    record["channel"], record["label"], normal, literal, delta):
-                if label in (0, 1):
-                    rows.append({"patient": record["patient"], "edf": record["edf"],
-                                 "channel": channel, "y": int(label),
-                                 "score": float(1 - score),
-                                 "mean_logit_score": float(1 - diagnostic),
-                                 "delta": float(change)})
+    for record in records:
+        if variant == "FrozenCNN":
+            delta = np.zeros(len(record["channel"]), dtype=np.float32)
+        else:
+            permutation = rng.permutation(len(record["channel"])) if variant == "shuffle" else None
+            delta = head(input_features(record, variant, permutation))
+        normal = score_from_segment_logits(record["segment_logits"], delta)
+        literal = mean_logit_score(record["segment_logits"], delta)
+        deltas.extend(delta.tolist())
+        for channel, label, score, diagnostic, change in zip(
+                record["channel"], record["label"], normal, literal, delta):
+            if label in (0, 1):
+                rows.append({"patient": record["patient"], "edf": record["edf"],
+                             "channel": channel, "y": int(label),
+                             "score": float(1 - score),
+                             "mean_logit_score": float(1 - diagnostic),
+                             "delta": float(change)})
     return rows, np.asarray(deltas, dtype=np.float64), time.perf_counter() - started
 
 
@@ -120,7 +142,7 @@ def bootstrap(predictions, thresholds, draws=10000):
     comparisons = (("PR-CNN", "FrozenCNN"), ("PR-CNN", "ABS-ONLY"))
     values = {(left, right, metric): [] for left, right in comparisons
               for metric in ("auroc", "ap", "macro_f1", "pathological_f1", "sensitivity", "specificity")}
-    for _ in range(draws):
+    for draw in range(draws):
         sampled = rng.integers(0, len(patients), size=len(patients))
         metric_by_model = {}
         for name, frame in frames.items():
@@ -132,6 +154,8 @@ def bootstrap(predictions, thresholds, draws=10000):
         for left, right in comparisons:
             for metric in ("auroc", "ap", "macro_f1", "pathological_f1", "sensitivity", "specificity"):
                 values[(left, right, metric)].append(metric_by_model[left][metric] - metric_by_model[right][metric])
+        if (draw + 1) % 1000 == 0 or draw + 1 == draws:
+            print(f"patient_bootstrap={draw + 1}/{draws}", flush=True)
     rows = []
     for (left, right, metric), current in values.items():
         current = np.asarray(current, dtype=float)
@@ -147,6 +171,7 @@ def bootstrap(predictions, thresholds, draws=10000):
         rows.append({"comparison": f"{left} - {right}", "metric": metric,
                      "observed_delta": observed, "ci_low": float(np.percentile(current, 2.5)),
                      "ci_high": float(np.percentile(current, 97.5)),
+                     "pr_delta_gt_zero": float(np.mean(current > 0)),
                      "two_sided_p": float(min(1.0, 2 * min(np.mean(current <= 0), np.mean(current >= 0)))),
                      "draws": draws, "seed": 42, "cluster": "patient"})
     return rows
@@ -159,6 +184,7 @@ def main():
     parser.add_argument("--test-audit", type=Path, required=True)
     parser.add_argument("--test-cache", type=Path, required=True)
     parser.add_argument("--official-split", type=Path, required=True)
+    parser.add_argument("--numpy-heads", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     lock = json.loads(args.protocol.read_text(encoding="utf-8"))
@@ -174,15 +200,10 @@ def main():
     records = load_records(args.test_cache)
     if len(records) != 237:
         raise RuntimeError("Expected 237 frozen TEST EDFs")
-    heads = {}
-    for name in ("ABS-ONLY", "PR-CNN"):
-        selected = freeze["checkpoints"][name]
-        path = Path(selected["private_path"])
-        if sha256(path) != selected["sha256"]:
-            raise RuntimeError("Frozen head checkpoint changed")
-        payload = torch.load(path, map_location="cpu", weights_only=False)
-        head = ResidualHead(); head.load_state_dict(payload["model_state_dict"]); head.eval()
-        heads[name] = head
+    with np.load(args.numpy_heads, allow_pickle=False) as archive:
+        if str(archive["freeze_sha256"]) != sha256(args.freeze):
+            raise RuntimeError("NumPy head export is not bound to this freeze")
+        heads = {name: NumpyResidualHead(archive, name) for name in ("ABS-ONLY", "PR-CNN")}
     thresholds = {name: float(freeze["thresholds"][name]["threshold"]) for name in MODELS}
     predictions, delta_by_model, seconds = {}, {}, {}
     predictions["FrozenCNN"], delta_by_model["FrozenCNN"], seconds["FrozenCNN"] = predict(records)
@@ -255,6 +276,8 @@ def main():
         metric = all_metrics(shuffled, thresholds["PR-CNN"])
         shuffle_rows.append({"repeat": repeat, "seed": 42, **metric,
                              "delta_auroc_vs_full": metric["auroc"] - metric_by_model["PR-CNN"]["auroc"]})
+        if (repeat + 1) % 10 == 0:
+            print(f"patient_shuffle_control={repeat + 1}/100", flush=True)
     table(args.output / "PATIENT_SHUFFLE_CONTROL.csv", shuffle_rows)
     status = {
         "status": "ONE_FROZEN_OFFICIAL_TEST_PASS_COMPLETE",

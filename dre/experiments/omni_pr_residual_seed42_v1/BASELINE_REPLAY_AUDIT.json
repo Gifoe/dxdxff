@@ -1,0 +1,18 @@
+{
+  "absolute_error": 8.490868663724171e-08,
+  "aggregation_conflict_delta": -0.008625533842140265,
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected_auroc": 0.7987673466324111,
+  "labeled_edf_channel_pairs": 8104,
+  "mean_logit_then_sigmoid_diagnostic_auroc": 0.7901418976989575,
+  "normal_pairs": 7297,
+  "official_sigmoid_then_mean_auroc": 0.7987674315410977,
+  "pathological_pairs": 807,
+  "patients": 96,
+  "reused_existing_frozen_predictions": true,
+  "segment_predictions_sha256": "18b9b1660762daffb2a6eb1120c47a5f497c746c3d612ef24949da93586d9ab9",
+  "source_audit_sha256": "17cadd171cc75347359e7e90f4f957f205a1170e4534bb302ee4c1d991190308",
+  "status": "PASS",
+  "test_predictions_adjusted": false,
+  "test_used_for_residual_selection": false
+}

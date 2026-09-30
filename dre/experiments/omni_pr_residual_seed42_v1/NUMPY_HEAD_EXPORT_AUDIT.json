@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "27ff362dec24d6a47fe1c72e6fec0f094158083877d08128d47a560bb0bd6876",
+  "max_abs_error": 2.9802322387695312e-08,
+  "private_weight_export_sha256": "e850a039da1aa3c7447d1f4e1d85a9a0039fd4d5b5568b992c81a022fd7af881",
+  "scientific_change": false,
+  "status": "PASS",
+  "tolerance": 1e-06
+}

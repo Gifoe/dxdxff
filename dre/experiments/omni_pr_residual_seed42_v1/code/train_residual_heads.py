@@ -22,7 +22,8 @@ from official_embedding import ResidualHead
 
 def load_records(cache: Path):
     records = []
-    for path in sorted(cache.glob("*.npz")):
+    paths = sorted(cache.glob("*.npz"))
+    for ordinal, path in enumerate(paths, 1):
         marker = path.with_suffix(".json")
         if not marker.is_file() or json.loads(marker.read_text(encoding="utf-8"))["output_sha256"] != sha256(path):
             raise RuntimeError("Private TRAIN embedding cache marker mismatch")
@@ -39,6 +40,9 @@ def load_records(cache: Path):
                 "embedding": embedding, "difference": difference, "rank": rank,
                 "segment_logits": logits, "fallback": fallback,
             })
+        if ordinal % 20 == 0 or ordinal == len(paths):
+            print(json.dumps({"stage": "load_train_embedding_cache",
+                              "ordinal": ordinal, "of": len(paths)}), flush=True)
     return records
 
 

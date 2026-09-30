@@ -1,0 +1,12 @@
+{
+  "baseline_replay_pass": true,
+  "final_heldout_accessed": true,
+  "final_test_used_for_tuning": false,
+  "historical_test_previously_viewed": true,
+  "individual_predictions_kept_private": true,
+  "model_frozen_before_final_test": true,
+  "patients": 96,
+  "posthoc_diagnostics_status": "STOPPED_BY_USER_AFTER_PRIMARY_NO_GAIN",
+  "status": "FROZEN_PRIMARY_TEST_COMPLETE_USER_STOP",
+  "test_rows": 8104
+}

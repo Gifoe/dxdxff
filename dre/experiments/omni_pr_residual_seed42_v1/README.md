@@ -9,3 +9,8 @@ runtime logs are deliberately excluded from Git.
 The exact commands and private paths are recorded on the execution host. Code
 in `code/` is resume-safe for embedding extraction and hard-gates the baseline,
 checkpoint hashes, train/validation split, and pre-test model freeze.
+
+Final primary result: PR-Residual AUROC `0.798489`, below the exact frozen CNN
+replay `0.798767` and ABS-only `0.798727`; terminal `FAIL`. Per the user's
+stop instruction, unfinished secondary bootstrap/center/shuffle diagnostics
+were not continued after the primary no-gain result.

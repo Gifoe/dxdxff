@@ -1,0 +1,14 @@
+{
+  "above_frozen_cnn": false,
+  "above_published_0_8061": false,
+  "at_least_0_815": false,
+  "at_least_0_825": false,
+  "baseline_auroc": 0.7987670919063511,
+  "baseline_replay_absolute_error": 2.5472606002274745e-07,
+  "delta_auroc_pr_minus_abs_only": -0.00023723487050331115,
+  "delta_auroc_pr_minus_frozen_cnn": -0.000277821222722463,
+  "pr_auroc": 0.7984892706836286,
+  "terminal": "FAIL",
+  "test_used_for_tuning": false,
+  "trainable_parameters": 1761
+}

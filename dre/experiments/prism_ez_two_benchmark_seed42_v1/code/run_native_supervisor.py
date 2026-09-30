@@ -58,6 +58,7 @@ def main() -> None:
 
     log_dir = args.runtime / "native_supervisor_attempts"
     status_path = args.runtime / "ictal_native_supervisor_status.json"
+    log_dir.mkdir(parents=True, exist_ok=True)
     for attempt in range(1, args.max_native_retries + 1):
         stdout_path = log_dir / f"attempt_{attempt:03d}.log"
         stderr_path = log_dir / f"attempt_{attempt:03d}.err"

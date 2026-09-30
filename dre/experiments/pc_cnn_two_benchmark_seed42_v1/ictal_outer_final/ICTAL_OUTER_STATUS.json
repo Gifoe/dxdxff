@@ -1,0 +1,9 @@
+{
+  "historical_a1_0_746382_is_development_vloo_not_outer_test": true,
+  "matched_primary_comparison": "PC-CNN_vs_RawCNN",
+  "metric_unit": "patient_x_20_fixed_queries",
+  "patients": 80,
+  "query_rows_per_model": 1600,
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE",
+  "test_used_for_tuning": false
+}

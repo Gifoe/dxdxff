@@ -30,7 +30,13 @@ function Get-ResumeFingerprint([string]$Root) {
         "${relative}:$((Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash)"
     }
     $bytes = [Text.Encoding]::UTF8.GetBytes(($parts -join "`n"))
-    return ([Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($bytes)))
+    $hasher = [Security.Cryptography.SHA256]::Create()
+    try {
+        return (($hasher.ComputeHash($bytes) | ForEach-Object { $_.ToString('x2') }) -join '').ToUpperInvariant()
+    }
+    finally {
+        $hasher.Dispose()
+    }
 }
 
 function Read-InnerStatus([string]$Path) {

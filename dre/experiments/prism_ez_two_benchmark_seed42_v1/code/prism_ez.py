@@ -230,10 +230,14 @@ class PRiSMEZ(nn.Module):
             masks.append(record["channel_mask"].bool())
         stacked, available = torch.stack(embeddings), torch.stack(masks)
         channel_available = available.any(0)
-        channel_vectors = []
+        record_statistics = stacked.new_zeros((expected_channels, EMBEDDING_DIM * 5))
         for channel in range(expected_channels):
-            channel_vectors.append(_quantile_statistics(stacked[:, channel], available[:, channel], dimension=0))
-        representation = self.record_projection(torch.stack(channel_vectors))
+            if bool(channel_available[channel]):
+                record_statistics[channel] = _quantile_statistics(
+                    stacked[:, channel], available[:, channel], dimension=0
+                )
+        representation = stacked.new_zeros((expected_channels, EMBEDDING_DIM))
+        representation[channel_available] = self.record_projection(record_statistics[channel_available])
         context = representation[channel_available]
         mean, maximum = context.mean(0), context.max(0).values
         contextual = torch.cat((representation, representation - mean, representation - maximum), dim=-1)

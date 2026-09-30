@@ -1,0 +1,42 @@
+{
+  "channel_units_per_model": 13350,
+  "folds": 5,
+  "forbidden_identifier_columns": [],
+  "full_trainable_parameters": 3,
+  "metrics_recomputed": {
+    "V0_MEAN": {
+      "ap": 0.8299124532736739,
+      "auroc": 0.9571552722613513
+    },
+    "V1_TAIL_EXCESS": {
+      "ap": 0.8206888088849552,
+      "auroc": 0.9561199700367159
+    },
+    "V2_Q90_EXCESS": {
+      "ap": 0.8218673051910311,
+      "auroc": 0.9561708522462464
+    },
+    "V3_HETEROGENEITY": {
+      "ap": 0.8239535849833771,
+      "auroc": 0.9562953198519063
+    },
+    "V4_FULL_DMIL": {
+      "ap": 0.8223819940586689,
+      "auroc": 0.9562013692667148
+    }
+  },
+  "models": [
+    "V0_MEAN",
+    "V1_TAIL_EXCESS",
+    "V2_Q90_EXCESS",
+    "V3_HETEROGENEITY",
+    "V4_FULL_DMIL"
+  ],
+  "nonnegative_full_folds": 1,
+  "official_test_accessed": false,
+  "patients": 141,
+  "public_predictions_deidentified": true,
+  "status": "PASS",
+  "terminal": "STOP_DMIL_TRAIN_GATE_FAILED",
+  "zero_adapter_identity_max_abs_error": 3.3306690738754696e-16
+}

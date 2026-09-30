@@ -1,0 +1,7 @@
+analysis,segment_group,feature,value,channel_units,baseline_auroc,full_auroc,delta_auroc,segment_count_median
+correlation,all,tail_excess,0.020837834502696724,13350,,,,5.0
+correlation,all,q90_excess,0.017098017080574332,13350,,,,5.0
+correlation,all,heterogeneity,0.00951465028576727,13350,,,,5.0
+stratified_auroc,low,all,,268,0.9702944942381563,0.9694408877507469,-0.0008536064874093974,5.0
+stratified_auroc,medium,all,,13082,0.9571620986380789,0.9562891242181686,-0.0008729744199102996,5.0
+stratified_auroc,high,all,,0,,,,5.0

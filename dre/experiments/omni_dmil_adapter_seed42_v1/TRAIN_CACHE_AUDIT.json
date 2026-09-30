@@ -1,0 +1,13 @@
+{
+  "all_channel_units": 21438,
+  "elapsed_seconds": 2.0160000000032596,
+  "embeddings_read": false,
+  "files": 296,
+  "labeled_channel_units": 13350,
+  "normal_units": 11995,
+  "pathological_units": 1355,
+  "patients": 141,
+  "segments": 105753,
+  "test_data_read": false,
+  "waveforms_read": false
+}

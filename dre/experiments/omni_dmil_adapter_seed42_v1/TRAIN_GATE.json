@@ -1,0 +1,17 @@
+{
+  "baseline_oof_ap": 0.8299124532736739,
+  "baseline_oof_auroc": 0.9571552722613513,
+  "best_single_component": "V3_HETEROGENEITY",
+  "best_single_component_auroc": 0.9562953198519063,
+  "delta_ap": -0.007530459215005059,
+  "delta_auroc": -0.0009539029946364908,
+  "full_oof_ap": 0.8223819940586689,
+  "full_oof_auroc": 0.9562013692667148,
+  "full_vs_best_component_delta": -9.395058519146016e-05,
+  "nonnegative_folds": 1,
+  "official_test_accessed": false,
+  "single_component_dominant": false,
+  "status": "FAIL",
+  "strong_train_signal": false,
+  "terminal": "STOP_DMIL_TRAIN_GATE_FAILED"
+}

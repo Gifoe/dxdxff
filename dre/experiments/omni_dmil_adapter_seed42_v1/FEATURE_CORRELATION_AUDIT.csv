@@ -1,0 +1,11 @@
+left,right,pearson_correlation,absolute_gt_0_95,channel_units
+mean_score,tail_excess,0.32040885316928414,False,21438
+mean_score,q90_excess,0.3933617764461419,False,21438
+mean_score,heterogeneity,0.45125488084465165,False,21438
+mean_score,segment_count,0.019598580411311628,False,21438
+tail_excess,q90_excess,0.9621778274582327,True,21438
+tail_excess,heterogeneity,0.9391777169899301,False,21438
+tail_excess,segment_count,0.04458872499378076,False,21438
+q90_excess,heterogeneity,0.980436400421467,True,21438
+q90_excess,segment_count,0.04149557640151795,False,21438
+heterogeneity,segment_count,0.03472133671128238,False,21438

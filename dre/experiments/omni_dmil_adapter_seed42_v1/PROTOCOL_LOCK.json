@@ -1,0 +1,42 @@
+{
+  "experiment": "omni_dmil_adapter_seed42_v1",
+  "branch": "codex/omni-dmil-adapter-seed42-v1",
+  "seed": 42,
+  "prompt_sha256": "d85fb47515de26e5c4390d0c29800a357d5e9f043ea6c2104081947af74c8dce",
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "official_cnn_revision": "57c22a75a59b5c3a98006806ad42000f6a3fa5b6",
+  "frozen_cnn_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected_test_auroc": 0.7987673466324111,
+  "baseline_tolerance": 1e-05,
+  "train_cache_audit_sha256": "ff343684f0fb3bbb9f7311468f0cc35b2061198530e9e188c0d9ea07c9744147",
+  "expected_train": {"patients": 141, "edfs": 296, "labeled_edf_channel_pairs": 13350},
+  "features": {
+    "tail_excess": "mean(top ceil(0.20*N) pathological segment probabilities) - mean",
+    "q90_excess": "linear Q0.90 pathological segment probability - mean",
+    "heterogeneity": "population standard deviation, ddof=0"
+  },
+  "scaling": "fold-train median/IQR, epsilon=1e-6, clipped to [-5,5]",
+  "adapter": "logit(mean_probability) + beta_T*z_T + beta_Q*z_Q + beta_S*z_S",
+  "trainable_parameters": 3,
+  "intercept": false,
+  "variants": ["V0_MEAN", "V1_TAIL_EXCESS", "V2_Q90_EXCESS", "V3_HETEROGENEITY", "V4_FULL_DMIL"],
+  "cross_validation": {"folds": 5, "patient_disjoint": true, "seed": 42},
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.01,
+    "weight_decay": 0.0,
+    "max_epochs": 500,
+    "patience": 50,
+    "selection": "minimum fold-train patient-equal weighted BCE",
+    "threshold": "maximum Macro-F1 on fold-train predictions",
+    "pathological_to_normal_weight": "2:1"
+  },
+  "gate": {
+    "minimum_full_delta_auroc": 0.003,
+    "minimum_full_delta_ap": 0.0,
+    "minimum_nonnegative_folds": 4,
+    "full_vs_best_component_tolerance": -0.001
+  },
+  "test_policy": "No new TEST evaluation before the complete OOF gate passes; then one frozen evaluation only.",
+  "test_driven_iteration": false
+}

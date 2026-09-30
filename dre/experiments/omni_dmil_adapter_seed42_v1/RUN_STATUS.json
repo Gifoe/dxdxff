@@ -1,0 +1,8 @@
+{
+  "baseline_audit_sha256": "ba20d44c1c041c3ef9e75aa231a9f673bef11ff7bf9d1de51780b1bc8403da05",
+  "official_test_accessed": false,
+  "private_predictions_sha256": "3c1306a88ed35d83bda74be65eef9efb34d598d468062819dc48966e51ea7bfa",
+  "protocol_sha256": "7121f02d4fbe4b29280a56f5e72b40ec338af135a22f4ca9e18fc88a851a3ae8",
+  "public_predictions_deidentified": true,
+  "status": "STOP_DMIL_TRAIN_GATE_FAILED"
+}

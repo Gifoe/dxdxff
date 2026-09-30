@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -138,6 +139,59 @@ def bootstrap_paired(raw_private, pc_private, patients, raw_threshold, pc_thresh
             for key, value in deltas.items()]
 
 
+def prediction_digest(value):
+    payload = json.dumps(value, sort_keys=True, separators=(",", ":"),
+                         allow_nan=False).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def cached_patient_predictions(name, model, preprocessor, bank, patients,
+                               normalizer, device, runtime, freeze_sha,
+                               checkpoint_sha, protocol_sha, official_cnn_sha):
+    """Resume frozen inference only at completed patients after native crashes."""
+    cache = runtime / "omni" / "FROZEN_TEST_PATIENT_CACHE_PRIVATE"
+    cache.mkdir(parents=True, exist_ok=True)
+    result = {}
+    variants = {"PC-CNN": (True, True),
+                "PC_no_physiology": (False, True),
+                "PC_no_context": (True, False),
+                "PC_all_disabled": (False, False)}
+    for ordinal, patient in enumerate(patients):
+        path = cache / f"{name}_{ordinal:03d}.json"
+        binding = {"freeze_sha256": freeze_sha,
+                   "checkpoint_sha256": checkpoint_sha,
+                   "protocol_sha256": protocol_sha,
+                   "official_cnn_sha256": official_cnn_sha,
+                   "model": name, "ordinal": ordinal, "patient": patient,
+                   "cohort_patients": len(patients)}
+        if path.exists():
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            if any(saved.get(key) != value for key, value in binding.items()) or \
+                    saved.get("prediction_sha256") != prediction_digest(
+                        saved.get("prediction")):
+                raise RuntimeError("Frozen patient inference cache provenance mismatch")
+            prediction = saved["prediction"]
+            reused = True
+        else:
+            if name == "RawCNN":
+                _, private = evaluate_raw(model, preprocessor, bank, [patient],
+                                          "omni", 0, device)
+            else:
+                physiology, context = variants[name]
+                _, private = evaluate_pc(model, preprocessor, bank, [patient],
+                                         "omni", 0, normalizer, device,
+                                         physiology=physiology, context=context)
+            prediction = private[patient]
+            save_json(path, {**binding, "prediction": prediction,
+                             "prediction_sha256": prediction_digest(prediction)})
+            reused = False
+        result[patient] = prediction
+        print(json.dumps({"status": "FROZEN_TEST_PATIENT_COMPLETE", "model": name,
+                          "ordinal": ordinal + 1, "of": len(patients),
+                          "reused": reused}), flush=True)
+    return result
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--freeze", type=Path, required=True)
@@ -168,9 +222,12 @@ def main():
     raw_state = torch.load(selected["RawCNN"]["private_path"],
                            map_location=device, weights_only=False)
     raw.load_state_dict(raw_state["raw_state"])
-    raw_validation, raw_private = evaluate_raw(raw, preprocessor, bank,
-                                                patients, "omni", 0, device)
-    del raw_validation
+    freeze_sha, protocol_sha = digest(args.freeze), digest(args.protocol)
+    official_cnn_sha = digest(args.official_cnn)
+    raw_private = cached_patient_predictions(
+        "RawCNN", raw, preprocessor, bank, patients, None, device,
+        args.runtime, freeze_sha, selected["RawCNN"]["sha256"],
+        protocol_sha, official_cnn_sha)
     normalizer_path = args.runtime / "omni" / "fold1" / "descriptor_normalization.json"
     if digest(normalizer_path) != selected["PC-CNN"]["train_fit_descriptor_norm_sha256"]:
         raise RuntimeError("Omni descriptor normalization changed after freeze")
@@ -184,9 +241,10 @@ def main():
                                        ("PC_no_physiology", False, True),
                                        ("PC_no_context", True, False),
                                        ("PC_all_disabled", False, False)):
-        _, private[name] = evaluate_pc(pc, preprocessor, bank, patients, "omni", 0,
-                                       normalizer, device, physiology=physiology,
-                                       context=context)
+        private[name] = cached_patient_predictions(
+            name, pc, preprocessor, bank, patients, normalizer, device,
+            args.runtime, freeze_sha, selected["PC-CNN"]["sha256"],
+            protocol_sha, official_cnn_sha)
     args.output.mkdir(parents=True, exist_ok=True)
     thresholds = {"RawCNN": selected["RawCNN"]["validation_threshold"]["threshold"],
                   "PC-CNN": selected["PC-CNN"]["validation_threshold"]["threshold"]}

@@ -136,3 +136,17 @@ copy of the eight-line boolean parser and no longer imports the extraction
 module. This changes no cohort predicate, label, signal, model, checkpoint,
 numeric threshold, or prediction. The parser equivalence and stable-runtime
 import are checked before launching official inference.
+
+## Frozen Omni inference interruption
+
+The first frozen Omni evaluator exited with no Python traceback or output
+after a Windows `nvcuda64.dll` breakpoint (`0x80000003`). It had not saved
+aggregate metrics or private predictions, so no test outcomes were read or
+used for tuning. The evaluator now writes each completed patient's private
+predictions atomically, bound to the pre-test freeze, selected checkpoint,
+protocol, official CNN source, model variant, patient ordinal and content hash.
+A restart reuses only hash-verified completed patients and replays unfinished
+patients under the same weights, thresholds, cohort and inference functions.
+The synthetic resume test checks reuse and rejects provenance tampering. This
+is an engineering recovery of the interrupted frozen pass, not a new model
+selection or independent blind test.

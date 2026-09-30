@@ -1,0 +1,9 @@
+{
+  "label_free_inputs_only": true,
+  "ties": "average rank",
+  "single_channel_q": 0.0,
+  "permutation_equivariant": true,
+  "tie_expected": -0.5,
+  "tie_observed": -0.5,
+  "complexity": "O(C*T*D log C); no O(C^2) or O(T^2) tensor operation"
+}

@@ -1,0 +1,15 @@
+{
+  "window_seconds": 2,
+  "hop_seconds": 1,
+  "physical_edges_hz": [
+    1.0,
+    300.0
+  ],
+  "bins": 32,
+  "ictal_sampling_rate_hz": 250.0,
+  "trusted_max_hz": 112.5,
+  "unavailable_bins_zero": true,
+  "unavailable_bins_masked": true,
+  "finite": true,
+  "no_upsampling": true
+}

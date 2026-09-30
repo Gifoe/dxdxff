@@ -1,0 +1,60 @@
+{
+  "experiment": "prism_ez_two_benchmark_seed42_v1",
+  "status": "DEVELOPMENT_ONLY_UNTIL_ALL_SELECTIONS_ARE_FROZEN",
+  "seed": 42,
+  "source_branch": "codex/pc-cnn-two-benchmark-seed42-v1",
+  "ictal_fold_manifest_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "omni_official_split_sha256": "e329bab57037d649a1995074a7e5ee31c7c002f00ea6f0ee54bd48d67be1dc42",
+  "omni_inner_train_val_split_sha256": "e0a78307f9f9c172c01353479e45836b6ef15faf28963bdf8be2c2af51e4b12e",
+  "omni_dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "model": {
+    "class": "PRiSMEZ",
+    "trainable_parameter_gate": "<100000",
+    "feature_dimensions": 68,
+    "physiology_dimensions": 36,
+    "spectral_dimensions": 32,
+    "rank_gate": "68->48 sigmoid applied to 68->48 absolute value",
+    "temporal_mixer": "two depthwise Conv1D blocks with kernels 3,7,15 and 144->48 pointwise projection",
+    "pooling": "time and record mean/Q25/Q50/Q75/max; patient mean/max context",
+    "normalization_modules": "LayerNorm only",
+    "prohibited": ["ResNet", "Transformer", "Mamba", "GRU", "LSTM", "GNN", "multi-head attention", "BatchNorm", "activation checkpointing", "ensemble", "fusion", "patient adapter"]
+  },
+  "features": {
+    "windows_seconds": 2,
+    "hop_seconds": 1,
+    "physiology": "validated A1 ABS/DELTA/ZDELTA/LOGR 36D; ictal pre-onset reference and Omni contemporaneous EDF cross-channel median/MAD reference",
+    "spectral": "Hann rFFT periodogram integrated into 32 log-spaced physical 1-300Hz bins with log1p",
+    "native_frequency_ceiling": "0.45*sampling_rate_hz",
+    "scaler": "exact train-patient-only per-feature median/IQR, clip [-8,8]",
+    "rank": "average-tie empirical rank over signal-valid channels for each record/window/feature; C=1 -> q=0; label-free"
+  },
+  "training": {
+    "objective": "patient-equal weighted BCE",
+    "positive_weight": "clip(sqrt(N_negative/N_positive),1,4) from current fit partition only",
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.001,
+    "max_epochs": 30,
+    "warmup_epochs": 2,
+    "scheduler": "cosine decay after warmup",
+    "gradient_clip": 1.0,
+    "patience": 6,
+    "omni_train_clips_per_edf": "deterministic metadata-only maximum 5",
+    "no_grid_search": true,
+    "no_multiple_seeds": true
+  },
+  "selection": {
+    "ictal": ["inner validation AUROC", "AP", "MRR", "earlier epoch"],
+    "omni": ["pooled EDF-channel inner validation AUROC", "pooled AP", "patient AP", "MRR", "earlier epoch"],
+    "omni_threshold": "validation-only macro-F1 after selected checkpoint",
+    "outer_or_official_test_before_freeze": false
+  },
+  "formal_evaluation": {
+    "only_after_all_development_complete": true,
+    "test_used_for_tuning": false,
+    "historical_outcomes_already_viewed": true,
+    "interpretation": "exploratory repeated-test, not blind confirmation",
+    "stop_if_ictal_development_clearly_below_historical_a1": "run Omni inner validation only; do not access Omni official test"
+  },
+  "statistics": {"bootstrap_draws": 10000, "bootstrap_seed": 42, "cluster_unit": "patient"}
+}

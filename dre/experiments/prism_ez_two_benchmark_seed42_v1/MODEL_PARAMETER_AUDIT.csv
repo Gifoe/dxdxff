@@ -1,0 +1,2 @@
+trainable_parameters,parameter_budget,budget_pass,recommended_lower_bound,recommended_upper_bound,in_recommended_range,no_batchnorm
+75473,100000,True,50000,90000,True,True

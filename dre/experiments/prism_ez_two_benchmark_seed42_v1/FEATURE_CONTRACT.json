@@ -1,0 +1,8 @@
+{
+  "input": "[ABS, DELTA, ZDELTA, LOGR] 36D plus 32D physical-frequency sketch",
+  "feature_dimensions": 68,
+  "valid_window_masking": true,
+  "variable_record_count_supported": true,
+  "quantile_pooling_finite_on_single_and_multiple_records": true,
+  "labels_not_accepted_by_rank_or_spectral_feature_functions": true
+}

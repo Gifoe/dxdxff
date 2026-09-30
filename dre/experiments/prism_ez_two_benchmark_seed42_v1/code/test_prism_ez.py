@@ -6,6 +6,7 @@ import torch
 
 from prism_ez import (FEATURE_DIM, PRiSMEZ, empirical_rank, parameter_audit,
                       spectral_availability, spectral_sketch)
+from finalize_ictal_vloo import choose_excluding, fixed_query
 
 
 def test_parameter_gate():
@@ -53,3 +54,17 @@ def test_variable_record_pooling_and_valid_window_mask():
     with torch.no_grad():
         logits = model.forward_group([record, record])
     assert torch.isfinite(logits).all() and logits[-1].item() == 0.0
+
+
+def test_vloo_epoch_choice_excludes_the_target_labels():
+    ids = [f"patient_{index:02d}" for index in range(13)]
+    labels = [0, 1, 0, 1]
+    good, bad = [0.1, 0.9, 0.2, 0.8], [0.9, 0.1, 0.8, 0.2]
+    first = {patient: {"labels": labels, "scores": good} for patient in ids}
+    second = {patient: {"labels": labels, "scores": bad} for patient in ids}
+    # This target favors epoch 2, but it must not influence its own selection.
+    first[ids[0]] = {"labels": labels, "scores": bad}
+    second[ids[0]] = {"labels": labels, "scores": good}
+    epoch, threshold = choose_excluding([first, second], ids, ids[0])
+    assert epoch == 0 and 0.05 <= threshold <= 0.95
+    assert np.array_equal(fixed_query(8, 1, ids[0], 0), fixed_query(8, 1, ids[0], 0))

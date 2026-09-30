@@ -40,3 +40,29 @@ all matched within `atol=1e-6, rtol=1e-5` (four local topology tests passed).
 The backbone BatchNorm state is frozen during PC-CNN training and the FiLM
 input requires gradients, satisfying the reentrant checkpoint preconditions.
 No previously selected checkpoint is regenerated or modified.
+
+## Omni native-runtime fallback after epoch 6
+
+The Omni RawCNN trainer saved complete epoch-boundary checkpoints through
+epoch 6. Three subsequent attempts with the original PyTorch nightly
+`2.12.0.dev20260327+cu128` exited natively in or near BatchNorm
+(`c10_cuda.dll`, illegal instruction, and access violation); a fourth exited
+without Python stderr before saving epoch 7. No official-test data was read.
+The NVIDIA driver reported 616.56 and the GPU was an RTX 5090 with ample free
+memory. No unrelated GPU process was terminated.
+
+Disabling cuDNN was rejected: an official-model synthetic comparison changed
+the maximum output by 0.0241 and maximum gradient by 11.86. An installed
+stable PyTorch `2.11.0+cu128` environment was instead checked against the
+nightly using the same pinned official CNN weights and synthetic input.
+Forward outputs and BatchNorm buffers were exactly equal. Maximum gradient
+drift was 0.0025654, comparable to the 0.0025597 drift obtained by replaying
+the same reference in the original nightly runtime. The stable environment
+loaded the epoch-6 model plus all 76 Adam optimizer slots, and a one-patient
+TRAIN-only smoke step passed. This comparison used no patient outcomes.
+
+The frozen protocol, split, model, optimizer, learning rates, seed, checkpoint
+selection, and completed checkpoints were not edited. The remaining Omni
+training is resumed with the stable runtime as an engineering workaround.
+The PyTorch runtime change and its numerical audit are disclosed here rather
+than represented as bitwise-identical training.

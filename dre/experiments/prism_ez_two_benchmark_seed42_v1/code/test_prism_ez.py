@@ -4,8 +4,8 @@ from __future__ import annotations
 import numpy as np
 import torch
 
-from prism_ez import (FEATURE_DIM, PRiSMEZ, empirical_rank, parameter_audit,
-                      spectral_availability, spectral_sketch)
+from prism_ez import (FEATURE_DIM, PRiSMEZ, _quantile_statistics, empirical_rank,
+                      parameter_audit, spectral_availability, spectral_sketch)
 from finalize_ictal_vloo import choose_excluding, fixed_query
 
 
@@ -68,3 +68,33 @@ def test_vloo_epoch_choice_excludes_the_target_labels():
     epoch, threshold = choose_excluding([first, second], ids, ids[0])
     assert epoch == 0 and 0.05 <= threshold <= 0.95
     assert np.array_equal(fixed_query(8, 1, ids[0], 0), fixed_query(8, 1, ids[0], 0))
+
+
+def _loop_quantiles(value, valid, dimension):
+    if dimension == 1:
+        return torch.stack([torch.cat((chosen.mean(0), torch.quantile(chosen, .25, dim=0),
+                                       torch.quantile(chosen, .50, dim=0),
+                                       torch.quantile(chosen, .75, dim=0), chosen.max(0).values))
+                            for chosen in (value[channel, valid[channel]] for channel in range(len(value)))])
+    chosen = value[valid]
+    return torch.cat((chosen.mean(0), torch.quantile(chosen, .25, dim=0),
+                      torch.quantile(chosen, .50, dim=0), torch.quantile(chosen, .75, dim=0),
+                      chosen.max(0).values))
+
+
+def test_vectorized_masked_quantiles_match_the_original_rule_and_gradients():
+    torch.manual_seed(7)
+    time_value = torch.randn(4, 7, 3, requires_grad=True)
+    time_mask = torch.tensor([[True, True, False, True, False, False, False],
+                              [False, True, True, True, True, True, True],
+                              [True, False, True, False, True, False, True],
+                              [True, False, False, False, False, False, False]])
+    expected_time = _loop_quantiles(time_value, time_mask, 1)
+    actual_time = _quantile_statistics(time_value, time_mask, dimension=1)
+    assert torch.allclose(actual_time, expected_time, atol=1e-6, rtol=0.0)
+    actual_time.sum().backward()
+    assert torch.isfinite(time_value.grad).all()
+    record_value = torch.randn(5, 3)
+    record_mask = torch.tensor([True, False, True, True, False])
+    assert torch.allclose(_quantile_statistics(record_value, record_mask, dimension=0),
+                          _loop_quantiles(record_value, record_mask, 0), atol=1e-6, rtol=0.0)

@@ -147,23 +147,27 @@ def _quantile_statistics(value: Tensor, valid: Tensor, *, dimension: int) -> Ten
     if dimension not in (0, 1):
         raise ValueError("only record/time pooling is supported")
     # In the model this helper is called on either [C,T,D] (time) or [R,D]
-    # (records).  Explicit loops avoid padding values leaking into a quantile.
+    # (records).  NaN-aware reductions exactly exclude padded entries, while
+    # keeping the reductions batched.  The old channel-by-channel implementation
+    # made three separate GPU quantile launches per channel and was needlessly
+    # slow without changing the mathematical pooling rule.
     if dimension == 1:
-        rows = []
-        for channel in range(value.shape[0]):
-            chosen = value[channel, valid[channel]]
-            if not len(chosen):
-                raise RuntimeError("channel without valid windows reached pooling")
-            rows.append(torch.cat((chosen.mean(0), torch.quantile(chosen, 0.25, dim=0),
-                                   torch.quantile(chosen, 0.50, dim=0),
-                                   torch.quantile(chosen, 0.75, dim=0), chosen.max(0).values)))
-        return torch.stack(rows)
-    chosen = value[valid]
-    if not len(chosen):
+        if not bool(valid.any(dim=1).all()):
+            raise RuntimeError("channel without valid windows reached pooling")
+        masked = value.masked_fill(~valid[..., None], float("nan"))
+        maximum = masked.nan_to_num(nan=float("-inf")).max(dim=1).values
+        return torch.cat((torch.nanmean(masked, dim=1),
+                          torch.nanquantile(masked, 0.25, dim=1),
+                          torch.nanquantile(masked, 0.50, dim=1),
+                          torch.nanquantile(masked, 0.75, dim=1), maximum), dim=1)
+    if not bool(valid.any()):
         raise RuntimeError("record pooling received no valid records")
-    return torch.cat((chosen.mean(0), torch.quantile(chosen, 0.25, dim=0),
-                      torch.quantile(chosen, 0.50, dim=0), torch.quantile(chosen, 0.75, dim=0),
-                      chosen.max(0).values))
+    masked = value.masked_fill(~valid[:, None], float("nan"))
+    return torch.cat((torch.nanmean(masked, dim=0),
+                      torch.nanquantile(masked, 0.25, dim=0),
+                      torch.nanquantile(masked, 0.50, dim=0),
+                      torch.nanquantile(masked, 0.75, dim=0),
+                      masked.nan_to_num(nan=float("-inf")).max(dim=0).values))
 
 
 class PRiSMEZ(nn.Module):

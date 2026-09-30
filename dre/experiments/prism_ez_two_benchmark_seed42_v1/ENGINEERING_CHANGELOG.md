@@ -42,3 +42,9 @@ patient-step state after every interruption. It stops after three consecutive
 interruptions that made no resumable progress, and immediately stops on any
 inner Python/non-native failure recorded by the supervisor. It does not import
 the model, load data, or alter training, validation selection, or test access.
+
+The affected host can terminate a Python supervisor together with its GPU child
+without a usable Python exit record. The active launcher is therefore a
+PowerShell watchdog, which remains outside the Python process tree and applies
+the same bounded progress and terminal-failure rules. This changes only host
+recovery; the supervised development command remains byte-for-byte the same.

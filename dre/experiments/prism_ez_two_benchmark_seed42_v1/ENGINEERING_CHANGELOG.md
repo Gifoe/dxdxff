@@ -26,3 +26,8 @@ order, cursor, and accumulated observed labels after each completed patient
 optimizer step. A restart resumes that exact state; it does not replay a
 different epoch order, alter an optimizer update, select a checkpoint, or read
 test data. Epoch-level selection and early stopping remain unchanged.
+
+The restart supervisor is bounded and only retries the exact development command
+when its captured stderr contains the already observed native Windows/NVIDIA
+failure signature. Python-level and unknown failures stop for diagnosis rather
+than being retried as though they were transient.

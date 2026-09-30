@@ -98,3 +98,10 @@ def test_vectorized_masked_quantiles_match_the_original_rule_and_gradients():
     record_mask = torch.tensor([True, False, True, True, False])
     assert torch.allclose(_quantile_statistics(record_value, record_mask, dimension=0),
                           _loop_quantiles(record_value, record_mask, 0), atol=1e-6, rtol=0.0)
+
+
+def test_native_supervisor_allows_only_known_host_crashes():
+    from run_native_supervisor import is_known_native_failure
+    assert is_known_native_failure("returned non-zero exit status 2147483651")
+    assert is_known_native_failure("faulting module nvcuda64.dll")
+    assert not is_known_native_failure("ValueError: invalid split manifest")

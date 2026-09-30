@@ -186,7 +186,12 @@ class PCCNN(nn.Module):
                     gamma.transpose(1, 2).unsqueeze(2))) + scales["beta"] * \
                     torch.tanh(beta.transpose(1, 2).unsqueeze(2))
             if checkpoint_backbone and self.training and torch.is_grad_enabled():
-                embedding = checkpoint(self.raw.cnn, hidden, use_reentrant=False)
+                # The non-reentrant PyTorch checkpoint path can segfault in
+                # its weakref-based recomputation check on this Windows host.
+                # Reentrant recomputation has the same forward and gradient
+                # graph here: the FiLM output requires grad and backbone BN
+                # running state is frozen during PC-CNN training.
+                embedding = checkpoint(self.raw.cnn, hidden, use_reentrant=True)
             else:
                 embedding = self.raw.cnn(hidden)
             embedding_chunks.append(embedding)

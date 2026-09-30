@@ -20,3 +20,23 @@ checkpoint-selection rule, and all completed checkpoints were left unchanged.
   epoch-boundary resume. Eleven local tests passed after the change.
 
 No outcome-driven tuning or test access occurred during this repair.
+
+## Native checkpointing repair during fold5
+
+Ictal fold3 Stage C had one silent native exit after epoch12, but its complete
+epoch checkpoint was retained and a same-command retry finished that fold.
+At ictal fold5 PC-CNN startup, Windows reported access violation
+`0xc0000005`; Python's fault handler located it in the weakref-based
+recomputation check of PyTorch's **non-reentrant** activation checkpoint
+implementation, during backward. Fold5 RawCNN and folds1–4 selections remain
+intact. No fold5 PC-CNN epoch was completed before this crash.
+
+The backbone checkpoint call now uses `use_reentrant=True`. This changes only
+the memory-saving recomputation implementation, not the model forward,
+loss, optimizer, data, or selection protocol. An outcome-free synthetic test
+compared checkpointed and uncheckpointed forward outputs and every trainable
+parameter gradient in both frozen- and trainable-backbone configurations;
+all matched within `atol=1e-6, rtol=1e-5` (four local topology tests passed).
+The backbone BatchNorm state is frozen during PC-CNN training and the FiLM
+input requires gradients, satisfying the reentrant checkpoint preconditions.
+No previously selected checkpoint is regenerated or modified.

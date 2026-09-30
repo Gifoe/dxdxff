@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import torch
 from torch import nn
+from copy import deepcopy
 
 from pc_cnn import PCCNN
 
@@ -92,3 +93,41 @@ def test_streamed_record_identity_and_gradients():
     streamed.sum().backward()
     assert pc.physiology[-1].weight.grad.abs().sum().item() > 0
     assert pc.context_out.weight.grad.abs().sum().item() > 0
+
+
+def test_reentrant_checkpoint_matches_uncheckpointed_gradients():
+    """Check both frozen and trainable backbone cases without outcome data."""
+    torch.manual_seed(42)
+    def synthetic_spectrum(x, sampling_rate):
+        return x[:, None, None, :].expand(-1, 1, 32, -1).contiguous()
+
+    devices = ["cpu"] + (["cuda"] if torch.cuda.is_available() else [])
+    for device in devices:
+        wave = torch.randn(1, 3, 500, device=device)
+        descriptor = torch.randn(1, 3, 59, 36, device=device)
+        valid = torch.ones(1, 3, dtype=torch.bool, device=device)
+        available = torch.ones_like(descriptor)
+        for frozen_backbone in (True, False):
+            reference = PCCNN(SmallOfficialTopology()).to(device).train()
+            candidate = deepcopy(reference)
+            for model in (reference, candidate):
+                model.set_batch_norm_running_state(True)
+                if frozen_backbone:
+                    for parameter in model.raw.parameters():
+                        parameter.requires_grad_(False)
+            plain = reference.forward_record(
+                wave, 250.0, descriptor, valid, available,
+                synthetic_spectrum, channel_chunk=2, checkpoint_backbone=False)
+            checked = candidate.forward_record(
+                wave, 250.0, descriptor, valid, available,
+                synthetic_spectrum, channel_chunk=2, checkpoint_backbone=True)
+            assert torch.equal(plain, checked)
+            plain.square().sum().backward()
+            checked.square().sum().backward()
+            for (name, left), (_, right) in zip(reference.named_parameters(),
+                                                candidate.named_parameters()):
+                if not left.requires_grad:
+                    continue
+                assert left.grad is not None, name
+                assert right.grad is not None, name
+                assert torch.allclose(left.grad, right.grad, atol=1e-6, rtol=1e-5), name

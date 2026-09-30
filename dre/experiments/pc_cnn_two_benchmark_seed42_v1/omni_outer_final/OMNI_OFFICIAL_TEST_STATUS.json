@@ -1,0 +1,8 @@
+{
+  "aggregation_source": "hash_verified_private_frozen_predictions",
+  "edf_channels": 8104,
+  "historical_test_previously_viewed": true,
+  "patients": 96,
+  "status": "ONE_FROZEN_OFFICIAL_TEST_PASS_COMPLETE",
+  "test_used_for_tuning": false
+}

@@ -1,0 +1,7 @@
+model,benchmark,metric_unit,auroc,ap,macro_f1,mrr,top1,comparison_note
+A1 historical,Ictal,47-patient VLOO development reference,0.746382,0.576743,0.620810,0.740038,0.654771,Not paired with this 80-patient frozen outer evaluation
+RawCNN,Ictal,80 patients x 20 fixed queries,0.6481830184814097,0.46376709541207517,0.4635659985923921,0.6252318475279611,0.4883133291219204,Frozen outer aggregate
+PC-CNN,Ictal,80 patients x 20 fixed queries,0.6419947702955844,0.48089463696375045,0.5099457536583203,0.6274076546357187,0.4965255843335439,Frozen outer aggregate
+A1-v2 historical,Omni,Historical supervised scope reference,0.688690,,0.593700,,,Previously reported reference; not re-evaluated here
+RawCNN,Omni,174 EDF / 96 patient frozen supervised cohort,0.6895038768457238,0.1662819450198794,0.5743824163372716,0.4114967899839121,0.3076923076923077,Frozen official-style aggregate; AP is pooled EDF-channel AP
+PC-CNN,Omni,174 EDF / 96 patient frozen supervised cohort,0.7063769310570334,0.20237114317773863,0.5911555115071748,0.43911670615431564,0.3076923076923077,Frozen official-style aggregate; AP is pooled EDF-channel AP

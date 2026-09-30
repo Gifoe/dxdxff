@@ -1,0 +1,3 @@
+model,candidate_unique_scores,pooled_edf_channel_units,source,threshold,validation_macro_f1
+PC-CNN,2702,2700,frozen_inner_validation_only,0.9426153063774109,0.641795155418
+RawCNN,2373,2700,frozen_inner_validation_only,0.9995883345603943,0.633668069391

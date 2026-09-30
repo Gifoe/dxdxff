@@ -1,0 +1,31 @@
+{
+  "status": "ONE_BENCHMARK_ONLY",
+  "frozen_before_test": true,
+  "final_test_used_for_tuning": false,
+  "omni_historical_test_previously_viewed": true,
+  "ictal": {
+    "metric_unit": "80 patients x 20 fixed queries",
+    "rawcnn_auroc": 0.6481830184814097,
+    "pccnn_auroc": 0.6419947702955844,
+    "pccnn_minus_rawcnn_patient_bootstrap_auroc": -0.004779971668562755,
+    "pccnn_minus_rawcnn_auroc_ci95": [-0.04834379050852496, 0.04207257384284651],
+    "historical_a1_development_vloo_auroc": 0.746382,
+    "minimum_gate_pccnn_gt_historical_a1": false,
+    "paired_comparison_to_historical_a1_valid": false
+  },
+  "omni": {
+    "metric_unit": "174 EDF / 96 patient historical supervised scope; pooled EDF-channel AUROC",
+    "rawcnn_auroc": 0.6895038768457238,
+    "pccnn_auroc": 0.7063769310570334,
+    "pccnn_minus_rawcnn_patient_bootstrap_auroc": 0.017705152224970155,
+    "pccnn_minus_rawcnn_auroc_ci95": [0.0010859527453267518, 0.035425750499097894],
+    "pccnn_macro_f1": 0.5911555115071748,
+    "minimum_gate_pccnn_gt_matched_rawcnn": true,
+    "published_timeconv_cnn_reference_auroc": 0.8061,
+    "published_reference_exceeded": false,
+    "strong_gate_0_83": false,
+    "target_gate_0_85": false,
+    "macro_f1_target_0_70": false
+  },
+  "interpretability_limit": "Post-Stage-C PC_all_disabled does not equal the independently selected RawCNN checkpoint because Stage C unfreezes classifier and ResNet layer4; intervention comparisons cannot isolate module effects as originally specified."
+}

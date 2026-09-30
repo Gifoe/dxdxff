@@ -12,6 +12,7 @@ import csv
 import hashlib
 import json
 import math
+import os
 import random
 import sys
 import time
@@ -24,7 +25,10 @@ from sklearn.metrics import f1_score
 
 HERE = Path(__file__).resolve()
 EXPERIMENT = HERE.parents[1]
-PC_CODE = HERE.parents[2] / "pc_cnn_two_benchmark_seed42_v1" / "code"
+_local_shared = HERE.parents[2] / "pc_cnn_two_benchmark_seed42_v1" / "code"
+PC_CODE = Path(os.environ["PRISM_SHARED_CODE"]) if os.environ.get("PRISM_SHARED_CODE") else _local_shared
+if not PC_CODE.is_dir():
+    raise RuntimeError("PRISM_SHARED_CODE must name the validated PC-CNN bank/metric code directory")
 sys.path.insert(0, str(PC_CODE))
 from patient_bank import IctalBank, OmniTrainBank  # noqa: E402
 from raw_metrics import ictal_validation, omni_validation  # noqa: E402

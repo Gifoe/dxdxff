@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "train_edfs": 296,
+  "test_edfs": 237,
+  "train_patients": 141,
+  "test_patients": 102,
+  "train_channel_units": 21438,
+  "test_channel_units": 16543,
+  "train_labeled_channel_units": 13350,
+  "test_labeled_channel_units": 8104,
+  "train_segment_samples": 5920,
+  "test_segment_samples": 4730,
+  "segment_sample_max_per_edf": 20,
+  "private_manifest_sha256": "3e51fc92dece2d25edff6b8e3c5d438a3799f4aa4e049d5dc220a9ddace0bb32",
+  "private_representations_committed": false,
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "train_observed_auroc": 0.9586782930772201,
+  "train_expected_auroc": 0.9586782931,
+  "train_absolute_error": 2.277988908616635e-11,
+  "train_tolerance": 0.0001,
+  "test_observed_auroc": 0.7987673466324111,
+  "test_expected_auroc": 0.7987673466,
+  "test_absolute_error": 3.241107382478958e-11,
+  "test_tolerance": 1e-05,
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "score_orientation": "pathological_probability"
+}

@@ -1,0 +1,13 @@
+analysis_unit,layer,layer_name,segment_dimension,analysis_dimension,auroc,shift_strength,n,patients
+EDF-channel,R0,Input summary,453,906,0.453597772155653,low,37981,243
+deterministic segment sample,R0,Input summary,453,453,0.3951497057311011,low,10650,243
+EDF-channel,R1,TimeConv-1,32,64,0.44210682220937464,low,37981,243
+deterministic segment sample,R1,TimeConv-1,32,32,0.4071391634763728,low,10650,243
+EDF-channel,R2,TimeConv-2,64,128,0.4280017511632366,low,37981,243
+deterministic segment sample,R2,TimeConv-2,64,64,0.3939817724701446,low,10650,243
+EDF-channel,R3,ResNet,512,1024,0.48814232108824585,low,37981,243
+deterministic segment sample,R3,ResNet,512,512,0.501576017084738,low,10650,243
+EDF-channel,R4,32D embedding,32,64,0.4257848342453595,low,37981,243
+deterministic segment sample,R4,32D embedding,32,32,0.4600729244043198,low,10650,243
+EDF-channel,R5,logit,1,2,0.40702448495854915,low,37981,243
+deterministic segment sample,R5,logit,1,1,0.433034326609908,low,10650,243

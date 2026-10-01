@@ -1,0 +1,90 @@
+{
+  "experiment": "omni_representation_shift_audit_seed42_v1",
+  "branch": "codex/omni-representation-shift-audit-seed42-v1",
+  "seed": 42,
+  "prompt_sha256": "1456c2c5d3164fb5f330720ee28f0056707067d944dda70c0e495bca42e47d24",
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "frozen_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "expected_train_full_auroc": 0.9586782931,
+  "expected_test_auroc": 0.7987673466,
+  "train_replay_absolute_tolerance": 0.0001,
+  "test_replay_absolute_tolerance": 1e-05,
+  "score_orientation": "pathological_probability = 1 - sigmoid(normal_logit)",
+  "analysis_unit": "EDF-channel",
+  "channel_aggregation": "componentwise segment mean concatenated with population standard deviation",
+  "segment_sample": "20 deterministic flattened (channel,segment) instances per EDF without replacement using SHA256(EDF)+seed42",
+  "r0": {
+    "dimension_per_segment": 453,
+    "scalars": [
+      "mean",
+      "population_std",
+      "p10_histogram",
+      "p50_histogram",
+      "p90_histogram"
+    ],
+    "frequency_marginal": "mean over 60000 time samples, 224 values",
+    "temporal_marginal": "mean over 224 frequencies then adaptive average pool to 224 equal-width bins",
+    "quantiles": "fixed 256-bin histogram on normalized [0,255] image; returned bin centers; absolute discretization error <=0.5 intensity unit"
+  },
+  "layers": {
+    "R0": {
+      "name": "input_summary",
+      "segment_dim": 453
+    },
+    "R1": {
+      "name": "timeconv1_spatial_mean_std",
+      "segment_dim": 32
+    },
+    "R2": {
+      "name": "timeconv2_spatial_mean_std",
+      "segment_dim": 64
+    },
+    "R3": {
+      "name": "resnet18_avgpool",
+      "segment_dim": 512
+    },
+    "R4": {
+      "name": "resnet18_fc_embedding",
+      "segment_dim": 32
+    },
+    "R5": {
+      "name": "normal_logit",
+      "segment_dim": 1
+    },
+    "P16": {
+      "name": "true_fc_out_input",
+      "segment_dim": 16,
+      "purpose": "task-direction audit only"
+    }
+  },
+  "linear_models": {
+    "penalty": "L2",
+    "C": 1.0,
+    "folds": 5,
+    "scaling": "StandardScaler fit inside each training fold",
+    "domain_class_weight": "balanced",
+    "hyperparameter_search": false,
+    "solver": "lbfgs",
+    "solver_tolerance": 0.001,
+    "max_iterations": 2000,
+    "convergence_warning_policy": "hard_error"
+  },
+  "mmd": {
+    "kernel": "RBF",
+    "max_units_per_domain": 5000,
+    "bandwidth": "median nonzero Euclidean distance on deterministic sample of at most 1000 pooled units",
+    "estimator": "biased quadratic estimate evaluated in blocks"
+  },
+  "prohibitions": [
+    "CNN retraining",
+    "CNN fine-tuning",
+    "BatchNorm updates",
+    "preprocessing changes",
+    "wavelet changes",
+    "score recalibration",
+    "normalization intervention",
+    "adapter implementation",
+    "test-time adaptation"
+  ]
+}

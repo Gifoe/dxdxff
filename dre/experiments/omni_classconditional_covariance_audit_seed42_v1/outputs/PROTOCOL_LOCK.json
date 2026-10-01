@@ -1,0 +1,29 @@
+{
+  "aggregation": "plain mean of frozen segment representations per EDF-channel",
+  "covariance": {
+    "eigen_floor": "1e-6 trace(cov)/d",
+    "primary_weighting": "patient_equal_first_second_moments",
+    "sensitivity_weighting": "channel_equal",
+    "shrinkage": "0.95 cov + 0.05 trace(cov)/d I"
+  },
+  "experiment": "omni_classconditional_covariance_audit_seed42_v1",
+  "frozen_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "hard_stop": "No adapter/model/shrinkage/layer iteration after audit",
+  "kind": "pure_posthoc_audit",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "official_test_used_for_tuning": false,
+  "representations": {
+    "P16": 16,
+    "R4": 32
+  },
+  "seed": 42,
+  "target_labels_for_construction": {
+    "CORAL": false,
+    "TargetFisher": true,
+    "UTC": false,
+    "UTC_Mahalanobis": false,
+    "UTC_diagonal": false
+  },
+  "test_previously_viewed": true,
+  "utc": "target unlabeled covariance plus source labeled delta mean only"
+}

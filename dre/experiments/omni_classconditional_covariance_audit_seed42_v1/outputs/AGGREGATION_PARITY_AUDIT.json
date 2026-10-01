@@ -1,0 +1,21 @@
+{
+  "purpose": "Training-side diagnostic of predeclared natural frozen-CNN score aggregation units; no threshold selection, model change, or test-data access.",
+  "classification_orientation": "pathological_score = 1 - normal_score",
+  "edf_channel_official_sigmoid_then_mean_auroc": 0.9571564412601192,
+  "candidate_diagnostics": {
+    "mean_logit_then_sigmoid_pathological_auroc": 0.9533653475,
+    "first_segment_pathological_auroc": 0.932237644,
+    "last_segment_pathological_auroc": 0.9336169283,
+    "all_segments_pathological_auroc": 0.9312985868,
+    "patient_channel_mean_across_edf_pathological_auroc": 0.937683376
+  },
+  "counts": {
+    "edf_channel_pairs_all": 21438,
+    "edf_channel_pairs_labeled": 13350,
+    "labeled_normal": 11995,
+    "labeled_pathological": 1355,
+    "labeled_segments": 66080,
+    "patient_channel_units": 7322
+  },
+  "conclusion": "None of the enumerated natural aggregation units reproduces the binding TRAIN-FULL reference 0.9586782931. The official EDF-channel rule is the one used for the baseline replay gate."
+}

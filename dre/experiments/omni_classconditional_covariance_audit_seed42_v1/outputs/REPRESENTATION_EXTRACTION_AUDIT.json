@@ -1,0 +1,18 @@
+{
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "input_kind": "pre-existing private 60-second feature NPZs",
+  "model_changed": false,
+  "raw_edf_read": false,
+  "representations": {
+    "P16": {
+      "definition": "frozen fc1 -> relu1 -> bn1 output immediately before fc_out",
+      "dimension": 16
+    },
+    "R4": {
+      "definition": "frozen cnn-block output before the nonlinear classifier head",
+      "dimension": 32
+    }
+  },
+  "test_cache_files": 237,
+  "train_cache_files": 296
+}

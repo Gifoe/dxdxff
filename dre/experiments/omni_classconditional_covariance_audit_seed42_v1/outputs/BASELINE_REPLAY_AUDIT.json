@@ -1,0 +1,16 @@
+{
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "status": "BASELINE_REPLAY_FAILED",
+  "target_unlabeled_channel_units": 16543,
+  "target_unlabeled_patients": 102,
+  "test_auroc": 0.7987677711758444,
+  "test_cache_sha256": "3f5cf9a9111fad6c5843eeaba43108057df961dd6a918d83fc40cc34bb5053ad",
+  "test_expected_auroc": 0.7987673466,
+  "test_labeled_pairs": 8104,
+  "test_labeled_patients": 96,
+  "tolerance": 0.00001,
+  "train_cache_sha256": "a8d1ced2df63b22a487ef81507627532360f45c6dea23a62f931debec0a0b18c",
+  "train_expected_auroc": 0.9586782931,
+  "train_full_auroc": 0.9571564412601192
+}

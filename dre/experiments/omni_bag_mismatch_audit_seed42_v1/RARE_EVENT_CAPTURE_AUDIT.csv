@@ -1,0 +1,8 @@
+row_type,threshold,label_group,channels,full_capture_rate,random5_capture_probability_mean,full_minus_random5,capture_min,capture_p5,capture_p25,capture_median,capture_p75,capture_p95,capture_max,capture_mean,capture_std,capture_n
+group_summary,0.5,normal,11995,0.0681117132138391,0.04675698207586495,0.021354731137974155,,,,,,,,,,
+group_summary,0.5,pathological,1355,0.8472324723247232,0.8029225092250922,0.04430996309963098,,,,,,,,,,
+group_summary,0.7,normal,11995,0.053438932888703626,0.03540391829929137,0.018035014589412257,,,,,,,,,,
+group_summary,0.7,pathological,1355,0.8199261992619926,0.7717859778597785,0.04814022140221408,,,,,,,,,,
+pathological_theoretical_capture_distribution,0.7,pathological_with_full_event,1111,,,,0.045454545454545414,0.4076560094008747,1.0,1.0,1.0,1.0,1.0,0.9405715505297891,0.1871995973528394,1111.0
+group_summary,0.9,normal,11995,0.03601500625260525,0.023374739474781157,0.012640266777824094,,,,,,,,,,
+group_summary,0.9,pathological,1355,0.7830258302583026,0.7278745387453874,0.0551512915129152,,,,,,,,,,

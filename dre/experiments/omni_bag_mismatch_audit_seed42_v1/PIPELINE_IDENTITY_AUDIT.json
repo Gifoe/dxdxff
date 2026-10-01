@@ -1,0 +1,14 @@
+{
+  "channel_hash": "80c0da6635e89642",
+  "clips_checked": 5,
+  "edf_hash": "00b5e68fe9e6aaec",
+  "historical_inference_batch_size": 8,
+  "interpretation": "Waveform replay is bitwise exact; the frozen CUDA forward is accepted within a declared numerical-runtime tolerance.",
+  "logit_tolerance": 0.005,
+  "logits_checked": 8,
+  "normal_logit_max_abs_error": 0.002535581588745117,
+  "pathological_probability_error_upper_bound": 0.0006338953971862793,
+  "status": "PASS_WITH_CUDA_NUMERICAL_TOLERANCE",
+  "waveform_max_abs_error": 0.0,
+  "waveform_tolerance": 1e-05
+}

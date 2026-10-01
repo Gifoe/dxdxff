@@ -1,0 +1,55 @@
+{
+  "experiment": "omni_bag_mismatch_audit_seed42_v1",
+  "branch": "codex/omni-bag-mismatch-audit-seed42-v1",
+  "seed": 42,
+  "prompt_sha256": "f6aa112082218a6a6acfb5a50cc7a5f628ba05189358f5a2cfa450290ed4d741",
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "frozen_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "oof_split_sha256": "a9eea4387a2668c72f55059ac0512b4984ebd8a68665b2ada33cd7396b4a3570",
+  "expected_test_auroc": 0.7987673466324111,
+  "expected_train5_auroc": 0.9571552722613513,
+  "replay_absolute_tolerance": 1e-5,
+  "score_orientation": "pathological_probability",
+  "segment_probability": "1-sigmoid(frozen_CNN_normal_logit)",
+  "channel_aggregation": "arithmetic mean of segment pathological probabilities",
+  "window_policy": {
+    "sample_rate_hz": 1000,
+    "window_seconds": 60,
+    "edge_margin_seconds": 1,
+    "stride_seconds": 60,
+    "overlap_seconds": 0,
+    "full_starts": "1000 + i*60000 for i in range(floor((samples-2000)/60000))"
+  },
+  "historical_train_policy": {
+    "maximum_clips_per_edf": 5,
+    "positions_shared_by_all_channels_in_an_edf": true,
+    "sampling": "deterministic reconstruction of official random-window policy; stored starts are authoritative"
+  },
+  "full_to_k_sampling": {
+    "positions_shared_by_all_channels_in_an_edf": true,
+    "without_replacement": true,
+    "if_n_less_than_k": "use all",
+    "rng": "numpy default_rng SeedSequence([global_seed, uint32(first 8 hex digits of sha256(edf))])",
+    "train_full_to_5_seed": 42,
+    "monte_carlo_seeds": [42, 141],
+    "monte_carlo_repeats": 100,
+    "bag_sizes": [1, 2, 3, 5, 10, 20, "ALL"],
+    "bag_size_repeats": 50,
+    "bag_size_repeat_seeds": [42000, 42049],
+    "nested_k_prefix_within_repeat": true
+  },
+  "rare_event_thresholds": [0.5, 0.7, 0.9],
+  "macro_f1_fixed_threshold": 0.5,
+  "saturation_absolute_tolerance": 0.005,
+  "decision": {
+    "B": "delta_auroc >= 0.01 and pathological full-minus-random5 capture at tau=0.7 >= 0.10",
+    "C": "delta_auroc <= -0.01",
+    "A": "all remaining outcomes; the prespecified material-effect criteria for B or C are not met",
+    "case1_supporting_check": "abs(delta_auroc) < 0.005 and Pearson r > 0.98"
+  },
+  "prohibitions": [
+    "model fitting", "threshold fitting", "CNN retraining", "CNN fine-tuning",
+    "learned pooling", "test-label-driven selection", "changing labels or split"
+  ]
+}

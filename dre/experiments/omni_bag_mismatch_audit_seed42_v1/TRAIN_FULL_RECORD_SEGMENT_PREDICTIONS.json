@@ -1,0 +1,18 @@
+{
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "combined_sorted_output_sha256": "6c292b3fdc81a163c00d8d190c9fc7d535053b465dde4a277e7438c15193fd18",
+  "fields": [
+    "patient",
+    "edf",
+    "channel_names",
+    "pathological_labels",
+    "starts",
+    "segment_pathological_probs",
+    "duration_seconds",
+    "historical_starts"
+  ],
+  "npz_files": 296,
+  "protocol_sha256": "5e23c9ded5bb1816ffb841397255274d2edfd4d98a67d067d4e58c06251a43e3",
+  "status": "COMPLETE",
+  "visibility": "private_runtime_cache_excluded_from_git"
+}

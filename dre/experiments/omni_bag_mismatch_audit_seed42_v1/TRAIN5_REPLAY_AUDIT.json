@@ -1,0 +1,12 @@
+{
+  "absolute_error": 0.0,
+  "edfs": 296,
+  "expected_train5_auroc": 0.9571552722613513,
+  "labeled_edf_channel_pairs": 13350,
+  "observed_train5_auroc": 0.9571552722613513,
+  "p_n_eq_5": 0.9799250936329588,
+  "patients": 141,
+  "segments": 66080,
+  "status": "PASS",
+  "tolerance": 1e-05
+}

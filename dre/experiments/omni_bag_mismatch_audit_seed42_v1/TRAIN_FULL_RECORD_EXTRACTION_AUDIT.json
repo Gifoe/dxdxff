@@ -1,0 +1,15 @@
+{
+  "all_channel_units_inferred": 21438,
+  "cache_bytes": 1809689,
+  "cnn_inference_seconds_sum": 1306.1950000026845,
+  "extraction_wall_seconds_sum": 5419.093999999517,
+  "full_record_segments": 316364,
+  "labeled_channels": 13350,
+  "labeled_full_record_segments": 145052,
+  "mean_segments_per_channel": 10.865318352059925,
+  "median_segments_per_channel": 5.0,
+  "peak_gpu_memory_bytes": 5391992320,
+  "status": "COMPLETE",
+  "train_edfs": 296,
+  "train_patients": 141
+}

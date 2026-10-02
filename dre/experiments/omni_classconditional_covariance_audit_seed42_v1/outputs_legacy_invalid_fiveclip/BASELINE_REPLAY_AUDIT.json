@@ -1,9 +1,7 @@
 {
   "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
-  "full_record_train_recovery_gate_sha256": "7779ff5db3871b5dada43498fbf7fa64fba44b2a6e2ea5e17626d60366fbcc20",
-  "historical_five_clip_train_npzs_read": false,
   "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
-  "status": "PASS",
+  "status": "BASELINE_REPLAY_FAILED",
   "target_unlabeled_channel_units": 16543,
   "target_unlabeled_patients": 102,
   "test_auroc": 0.7987677711758444,
@@ -11,11 +9,8 @@
   "test_expected_auroc": 0.7987673466,
   "test_labeled_pairs": 8104,
   "test_labeled_patients": 96,
-  "tolerance": 1e-05,
-  "train_cache_sha256": "7260eb341ea3361bb60b18653668a73fdebda56167e6fb5bb415989b05e53da2",
+  "tolerance": 0.00001,
+  "train_cache_sha256": "a8d1ced2df63b22a487ef81507627532360f45c6dea23a62f931debec0a0b18c",
   "train_expected_auroc": 0.9586782931,
-  "train_full_auroc": 0.95867829307722,
-  "train_labelled_edf_channel_units": 13350,
-  "train_labelled_segments": 145052,
-  "train_total_segments": 316364
+  "train_full_auroc": 0.9571564412601192
 }

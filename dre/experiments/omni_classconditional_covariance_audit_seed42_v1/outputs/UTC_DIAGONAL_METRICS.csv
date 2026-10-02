@@ -1,0 +1,3 @@
+ap,auroc,delta_auroc_vs_cnn,method,n,n_normal,n_pathological,representation,target_labels_used_to_construct,target_unlabeled_statistics_used
+0.32584330532955896,0.8019700173842045,0.003202246208360071,UTC diagonal,8104,7297,807,R4_32D,NO,YES
+0.3182383677179111,0.7938812762590727,-0.004886494916771733,UTC diagonal,8104,7297,807,P16_16D,NO,YES

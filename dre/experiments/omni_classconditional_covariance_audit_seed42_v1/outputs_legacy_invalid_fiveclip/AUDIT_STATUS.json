@@ -1,0 +1,7 @@
+{
+  "downstream_analyses_run": false,
+  "status": "BASELINE_REPLAY_FAILED",
+  "terminal": true,
+  "test_previously_viewed": true,
+  "test_used_for_tuning": false
+}

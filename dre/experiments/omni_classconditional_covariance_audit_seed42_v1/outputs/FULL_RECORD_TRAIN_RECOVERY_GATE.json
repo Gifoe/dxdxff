@@ -1,0 +1,33 @@
+{
+  "artifact": "omni_bag_mismatch_audit_seed42_v1/train_full_predictions",
+  "artifact_manifest_sha256": "6e1fe31a281666109cfa87e1aaf3096e9925d0caad45a36fd2b90b964795713c",
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "checks": {
+    "edf_count": true,
+    "frozen_cnn_auroc": true,
+    "labeled_edf_channel_units": true,
+    "labeled_segments": true,
+    "per_edf_provenance": true,
+    "total_segments": true
+  },
+  "expected": {
+    "edfs": 296,
+    "labeled_edf_channel_units": 13350,
+    "labeled_segments": 145052,
+    "tolerance": 1e-05,
+    "total_segments": 316364,
+    "train_full_auroc": 0.9586782931
+  },
+  "historical_five_clip_train_npzs_read": false,
+  "marker_failure_count": 0,
+  "marker_failure_examples": [],
+  "observed": {
+    "edfs": 296,
+    "labeled_edf_channel_units": 13350,
+    "labeled_segments": 145052,
+    "total_segments": 316364,
+    "train_full_auroc": 0.95867829307722
+  },
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "status": "PASS"
+}

@@ -1,0 +1,9 @@
+{
+  "ordinary_sensitivity": "channel_equal",
+  "patient_local_covariance": "SKIPPED_OPTIONAL_NOT_A_PRIMARY_ANALYSIS",
+  "primary": "patient_equal",
+  "rule": "per-patient first and second moments, then equal patient average",
+  "test_labeled_patients": 96,
+  "test_unlabeled_covariance_patients": 102,
+  "train_labeled_patients": 141
+}

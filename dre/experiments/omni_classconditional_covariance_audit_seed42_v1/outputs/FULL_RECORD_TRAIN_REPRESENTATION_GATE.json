@@ -1,0 +1,24 @@
+{
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected": {
+    "edfs": 296,
+    "labelled_edf_channel_units": 13350,
+    "labelled_segments": 145052,
+    "tolerance": 1e-05,
+    "total_segments": 316364,
+    "train_full_auroc": 0.9586782931
+  },
+  "full_record_artifact_recovery_gate_sha256": "7779ff5db3871b5dada43498fbf7fa64fba44b2a6e2ea5e17626d60366fbcc20",
+  "historical_five_clip_train_npzs_read": false,
+  "observed": {
+    "edfs": 296,
+    "labelled_edf_channel_units": 13350,
+    "labelled_segments": 145052,
+    "max_frozen_probability_abs_error": 2.9802253442845483e-08,
+    "total_segments": 316364,
+    "train_full_auroc": 0.95867829307722
+  },
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "representation_cache_digest": "7260eb341ea3361bb60b18653668a73fdebda56167e6fb5bb415989b05e53da2",
+  "status": "PASS"
+}

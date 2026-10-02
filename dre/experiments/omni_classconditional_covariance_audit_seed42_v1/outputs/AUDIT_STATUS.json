@@ -1,7 +1,8 @@
 {
-  "downstream_analyses_run": false,
-  "status": "BASELINE_REPLAY_FAILED",
-  "terminal": true,
+  "baseline_replay": "PASS",
+  "status": "COMPLETE",
+  "terminal": "COVARIANCE_SHIFT_NOT_ZERO_SHOT_ACTIONABLE",
   "test_previously_viewed": true,
-  "test_used_for_tuning": false
+  "test_used_for_tuning": false,
+  "utc_r4_auroc": 0.7861623973729932
 }

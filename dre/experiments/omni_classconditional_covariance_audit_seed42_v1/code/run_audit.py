@@ -86,7 +86,7 @@ def metrics(y, score) -> dict:
 
 
 def load_cache(root: Path) -> dict:
-    records = {"patient": [], "edf": [], "channel": [], "y": [], "r4": [], "p16": [], "cnn": []}
+    records = {"patient": [], "edf": [], "channel": [], "y": [], "r4": [], "p16": [], "cnn": [], "clips": []}
     paths = sorted(root.glob("*.npz"))
     if not paths:
         raise RuntimeError(f"No private representation cache found: {root}")
@@ -104,10 +104,12 @@ def load_cache(root: Path) -> dict:
             records["patient"].extend([patient] * len(names)); records["edf"].extend([edf] * len(names))
             records["channel"].extend(names.tolist()); records["y"].extend(labels.tolist())
             records["r4"].append(r4); records["p16"].append(p16); records["cnn"].append(score)
+            records["clips"].extend(np.diff(offsets).astype(int).tolist())
     return {"patient": np.asarray(records["patient"]), "edf": np.asarray(records["edf"]),
             "channel": np.asarray(records["channel"]), "y": np.asarray(records["y"], np.int8),
             "r4": np.concatenate(records["r4"]), "p16": np.concatenate(records["p16"]),
-            "cnn": np.concatenate(records["cnn"]), "files": len(paths)}
+            "cnn": np.concatenate(records["cnn"]), "clips": np.asarray(records["clips"], np.int64),
+            "files": len(paths)}
 
 
 def moment_estimate(X: np.ndarray, patient_ids: np.ndarray, patient_equal: bool) -> dict:
@@ -272,12 +274,16 @@ def metric_row(method, y, score, representation="R4_32D", **extra):
     return {"method": method, "representation": representation, **metrics(y, score), **extra}
 
 
-def protocol_lock_payload() -> dict:
+def protocol_lock_payload(full_train_gate_sha256: str, representation_gate_sha256: str) -> dict:
     """Return the immutable analysis definition before any metric gate."""
     return {"experiment": "omni_classconditional_covariance_audit_seed42_v1", "seed": SEED,
             "kind": "pure_posthoc_audit", "frozen_checkpoint_sha256": CHECKPOINT_SHA256,
             "official_cnn_source_sha256": OFFICIAL_SOURCE_SHA256, "representations": {"R4": 32, "P16": 16},
             "aggregation": "plain mean of frozen segment representations per EDF-channel",
+            "train_source": "validated_omni_bag_mismatch_full_record_artifact_only",
+            "historical_five_clip_train_npzs_read": False,
+            "full_record_train_recovery_gate_sha256": full_train_gate_sha256,
+            "full_record_train_representation_gate_sha256": representation_gate_sha256,
             "covariance": {"primary_weighting": "patient_equal_first_second_moments", "sensitivity_weighting": "channel_equal",
                            "shrinkage": "0.95 cov + 0.05 trace(cov)/d I", "eigen_floor": "1e-6 trace(cov)/d"},
             "utc": "target unlabeled covariance plus source labeled delta mean only",
@@ -290,7 +296,7 @@ def write_terminal_baseline_failure(out: Path, replay: dict) -> None:
     """Emit only aggregate provenance when the binding replay gate rejects analysis."""
     out.joinpath("REPRESENTATION_SOURCE_AUDIT.md").write_text(
         "# Frozen representation source\n\n"
-        "R4 is the existing 32-D output of the frozen official CNN `cnn` block. P16 is the true 16-D tensor after the frozen `fc1 → relu1 → bn1` path and immediately before `fc_out`. Both use the predeclared plain segment mean within `(EDF, channel)`. Extraction read pre-existing 60-s feature NPZs, never EDF files, and did not train or alter the CNN/checkpoint.\n",
+        "R4 is the existing 32-D output of the frozen official CNN `cnn` block. P16 is the true 16-D tensor after the frozen `fc1 → relu1 → bn1` path and immediately before `fc_out`. Both use the predeclared plain segment mean within `(EDF, channel)`. TRAIN reconstruction is bound to the validated full-record `omni_bag_mismatch_audit_seed42_v1` artifact and native HDF5 replay; historical five-clip TRAIN NPZs are not read.\n",
         encoding="utf-8")
     out.joinpath("ZERO_LABEL_LEAKAGE_AUDIT.md").write_text(
         "# Zero-label leakage audit\n\n"
@@ -314,13 +320,48 @@ def main() -> None:
     parser.add_argument("--train-cache", type=Path, required=True)
     parser.add_argument("--test-cache", type=Path, required=True)
     parser.add_argument("--split-csv", type=Path, required=True)
+    parser.add_argument("--full-train-gate", type=Path, required=True)
+    parser.add_argument("--full-train-representation-gate", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args(); args.out.mkdir(parents=True, exist_ok=True)
-    write_json(args.out / "PROTOCOL_LOCK.json", protocol_lock_payload())
+    full_gate = json.loads(args.full_train_gate.read_text(encoding="utf-8"))
+    expected_full_train = {"edfs": 296, "total_segments": 316364,
+                           "labelled_segments": 145052, "labelled_edf_channel_units": 13350}
+    observed_full_train = full_gate.get("observed", {})
+    def gate_count(values: dict, key: str) -> int:
+        # The recovered upstream artifact uses US ``labeled`` spelling;
+        # internal audit caches use ``labelled``. Both denote the same frozen
+        # count and neither relaxes the required value.
+        return int(values.get(key, values.get(key.replace("labelled", "labeled"), -1)))
+
+    if (full_gate.get("status") != "PASS" or
+            any(gate_count(observed_full_train, k) != v for k, v in expected_full_train.items()) or
+            abs(float(observed_full_train.get("train_full_auroc", float("nan"))) - TRAIN_AUROC) >= TOLERANCE or
+            full_gate.get("historical_five_clip_train_npzs_read") is not False):
+        raise RuntimeError("FULL_RECORD_TRAIN_RECOVERY_GATE_REQUIRED")
+    representation_gate = json.loads(args.full_train_representation_gate.read_text(encoding="utf-8"))
+    representation_observed = representation_gate.get("observed", {})
+    if (representation_gate.get("status") != "PASS" or
+            any(gate_count(representation_observed, k) != v for k, v in expected_full_train.items()) or
+            abs(float(representation_observed.get("train_full_auroc", float("nan"))) - TRAIN_AUROC) >= TOLERANCE or
+            representation_gate.get("checkpoint_sha256") != CHECKPOINT_SHA256 or
+            representation_gate.get("official_cnn_source_sha256") != OFFICIAL_SOURCE_SHA256 or
+            representation_gate.get("historical_five_clip_train_npzs_read") is not False):
+        raise RuntimeError("FULL_RECORD_TRAIN_REPRESENTATION_GATE_REQUIRED")
+    full_train_gate_sha256 = sha256(args.full_train_gate)
+    if representation_gate.get("full_record_artifact_recovery_gate_sha256") != full_train_gate_sha256:
+        raise RuntimeError("FULL_RECORD_TRAIN_REPRESENTATION_GATE_BINDING_MISMATCH")
+    representation_gate_sha256 = sha256(args.full_train_representation_gate)
+    write_json(args.out / "PROTOCOL_LOCK.json", protocol_lock_payload(full_train_gate_sha256, representation_gate_sha256))
     train, test = load_cache(args.train_cache), load_cache(args.test_cache)
     if train["files"] != 296 or test["files"] != 237:
         raise RuntimeError("Frozen representation cache file count differs from the bound cohorts")
     train_labeled, test_labeled = train["y"] >= 0, test["y"] >= 0
+    represented_full_train = {"total_segments": int(train["clips"].sum()),
+                              "labelled_segments": int(train["clips"][train_labeled].sum()),
+                              "labelled_edf_channel_units": int(train_labeled.sum())}
+    if represented_full_train != {k: v for k, v in expected_full_train.items() if k != "edfs"}:
+        raise RuntimeError("FULL_RECORD_REPRESENTATION_CACHE_COUNTS_MISMATCH")
     replay_train, replay_test = safe_auc(train["y"][train_labeled], train["cnn"][train_labeled]), safe_auc(test["y"][test_labeled], test["cnn"][test_labeled])
     replay = {"status": "PASS" if abs(replay_train - TRAIN_AUROC) < TOLERANCE and abs(replay_test - TEST_AUROC) < TOLERANCE else "BASELINE_REPLAY_FAILED",
               "checkpoint_sha256": CHECKPOINT_SHA256, "official_cnn_source_sha256": OFFICIAL_SOURCE_SHA256,
@@ -328,6 +369,11 @@ def main() -> None:
               "test_auroc": replay_test, "test_expected_auroc": TEST_AUROC,
               "tolerance": TOLERANCE, "train_cache_sha256": cache_digest(args.train_cache),
               "test_cache_sha256": cache_digest(args.test_cache), "test_labeled_pairs": int(test_labeled.sum()),
+              "full_record_train_recovery_gate_sha256": full_train_gate_sha256,
+              "historical_five_clip_train_npzs_read": False,
+              "train_total_segments": represented_full_train["total_segments"],
+              "train_labelled_segments": represented_full_train["labelled_segments"],
+              "train_labelled_edf_channel_units": represented_full_train["labelled_edf_channel_units"],
               "test_labeled_patients": int(len(np.unique(test["patient"][test_labeled]))),
               "target_unlabeled_patients": int(len(np.unique(test["patient"]))),
               "target_unlabeled_channel_units": int(len(test["patient"]))}
@@ -337,7 +383,7 @@ def main() -> None:
         raise RuntimeError("BASELINE_REPLAY_FAILED")
     (args.out / "REPRESENTATION_SOURCE_AUDIT.md").write_text(
         "# Frozen representation source\n\n"
-        "R4 is the existing 32-D output of the frozen official CNN `cnn` block. P16 is the true 16-D tensor after the frozen `fc1 → relu1 → bn1` path and immediately before `fc_out`. Both are plain segment means within `(EDF, channel)`. The extraction read pre-existing 60-s feature NPZs, never EDF files, and did not train or change the CNN/checkpoint. Private caches and identities are excluded from Git.\n",
+        "R4 is the existing 32-D output of the frozen official CNN `cnn` block. P16 is the true 16-D tensor after the frozen `fc1 → relu1 → bn1` path and immediately before `fc_out`. Both are plain segment means within `(EDF, channel)`. TRAIN representations were regenerated only from the validated `omni_bag_mismatch_audit_seed42_v1` full-record artifact and native HDF5, not historical five-clip TRAIN NPZs. Private caches and identities are excluded from Git.\n",
         encoding="utf-8")
 
     geometry_rows, eig_rows, angle_rows, mean_rows, fisher_rows, score_rows = [], [], [], [], [], []

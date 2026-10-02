@@ -8,10 +8,7 @@
   },
   "experiment": "omni_classconditional_covariance_audit_seed42_v1",
   "frozen_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
-  "full_record_train_recovery_gate_sha256": "7779ff5db3871b5dada43498fbf7fa64fba44b2a6e2ea5e17626d60366fbcc20",
-  "full_record_train_representation_gate_sha256": "9be5717a1de1eeeea4289cd2fa186e4394c3f2bebbe01e507a8afc7948faefd4",
   "hard_stop": "No adapter/model/shrinkage/layer iteration after audit",
-  "historical_five_clip_train_npzs_read": false,
   "kind": "pure_posthoc_audit",
   "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
   "official_test_used_for_tuning": false,
@@ -28,6 +25,5 @@
     "UTC_diagonal": false
   },
   "test_previously_viewed": true,
-  "train_source": "validated_omni_bag_mismatch_full_record_artifact_only",
   "utc": "target unlabeled covariance plus source labeled delta mean only"
 }

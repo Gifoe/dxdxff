@@ -1,0 +1,4 @@
+evaluation_system,unit,auroc,macro_f1,threshold,ap,mrr,top1,ndcg,n_units,n_patients,n_auroc_estimable_patients,availability
+Official pooled / EDF-channel,EDF-channel,0.79876777117584441,0.65975352514082142,0.5,0.33030115683259276,,,,8104,96,52,
+A1-style patient-equal / patient-channel @0.5,patient-channel,0.81718559332285501,0.44307824156787873,0.5,0.74858491790288473,0.83197693111486226,0.77272727272727271,0.84947924972325917,5055,96,52,
+A1-style patient-equal / patient-channel @TRAIN-VAL threshold,patient-channel,0.81718559332285501,,,0.74858491790288473,0.83197693111486226,0.77272727272727271,0.84947924972325917,5055,96,52,UNAVAILABLE_NO_LEAKAGE_FREE_VALIDATION_ARTIFACT

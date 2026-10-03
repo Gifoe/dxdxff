@@ -1,0 +1,3 @@
+strategy,status,threshold,selection_data,test_labels_used_for_selection,reason
+fixed_0.5_diagnostic,APPLIED,0.5,none,False,Predeclared fixed diagnostic.
+a1_style_train_validation_patient_macro_f1,UNAVAILABLE,,none,False,No saved patient-held-out validation prediction artifact is bound to the frozen checkpoint. The legal full-record TRAIN cache is in-sample and was rejected to avoid optimistic threshold reuse.

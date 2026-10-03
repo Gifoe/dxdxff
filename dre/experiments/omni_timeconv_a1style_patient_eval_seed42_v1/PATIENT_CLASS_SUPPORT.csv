@@ -1,0 +1,4 @@
+class_support,n_patients,mean_patient_channels,median_patient_channels,mean_true_pathological_fraction
+both,52,83.480769230769226,85,0.10365585177115068
+normal_only,8,49.625,51.5,0
+pathological_only,36,8.8055555555555554,6,1

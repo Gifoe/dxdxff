@@ -1,0 +1,11 @@
+section,name,value
+counts,edf_channel_units_before_aggregation,8104
+counts,unique_patient_channel_units_after_aggregation,5055
+counts,patients,96
+counts,duplicated_patient_channel_identities_across_edfs,758
+edf_count_distribution,1,4297
+edf_count_distribution,2,598
+edf_count_distribution,6,34
+edf_count_distribution,13,46
+edf_count_distribution,16,57
+edf_count_distribution,39,23

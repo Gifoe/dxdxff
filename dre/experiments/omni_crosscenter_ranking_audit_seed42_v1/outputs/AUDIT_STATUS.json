@@ -1,0 +1,14 @@
+{
+  "baseline_replay": "PASS",
+  "frozen_cnn_auroc": 0.7987677711758444,
+  "historical_five_clip_train_npzs_read": false,
+  "oof_viability_pass": false,
+  "seed": 42,
+  "source_fisher_auroc": 0.7994219076978046,
+  "status": "COMPLETE",
+  "terminal": "CROSS_CENTER_MISALIGNMENT_NOT_ZERO_SHOT_ACTIONABLE",
+  "test_previously_viewed": true,
+  "test_used_for_tuning": false,
+  "weighted_cross_delta": -0.007125536983761505,
+  "weighted_within_delta": 0.007779673505721674
+}

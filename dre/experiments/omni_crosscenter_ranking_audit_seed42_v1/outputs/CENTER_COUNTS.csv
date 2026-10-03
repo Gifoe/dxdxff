@@ -1,0 +1,5 @@
+center,has_pathological,labeled_edf_channel_units,labeled_patients,normal,pathological
+HUP,True,952,6,874,78
+Open-iEEG,True,4108,72,3533,575
+SourceSink,True,433,14,279,154
+Zurich,False,2611,4,2611,0

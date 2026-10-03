@@ -1,0 +1,5 @@
+# Engineering repair ledger
+
+The first deterministic invocation stopped at the binding within-center rank-invariance assertion before producing a terminal audit. The cause was not data, checkpoint, metric, or test-driven selection: literal CDF clipping at 0.005/0.995 collapses distinct tail percentiles into ties for centers with more than 100 units, contradicting the requested `<1e-10` within-center AUC identity.
+
+The only repair was a fixed, label-blind tie-safe numerical realization of the same predeclared clipped CDF transform: distinct rank levels in a clipped tail receive adjacent IEEE-754 values around the fixed clipped endpoint. The clip value, score orientation, center definition, caches, Fisher direction, folds, metrics, and all evaluation populations remain unchanged. The completed audit asserts zero within-center AUC difference for every transformed pair cell.

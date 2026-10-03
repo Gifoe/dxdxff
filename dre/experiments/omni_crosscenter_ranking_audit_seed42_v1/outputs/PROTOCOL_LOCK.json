@@ -1,0 +1,40 @@
+{
+  "centers": [
+    "HUP",
+    "Open-iEEG",
+    "SourceSink",
+    "Zurich"
+  ],
+  "existing_train_fold_split": {
+    "folds": 5,
+    "identity_encoding": "sha256(patient_id)[:16] compared only in private runtime",
+    "patients": 141,
+    "public_split_contains_raw_patient_ids": false,
+    "source_sha256": "a9eea4387a2668c72f55059ac0512b4984ebd8a68665b2ada33cd7396b4a3570"
+  },
+  "experiment": "omni_crosscenter_ranking_audit_seed42_v1",
+  "forbidden": [
+    "training",
+    "fine_tuning",
+    "calibration_fit",
+    "affine_adapter",
+    "threshold_tuning",
+    "covariance_correction",
+    "score_fusion"
+  ],
+  "frozen_checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "frozen_score_construction": "official segment sigmoid then EDF-channel mean; pathological=1-normal probability",
+  "full_record_train_recovery_gate_sha256": "7779ff5db3871b5dada43498fbf7fa64fba44b2a6e2ea5e17626d60366fbcc20",
+  "full_record_train_representation_gate_sha256": "9be5717a1de1eeeea4289cd2fa186e4394c3f2bebbe01e507a8afc7948faefd4",
+  "kind": "pure_posthoc_audit",
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "official_test_used_for_tuning": false,
+  "seed": 42,
+  "source_fisher": "R4_32D, patient-equal labeled TRAIN class moments, 0.05 diagonal shrinkage, higher=pathological",
+  "test_previously_viewed": true,
+  "zero_label_alignments": {
+    "CPA": "center empirical percentile",
+    "Gaussianization": "Phi^-1(clip(percentile,0.005,0.995))",
+    "UCS": "center median/IQR using all unlabeled scores"
+  }
+}

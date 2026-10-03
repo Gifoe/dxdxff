@@ -1,0 +1,20 @@
+{
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "cnn_auroc": 0.7987677711758444,
+  "cnn_expected_auroc": 0.79876777,
+  "full_record_train_recovery_gate_sha256": "7779ff5db3871b5dada43498fbf7fa64fba44b2a6e2ea5e17626d60366fbcc20",
+  "full_record_train_representation_gate_sha256": "9be5717a1de1eeeea4289cd2fa186e4394c3f2bebbe01e507a8afc7948faefd4",
+  "historical_five_clip_train_npzs_read": false,
+  "official_cnn_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "source_fisher_expected_auroc": 0.79942191,
+  "source_fisher_r4_auroc": 0.7994219076978046,
+  "status": "PASS",
+  "test_cache_sha256": "3f5cf9a9111fad6c5843eeaba43108057df961dd6a918d83fc40cc34bb5053ad",
+  "test_labeled_edf_channel_units": 8104,
+  "test_labeled_patients": 96,
+  "test_normal": 7297,
+  "test_pathological": 807,
+  "tolerance": 1e-05,
+  "train_cache_sha256": "7260eb341ea3361bb60b18653668a73fdebda56167e6fb5bb415989b05e53da2",
+  "train_full_auroc": 0.95867829307722
+}

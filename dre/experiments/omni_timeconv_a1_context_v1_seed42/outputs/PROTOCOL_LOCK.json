@@ -1,0 +1,38 @@
+{
+  "alpha_initial": 0.0,
+  "anchor": "mean R4 over EDFs within patient/channel",
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "context": "all observable cached good channels, including label=-1 context-only",
+  "edf_prediction_unit": "EDF-channel",
+  "experiment": "omni_timeconv_a1_context_v1_seed42",
+  "final_epoch_rule": "rounded median of 5 TRAIN-CV validation-selected epochs",
+  "loss": "patient-equal weighted BCE; pathology 2, normal 1",
+  "models": {
+    "C1": {
+      "alpha": 0.005611938424408436,
+      "checkpoint_sha256": "2738b68ed817f36669d3bf274bb213cb4a5fb6927be62dfa63bafd2d37b2d031",
+      "epoch": 1
+    },
+    "V1": {
+      "alpha": 0.1341741383075714,
+      "checkpoint_sha256": "79daa5ae6b73c0908ea9063403efe0ceb99c7d2c8488b17a60e1687a70e09a07",
+      "epoch": 21
+    }
+  },
+  "official_source_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "optimizer": {
+    "AdamW": true,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0001,
+    "max_epochs_cv": 30,
+    "patient_batch": 2,
+    "weight_decay": 0.001
+  },
+  "r4_dimension": 32,
+  "residual": "logit(mean segment normal probability) + alpha * patient-channel delta",
+  "seed": 42,
+  "test_cache_sha256": "3f5cf9a9111fad6c5843eeaba43108057df961dd6a918d83fc40cc34bb5053ad",
+  "test_previously_viewed": true,
+  "test_tuning": false,
+  "train_cache_sha256": "7260eb341ea3361bb60b18653668a73fdebda56167e6fb5bb415989b05e53da2"
+}

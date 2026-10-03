@@ -1,0 +1,9 @@
+{
+  "alpha_initial": 0.0,
+  "max_abs_score_difference": {
+    "C1": 0.0,
+    "V1": 0.0
+  },
+  "status": "PASS",
+  "threshold": 1e-07
+}

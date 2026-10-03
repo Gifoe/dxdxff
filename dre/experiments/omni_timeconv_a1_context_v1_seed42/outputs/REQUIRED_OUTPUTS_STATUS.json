@@ -1,0 +1,6 @@
+{
+  "private_predictions_committed": false,
+  "status": "COMPLETE",
+  "terminal": "CONTEXT_GAIN_NOT_ISOLATED_FROM_LOCAL_CAPACITY",
+  "test_evaluated_once_after_freeze": true
+}

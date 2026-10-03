@@ -1,0 +1,18 @@
+{
+  "balanced_accuracy_0_5": 0.6457878753452175,
+  "checkpoint_sha256": "442b6a01b60994197fbc0e146f3abab7897b0b71e794259014d3eca663de3852",
+  "expected_ap": 0.33030115683259276,
+  "expected_auroc": 0.7987673466324111,
+  "expected_macro_f1": 0.6597535251408214,
+  "macro_f1_0_5": 0.6597535251408214,
+  "n_normal": 7297,
+  "n_pathological": 807,
+  "n_units": 8104,
+  "neural_inference_run": false,
+  "pathological_f1_0_5": 0.3804272915230875,
+  "pooled_ap": 0.33030115683259276,
+  "pooled_auroc": 0.7987677711758444,
+  "sensitivity_0_5": 0.3420074349442379,
+  "specificity_0_5": 0.949568315746197,
+  "status": "PASS"
+}

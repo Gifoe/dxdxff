@@ -1,0 +1,10 @@
+{
+  "C1_trainable_parameters": 5266,
+  "V1_trainable_parameters": 5378,
+  "a1_ranker_source_reference": "audited 2026-06-20 e3726f64d1_patient_channel_ranker.py",
+  "a1_ranker_source_sha256": "c1cdfc23c902f31f0ec505023d2f03da132ed85d4eac4c7175e4a38b8df66cb6",
+  "dropout": 0.25,
+  "frozen_timeconv_trainable_parameters": 0,
+  "heads": 2,
+  "timeconv_loaded_into_optimizer": false
+}

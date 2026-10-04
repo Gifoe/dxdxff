@@ -55,10 +55,10 @@ describe heterogeneity across patients, not uncertainty of the mean.
 | Baseline | 0.7622 (0.2230) | 0.4773 (0.3298) | 0.6075 | 0.5081 | 0.6707 |
 | A1-context plugin | 0.7630 (0.2187) | 0.4727 (0.3212) | 0.6297 | 0.5323 | 0.6716 |
 
-The paired primary effect is **plugin minus baseline AUROC = +0.00110**.
+The observed paired primary effect is **plugin minus baseline AUROC = +0.00085**.
 The patient-cluster bootstrap (10,000 draws, seed 42) 95% CI is
 **[-0.02935, +0.03149]**.  Of patients, 46.77% improved, 6.45% were unchanged,
-and 46.77% worsened.  The paired AP effect is -0.00429 (95% CI
+and 46.77% worsened.  The observed paired AP effect is -0.00451 (95% CI
 [-0.04066, +0.03228]).
 
 The fixed-threshold (0.5) diagnostics are not threshold-tuned benchmark
@@ -94,7 +94,7 @@ establish a center-specific mechanism.
 
 ## Predeclared decision
 
-The result is `INSUFFICIENT_PLUGIN_GAIN`: +0.00110 is below the predeclared
+The result is `INSUFFICIENT_PLUGIN_GAIN`: +0.00085 is below the predeclared
 +0.01 minimum, well below the +0.02 meaningful and +0.03 strong regimes, and
 its bootstrap interval includes materially negative as well as positive values.
 The plugin AUROC (0.7630) does not reach 0.83.  This is a micro-improvement in

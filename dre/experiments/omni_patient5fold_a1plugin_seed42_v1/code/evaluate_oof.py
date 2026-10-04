@@ -229,6 +229,8 @@ def main() -> None:
                           "delta_AP": (pivot[("ap", "plugin")] - pivot[("ap", "baseline")]).to_numpy()})
     patient_center = manifest.set_index("patient_name").center.astype(str)
     delta["center"] = delta.patient_name.map(patient_center)
+    observed_auroc = float(delta.delta_AUROC.mean())
+    observed_ap = float(delta.delta_AP.mean())
     auroc_draws, auroc_boot = bootstrap(delta.delta_AUROC.to_numpy())
     ap_draws, ap_boot = bootstrap(delta.delta_AP.to_numpy())
     paired_bootstrap = pd.DataFrame({"draw": np.arange(1, len(auroc_draws) + 1),
@@ -262,7 +264,10 @@ def main() -> None:
     # Public-safe compact aggregates.
     args.public_output.mkdir(parents=True, exist_ok=True)
     write_rows(args.public_output / "FOLD_METRICS.csv", fold_metrics)
-    write_rows(args.public_output / "PAIRED_BOOTSTRAP.csv", [{"metric": "AUROC", **auroc_boot}, {"metric": "AP", **ap_boot}])
+    write_rows(args.public_output / "PAIRED_BOOTSTRAP.csv", [
+        {"metric": "AUROC", "observed_mean": observed_auroc, "bootstrap_mean": auroc_boot["mean"], **{key: value for key, value in auroc_boot.items() if key != "mean"}},
+        {"metric": "AP", "observed_mean": observed_ap, "bootstrap_mean": ap_boot["mean"], **{key: value for key, value in ap_boot.items() if key != "mean"}},
+    ])
     write_rows(args.public_output / "CENTERWISE_OOF_METRICS.csv", center_rows)
     write_rows(args.public_output / "SECONDARY_POOLED_METRICS.csv", secondary_rows)
     write_rows(args.public_output / "OOF_SUMMARY.csv", summary_rows)
@@ -271,11 +276,11 @@ def main() -> None:
         "patients": int(len(manifest)), "folds": 5, "temporal_segments_per_record": SEGMENTS_PER_RECORD,
         "private_prediction_artifacts_retained_server_side": True,
         "test_fold_labels_used_for_optimization": False,
-        "paired_auroc": {"mean": float(delta.delta_AUROC.mean()), **auroc_boot,
+        "paired_auroc": {"observed_mean": observed_auroc, "bootstrap_mean": auroc_boot["mean"], **{key: value for key, value in auroc_boot.items() if key != "mean"},
                          "fraction_improved": float((delta.delta_AUROC > 0).mean()),
                          "fraction_unchanged": float((delta.delta_AUROC == 0).mean()),
                          "fraction_worsened": float((delta.delta_AUROC < 0).mean())},
-        "paired_ap": {"mean": float(delta.delta_AP.mean()), **ap_boot},
+        "paired_ap": {"observed_mean": observed_ap, "bootstrap_mean": ap_boot["mean"], **{key: value for key, value in ap_boot.items() if key != "mean"}},
     })
 
 

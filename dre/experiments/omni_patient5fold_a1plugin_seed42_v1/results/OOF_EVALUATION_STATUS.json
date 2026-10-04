@@ -1,20 +1,22 @@
 {
   "folds": 5,
   "paired_ap": {
+    "bootstrap_mean": -0.004287677979781745,
     "ci_high": 0.03227625074863096,
     "ci_low": -0.040657721989329765,
     "draws": 10000,
-    "mean": -0.004287677979781745,
+    "observed_mean": -0.004514609373517675,
     "seed": 42
   },
   "paired_auroc": {
+    "bootstrap_mean": 0.001101799749798938,
     "ci_high": 0.03148773905180739,
     "ci_low": -0.029348595466902782,
     "draws": 10000,
     "fraction_improved": 0.46774193548387094,
     "fraction_unchanged": 0.06451612903225806,
     "fraction_worsened": 0.46774193548387094,
-    "mean": 0.001101799749798938,
+    "observed_mean": 0.0008487791081299018,
     "seed": 42
   },
   "patients": 124,

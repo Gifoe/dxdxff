@@ -1,0 +1,14 @@
+{
+  "all_retained_patients_both_class": true,
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "historical_test_only_subset_used": false,
+  "label_conflicts": 0,
+  "n_both_class": 124,
+  "n_eligible_edfs": 636,
+  "n_total_patients": 253,
+  "official_split_sha256": "e329bab57037d649a1995074a7e5ee31c7c002f00ea6f0ee54bd48d67be1dc42",
+  "private_manifest_sha256": "9a326a4f7841129f430a7afa6e5456d416fd723efd8558d4f0716e3930858a1d",
+  "raw_waveforms_or_predictions_generated": false,
+  "seed": 42,
+  "status": "PASS"
+}

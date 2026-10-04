@@ -1,0 +1,45 @@
+{
+  "aggregation": {
+    "across_edf_sessions": "mean_logit",
+    "within_edf_segments": "mean_logit"
+  },
+  "baseline": "official TimeConv morphology plus original classifier; trained only on four fit folds",
+  "channel_batch": 16,
+  "cohort_protocol_sha256": "c88d74d35df31824a17bca3e0a7fddd7498c58970f8651bdcf008378286a3690",
+  "dataset_revision": "73b9c5180a57828ab2a83c040e7e9d112e77b2cc",
+  "epochs": 30,
+  "experiment": "omni_patient5fold_a1plugin_seed42_v1",
+  "external_pretraining": "torchvision ImageNet ResNet18 only; no Omni-labelled checkpoint",
+  "folds": 5,
+  "official_timeconv_cnn_sha256": "c493b43ec025f74153f0ada3041e6640bfa07beac58f058139ad5122da043f95",
+  "optimizer": {
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0001,
+    "name": "AdamW",
+    "weight_decay": 0.001
+  },
+  "patient_manifest_private_sha256": "9a326a4f7841129f430a7afa6e5456d416fd723efd8558d4f0716e3930858a1d",
+  "plugin": {
+    "attention_dropout": 0.25,
+    "attention_heads": 2,
+    "effective_gate_initial": 0.02,
+    "only_difference": "A1 two-head patient-relative-z attention residual",
+    "output_projection_initialization": "zero",
+    "residual_bound": "0.5*tanh(gate_parameter)"
+  },
+  "record_preprocessing": {
+    "fixed_window_seconds": 60,
+    "fixed_window_start_seconds": 1,
+    "notch_hz": 60,
+    "sampling_rate_hz": 1000
+  },
+  "seed": 42,
+  "selection": "none; no validation split, early stopping, threshold tuning, or hyperparameter search",
+  "temporal_schedule": {
+    "segment_seconds": 2,
+    "segment_selection": "epoch k uses non-overlapping segment k-1; all 60 seconds once",
+    "segments_per_record": 30
+  },
+  "test_fold_labels_used_for_optimization": false,
+  "threshold_diagnostic": 0.5
+}

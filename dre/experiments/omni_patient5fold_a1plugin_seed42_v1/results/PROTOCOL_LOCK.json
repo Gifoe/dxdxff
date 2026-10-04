@@ -1,0 +1,18 @@
+{
+  "eligibility": "interictal; frequency>900; length>=62; dataset!=Multicenter; good==1",
+  "epochs": 30,
+  "experiment": "omni_patient5fold_a1plugin_seed42_v1",
+  "folds": 5,
+  "label_rule": "normal iff outcome==1 and resection==0; else pathological iff soz==1; otherwise unknown=-1",
+  "optimizer": {
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0001,
+    "name": "AdamW",
+    "weight_decay": 0.001
+  },
+  "patient_manifest_private_sha256": "9a326a4f7841129f430a7afa6e5456d416fd723efd8558d4f0716e3930858a1d",
+  "pretrained_omni_labelled_checkpoint_allowed": false,
+  "seed": 42,
+  "task": "full Omni Task2 patient-level pathological-channel localization",
+  "test_fold_labels_used_for_optimization": false
+}

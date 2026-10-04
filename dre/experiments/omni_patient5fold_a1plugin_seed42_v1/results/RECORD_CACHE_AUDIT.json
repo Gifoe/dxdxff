@@ -1,0 +1,11 @@
+{
+  "cohort_protocol_sha256": "c88d74d35df31824a17bca3e0a7fddd7498c58970f8651bdcf008378286a3690",
+  "partial_files": 0,
+  "patients": 124,
+  "records": 137,
+  "status": "PASS",
+  "test_or_model_predictions_generated": false,
+  "unique_normal_patient_channels": 9089,
+  "unique_pathological_patient_channels": 1113,
+  "unknown_good_channel_occurrences": 2339
+}

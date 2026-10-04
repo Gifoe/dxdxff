@@ -1,0 +1,9 @@
+center,official_partition,eligible_edfs,good_channel_occurrences,labeled_channel_occurrences,unknown_good_channel_occurrences
+HUP,test,12,1524,952,572
+HUP,train,18,1918,1140,778
+Open-iEEG,test,74,7475,4108,3367
+Open-iEEG,train,111,11340,5710,5630
+SourceSink,test,16,1100,433,667
+SourceSink,train,20,1579,881,698
+Zurich,test,135,6444,4519,1925
+Zurich,train,250,11178,9011,2167

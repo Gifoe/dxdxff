@@ -1,0 +1,3 @@
+n_units,pooled_AP,pooled_AUROC,unit,variant
+10202,0.372749353653849,0.7157471532633713,patient_channel,baseline
+10202,0.3263306832590802,0.7071135522466906,patient_channel,plugin

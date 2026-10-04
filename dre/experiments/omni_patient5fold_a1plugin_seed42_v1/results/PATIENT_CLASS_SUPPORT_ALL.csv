@@ -1,0 +1,6 @@
+center,n_total_patients,n_both_class,n_pathological_only,n_normal_only,n_no_valid_label,n_unknown_context_channels
+ALL,253,124,89,29,11,11303
+HUP,15,10,5,0,0,675
+Open-iEEG,185,103,65,11,6,8997
+SourceSink,33,11,19,3,0,1365
+Zurich,20,0,0,15,5,266

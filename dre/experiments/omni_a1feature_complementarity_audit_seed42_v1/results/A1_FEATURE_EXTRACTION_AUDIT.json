@@ -1,0 +1,11 @@
+{
+  "aggregation": "arithmetic_mean_over_windows_then_edf_occurrences",
+  "comparison_source_sha256": "9826059603242eeb686c4e896b42d2c3c5a33d5860830f58b3df8e94487863a2",
+  "interictal_percentile_or_missing_indicator_included": false,
+  "interictal_reference": "historical fallback: robust median/MAD over the 30 windows of each EDF-channel",
+  "records": 137,
+  "spectral_source_sha256": "1b046b542b791f2416467582fe95e2dfa991d04ebb535bf188e04b9a1a1439d6",
+  "status": "PASS",
+  "window_seconds": 2,
+  "windows_per_record": 30
+}

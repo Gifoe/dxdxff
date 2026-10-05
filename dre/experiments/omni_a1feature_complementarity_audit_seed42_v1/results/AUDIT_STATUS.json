@@ -1,0 +1,11 @@
+{
+  "baseline_replay_auroc": 0.7621630659358644,
+  "device": "cuda",
+  "feature_cache_records": 137,
+  "patients": 124,
+  "status": "COMPLETE",
+  "terminal": "A1_FEATURES_WEAKLY_COMPLEMENTARY_BUT_PLUGIN_GATE_NOT_MET",
+  "plugin_training_decision": "DO_NOT_TRAIN",
+  "fixed_beta_grid_is_not_nested_selection": true,
+  "test_labels_used_for_model_selection": false
+}

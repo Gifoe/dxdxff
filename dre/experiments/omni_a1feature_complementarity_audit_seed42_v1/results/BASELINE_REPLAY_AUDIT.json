@@ -1,0 +1,8 @@
+{
+  "baseline_predictions_retrained_or_replayed": false,
+  "expected_patient_equal_auroc": 0.7621630659358641,
+  "patient_equal_auroc": 0.7621630659358644,
+  "patients": 124,
+  "status": "PASS",
+  "tolerance": 1e-10
+}

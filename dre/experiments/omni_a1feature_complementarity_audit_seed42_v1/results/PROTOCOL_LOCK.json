@@ -1,0 +1,23 @@
+{
+  "baseline_oof_patient_equal_auroc": 0.7621630659358644,
+  "comparison_source_sha256": "9826059603242eeb686c4e896b42d2c3c5a33d5860830f58b3df8e94487863a2",
+  "epochs": 30,
+  "feature_source_sha256": "1b046b542b791f2416467582fe95e2dfa991d04ebb535bf188e04b9a1a1439d6",
+  "feature_temporal_aggregation": "mean windows then mean EDF occurrences",
+  "fold_safe_population_normalization": "mean/std fit on four training folds only",
+  "fusion_betas_predeclared": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "learning_rate": 0.0001,
+  "manifest_sha256": "9a326a4f7841129f430a7afa6e5456d416fd723efd8558d4f0716e3930858a1d",
+  "optimizer": "AdamW",
+  "pathological_weight": 2.0,
+  "patient_equal_weighted_bce": true,
+  "patients": 124,
+  "records": 137,
+  "seed": 42,
+  "status": "LOCKED_BEFORE_FEATURE_CLASSIFIER_TRAINING",
+  "weight_decay": 0.001
+}

@@ -1,0 +1,17 @@
+{
+  "stage": "before any formal teacher or student training",
+  "science_changes": false,
+  "reason": "Python3.10 runtime native access violations in sklearn reference threshold test and later torch import; identical-command retry did not resolve",
+  "original_runtime": "Python3.10.20, Torch2.8.0+cu128, NumPy1.26.4 overlay",
+  "proposed_runtime": "isolated system-site venv of existing salt_env: Python3.12.13, Torch2.11.0+cu128, NumPy2.4.3, sklearn1.8.0, scipy1.17.1; pytest8.4.2 and pandas2.2.3 installed only in private venv",
+  "required_checks_before_use": [
+    "fresh replacement-runtime replay of original frozen B0 checkpoints against THIS task's exact SHA-verified feature reconstruction and exact historical metric gate",
+    "six synthetic test groups including original sklearn threshold parity and exact resume",
+    "real FIT-only original-source preprocessing and one-epoch training parity"
+  ],
+  "shared_environments_modified": false,
+  "cached_gate_source": "reuse THIS task's fresh hash-verified 88D reconstruction, no older approximate feature artifact; fresh replacement-runtime five-checkpoint replay exact",
+  "reference_test_repair": "unchanged 8 synthetic inputs/201 candidates/reference logic; local exhaustive sklearn oracle plus input SHA and optimum checks on server. Source selected-threshold metrics checked on real FIT. Source one-epoch optimization uses validated equivalent threshold evaluator only in smoke.",
+  "model_data_loss_optimizer_seed_schedule_threshold_selection_unchanged": true,
+  "native_exit_check_repair": "cmd ERRORLEVEL>=1 misses signed negative native exit codes; require exact zero; missing test audit independently prevented training"
+}

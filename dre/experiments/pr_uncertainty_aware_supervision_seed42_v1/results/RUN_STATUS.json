@@ -1,0 +1,12 @@
+{
+  "development_complete": true,
+  "historical_B0_only_replay_run": true,
+  "model_cells": 15,
+  "outer_evaluation_run": false,
+  "protocol_sha256": "6b9c9228ae11430b4ee169fed36e4bf35bb85bcbbe1554ef48851717bfd3adb2",
+  "status": "COMPLETE_DEVELOPMENT_GATE_FAILED",
+  "teachers": 20,
+  "terminal": "A2_POSITIVE_BUT_BELOW_TARGET",
+  "unique_validation_patients": 47,
+  "validation_appearances_per_arm": 65
+}

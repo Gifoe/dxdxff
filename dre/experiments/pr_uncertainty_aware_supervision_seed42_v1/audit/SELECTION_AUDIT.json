@@ -1,0 +1,176 @@
+{
+  "A2_selected_before_nonzero_correction_folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "all_student_initial_states_identical_within_fold": true,
+  "selections": [
+    {
+      "OOF_sha256": "eeb71f95773a98c4c5c17c98bfaf763c3156b6dfc997e919f314e12550aaf44a",
+      "arm": "A0",
+      "checkpoint_sha256": "bb054c4dc8e55de0af14daf4ce8408025b1717a1ff05e26a3ff1525e0c6f0506",
+      "completed_epochs": 9,
+      "epoch": 3,
+      "fold": 1,
+      "initial_hash": "8f5b2f02371be78dcdbe53941b72a125d2d3c8927bcb73b37224a4798b892e85",
+      "parameters": 8817,
+      "threshold": 0.465
+    },
+    {
+      "OOF_sha256": "eeb71f95773a98c4c5c17c98bfaf763c3156b6dfc997e919f314e12550aaf44a",
+      "arm": "A1",
+      "checkpoint_sha256": "11c47bc0f26f5c66c081f44fea653b418ec783382783e662e6c9307b59ee34af",
+      "completed_epochs": 9,
+      "epoch": 3,
+      "fold": 1,
+      "initial_hash": "8f5b2f02371be78dcdbe53941b72a125d2d3c8927bcb73b37224a4798b892e85",
+      "parameters": 8817,
+      "threshold": 0.435
+    },
+    {
+      "OOF_sha256": "eeb71f95773a98c4c5c17c98bfaf763c3156b6dfc997e919f314e12550aaf44a",
+      "arm": "A2",
+      "checkpoint_sha256": "3ed18e2a70a3efc1f24c0d7063cb726a4d9bf911507427865aa63c1bdb97574d",
+      "completed_epochs": 9,
+      "epoch": 3,
+      "fold": 1,
+      "initial_hash": "8f5b2f02371be78dcdbe53941b72a125d2d3c8927bcb73b37224a4798b892e85",
+      "parameters": 8817,
+      "threshold": 0.465
+    },
+    {
+      "OOF_sha256": "f9f9eca779be9c8d693e17f3458cd94ff3d2c0e929977b7cb83d32d5931cde8d",
+      "arm": "A0",
+      "checkpoint_sha256": "c2c6c06a5d00591af430cf21d851fd1fc345c6253cf2611b289216893b67d5be",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "initial_hash": "1e14ed2862fc0b05d20f7474fa1388f22924cb770510972a61f1b4a74f23ed51",
+      "parameters": 8817,
+      "threshold": 0.275
+    },
+    {
+      "OOF_sha256": "f9f9eca779be9c8d693e17f3458cd94ff3d2c0e929977b7cb83d32d5931cde8d",
+      "arm": "A1",
+      "checkpoint_sha256": "72a6030ce2980d3dfa667dba33cbb89e1b1e0ba973e10a9f2d2b8b22a8f0168d",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "initial_hash": "1e14ed2862fc0b05d20f7474fa1388f22924cb770510972a61f1b4a74f23ed51",
+      "parameters": 8817,
+      "threshold": 0.265
+    },
+    {
+      "OOF_sha256": "f9f9eca779be9c8d693e17f3458cd94ff3d2c0e929977b7cb83d32d5931cde8d",
+      "arm": "A2",
+      "checkpoint_sha256": "3dfc4944cf84b310fc1c2296598f9731c569f5bde40244ecf02f76587e69f540",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "initial_hash": "1e14ed2862fc0b05d20f7474fa1388f22924cb770510972a61f1b4a74f23ed51",
+      "parameters": 8817,
+      "threshold": 0.275
+    },
+    {
+      "OOF_sha256": "7d6eb8740db666cd69f3a2a2acb713fb0423badecc7e8c257b4c23b0180c77bc",
+      "arm": "A0",
+      "checkpoint_sha256": "4f39466b937e0da60feac5561f8ca1842f8a49fb4a5db21b699e5c1b4d2935f4",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 3,
+      "initial_hash": "c2c45ab7179dfed59193d0db1800305588bacc10ecbb15596f94c34c106f44c7",
+      "parameters": 8817,
+      "threshold": 0.34
+    },
+    {
+      "OOF_sha256": "7d6eb8740db666cd69f3a2a2acb713fb0423badecc7e8c257b4c23b0180c77bc",
+      "arm": "A1",
+      "checkpoint_sha256": "1589601b95ce88d0ccc1b9232753b4e59a53c066c532eebea3913873a685df7a",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 3,
+      "initial_hash": "c2c45ab7179dfed59193d0db1800305588bacc10ecbb15596f94c34c106f44c7",
+      "parameters": 8817,
+      "threshold": 0.335
+    },
+    {
+      "OOF_sha256": "7d6eb8740db666cd69f3a2a2acb713fb0423badecc7e8c257b4c23b0180c77bc",
+      "arm": "A2",
+      "checkpoint_sha256": "2df46f017e973e94905db2abb652aadcfda2b1c37a34eaa0719272a94c11fc74",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 3,
+      "initial_hash": "c2c45ab7179dfed59193d0db1800305588bacc10ecbb15596f94c34c106f44c7",
+      "parameters": 8817,
+      "threshold": 0.34
+    },
+    {
+      "OOF_sha256": "c5c93fa192a6fd019b8c57073a80655ff130b3d98951cd432b9451f28a7d9f92",
+      "arm": "A0",
+      "checkpoint_sha256": "a22c5bae3ff7eee9d0a250d3aa2d07805b0f97560b54678bc956d29aaac040a1",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 4,
+      "initial_hash": "9f2f4d28638d4f2ebb985879638992c4a705c56bd6b23678300c8aa8dea5b6dd",
+      "parameters": 8817,
+      "threshold": 0.355
+    },
+    {
+      "OOF_sha256": "c5c93fa192a6fd019b8c57073a80655ff130b3d98951cd432b9451f28a7d9f92",
+      "arm": "A1",
+      "checkpoint_sha256": "27cb5f6930048a95a6eadd9e5252adf91cdc38be19524c1666283b8f5b1ddef8",
+      "completed_epochs": 12,
+      "epoch": 6,
+      "fold": 4,
+      "initial_hash": "9f2f4d28638d4f2ebb985879638992c4a705c56bd6b23678300c8aa8dea5b6dd",
+      "parameters": 8817,
+      "threshold": 0.34
+    },
+    {
+      "OOF_sha256": "c5c93fa192a6fd019b8c57073a80655ff130b3d98951cd432b9451f28a7d9f92",
+      "arm": "A2",
+      "checkpoint_sha256": "f432974b2def5eaef85b885a5452d30f19c3b8f19a292b9def380770ae786fb7",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 4,
+      "initial_hash": "9f2f4d28638d4f2ebb985879638992c4a705c56bd6b23678300c8aa8dea5b6dd",
+      "parameters": 8817,
+      "threshold": 0.355
+    },
+    {
+      "OOF_sha256": "b22847ae0a49f14228ff0e011d76550e1ee4d78a81cb9aca494a441e701350d0",
+      "arm": "A0",
+      "checkpoint_sha256": "a6df5e7d5376de9f6967b7e0e9cafecc20fdb5ed04a1d8ca0fa2134b10d96690",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 5,
+      "initial_hash": "5ddb92e467545589d00a2b877ecea69cce6a53e40b6c5e8fd38634b1f73bc8f9",
+      "parameters": 8817,
+      "threshold": 0.445
+    },
+    {
+      "OOF_sha256": "b22847ae0a49f14228ff0e011d76550e1ee4d78a81cb9aca494a441e701350d0",
+      "arm": "A1",
+      "checkpoint_sha256": "79e287e751d1bef0fed29c76a4820583939be0efa8c19ebef4b333bfffbbacc6",
+      "completed_epochs": 13,
+      "epoch": 7,
+      "fold": 5,
+      "initial_hash": "5ddb92e467545589d00a2b877ecea69cce6a53e40b6c5e8fd38634b1f73bc8f9",
+      "parameters": 8817,
+      "threshold": 0.325
+    },
+    {
+      "OOF_sha256": "b22847ae0a49f14228ff0e011d76550e1ee4d78a81cb9aca494a441e701350d0",
+      "arm": "A2",
+      "checkpoint_sha256": "43dad91f4a5a58f30089d459d61b3f2736c62b094960123ed52d53f62fcc7f54",
+      "completed_epochs": 12,
+      "epoch": 6,
+      "fold": 5,
+      "initial_hash": "5ddb92e467545589d00a2b877ecea69cce6a53e40b6c5e8fd38634b1f73bc8f9",
+      "parameters": 8817,
+      "threshold": 0.345
+    }
+  ]
+}

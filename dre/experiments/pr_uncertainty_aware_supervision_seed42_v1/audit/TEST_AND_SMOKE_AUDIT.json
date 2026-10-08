@@ -1,0 +1,27 @@
+{
+  "core_sha256": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+  "features_labels_identity_gate": true,
+  "finite_real_A2_gradients": true,
+  "outer_VAL_TEST_labels_used": false,
+  "preprocessing_array_max_drift": 0.0,
+  "real_FIT_patients_smoke": 3,
+  "runtime_admission_sha256": "b30625317ce2947577fe34b6e77ce8723a7abd08623b93b95b55fd7989c78b94",
+  "single_epoch_model_parameter_max_drift": 0.0,
+  "source_hashes": {
+    "neuroez_c/evidence_views.py": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+    "task1_baselines/feature_aggregation.py": "426344bfa6ef0dd4b1dc59fe267d7920cef020fdcb42e834efc9a9ae6b4ca273",
+    "task1_baselines/patient_controls.py": "a6a62d10f763a843cb09cc6f85a53733a17103729b068c603d1022a10b91c415",
+    "task1_baselines/thresholds.py": "2a1fd5593fbf97d716056ec96810a3dbcde5b713e19e388597ef531c79020473"
+  },
+  "source_source_parity_model_hash": "d27d12040ec1132e3444b8c9fa728f72c9d85a8fd67f5210113ff79b727fa5ec",
+  "source_threshold_selected_metric_exact_match": true,
+  "status": "PASS",
+  "synthetic_oracle_sha256": "144a2875147c1602236d7bfefe7653e38f65021ebb6c9819aafb3241ab327dbc",
+  "synthetic_pytest_stdout": "......                                                                   [100%]\n6 passed in 5.13s",
+  "synthetic_tests_sha256": "26c0770bb3431695c20f35ac1c622e8598271bc3a34308289da317a6610c0de2",
+  "threshold_reference_mode": "identical eight synthetic cases, independently locally computed sklearn oracle; selected real FIT threshold metrics checked with original source",
+  "versions": {
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128"
+  }
+}

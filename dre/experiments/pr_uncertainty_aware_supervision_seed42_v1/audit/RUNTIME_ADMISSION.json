@@ -1,0 +1,29 @@
+{
+  "feature_sha256": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+  "five_checkpoint_max_drifts": [
+    1.371520995663289e-07,
+    1.4565811157218889e-07,
+    1.482063293201108e-07,
+    1.476135254030453e-07,
+    1.3531036380243222e-07
+  ],
+  "historical_metrics_exact": true,
+  "metrics": {
+    "accuracy": 0.7393680333912378,
+    "balanced_accuracy": 0.6641791392268257,
+    "ez_auprc": 0.5319959936611567,
+    "ez_auroc": 0.7268443834107704,
+    "ez_f1": 0.4238657223879644,
+    "ez_mrr": 0.7330307468267027,
+    "macro_f1": 0.6161672347405565,
+    "nez_f1": 0.8084687470931484,
+    "sensitivity": 0.5053027174950608,
+    "specificity": 0.8230555609585904,
+    "top1_is_ez": 0.65
+  },
+  "numpy": "2.4.3",
+  "source": "fresh_this_task_hash_verified_88D_features",
+  "source_code_sha256": "1a6a1bc5b78227ad5ef463868c1ab25095f06ead583688ba25b0b7fe28a51a1a",
+  "status": "PASS",
+  "torch": "2.11.0+cu128"
+}

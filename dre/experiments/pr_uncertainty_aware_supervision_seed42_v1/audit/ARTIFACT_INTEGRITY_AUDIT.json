@@ -1,0 +1,327 @@
+{
+  "OOF_identity_and_exclusion_pass": true,
+  "cells": [
+    {
+      "best_sha256": "a016225c836bf73f669a9269024b50e9f7f86cbae08448a7852ef5c488a91de0",
+      "cell": "teacher0",
+      "epochs": 22,
+      "fold": 1,
+      "last_sha256": "0015120926708a6081c23cdc4b7ec6a06f6f65f836c9c12246bb8cfeb94d27ae",
+      "selected_epoch": 16,
+      "selected_threshold": 0.165
+    },
+    {
+      "best_sha256": "c5c555cb2fc266b87c012006b5da19defcf8979b29daa49f5490db60b98130b2",
+      "cell": "teacher1",
+      "epochs": 14,
+      "fold": 1,
+      "last_sha256": "69716a30aa9aaf638a4220e8f1aada3f4576c5ea4dcc1073b0073528b9829193",
+      "selected_epoch": 8,
+      "selected_threshold": 0.39
+    },
+    {
+      "best_sha256": "5e28cfe17224eb70ff6a3bb03855b3e1b49a11abe04717479b95e4772e8f046a",
+      "cell": "teacher2",
+      "epochs": 8,
+      "fold": 1,
+      "last_sha256": "72331e2318e5d15cc14887d7abb6812d727fe61b227abb6be57775a7a399f546",
+      "selected_epoch": 2,
+      "selected_threshold": 0.4
+    },
+    {
+      "best_sha256": "fab2ce3a3b5431acbecc765a5bf57779cdc0fd3a912186dbf1b79670c0885396",
+      "cell": "teacher3",
+      "epochs": 13,
+      "fold": 1,
+      "last_sha256": "5f19cdda2143368cf111feeefb42bc1e30cf7557bde2965ca6ee2324cb660fa4",
+      "selected_epoch": 7,
+      "selected_threshold": 0.395
+    },
+    {
+      "best_sha256": "bb054c4dc8e55de0af14daf4ce8408025b1717a1ff05e26a3ff1525e0c6f0506",
+      "cell": "A0",
+      "epochs": 9,
+      "fold": 1,
+      "last_sha256": "70736dae4d7c3d4c22d102377d3961b491c98fde29e8e27d4664c78b61adf57e",
+      "selected_epoch": 3,
+      "selected_threshold": 0.465
+    },
+    {
+      "best_sha256": "11c47bc0f26f5c66c081f44fea653b418ec783382783e662e6c9307b59ee34af",
+      "cell": "A1",
+      "epochs": 9,
+      "fold": 1,
+      "last_sha256": "d3d195f11511bf7290192088b9452f74a61a86238618178636e8a3f513c3f0f3",
+      "selected_epoch": 3,
+      "selected_threshold": 0.435
+    },
+    {
+      "best_sha256": "3ed18e2a70a3efc1f24c0d7063cb726a4d9bf911507427865aa63c1bdb97574d",
+      "cell": "A2",
+      "epochs": 9,
+      "fold": 1,
+      "last_sha256": "68f3ac6ca2399874c2dc7939da47be55a31f9d635a8e08054c4cea4158275f27",
+      "selected_epoch": 3,
+      "selected_threshold": 0.465
+    },
+    {
+      "best_sha256": "545fe7ad450b5c418aa056471374fe494d8a2db5583484f2572530c8cb543312",
+      "cell": "teacher0",
+      "epochs": 7,
+      "fold": 2,
+      "last_sha256": "7dc052ae25a239c749ef25f666d42b4cfc56a5d982a02bb6fe472454c6644553",
+      "selected_epoch": 1,
+      "selected_threshold": 0.33
+    },
+    {
+      "best_sha256": "aae70b999485ced0771460889a4df32bcaf1b445f298109c445f137df409a3c1",
+      "cell": "teacher1",
+      "epochs": 7,
+      "fold": 2,
+      "last_sha256": "9136b1dcd85e9b02d5eec4c27d04d745b4b803c453240c549e790f2105bb1581",
+      "selected_epoch": 1,
+      "selected_threshold": 0.36
+    },
+    {
+      "best_sha256": "8bc3c0f4769c456c664e339329d2c01b14612594a2b2d0ee2add2b9d859150d8",
+      "cell": "teacher2",
+      "epochs": 13,
+      "fold": 2,
+      "last_sha256": "46514dee6ed089f1cf7e692c35b4ae9ba5c0817f0141dd118e240282e6e87d6c",
+      "selected_epoch": 7,
+      "selected_threshold": 0.435
+    },
+    {
+      "best_sha256": "42d52f5879538901a3be05fbe8caa43ae566c2a4f8bb973e986ea8382c71190d",
+      "cell": "teacher3",
+      "epochs": 11,
+      "fold": 2,
+      "last_sha256": "9a30d171b6bac2b62215a5a960b63a81399644d81988c47b76d66e55616830e5",
+      "selected_epoch": 5,
+      "selected_threshold": 0.325
+    },
+    {
+      "best_sha256": "c2c6c06a5d00591af430cf21d851fd1fc345c6253cf2611b289216893b67d5be",
+      "cell": "A0",
+      "epochs": 7,
+      "fold": 2,
+      "last_sha256": "d3a1e443be7a28da51ce3fcbcfa6a6315e46c7ada539a733f6867c544ba97ef5",
+      "selected_epoch": 1,
+      "selected_threshold": 0.275
+    },
+    {
+      "best_sha256": "72a6030ce2980d3dfa667dba33cbb89e1b1e0ba973e10a9f2d2b8b22a8f0168d",
+      "cell": "A1",
+      "epochs": 7,
+      "fold": 2,
+      "last_sha256": "9f176f1b0c7e342a2adbf54ada01ba6cbbddb26b0aca3a826fb597aab881f276",
+      "selected_epoch": 1,
+      "selected_threshold": 0.265
+    },
+    {
+      "best_sha256": "3dfc4944cf84b310fc1c2296598f9731c569f5bde40244ecf02f76587e69f540",
+      "cell": "A2",
+      "epochs": 7,
+      "fold": 2,
+      "last_sha256": "f13a33a1472d2b7bc94c15b00761d873b4a179b11600accb8a16e29027cc52d1",
+      "selected_epoch": 1,
+      "selected_threshold": 0.275
+    },
+    {
+      "best_sha256": "4e63a9a45c8d7cf48e1edfb0ac49343da3c99902c05537e23927d904a81a1626",
+      "cell": "teacher0",
+      "epochs": 9,
+      "fold": 3,
+      "last_sha256": "daf939bd308caec4009f79a49c3ea0102a25c495cbdb575248140749a5d91698",
+      "selected_epoch": 3,
+      "selected_threshold": 0.26
+    },
+    {
+      "best_sha256": "74713f0ba93455b4fb08805bda8bf8ac05a4c8eeecfa7f65626f881adaf2c7e6",
+      "cell": "teacher1",
+      "epochs": 16,
+      "fold": 3,
+      "last_sha256": "f5b38acbfb1c3e96b09239fa5f73de224d8e14f67df675a8cfd6b77908d11097",
+      "selected_epoch": 10,
+      "selected_threshold": 0.295
+    },
+    {
+      "best_sha256": "173aa24bb39e4fd07500cfa63fc2ba905425ce9e0aa5cfd49d8e1faa40ea3d14",
+      "cell": "teacher2",
+      "epochs": 9,
+      "fold": 3,
+      "last_sha256": "631ccf51479c2723e148099c292cda01bd6478c8bddf1ec45a0e161ac17f0f81",
+      "selected_epoch": 3,
+      "selected_threshold": 0.445
+    },
+    {
+      "best_sha256": "ec69ca16be708f79414e91d91f6a14b37de77837cf0be5bc5e3aa80591a8dc62",
+      "cell": "teacher3",
+      "epochs": 7,
+      "fold": 3,
+      "last_sha256": "9b61590ec3b3e3fb38fe6b75e431f7c00d3a55ae443e5556449fc0270b3e62b6",
+      "selected_epoch": 1,
+      "selected_threshold": 0.465
+    },
+    {
+      "best_sha256": "4f39466b937e0da60feac5561f8ca1842f8a49fb4a5db21b699e5c1b4d2935f4",
+      "cell": "A0",
+      "epochs": 8,
+      "fold": 3,
+      "last_sha256": "a39bc86317bf5d1d0dc61838101a00417be4592a7ecff042289d0d2ab28a47e8",
+      "selected_epoch": 2,
+      "selected_threshold": 0.34
+    },
+    {
+      "best_sha256": "1589601b95ce88d0ccc1b9232753b4e59a53c066c532eebea3913873a685df7a",
+      "cell": "A1",
+      "epochs": 8,
+      "fold": 3,
+      "last_sha256": "56b8c167985dd1859f3af3d11c5e6062e3faab27c275b1550e50409114c2a2e2",
+      "selected_epoch": 2,
+      "selected_threshold": 0.335
+    },
+    {
+      "best_sha256": "2df46f017e973e94905db2abb652aadcfda2b1c37a34eaa0719272a94c11fc74",
+      "cell": "A2",
+      "epochs": 8,
+      "fold": 3,
+      "last_sha256": "67a3ef53af1517c61ea08444402b075f5774a6ab66eb5983054dca6e23e3edba",
+      "selected_epoch": 2,
+      "selected_threshold": 0.34
+    },
+    {
+      "best_sha256": "e054194771e09035e945dc03dc93e8d86bb7c7f865b6d2bdb29690806a2d0a73",
+      "cell": "teacher0",
+      "epochs": 8,
+      "fold": 4,
+      "last_sha256": "28b2d81b24657adb4b07c7499e1924a0012165fbcc715c33fe27831d6a980bc7",
+      "selected_epoch": 2,
+      "selected_threshold": 0.28
+    },
+    {
+      "best_sha256": "91d5dad76e8caf4c675d80affa74008148663690ec78332f3ad015734212a878",
+      "cell": "teacher1",
+      "epochs": 7,
+      "fold": 4,
+      "last_sha256": "b7c44b2fa84e51b66e936ee8c799101d52e5381f31265409f746fdd23539874e",
+      "selected_epoch": 1,
+      "selected_threshold": 0.35
+    },
+    {
+      "best_sha256": "5fdce1a4517c6a54edf2c29e92c5c79ed52ea793f211e41ad1d231cf33635c18",
+      "cell": "teacher2",
+      "epochs": 7,
+      "fold": 4,
+      "last_sha256": "932b997e5138fe1f0090549271842196ed6ae43f8576952b660dc5554386171e",
+      "selected_epoch": 1,
+      "selected_threshold": 0.39
+    },
+    {
+      "best_sha256": "31533ae5e4e92f81a37c62830deffd17e042f5f1b35163eee796801c7f98e8ad",
+      "cell": "teacher3",
+      "epochs": 9,
+      "fold": 4,
+      "last_sha256": "8784c54bbcfdfdf9bc577e43e188ad521fd3ab1f3810257abe4dffe9f4b076c7",
+      "selected_epoch": 3,
+      "selected_threshold": 0.4
+    },
+    {
+      "best_sha256": "a22c5bae3ff7eee9d0a250d3aa2d07805b0f97560b54678bc956d29aaac040a1",
+      "cell": "A0",
+      "epochs": 8,
+      "fold": 4,
+      "last_sha256": "fe52e49c1167a84cd6f7638e35bea06b65bd8b6fa3494ab78db01added288f4f",
+      "selected_epoch": 2,
+      "selected_threshold": 0.355
+    },
+    {
+      "best_sha256": "27cb5f6930048a95a6eadd9e5252adf91cdc38be19524c1666283b8f5b1ddef8",
+      "cell": "A1",
+      "epochs": 12,
+      "fold": 4,
+      "last_sha256": "d360ce18bc595b5d1d3750ddd901d47c6566c557e2e83d283465ffc5a7ec380d",
+      "selected_epoch": 6,
+      "selected_threshold": 0.34
+    },
+    {
+      "best_sha256": "f432974b2def5eaef85b885a5452d30f19c3b8f19a292b9def380770ae786fb7",
+      "cell": "A2",
+      "epochs": 8,
+      "fold": 4,
+      "last_sha256": "cd5496e10da1331b1933d7b46bef68e8f0040462ed68954fbf29096cb7681123",
+      "selected_epoch": 2,
+      "selected_threshold": 0.355
+    },
+    {
+      "best_sha256": "264af2f0306b1fa1a4a35d1bd2604556169b1f696eac0486fcea8cfb5c456561",
+      "cell": "teacher0",
+      "epochs": 7,
+      "fold": 5,
+      "last_sha256": "b8aaa62eae234e4d2bf015f1602de56779507180f265a747295166e8e486ca24",
+      "selected_epoch": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "best_sha256": "bf9c05e5d565e3df073ae2953b93c964c813fb412039ebc1cc98a1b6a3bf9bb3",
+      "cell": "teacher1",
+      "epochs": 23,
+      "fold": 5,
+      "last_sha256": "a37e9cfa2f705590712a85a1c1d3946d96acb568d6e77a15db38ef8a59b6a8a3",
+      "selected_epoch": 17,
+      "selected_threshold": 0.54
+    },
+    {
+      "best_sha256": "d45c96ef9f02fe0a88d640a129470db0633a9c3e8bea7cc2be789fa2c10ff6b3",
+      "cell": "teacher2",
+      "epochs": 9,
+      "fold": 5,
+      "last_sha256": "62a25c9d2f46ca84d1c2fd456d7cd646275ff9b8589ede273bdd279eafd29fba",
+      "selected_epoch": 3,
+      "selected_threshold": 0.365
+    },
+    {
+      "best_sha256": "7d47820d4ae13af1f570b6c96971eb01a5ce7de0505d619b265d5161acbb28b0",
+      "cell": "teacher3",
+      "epochs": 7,
+      "fold": 5,
+      "last_sha256": "543c6b9ad3abae468968f4341e6d2b26dfa9c7edb3a42fe60b88fb5258b440ae",
+      "selected_epoch": 1,
+      "selected_threshold": 0.405
+    },
+    {
+      "best_sha256": "a6df5e7d5376de9f6967b7e0e9cafecc20fdb5ed04a1d8ca0fa2134b10d96690",
+      "cell": "A0",
+      "epochs": 8,
+      "fold": 5,
+      "last_sha256": "4e939401cb569a4be0caf18f4c5a278c41f9476c9bf9d447992625d2ce50f6b0",
+      "selected_epoch": 2,
+      "selected_threshold": 0.445
+    },
+    {
+      "best_sha256": "79e287e751d1bef0fed29c76a4820583939be0efa8c19ebef4b333bfffbbacc6",
+      "cell": "A1",
+      "epochs": 13,
+      "fold": 5,
+      "last_sha256": "183a13c07f8fc55703d118141b498671f4f29f04a78ca8464a60edeef5909fdd",
+      "selected_epoch": 7,
+      "selected_threshold": 0.325
+    },
+    {
+      "best_sha256": "43dad91f4a5a58f30089d459d61b3f2736c62b094960123ed52d53f62fcc7f54",
+      "cell": "A2",
+      "epochs": 12,
+      "fold": 5,
+      "last_sha256": "99a2c31d23dcfe32804fc3e62d2006144d481c6c16f05651afde25d444536c59",
+      "selected_epoch": 6,
+      "selected_threshold": 0.345
+    }
+  ],
+  "last_best_optimizer_rng_history_complete": true,
+  "outer_evaluation_accessed": false,
+  "post_training_native_shutdown_exception_disclosed": true,
+  "status": "PASS",
+  "student_cells": 15,
+  "teacher_cells": 20,
+  "validation_channel_pairs_exactly_matched": true
+}

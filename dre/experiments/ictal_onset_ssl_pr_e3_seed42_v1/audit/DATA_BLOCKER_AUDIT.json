@@ -1,0 +1,89 @@
+{
+  "status": "BLOCKED_RAW_WINDOW_PADDING",
+  "hashes": {
+    "feature_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "raw_cache": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733"
+  },
+  "expected_hashes_match": true,
+  "n_patients": 80,
+  "n_seizures": 256,
+  "n_unique_channels": 7635,
+  "run_channel_incidences": 24995,
+  "source_window_incidences": 1471965,
+  "duplicate_feature_keys": 0,
+  "matched_raw_records": 256,
+  "source_onset_flag_counts": {
+    "MISSING": 256
+  },
+  "issues": {
+    "PREICTAL_INCLUDES_PADDING": 1
+  },
+  "affected_records": 1,
+  "affected_patients": 1,
+  "affected_run_channel_pairs": 104,
+  "unaffected_records": 255,
+  "affected_records_by_center": {
+    "lzu": 1
+  },
+  "affected_by_fold": [
+    {
+      "fold": 1,
+      "fit_subjects_affected_patients": 1,
+      "fit_subjects_affected_records": 1,
+      "validation_subjects_affected_patients": 0,
+      "validation_subjects_affected_records": 0,
+      "test_subjects_affected_patients": 0,
+      "test_subjects_affected_records": 0
+    },
+    {
+      "fold": 2,
+      "fit_subjects_affected_patients": 1,
+      "fit_subjects_affected_records": 1,
+      "validation_subjects_affected_patients": 0,
+      "validation_subjects_affected_records": 0,
+      "test_subjects_affected_patients": 0,
+      "test_subjects_affected_records": 0
+    },
+    {
+      "fold": 3,
+      "fit_subjects_affected_patients": 1,
+      "fit_subjects_affected_records": 1,
+      "validation_subjects_affected_patients": 0,
+      "validation_subjects_affected_records": 0,
+      "test_subjects_affected_patients": 0,
+      "test_subjects_affected_records": 0
+    },
+    {
+      "fold": 4,
+      "fit_subjects_affected_patients": 0,
+      "fit_subjects_affected_records": 0,
+      "validation_subjects_affected_patients": 0,
+      "validation_subjects_affected_records": 0,
+      "test_subjects_affected_patients": 1,
+      "test_subjects_affected_records": 1
+    },
+    {
+      "fold": 5,
+      "fit_subjects_affected_patients": 0,
+      "fit_subjects_affected_records": 0,
+      "validation_subjects_affected_patients": 1,
+      "validation_subjects_affected_records": 1,
+      "test_subjects_affected_patients": 0,
+      "test_subjects_affected_records": 0
+    }
+  ],
+  "preictal_padded_samples_per_channel": 1000,
+  "early_ictal_padded_samples_per_channel": 0,
+  "training_started": false,
+  "test_evaluation_started": false,
+  "independent_onset_confirmed_records": 0,
+  "alternative_protocol_diagnostics_not_authorized_for_training": {
+    "pre_minus10_to_0_padding_records": 0,
+    "pre_minus11_to_minus1_padding_records": 0,
+    "exclude_invalid_records_remaining_records": 255,
+    "exclude_invalid_records_patients_retained": 80,
+    "exclude_invalid_records_unique_channels_retained": 7635,
+    "note": "Read-only feasibility checks. No window, cohort, cache, or label was changed."
+  },
+  "required_action": "Resolve source completeness or explicitly authorize a new window/cohort protocol; original E3 cannot train with invalid crops."
+}

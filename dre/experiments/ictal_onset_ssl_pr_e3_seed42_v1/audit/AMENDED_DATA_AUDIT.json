@@ -1,0 +1,56 @@
+{
+  "status": "PASS_SOURCE_CODE_ALIGNMENT_ONLY",
+  "raw_cache_total_records": 501,
+  "feature_cache_total_records": 281,
+  "raw_extra_unselected_records": 245,
+  "reused_historical_cohort": true,
+  "n_patients": 80,
+  "n_seizures": 255,
+  "source_n_seizures": 256,
+  "authorized_excluded_records": 1,
+  "authorized_excluded_run_channel_pairs": 104,
+  "authorized_excluded_source_windows": 4160,
+  "n_unique_channels": 7635,
+  "run_channel_incidences": 24891,
+  "source_window_incidences": 1467805,
+  "valid_pre_ictal_pairs": 24891,
+  "missing_seizure_channel_slots": 272,
+  "fold_test_counts": {
+    "1": 16,
+    "2": 16,
+    "3": 17,
+    "4": 15,
+    "5": 16
+  },
+  "center_counts": {
+    "hup": 36,
+    "lzu": 21,
+    "multicenter": 15,
+    "pediatric": 8
+  },
+  "class_support": {
+    "both_class_patients": 80
+  },
+  "source_flag_counts": {
+    "MISSING": 256
+  },
+  "independent_onset_provenance_verified_records": 0,
+  "onset_provenance_note": "At raw midpoint per legacy constructor only; original EDF-to-cache trace remains unverified",
+  "data_sha256": {
+    "feature_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "raw_cache": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "frozen_folds": "a39bddfb3eb02f85b093f13aacd35e7f102fec7b8d05855f98f61f34c2a1d9b6",
+    "exclusion_private": "58eaa1e0e12d85322d34ef954a957c5ec20cd0b4f3ee640991f57b57d404d095",
+    "protocol_amendment": "c981c3c892fb144463aeef7c97fe8c9cfbd9337c0f699750e83e88eadc956b98"
+  },
+  "raw_preictal_bounds_sec": [
+    -15,
+    -5
+  ],
+  "raw_early_ictal_bounds_sec": [
+    0,
+    10
+  ],
+  "raw_250hz_60s": true,
+  "allow_source_only": true
+}

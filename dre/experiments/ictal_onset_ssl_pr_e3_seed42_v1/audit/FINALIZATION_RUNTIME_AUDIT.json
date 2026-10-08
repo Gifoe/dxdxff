@@ -1,0 +1,20 @@
+﻿{
+    "status":  "PASS",
+    "training_completed_before_change":  true,
+    "original_environment_unchanged":  true,
+    "original_numpy":  "2.2.6",
+    "finalization_numpy":  "1.26.4",
+    "torch":  "2.8.0+cu128",
+    "sklearn":  "1.7.2",
+    "scipy":  "1.15.3",
+    "metric_max_abs_diff":  0.0,
+    "thresholds_exact":  true,
+    "sampling_exact":  true,
+    "synthetic_patients":  60,
+    "synthetic_metric_points":  300,
+    "threshold_grid_groups":  12,
+    "validation_logit_max_abs_diff":  0.0,
+    "input_bytes_identical":  true,
+    "reference_note":  "Local model-free reference with matching numpy/sklearn/scipy versions; no patient data transferred",
+    "rejected_workaround":  "NPY_DISABLE_CPU_FEATURES=AVX2,FMA3 failed synthetic stress"
+}

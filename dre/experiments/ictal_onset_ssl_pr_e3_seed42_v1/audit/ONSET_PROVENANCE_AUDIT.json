@@ -1,0 +1,45 @@
+{
+  "source_status": "SOURCE_CODE_SUPPORTED",
+  "independent_status": "INDEPENDENT_EDF_UNCONFIRMED",
+  "matched_records": 256,
+  "independent_edf_confirmed_records": 0,
+  "metadata_field_counts": {
+    "start_sec": 256,
+    "end_sec": 256,
+    "seizure_onset_sec": 256,
+    "raw_valid_start_sample": 256,
+    "file_quality_rating": 256,
+    "file_quality_report_path": 256,
+    "file_quality_report_sheet": 256,
+    "file_quality_report_row": 256,
+    "file_quality_match_key": 256,
+    "interictal_source_type": 256,
+    "interictal_source_path": 143,
+    "interictal_source_run_id": 143,
+    "interictal_source_sfreq": 143,
+    "interictal_source_sfreq_original": 143,
+    "file_quality_rating_before_final": 256,
+    "file_quality_final_action": 256,
+    "file_quality_final_note": 256,
+    "file_quality_patch_method": 1,
+    "file_quality_patch_confidence": 1,
+    "file_quality_patch_source_file": 1,
+    "file_quality_patch_source_sheet": 1,
+    "file_quality_patch_source_row": 1,
+    "file_quality_patch_note": 1
+  },
+  "stored_source_path_counts": {
+    "file_quality_report_path_exists": 250,
+    "interictal_source_path_missing": 26,
+    "file_quality_patch_source_file_exists": 1,
+    "interictal_source_path_exists": 117
+  },
+  "centers_with_existing_path_fields": {
+    "lzu": 67,
+    "hup": 234,
+    "multicenter": 45,
+    "pediatric": 22
+  },
+  "source_only_scope": "validation_only; independent onset gate required before outer testing",
+  "elapsed_seconds": 8.474405199998728
+}

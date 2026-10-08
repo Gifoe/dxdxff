@@ -1,0 +1,13 @@
+{
+  "cached_input_max_abs_diff": 0.0,
+  "held_out_access_rejected": true,
+  "ssl_original_vs_resumed_max_abs_diff": 0.0,
+  "supervised_original_vs_resumed_max_abs_diff": 0.0,
+  "selected_epoch_parity": true,
+  "threshold_parity": true,
+  "metric_parity": true,
+  "changed_resume_binding_rejected": true,
+  "status": "PASS",
+  "device": "cpu",
+  "scope": "synthetic original-vs-resume equivalence; no real-model outcomes"
+}

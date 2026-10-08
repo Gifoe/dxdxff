@@ -1,0 +1,20 @@
+{
+  "amendment": "E3_EXCLUDE_ONE_AUDITED_PADDED_SEIZURE_PAIR",
+  "approval": "USER_APPROVED",
+  "user_reply": "没问题",
+  "approved_scope": "Exclude only the one audited invalid seizure recording; retain all 80 patients, 7635 channels and original FIT/VAL/TEST memberships; train and validate E3 only.",
+  "authorized_exclusion_records": 1,
+  "authorized_exclusion_channels": 104,
+  "source_seizures": 256,
+  "model_seizures": 255,
+  "reference_preictal_seconds": [-15, -5],
+  "early_ictal_seconds": [0, 10],
+  "ssl_epochs": 25,
+  "supervised_epochs": 30,
+  "seed": 42,
+  "variant": "E3",
+  "attention": false,
+  "outer_evaluation_authorized_in_this_amendment": false,
+  "independent_onset_confirmed_records": 0,
+  "result_interpretation": "Source-code-supported development/validation. Clinical EDF onset remains independently unconfirmed."
+}

@@ -1,0 +1,12 @@
+{
+  "audit": "f40b8d01f86d7a30225cd7152afbc7277a1b785482d6d413743697cf882536bb",
+  "manifest": "70d51ea385e2a7e79971eb717a983ca9d3f68fb59693b75ab0a6fbbcc961d166",
+  "model": "160db9a5c01c9888f04be876acb69741e9cd7cc74b4198a9e0cd62b8774fb171",
+  "original_runner": "2edb9ad38fe270255dfd86949f3c4b44b8a44cbf68dd03d699bcc4a6c5f1f932",
+  "e3_runner": "e5be509208615ee8857ce240e0c968e6b860bf9e11659dff687eeacf2f454c8d",
+  "amendment": "c981c3c892fb144463aeef7c97fe8c9cfbd9337c0f699750e83e88eadc956b98",
+  "variant": "E3",
+  "seed": 42,
+  "ssl_epochs": 25,
+  "supervised_epochs": 30
+}

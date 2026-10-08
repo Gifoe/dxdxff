@@ -1,0 +1,12 @@
+{
+  "status": "VALIDATION_COMPLETE_TEST_NOT_ACCESSED",
+  "folds": 5,
+  "variant": "E3",
+  "source_only": true,
+  "outer_test_accessed": false,
+  "patients": 80,
+  "seizures": 255,
+  "unique_channels": 7635,
+  "n_validation_cells": 65,
+  "n_unique_validation_patients": 47
+}

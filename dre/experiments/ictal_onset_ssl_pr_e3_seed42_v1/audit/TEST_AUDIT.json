@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PACKAGE_SYNTHETIC_TESTS",
+  "test_count": 11,
+  "seconds": 9.74,
+  "execution_host": "trusted_private_DRE_server",
+  "python_environment": "persist_stable_251",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.2.6",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "package_zip_sha256": "c8aaa5a33482c9eed7971bbaa30d04e57bcfda616b4e7d01c25a5ef3beac8f3c",
+  "real_training_started": false,
+  "note": "Synthetic tests establish implementation behavior, not model performance or EDF onset provenance."
+}

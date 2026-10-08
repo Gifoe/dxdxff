@@ -1,0 +1,11 @@
+# Codex server execution instruction
+
+Implement/execute the attached `ictal_onset_ssl_pr_v1` package on the **trusted private DRE server**, with the historical project checkout `Gifoe/dxdxff`, source branch `codex/rawtiny-patient-relative-seed42-v1` and the frozen 80-patient A1 cohort.
+
+Follow `README.md` exactly. Start by checking the fixed source cache hashes and reconstructing the frozen five-fold FIT/VAL/TEST manifest using `legacy_folds.py`. Run audit/export first; do not silently recut source EDFs, change inclusion, remove patients or change labels. Read the raw cache provenance and, where possible, replay original EDF segments to independently check true seizure-onset sample. Separate audit statuses `SOURCE_CODE_SUPPORTED` and `INDEPENDENT_EDF_CONFIRMED`. Report failures and affected counts before starting the model.
+
+Use `model.py` and `run_experiment.py` for E0/E1/E2/E3 and optional gated E4/E5_SHAM. Reuse exact aligned patient masks and label orientation (`labels_ez=1`, classifier NEZ logit=1). Keep current E0-E3 identical architecture/parameter counts, shared random seeds, shared SSL checkpoint for E2/E3; only PR and SSL switches vary. Do not add pairwise ranking, old hand-crafted 88D features, routers or patient-wise oracle thresholds. The optional relation-attention and onset-shuffle controls must only be run when the predeclared validation gate passes.
+
+All checks, selected epochs, thresholds, checkpoint hashes, center diagnostics, fold results, mean patient Macro-F1, EZ-AUPRC, EZ-AUROC, EZ-F1, MRR, Top1 and 95% patient-bootstrap CIs must be saved in a final output directory with `FINAL_REPORT.md`. `outer_per_patient_private.csv` and raw data must stay only on the private server and must not be committed to GitHub. Report separate statuses for dry tests, validation, exploratory held-out and any truly independent external testing. Do not claim Macro-F1 >=0.70 unless measured under the precise patient-equal protocol.
+
+If the raw cache or original EDF provenance is missing, stop the corresponding dependent stage and produce a detailed blocker audit instead of inventing a result. If only the exact legacy cache-center semantics can be verified, optionally run validation-only under the explicit source-only flag, but do not label it as independent EDF-confirmed.

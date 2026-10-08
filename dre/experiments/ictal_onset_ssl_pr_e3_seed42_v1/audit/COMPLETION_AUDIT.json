@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "original_model_sha256_match": true,
+  "protocol_bindings_match": true,
+  "selected_checkpoint_hashes_match": true,
+  "fit_val_test_disjoint_in_every_fold": true,
+  "n_validation_cells": 65,
+  "n_unique_validation_patients": 47,
+  "ssl_epochs_completed": 125,
+  "supervised_epochs_completed": 150,
+  "summary_recalculation_max_abs_diff": 2.220446049250313e-16,
+  "outer_test_accessed": false,
+  "folds": [
+    {
+      "fold": 1,
+      "ssl_epochs": 25,
+      "supervised_epochs": 30,
+      "selected_epoch": 4,
+      "threshold": 0.35,
+      "checkpoint_sha256": "e19dcee6ce8840c1d6b619da7940d27fca658b0013db768036864ca2d5810a27"
+    },
+    {
+      "fold": 2,
+      "ssl_epochs": 25,
+      "supervised_epochs": 30,
+      "selected_epoch": 3,
+      "threshold": 0.45,
+      "checkpoint_sha256": "8548873cf6b34e0d6a84fff6f7aeb3d2c0393e24dc37039c9845dac1d1378a22"
+    },
+    {
+      "fold": 3,
+      "ssl_epochs": 25,
+      "supervised_epochs": 30,
+      "selected_epoch": 7,
+      "threshold": 0.375,
+      "checkpoint_sha256": "bf86a6c799d4fda1697104f166501835f23a7cf63a55428095eaac81f881a355"
+    },
+    {
+      "fold": 4,
+      "ssl_epochs": 25,
+      "supervised_epochs": 30,
+      "selected_epoch": 8,
+      "threshold": 0.325,
+      "checkpoint_sha256": "3ce142db8558e55fa045e0ba5f7d73f113f64e30d2a1719bbd020d8b8bfa4526"
+    },
+    {
+      "fold": 5,
+      "ssl_epochs": 25,
+      "supervised_epochs": 30,
+      "selected_epoch": 11,
+      "threshold": 0.5,
+      "checkpoint_sha256": "711a79d5ce5b573cd93c23594aea6483fe5afa15b249ad09ea07c290500eacca"
+    }
+  ],
+  "scope": "Artifact consistency and source-only validation; no model inference or independent test"
+}

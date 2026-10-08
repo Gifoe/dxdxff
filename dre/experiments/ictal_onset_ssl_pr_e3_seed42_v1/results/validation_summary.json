@@ -1,0 +1,22 @@
+{
+  "variant": "E3",
+  "n_patient_fold_cells": 65,
+  "n_unique_validation_patients": 47,
+  "fold_mean": {
+    "macro_f1": 0.6165452260011265,
+    "ez_f1": 0.39790020203192356,
+    "ez_ap": 0.4947666314019557,
+    "ez_auroc": 0.6914817725224427,
+    "mrr": 0.6667782430432724,
+    "top1": 0.5538461538461539
+  },
+  "unique_patient_mean": {
+    "macro_f1": 0.6187650481649088,
+    "ez_f1": 0.4047933811667851,
+    "ez_ap": 0.5053044588955223,
+    "ez_auroc": 0.6854160440662699,
+    "mrr": 0.6893378563242942,
+    "top1": 0.5851063829787234
+  },
+  "interpretation": "Development validation after checkpoint and threshold selection; no outer test."
+}

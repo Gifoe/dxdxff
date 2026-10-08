@@ -1,0 +1,11 @@
+{
+  "class_mass_preserved": true,
+  "constant_patient_groups": 23,
+  "every_nonconstant_group_feature_correspondence_changed": true,
+  "every_patient_class_exact_multiset": true,
+  "mean_patient_changed_channel_fraction": 0.3331507692444885,
+  "no_cross_patient_or_class_permutation": true,
+  "permutation_protocol": "stable sorted channel IDs within each patient/class; seed from SHA256(JSON[42,fold,patient,label]); conditional identity-permutation rejection for nonconstant groups only, fixed before outcomes",
+  "stable_ID_and_channel_seed": true,
+  "status": "PASS"
+}

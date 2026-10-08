@@ -1,0 +1,171 @@
+{
+  "no_outer_test_evaluation": true,
+  "same_initial_state_within_fold": true,
+  "selections": [
+    {
+      "PLLR_sha256": "6e015933f7b9d653814b1dca074ee2e6d64f1ba28212d4cbf18a120951b99a96",
+      "arm": "A0",
+      "checkpoint_sha256": "6f137b5720753fff156f012cc9c1f52b8364f1b376f302d7418ccf2f2b7e5e73",
+      "completed_epochs": 9,
+      "epoch": 3,
+      "fold": 1,
+      "initial_hash": "8f5b2f02371be78dcdbe53941b72a125d2d3c8927bcb73b37224a4798b892e85",
+      "parameters": 8817,
+      "threshold": 0.465
+    },
+    {
+      "PLLR_sha256": "9fd34e91f2b1a6db8d98e057318a34cf2320a0f3390f4675493c61680ddd9111",
+      "arm": "A0",
+      "checkpoint_sha256": "50c6adacd6433bfc60509fc253878e707a9684d1604c16fc72a7d7e7bd69b087",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "initial_hash": "1e14ed2862fc0b05d20f7474fa1388f22924cb770510972a61f1b4a74f23ed51",
+      "parameters": 8817,
+      "threshold": 0.275
+    },
+    {
+      "PLLR_sha256": "ddaa9df565f2777443e4b934ba85564abca4b2c742a95bbae65c40593b25bf63",
+      "arm": "A0",
+      "checkpoint_sha256": "81d86575bb791c7656eada9df95a8c382602bcc8a8442a6140585bbcc13c1219",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 3,
+      "initial_hash": "c2c45ab7179dfed59193d0db1800305588bacc10ecbb15596f94c34c106f44c7",
+      "parameters": 8817,
+      "threshold": 0.34
+    },
+    {
+      "PLLR_sha256": "31a609265a98d020a91aaddd1c4ef26bf5eda923d1a5d383582cda16de8e0b8a",
+      "arm": "A0",
+      "checkpoint_sha256": "e25ca2eed1b2f955ae39605ffe702f0d2e539ea81aa59f5e5e90c044d0f3c3b1",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 4,
+      "initial_hash": "9f2f4d28638d4f2ebb985879638992c4a705c56bd6b23678300c8aa8dea5b6dd",
+      "parameters": 8817,
+      "threshold": 0.355
+    },
+    {
+      "PLLR_sha256": "fb58f87535a51dc7e93d061203eed42070b458c6e0b9f095bcdc0aa3d0a25388",
+      "arm": "A0",
+      "checkpoint_sha256": "7daf67a8bf379c91b1bf97de129941bee5f7ef6dbbf75e69f5028cb949173094",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 5,
+      "initial_hash": "5ddb92e467545589d00a2b877ecea69cce6a53e40b6c5e8fd38634b1f73bc8f9",
+      "parameters": 8817,
+      "threshold": 0.445
+    },
+    {
+      "PLLR_sha256": "6e015933f7b9d653814b1dca074ee2e6d64f1ba28212d4cbf18a120951b99a96",
+      "arm": "B1",
+      "checkpoint_sha256": "cedbadeeef15d7a68d26dced9f2feba38ed880758d034cdc9d49eab84adbac90",
+      "completed_epochs": 9,
+      "epoch": 3,
+      "fold": 1,
+      "initial_hash": "8f5b2f02371be78dcdbe53941b72a125d2d3c8927bcb73b37224a4798b892e85",
+      "parameters": 8817,
+      "threshold": 0.465
+    },
+    {
+      "PLLR_sha256": "9fd34e91f2b1a6db8d98e057318a34cf2320a0f3390f4675493c61680ddd9111",
+      "arm": "B1",
+      "checkpoint_sha256": "538f2e048378fd66639d99d39ec0ec3932076ce2e055652a01341fbdd2f430b4",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "initial_hash": "1e14ed2862fc0b05d20f7474fa1388f22924cb770510972a61f1b4a74f23ed51",
+      "parameters": 8817,
+      "threshold": 0.265
+    },
+    {
+      "PLLR_sha256": "ddaa9df565f2777443e4b934ba85564abca4b2c742a95bbae65c40593b25bf63",
+      "arm": "B1",
+      "checkpoint_sha256": "d553df6e2cb65092fe31d3529b55f82051d2d3819ade75971b736a3c6fd51e72",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 3,
+      "initial_hash": "c2c45ab7179dfed59193d0db1800305588bacc10ecbb15596f94c34c106f44c7",
+      "parameters": 8817,
+      "threshold": 0.34
+    },
+    {
+      "PLLR_sha256": "31a609265a98d020a91aaddd1c4ef26bf5eda923d1a5d383582cda16de8e0b8a",
+      "arm": "B1",
+      "checkpoint_sha256": "16a28e9ef609c0a174af12543a4a608d2282a2eb55b3bd04392c8ec3f68d862c",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 4,
+      "initial_hash": "9f2f4d28638d4f2ebb985879638992c4a705c56bd6b23678300c8aa8dea5b6dd",
+      "parameters": 8817,
+      "threshold": 0.475
+    },
+    {
+      "PLLR_sha256": "fb58f87535a51dc7e93d061203eed42070b458c6e0b9f095bcdc0aa3d0a25388",
+      "arm": "B1",
+      "checkpoint_sha256": "5514f49f2778337183d55e372593ddb0c4be71a588bc7b5eae6611ccaca5c713",
+      "completed_epochs": 13,
+      "epoch": 7,
+      "fold": 5,
+      "initial_hash": "5ddb92e467545589d00a2b877ecea69cce6a53e40b6c5e8fd38634b1f73bc8f9",
+      "parameters": 8817,
+      "threshold": 0.35
+    },
+    {
+      "PLLR_sha256": "6e015933f7b9d653814b1dca074ee2e6d64f1ba28212d4cbf18a120951b99a96",
+      "arm": "B2",
+      "checkpoint_sha256": "547b24ecfe0de4e0835a0a344c8a97a9c4fd3a61866f49a131783dc3e8bed688",
+      "completed_epochs": 10,
+      "epoch": 4,
+      "fold": 1,
+      "initial_hash": "8f5b2f02371be78dcdbe53941b72a125d2d3c8927bcb73b37224a4798b892e85",
+      "parameters": 8817,
+      "threshold": 0.49
+    },
+    {
+      "PLLR_sha256": "9fd34e91f2b1a6db8d98e057318a34cf2320a0f3390f4675493c61680ddd9111",
+      "arm": "B2",
+      "checkpoint_sha256": "3a1ccdd56528140c46283ebd5a555a9b6a24f9f065b70cf663f03b112717661c",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 2,
+      "initial_hash": "1e14ed2862fc0b05d20f7474fa1388f22924cb770510972a61f1b4a74f23ed51",
+      "parameters": 8817,
+      "threshold": 0.245
+    },
+    {
+      "PLLR_sha256": "ddaa9df565f2777443e4b934ba85564abca4b2c742a95bbae65c40593b25bf63",
+      "arm": "B2",
+      "checkpoint_sha256": "262d1cf3620c09f4ce09162941346644aaee571bbae44a9b36fd70a790075a64",
+      "completed_epochs": 11,
+      "epoch": 5,
+      "fold": 3,
+      "initial_hash": "c2c45ab7179dfed59193d0db1800305588bacc10ecbb15596f94c34c106f44c7",
+      "parameters": 8817,
+      "threshold": 0.305
+    },
+    {
+      "PLLR_sha256": "31a609265a98d020a91aaddd1c4ef26bf5eda923d1a5d383582cda16de8e0b8a",
+      "arm": "B2",
+      "checkpoint_sha256": "d7ef3f86a87fa539f9f5247395970c6771a7b3772d120f7ede3d89f18b15a25c",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 4,
+      "initial_hash": "9f2f4d28638d4f2ebb985879638992c4a705c56bd6b23678300c8aa8dea5b6dd",
+      "parameters": 8817,
+      "threshold": 0.3
+    },
+    {
+      "PLLR_sha256": "fb58f87535a51dc7e93d061203eed42070b458c6e0b9f095bcdc0aa3d0a25388",
+      "arm": "B2",
+      "checkpoint_sha256": "06ab1f23b402e5e253d1eae46c636a71ce14a53ade5c8042117abf81854360c8",
+      "completed_epochs": 10,
+      "epoch": 4,
+      "fold": 5,
+      "initial_hash": "5ddb92e467545589d00a2b877ecea69cce6a53e40b6c5e8fd38634b1f73bc8f9",
+      "parameters": 8817,
+      "threshold": 0.39
+    }
+  ]
+}

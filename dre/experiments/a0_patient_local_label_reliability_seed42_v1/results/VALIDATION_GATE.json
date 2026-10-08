@@ -1,0 +1,31 @@
+{
+  "A0_worst_center": "pediatric",
+  "B2_A0_EZ_AP_delta": -0.0031260170600359016,
+  "B2_A0_EZ_F1_delta": -0.00786264507387191,
+  "B2_A0_macro_delta": 0.0001441668073943747,
+  "B2_B1_macro_delta": 0.0007765252408609147,
+  "B2_change_at_A0_worst_center": 0.012136250909633772,
+  "conditions": {
+    "B2_A0_macro_ge_0_020": false,
+    "B2_B1_macro_ge_0_010": false,
+    "EZ_AP_nondecline": false,
+    "EZ_F1_nondecline": false,
+    "four_of_five_folds_improve": false,
+    "worst_center_nondecline": true
+  },
+  "diagnostic_fixed_A0_threshold_F1_delta": -0.015147950950421096,
+  "failed_conditions": [
+    "B2_A0_macro_ge_0_020",
+    "B2_B1_macro_ge_0_010",
+    "EZ_AP_nondecline",
+    "EZ_F1_nondecline",
+    "four_of_five_folds_improve"
+  ],
+  "improved_folds": 2,
+  "no_new_outer_evaluation_authorized": true,
+  "pass": false,
+  "ranking_gain_not_implied_by_F1": true,
+  "target_gain_ge_0_030": false,
+  "terminal": "PLLR_POSITIVE_BELOW_TARGET",
+  "worst_center_delta": 0.012136250909633772
+}

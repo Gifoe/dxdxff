@@ -1,0 +1,12 @@
+{
+  "bootstrap_draws": 10000,
+  "development_complete": true,
+  "finalizer_sha256": "e6ecf4602a63a35f34c25015558b407e2e2aa1ce0c89db7f61f6b8b5782b0599",
+  "outer_evaluation_run": false,
+  "protocol_sha256": "6f32cf49b9d34ff55406d9ca58374edba676603bd64bf1b62f38498a3d141c76",
+  "status": "COMPLETE_DEVELOPMENT_GATE_FAILED",
+  "student_cells": 15,
+  "terminal": "PLLR_POSITIVE_BELOW_TARGET",
+  "unique_validation_patients": 47,
+  "validation_appearances_per_arm": 65
+}

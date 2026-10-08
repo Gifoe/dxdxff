@@ -1,0 +1,24 @@
+{
+  "binding": {
+    "baseline.py": "3675214bc511d8352cd8128c160bd260acdb76afae426a5600976a2a18cdce61",
+    "pllr.py": "692f29e2c02bdeff530d3ae71212d3e11de1d5e5166dfc1d6a250bc457e8a6ae",
+    "prepare.py": "cdd9d356efced271ca6a715ae5174aa6da5ff108e46a05c63c7a7916a77aa14f",
+    "protocol": "6f32cf49b9d34ff55406d9ca58374edba676603bd64bf1b62f38498a3d141c76",
+    "run.py": "7956e5f4ce6451633502fa996ca510ff8bf1a257b7b4404727b3892d55d3e163",
+    "smoke.py": "17ad49e041aeb0b4609ded3b31f0af7b15d2310cc13f65eef291047145d3a762",
+    "train.py": "cd9d20cb1a739dd1388e7db7974a3f7d8924d136411fcfff0663a93598c96438"
+  },
+  "original_vs_ones_parameter_hash": "25bf88d5d220a72fef2db28f3c97ef43c680499e165e171d4e19d694dfec8b12",
+  "original_vs_ones_parameter_max_drift": 0.0,
+  "outer_VAL_TEST_labels_used": false,
+  "real_B1_B2_finite_gradients": true,
+  "real_FIT_patients": 3,
+  "runtime": {
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128"
+  },
+  "selected_threshold_exact_match": true,
+  "status": "PASS",
+  "synthetic_test_groups": 6,
+  "tests_sha256": "fac394429a6faa9035fa759c0696681194ad694c92e99615b852667ae39bbc41"
+}

@@ -1,0 +1,179 @@
+{
+  "PCA": [
+    {
+      "FIT_rows": 4623,
+      "explained_variance_ratio": [
+        0.3536313849313832,
+        0.10550175014911164,
+        0.07247066426163187,
+        0.05922376818723654,
+        0.05071796801511964,
+        0.040082665239766835,
+        0.036255083342785564,
+        0.02854526737020009
+      ],
+      "fold": 1,
+      "outer_validation_test_rows": 0
+    },
+    {
+      "FIT_rows": 4951,
+      "explained_variance_ratio": [
+        0.37090388730337165,
+        0.1070264767165767,
+        0.07171320192671943,
+        0.061615819159227356,
+        0.053145557345338414,
+        0.03838439835526266,
+        0.03513546277489953,
+        0.028201450149352623
+      ],
+      "fold": 2,
+      "outer_validation_test_rows": 0
+    },
+    {
+      "FIT_rows": 4725,
+      "explained_variance_ratio": [
+        0.33834729549476117,
+        0.12562925035864186,
+        0.07584494307846902,
+        0.06985639699117274,
+        0.05012351726077335,
+        0.03510156855875364,
+        0.030316655655499583,
+        0.0296245876671322
+      ],
+      "fold": 3,
+      "outer_validation_test_rows": 0
+    },
+    {
+      "FIT_rows": 4943,
+      "explained_variance_ratio": [
+        0.3562995305570478,
+        0.102867381225836,
+        0.07174369122913023,
+        0.06027397732782629,
+        0.05030129655931666,
+        0.03833580297327096,
+        0.03425448745252718,
+        0.02749274030438367
+      ],
+      "fold": 4,
+      "outer_validation_test_rows": 0
+    },
+    {
+      "FIT_rows": 5025,
+      "explained_variance_ratio": [
+        0.3333261126724038,
+        0.10458683630696933,
+        0.06890901408205703,
+        0.06313888063992025,
+        0.0520503874506859,
+        0.04286616100756122,
+        0.035267675517091736,
+        0.029482983253902702
+      ],
+      "fold": 5,
+      "outer_validation_test_rows": 0
+    }
+  ],
+  "binding": {
+    "baseline.py": "3675214bc511d8352cd8128c160bd260acdb76afae426a5600976a2a18cdce61",
+    "pllr.py": "692f29e2c02bdeff530d3ae71212d3e11de1d5e5166dfc1d6a250bc457e8a6ae",
+    "prepare.py": "cdd9d356efced271ca6a715ae5174aa6da5ff108e46a05c63c7a7916a77aa14f",
+    "protocol": "6f32cf49b9d34ff55406d9ca58374edba676603bd64bf1b62f38498a3d141c76",
+    "run.py": "7956e5f4ce6451633502fa996ca510ff8bf1a257b7b4404727b3892d55d3e163",
+    "smoke.py": "17ad49e041aeb0b4609ded3b31f0af7b15d2310cc13f65eef291047145d3a762",
+    "train.py": "cd9d20cb1a739dd1388e7db7974a3f7d8924d136411fcfff0663a93598c96438"
+  },
+  "class_mass_preserved_max_error": 5.684341886080802e-14,
+  "failed_folds": [],
+  "folds": [
+    {
+      "FIT_patients": 51,
+      "PCA_FIT_only": true,
+      "PCA_dimension": 8,
+      "PLLR_sha256": "6e015933f7b9d653814b1dca074ee2e6d64f1ba28212d4cbf18a120951b99a96",
+      "degenerate_no_positive_conflict": false,
+      "eligibility_pass": true,
+      "eligible_channels": 4244,
+      "eligible_fraction": 0.8823529411764706,
+      "eligible_patients": 45,
+      "fold": 1,
+      "median_patient_mean_stability_rho": 0.7294460462255772,
+      "positive_conflict_channels": 1024,
+      "stability_pass": true,
+      "tau": 0.12390607660002381
+    },
+    {
+      "FIT_patients": 51,
+      "PCA_FIT_only": true,
+      "PCA_dimension": 8,
+      "PLLR_sha256": "9fd34e91f2b1a6db8d98e057318a34cf2320a0f3390f4675493c61680ddd9111",
+      "degenerate_no_positive_conflict": false,
+      "eligibility_pass": true,
+      "eligible_channels": 4748,
+      "eligible_fraction": 0.9607843137254902,
+      "eligible_patients": 49,
+      "fold": 2,
+      "median_patient_mean_stability_rho": 0.7647626917873803,
+      "positive_conflict_channels": 1198,
+      "stability_pass": true,
+      "tau": 0.11332426418856899
+    },
+    {
+      "FIT_patients": 50,
+      "PCA_FIT_only": true,
+      "PCA_dimension": 8,
+      "PLLR_sha256": "ddaa9df565f2777443e4b934ba85564abca4b2c742a95bbae65c40593b25bf63",
+      "degenerate_no_positive_conflict": false,
+      "eligibility_pass": true,
+      "eligible_channels": 4473,
+      "eligible_fraction": 0.92,
+      "eligible_patients": 46,
+      "fold": 3,
+      "median_patient_mean_stability_rho": 0.7522623282547891,
+      "positive_conflict_channels": 1010,
+      "stability_pass": true,
+      "tau": 0.15113320382360218
+    },
+    {
+      "FIT_patients": 52,
+      "PCA_FIT_only": true,
+      "PCA_dimension": 8,
+      "PLLR_sha256": "31a609265a98d020a91aaddd1c4ef26bf5eda923d1a5d383582cda16de8e0b8a",
+      "degenerate_no_positive_conflict": false,
+      "eligibility_pass": true,
+      "eligible_channels": 4444,
+      "eligible_fraction": 0.8653846153846154,
+      "eligible_patients": 45,
+      "fold": 4,
+      "median_patient_mean_stability_rho": 0.7826965040336263,
+      "positive_conflict_channels": 1008,
+      "stability_pass": true,
+      "tau": 0.16357008049061497
+    },
+    {
+      "FIT_patients": 51,
+      "PCA_FIT_only": true,
+      "PCA_dimension": 8,
+      "PLLR_sha256": "fb58f87535a51dc7e93d061203eed42070b458c6e0b9f095bcdc0aa3d0a25388",
+      "degenerate_no_positive_conflict": false,
+      "eligibility_pass": true,
+      "eligible_channels": 4716,
+      "eligible_fraction": 0.9215686274509803,
+      "eligible_patients": 47,
+      "fold": 5,
+      "median_patient_mean_stability_rho": 0.7559288297603104,
+      "positive_conflict_channels": 1095,
+      "stability_pass": true,
+      "tau": 0.16832431752307253
+    }
+  ],
+  "leverage_protection": "one update per patient, fixed beta; no new clipping",
+  "minority_rule": "same support rule for EZ and NEZ; not rarity-based; class normalized",
+  "outer_VAL_TEST_labels_used": false,
+  "pass": true,
+  "prototype_query_self_excluded": true,
+  "status": "PASS",
+  "weights_frozen": true
+}

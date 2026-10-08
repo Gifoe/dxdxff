@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "variant": "E1",
+  "folds": 5,
+  "supervised_epochs_completed": 150,
+  "ssl_epochs_completed": 0,
+  "parameters": 44401,
+  "pretrained_ssl_loading": false,
+  "source_bindings_match": true,
+  "e3_selected_checkpoint_hashes_unchanged": true,
+  "e3_selection_lock_and_private_ledger_unchanged": true,
+  "selected_e1_checkpoint_hashes_match": true,
+  "matched_classification_units": true,
+  "n_validation_cells": 65,
+  "n_unique_validation_patients": 47,
+  "summary_and_paired_bootstrap_recalculation_max_abs_diff": 3.3306690738754696e-16,
+  "outer_test_accessed": false,
+  "optional_controls_run": false,
+  "e3_development_gate_passed": false,
+  "scope": "Read-only artifact verification; no model inference or outer evaluation"
+}

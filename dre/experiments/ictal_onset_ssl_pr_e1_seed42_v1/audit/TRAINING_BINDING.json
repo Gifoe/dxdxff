@@ -1,0 +1,15 @@
+{
+  "protocol": "89d579438dc8f77f67eca99966f7fac695e29bd380d506b8ce02defd04f40986",
+  "runner": "cbf2afbeb4ad6af12bb21a50dcd3d0250084f0cc8fdbd3cea0af463883432640",
+  "export_audit_sha256": "f40b8d01f86d7a30225cd7152afbc7277a1b785482d6d413743697cf882536bb",
+  "export_manifest_sha256": "70d51ea385e2a7e79971eb717a983ca9d3f68fb59693b75ab0a6fbbcc961d166",
+  "model_sha256": "160db9a5c01c9888f04be876acb69741e9cd7cc74b4198a9e0cd62b8774fb171",
+  "original_runner_sha256": "2edb9ad38fe270255dfd86949f3c4b44b8a44cbf68dd03d699bcc4a6c5f1f932",
+  "e3_common_helper_sha256": "e5be509208615ee8857ce240e0c968e6b860bf9e11659dff687eeacf2f454c8d",
+  "e3_selection_lock": "275e82a65e4e58b0a158eb25fc2378a26f73ff86afaebcd26acde6addd6ae163",
+  "e3_private_validation_ledger": "dc2eb20f446a676dedd58a348c4029effa30f99076e60e7ebfe88aa9c1f6ab5d",
+  "variant": "E1",
+  "seed": 42,
+  "ssl_epochs": 0,
+  "supervised_epochs": 30
+}

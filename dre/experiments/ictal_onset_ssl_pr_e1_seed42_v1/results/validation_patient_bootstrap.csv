@@ -1,0 +1,7 @@
+bootstrap_95_lower,bootstrap_95_upper,draws,interpretation,mean_unique_validation_patient,metric,n_unique_patients,seed
+0.5808163095146234,0.6516850077111277,10000,descriptive post-selection validation; not outer-test CI,0.6157587379914173,macro_f1,47,42
+0.33576086548132134,0.4556433723223115,10000,descriptive post-selection validation; not outer-test CI,0.3958896173910112,ez_f1,47,42
+0.4255389637979779,0.5681259616402672,10000,descriptive post-selection validation; not outer-test CI,0.4967631435735622,ez_ap,47,42
+0.6425242987520865,0.7604264679368784,10000,descriptive post-selection validation; not outer-test CI,0.7028781275892911,ez_auroc,47,42
+0.5966526562020931,0.8157382052874464,10000,descriptive post-selection validation; not outer-test CI,0.707022181857914,mrr,47,42
+0.4734042553191489,0.75,10000,descriptive post-selection validation; not outer-test CI,0.6117021276595744,top1,47,42

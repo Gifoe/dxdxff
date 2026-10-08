@@ -1,0 +1,15 @@
+{
+  "execution": "E1_VALIDATION_COMPLETE_TEST_NOT_ACCESSED",
+  "scientific_terminal": "SSL_INCREMENT_NOT_SUPPORTED_BY_PREDECLARED_DEVELOPMENT_GATE",
+  "comparison": "frozen E3 minus matched E1",
+  "macro_f1_delta": 0.0032507015125436034,
+  "macro_f1_patient_cluster_95_interval": [-0.018787982553729692, 0.026010961952868814],
+  "positive_macro_f1_folds": 3,
+  "required_macro_f1_gain": 0.02,
+  "required_positive_folds": 4,
+  "gate_passed": false,
+  "E4_E5_run": false,
+  "outer_test_accessed": false,
+  "independent_onset_confirmed": false,
+  "interpretation": "Post-selection source-only development evidence; not independent proof of SSL benefit or harm"
+}

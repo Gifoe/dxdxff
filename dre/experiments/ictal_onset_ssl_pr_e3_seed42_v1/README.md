@@ -29,3 +29,5 @@ Completed: **VALIDATION_COMPLETE_TEST_NOT_ACCESSED**. All five folds finished 25
 See [FINAL_REPORT.md](FINAL_REPORT.md), [results](results), and [completion audit](audit/COMPLETION_AUDIT.json). The 65 validation cells contain 47 unique patients; the report separates the fold mean from the repeated-patient-adjusted descriptive bootstrap summary. Repeated NumPy native crashes were resolved for finalization through an isolated, parity-tested NumPy 1.26.4 environment; all training completed in the unchanged original environment.
 
 Private amended outputs: `C:\ictal_onset_ssl_pr_e3_seed42_runtime\validation_amended`. Source data, exports, individual records, predictions, checkpoint and runtime logs remain private. Only source and compact aggregate results/audits are included here.
+
+Follow-up: the [matched E1 control and E1/E3 comparison](../ictal_onset_ssl_pr_e1_seed42_v1/FINAL_REPORT.md) are now complete. E3's frozen checkpoint and private validation artifacts were not modified. The predeclared E3-minus-E1 development gain gate was not met; E4/E5 were not run.

@@ -1,0 +1,22 @@
+{
+  "variant": "E1",
+  "n_patient_fold_cells": 65,
+  "n_unique_validation_patients": 47,
+  "fold_mean": {
+    "macro_f1": 0.6132945244885828,
+    "ez_f1": 0.3879220196292449,
+    "ez_ap": 0.4879506225388406,
+    "ez_auroc": 0.706686451799285,
+    "mrr": 0.7092707995875417,
+    "top1": 0.6153846153846155
+  },
+  "unique_patient_mean": {
+    "macro_f1": 0.6157587379914173,
+    "ez_f1": 0.3958896173910112,
+    "ez_ap": 0.4967631435735622,
+    "ez_auroc": 0.702878127589291,
+    "mrr": 0.707022181857914,
+    "top1": 0.6117021276595744
+  },
+  "interpretation": "Post-selection source-only validation; no outer test"
+}

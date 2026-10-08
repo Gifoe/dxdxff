@@ -1,0 +1,7 @@
+cluster_bootstrap_95_lower,cluster_bootstrap_95_upper,contrast,delta_patient_fold_cell_mean,draws,interpretation,metric,n_patient_fold_cells,n_unique_patients,seed
+-0.018787982553729692,0.026010961952868814,E3_minus_E1,0.0032507015125436034,10000,paired post-selection validation; not independent SSL confirmation,macro_f1,65,47,42
+-0.027639331157254993,0.048295778247772425,E3_minus_E1,0.009978182402678741,10000,paired post-selection validation; not independent SSL confirmation,ez_f1,65,47,42
+-0.02790926964531065,0.04378773737324776,E3_minus_E1,0.0068160088631149035,10000,paired post-selection validation; not independent SSL confirmation,ez_ap,65,47,42
+-0.04808819842503695,0.016432460082727543,E3_minus_E1,-0.015204679276842386,10000,paired post-selection validation; not independent SSL confirmation,ez_auroc,65,47,42
+-0.10200007509992112,0.01985653810358962,E3_minus_E1,-0.04249255654426925,10000,paired post-selection validation; not independent SSL confirmation,mrr,65,47,42
+-0.16393442622950818,0.037037037037037035,E3_minus_E1,-0.06153846153846154,10000,paired post-selection validation; not independent SSL confirmation,top1,65,47,42

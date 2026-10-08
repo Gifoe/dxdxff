@@ -1,0 +1,16 @@
+{
+  "same_supervised_initialization": true,
+  "parameters": 44401,
+  "same_architecture_as_E3": true,
+  "device": "cpu",
+  "input_max_abs_diff": 0.0,
+  "outer_access_rejected": true,
+  "original_vs_resumed_max_parameter_diff": 0.0,
+  "selected_epoch_exact": true,
+  "threshold_exact": true,
+  "metrics_exact": true,
+  "no_ssl_artifacts": true,
+  "changed_binding_rejected": true,
+  "status": "PASS",
+  "scope": "Synthetic E1 original-loop/resume parity; not scientific performance"
+}

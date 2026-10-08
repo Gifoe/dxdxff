@@ -1,0 +1,14 @@
+{
+  "status": "E1_VALIDATION_COMPLETE_TEST_NOT_ACCESSED",
+  "variant": "E1",
+  "folds": 5,
+  "ssl_epochs": 0,
+  "supervised_epochs_completed": 150,
+  "source_only": true,
+  "outer_test_accessed": false,
+  "patients": 80,
+  "seizures": 255,
+  "unique_channels": 7635,
+  "n_validation_cells": 65,
+  "n_unique_validation_patients": 47
+}

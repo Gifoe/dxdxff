@@ -1,0 +1,11 @@
+{
+  "mean_val_delta_f1_E3_minus_E1": 0.0032507015125436524,
+  "mean_val_delta_ap_E3_minus_E1": 0.006816008863114953,
+  "positive_f1_folds": 3,
+  "passed": false,
+  "predeclared_gate": ">=0.02 macro F1; EZ-AP nondecreasing; >=4/5 positive F1 folds",
+  "status": "DEVELOPMENT_GATE_ONLY",
+  "E4_E5_run": false,
+  "optional_controls_authorized": false,
+  "outer_test_accessed": false
+}

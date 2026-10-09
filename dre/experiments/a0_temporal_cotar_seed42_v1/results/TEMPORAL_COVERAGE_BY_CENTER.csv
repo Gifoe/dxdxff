@@ -1,0 +1,5 @@
+center,seizures,patient_channels,record_channel_instances,pre_unique_fraction,early_unique_fraction,later_unique_fraction,pre_record_fraction,early_record_fraction,later_record_fraction,pre_tokens,early_tokens,later_tokens
+hup,117,3667,12384,1.0,1.0,1.0,1.0,1.0,1.0,123840,99072,148608
+lzu,72,2141,7452,1.0,1.0,1.0,0.9730273752012882,0.9730273752012882,0.9730273752012882,72510,58008,87012
+multicenter,45,925,2886,1.0,1.0,1.0,0.9753984753984754,0.9753984753984754,0.9753984753984754,28150,22520,33780
+pediatric,22,902,2545,1.0,1.0,1.0,1.0,1.0,1.0,25450,20360,30540

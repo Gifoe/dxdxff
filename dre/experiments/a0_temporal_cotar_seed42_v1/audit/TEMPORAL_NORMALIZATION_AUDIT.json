@@ -1,0 +1,64 @@
+{
+  "A0_preprocessing_unchanged": true,
+  "folds": [
+    {
+      "T1_T2_use_same_file": true,
+      "finite_all": true,
+      "fit_patients": 51,
+      "fit_tokens": 453420,
+      "fold": 1,
+      "input_sha256": "4c49187af52c0643b051ec564c32cde3e6bef5b30d6bb3aee135bc642d49fd96",
+      "outer_rows_in_bank": 0,
+      "statistics_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "T1_T2_use_same_file": true,
+      "finite_all": true,
+      "fit_patients": 51,
+      "fit_tokens": 496410,
+      "fold": 2,
+      "input_sha256": "777855462d6c26e3d04d4b935fa6af0a8bc62ede76897b6a33f5d2b50450af84",
+      "outer_rows_in_bank": 0,
+      "statistics_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "T1_T2_use_same_file": true,
+      "finite_all": true,
+      "fit_patients": 50,
+      "fit_tokens": 453660,
+      "fold": 3,
+      "input_sha256": "56536b87d3f5b593971e1ac6bbf298273771484651429ce42a06eb646d121163",
+      "outer_rows_in_bank": 0,
+      "statistics_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "T1_T2_use_same_file": true,
+      "finite_all": true,
+      "fit_patients": 52,
+      "fit_tokens": 497520,
+      "fold": 4,
+      "input_sha256": "47652f89e4a963b2370aa0ea3938d66d07671d7818b5c5b33e5324233cc49a8d",
+      "outer_rows_in_bank": 0,
+      "statistics_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "T1_T2_use_same_file": true,
+      "finite_all": true,
+      "fit_patients": 51,
+      "fit_tokens": 504150,
+      "fold": 5,
+      "input_sha256": "b5c0e1fc23b9c6e8ced058483de9f7b453313a734fc95d3565e5be8589932f2c",
+      "outer_rows_in_bank": 0,
+      "statistics_fit_only": true,
+      "validation_patients": 13
+    }
+  ],
+  "model_input_has_no_patient_center_label": true,
+  "outer_labels_materialized_only_in_original_source_export_before_sealing": true,
+  "relative_label_blind": true,
+  "status": "PASS"
+}

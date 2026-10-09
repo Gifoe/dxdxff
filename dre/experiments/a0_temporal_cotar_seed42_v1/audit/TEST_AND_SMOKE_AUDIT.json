@@ -1,0 +1,41 @@
+{
+  "binding": {
+    "base.py": "f3fce1d0a9fe4210bfb57f601171712026901ac1b033a0526730881343783bcd",
+    "features.py": "3ec0f20ec33e9ce443e07a6443f0c74ce8ed989c7f1d06ec5c553a1134ad2dfd",
+    "model.py": "ccb517c0a047906e80eb780171c7552b1b42a642b76f93d6a7ffa38f1dae0969",
+    "prepare.py": "5039d374c4a3babd65bd755b88b4f2063e4825d1fba791c10a7a2a5f5addea9a",
+    "protocol": "5248ceff37183afe412080530d1580a4a12d8c2d2c0ce40bc885ea40d88e1e50",
+    "run.py": "4a825e793374a682058f74ec6b228bf0f1b8899abf78736540bc51997738085a",
+    "train.py": "6dea65ae2eae17caec4c917e99504a1c422c94122d0f10b37595302582fc7e21"
+  },
+  "no_outer_prediction_evaluation": true,
+  "real_fit_checks": [
+    {
+      "A0_gradient_absent": true,
+      "arm": "T1",
+      "epoch0_exact": true,
+      "finite_gradient": true,
+      "initial_hash": "c24ed2bcc1ca15069c923a6e3ff29277ff511129f2cf96123240f5a978ab4970",
+      "parameters": 5797,
+      "real_FIT_patient_updates": 3,
+      "residual_after_smoke_max_abs": 0.0022896036971360445
+    },
+    {
+      "A0_gradient_absent": true,
+      "arm": "T2",
+      "epoch0_exact": true,
+      "finite_gradient": true,
+      "initial_hash": "c24ed2bcc1ca15069c923a6e3ff29277ff511129f2cf96123240f5a978ab4970",
+      "parameters": 5797,
+      "real_FIT_patient_updates": 3,
+      "residual_after_smoke_max_abs": 0.0022841407917439938
+    }
+  ],
+  "runtime": {
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128"
+  },
+  "status": "PASS",
+  "synthetic_groups": 7,
+  "tests_sha256": "99ffb373c2ad5468a472c66e737fb8424dffe2e05f1124c863762dc4ff04f49a"
+}

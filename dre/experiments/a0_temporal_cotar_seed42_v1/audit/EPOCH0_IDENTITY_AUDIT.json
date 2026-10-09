@@ -1,0 +1,86 @@
+{
+  "always_eligible_fallback": true,
+  "folds": [
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T1",
+      "fallback_selected": false,
+      "fold": 1,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T2",
+      "fallback_selected": false,
+      "fold": 1,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T1",
+      "fallback_selected": false,
+      "fold": 2,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T2",
+      "fallback_selected": false,
+      "fold": 2,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T1",
+      "fallback_selected": false,
+      "fold": 3,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T2",
+      "fallback_selected": false,
+      "fold": 3,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T1",
+      "fallback_selected": true,
+      "fold": 4,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T2",
+      "fallback_selected": true,
+      "fold": 4,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T1",
+      "fallback_selected": false,
+      "fold": 5,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    },
+    {
+      "A0_parameters_trained": 0,
+      "arm": "T2",
+      "fallback_selected": false,
+      "fold": 5,
+      "initial_probability_exact_T0": true,
+      "max_delta": 0.0
+    }
+  ],
+  "status": "PASS"
+}

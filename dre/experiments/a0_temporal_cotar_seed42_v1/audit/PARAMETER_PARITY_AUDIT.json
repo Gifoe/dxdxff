@@ -1,0 +1,29 @@
+{
+  "arms": [
+    {
+      "A0_gradient_absent": true,
+      "arm": "T1",
+      "epoch0_exact": true,
+      "finite_gradient": true,
+      "initial_hash": "c24ed2bcc1ca15069c923a6e3ff29277ff511129f2cf96123240f5a978ab4970",
+      "parameters": 5797,
+      "real_FIT_patient_updates": 3,
+      "residual_after_smoke_max_abs": 0.0022896036971360445
+    },
+    {
+      "A0_gradient_absent": true,
+      "arm": "T2",
+      "epoch0_exact": true,
+      "finite_gradient": true,
+      "initial_hash": "c24ed2bcc1ca15069c923a6e3ff29277ff511129f2cf96123240f5a978ab4970",
+      "parameters": 5797,
+      "real_FIT_patient_updates": 3,
+      "residual_after_smoke_max_abs": 0.0022841407917439938
+    }
+  ],
+  "frozen_A0_parameters": 8817,
+  "identical_input_bank": true,
+  "status": "PASS",
+  "temporal_parameters": 5797,
+  "trainable_A0_parameters": 0
+}

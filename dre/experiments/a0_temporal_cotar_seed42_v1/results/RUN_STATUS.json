@@ -1,0 +1,21 @@
+{
+  "T0_retrained": false,
+  "binding": {
+    "base.py": "f3fce1d0a9fe4210bfb57f601171712026901ac1b033a0526730881343783bcd",
+    "features.py": "3ec0f20ec33e9ce443e07a6443f0c74ce8ed989c7f1d06ec5c553a1134ad2dfd",
+    "model.py": "ccb517c0a047906e80eb780171c7552b1b42a642b76f93d6a7ffa38f1dae0969",
+    "prepare.py": "5039d374c4a3babd65bd755b88b4f2063e4825d1fba791c10a7a2a5f5addea9a",
+    "protocol": "5248ceff37183afe412080530d1580a4a12d8c2d2c0ce40bc885ea40d88e1e50",
+    "run.py": "4a825e793374a682058f74ec6b228bf0f1b8899abf78736540bc51997738085a",
+    "train.py": "6dea65ae2eae17caec4c917e99504a1c422c94122d0f10b37595302582fc7e21"
+  },
+  "bootstrap_draws": 10000,
+  "finalizer_sha256": "0f9c356649c6fa7987b36f670496767602b3e777fe7910e112bbabe7806a1d2e",
+  "outer_evaluation": false,
+  "protocol_sha256": "5248ceff37183afe412080530d1580a4a12d8c2d2c0ce40bc885ea40d88e1e50",
+  "status": "COMPLETE_DEVELOPMENT_GATE_FAILED",
+  "student_models": 10,
+  "terminal": "TEMPORAL_FEATURES_USEFUL_COTAR_NOT_SUPPORTED",
+  "unique_validation_patients": 47,
+  "validation_appearances": 65
+}

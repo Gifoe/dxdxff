@@ -1,0 +1,8 @@
+{
+  "all_missing_finite": true,
+  "exact_float32_forward": true,
+  "masked_token_perturbation_invariant": true,
+  "official_source_hash": "268d8d5486685bdc45a1f8c44056a85d7e327f70e973a8b9e50d63675e352c2d",
+  "status": "PASS",
+  "unmasked_official_copied_weights": true
+}

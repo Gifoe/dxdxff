@@ -1,0 +1,29 @@
+{
+  "T2_T0_AP_delta": 0.00502365023162421,
+  "T2_T0_EZ_F1_delta": 0.00879084451957296,
+  "T2_T0_improved_folds": 4,
+  "T2_T0_macro_delta": 0.0026901460314797676,
+  "T2_T1_improved_folds": 1,
+  "T2_T1_macro_delta": -0.00042883520174386014,
+  "conditions": {
+    "EZ_AP_nondecline": true,
+    "EZ_F1_nondecline": true,
+    "T2_T0_macro_ge_0_015": false,
+    "T2_T1_macro_ge_0_005": false,
+    "four_of_five_T2_T0_improved_folds": true,
+    "mask_leakage_saturation_checks": true,
+    "three_of_five_T2_T1_improved_folds": false
+  },
+  "failed_conditions": [
+    "T2_T0_macro_ge_0_015",
+    "T2_T1_macro_ge_0_005",
+    "three_of_five_T2_T1_improved_folds"
+  ],
+  "no_new_outer_evaluation_authorized": true,
+  "pass": false,
+  "saturated_validation_channel_fraction": 0.0,
+  "severe_saturation": false,
+  "target_gain_ge_0_030": false,
+  "terminal": "TEMPORAL_FEATURES_USEFUL_COTAR_NOT_SUPPORTED",
+  "terminal_positive_does_not_imply_statistical_support": true
+}

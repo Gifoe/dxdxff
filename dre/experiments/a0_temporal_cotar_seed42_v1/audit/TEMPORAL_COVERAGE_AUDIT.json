@@ -1,0 +1,58 @@
+{
+  "all_records_early_stage_supported": true,
+  "boundary_invalid_source_windows": 27,
+  "canonical_channels": 7635,
+  "clinical_onset_provenance": "explicit feature relative centers + source annotations and valid-range metadata; NOT independent EDF replay",
+  "duplicate_times": 0,
+  "feature_order": [
+    "log_bp_delta",
+    "log_bp_theta",
+    "log_bp_beta",
+    "log_bp_low_gamma",
+    "log_bp_high_gamma",
+    "rms",
+    "variance",
+    "line_length_per_sec",
+    "spectral_entropy"
+  ],
+  "invalid_time_windows": 0,
+  "left_boundary_records": 15,
+  "monotonic_all_records": true,
+  "no_labels_used_in_temporal_audit": true,
+  "no_outer_prediction_evaluation": true,
+  "no_raw_waveform_read": true,
+  "nonfinite_feature_channel_windows": 0,
+  "pass": true,
+  "patients": 80,
+  "private_temporal_bank_sha256": "d179bcf51e4f193b28392410c3d4295b0f0eb10f71dbe0bafaf367ec269e6a65",
+  "protocol_SHA256": "5248ceff37183afe412080530d1580a4a12d8c2d2c0ce40bc885ea40d88e1e50",
+  "record_channel_instances": 25267,
+  "record_channel_stage_coverage": {
+    "early": 0.9892349705149008,
+    "later": 0.9892349705149008,
+    "pre": 0.9892349705149008
+  },
+  "sampling_interval_min_max_seconds": [
+    0.9999990463256836,
+    1.0000009536743164
+  ],
+  "seizure_missing_canonical_channels": 272,
+  "seizures": 256,
+  "source_feature_SHA256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "source_window_count_histogram": {
+    "40": 1,
+    "51": 1,
+    "56": 1,
+    "59": 253
+  },
+  "source_window_duration_seconds": [
+    2.0
+  ],
+  "split_SHA256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "status": "PASS",
+  "unique_patient_channel_stage_coverage": {
+    "early_any": 1.0,
+    "later_any": 1.0,
+    "pre_any": 1.0
+  }
+}

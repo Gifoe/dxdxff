@@ -1,0 +1,79 @@
+{
+  "center_outcome_resection_used_as_predictors": false,
+  "folds": [
+    {
+      "dimension": 4,
+      "explained_variance_ratio": [
+        0.35363128781318665,
+        0.105501689016819,
+        0.07247067242860794,
+        0.05922377109527588
+      ],
+      "fit_channels": 4623,
+      "fit_patients": 51,
+      "fold": 1,
+      "label_used": false,
+      "outer_test_rows": 0
+    },
+    {
+      "dimension": 4,
+      "explained_variance_ratio": [
+        0.370903879404068,
+        0.10702645033597946,
+        0.07171322405338287,
+        0.06161584332585335
+      ],
+      "fit_channels": 4951,
+      "fit_patients": 51,
+      "fold": 2,
+      "label_used": false,
+      "outer_test_rows": 0
+    },
+    {
+      "dimension": 4,
+      "explained_variance_ratio": [
+        0.33834755420684814,
+        0.1256292462348938,
+        0.07584485411643982,
+        0.06985639780759811
+      ],
+      "fit_channels": 4725,
+      "fit_patients": 50,
+      "fold": 3,
+      "label_used": false,
+      "outer_test_rows": 0
+    },
+    {
+      "dimension": 4,
+      "explained_variance_ratio": [
+        0.35629943013191223,
+        0.10286735743284225,
+        0.07174370437860489,
+        0.06027400493621826
+      ],
+      "fit_channels": 4943,
+      "fit_patients": 52,
+      "fold": 4,
+      "label_used": false,
+      "outer_test_rows": 0
+    },
+    {
+      "dimension": 4,
+      "explained_variance_ratio": [
+        0.33332622051239014,
+        0.10458677262067795,
+        0.0689089447259903,
+        0.06313884258270264
+      ],
+      "fit_channels": 5025,
+      "fit_patients": 51,
+      "fold": 5,
+      "label_used": false,
+      "outer_test_rows": 0
+    }
+  ],
+  "predictive_input_fields": [
+    "original_A0_prepared_88D"
+  ],
+  "status": "PASS"
+}

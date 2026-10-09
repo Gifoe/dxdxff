@@ -1,0 +1,5 @@
+center,label_source,channels,run_union_available,run_union_disagree,is_ez_or_soz_available,is_ez_or_soz_disagree,final_label_available,final_label_disagree,soz_missing,resection_missing,adapter_rule_matches,ez_channels,unusable_in_export,soz_available,soz_disagree
+hup,channels.tsv:soz/resection/status_description,3667,3667,0,3667,0,3667,0,3667.0,3667,3667,616,0,,
+lzu,lzu_annotation_xlsx_channel_number,2141,2141,0,2141,22,2141,22,2141.0,2141,2119,817,0,,
+multicenter,channels.tsv:soz,925,925,0,925,0,925,0,,925,925,164,0,925.0,0.0
+pediatric,CENTER_AGGREGATE_SOURCE_SUBCATEGORIES_SUPPRESSED,902,902,0,902,0,902,0,902.0,902,902,146,0,,

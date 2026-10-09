@@ -1,0 +1,5 @@
+metric,spearman_headroom_association,cells,interpretation
+ez_auprc,0.029330128030003726,65,descriptive noncausal; not a unique calibration-ranking error partition
+ez_auroc,0.024478466717302843,65,descriptive noncausal; not a unique calibration-ranking error partition
+ez_mrr,0.16559306767986898,65,descriptive noncausal; not a unique calibration-ranking error partition
+top1_is_ez,0.1739076702090479,65,descriptive noncausal; not a unique calibration-ranking error partition

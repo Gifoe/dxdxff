@@ -1,0 +1,76 @@
+{
+  "binding": {
+    "code": {
+      "clinical.py": "8b2edef09c76ded6cb7ee843a8076df1e07816808b56be41537935f0b71aba13",
+      "clinical_inventory_v1.py": "1a499f47c02a7539438ab41cbf79f4a3614cf459e1e2a4b7ec862da69e3c63e1",
+      "core.py": "73a64b8e2d27b8aa3d634a429ef2830e80b00ecea9b8ec7e5ed9fe44b3022fab",
+      "core_before_vectorized_metric.py": "3e0fd174b20cfa057d92ad68b3598d0c540dbf9e3a914a8b71c50e9bcd6b14db",
+      "inspect_metadata.py": "27d5a7137eb29c183d8dd84ccb577217e857b9bba18afd3b713d6bb439200128",
+      "run.py": "41c3b7055b9770a44f62c4a3ce0e427e1f65603b2f34ae753a1b8135fd070ae7"
+    },
+    "protocol": "f419ca120ad2649240f7ff7a6a0dc3d71c2de546093aaa2356d7a141f4586634"
+  },
+  "folds": [
+    {
+      "bank_sha256": "1e09b0a723e262a195ce9371fa90cc182d1d81f1e1f1b9cbc56df9f3b33b876f",
+      "checkpoint_sha256": "6f137b5720753fff156f012cc9c1f52b8364f1b376f302d7418ccf2f2b7e5e73",
+      "epoch": 3,
+      "fold": 1,
+      "identities_features_preprocessor_exact": true,
+      "probability_drift": 2.975769042290466e-08,
+      "threshold": 0.465
+    },
+    {
+      "bank_sha256": "c944901eb112c83e3eded7ac4e90e9a46a371f7a70b9857e88277b78efe5c37a",
+      "checkpoint_sha256": "50c6adacd6433bfc60509fc253878e707a9684d1604c16fc72a7d7e7bd69b087",
+      "epoch": 1,
+      "fold": 2,
+      "identities_features_preprocessor_exact": true,
+      "probability_drift": 2.970733647966739e-08,
+      "threshold": 0.275
+    },
+    {
+      "bank_sha256": "59bd37c5d5da45a3d055e337e9353ea8ea489da4964e38bd79aa7f4553b526b8",
+      "checkpoint_sha256": "81d86575bb791c7656eada9df95a8c382602bcc8a8442a6140585bbcc13c1219",
+      "epoch": 2,
+      "fold": 3,
+      "identities_features_preprocessor_exact": true,
+      "probability_drift": 2.9748535190776693e-08,
+      "threshold": 0.34
+    },
+    {
+      "bank_sha256": "322dceb60136a3651db6aecf157946b16a2a18473280b0fac128cc6f94b5c9fa",
+      "checkpoint_sha256": "e25ca2eed1b2f955ae39605ffe702f0d2e539ea81aa59f5e5e90c044d0f3c3b1",
+      "epoch": 2,
+      "fold": 4,
+      "identities_features_preprocessor_exact": true,
+      "probability_drift": 2.9796600298226394e-08,
+      "threshold": 0.355
+    },
+    {
+      "bank_sha256": "aa5665c541814755ae0173ccee407ef98bc9422ad0c47f784b4d7913de9e0a83",
+      "checkpoint_sha256": "7daf67a8bf379c91b1bf97de129941bee5f7ef6dbbf75e69f5028cb949173094",
+      "epoch": 2,
+      "fold": 5,
+      "identities_features_preprocessor_exact": true,
+      "probability_drift": 2.9739379847626424e-08,
+      "threshold": 0.445
+    }
+  ],
+  "metrics": {
+    "accuracy": 0.7731741214227078,
+    "ez_auprc": 0.5182351001102594,
+    "ez_auroc": 0.7106669304311658,
+    "ez_f1": 0.431198131752259,
+    "ez_mrr": 0.6865498372635065,
+    "macro_f1": 0.6380797828499001,
+    "nez_f1": 0.8449614339475412,
+    "sensitivity": 0.4659041342475972,
+    "specificity": 0.8649684072414664,
+    "top1_is_ez": 0.5846153846153846
+  },
+  "patient_fold_cells": 65,
+  "retrained": false,
+  "status": "PASS",
+  "unique_patients": 47
+}

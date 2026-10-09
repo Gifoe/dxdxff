@@ -1,0 +1,5 @@
+center,cells,unique_patients,oracle_below_0.65_cells,large_headroom_and_AP_ge_0.5_cells,large_headroom_cells,mean_headroom
+hup,28,21,5,7,18,0.08085477511471138
+lzu,14,11,7,5,8,0.04959080713738436
+multicenter,11,9,1,2,3,0.04360071846472152
+pediatric,12,6,7,4,7,0.08296046377110115

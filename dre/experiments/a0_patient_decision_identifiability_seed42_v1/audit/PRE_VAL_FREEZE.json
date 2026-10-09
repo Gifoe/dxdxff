@@ -1,0 +1,15 @@
+{
+  "all_A0_hashes_verified": true,
+  "binding": {
+    "code": {
+      "clinical.py": "8b2edef09c76ded6cb7ee843a8076df1e07816808b56be41537935f0b71aba13",
+      "clinical_inventory_v1.py": "1a499f47c02a7539438ab41cbf79f4a3614cf459e1e2a4b7ec862da69e3c63e1",
+      "core.py": "73a64b8e2d27b8aa3d634a429ef2830e80b00ecea9b8ec7e5ed9fe44b3022fab",
+      "core_before_vectorized_metric.py": "3e0fd174b20cfa057d92ad68b3598d0c540dbf9e3a914a8b71c50e9bcd6b14db",
+      "inspect_metadata.py": "27d5a7137eb29c183d8dd84ccb577217e857b9bba18afd3b713d6bb439200128",
+      "run.py": "41c3b7055b9770a44f62c4a3ce0e427e1f65603b2f34ae753a1b8135fd070ae7"
+    },
+    "protocol": "f419ca120ad2649240f7ff7a6a0dc3d71c2de546093aaa2356d7a141f4586634"
+  },
+  "regularization_sha256": "ffc510a09713b05374380c55ab060bd668dbb7581b1931d47b78da7009d162e7"
+}

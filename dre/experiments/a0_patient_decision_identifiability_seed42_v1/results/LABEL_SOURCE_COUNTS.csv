@@ -1,0 +1,5 @@
+center,label_source,patients,channels,ez_channels,pooled_ez_fraction,patient_mean_ez_fraction
+hup,channels.tsv:soz/resection/status_description,36,3667,616,0.1679847286610308,0.18208722230341245
+lzu,lzu_annotation_xlsx_channel_number,21,2141,817,0.38159738439981317,0.3980864783844843
+multicenter,channels.tsv:soz,15,925,164,0.1772972972972973,0.17469582418906834
+pediatric,CENTER_AGGREGATE_SOURCE_SUBCATEGORIES_SUPPRESSED,8,902,146,0.16186252771618626,0.19068142689753334

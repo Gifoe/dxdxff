@@ -1,0 +1,36 @@
+{
+  "folds": [
+    {
+      "FIT_episodes_checked": 51,
+      "VAL_query_read": false,
+      "fold": 1,
+      "solver_finite_converged": true
+    },
+    {
+      "FIT_episodes_checked": 51,
+      "VAL_query_read": false,
+      "fold": 2,
+      "solver_finite_converged": true
+    },
+    {
+      "FIT_episodes_checked": 50,
+      "VAL_query_read": false,
+      "fold": 3,
+      "solver_finite_converged": true
+    },
+    {
+      "FIT_episodes_checked": 52,
+      "VAL_query_read": false,
+      "fold": 4,
+      "solver_finite_converged": true
+    },
+    {
+      "FIT_episodes_checked": 51,
+      "VAL_query_read": false,
+      "fold": 5,
+      "solver_finite_converged": true
+    }
+  ],
+  "no_outer_test": true,
+  "status": "PASS"
+}

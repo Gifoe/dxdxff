@@ -1,0 +1,15 @@
+{
+  "comparison": "NEZ score >= tau",
+  "disconnected_region_fraction": 0.0,
+  "max_grid_resolution_loss": 0.023851687120775344,
+  "mean_distance_to_optimal_region": 0.11569731938461537,
+  "mean_grid_resolution_loss": 0.0021104719761392064,
+  "multi_optimal_decision_set_fraction": 0.0,
+  "multiple_numeric_optimal_threshold_fraction": 1.0,
+  "numeric_multiplicity_definition": "Continuum inside one decision-equivalent interval; distinct optimal decision-set multiplicity is reported separately",
+  "optimal_thresholds_private": true,
+  "status": "PASS",
+  "ties": "equal scores move together; canonical ties only in separate TopK",
+  "true_count_topk_cuts_tie_cells": 0,
+  "unbounded_extreme_intervals_supported": true
+}

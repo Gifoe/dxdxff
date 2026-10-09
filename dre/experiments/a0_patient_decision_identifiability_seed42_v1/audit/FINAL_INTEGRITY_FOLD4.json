@@ -1,0 +1,24 @@
+{
+  "all_original_A0_checkpoint_and_bank_hashes_unchanged": true,
+  "clinical_export_index_run_union_complete": true,
+  "counts": {
+    "B8_random_episodes": 260,
+    "B8_random_mixed_class_identical_permutation": 18,
+    "B8_random_one_class": 68,
+    "B8_uncertainty_episodes": 13,
+    "B8_uncertainty_mixed_class_identical_permutation": 0,
+    "B8_uncertainty_one_class": 1,
+    "half_random_episodes": 130,
+    "half_random_mixed_class_identical_permutation": 1,
+    "half_random_one_class": 1
+  },
+  "episodes_replayed_exactly": 403,
+  "fold": 4,
+  "max_metric_drift": 0.0,
+  "no_retraining_no_query_tuning_no_outer_test": true,
+  "permutation_identity_allowed_under_randomization": "mixed-class chance identity is reported, not misrepresented as a changed assignment; one-class explicitly degenerate",
+  "protocol_sha256": "f419ca120ad2649240f7ff7a6a0dc3d71c2de546093aaa2356d7a141f4586634",
+  "regularization_freeze_unchanged": true,
+  "source_sha256": "412a146771f7a0c15511963e65d852397cebadd531445874ad8d54f218abd658",
+  "status": "PASS"
+}

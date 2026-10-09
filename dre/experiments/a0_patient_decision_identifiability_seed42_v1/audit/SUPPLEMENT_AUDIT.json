@@ -1,0 +1,9 @@
+{
+  "checkpoint_model_threshold_labels_unchanged": true,
+  "hyperparameter_selection": false,
+  "new_predictions": false,
+  "outer_test_accessed": false,
+  "private_ledger_binding_exact": true,
+  "status": "PASS",
+  "supplement_source_sha256": "665be8b804cd4163eb8d5818ac5fb404a131f55f826afc5cc2111aef5335ab0a"
+}

@@ -1,0 +1,138 @@
+{
+  "adapter_rule_disagreements": 22,
+  "alignment": {
+    "channel_meta_matches": 7635,
+    "export_index_matches": 7635
+  },
+  "all_canonical_unique": true,
+  "alternative_task2_function_used": false,
+  "biological_EZ_truth_identifiable": false,
+  "cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+  "channels": 7635,
+  "cohort_patients": 80,
+  "index_is_authoritative": true,
+  "label_source_counts": [
+    {
+      "center": "hup",
+      "channels": 3667,
+      "ez_channels": 616,
+      "label_source": "channels.tsv:soz/resection/status_description",
+      "patient_mean_ez_fraction": 0.18208722230341245,
+      "patients": 36,
+      "pooled_ez_fraction": 0.1679847286610308
+    },
+    {
+      "center": "lzu",
+      "channels": 2141,
+      "ez_channels": 817,
+      "label_source": "lzu_annotation_xlsx_channel_number",
+      "patient_mean_ez_fraction": 0.3980864783844843,
+      "patients": 21,
+      "pooled_ez_fraction": 0.38159738439981317
+    },
+    {
+      "center": "multicenter",
+      "channels": 925,
+      "ez_channels": 164,
+      "label_source": "channels.tsv:soz",
+      "patient_mean_ez_fraction": 0.17469582418906834,
+      "patients": 15,
+      "pooled_ez_fraction": 0.1772972972972973
+    },
+    {
+      "center": "pediatric",
+      "channels": 902,
+      "ez_channels": 146,
+      "label_source": "CENTER_AGGREGATE_SOURCE_SUBCATEGORIES_SUPPRESSED",
+      "patient_mean_ez_fraction": 0.19068142689753334,
+      "patients": 8,
+      "pooled_ez_fraction": 0.16186252771618626
+    }
+  ],
+  "mixed_source_patients": 0,
+  "source_hashes": {
+    "bn_pdgs_ranker/data_readers/bids_common.py": "addd099028f45825ef94fecc5701e4f9b28c2e24ab0195982e5b9c76b44e32e6",
+    "bn_pdgs_ranker/data_readers/bids_loader.py": "c3b7fbfc648992c347fdf396a28b6746e1326c4c0b39cc5bc45b19b053da6bb7",
+    "bn_pdgs_ranker/data_readers/loader.py": "8f87b57399fe18312cd0c2ba5587402d5b75b8d62f278ed33a3568ca4431e9f4",
+    "bn_pdgs_ranker/data_readers/lzu.py": "c53d44963d730f75a9c09d8f246be670638ce047ccaec662f41eb1dc4c6dba1d",
+    "bn_pdgs_ranker/data_readers/schemas.py": "84ce173dd862dda603251a63c47dc379d187526e9bbec417bf2656bce615fa42",
+    "build_neuroez_c_four_center_caches.py": "018605af0fa967a1e6e56b241a06c5ccaa19329ed9f2e55e9b8dc5fcbdcbe296",
+    "neuroez_c/data/pediatric.py": "9692913e771b4f7ab56cc4c95b7e604481ff84441d1ec798b0b137a951b05152",
+    "neuroez_c/task2/clinical_target.py": "87a02c9d34a82e9702468eea33ca27631d14b9068c6abddaa2d3a6a25328f1da",
+    "outcome_hifos/cache_schema.py": "c9c0877083549009e656e389a9701cc2aa12e4cc19fbea1dcdf9e95d31a23dba",
+    "pr_uncertainty_aware_supervision_seed42_v1/code/reproduce_b0_v2.py": "595aac45e0d6838f898b1bea550743464a52486b77e510a73c6f0922dace7857",
+    "run_baseline_three_centers/build_center_caches_from_patient_records.py": "fe474670b2dae114524551baf6ad15e2fb256ff44bc77fa5e3995ca4f3898514",
+    "task1_baselines/cache_io.py": "0f16c45e1dd981664edbaa508bd10b3c6ada55b6460606ebc6f809ad925d81e1",
+    "task1_baselines/feature_aggregation.py": "426344bfa6ef0dd4b1dc59fe267d7920cef020fdcb42e834efc9a9ae6b4ca273"
+  },
+  "source_version_at_cache_creation_embedded": false,
+  "status": "PASS",
+  "suppression_min_patients": 5,
+  "target_comparison": [
+    {
+      "adapter_rule_matches": 3667,
+      "center": "hup",
+      "channels": 3667,
+      "ez_channels": 616,
+      "final_label_available": 3667,
+      "final_label_disagree": 0,
+      "is_ez_or_soz_available": 3667,
+      "is_ez_or_soz_disagree": 0,
+      "label_source": "channels.tsv:soz/resection/status_description",
+      "resection_missing": 3667,
+      "run_union_available": 3667,
+      "run_union_disagree": 0,
+      "soz_missing": 3667,
+      "unusable_in_export": 0
+    },
+    {
+      "adapter_rule_matches": 2119,
+      "center": "lzu",
+      "channels": 2141,
+      "ez_channels": 817,
+      "final_label_available": 2141,
+      "final_label_disagree": 22,
+      "is_ez_or_soz_available": 2141,
+      "is_ez_or_soz_disagree": 22,
+      "label_source": "lzu_annotation_xlsx_channel_number",
+      "resection_missing": 2141,
+      "run_union_available": 2141,
+      "run_union_disagree": 0,
+      "soz_missing": 2141,
+      "unusable_in_export": 0
+    },
+    {
+      "adapter_rule_matches": 925,
+      "center": "multicenter",
+      "channels": 925,
+      "ez_channels": 164,
+      "final_label_available": 925,
+      "final_label_disagree": 0,
+      "is_ez_or_soz_available": 925,
+      "is_ez_or_soz_disagree": 0,
+      "label_source": "channels.tsv:soz",
+      "resection_missing": 925,
+      "run_union_available": 925,
+      "run_union_disagree": 0,
+      "soz_available": 925,
+      "soz_disagree": 0,
+      "unusable_in_export": 0
+    },
+    {
+      "adapter_rule_matches": 902,
+      "center": "pediatric",
+      "channels": 902,
+      "ez_channels": 146,
+      "final_label_available": 902,
+      "final_label_disagree": 0,
+      "is_ez_or_soz_available": 902,
+      "is_ez_or_soz_disagree": 0,
+      "label_source": "CENTER_AGGREGATE_SOURCE_SUBCATEGORIES_SUPPRESSED",
+      "resection_missing": 902,
+      "run_union_available": 902,
+      "run_union_disagree": 0,
+      "soz_missing": 902,
+      "unusable_in_export": 0
+    }
+  ]
+}

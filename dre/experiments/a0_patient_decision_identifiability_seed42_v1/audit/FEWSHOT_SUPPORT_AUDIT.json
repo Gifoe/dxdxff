@@ -1,0 +1,45 @@
+{
+  "P1_ranking_identity_all_episodes": true,
+  "coefficients_predictions_private": true,
+  "episodes": 2015,
+  "one_class_regularized_no_fabrication": true,
+  "patient_fold_cells": 65,
+  "permutation_degenerate_one_class_count": 373,
+  "policies": [
+    {
+      "mean_one_class_support_fraction": 0.2700000000000001,
+      "mean_query_channels": 88.50769230769231,
+      "mean_ranking_change_fraction": 0.8263158991906587,
+      "mean_support_channels": 8.0,
+      "patient_fold_cells": 65,
+      "policy": "B8_random",
+      "unique_patients": 47
+    },
+    {
+      "mean_one_class_support_fraction": 0.23076923076923078,
+      "mean_query_channels": 88.50769230769231,
+      "mean_ranking_change_fraction": 0.8706217661377192,
+      "mean_support_channels": 8.0,
+      "patient_fold_cells": 65,
+      "policy": "B8_uncertainty",
+      "unique_patients": 47
+    },
+    {
+      "mean_one_class_support_fraction": 0.01076923076923077,
+      "mean_query_channels": 48.46153846153846,
+      "mean_ranking_change_fraction": 0.6665304155605059,
+      "mean_support_channels": 48.04615384615385,
+      "patient_fold_cells": 65,
+      "policy": "half_random",
+      "unique_patients": 47
+    }
+  ],
+  "query_labels_not_fitted": true,
+  "repetitions_averaged_before_cluster_bootstrap": true,
+  "same_query_all_methods": true,
+  "solver_fallbacks": 0,
+  "status": "PASS",
+  "support_query_disjoint": true,
+  "support_selection_label_blind": true,
+  "unique_patients": 47
+}

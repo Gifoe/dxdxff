@@ -1,0 +1,130 @@
+{
+  "A": {
+    "headroom": 0.06820520725385308,
+    "oracle_macro_f1": 0.7062849901037532,
+    "status": "DECISION_HEADROOM_PRESENT"
+  },
+  "B8": {
+    "bias_macro": {
+      "CI_high": 0.009446621751694194,
+      "CI_low": -0.006096004281402235,
+      "contrast": "P1-P0",
+      "contributing_cells": 65,
+      "delta": 0.0017387136920523866,
+      "draws": 10000,
+      "metric": "macro_f1",
+      "policy": "B8_uncertainty",
+      "positive_folds": 2,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    },
+    "bias_pass": false,
+    "direction_AP": {
+      "CI_high": 0.01818436554198358,
+      "CI_low": -0.061460422905329326,
+      "contrast": "P2-P1",
+      "contributing_cells": 65,
+      "delta": -0.020113444144939468,
+      "draws": 10000,
+      "metric": "ez_auprc",
+      "policy": "B8_uncertainty",
+      "positive_folds": 2,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    },
+    "direction_macro": {
+      "CI_high": 0.02102984047464326,
+      "CI_low": -0.03370263646206095,
+      "contrast": "P2-P1",
+      "contributing_cells": 65,
+      "delta": -0.007161397206978477,
+      "draws": 10000,
+      "metric": "macro_f1",
+      "policy": "B8_uncertainty",
+      "positive_folds": 3,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    },
+    "direction_pass": false,
+    "permutation_macro": {
+      "CI_high": 0.04657776997169532,
+      "CI_low": 0.0010527072800835334,
+      "contrast": "P2-P2_permuted",
+      "contributing_cells": 65,
+      "delta": 0.02136821770300088,
+      "draws": 10000,
+      "metric": "macro_f1",
+      "policy": "B8_uncertainty",
+      "positive_folds": 5,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    }
+  },
+  "C": {
+    "run_union_disagreements": 0,
+    "source_execution_version_not_embedded": true,
+    "status": "HETEROGENEOUS_SOURCE_DEFINITIONS_CONFIRMED"
+  },
+  "all_results_exploratory": true,
+  "half_capacity": {
+    "bias_macro": {
+      "CI_high": 0.0017043188252566864,
+      "CI_low": -0.025986937913861075,
+      "contrast": "P1-P0",
+      "contributing_cells": 65,
+      "delta": -0.011448801728253315,
+      "draws": 10000,
+      "metric": "macro_f1",
+      "policy": "half_random",
+      "positive_folds": 0,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    },
+    "bias_pass": false,
+    "direction_AP": {
+      "CI_high": 0.037767608311797214,
+      "CI_low": 0.002012793312144381,
+      "contrast": "P2-P1",
+      "contributing_cells": 65,
+      "delta": 0.01953592441973457,
+      "draws": 10000,
+      "metric": "ez_auprc",
+      "policy": "half_random",
+      "positive_folds": 5,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    },
+    "direction_macro": {
+      "CI_high": 0.030838551707804952,
+      "CI_low": -0.008659766147322986,
+      "contrast": "P2-P1",
+      "contributing_cells": 65,
+      "delta": 0.010486579412615053,
+      "draws": 10000,
+      "metric": "macro_f1",
+      "policy": "half_random",
+      "positive_folds": 4,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    },
+    "direction_pass": false,
+    "permutation_macro": {
+      "CI_high": 0.08735106748852127,
+      "CI_low": 0.035974788003832525,
+      "contrast": "P2-P2_permuted",
+      "contributing_cells": 65,
+      "delta": 0.06033344285976287,
+      "draws": 10000,
+      "metric": "macro_f1",
+      "policy": "half_random",
+      "positive_folds": 5,
+      "unique_patients": 47,
+      "valid_draws": 10000
+    }
+  },
+  "next_experiment": "Independent clinical target-definition harmonization/provenance validation with frozen score analysis; do not build another zero-shot head",
+  "next_experiment_started": false,
+  "outer_test_accessed": false,
+  "terminal": "PATIENT_ORACLE_HEADROOM_NOT_RECOVERABLE",
+  "zero_shot_established": false
+}

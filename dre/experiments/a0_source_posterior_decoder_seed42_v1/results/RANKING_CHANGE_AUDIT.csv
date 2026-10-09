@@ -1,0 +1,5 @@
+method,scope,pair_reversal_fraction,rank_position_change_fraction,corresponding_scorer_monotonicity
+D0,COMPLETE_SCORER,0.0,0.0,
+D2,COMPLETE_SCORER,0.09134366886549232,0.7356749383790006,
+D1,POSTERIOR_FULL_ARM_BLOCKED,,,"ordered valid Gaussians proven/tested, invalid density not applied"
+D3,POSTERIOR_FULL_ARM_BLOCKED,,,"ordered valid Gaussians proven/tested, invalid density not applied"

@@ -1,0 +1,37 @@
+{
+  "all_completed_checkpoint_hashes_passed": true,
+  "folds": [
+    {
+      "D2_D3_same_scorer": true,
+      "checkpoint_sha256": "c29f08173dd5ac65898e35648233fa2954925edd22e4038517b6b50da76e47b9",
+      "fold": 1,
+      "probability_drift": 0.0
+    },
+    {
+      "D2_D3_same_scorer": true,
+      "checkpoint_sha256": "6814f0a8e9fbb04d80560009b9fb55481210d40dcf10f9f0e0214083fb6bfbf3",
+      "fold": 2,
+      "probability_drift": 0.0
+    },
+    {
+      "D2_D3_same_scorer": true,
+      "checkpoint_sha256": "be7c1f963ba4d56e103391c84e0aa6f00177307ccca5724434168062a00c65ef",
+      "fold": 3,
+      "probability_drift": 0.0
+    },
+    {
+      "D2_D3_same_scorer": true,
+      "checkpoint_sha256": "c1e380d0c26dc65ff3213d8b825126270c85a3c8ddd6117b881a38ca9ba4064a",
+      "fold": 4,
+      "probability_drift": 0.0
+    },
+    {
+      "D2_D3_same_scorer": true,
+      "checkpoint_sha256": "f8d17c6c8da4fe976b3a6fd4355145dfcb3c0fb848d525f1cb533077b5cc3711",
+      "fold": 5,
+      "probability_drift": 0.0
+    }
+  ],
+  "metric_parity_tolerance": 1e-12,
+  "status": "PASS"
+}

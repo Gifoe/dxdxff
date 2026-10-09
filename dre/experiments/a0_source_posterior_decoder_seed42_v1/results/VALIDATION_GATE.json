@@ -1,0 +1,59 @@
+{
+  "D2_D0_macro_gain": 0.00984629452774469,
+  "D2_component_continuation_pass": false,
+  "D2_selections": [
+    {
+      "D2_D3_checkpoint_sha256": "c29f08173dd5ac65898e35648233fa2954925edd22e4038517b6b50da76e47b9",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 1,
+      "threshold": 0.415
+    },
+    {
+      "D2_D3_checkpoint_sha256": "6814f0a8e9fbb04d80560009b9fb55481210d40dcf10f9f0e0214083fb6bfbf3",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "threshold": 0.275
+    },
+    {
+      "D2_D3_checkpoint_sha256": "be7c1f963ba4d56e103391c84e0aa6f00177307ccca5724434168062a00c65ef",
+      "completed_epochs": 11,
+      "epoch": 5,
+      "fold": 3,
+      "threshold": 0.365
+    },
+    {
+      "D2_D3_checkpoint_sha256": "c1e380d0c26dc65ff3213d8b825126270c85a3c8ddd6117b881a38ca9ba4064a",
+      "completed_epochs": 20,
+      "epoch": 14,
+      "fold": 4,
+      "threshold": 0.285
+    },
+    {
+      "D2_D3_checkpoint_sha256": "f8d17c6c8da4fe976b3a6fd4355145dfcb3c0fb848d525f1cb533077b5cc3711",
+      "completed_epochs": 13,
+      "epoch": 7,
+      "fold": 5,
+      "threshold": 0.365
+    }
+  ],
+  "D3_targets_0p658_0p700": "NOT_ESTIMABLE",
+  "combined_continuation": "NOT_EVALUABLE_GLOBAL_DENSITY_FAILURE",
+  "no_source_rank_density_prior_solver_or_threshold_rescue": true,
+  "pass": false,
+  "posterior_blocked_folds": {
+    "D1": [
+      3,
+      4,
+      5
+    ],
+    "D3": [
+      3,
+      4,
+      5
+    ]
+  },
+  "protocol_sha256": "6e2fbea60d606cbfe4d93890860f4ed57a422deb0794cd5f42714a2ca365996c",
+  "terminal": "POSTERIOR_IDENTIFIABILITY_FAILED"
+}

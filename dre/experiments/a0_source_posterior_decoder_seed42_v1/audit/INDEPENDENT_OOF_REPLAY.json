@@ -1,0 +1,229 @@
+{
+  "all_A0_D2_query_predictions_replayed": 40,
+  "no_invalid_density_inference": true,
+  "reporting_source_sha256": "f06b468d869bcc2978bbfefdf2434999f56614bea76af0584b44458b91939db8",
+  "status": "PASS",
+  "stored_OOF_not_modified": true,
+  "teachers": [
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "a016225c836bf73f669a9269024b50e9f7f86cbae08448a7852ef5c488a91de0",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "c7c865ae3ef15259db6a79071bfad4709740c846fe0aea7c8fe8f0d110e39965",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 1,
+      "group": 0,
+      "query_channels": 1224,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "c5c555cb2fc266b87c012006b5da19defcf8979b29daa49f5490db60b98130b2",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "4b3685857e8c81cbaa7eda3e4cd99f656c3ae90c7577745b5254f0d84ea5e83a",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 1,
+      "group": 1,
+      "query_channels": 1097,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "5e28cfe17224eb70ff6a3bb03855b3e1b49a11abe04717479b95e4772e8f046a",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "a11f471064c29425f62610c674f54e378cc2d5ff364490a02600d955ad108bab",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 1,
+      "group": 2,
+      "query_channels": 1158,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "fab2ce3a3b5431acbecc765a5bf57779cdc0fd3a912186dbf1b79670c0885396",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "31fe51a49af040402ad741a641f2a672b6af0a57b7d489211117db64c6330e7d",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 1,
+      "group": 3,
+      "query_channels": 1144,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "545fe7ad450b5c418aa056471374fe494d8a2db5583484f2572530c8cb543312",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "7d4ba6e09d49a40b344f7d4bf19af5d391a82e4838bc3813a7060bc1acbe5010",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 2,
+      "group": 0,
+      "query_channels": 1174,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "aae70b999485ced0771460889a4df32bcaf1b445f298109c445f137df409a3c1",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "884b11e842f58144b958f3c8370de70f90d804bd3b1a25856b7c0fb6589bd7f0",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 2,
+      "group": 1,
+      "query_channels": 1308,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "8bc3c0f4769c456c664e339329d2c01b14612594a2b2d0ee2add2b9d859150d8",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "34f066d2a8713eb935ab6006621be164b06c3361124964cea6053fa1272ce968",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 2,
+      "group": 2,
+      "query_channels": 1361,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "42d52f5879538901a3be05fbe8caa43ae566c2a4f8bb973e986ea8382c71190d",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "1291d17cf5e704c8d3aed496d1f645416cf09380a04710dfd7f28cba1884ce5c",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 2,
+      "group": 3,
+      "query_channels": 1108,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "4e63a9a45c8d7cf48e1edfb0ac49343da3c99902c05537e23927d904a81a1626",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "c2b67cc357b08d01d15197e2194b3ce0cb8ad1e917aea21eb3a124eb10ec9622",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 3,
+      "group": 0,
+      "query_channels": 1297,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "74713f0ba93455b4fb08805bda8bf8ac05a4c8eeecfa7f65626f881adaf2c7e6",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "7ed6658866db1abf13a787efd85d7ba4949fbb859bbbcede4a287e72f8d628f3",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 3,
+      "group": 1,
+      "query_channels": 1252,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "173aa24bb39e4fd07500cfa63fc2ba905425ce9e0aa5cfd49d8e1faa40ea3d14",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "495ca217eb92f6fa40f1c0bfaf6cf6f0a36a0b22cc1c7a906c671fa099a9dae9",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 3,
+      "group": 2,
+      "query_channels": 1061,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "ec69ca16be708f79414e91d91f6a14b37de77837cf0be5bc5e3aa80591a8dc62",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "e535cacd19b24f1fd8e59406598e9e49578d931ea4de369350dcfcc360f2334e",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 3,
+      "group": 3,
+      "query_channels": 1115,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "e054194771e09035e945dc03dc93e8d86bb7c7f865b6d2bdb29690806a2d0a73",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "7aca917b03aab5f2c5dce1fd4172c9ad0b900f6e4f48a8956fd2334a2834b2ed",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 4,
+      "group": 0,
+      "query_channels": 1320,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "91d5dad76e8caf4c675d80affa74008148663690ec78332f3ad015734212a878",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "1119004acc31b24883e8b2e9eb22075428f14e90a0c74d1bd3d1512cc10d61fe",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 4,
+      "group": 1,
+      "query_channels": 1237,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "5fdce1a4517c6a54edf2c29e92c5c79ed52ea793f211e41ad1d231cf33635c18",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "4c2047bb35cc69462e3fcf756c3e9c71732b1163a4a26993061bbf085d939390",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 4,
+      "group": 2,
+      "query_channels": 1174,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "31533ae5e4e92f81a37c62830deffd17e042f5f1b35163eee796801c7f98e8ad",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "47587362fb1a78caede812e12dce21f991259fe6d4a10656a01482425163c2a8",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 4,
+      "group": 3,
+      "query_channels": 1212,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "264af2f0306b1fa1a4a35d1bd2604556169b1f696eac0486fcea8cfb5c456561",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "fd86ebfe88c97fe1e3fc0b617229ca2785ea93fa1c828bb825241d5f807df374",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 5,
+      "group": 0,
+      "query_channels": 1317,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "bf9c05e5d565e3df073ae2953b93c964c813fb412039ebc1cc98a1b6a3bf9bb3",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "4b410b13b61a2858c61f32cc7d049ecb14c697b84c3bebf892c04f5e7ec9f4e7",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 5,
+      "group": 1,
+      "query_channels": 1258,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "d45c96ef9f02fe0a88d640a129470db0633a9c3e8bea7cc2be789fa2c10ff6b3",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "108191d196f871c41bc156a5a37473b5c89fa880b38de0baff5f19318670d6c1",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 5,
+      "group": 2,
+      "query_channels": 1157,
+      "query_train_selection_outer_overlap": 0
+    },
+    {
+      "A0_logit_max_drift": 0.0,
+      "A0_teacher_sha256": "7d47820d4ae13af1f570b6c96971eb01a5ce7de0505d619b265d5161acbb28b0",
+      "D2_logit_max_drift": 0.0,
+      "D2_teacher_sha256": "8c2cbebc7b9d0527337c4e0c9fff012b65c36cd799fef04a28d328dbcca3e5be",
+      "TRAIN_preprocessor_exact": true,
+      "fold": 5,
+      "group": 3,
+      "query_channels": 1293,
+      "query_train_selection_outer_overlap": 0
+    }
+  ]
+}

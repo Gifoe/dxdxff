@@ -1,0 +1,181 @@
+{
+  "code_sha256": {
+    "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+    "finalize.py": "620e1e5cdfbe7a75f0887ffd1beb5f4bfbceb2d254f27d5bb0824094f3b8e9cf",
+    "model.py": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+    "posterior.py": "8cbe1a39b6035c11c9531aaba82652dd17de0a4d4a7c131bcf718ff0824737ba",
+    "prepare.py": "8cc9632b698edeb07f98a098d5d810cf1ab4c71db4b0f6539130c91bd773d114",
+    "run_fold.py": "7a984df72b6668a2f9ce59cdc178bbc277f64e5b3b8107295feaf4704cad9bf5",
+    "train.py": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+    "verify_fold.py": "e875020d7e79732b96fa6e06b3b4a7e68ec96f228d5c8598b80bc6bbb2509e29"
+  },
+  "original_optimizer_parity_exact": true,
+  "protocol_sha256": "6e2fbea60d606cbfe4d93890860f4ed57a422deb0794cd5f42714a2ca365996c",
+  "real_FIT_smoke_patients": 3,
+  "shared_original_initial_hash_exact": true,
+  "status": "PASS",
+  "test_source_sha256": "634ba71ea98827519c1d24b6aca0e1272b585c39de62dd0a8099e266287eec5b",
+  "tests": [
+    {
+      "number": 1,
+      "pass": true,
+      "test": "A0 checkpoint replay"
+    },
+    {
+      "number": 2,
+      "pass": true,
+      "test": "original feature/split hashes"
+    },
+    {
+      "number": 3,
+      "pass": true,
+      "test": "canonical cohort and identities"
+    },
+    {
+      "number": 4,
+      "pass": true,
+      "test": "feature order"
+    },
+    {
+      "number": 5,
+      "pass": true,
+      "test": "NEZ orientation"
+    },
+    {
+      "number": 6,
+      "pass": true,
+      "test": "parameter count"
+    },
+    {
+      "number": 7,
+      "pass": true,
+      "test": "zero correction and shared init"
+    },
+    {
+      "number": 8,
+      "pass": true,
+      "test": "shared parameters gradient"
+    },
+    {
+      "number": 9,
+      "pass": true,
+      "test": "associated source gradient"
+    },
+    {
+      "number": 10,
+      "pass": true,
+      "test": "source correction label blind"
+    },
+    {
+      "number": 11,
+      "pass": true,
+      "test": "source mapping permutation"
+    },
+    {
+      "number": 12,
+      "pass": true,
+      "test": "original threshold/checkpoint tie semantics"
+    },
+    {
+      "number": 13,
+      "pass": true,
+      "test": "reused A0 teacher provenance"
+    },
+    {
+      "number": 14,
+      "pass": true,
+      "test": "D2 OOF plan exclusion"
+    },
+    {
+      "number": 15,
+      "pass": true,
+      "test": "OOF once-only coverage"
+    },
+    {
+      "number": 16,
+      "pass": true,
+      "test": "FIT-only density membership guard"
+    },
+    {
+      "number": 17,
+      "pass": true,
+      "test": "FIT-only patient equal prior"
+    },
+    {
+      "number": 18,
+      "pass": true,
+      "test": "unlabeled median IQR normalization"
+    },
+    {
+      "number": 19,
+      "pass": true,
+      "test": "stable Gaussian log domain"
+    },
+    {
+      "number": 20,
+      "pass": true,
+      "test": "posterior normalization"
+    },
+    {
+      "number": 21,
+      "pass": true,
+      "test": "deterministic converged MAP"
+    },
+    {
+      "number": 22,
+      "pass": true,
+      "test": "no labels true count in inference"
+    },
+    {
+      "number": 23,
+      "pass": true,
+      "test": "posterior preserves NEZ ordering"
+    },
+    {
+      "number": 24,
+      "pass": true,
+      "test": "expected confusion ratios brute parity"
+    },
+    {
+      "number": 25,
+      "pass": true,
+      "test": "enumerate all cardinalities"
+    },
+    {
+      "number": 26,
+      "pass": true,
+      "test": "smaller k tie"
+    },
+    {
+      "number": 27,
+      "pass": true,
+      "test": "empty/single safe"
+    },
+    {
+      "number": 28,
+      "pass": true,
+      "test": "constant patient"
+    },
+    {
+      "number": 29,
+      "pass": true,
+      "test": "unknown and sparse source fallback"
+    },
+    {
+      "number": 30,
+      "pass": true,
+      "test": "no outer labels/evaluation"
+    },
+    {
+      "number": 31,
+      "pass": true,
+      "test": "patient cluster keeps repeated appearances"
+    },
+    {
+      "number": 32,
+      "pass": true,
+      "test": "exact interrupted resume"
+    }
+  ],
+  "tests_passed": 32
+}

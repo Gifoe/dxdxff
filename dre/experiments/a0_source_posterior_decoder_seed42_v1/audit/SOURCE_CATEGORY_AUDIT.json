@@ -1,0 +1,26 @@
+{
+  "categories": [
+    {
+      "channels": 3667,
+      "patients": 36,
+      "source": "HUP"
+    },
+    {
+      "channels": 2141,
+      "patients": 21,
+      "source": "LZU"
+    },
+    {
+      "channels": 925,
+      "patients": 15,
+      "source": "multicenter"
+    },
+    {
+      "channels": 902,
+      "patients": 8,
+      "source": "pediatric"
+    }
+  ],
+  "source_not_patient_identifier": true,
+  "status": "PASS"
+}

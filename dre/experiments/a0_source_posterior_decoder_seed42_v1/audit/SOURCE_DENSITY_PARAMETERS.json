@@ -1,0 +1,881 @@
+{
+  "fits": [
+    {
+      "density": {
+        "fit_patients": 51,
+        "global": {
+          "fallback": false,
+          "mu_ez": -0.6653801588453154,
+          "mu_nez": 0.2746746035774009,
+          "pi": 0.22786833608886345,
+          "variance": 19.099334074091296
+        },
+        "global_moments": {
+          "0": {
+            "mean": -0.6653801588453154,
+            "n": 51,
+            "second": 1.7601351430324845
+          },
+          "1": {
+            "mean": 0.2746746035774009,
+            "n": 51,
+            "second": 36.956709898785526
+          }
+        },
+        "low_iqr_fraction": 0.0,
+        "sources": [
+          {
+            "class_patients": [
+              22,
+              22
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.8415411679780787,
+            "mu_nez": 0.496525877623996,
+            "patients": 22,
+            "pi": 0.18419978137209744,
+            "raw_moments": {
+              "0": {
+                "mean": -0.9216143539475165,
+                "n": 22,
+                "second": 2.788246304138331
+              },
+              "1": {
+                "mean": 0.5973673658269938,
+                "n": 22,
+                "second": 85.10036983989144
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.8415411679780787,
+                "second": 2.466961566292754
+              },
+              "1": {
+                "mean": 0.496525877623996,
+                "second": 70.05547610829585
+              }
+            },
+            "variance": 35.783854095018214
+          },
+          {
+            "class_patients": [
+              13,
+              13
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.4424675128955643,
+            "mu_nez": 0.12554230714177533,
+            "patients": 13,
+            "pi": 0.31746500230040836,
+            "raw_moments": {
+              "0": {
+                "mean": -0.27099624678037104,
+                "n": 13,
+                "second": 0.726831942964725
+              },
+              "1": {
+                "mean": 0.010825156037447924,
+                "n": 13,
+                "second": 0.4605009566983468
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.4424675128955643,
+                "second": 1.176094203863751
+              },
+              "1": {
+                "mean": 0.12554230714177533,
+                "second": 16.328417888040597
+              }
+            },
+            "variance": 8.64648686052694
+          },
+          {
+            "class_patients": [
+              12,
+              12
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.708599084921651,
+            "mu_nez": 0.15252493004695633,
+            "patients": 12,
+            "pi": 0.19365412619975467,
+            "raw_moments": {
+              "0": {
+                "mean": -0.7446148566519307,
+                "n": 12,
+                "second": 1.361451456737876
+              },
+              "1": {
+                "mean": 0.050733535438252486,
+                "n": 12,
+                "second": 0.43318483238404
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.708599084921651,
+                "second": 1.542671314144516
+              },
+              "1": {
+                "mean": 0.15252493004695633,
+                "second": 17.034787135293808
+              }
+            },
+            "variance": 9.026040966000346
+          },
+          {
+            "class_patients": [
+              4,
+              4
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.5610246010536344,
+            "mu_nez": 0.20453852259155314,
+            "patients": 4,
+            "pi": 0.2342528393482471,
+            "raw_moments": {
+              "0": {
+                "mean": -0.300135706574432,
+                "n": 4,
+                "second": 0.6598102160543786
+              },
+              "1": {
+                "mean": 0.029198320126933647,
+                "n": 4,
+                "second": 0.3498344836906858
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.5610246010536344,
+                "second": 1.4457565924673115
+              },
+              "1": {
+                "mean": 0.20453852259155314,
+                "second": 26.49760263732986
+              }
+            },
+            "variance": 13.793387309792923
+          }
+        ]
+      },
+      "fold": 1,
+      "global_moments_diagnostic": {
+        "block_reason": "none",
+        "class_bearing_patients_EZ": 51,
+        "class_bearing_patients_NEZ": 51,
+        "common_variance_raw": 19.099334074091296,
+        "fold": 1,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": 0.9400547624227164,
+        "global_mu_ez": -0.6653801588453154,
+        "global_mu_nez": 0.2746746035774009,
+        "identifiable": true,
+        "low_iqr_fraction": 0.0,
+        "method": "D1",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": true,
+      "invalid_density_used_for_inference": false,
+      "method": "D1"
+    },
+    {
+      "density": {
+        "fit_patients": 51,
+        "global": {
+          "fallback": false,
+          "mu_ez": -0.6949148809088124,
+          "mu_nez": 0.2316077907363539,
+          "pi": 0.22786833608886345,
+          "variance": 14.429618239512754
+        },
+        "global_moments": {
+          "0": {
+            "mean": -0.6949148809088124,
+            "n": 51,
+            "second": 1.7189285866769088
+          },
+          "1": {
+            "mean": 0.2316077907363539,
+            "n": 51,
+            "second": 27.676856752786883
+          }
+        },
+        "low_iqr_fraction": 0.0,
+        "sources": [
+          {
+            "class_patients": [
+              22,
+              22
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.8617922731266829,
+            "mu_nez": 0.4177391687030856,
+            "patients": 22,
+            "pi": 0.18419978137209744,
+            "raw_moments": {
+              "0": {
+                "mean": -0.9376456332257151,
+                "n": 22,
+                "second": 2.5954508537946492
+              },
+              "1": {
+                "mean": 0.5023443405061454,
+                "n": 22,
+                "second": 63.60806237685065
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.8617922731266829,
+                "second": 2.3215376453203556
+              },
+              "1": {
+                "mean": 0.4177391687030856,
+                "second": 52.37956061933072
+              }
+            },
+            "variance": 26.891953164780737
+          },
+          {
+            "class_patients": [
+              13,
+              13
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.49349083047219683,
+            "mu_nez": 0.08417338287162393,
+            "patients": 13,
+            "pi": 0.31746500230040836,
+            "raw_moments": {
+              "0": {
+                "mean": -0.33854925321326174,
+                "n": 13,
+                "second": 0.8717942581347179
+              },
+              "1": {
+                "mean": -0.029237700101245316,
+                "n": 13,
+                "second": 0.4418602273373006
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.49349083047219683,
+                "second": 1.2401135314139313
+              },
+              "1": {
+                "mean": 0.08417338287162393,
+                "second": 12.283163064489294
+              }
+            },
+            "variance": 6.636329118879517
+          },
+          {
+            "class_patients": [
+              12,
+              12
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.7281245563899663,
+            "mu_nez": 0.14501863415946906,
+            "patients": 12,
+            "pi": 0.19365412619975467,
+            "raw_moments": {
+              "0": {
+                "mean": -0.7557992859575947,
+                "n": 12,
+                "second": 1.2895801460687017
+              },
+              "1": {
+                "mean": 0.07286100367873168,
+                "n": 12,
+                "second": 0.39986018495069886
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.7281245563899663,
+                "second": 1.4847385281633412
+              },
+              "1": {
+                "mean": 0.14501863415946906,
+                "second": 12.798494988512601
+              }
+            },
+            "variance": 6.86601887140219
+          },
+          {
+            "class_patients": [
+              4,
+              4
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.592205148657734,
+            "mu_nez": 0.1844469857824144,
+            "patients": 4,
+            "pi": 0.2342528393482471,
+            "raw_moments": {
+              "0": {
+                "mean": -0.3354308180300378,
+                "n": 4,
+                "second": 0.9392880071160806
+              },
+              "1": {
+                "mean": 0.0665449733975656,
+                "n": 4,
+                "second": 0.3999542316557952
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.592205148657734,
+                "second": 1.496174135373815
+              },
+              "1": {
+                "mean": 0.1844469857824144,
+                "second": 19.883456032463712
+              }
+            },
+            "variance": 10.49745126958829
+          }
+        ]
+      },
+      "fold": 1,
+      "global_moments_diagnostic": {
+        "block_reason": "none",
+        "class_bearing_patients_EZ": 51,
+        "class_bearing_patients_NEZ": 51,
+        "common_variance_raw": 14.429618239512754,
+        "fold": 1,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": 0.9265226716451662,
+        "global_mu_ez": -0.6949148809088124,
+        "global_mu_nez": 0.2316077907363539,
+        "identifiable": true,
+        "low_iqr_fraction": 0.0,
+        "method": "D3",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": true,
+      "invalid_density_used_for_inference": false,
+      "method": "D3"
+    },
+    {
+      "density": {
+        "fit_patients": 51,
+        "global": {
+          "fallback": false,
+          "mu_ez": -0.6568564497660199,
+          "mu_nez": 0.5428727725528085,
+          "pi": 0.27703548503175063,
+          "variance": 81.42121884503662
+        },
+        "global_moments": {
+          "0": {
+            "mean": -0.6568564497660199,
+            "n": 51,
+            "second": 1.3504191781146697
+          },
+          "1": {
+            "mean": 0.5428727725528085,
+            "n": 51,
+            "second": 162.21818975473695
+          }
+        },
+        "low_iqr_fraction": 0.0,
+        "sources": [
+          {
+            "class_patients": [
+              25,
+              25
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.8655789683075904,
+            "mu_nez": 0.9129148156402155,
+            "patients": 25,
+            "pi": 0.2120290524679785,
+            "raw_moments": {
+              "0": {
+                "mean": -0.9490679757242186,
+                "n": 25,
+                "second": 1.9883182966732982
+              },
+              "1": {
+                "mean": 1.0609316328751783,
+                "n": 25,
+                "second": 330.5369633019147
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.8655789683075904,
+                "second": 1.8060614056565472
+              },
+              "1": {
+                "mean": 0.9129148156402155,
+                "second": 282.4458851455782
+              }
+            },
+            "variance": 141.33465307012145
+          },
+          {
+            "class_patients": [
+              18,
+              18
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.41900963259454926,
+            "mu_nez": 0.20906127848422074,
+            "patients": 18,
+            "pi": 0.3631493252739006,
+            "raw_moments": {
+              "0": {
+                "mean": -0.28687251194373226,
+                "n": 18,
+                "second": 0.6485213108130575
+              },
+              "1": {
+                "mean": 0.023610448446116473,
+                "n": 18,
+                "second": 0.3820053041687331
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.41900963259454926,
+                "second": 0.8991991205636333
+              },
+              "1": {
+                "mean": 0.20906127848422074,
+                "second": 58.180642607943085
+              }
+            },
+            "variance": 29.43028301906912
+          },
+          {
+            "class_patients": [
+              5,
+              5
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.6026079415696273,
+            "mu_nez": 0.3884868519278115,
+            "patients": 5,
+            "pi": 0.258568517021616,
+            "raw_moments": {
+              "0": {
+                "mean": -0.49411092517684196,
+                "n": 5,
+                "second": 0.5981708267041295
+              },
+              "1": {
+                "mean": 0.07971501067781749,
+                "n": 5,
+                "second": 0.3312323381733056
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.6026079415696273,
+                "second": 1.0996697276444898
+              },
+              "1": {
+                "mean": 0.3884868519278115,
+                "second": 108.25587061588242
+              }
+            },
+            "variance": 54.42074098908167
+          },
+          {
+            "class_patients": [
+              3,
+              3
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.669791092442335,
+            "mu_nez": 0.4437219368017442,
+            "patients": 3,
+            "pi": 0.2878848798858925,
+            "raw_moments": {
+              "0": {
+                "mean": -0.7129065680300526,
+                "n": 3,
+                "second": 1.4997276462866747
+              },
+              "1": {
+                "mean": 0.11321915096486318,
+                "n": 3,
+                "second": 0.39044592593831423
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.669791092442335,
+                "second": 1.3848749784620553
+              },
+              "1": {
+                "mean": 0.4437219368017442,
+                "second": 124.87332579424495
+              }
+            },
+            "variance": 62.8063457539964
+          }
+        ]
+      },
+      "fold": 2,
+      "global_moments_diagnostic": {
+        "block_reason": "none",
+        "class_bearing_patients_EZ": 51,
+        "class_bearing_patients_NEZ": 51,
+        "common_variance_raw": 81.42121884503662,
+        "fold": 2,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": 1.1997292223188283,
+        "global_mu_ez": -0.6568564497660199,
+        "global_mu_nez": 0.5428727725528085,
+        "identifiable": true,
+        "low_iqr_fraction": 0.0,
+        "method": "D1",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": true,
+      "invalid_density_used_for_inference": false,
+      "method": "D1"
+    },
+    {
+      "density": {
+        "fit_patients": 51,
+        "global": {
+          "fallback": false,
+          "mu_ez": -0.6906764452580167,
+          "mu_nez": 4.291824324951409,
+          "pi": 0.27703548503175063,
+          "variance": 5578.000900507628
+        },
+        "global_moments": {
+          "0": {
+            "mean": -0.6906764452580167,
+            "n": 51,
+            "second": 1.4933368353671868
+          },
+          "1": {
+            "mean": 4.291824324951409,
+            "n": 51,
+            "second": 11173.405254168169
+          }
+        },
+        "low_iqr_fraction": 0.0,
+        "sources": [
+          {
+            "class_patients": [
+              25,
+              25
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.9397903172926745,
+            "mu_nez": 7.450088972388007,
+            "patients": 25,
+            "pi": 0.2120290524679785,
+            "raw_moments": {
+              "0": {
+                "mean": -1.0394358661065375,
+                "n": 25,
+                "second": 2.2257648246755437
+              },
+              "1": {
+                "mean": 8.713394831362645,
+                "n": 25,
+                "second": 22793.325046480055
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.9397903172926745,
+                "second": 2.016499684873156
+              },
+              "1": {
+                "mean": 7.450088972388007,
+                "second": 19473.347962962373
+              }
+            },
+            "variance": 9709.488715555135
+          },
+          {
+            "class_patients": [
+              18,
+              18
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.4173140708482425,
+            "mu_nez": 1.5437803070440228,
+            "patients": 18,
+            "pi": 0.3631493252739006,
+            "raw_moments": {
+              "0": {
+                "mean": -0.26544608506503464,
+                "n": 18,
+                "second": 0.7550729415488178
+              },
+              "1": {
+                "mean": 0.017089185984364055,
+                "n": 18,
+                "second": 0.4322514117382931
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.4173140708482425,
+                "second": 1.0187386179125208
+              },
+              "1": {
+                "mean": 1.5437803070440228,
+                "second": 3990.779752396177
+              }
+            },
+            "variance": 1994.6205411719723
+          },
+          {
+            "class_patients": [
+              5,
+              5
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.6136057875426019,
+            "mu_nez": 2.902064005998243,
+            "patients": 5,
+            "pi": 0.258568517021616,
+            "raw_moments": {
+              "0": {
+                "mean": -0.4594644721117721,
+                "n": 5,
+                "second": 0.6299121428854534
+              },
+              "1": {
+                "mean": 0.12254336809190998,
+                "n": 5,
+                "second": 0.34861066392951945
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.6136057875426019,
+                "second": 1.2055286045399423
+              },
+              "1": {
+                "mean": 2.902064005998243,
+                "second": 7449.053039666756
+              }
+            },
+            "variance": 3720.7300403569398
+          },
+          {
+            "class_patients": [
+              3,
+              3
+            ],
+            "fallback": false,
+            "fallback_reason": "none",
+            "mu_ez": -0.6976934320266232,
+            "mu_nez": 3.311237757676286,
+            "patients": 3,
+            "pi": 0.2878848798858925,
+            "raw_moments": {
+              "0": {
+                "mean": -0.7210833879219778,
+                "n": 3,
+                "second": 1.2583947748439799
+              },
+              "1": {
+                "mean": 0.04261586675920967,
+                "n": 3,
+                "second": 0.339407281428822
+              }
+            },
+            "shrunk_moments": {
+              "0": {
+                "mean": -0.6976934320266232,
+                "second": 1.439119436784908
+              },
+              "1": {
+                "mean": 3.311237757676286,
+                "second": 8595.005443348151
+              }
+            },
+            "variance": 4292.4967455859905
+          }
+        ]
+      },
+      "fold": 2,
+      "global_moments_diagnostic": {
+        "block_reason": "none",
+        "class_bearing_patients_EZ": 51,
+        "class_bearing_patients_NEZ": 51,
+        "common_variance_raw": 5578.000900507628,
+        "fold": 2,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": 4.982500770209426,
+        "global_mu_ez": -0.6906764452580167,
+        "global_mu_nez": 4.291824324951409,
+        "identifiable": true,
+        "low_iqr_fraction": 0.0,
+        "method": "D3",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": true,
+      "invalid_density_used_for_inference": false,
+      "method": "D3"
+    },
+    {
+      "density": null,
+      "fold": 3,
+      "global_moments_diagnostic": {
+        "block_reason": "global_FIT_EZ_mean_not_below_NEZ",
+        "class_bearing_patients_EZ": 50,
+        "class_bearing_patients_NEZ": 50,
+        "common_variance_raw": 3222697.12861367,
+        "fold": 3,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": -181.38144489860755,
+        "global_mu_ez": -1.0865082758573728,
+        "global_mu_nez": -182.46795317446492,
+        "identifiable": false,
+        "low_iqr_fraction": 0.02,
+        "method": "D1",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": false,
+      "invalid_density_used_for_inference": false,
+      "method": "D1"
+    },
+    {
+      "density": null,
+      "fold": 3,
+      "global_moments_diagnostic": {
+        "block_reason": "global_FIT_EZ_mean_not_below_NEZ",
+        "class_bearing_patients_EZ": 50,
+        "class_bearing_patients_NEZ": 50,
+        "common_variance_raw": 3044805.061110914,
+        "fold": 3,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": -176.326942825903,
+        "global_mu_ez": -1.0132165028157478,
+        "global_mu_nez": -177.34015932871873,
+        "identifiable": false,
+        "low_iqr_fraction": 0.02,
+        "method": "D3",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": false,
+      "invalid_density_used_for_inference": false,
+      "method": "D3"
+    },
+    {
+      "density": null,
+      "fold": 4,
+      "global_moments_diagnostic": {
+        "block_reason": "global_FIT_EZ_mean_not_below_NEZ",
+        "class_bearing_patients_EZ": 52,
+        "class_bearing_patients_NEZ": 52,
+        "common_variance_raw": 1647039.697345383,
+        "fold": 4,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": -28.702676341432905,
+        "global_mu_ez": 43.03860360960034,
+        "global_mu_nez": 14.335927268167431,
+        "identifiable": false,
+        "low_iqr_fraction": 0.019230769230769232,
+        "method": "D1",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": false,
+      "invalid_density_used_for_inference": false,
+      "method": "D1"
+    },
+    {
+      "density": null,
+      "fold": 4,
+      "global_moments_diagnostic": {
+        "block_reason": "global_FIT_EZ_mean_not_below_NEZ",
+        "class_bearing_patients_EZ": 52,
+        "class_bearing_patients_NEZ": 52,
+        "common_variance_raw": 1723833.719612805,
+        "fold": 4,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": -29.379024373201347,
+        "global_mu_ez": 44.04818997461745,
+        "global_mu_nez": 14.669165601416106,
+        "identifiable": false,
+        "low_iqr_fraction": 0.019230769230769232,
+        "method": "D3",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": false,
+      "invalid_density_used_for_inference": false,
+      "method": "D3"
+    },
+    {
+      "density": null,
+      "fold": 5,
+      "global_moments_diagnostic": {
+        "block_reason": "global_FIT_EZ_mean_not_below_NEZ",
+        "class_bearing_patients_EZ": 51,
+        "class_bearing_patients_NEZ": 51,
+        "common_variance_raw": 692269.762752364,
+        "fold": 5,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": -46.62748167050651,
+        "global_mu_ez": 53.003906236634144,
+        "global_mu_nez": 6.376424566127634,
+        "identifiable": false,
+        "low_iqr_fraction": 0.0392156862745098,
+        "method": "D1",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": false,
+      "invalid_density_used_for_inference": false,
+      "method": "D1"
+    },
+    {
+      "density": null,
+      "fold": 5,
+      "global_moments_diagnostic": {
+        "block_reason": "global_FIT_EZ_mean_not_below_NEZ",
+        "class_bearing_patients_EZ": 51,
+        "class_bearing_patients_NEZ": 51,
+        "common_variance_raw": 688764.7939717942,
+        "fold": 5,
+        "force_mean_separation": false,
+        "global_mean_gap_NEZ_minus_EZ": -46.40969882472143,
+        "global_mu_ez": 52.808543512393,
+        "global_mu_nez": 6.398844687671567,
+        "identifiable": false,
+        "low_iqr_fraction": 0.0392156862745098,
+        "method": "D3",
+        "scope": "FIT_OOF_ONLY"
+      },
+      "identifiable": false,
+      "invalid_density_used_for_inference": false,
+      "method": "D3"
+    }
+  ],
+  "status": "POSTERIOR_IDENTIFIABILITY_FAILED"
+}

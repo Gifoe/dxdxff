@@ -1,0 +1,5 @@
+method,status,channel_appearances,TP_gained,TP_lost,FP_added,FP_removed,errors_recovered,correct_spoiled
+D0,COMPLETE,6273.0,0.0,0.0,0.0,0.0,0.0,0.0
+D2,COMPLETE,6273.0,96.0,57.0,110.0,208.0,304.0,167.0
+D1,NOT_ESTIMABLE_POSTERIOR_GATE_FAILED,,,,,,,
+D3,NOT_ESTIMABLE_POSTERIOR_GATE_FAILED,,,,,,,

@@ -1,0 +1,11 @@
+{
+  "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4",
+  "components_AST_semantically_identical": true,
+  "exact_float32_forward": true,
+  "exact_float32_gradients": true,
+  "full_source_sha256": "fc654af6a16bac53d893a8265c79d7af4ebddcb95ad0d600cc6b6bc6b7317ade",
+  "identical_initial_tensors": true,
+  "isolated_source_sha256": "2fbd0bb267698ce97416626d9e92abfe2ed29b671ade6cc60d7974eb906c80ed",
+  "no_unused_embedding_dependency_installed": true,
+  "status": "PASS"
+}

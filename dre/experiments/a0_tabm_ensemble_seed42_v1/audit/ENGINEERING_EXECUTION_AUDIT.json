@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "new_formal_students": 10,
+  "A0_retrained": false,
+  "outer_predictions_or_metrics": false,
+  "discarded_formal_students": 0,
+  "formal_training_completed_epochs": 76,
+  "initial_hidden_launcher": "Exited with empty logs and no student artifacts; cause unconfirmed. Foreground execution completed all ten students.",
+  "aggregate_native_crashes": 2,
+  "diagnosed_traceback": "pandas BlockManager.insert during member-diagnostic metadata assembly",
+  "aggregate_repair": "Only table metadata assembly uses one concat instead of repeated column insertion; no training, prediction, threshold, metric formula or bootstrap change.",
+  "post_training_synthetic_table_regression": {"tests": 1, "passed": 1},
+  "pretraining_suite_unchanged": true,
+  "prior_logs_sources_checkpoints_retained_privately": true,
+  "terminal": "TABM_NOT_SUPPORTED"
+}

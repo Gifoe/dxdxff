@@ -1,0 +1,29 @@
+{
+  "W2_A0_AP_delta": 0.010282323840713814,
+  "W2_A0_EZF1_delta": -0.00041819145325727725,
+  "W2_A0_improved_folds": 3,
+  "W2_A0_macro_delta": -0.0003128615035898896,
+  "W2_W1_improved_folds": 3,
+  "W2_W1_macro_delta": 0.0008956234675880914,
+  "both_primary_delta_CI_lower_positive": false,
+  "conditions": {
+    "AP_nondecline": true,
+    "EZF1_nondecline": false,
+    "W2_A0_macro_ge_0_015": false,
+    "W2_W1_macro_ge_0_005": false,
+    "four_of_five_A0": false,
+    "implementation_and_isolation": true,
+    "three_of_five_W1": true
+  },
+  "development_not_independent_confirmation": true,
+  "failed_conditions": [
+    "W2_A0_macro_ge_0_015",
+    "W2_W1_macro_ge_0_005",
+    "EZF1_nondecline",
+    "four_of_five_A0"
+  ],
+  "no_outer_evaluation_authorized": true,
+  "pass": false,
+  "target_gain_ge_0_030": false,
+  "terminal": "TABM_NOT_SUPPORTED"
+}

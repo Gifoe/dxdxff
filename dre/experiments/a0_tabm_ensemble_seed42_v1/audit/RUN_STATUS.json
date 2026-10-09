@@ -1,0 +1,22 @@
+{
+  "A0_retrained": false,
+  "binding": {
+    "base.py": "20cb12e07e5dc9bbec8298877b79223918b1d739a1a0dfd29b447e8adc11c102",
+    "model.py": "f20f88cc9862a95d093ff17fa9ced4d59f5d53903ed020479df973b543e8cfde",
+    "prepare.py": "aff6b2487609093d11ca14c719d90abf688bb7baa5f1a9f917f67c253d7e9e1f",
+    "protocol": "2804cb05f9546bf0159f030aea2fa2983bd894ba84057ad62a3f7019ab8cf274",
+    "run.py": "3f53e3b5f4ec3dd7e92780ea72bf2b14c51f29165130336fac4448375fc98477",
+    "smoke.py": "26d950bef702ecf808ced00ef41b5b65ab9cae9e5121765151bfe703b2751b21",
+    "source_parity.py": "cea509b1be1884d43a7abc98ac2f5803d3596a2187021482387fb837804b4182",
+    "tabm_layers.py": "2fbd0bb267698ce97416626d9e92abfe2ed29b671ade6cc60d7974eb906c80ed",
+    "train.py": "d8155a9204ab45f4887f21a3046b6b6b48ea32bf4360478a242c2d44c969df0f"
+  },
+  "bootstrap_draws": 10000,
+  "finalizer_sha256": "64ca872bb9367b0259c7f66ead8790299ebaba29338bf630217578831b5034e2",
+  "new_student_models": 10,
+  "outer_evaluation": false,
+  "status": "COMPLETE_DEVELOPMENT_GATE_FAILED",
+  "terminal": "TABM_NOT_SUPPORTED",
+  "unique_patients": 47,
+  "validation_appearances": 65
+}

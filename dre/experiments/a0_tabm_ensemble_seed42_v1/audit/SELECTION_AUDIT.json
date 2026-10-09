@@ -1,0 +1,117 @@
+{
+  "models": [
+    {
+      "arm": "W1",
+      "checkpoint_sha256": "8b07871f00dcb7247f60ab46c3896ce3bfe3c91cae9de4cc51418b52166b4f34",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 1,
+      "initial_sha256": "df70d61dfbb70c01b986ff2a4cfbeecb65bd5a0fe278d88df6f9f4617639d6b1",
+      "input_sha256": "1e09b0a723e262a195ce9371fa90cc182d1d81f1e1f1b9cbc56df9f3b33b876f",
+      "parameters": 10167,
+      "threshold": 0.47
+    },
+    {
+      "arm": "W1",
+      "checkpoint_sha256": "91f7ee63d9b6e37df9d6ad9a38029d26c0b42213fe55aad48257f1576f773f2c",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 2,
+      "initial_sha256": "66eb41820bd2b1d0259a8669b1f5f989cba5b46df988405651defe69b395dd61",
+      "input_sha256": "c944901eb112c83e3eded7ac4e90e9a46a371f7a70b9857e88277b78efe5c37a",
+      "parameters": 10167,
+      "threshold": 0.22
+    },
+    {
+      "arm": "W1",
+      "checkpoint_sha256": "95e7b317dcea978a91762c8e5d28c959e46b37fda4e2ca8de53651a7c25256a0",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 3,
+      "initial_sha256": "78724253429e907bb55f6616e8e907cf163bddb82490bac4e77e78664e824510",
+      "input_sha256": "59bd37c5d5da45a3d055e337e9353ea8ea489da4964e38bd79aa7f4553b526b8",
+      "parameters": 10167,
+      "threshold": 0.345
+    },
+    {
+      "arm": "W1",
+      "checkpoint_sha256": "453f5f521e3fa69d450232a0dd30a20bfd7b927c24d04b72ab88118869b1e235",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 4,
+      "initial_sha256": "700df2022b46974e334bd2ab7dc25563123a2c3e2b639b454d12e8d63a020ebd",
+      "input_sha256": "322dceb60136a3651db6aecf157946b16a2a18473280b0fac128cc6f94b5c9fa",
+      "parameters": 10167,
+      "threshold": 0.385
+    },
+    {
+      "arm": "W1",
+      "checkpoint_sha256": "d320a3cacf65345b55102b61896a460be94771f505225c54ce0702d842882963",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 5,
+      "initial_sha256": "624c2e4e8626182731762e918384e4ca2410d51c87af681622ad757d040549e5",
+      "input_sha256": "aa5665c541814755ae0173ccee407ef98bc9422ad0c47f784b4d7913de9e0a83",
+      "parameters": 10167,
+      "threshold": 0.435
+    },
+    {
+      "arm": "W2",
+      "checkpoint_sha256": "7a35d02e9f345233f6ea5d08ea3470f468c075a1b0ff120eb57712e1d21ad618",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 1,
+      "initial_sha256": "b25220dda547af5975f7a08e2109d267a3dc2cb4a384da4179db72c45943d916",
+      "input_sha256": "1e09b0a723e262a195ce9371fa90cc182d1d81f1e1f1b9cbc56df9f3b33b876f",
+      "parameters": 10132,
+      "threshold": 0.49
+    },
+    {
+      "arm": "W2",
+      "checkpoint_sha256": "d73a8a708ac22db0d31dd2b6102f27b5a71ce464db263e5614366eacc0229d77",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 2,
+      "initial_sha256": "e3a0b4dec4676c4c7873267b4c629a70862160510a256bbc6c804f70c446a549",
+      "input_sha256": "c944901eb112c83e3eded7ac4e90e9a46a371f7a70b9857e88277b78efe5c37a",
+      "parameters": 10132,
+      "threshold": 0.3
+    },
+    {
+      "arm": "W2",
+      "checkpoint_sha256": "c1450665d4608611a388311947729069ff64a1675694d15df36e804a4821a2b4",
+      "completed_epochs": 9,
+      "epoch": 3,
+      "fold": 3,
+      "initial_sha256": "5262e9cca005fc77a6451552f53b3fe55115bb04c23c7c14bf79f072d5a39163",
+      "input_sha256": "59bd37c5d5da45a3d055e337e9353ea8ea489da4964e38bd79aa7f4553b526b8",
+      "parameters": 10132,
+      "threshold": 0.32
+    },
+    {
+      "arm": "W2",
+      "checkpoint_sha256": "8d77367b79def6ce3b7268d2e95d945a952aee1a35e9bab8238cb366e0dbd2aa",
+      "completed_epochs": 7,
+      "epoch": 1,
+      "fold": 4,
+      "initial_sha256": "09cbb5ed179fe4d004729939a6d575a83d32e8b61e4f0b77663e855ff0a25ce9",
+      "input_sha256": "322dceb60136a3651db6aecf157946b16a2a18473280b0fac128cc6f94b5c9fa",
+      "parameters": 10132,
+      "threshold": 0.415
+    },
+    {
+      "arm": "W2",
+      "checkpoint_sha256": "3f9d32ac656f19530e5bb802d202a2a970683974d62b8c8f1f7bfe5665cfb3c5",
+      "completed_epochs": 8,
+      "epoch": 2,
+      "fold": 5,
+      "initial_sha256": "130b66802c7dc9c8b8b320dbc82b6461ff8fe880994144a0799e1b06e99347e7",
+      "input_sha256": "aa5665c541814755ae0173ccee407ef98bc9422ad0c47f784b4d7913de9e0a83",
+      "parameters": 10132,
+      "threshold": 0.46
+    }
+  ],
+  "no_member_selection": true,
+  "outer_evaluation": false,
+  "status": "PASS"
+}

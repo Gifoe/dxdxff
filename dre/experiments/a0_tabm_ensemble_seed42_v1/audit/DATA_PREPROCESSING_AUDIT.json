@@ -1,0 +1,85 @@
+{
+  "binding": {
+    "base.py": "20cb12e07e5dc9bbec8298877b79223918b1d739a1a0dfd29b447e8adc11c102",
+    "model.py": "f20f88cc9862a95d093ff17fa9ced4d59f5d53903ed020479df973b543e8cfde",
+    "prepare.py": "aff6b2487609093d11ca14c719d90abf688bb7baa5f1a9f917f67c253d7e9e1f",
+    "protocol": "2804cb05f9546bf0159f030aea2fa2983bd894ba84057ad62a3f7019ab8cf274",
+    "run.py": "3f53e3b5f4ec3dd7e92780ea72bf2b14c51f29165130336fac4448375fc98477",
+    "smoke.py": "26d950bef702ecf808ced00ef41b5b65ab9cae9e5121765151bfe703b2751b21",
+    "source_parity.py": "cea509b1be1884d43a7abc98ac2f5803d3596a2187021482387fb837804b4182",
+    "tabm_layers.py": "2fbd0bb267698ce97416626d9e92abfe2ed29b671ade6cc60d7974eb906c80ed",
+    "train.py": "d8155a9204ab45f4887f21a3046b6b6b48ea32bf4360478a242c2d44c969df0f"
+  },
+  "channels": 7635,
+  "features": 88,
+  "folds": [
+    {
+      "FIT_preprocessing_exact": true,
+      "exact_prior_A0_tensors": true,
+      "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+      "fit_channels": 4623,
+      "fit_patients": 51,
+      "fold": 1,
+      "input_sha256": "1e09b0a723e262a195ce9371fa90cc182d1d81f1e1f1b9cbc56df9f3b33b876f",
+      "outer_rows_in_bank": 0,
+      "validation_channels": 1381,
+      "validation_patients": 13
+    },
+    {
+      "FIT_preprocessing_exact": true,
+      "exact_prior_A0_tensors": true,
+      "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+      "fit_channels": 4951,
+      "fit_patients": 51,
+      "fold": 2,
+      "input_sha256": "c944901eb112c83e3eded7ac4e90e9a46a371f7a70b9857e88277b78efe5c37a",
+      "outer_rows_in_bank": 0,
+      "validation_channels": 1186,
+      "validation_patients": 13
+    },
+    {
+      "FIT_preprocessing_exact": true,
+      "exact_prior_A0_tensors": true,
+      "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+      "fit_channels": 4725,
+      "fit_patients": 50,
+      "fold": 3,
+      "input_sha256": "59bd37c5d5da45a3d055e337e9353ea8ea489da4964e38bd79aa7f4553b526b8",
+      "outer_rows_in_bank": 0,
+      "validation_channels": 1164,
+      "validation_patients": 13
+    },
+    {
+      "FIT_preprocessing_exact": true,
+      "exact_prior_A0_tensors": true,
+      "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+      "fit_channels": 4943,
+      "fit_patients": 52,
+      "fold": 4,
+      "input_sha256": "322dceb60136a3651db6aecf157946b16a2a18473280b0fac128cc6f94b5c9fa",
+      "outer_rows_in_bank": 0,
+      "validation_channels": 1267,
+      "validation_patients": 13
+    },
+    {
+      "FIT_preprocessing_exact": true,
+      "exact_prior_A0_tensors": true,
+      "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+      "fit_channels": 5025,
+      "fit_patients": 51,
+      "fold": 5,
+      "input_sha256": "aa5665c541814755ae0173ccee407ef98bc9422ad0c47f784b4d7913de9e0a83",
+      "outer_rows_in_bank": 0,
+      "validation_channels": 1275,
+      "validation_patients": 13
+    }
+  ],
+  "model_input_no_patient_center_label": true,
+  "outer_evaluation": false,
+  "outer_labels_source_materialized_before_sealing": true,
+  "patients": 80,
+  "private_feature_sha256": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+  "same_input_all_arms": true,
+  "split_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "status": "PASS"
+}

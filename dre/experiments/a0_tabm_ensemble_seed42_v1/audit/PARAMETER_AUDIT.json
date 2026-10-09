@@ -1,0 +1,14 @@
+{
+  "A0": 8817,
+  "W1": 10167,
+  "W2": 10132,
+  "W2_parts": {
+    "LN": 176,
+    "heads": 388,
+    "hidden_bias": 384,
+    "r": 352,
+    "s": 384,
+    "shared_weight": 8448
+  },
+  "status": "PASS"
+}

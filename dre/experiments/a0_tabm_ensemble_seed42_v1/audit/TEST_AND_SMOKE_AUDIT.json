@@ -1,0 +1,36 @@
+{
+  "FIT_only_smoke": [
+    {
+      "arm": "W1",
+      "finite_gradients": true,
+      "member_output_shape_N4": false,
+      "parameters": 10167,
+      "real_FIT_patient_updates": 3
+    },
+    {
+      "arm": "W2",
+      "finite_gradients": true,
+      "member_output_shape_N4": true,
+      "parameters": 10132,
+      "real_FIT_patient_updates": 3
+    }
+  ],
+  "binding": {
+    "base.py": "20cb12e07e5dc9bbec8298877b79223918b1d739a1a0dfd29b447e8adc11c102",
+    "model.py": "f20f88cc9862a95d093ff17fa9ced4d59f5d53903ed020479df973b543e8cfde",
+    "prepare.py": "aff6b2487609093d11ca14c719d90abf688bb7baa5f1a9f917f67c253d7e9e1f",
+    "protocol": "2804cb05f9546bf0159f030aea2fa2983bd894ba84057ad62a3f7019ab8cf274",
+    "run.py": "3f53e3b5f4ec3dd7e92780ea72bf2b14c51f29165130336fac4448375fc98477",
+    "smoke.py": "26d950bef702ecf808ced00ef41b5b65ab9cae9e5121765151bfe703b2751b21",
+    "source_parity.py": "cea509b1be1884d43a7abc98ac2f5803d3596a2187021482387fb837804b4182",
+    "tabm_layers.py": "2fbd0bb267698ce97416626d9e92abfe2ed29b671ade6cc60d7974eb906c80ed",
+    "train.py": "d8155a9204ab45f4887f21a3046b6b6b48ea32bf4360478a242c2d44c969df0f"
+  },
+  "numpy": "2.4.3",
+  "outer_evaluation": false,
+  "smoke_not_formal_training": true,
+  "status": "PASS",
+  "synthetic_groups": 6,
+  "tests_sha256": "e559f2eee9c0e130975a330b8f41088d54a52e72926306ee5fbde48026e00733",
+  "torch": "2.11.0+cu128"
+}

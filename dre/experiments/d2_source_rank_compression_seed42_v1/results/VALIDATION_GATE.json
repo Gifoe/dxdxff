@@ -1,0 +1,41 @@
+{
+  "any_compressed_point_ge070": false,
+  "conditions": {
+    "R0": {
+      "EZAP_nondecline": false,
+      "EZF1_nondecline": false,
+      "finite_source_correction_and_unknown_fallback": true,
+      "integrity_no_leakage": true,
+      "macro_delta_ge010": false,
+      "no_severe_source_collapse": true,
+      "positive_folds_ge4": false,
+      "rank_constraint_correct": true
+    },
+    "R1": {
+      "EZAP_nondecline": false,
+      "EZF1_nondecline": false,
+      "finite_source_correction_and_unknown_fallback": true,
+      "integrity_no_leakage": true,
+      "macro_delta_ge010": false,
+      "no_severe_source_collapse": true,
+      "positive_folds_ge4": false,
+      "rank_constraint_correct": true
+    },
+    "R2": {
+      "EZAP_nondecline": false,
+      "EZF1_nondecline": false,
+      "finite_source_correction_and_unknown_fallback": true,
+      "integrity_no_leakage": true,
+      "macro_delta_ge010": false,
+      "no_severe_source_collapse": true,
+      "positive_folds_ge4": false,
+      "rank_constraint_correct": true
+    }
+  },
+  "exploratory_secondary_candidates": [],
+  "outer_TEST_accessed": false,
+  "primary_R2_continuation_gate": false,
+  "protocol_sha256": "d552acea82b037ec42dceda277ef00babb06dba901346896a803cc17094b6bbe",
+  "target070_supported": false,
+  "terminal": "RANK4_REMAINS_BEST"
+}

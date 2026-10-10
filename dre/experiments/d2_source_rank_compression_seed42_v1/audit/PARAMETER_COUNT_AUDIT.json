@@ -1,0 +1,11 @@
+{
+  "R4_state_mapping_exact": true,
+  "parameters": {
+    "R0": 8821,
+    "R1": 8921,
+    "R2": 9021,
+    "R4": 9221
+  },
+  "shared_parameters": 8817,
+  "status": "PASS"
+}

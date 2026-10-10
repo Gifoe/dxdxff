@@ -1,0 +1,10 @@
+{
+  "R4_retrained": false,
+  "all_cells_hash_verified": true,
+  "completed_epochs": 169,
+  "formal_new_runs": 15,
+  "outer_TEST_accessed": false,
+  "prediction_ledger_sha256": "3e042572bfdfd85c5ebc5ec86c3a7154dc9aba80d821cf5bb7279e440e97cf31",
+  "status": "COMPLETE",
+  "terminal": "RANK4_REMAINS_BEST"
+}

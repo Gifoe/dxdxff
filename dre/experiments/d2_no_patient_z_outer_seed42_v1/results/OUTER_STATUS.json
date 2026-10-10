@@ -1,0 +1,33 @@
+{
+  "baseline_PR_metrics": {
+    "accuracy": 0.7595479273853978,
+    "balanced_accuracy": 0.6522281476077544,
+    "ez_auprc": 0.5334829020441841,
+    "ez_auroc": 0.7304450214495939,
+    "ez_f1": 0.4109087454853652,
+    "ez_mrr": 0.73721585368844,
+    "macro_f1": 0.6204034584506928,
+    "nez_f1": 0.8298981714160204,
+    "sensitivity": 0.43582264822827577,
+    "specificity": 0.8686336469872329,
+    "top1_is_ez": 0.65
+  },
+  "channels": 7635,
+  "patients": 80,
+  "primary_no_PR_metrics": {
+    "accuracy": 0.7053977055687373,
+    "balanced_accuracy": 0.5693157386506442,
+    "ez_auprc": 0.4800132806413524,
+    "ez_auroc": 0.6602171641507657,
+    "ez_f1": 0.259845170995017,
+    "ez_mrr": 0.6855706185074842,
+    "macro_f1": 0.49397839830598594,
+    "nez_f1": 0.728111625616955,
+    "sensitivity": 0.36367300377819445,
+    "specificity": 0.7749584735230939,
+    "top1_is_ez": 0.6
+  },
+  "scientific_status": "EXPLORATORY_REPEATED_OUTER_TEST_SINGLE_SEED",
+  "source_feature_reference_views_retained": true,
+  "status": "ONE_FROZEN_NO_PATIENT_Z_OUTER_PASS_COMPLETE"
+}

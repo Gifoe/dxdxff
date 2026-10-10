@@ -1,0 +1,113 @@
+{
+  "all_cohort_y_member_loaded": false,
+  "binding": {
+    "locked_inputs": {
+      "code": "6a132ef384317f5ecd1087d7785f89fdc348734eadd10f68b97e51225233f084",
+      "core": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+      "features": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+      "original_bank_1": "a863a36a983d77d3e78675ee1761c9edba3e35f8dd6e52d7d12d03109e415a1a",
+      "original_bank_2": "6efc5b4d4934b3847207d32b94cac884df2e8b34ec7d170214ae1450d04f2fea",
+      "original_bank_3": "d936ef38ba96bb27d13dc417ac92582b3b7a150ef5d725e32e629ec9f2fee6cd",
+      "original_bank_4": "bc4ca7fb9b0bb860015a61dcea4146980386ce5db70a66e58817e50b40ef3ac2",
+      "original_bank_5": "a4a809d1146d719504fbbc14eaba58d4f932f746f1a617ef2e6853967a9f50dd",
+      "original_checkpoint_1": "c29f08173dd5ac65898e35648233fa2954925edd22e4038517b6b50da76e47b9",
+      "original_checkpoint_2": "6814f0a8e9fbb04d80560009b9fb55481210d40dcf10f9f0e0214083fb6bfbf3",
+      "original_checkpoint_3": "be7c1f963ba4d56e103391c84e0aa6f00177307ccca5724434168062a00c65ef",
+      "original_checkpoint_4": "c1e380d0c26dc65ff3213d8b825126270c85a3c8ddd6117b881a38ca9ba4064a",
+      "original_checkpoint_5": "f8d17c6c8da4fe976b3a6fd4355145dfcb3c0fb848d525f1cb533077b5cc3711",
+      "protocol": "77751ec4f9ce33f9b2df79212271e742520893ea4a2c3bb3a9cda74602c7aad6",
+      "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+      "tests": "5417d053d41c14fd9c22e07115764952a733724decdf51ae6ed23172618fd3cb"
+    },
+    "original_training_code": {
+      "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+      "finalize.py": "620e1e5cdfbe7a75f0887ffd1beb5f4bfbceb2d254f27d5bb0824094f3b8e9cf",
+      "model.py": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+      "posterior.py": "8cbe1a39b6035c11c9531aaba82652dd17de0a4d4a7c131bcf718ff0824737ba",
+      "prepare.py": "8cc9632b698edeb07f98a098d5d810cf1ab4c71db4b0f6539130c91bd773d114",
+      "run_fold.py": "7a984df72b6668a2f9ce59cdc178bbc277f64e5b3b8107295feaf4704cad9bf5",
+      "train.py": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+      "verify_fold.py": "e875020d7e79732b96fa6e06b3b4a7e68ec96f228d5c8598b80bc6bbb2509e29"
+    }
+  },
+  "folds": [
+    {
+      "FIT_only_scaler": true,
+      "bank_sha256": "dcdcebb8ccc6bd7082cd1de311c4260090ce93aa3badb2a808c1251b90f9fe1e",
+      "features_retained": 88,
+      "fit_channels": 4623,
+      "fit_patients": 51,
+      "fold": 1,
+      "initial_hash": "74d88a2fe260d65be7deaabc7fe3890f730c3f879e308cd62b7580b830912990",
+      "initial_state_matches_original_D2": true,
+      "outer_overlap": 0,
+      "patient_z_removed": true,
+      "preprocessor_sha256": "ea7fed5edad5367e24c68ce028f39507826215cebea68e6d141363031d26e9f7",
+      "validation_channels": 1381,
+      "validation_patients": 13
+    },
+    {
+      "FIT_only_scaler": true,
+      "bank_sha256": "a7a2ecdf47bdb6fa98dd64c301f32e2cab2c569850ce9e8722f01681d2702439",
+      "features_retained": 88,
+      "fit_channels": 4951,
+      "fit_patients": 51,
+      "fold": 2,
+      "initial_hash": "be2c06bd9b2615fbcc97c1c2e8cbce29844f600fb346c45c1b73b7ffe139dfba",
+      "initial_state_matches_original_D2": true,
+      "outer_overlap": 0,
+      "patient_z_removed": true,
+      "preprocessor_sha256": "b07dcc1a3208abaf0a9938f26b125fed0174b4c9ee2389a1863a94178d3ba9d1",
+      "validation_channels": 1186,
+      "validation_patients": 13
+    },
+    {
+      "FIT_only_scaler": true,
+      "bank_sha256": "69949478178760b004d7d7ffaed9de0f25fa71ed038c5a49203642af7959d6fc",
+      "features_retained": 88,
+      "fit_channels": 4725,
+      "fit_patients": 50,
+      "fold": 3,
+      "initial_hash": "95da9645422f5865e7e574f5ef49876209d93b18e33fdbe8fc111c89543eb32e",
+      "initial_state_matches_original_D2": true,
+      "outer_overlap": 0,
+      "patient_z_removed": true,
+      "preprocessor_sha256": "da261d2a069b08edab87ecc329d2b3d8c9036bff90765395ce96c840ad604688",
+      "validation_channels": 1164,
+      "validation_patients": 13
+    },
+    {
+      "FIT_only_scaler": true,
+      "bank_sha256": "7ae8ca81bdf536454ad5fae10ada74907a429a9a938597ceecc4ee72665d7519",
+      "features_retained": 88,
+      "fit_channels": 4943,
+      "fit_patients": 52,
+      "fold": 4,
+      "initial_hash": "b6471370cb8c3082004f12e49551ad192ef8584764d169ab39f5ca826eba52ff",
+      "initial_state_matches_original_D2": true,
+      "outer_overlap": 0,
+      "patient_z_removed": true,
+      "preprocessor_sha256": "81301a82a8df1b0f5d2e55d58fb3211c0552b50e6423b24295adbd023315087a",
+      "validation_channels": 1267,
+      "validation_patients": 13
+    },
+    {
+      "FIT_only_scaler": true,
+      "bank_sha256": "a58d118a86bc76edcc1420195631fe220fc3a6fb1dddd9ef50d80846d374eb40",
+      "features_retained": 88,
+      "fit_channels": 5025,
+      "fit_patients": 51,
+      "fold": 5,
+      "initial_hash": "cad0c39f217c2d5b57338ba393801800afb894acfa0bde6de7c7fb78bc348078",
+      "initial_state_matches_original_D2": true,
+      "outer_overlap": 0,
+      "patient_z_removed": true,
+      "preprocessor_sha256": "dee116b116a79ca0727a2bf859a2f2f365d8ef7e35400e13dd56a6cf380fc831",
+      "validation_channels": 1275,
+      "validation_patients": 13
+    }
+  ],
+  "only_one_new_training_arm": true,
+  "raw_signal_extraction": false,
+  "status": "PASS"
+}

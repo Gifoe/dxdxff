@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tests_passed": 2,
+  "tests_failed": 0,
+  "before_training": true,
+  "data": "synthetic only",
+  "tests": [
+    "FIT-only global imputer/scaler: exact sklearn transform parity and independence from held-out values",
+    "Single-channel inference independent of other patient's channel values, and preservation of uncentered input offsets"
+  ],
+  "test_source_sha256": "5417d053d41c14fd9c22e07115764952a733724decdf51ae6ed23172618fd3cb"
+}

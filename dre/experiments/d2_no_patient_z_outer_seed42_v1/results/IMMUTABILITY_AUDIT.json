@@ -1,0 +1,11 @@
+{
+  "all_test_predictions_before_y": true,
+  "baseline_predictions_unchanged": true,
+  "channels": 7635,
+  "five_selections_locked_before_outer": true,
+  "freeze_sha256": "3c5b19aaaad83dbd41f5306f31440e717e049d46290e062145b510deadb28b8e",
+  "original_model_inputs_unchanged": true,
+  "outer_prediction_seal_sha256": "459253f1dd88f8adb94050ad0170e036deac8d110571cc0b765b77d3ca905343",
+  "status": "PASS",
+  "test_patients_unique_once": 80
+}

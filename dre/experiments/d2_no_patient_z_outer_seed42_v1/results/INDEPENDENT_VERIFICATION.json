@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "model_patient_cells": 160,
+  "metrics_per_cell": 11,
+  "maximum_metric_absolute_drift": 2.220446049250313e-16,
+  "FIT_only_scaler_parity_folds": 5,
+  "CUDA_training_contract_preserved": true,
+  "all_initial_state_hashes_match_original": true,
+  "parameter_count": 9221,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 42,
+  "paired_and_absolute_intervals_independently_verified": true,
+  "no_test_model_replay": true,
+  "no_threshold_reoptimization": true,
+  "source_sha256": "2bd13c58cb07474106d9f873cda26cb72893c439e66661ea1becbe83f9aa6b1f"
+}

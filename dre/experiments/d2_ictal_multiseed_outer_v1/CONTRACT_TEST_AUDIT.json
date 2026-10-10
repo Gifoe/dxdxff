@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests_passed": 2,
+  "execution": "Original server, original D2 runtime, pytest",
+  "checks": [
+    "Summary is arithmetic mean and sample SD of seed estimates, not best seed",
+    "Fixed fold-seed schedule retains original seed42 and distinguishes seeds; unequal-fold averages cannot replace patient averages"
+  ],
+  "role": "Engineering contract tests, not experimental performance evidence"
+}

@@ -1,0 +1,36 @@
+{
+  "fresh_backbone_forward_in_this_run": false,
+  "metrics": {
+    "D0": {
+      "accuracy": 0.7731741214227078,
+      "balanced_accuracy": 0.6654362707445319,
+      "ez_auprc": 0.5182351001102594,
+      "ez_auroc": 0.7106669304311658,
+      "ez_f1": 0.431198131752259,
+      "ez_mrr": 0.6865498372635065,
+      "macro_f1": 0.6380797828499001,
+      "nez_f1": 0.8449614339475412,
+      "sensitivity": 0.4659041342475972,
+      "specificity": 0.8649684072414664,
+      "top1_is_ez": 0.5846153846153846
+    },
+    "D2": {
+      "accuracy": 0.7905710776722918,
+      "balanced_accuracy": 0.6695489842615432,
+      "ez_auprc": 0.5199357062538446,
+      "ez_auroc": 0.7182207455375411,
+      "ez_f1": 0.44319946896815243,
+      "ez_mrr": 0.7196097738234127,
+      "macro_f1": 0.6479260773776448,
+      "nez_f1": 0.8526526857871372,
+      "sensitivity": 0.46399924182963426,
+      "specificity": 0.8750987266934521,
+      "top1_is_ez": 0.6153846153846154
+    }
+  },
+  "new_training": false,
+  "outer_TEST": false,
+  "prediction_metric_replay_current": true,
+  "prior_independent_forward_replay_hash": "bc0b945e905f67bb20d680bdd1adcc34061f3a5ba9b9e2377897d9d4346f35bc",
+  "status": "PASS"
+}

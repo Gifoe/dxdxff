@@ -1,0 +1,50 @@
+{
+  "direct_target_labels_excluded_from_density_prior_floor": true,
+  "folds": [
+    {
+      "fold": 1,
+      "mean_density_input_channel_exposed_fraction": 0.7649839011653572,
+      "mean_selection_exposed_teachers": 0.6274509803921569,
+      "mean_train_exposed_teachers": 2.372549019607843,
+      "pseudo_targets": 51,
+      "targets_with_upstream_exposure": 51
+    },
+    {
+      "fold": 2,
+      "mean_density_input_channel_exposed_fraction": 0.7644758905838186,
+      "mean_selection_exposed_teachers": 0.6274509803921569,
+      "mean_train_exposed_teachers": 2.372549019607843,
+      "pseudo_targets": 51,
+      "targets_with_upstream_exposure": 51
+    },
+    {
+      "fold": 3,
+      "mean_density_input_channel_exposed_fraction": 0.7645244568244399,
+      "mean_selection_exposed_teachers": 0.64,
+      "mean_train_exposed_teachers": 2.36,
+      "pseudo_targets": 50,
+      "targets_with_upstream_exposure": 50
+    },
+    {
+      "fold": 4,
+      "mean_density_input_channel_exposed_fraction": 0.7647304930513041,
+      "mean_selection_exposed_teachers": 0.6153846153846154,
+      "mean_train_exposed_teachers": 2.3846153846153846,
+      "pseudo_targets": 52,
+      "targets_with_upstream_exposure": 52
+    },
+    {
+      "fold": 5,
+      "mean_density_input_channel_exposed_fraction": 0.7651675950186058,
+      "mean_selection_exposed_teachers": 0.6274509803921569,
+      "mean_train_exposed_teachers": 2.372549019607843,
+      "pseudo_targets": 51,
+      "targets_with_upstream_exposure": 51
+    }
+  ],
+  "fully_nested_independence": false,
+  "no_retraining_to_hide_exposure": true,
+  "same_exposure_for_A0_D2": true,
+  "status": "SCREENING_DIAGNOSTIC_NOT_FULLY_NESTED",
+  "teacher_selection_exposure_counts_as_label_dependence": true
+}

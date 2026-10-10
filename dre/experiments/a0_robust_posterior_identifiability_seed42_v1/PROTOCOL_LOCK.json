@@ -1,0 +1,105 @@
+{
+  "experiment": "a0_robust_posterior_identifiability_seed42_v1",
+  "status": "LOCKED_BEFORE_NEW_RESULTS",
+  "seed": 42,
+  "prior_commit": "394dbff2085114d5f2d162cc7802384c95f0ef8d",
+  "prior_protocol_sha256": "6e2fbea60d606cbfe4d93890860f4ed57a422deb0794cd5f42714a2ca365996c",
+  "cohort": {
+    "patients": 80,
+    "channels": 7635,
+    "features": 88,
+    "VAL_appearances": 65,
+    "VAL_unique_ids": 47,
+    "VAL_channels": 6273
+  },
+  "feature_sha256": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+  "split_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "representations": {
+    "R0": "raw NEZ logits, no center/scale/clip",
+    "R1": {
+      "floor": "max(1e-3, quantile(.10, positive finite patient IQRs))",
+      "fit": "global label-blind outer FIT OOF per family, leave target out during LOO",
+      "clip": [
+        -8,
+        8
+      ],
+      "floor_quantile": 0.1,
+      "absolute_floor": 0.001
+    }
+  },
+  "posterior": "exact predecessor class moments, common variance, nu10 unique-patient shrinkage, source raw/reversed/insufficient fallback; min3classpatients, ordered global, variance1e-6; Beta20, same MAP bounds/solver/tolerances; ratio expected counts decoder allk smallerk, original logit then canonical tie order",
+  "numerical_gate": {
+    "all_folds": 5,
+    "min_class_patients": 3,
+    "finite": true,
+    "R1_total_clip_max": 0.05,
+    "R1_source_clip_max": 0.1,
+    "clip_scope": "each outer FIT fold; channel weighted all/source; no VAL-based selection"
+  },
+  "utility_gate": {
+    "MAP_minus_fixed_macro": 0.005,
+    "positive_folds": 3,
+    "ez_f1_nondecline": true,
+    "prior_MAE_minus_MAP_MAE": 0.005,
+    "all_LOO_episodes_valid": true,
+    "severe_collapse": "Any nonfinite score/density/posterior/MAP, any MAP nonconvergence, or >20% near-boundary MAP or all/none decoded counts in any outer FIT LOO group. Fixed before data; screening only.",
+    "collapse_fraction_max": 0.2,
+    "aggregation": "patient appearance equal over 255 FIT appearances, preserve repeated IDs; full 5 folds only"
+  },
+  "development_gate": {
+    "D3_D0_macro": 0.02,
+    "D3_D2_macro": 0.005,
+    "EZF1_AP_vs_D0_nondecline": true,
+    "positive_folds": 4,
+    "target": 0.7,
+    "minimum": 0.658
+  },
+  "arms": [
+    "D1_R0",
+    "D1_R1",
+    "D3_R0",
+    "D3_R1"
+  ],
+  "controls": [
+    "D0",
+    "D2"
+  ],
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 42,
+    "unit": "unique patient IDs retain all appearances",
+    "metric_missing": "not_estimable, never zero",
+    "metrics": [
+      "macro_f1",
+      "ez_f1",
+      "ez_auprc",
+      "ez_auroc"
+    ]
+  },
+  "phase_order": [
+    "source+hash integrity and tests",
+    "FIT full densities 20",
+    "FIT LOO screening",
+    "freeze admissibility/densities",
+    "VAL inference only admitted combinations",
+    "unlabeled transport all combinations; class descriptive only admitted after inference",
+    "aggregate/CI/report"
+  ],
+  "terminal_priority": [
+    "EXPERIMENT_BLOCKED integrity/engineering",
+    "ROBUST_POSTERIOR_TARGET_0P70_REACHED if admitted D3_R1 passes GateC and >=.700",
+    "ROBUST_POSTERIOR_INCREMENTAL_GAIN if D3_R1 GateC",
+    "RAW_LOGIT_POSTERIOR_INCREMENTAL_GAIN if D3_R0 GateC",
+    "NUMERICAL_REPAIR_WITHOUT_DECISION_GAIN if any R1 numeric admissible but no GateC; includes failed FIT utility, without asserting VAL effect when untested",
+    "OOF_TO_VAL_TRANSPORT_FAILURE only if FIT utility passes, VAL gain fails, and transport descriptively material, not causal proof",
+    "PATIENT_MIXTURE_SIGNAL_NOT_IDENTIFIABLE if numeric configurations exist but no admitted arm",
+    "POSTERIOR_DENSITY_STILL_INVALID otherwise; decoder-only qualified result in report"
+  ],
+  "no_new_scorer_training": true,
+  "no_teacher_regeneration": true,
+  "no_outer_TEST": true,
+  "no_validation_rescue": true,
+  "private_input_manifest": "audit/FROZEN_INPUT_MANIFEST.json",
+  "private_input_manifest_sha256": "ea9e4c441fbd260f37b8b7ef36b36262131c27504514c56d356b38585d6b8c08",
+  "public": "aggregate hashes/counts/results only; no patient/channel rows"
+}

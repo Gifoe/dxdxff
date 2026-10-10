@@ -1,0 +1,108 @@
+{
+  "FIT_admission": {
+    "D1_R0": {
+      "MAP_minus_fixed_macro": -0.014704878315705447,
+      "admitted": false,
+      "conditions": {
+        "EZ_F1_nondecline": false,
+        "MAP_macro_gain_at_least_0p005": false,
+        "all_LOO_episodes_valid": true,
+        "at_least_3_positive_folds": false,
+        "no_severe_collapse": true,
+        "numeric_all_5": true,
+        "prevalence_MAE_gain_at_least_0p005": false
+      },
+      "expected_LOO_cells": 255,
+      "full_LOO_screening": true,
+      "numerically_valid": true,
+      "positive_folds": 0,
+      "prior_MAE_minus_MAP_MAE": -0.024075635330544465,
+      "valid_LOO_cells": 255
+    },
+    "D1_R1": {
+      "MAP_minus_fixed_macro": -0.006940873735965561,
+      "admitted": false,
+      "conditions": {
+        "EZ_F1_nondecline": false,
+        "MAP_macro_gain_at_least_0p005": false,
+        "all_LOO_episodes_valid": true,
+        "at_least_3_positive_folds": false,
+        "no_severe_collapse": true,
+        "numeric_all_5": true,
+        "prevalence_MAE_gain_at_least_0p005": false
+      },
+      "expected_LOO_cells": 255,
+      "full_LOO_screening": true,
+      "numerically_valid": true,
+      "positive_folds": 0,
+      "prior_MAE_minus_MAP_MAE": -0.01482896808130238,
+      "valid_LOO_cells": 255
+    },
+    "D3_R0": {
+      "MAP_minus_fixed_macro": -0.022124710787117616,
+      "admitted": false,
+      "conditions": {
+        "EZ_F1_nondecline": false,
+        "MAP_macro_gain_at_least_0p005": false,
+        "all_LOO_episodes_valid": true,
+        "at_least_3_positive_folds": false,
+        "no_severe_collapse": true,
+        "numeric_all_5": true,
+        "prevalence_MAE_gain_at_least_0p005": false
+      },
+      "expected_LOO_cells": 255,
+      "full_LOO_screening": true,
+      "numerically_valid": true,
+      "positive_folds": 0,
+      "prior_MAE_minus_MAP_MAE": -0.04251431012863613,
+      "valid_LOO_cells": 255
+    },
+    "D3_R1": {
+      "MAP_minus_fixed_macro": -0.00869335687864897,
+      "admitted": false,
+      "conditions": {
+        "EZ_F1_nondecline": false,
+        "MAP_macro_gain_at_least_0p005": false,
+        "all_LOO_episodes_valid": true,
+        "at_least_3_positive_folds": false,
+        "no_severe_collapse": true,
+        "numeric_all_5": true,
+        "prevalence_MAE_gain_at_least_0p005": false
+      },
+      "expected_LOO_cells": 255,
+      "full_LOO_screening": true,
+      "numerically_valid": true,
+      "positive_folds": 0,
+      "prior_MAE_minus_MAP_MAE": -0.012630526987990026,
+      "valid_LOO_cells": 255
+    }
+  },
+  "GateA_status": "ROBUST_NORMALIZATION_NUMERICALLY_VALID",
+  "GateB_status": "PATIENT_MIXTURE_SIGNAL_NOT_ESTABLISHED",
+  "VAL_based_representation_selection": false,
+  "arms": {
+    "D1_R0": {
+      "conditions": null,
+      "pass": false,
+      "status": "NOT_ESTIMABLE"
+    },
+    "D1_R1": {
+      "conditions": null,
+      "pass": false,
+      "status": "NOT_ESTIMABLE"
+    },
+    "D3_R0": {
+      "conditions": null,
+      "pass": false,
+      "status": "NOT_ESTIMABLE"
+    },
+    "D3_R1": {
+      "conditions": null,
+      "pass": false,
+      "status": "NOT_ESTIMABLE"
+    }
+  },
+  "no_rescue": true,
+  "outer_TEST": false,
+  "terminal": "NUMERICAL_REPAIR_WITHOUT_DECISION_GAIN"
+}

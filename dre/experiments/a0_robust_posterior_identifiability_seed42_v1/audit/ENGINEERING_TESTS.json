@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "name": "C0_constant_scores_and_no_positive_FIT_IQR",
+      "status": "PASS"
+    },
+    {
+      "name": "C1_tiny_IQR_bounded_no_R0_clipping",
+      "status": "PASS"
+    },
+    {
+      "name": "C2_reversed_global_rejected_no_flip",
+      "status": "PASS"
+    },
+    {
+      "name": "C3_synthetic_MAP_Bayes_equations_and_stationary_point",
+      "status": "PASS"
+    },
+    {
+      "name": "C4_unknown_source_global_prior_density",
+      "status": "PASS"
+    },
+    {
+      "name": "C5_clipped_and_saturated_ranking_ties",
+      "status": "PASS"
+    },
+    {
+      "name": "C6_target_label_and_true_count_isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "C7_membership_gate_and_no_training_path",
+      "status": "PASS"
+    },
+    {
+      "name": "C8_all_k_brute_force_zero_denominator_and_smaller_k_ties",
+      "status": "PASS"
+    },
+    {
+      "name": "C9_deterministic_parameters_predictions_masks_cluster_repeats",
+      "status": "PASS"
+    },
+    {
+      "name": "exact_predecessor_moments_hierarchy_prior_MAP_parity_R0_R1",
+      "status": "PASS"
+    },
+    {
+      "name": "real_FIT_only_label_blind_floor_and_bounded_score_smoke",
+      "status": "PASS"
+    }
+  ],
+  "code": {
+    "analysis.py": "c524f848b68cfbddeedb8c6bd1c677cace912165fe20e2df6d7c361bbb71a826",
+    "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+    "inputs.py": "b6347cfbd1d1c7fc57e008fdc73adeb8359fc0fe7093ff95f55e17777ee19719",
+    "posterior.py": "a429ef5c7bc0a7067fe47d21e00f5db2c7577e707c9fb3684f0cfeb43f6304ce",
+    "report.py": "f5cbca88c7cae958754c8296165e9fd6cf6e90760b6d31cc97edf292ccb413a9",
+    "run.py": "d1a68017d8920ef75da9101b2783ad507dc53013dad12feb75c19dbc1e2f3487"
+  },
+  "protocol_sha256": "199dde0bd3df875b0f57c3204ddde882ef3aae396a0927bf0fbe8ee96f7a6ef9",
+  "real_smoke_VAL_used": false,
+  "status": "PASS",
+  "test_source_sha256": "6f48f055f0686931a46cdf65fe9c2df8d1cfee91825ee30ed4ca32e59ab2d975"
+}

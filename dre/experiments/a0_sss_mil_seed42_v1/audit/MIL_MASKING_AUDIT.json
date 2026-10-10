@@ -1,0 +1,44 @@
+{
+  "aggregate_diagnostics": [
+    {
+      "attention_entropy": 2.3666884060257853,
+      "attention_gt_99_fraction": 0.0,
+      "effective_windows": 10.787743326015542,
+      "max_attention": 0.16630438990092816,
+      "method": "S0",
+      "patient_fold_appearances": 65,
+      "unique_patients": 47,
+      "valid_seizures_per_channel": 3.024241884855124,
+      "valid_windows_per_seizure": 12.0,
+      "window_embedding_variance": 0.08656547211883645
+    },
+    {
+      "attention_entropy": 2.480765788661062,
+      "attention_gt_99_fraction": 0.0,
+      "effective_windows": 11.9511291191358,
+      "max_attention": 0.09403598978002992,
+      "method": "S1",
+      "patient_fold_appearances": 65,
+      "unique_patients": 47,
+      "valid_seizures_per_channel": 3.024241884855124,
+      "valid_windows_per_seizure": 12.0,
+      "window_embedding_variance": 0.07026240754705149
+    },
+    {
+      "attention_entropy": 2.4834083067902615,
+      "attention_gt_99_fraction": 0.0,
+      "effective_windows": 11.982066919615358,
+      "max_attention": 0.09028657299750321,
+      "method": "S2",
+      "patient_fold_appearances": 65,
+      "unique_patients": 47,
+      "valid_seizures_per_channel": 3.024241884855124,
+      "valid_windows_per_seizure": 12.0,
+      "window_embedding_variance": 0.06864544924280444
+    }
+  ],
+  "all_padding_NaN": 0,
+  "attention_not_biomarker": true,
+  "invalid_weight_nonzero": 0,
+  "status": "PASS"
+}

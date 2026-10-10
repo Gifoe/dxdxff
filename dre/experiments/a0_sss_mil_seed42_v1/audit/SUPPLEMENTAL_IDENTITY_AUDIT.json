@@ -1,0 +1,44 @@
+{
+  "clinical_labels_used": false,
+  "device": "cpu",
+  "folds": [
+    {
+      "S0_88D_and_source_independence_exact": true,
+      "fold": 1,
+      "initial_real_validation_logit_drift": 0.0,
+      "shuffle_seizure_mask_preserved": true
+    },
+    {
+      "S0_88D_and_source_independence_exact": true,
+      "fold": 2,
+      "initial_real_validation_logit_drift": 0.0,
+      "shuffle_seizure_mask_preserved": true
+    },
+    {
+      "S0_88D_and_source_independence_exact": true,
+      "fold": 3,
+      "initial_real_validation_logit_drift": 0.0,
+      "shuffle_seizure_mask_preserved": true
+    },
+    {
+      "S0_88D_and_source_independence_exact": true,
+      "fold": 4,
+      "initial_real_validation_logit_drift": 0.0,
+      "shuffle_seizure_mask_preserved": true
+    },
+    {
+      "S0_88D_and_source_independence_exact": true,
+      "fold": 5,
+      "initial_real_validation_logit_drift": 0.0,
+      "shuffle_seizure_mask_preserved": true
+    }
+  ],
+  "formal_models_modified": false,
+  "runtime": {
+    "cuda": "12.8",
+    "cudnn": 91900,
+    "torch": "2.11.0+cu128"
+  },
+  "status": "PASS",
+  "supplemental_read_only_no_new_model_arm": true
+}

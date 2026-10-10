@@ -1,0 +1,251 @@
+{
+  "FIT_smokes": [
+    {
+      "channels": 8,
+      "raw_encoder_gradient_step2": 0.013996597313962411,
+      "seizures": 3,
+      "window_mask_count": 288
+    },
+    {
+      "channels": 8,
+      "raw_encoder_gradient_step2": 0.041561188190826215,
+      "seizures": 5,
+      "window_mask_count": 480
+    },
+    {
+      "channels": 8,
+      "raw_encoder_gradient_step2": 0.0189641532706446,
+      "seizures": 2,
+      "window_mask_count": 192
+    }
+  ],
+  "checks": [
+    {
+      "description": "80 original patients",
+      "id": 1,
+      "status": "PASS"
+    },
+    {
+      "description": "7635 canonical channels",
+      "id": 2,
+      "status": "PASS"
+    },
+    {
+      "description": "raw identities align",
+      "id": 3,
+      "status": "PASS"
+    },
+    {
+      "description": "256 run identities",
+      "id": 4,
+      "status": "PASS"
+    },
+    {
+      "description": "unique canonical population",
+      "id": 5,
+      "status": "PASS"
+    },
+    {
+      "description": "actual sfreq honored",
+      "id": 6,
+      "status": "PASS"
+    },
+    {
+      "description": "resampled two seconds",
+      "id": 7,
+      "status": "PASS"
+    },
+    {
+      "description": "padding not real data",
+      "id": 8,
+      "status": "PASS"
+    },
+    {
+      "description": "onset limitation recorded",
+      "id": 9,
+      "status": "PASS"
+    },
+    {
+      "description": "no outer patient in FIT",
+      "id": 10,
+      "status": "PASS"
+    },
+    {
+      "description": "12 distinct windows",
+      "id": 11,
+      "status": "PASS"
+    },
+    {
+      "description": "evaluation deterministic",
+      "id": 12,
+      "status": "PASS"
+    },
+    {
+      "description": "epoch-dependent reproducible",
+      "id": 13,
+      "status": "PASS"
+    },
+    {
+      "description": "sampling has no label input",
+      "id": 14,
+      "status": "PASS"
+    },
+    {
+      "description": "same record time centers aligned",
+      "id": 15,
+      "status": "PASS"
+    },
+    {
+      "description": "missing slots masked without duplication",
+      "id": 16,
+      "status": "PASS"
+    },
+    {
+      "description": "raw descriptors finite/label-free",
+      "id": 17,
+      "status": "PASS"
+    },
+    {
+      "description": "512 input to32 latent",
+      "id": 18,
+      "status": "PASS"
+    },
+    {
+      "description": "variable window counts",
+      "id": 19,
+      "status": "PASS"
+    },
+    {
+      "description": "variable seizure counts",
+      "id": 20,
+      "status": "PASS"
+    },
+    {
+      "description": "invalid weights exactly zero",
+      "id": 21,
+      "status": "PASS"
+    },
+    {
+      "description": "all-padding noNaN and zero raw",
+      "id": 22,
+      "status": "PASS"
+    },
+    {
+      "description": "gamma0 exact D2",
+      "id": 23,
+      "status": "PASS"
+    },
+    {
+      "description": "S1 S2 parameter counts equal",
+      "id": 24,
+      "status": "PASS"
+    },
+    {
+      "description": "S1 S2 initial tensors equal",
+      "id": 25,
+      "status": "PASS"
+    },
+    {
+      "description": "gamma receives gradient",
+      "id": 26,
+      "status": "PASS"
+    },
+    {
+      "description": "raw gradient after gamma movement",
+      "id": 27,
+      "status": "PASS"
+    },
+    {
+      "description": "D2 rank4 correction functional",
+      "id": 28,
+      "status": "PASS"
+    },
+    {
+      "description": "encoder no clinical inputs",
+      "id": 29,
+      "status": "PASS"
+    },
+    {
+      "description": "within-patient derangement/label-blind",
+      "id": 30,
+      "status": "PASS"
+    },
+    {
+      "description": "shuffle retains targets",
+      "id": 31,
+      "status": "PASS"
+    },
+    {
+      "description": "one accumulated patient objective",
+      "id": 32,
+      "status": "PASS"
+    },
+    {
+      "description": "NEZ BCE orientation",
+      "id": 33,
+      "status": "PASS"
+    },
+    {
+      "description": "FIT-only weights",
+      "id": 34,
+      "status": "PASS"
+    },
+    {
+      "description": "selection earlier-epoch tie",
+      "id": 35,
+      "status": "PASS"
+    },
+    {
+      "description": "exact original threshold/tie parity",
+      "id": 36,
+      "status": "PASS"
+    },
+    {
+      "description": "preprocessing not validation-fit",
+      "id": 37,
+      "status": "PASS"
+    },
+    {
+      "description": "paired S1 S2 sampling",
+      "id": 38,
+      "status": "PASS"
+    },
+    {
+      "description": "RNG deterministic restore",
+      "id": 39,
+      "status": "PASS"
+    },
+    {
+      "description": "finite gradients and output",
+      "id": 40,
+      "status": "PASS"
+    },
+    {
+      "description": "outer TEST never passed to training bank",
+      "id": 41,
+      "status": "PASS"
+    },
+    {
+      "description": "exact D2 evaluation channels",
+      "id": 42,
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": {
+    "audit_raw.py": "ac7602c13f24008a4cdb6b5c49776f86d64d4d5ff25f4dd7d68cdf8a41dacd25",
+    "common.py": "273374c1a2cdbae0868b9d63acbabba2a95052bb0acb31f05c49445b180ace2e",
+    "data.py": "812472e204917c30242f76fed5a2a5f9273c351f0dc892b426998275f3a2247c",
+    "finalize.py": "b69c267ff46fc7c3f4345f87760c0cfbd584554e7e537d586932259183e18491",
+    "inspect_raw.py": "6b1b4a362fa0518f038e41bd83ea08bf5865e30e8db06ba0a6c5f0b209cf443c",
+    "model.py": "5fb1cdd158d7953a139a7385b24e126202e762d5f540197b8b09c3e626635b96",
+    "prepare.py": "389b0955216b948bcb7bad93ea68274aad060a81cd22ac279a300e6f7c0bcc69",
+    "runtime.py": "3e20d271033bc3d516901e27fef81954365f92033e3bc48c24871ecfff9416e5",
+    "sampling.py": "7442b7061029fbaf396afe60f25a22bec2f86f13ce68cfad072d93eae364869b",
+    "train.py": "5987d2a6ee457182472393df1e08c0463e0d09685ae7d2f4c17aca11e3a866c3"
+  },
+  "device": "cuda",
+  "formal_checkpoints_modified": false,
+  "protocol_sha256": "052c2c9e6fac8daad3e65449c6ebaf0fc989b26ef24bce5bca77814d9d3a31b7",
+  "status": "PASS",
+  "synthetic_not_predictive_evidence": true
+}

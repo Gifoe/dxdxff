@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "registered_runs": 15,
+  "completed_epochs": 189,
+  "historical_frozen_input_files_rehashed_after_completion": 101,
+  "historical_frozen_input_hashes_unchanged": true,
+  "protocol_sha256": "052c2c9e6fac8daad3e65449c6ebaf0fc989b26ef24bce5bca77814d9d3a31b7",
+  "protocol_hash_unchanged": true,
+  "completed_run_hashes_verified_by_finalizer": true,
+  "public_delivery_validation": "PASS",
+  "public_bootstrap_metric_contrasts": 55,
+  "bootstrap_draws": 10000,
+  "unique_patient_ids": 47,
+  "outer_test_accessed": false,
+  "terminal": "CAPACITY_OR_FINETUNING_CONFOUNDED_GAIN",
+  "additional_training_authorized_or_run_after_finalization": false
+}

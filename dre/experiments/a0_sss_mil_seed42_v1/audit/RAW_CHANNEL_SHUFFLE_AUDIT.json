@@ -1,0 +1,12 @@
+{
+  "channels": 7635,
+  "labels_used": false,
+  "patients": 80,
+  "patients_no_shuffle": 0,
+  "policy": "stable cyclic derangement within identical valid-seizure signatures",
+  "seizure_membership_and_validity_preserved": true,
+  "shuffled_channels": 7633,
+  "status": "PASS",
+  "unshufflable_channels": 2,
+  "within_patient_only": true
+}

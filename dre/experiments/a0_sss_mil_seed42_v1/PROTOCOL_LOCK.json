@@ -1,0 +1,192 @@
+{
+  "experiment": "a0_sss_mil_seed42_v1",
+  "seed": 42,
+  "arms": [
+    "S0",
+    "S1",
+    "S2"
+  ],
+  "reference_commit": "00c5ee476df51b5f300ca7264ee818546a7d9188",
+  "reference_sha256": {
+    "sss/utils/datasets.py": "f204b52f207c1c347bedb1e304957204c5341d999561d1ff9af069a697c68244",
+    "sss/jobs/exp/sss/args.yaml": "bfdd03e13578a2f62bcd4cf65a8add37d8e3c1f1527f16c29709cce6d5ed0457",
+    "sss/models/sss.py": "e738e0e85b76875cc2853c73615aee3db1ffbd03a99cbd038d49cf236e446d70",
+    "sss/utils/dataloading.py": "9882fd80b5095576698761a955fbe617f3ad5fa9fc9e8124265527d8974c1377",
+    "sss/layers/channel_modules/channel_aggr.py": "04bfa75e4de87593241b9e7633f208a136e44f4abb7c5915c1f3a468bec44860",
+    "sss/layers/patcher.py": "851ae77bc6419e97ed4e7daaec78aabc4afc4e0f515456c07cdbc328217966c0",
+    "sss/models/patchtst_blind.py": "344556ff5adbcc88a6130bf220da4eec37e41f02371e441f3ae5efb33d5e52bd",
+    "sss/layers/channel_modules/ch_loss.py": "8a25819ad47ff0c8744a0d2809d309cd05e96aeb4c4158033306bba95180eeb4"
+  },
+  "source_reproduction": false,
+  "dataset": {
+    "patients": 80,
+    "canonical_pairs": 7635,
+    "records": 256,
+    "record_channels": 24995,
+    "features": 88,
+    "validation_appearances": 65,
+    "validation_ids": 47,
+    "validation_channel_appearances": 6273,
+    "feature_sha256": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "split_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "raw_sha256": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "feature_cache_sha256": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "core_sha256": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a"
+  },
+  "labels": {
+    "EZ": 0,
+    "NEZ": 1,
+    "logit": "NEZ",
+    "score": "sigmoid(logit_NEZ)",
+    "EZ_probability": "sigmoid(-logit_NEZ)",
+    "prediction": "score_NEZ >= threshold"
+  },
+  "window": {
+    "seconds": 2,
+    "length": 512,
+    "fs": 256,
+    "max_per_record_channel": 12,
+    "strata": 3,
+    "max_per_stratum": 4,
+    "source_sfreq": "actual metadata",
+    "resampling": "scipy.resample_poly rational 256/fs Kaiser beta5; no truncation",
+    "valid": "inside raw_valid_start..raw_valid_start+raw_valid_samples; finite; nonconstant",
+    "eval": "coverage endpoints per stratum; deterministic chronological fill",
+    "train": "seed hash(foldseed,patient,run,epoch), common record priorities, mask per channel; chronological fill",
+    "time": "normalized chronological cache-relative coordinate; midpoint NOT clinically verified"
+  },
+  "normalization": {
+    "context": "measured within-channel record context median and 1.4826 MAD; floor1e-8",
+    "clipping": false,
+    "aux": [
+      "log mean squared raw amplitude minus within-window valid-channel median",
+      "average-tie raw logenergy percentile (rank-.5)/C"
+    ],
+    "population_fitting": false,
+    "clinical_fields": false
+  },
+  "encoder": {
+    "patch": 32,
+    "stride": 16,
+    "patches": 31,
+    "endpoint_padding": false,
+    "d": 32,
+    "layers": 2,
+    "heads": 4,
+    "ff": 128,
+    "dropout": 0.1,
+    "position": "fixed sine/cosine",
+    "activation": "GELU",
+    "layernorm": "post-norm",
+    "patch_pool": "mean",
+    "aux": "Linear(2,32) additive",
+    "window_supervision": false
+  },
+  "mil": {
+    "window": "Linear(33,32)->Tanh->Linear(32,1) masked softmax",
+    "seizure": "masked mean",
+    "invalid_attention": 0,
+    "no_valid": "zero representation and availability false, no S0 supported score; engineered-only fusion path"
+  },
+  "fusion": {
+    "D2_parameters": 9221,
+    "hidden": 96,
+    "source_rank": 4,
+    "raw": "32D",
+    "project": "LayerNorm32->Linear32,96 random nonzero",
+    "gamma": 0,
+    "joint_fine_tuning": true,
+    "disabled_diagnostic": "trained engineered path, NOT frozen D2"
+  },
+  "shuffle": {
+    "policy": "within-patient seeded cyclic derangement in groups of identical valid-seizure signatures; same across seizures; no cross-patient or label use",
+    "singleton": "unchanged and audited",
+    "descriptors": "permuted with waveform",
+    "availability_and_seizure_membership": "exactly preserved",
+    "paired_init_and_schedule": true
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "D2_lr": 0.0001,
+    "new_lr": 0.0003,
+    "weight_decay": 0.0001,
+    "clip": 1,
+    "max_epochs": 30,
+    "min_stopping_epoch": 6,
+    "patience": 6,
+    "source_l2": 0.001,
+    "patient_update": true,
+    "microbatch_channels": 8,
+    "precision": "float32, no AMP, TF32 off",
+    "class_weight": "FIT EZcount/NEZcount",
+    "fold_seed": "42+1009*fold",
+    "patient_order": "default_rng(foldseed+epoch)",
+    "resume": "epoch-boundary model/optimizer/RNG/best/stale exact binding",
+    "checkpoint_selection": [
+      "patient_macro_f1",
+      "patient_ez_f1",
+      "earlier_epoch"
+    ],
+    "epoch0_eligible": false
+  },
+  "threshold": {
+    "grid": "round(arange(0,1.0001,.005),3)",
+    "ties": [
+      "patient_macro_f1",
+      "patient_ez_f1",
+      "pooled_balanced_accuracy",
+      "closest_.5",
+      "smaller_threshold"
+    ]
+  },
+  "statistics": {
+    "draws": 10000,
+    "seed": 42,
+    "cluster": "unique patient ID retaining repeated appearances",
+    "contrasts": [
+      "S0-D0",
+      "S1-D0",
+      "S1-D2",
+      "S2-D2",
+      "S1-S2"
+    ],
+    "metrics": [
+      "macro_f1",
+      "ez_f1",
+      "nez_f1",
+      "balanced_accuracy",
+      "ez_auprc",
+      "ez_auroc",
+      "ez_mrr",
+      "top1_is_ez",
+      "sensitivity",
+      "specificity",
+      "accuracy"
+    ]
+  },
+  "gates": {
+    "delta_S1_D2": 0.02,
+    "delta_S1_S2": 0.01,
+    "ez_f1_non_decline": true,
+    "AP_non_decline": true,
+    "positive_folds_D2": 4,
+    "positive_folds_S2": 4,
+    "target_macro_f1": 0.7,
+    "collapse": "material if any selected fold raw embedding mean variance <=1e-10 OR abs(gamma)<=1e-6 OR raw/engineered mean RMS contribution <=1e-4 OR nonzero-channel fraction <.95 of available"
+  },
+  "interpretation_priority": [
+    "EXPERIMENT_BLOCKED if integrity fails",
+    "RAW_ONLY_WEAK_BUT_FUSION_USEFUL if S0<D0 and continuation gate passes",
+    "CHANNEL_SPECIFIC_RAW_COMPLEMENTARITY_SUPPORTED if continuation gate passes",
+    "CAPACITY_OR_FINETUNING_CONFOUNDED_GAIN if S1>D2 but S1<=S2",
+    "RAW_TEMPORAL_EVIDENCE_NOT_SUPPORTED if S0<D0 and S1<=D2",
+    "NO_MEANINGFUL_GAIN otherwise"
+  ],
+  "limitations": [
+    "repeated development validation",
+    "S1/S2 warm starts from VAL-selected D2 create additional selection bias",
+    "0/256 independently verified clinical onsets",
+    "no outer TEST labels, predictions or metrics read"
+  ],
+  "additional_models": false
+}

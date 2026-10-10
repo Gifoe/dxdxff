@@ -1,0 +1,16 @@
+{
+  "cache_binding": {
+    "feature": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "protocol": "052c2c9e6fac8daad3e65449c6ebaf0fc989b26ef24bce5bca77814d9d3a31b7",
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "sampling_code": "7442b7061029fbaf396afe60f25a22bec2f86f13ce68cfad072d93eae364869b"
+  },
+  "context": "measured record interval median/MAD",
+  "finite_windows": true,
+  "frequency_information_created": false,
+  "labels_used": false,
+  "patients": 80,
+  "population_parameters": false,
+  "resampling": "actual fs -> 256Hz; scipy resample_poly Kaiser5; exactly512",
+  "status": "PASS"
+}

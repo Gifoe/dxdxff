@@ -1,0 +1,10 @@
+{
+  "Adam_slots_bitwise_exact": true,
+  "device": "cpu",
+  "dropout_and_rng_replay_exact": true,
+  "epoch_boundary_history_and_patience_preserved": true,
+  "formal_checkpoint_modified": false,
+  "model_state_bitwise_exact": true,
+  "status": "PASS",
+  "supplemental_check_not_new_model_arm": true
+}

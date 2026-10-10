@@ -1,0 +1,11 @@
+{
+  "candidate_cache_channels": 7635,
+  "invalid_windows_not_encoded": true,
+  "label_blind": true,
+  "max_seizures_per_patient": 8,
+  "sparse_selection_test_required": true,
+  "sparse_selection_tests_passed": true,
+  "verification_source": "ENGINEERING_TESTS.json checks 11-16 and 38",
+  "registered_training_complete": true,
+  "status": "PASS"
+}

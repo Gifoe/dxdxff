@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "exact_sample_and_channel_order": true,
+  "exact_canonical_union": true,
+  "records": 256,
+  "channels": 7635,
+  "duplicate_windows": 0
+}

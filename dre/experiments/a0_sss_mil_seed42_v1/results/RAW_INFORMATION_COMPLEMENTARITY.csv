@@ -1,0 +1,6 @@
+fold,method,patient_fold_appearances,unique_patients,mean_abs_score_change_raw_intervention,decision_change_raw_intervention
+1,S1,13,13,3.0275939187032023e-05,0.0
+2,S1,13,13,0.0017117031807798004,0.004064090065541101
+3,S1,13,13,1.05766320855576e-05,0.0
+4,S1,13,13,1.765864797045929e-05,0.0
+5,S1,13,13,3.5955232064904435e-07,0.0

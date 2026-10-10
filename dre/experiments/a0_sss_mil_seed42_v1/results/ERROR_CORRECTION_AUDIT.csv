@@ -1,0 +1,4 @@
+method,TP_gained,TP_lost,FP_added,FP_removed,errors_recovered,correct_spoiled,channels
+S1,20,5,27,31,51,32,6273
+S1_RAW_DISABLED,19,5,24,33,52,29,6273
+S2,20,5,26,32,52,31,6273

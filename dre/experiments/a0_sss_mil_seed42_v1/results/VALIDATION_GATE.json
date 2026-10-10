@@ -1,0 +1,18 @@
+{
+  "conditions": {
+    "EZ_AP_non_decline": false,
+    "EZ_F1_non_decline": true,
+    "delta_S1_D2_ge_020": false,
+    "delta_S1_S2_ge_010": false,
+    "no_integrity_failure": true,
+    "no_material_raw_collapse": false,
+    "positive_folds_D2_ge4": true,
+    "positive_folds_S2_ge4": false
+  },
+  "continuation_gate": false,
+  "development_only": true,
+  "outer_test_accessed": false,
+  "protocol_sha256": "052c2c9e6fac8daad3e65449c6ebaf0fc989b26ef24bce5bca77814d9d3a31b7",
+  "target_070": false,
+  "terminal": "CAPACITY_OR_FINETUNING_CONFOUNDED_GAIN"
+}

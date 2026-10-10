@@ -1,0 +1,8 @@
+{
+  "D2_parameters": 9221,
+  "gamma_init": 0,
+  "projection_nonzero": true,
+  "real_FIT_max_logit_drift": 0.0,
+  "status": "PASS",
+  "synthetic_exact": true
+}

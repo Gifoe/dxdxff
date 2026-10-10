@@ -1,0 +1,5 @@
+center,patients,canonical_channels,valid_raw_channels,fallback_channels,records,seizure_channel_incidences,valid_seizure_channel_incidences,candidate_windows,valid_windows,boundary_invalid_windows,invalid_records,padded_records
+hup,36,3667,3667,0,117,12384,12384,730656,730656,0,0,0
+lzu,21,2141,2141,0,72,7251,7251,425225,425225,0,0,2
+multicenter,15,925,925,0,45,2815,2815,165929,165929,0,0,1
+pediatric,8,902,902,0,22,2545,2545,150155,150155,0,0,0

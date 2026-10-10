@@ -1,0 +1,11 @@
+{
+  "all_predictions_before_full_y": true,
+  "all_seeds_25_selections_before_outer": true,
+  "channels_per_seed": 7635,
+  "freeze_sha256": "158358df5f314f742999e5a96fd4b51429bd0ad2cd84735e0841f804bd46e3b9",
+  "historical_inputs_and_model_files_unchanged": true,
+  "prediction_seal_sha256": "7b6f78292e3d45d59b4a822ad3a8448f5fea461492376a8b4ba3e5b24d41d6db",
+  "seed42_predictions_unchanged": true,
+  "status": "PASS",
+  "unique_patients_per_seed": 80
+}

@@ -1,0 +1,17 @@
+{
+  "channels_per_seed": 7635,
+  "new_training_cells": 20,
+  "not_400_independent_patients": true,
+  "not_an_ensemble": true,
+  "reused_seed42_cells": 5,
+  "scientific_status": "EXPLORATORY_REPEATED_OUTER_TEST_FIXED_SPLIT_FIVE_SEEDS",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    42
+  ],
+  "status": "FIVE_SEED_D2_OUTER_COMPLETE",
+  "unique_patients": 80
+}

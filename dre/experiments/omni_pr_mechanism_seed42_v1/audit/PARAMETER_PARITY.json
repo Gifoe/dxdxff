@@ -1,0 +1,8 @@
+{
+  "C0": 0,
+  "C1-ABS": 35,
+  "C1-PR": 35,
+  "C1-SHUFFLE": 35,
+  "authoritative_Head_C1": true,
+  "global_moments_trainable": false
+}

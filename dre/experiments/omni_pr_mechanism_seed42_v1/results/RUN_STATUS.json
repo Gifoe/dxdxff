@@ -1,0 +1,13 @@
+{
+  "PR_retrained": false,
+  "diagnostic_cells": 248,
+  "inner_runs": 30,
+  "labeled_units": 10202,
+  "new_CNN_training": false,
+  "outer_new_prediction_cells": 248,
+  "patients": 124,
+  "private_ledger_sha256": "10c69ad679e045f384d0fb99dd009a5df0bc681c7ba308716f202364f70ecacb",
+  "refits": 10,
+  "status": "COMPLETE",
+  "terminal": "MECHANISM_INCONCLUSIVE"
+}

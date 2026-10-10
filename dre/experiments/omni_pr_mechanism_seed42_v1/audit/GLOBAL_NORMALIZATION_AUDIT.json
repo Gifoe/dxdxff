@@ -1,0 +1,228 @@
+{
+  "all_scalers": [
+    {
+      "fit_patients": 65,
+      "fold": 1,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 0,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "4f67521eabbd785b275db10ea6897d3930680d075aff55930f32cca8d7596a14",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 66,
+      "fold": 1,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 1,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "073c6734332fba21f51b369cae3b96ce0a9413c202d7ebe30161f6d06f69bc86",
+      "validation_patients": 33
+    },
+    {
+      "fit_patients": 67,
+      "fold": 1,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 2,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "3f599b22d1b68e96413214879a8baa10a83398809e34606a39d0921b149fb9de",
+      "validation_patients": 32
+    },
+    {
+      "fit_patients": 99,
+      "fold": 1,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": -1,
+      "labels_used": false,
+      "role": "full_FIT",
+      "scaler_sha256": "556bf81f01314da0da66f6432ae39d1982c29930ed9a4248120b23a23556adc9",
+      "validation_patients": 25
+    },
+    {
+      "fit_patients": 66,
+      "fold": 2,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 0,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "7360ae8a5e0bfb672fd648355807c1573bc6816b56a3a8166c75842b231eae78",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 66,
+      "fold": 2,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 1,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "2fb649da8d03f2199ccb027738d2d0a44b98228d5f06c2006c019155955c2dfc",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 68,
+      "fold": 2,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 2,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "28c21043e47c39ec7c6c1d298ef1849d70ed6e2a985232db74a583b3ff8af63b",
+      "validation_patients": 32
+    },
+    {
+      "fit_patients": 100,
+      "fold": 2,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": -1,
+      "labels_used": false,
+      "role": "full_FIT",
+      "scaler_sha256": "34d31e321f655f027c1ca3a17d081a7eb5ad42f8d1d65446d2be7bf014793830",
+      "validation_patients": 24
+    },
+    {
+      "fit_patients": 65,
+      "fold": 3,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 0,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "a8a2614f56989f304f395e0cd3f55d945e945080550c5fa2c5b9d9c330f1bbd9",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 66,
+      "fold": 3,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 1,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "e702e7bfb7d69db5da22718dba5808a8226399282214678d7e2bd9ee7a411124",
+      "validation_patients": 33
+    },
+    {
+      "fit_patients": 67,
+      "fold": 3,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 2,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "9a812fab6e5d63111dff63e462aa059798eca66dea16a16c3bb81d3338ecdc79",
+      "validation_patients": 32
+    },
+    {
+      "fit_patients": 99,
+      "fold": 3,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": -1,
+      "labels_used": false,
+      "role": "full_FIT",
+      "scaler_sha256": "e11f6d53115a9b3c943680e3e274c75cd14ceed30448512e15d713362456d4af",
+      "validation_patients": 25
+    },
+    {
+      "fit_patients": 65,
+      "fold": 4,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 0,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "e1b63a26772b1f59f1c2587fe2041bccf105682a53d8e4852b7ea8b3f7e0811a",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 65,
+      "fold": 4,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 1,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "6fc0231b0ebebac15cdb5bb08cdc6fd29214fbeadad386bb3cb1ab0e91f40884",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 68,
+      "fold": 4,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 2,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "1f53afc1b7f0d680d681ba08b5a0db3f2ce9aac06528861a052fcecc1cb6b805",
+      "validation_patients": 31
+    },
+    {
+      "fit_patients": 99,
+      "fold": 4,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": -1,
+      "labels_used": false,
+      "role": "full_FIT",
+      "scaler_sha256": "9402c176da37d54b976ae328f05a50105dc213ab738d8fc0bb22c40d835e326a",
+      "validation_patients": 25
+    },
+    {
+      "fit_patients": 65,
+      "fold": 5,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 0,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "5e9f0f61d7a2bc0a79fecf4b11bd4852b2a5d126096f65cacfff9a1cd50faf38",
+      "validation_patients": 34
+    },
+    {
+      "fit_patients": 66,
+      "fold": 5,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 1,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "d703235e53277ed06f0de156971e3ddfc36ab7133580c04975dd5e95141d6aff",
+      "validation_patients": 33
+    },
+    {
+      "fit_patients": 67,
+      "fold": 5,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": 2,
+      "labels_used": false,
+      "role": "inner",
+      "scaler_sha256": "6cb6bb3053becad02a1e7595a917b59d57790e40136259310dcc1f9086b321a2",
+      "validation_patients": 32
+    },
+    {
+      "fit_patients": 99,
+      "fold": 5,
+      "held_or_inner_val_used": false,
+      "includes_between_patient_variance": true,
+      "inner": -1,
+      "labels_used": false,
+      "role": "full_FIT",
+      "scaler_sha256": "b798bd5a242a2567904152e770d8d04a219eccb76ad43cd63918603e489875c3",
+      "validation_patients": 25
+    }
+  ],
+  "fitted_statistics_not_trainable_parameters": true,
+  "patient_equal_total_variance": true,
+  "status": "PASS",
+  "unknown_good_channels_included": true
+}

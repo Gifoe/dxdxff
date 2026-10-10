@@ -1,0 +1,17 @@
+{
+  "five_original_folds": true,
+  "inner_split_exact_private_assignment_parity": true,
+  "label_orientation": "normal0 pathological1 unknown-1; ordered good/outcome/resection/soz rule unchanged",
+  "labeled_units": 10202,
+  "manifest_sha256": "9a326a4f7841129f430a7afa6e5456d416fd723efd8558d4f0716e3930858a1d",
+  "normal": 9089,
+  "pathological": 1113,
+  "patients": 124,
+  "records": 137,
+  "sources": {
+    "HUP": 10,
+    "Open-iEEG": 103,
+    "SourceSink": 11
+  },
+  "status": "PASS"
+}

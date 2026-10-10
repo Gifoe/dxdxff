@@ -1,0 +1,23 @@
+{
+  "ABS_better_with_CI": false,
+  "PR_gate_pass": false,
+  "PR_mechanism_gate": {
+    "AP_nondecline": true,
+    "AUROC_CI_lower_positive": false,
+    "AUROC_delta_ge010": false,
+    "MacroF1_loss_le005": true,
+    "integrity": true,
+    "positive_folds_ge4": false
+  },
+  "alignment_gate_pass": true,
+  "descriptive_comparability_rule_pass": false,
+  "embedding_alignment_gate": {
+    "AP_strict_gain": true,
+    "AUROC_CI_lower_positive": true,
+    "AUROC_delta_ge010": true,
+    "logits_labels_sources_unpermuted": true
+  },
+  "exploratory_historical_reuse": true,
+  "protocol_sha256": "37453f811edc2f70d873dbe87b04641a9956521c75e166b6652aee20779e6f48",
+  "terminal": "MECHANISM_INCONCLUSIVE"
+}

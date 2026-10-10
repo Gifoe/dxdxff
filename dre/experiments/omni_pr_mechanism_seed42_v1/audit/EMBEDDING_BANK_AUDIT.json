@@ -1,0 +1,10 @@
+{
+  "CNN_training": false,
+  "all_cell_hashes_verified": true,
+  "cells": 620,
+  "correct_outer_fold_CNN_only": true,
+  "dimension": 32,
+  "original_bank_gate_sha256": "699e32cad40affd7871c74e07cf26074239446a15fff4e4a9ac86cf1ba5cd544",
+  "raw_reextraction": false,
+  "status": "PASS"
+}

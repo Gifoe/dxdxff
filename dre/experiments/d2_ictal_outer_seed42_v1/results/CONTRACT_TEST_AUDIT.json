@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "server_tests_passed": 4,
+  "server_tests_failed": 0,
+  "tests": [
+    "Frozen preprocessing exact sklearn parity and patient independence",
+    "EZ/NEZ orientation, confusion, AUROC/AP and stable probability ties",
+    "Single-class not-estimable policy without patient exclusion",
+    "Patient-equal seed42 bootstrap reproducibility and NaN policy"
+  ],
+  "data": "synthetic only",
+  "raw_EEG_access": false,
+  "model_training": false,
+  "outer_label_access": false,
+  "executed_before_freeze": true,
+  "test_source_sha256": "8cd478e5b447efac80ec51e8d5892be28eadbe5280cb5db9b6f5a760941a17f6"
+}

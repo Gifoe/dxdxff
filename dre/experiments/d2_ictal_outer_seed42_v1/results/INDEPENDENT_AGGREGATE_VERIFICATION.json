@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "patients": 80,
+  "metrics_per_patient": 11,
+  "maximum_metric_absolute_drift": 2.220446049250313e-16,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 42,
+  "independent_sklearn_metrics": true,
+  "independent_numpy_percentile_intervals": true,
+  "prediction_hashes_unchanged": true,
+  "model_replayed": false,
+  "threshold_reoptimized": false,
+  "source_sha256": "27cc6e15b118449fae78d19cd0d55f5f0e00be6a27e7d0dbda4f46e668a8b13d"
+}

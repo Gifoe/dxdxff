@@ -1,0 +1,29 @@
+{
+  "channels": 7635,
+  "freeze_sha256": "f82bba4564cd4020ccd942160c2fd299b61147ce7080b5b6876765f40cfaa43b",
+  "patients": 80,
+  "primary_metrics": {
+    "accuracy": 0.7595479273853977,
+    "balanced_accuracy": 0.6522281476077543,
+    "ez_auprc": 0.5334829020441841,
+    "ez_auroc": 0.7304450214495939,
+    "ez_f1": 0.4109087454853652,
+    "ez_mrr": 0.73721585368844,
+    "macro_f1": 0.6204034584506928,
+    "nez_f1": 0.8298981714160204,
+    "sensitivity": 0.43582264822827577,
+    "specificity": 0.8686336469872329,
+    "top1_is_ez": 0.65
+  },
+  "public_artifacts": [
+    "FROZEN_DEPENDENCY_AUDIT.json",
+    "IMMUTABILITY_AND_COVERAGE_AUDIT.json",
+    "OUTER_CENTER_METRICS.csv",
+    "OUTER_FOLD_METRICS.csv",
+    "OUTER_PATIENT_EQUAL_METRICS.csv",
+    "OUTER_POOLED_CHANNEL_METRICS.csv",
+    "OUTER_STATUS.json"
+  ],
+  "scientific_status": "USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+  "status": "ONE_FROZEN_D2_OUTER_PASS_COMPLETE"
+}

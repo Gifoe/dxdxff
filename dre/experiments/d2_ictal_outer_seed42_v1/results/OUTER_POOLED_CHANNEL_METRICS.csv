@@ -1,0 +1,2 @@
+model,unit,macro_f1,ez_f1,nez_f1,balanced_accuracy,ez_auprc,ez_auroc,sensitivity,specificity,accuracy,TP,FP,TN,FN,channels,predicted_ez_fraction,observed_ez_fraction,mrr_top1_not_patient_local_do_not_use
+D2,pooled_outer_channels,0.640242677952841,0.4331996297439062,0.8472857261617757,0.6338277170363151,0.4457730575156086,0.7146366963343628,0.4027538726333907,0.8649015614392397,0.7593975114603798,702,796,5096,1041,7635,0.19620170268500328,0.22829076620825148,True

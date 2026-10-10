@@ -1,0 +1,29 @@
+{
+  "EZ_channels": 1743,
+  "FIT_VAL_export_label_parity": true,
+  "NEZ_channels": 5892,
+  "all_dependencies_unchanged": true,
+  "all_scores_sealed_before_full_y_access": true,
+  "confusion_sum": {
+    "FN": 1041,
+    "FP": 796,
+    "TN": 5096,
+    "TP": 702
+  },
+  "freeze_sha256": "f82bba4564cd4020ccd942160c2fd299b61147ce7080b5b6876765f40cfaa43b",
+  "frozen_thresholds": [
+    0.415,
+    0.275,
+    0.365,
+    0.285,
+    0.365
+  ],
+  "no_raw_eeg_extraction": true,
+  "no_retraining": true,
+  "no_threshold_tuning": true,
+  "prediction_seal_sha256": "2fda68490c84eac173e061178c774d13d464e12f485ee01681a1cba596c91ffd",
+  "private_patient_predictions_not_published": true,
+  "status": "PASS",
+  "test_channels_unique_once": 7635,
+  "test_patients_unique_once": 80
+}

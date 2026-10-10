@@ -1,0 +1,284 @@
+{
+  "FIT_smokes": [
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 1,
+      "method": "C1"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 1,
+      "method": "C2"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 1,
+      "method": "C3"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 2,
+      "method": "C1"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 2,
+      "method": "C2"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 2,
+      "method": "C3"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 3,
+      "method": "C1"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 3,
+      "method": "C2"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 3,
+      "method": "C3"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 4,
+      "method": "C1"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 4,
+      "method": "C2"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 4,
+      "method": "C3"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 5,
+      "method": "C1"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 5,
+      "method": "C2"
+    },
+    {
+      "actual_FIT_smoke_steps": 2,
+      "finite_loss_gradients": true,
+      "fold": 5,
+      "method": "C3"
+    }
+  ],
+  "checks": [
+    {
+      "description": "original124 patients",
+      "id": 1,
+      "status": "PASS"
+    },
+    {
+      "description": "original fivefold immutable manifest",
+      "id": 2,
+      "status": "PASS"
+    },
+    {
+      "description": "original137 records",
+      "id": 3,
+      "status": "PASS"
+    },
+    {
+      "description": "original10202 unique labeled channels",
+      "id": 4,
+      "status": "PASS"
+    },
+    {
+      "description": "official CNN hash",
+      "id": 5,
+      "status": "PASS"
+    },
+    {
+      "description": "all5 frozen baseline checkpoint hashes",
+      "id": 6,
+      "status": "PASS"
+    },
+    {
+      "description": "fresh original C0 scores and patient metrics",
+      "id": 7,
+      "status": "PASS"
+    },
+    {
+      "description": "30 segments and original EDF reduction",
+      "id": 8,
+      "status": "PASS"
+    },
+    {
+      "description": "32D output extraction",
+      "id": 9,
+      "status": "PASS"
+    },
+    {
+      "description": "CNN state unchanged",
+      "id": 10,
+      "status": "PASS"
+    },
+    {
+      "description": "BN evaluation only",
+      "id": 11,
+      "status": "PASS"
+    },
+    {
+      "description": "CNN dropout off",
+      "id": 12,
+      "status": "PASS"
+    },
+    {
+      "description": "one-to-one canonical patient channel joins",
+      "id": 13,
+      "status": "PASS"
+    },
+    {
+      "description": "unknown good excluded from supervised loss",
+      "id": 14,
+      "status": "PASS"
+    },
+    {
+      "description": "unknown good retained in normalization",
+      "id": 15,
+      "status": "PASS"
+    },
+    {
+      "description": "pathological-positive orientation",
+      "id": 16,
+      "status": "PASS"
+    },
+    {
+      "description": "labelblind population z handleszero variance",
+      "id": 17,
+      "status": "PASS"
+    },
+    {
+      "description": "C1 zero-output exact C0",
+      "id": 18,
+      "status": "PASS"
+    },
+    {
+      "description": "C2 zero-output exact C0",
+      "id": 19,
+      "status": "PASS"
+    },
+    {
+      "description": "C3 zero-output exact C0",
+      "id": 20,
+      "status": "PASS"
+    },
+    {
+      "description": "C2/C3 equal105 trainable",
+      "id": 21,
+      "status": "PASS"
+    },
+    {
+      "description": "C2/C3 identical tensors",
+      "id": 22,
+      "status": "PASS"
+    },
+    {
+      "description": "shared beta FIT gradients",
+      "id": 23,
+      "status": "PASS"
+    },
+    {
+      "description": "source U,V receive gradients",
+      "id": 24,
+      "status": "PASS"
+    },
+    {
+      "description": "constant bias cannotchange exactwithinpatientrank",
+      "id": 25,
+      "status": "PASS"
+    },
+    {
+      "description": "shufflelabelblind marginalpreservation",
+      "id": 26,
+      "status": "PASS"
+    },
+    {
+      "description": "fixedonepseudosourceperpatient",
+      "id": 27,
+      "status": "PASS"
+    },
+    {
+      "description": "FITlabelAPIrejectsouters",
+      "id": 28,
+      "status": "PASS"
+    },
+    {
+      "description": "FITonly201gridlexicographicties",
+      "id": 29,
+      "status": "PASS"
+    },
+    {
+      "description": "exactepochboundaryresume",
+      "id": 30,
+      "status": "PASS"
+    },
+    {
+      "description": "finite15actualFITsmokes",
+      "id": 31,
+      "status": "PASS"
+    },
+    {
+      "description": "allcorrectionoffexactbaseline",
+      "id": 32,
+      "status": "PASS"
+    },
+    {
+      "description": "patient_equalnotpooledprimary",
+      "id": 33,
+      "status": "PASS"
+    },
+    {
+      "description": "nootherfoldbackbonecontamination",
+      "id": 34,
+      "status": "PASS"
+    },
+    {
+      "description": "completebank/checkpointhashrecording",
+      "id": 35,
+      "status": "PASS"
+    }
+  ],
+  "code": {
+    "common.py": "57f6f9f2dbd1000410150125a908763577371fb8a0eaa8e1b4422b984e33dd9c",
+    "evaluate.py": "189ec5413e58f36ebca0edef51b6ef0c55edffa42f0a33515fb313c4fde1231d",
+    "extract.py": "0b8990f4c767ecd030e02c8ef08e5e2c4e82aa6e270564974288efdb8ef4da10",
+    "head_data.py": "7604150082b33e6a470d4ac0c0adb4f72c2ffe153cb4a6a4b6d016ce40be6007",
+    "model.py": "23853ab4db67a7f13d6e5cf6006603168545ce91cc3cb9201cf4c8c4dbdb6d66",
+    "prepare.py": "8f252ceb026f11fb4d2b2392a3902de4472ca37c9aa78200e5bf4d217c74b662",
+    "train_heads.py": "7466810d0ee155e048965f0dabd62cad74f5b899647c4dca343d763cff5dbfbc",
+    "validate_bank.py": "7bab7cd55ebc2a8bca1ff968551673473da2c62c666d20217195859ba8d6f8c3"
+  },
+  "protocol": "25e9c5b18e44ef7176915b5b5d8252e03437236c43a4e422d342373b487e807b",
+  "resume_exact": true,
+  "status": "PASS"
+}

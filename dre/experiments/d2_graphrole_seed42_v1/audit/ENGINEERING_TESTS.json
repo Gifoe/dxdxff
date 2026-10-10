@@ -1,0 +1,320 @@
+{
+  "FIT_smokes": [
+    {
+      "FIT_channels": 64,
+      "arm": "G1",
+      "fold": 1,
+      "graph_weight_gradient_sum": 7.718222141265869,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 64,
+      "arm": "G2",
+      "fold": 1,
+      "graph_weight_gradient_sum": 5.202282905578613,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 64,
+      "arm": "G3",
+      "fold": 1,
+      "graph_weight_gradient_sum": 4.5902299880981445,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G1",
+      "fold": 2,
+      "graph_weight_gradient_sum": 4.049925327301025,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G2",
+      "fold": 2,
+      "graph_weight_gradient_sum": 2.2039942741394043,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G3",
+      "fold": 2,
+      "graph_weight_gradient_sum": 1.6508526802062988,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G1",
+      "fold": 3,
+      "graph_weight_gradient_sum": 3.812500476837158,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G2",
+      "fold": 3,
+      "graph_weight_gradient_sum": 1.8898184299468994,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G3",
+      "fold": 3,
+      "graph_weight_gradient_sum": 1.4312262535095215,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 64,
+      "arm": "G1",
+      "fold": 4,
+      "graph_weight_gradient_sum": 8.12479019165039,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 64,
+      "arm": "G2",
+      "fold": 4,
+      "graph_weight_gradient_sum": 5.6134185791015625,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 64,
+      "arm": "G3",
+      "fold": 4,
+      "graph_weight_gradient_sum": 4.6601762771606445,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G1",
+      "fold": 5,
+      "graph_weight_gradient_sum": 3.772416591644287,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G2",
+      "fold": 5,
+      "graph_weight_gradient_sum": 2.035834550857544,
+      "loss_finite": true
+    },
+    {
+      "FIT_channels": 86,
+      "arm": "G3",
+      "fold": 5,
+      "graph_weight_gradient_sum": 1.3300037384033203,
+      "loss_finite": true
+    }
+  ],
+  "checks": [
+    {
+      "description": "original80 patients",
+      "id": 1,
+      "status": "PASS"
+    },
+    {
+      "description": "7635 original identities",
+      "id": 2,
+      "status": "PASS"
+    },
+    {
+      "description": "five original folds",
+      "id": 3,
+      "status": "PASS"
+    },
+    {
+      "description": "no patient leakage",
+      "id": 4,
+      "status": "PASS"
+    },
+    {
+      "description": "run/channel identity alignment",
+      "id": 5,
+      "status": "PASS"
+    },
+    {
+      "description": "actual window time alignment",
+      "id": 6,
+      "status": "PASS"
+    },
+    {
+      "description": "construction has no clinical fields",
+      "id": 7,
+      "status": "PASS"
+    },
+    {
+      "description": "cache values distinguished from placeholders",
+      "id": 8,
+      "status": "PASS"
+    },
+    {
+      "description": "symmetric undirected adjacency",
+      "id": 9,
+      "status": "PASS"
+    },
+    {
+      "description": "diagonal excluded",
+      "id": 10,
+      "status": "PASS"
+    },
+    {
+      "description": "nonfinite adjacency rejected",
+      "id": 11,
+      "status": "PASS"
+    },
+    {
+      "description": "missing electrodes excluded",
+      "id": 12,
+      "status": "PASS"
+    },
+    {
+      "description": "exact fixed16 feature order",
+      "id": 13,
+      "status": "PASS"
+    },
+    {
+      "description": "seven exact source metrics on unique connected graph",
+      "id": 14,
+      "status": "PASS"
+    },
+    {
+      "description": "temporal strength change per elapsed second",
+      "id": 15,
+      "status": "PASS"
+    },
+    {
+      "description": "cross seizure rank consistency",
+      "id": 16,
+      "status": "PASS"
+    },
+    {
+      "description": "single seizure stability missing",
+      "id": 17,
+      "status": "PASS"
+    },
+    {
+      "description": "disconnected tied eigenspace missing; defined empty graph",
+      "id": 18,
+      "status": "PASS"
+    },
+    {
+      "description": "no fake clinical onset verification",
+      "id": 19,
+      "status": "PASS"
+    },
+    {
+      "description": "deterministic extraction",
+      "id": 20,
+      "status": "PASS"
+    },
+    {
+      "description": "original88 inputs bitwise",
+      "id": 21,
+      "status": "PASS"
+    },
+    {
+      "description": "FIT-only graph mean imputation/scaling",
+      "id": 22,
+      "status": "PASS"
+    },
+    {
+      "description": "input104",
+      "id": 23,
+      "status": "PASS"
+    },
+    {
+      "description": "all10789 parameters and D2=9221",
+      "id": 24,
+      "status": "PASS"
+    },
+    {
+      "description": "identical scratch initial tensors",
+      "id": 25,
+      "status": "PASS"
+    },
+    {
+      "description": "NEZ-positive weighted BCE",
+      "id": 26,
+      "status": "PASS"
+    },
+    {
+      "description": "patient-equal updates exact original trainer",
+      "id": 27,
+      "status": "PASS"
+    },
+    {
+      "description": "exact source regularizer",
+      "id": 28,
+      "status": "PASS"
+    },
+    {
+      "description": "nonzero graph-input gradient",
+      "id": 29,
+      "status": "PASS"
+    },
+    {
+      "description": "deterministic within-patient label-free shuffle",
+      "id": 30,
+      "status": "PASS"
+    },
+    {
+      "description": "complete graph vectors preserved",
+      "id": 31,
+      "status": "PASS"
+    },
+    {
+      "description": "G3 exact neutral zeros",
+      "id": 32,
+      "status": "PASS"
+    },
+    {
+      "description": "exact original threshold ties and earlier checkpoint epoch",
+      "id": 33,
+      "status": "PASS"
+    },
+    {
+      "description": "exact epoch-boundary model/Adam/RNG resume",
+      "id": 34,
+      "status": "PASS"
+    },
+    {
+      "description": "finite forward/backward/optimizer",
+      "id": 35,
+      "status": "PASS"
+    },
+    {
+      "description": "no outer TEST scores used",
+      "id": 36,
+      "status": "PASS"
+    },
+    {
+      "description": "all VAL identities shared",
+      "id": 37,
+      "status": "PASS"
+    },
+    {
+      "description": "source/extraction/training hashes recorded",
+      "id": 38,
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": {
+    "audit_source.py": "eaa6613fe058fc848780c8d4e1b37c0643715e83ee5ff112a46c0b59dd936655",
+    "benchmark.py": "66d115fc7436582a2d93cbad2951c66d39ec9476e1acaa24a8df26878848f8ce",
+    "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+    "extract.py": "b184a19834bfe79d8ce31d64c6cff1a27d4753cd7ce98c8f82c78872d4dfda82",
+    "finalize.py": "f01688d476d9d2e7d3ec84df113f78127f4de7f57b0fca2f6c00ed379f7379c1",
+    "graph_metrics.py": "de465d4a0f31b0739af768c82a3f5027ddcf0f97bd0c17d754fd31602a829e5a",
+    "inspect_source.py": "0e8f3149418fbdcfb3866be1afbb7a1d833d617237ad1c88a0136cf190447565",
+    "model.py": "3ed629f50b236082d3c55d786e9df5d3d5002ebf149ed03413a845a8aa9f4f32",
+    "prepare.py": "4c46ca38f1ff9ba742751181ec0980a60b0582d2b5a71d067c28c19a1772b32b",
+    "repository_graph.py": "141005d07f8d135a6bfddc0ba99c033f940365ecdd196ebee63d1cae247d871b",
+    "run_training.py": "af0ccc7c3e7e2c042561b8a0f65d53d29bf39bdad0105221f51406aa726aa051",
+    "runtime.py": "c32c09fefc901d8196848249ea7814fe456ca28a7b6ad96f84b0fae6a566b5dd",
+    "train_core.py": "77dd3a483658ca20007eed7d5e0c30dc1b5294b6fd8a2b43eafd68017fa1e1a7"
+  },
+  "formal_checkpoints_modified": false,
+  "protocol_sha256": "1421ff533e6b951a288fc15e1da46add5f56c50f0f5e443881593b6b39af122b",
+  "status": "PASS",
+  "synthetic_tests_not_predictive_evidence": true
+}

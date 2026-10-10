@@ -1,0 +1,137 @@
+{
+  "experiment": "d2_graphrole_seed42_v1",
+  "status": "FROZEN_BEFORE_GRAPH_EXTRACTION_AND_MODEL_TRAINING",
+  "seed": 42,
+  "graph_source_mode": "RAW_REBUILT",
+  "arms": [
+    "D0_FROZEN_D2",
+    "G1",
+    "G2",
+    "G3"
+  ],
+  "formal_new_runs": 15,
+  "input_sha256": {
+    "feature_export": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "feature_cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "raw_alignment_ledger": "ba65862dfae36cc3867f0b5f442b9061f1183ebc24b81f2ec2b0991e558338cd",
+    "feature_order": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+    "core": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a"
+  },
+  "population": {
+    "patients": 80,
+    "channels": 7635,
+    "seizures": 256,
+    "channel_window_observations": 1471965,
+    "graph_windows": 15074,
+    "development_appearances": 65,
+    "unique_development_ids": 47,
+    "development_channel_appearances": 6273
+  },
+  "graph": {
+    "operator": "repository compute_thresholded_abs_pearson_adjacency",
+    "edge_quantile": 0.7,
+    "min_edge_weight": 0.1,
+    "self_edges": false,
+    "undirected": true,
+    "window_seconds": 2,
+    "sfreq": "actual 250 Hz metadata; no resampling",
+    "window_mask": "prior measured-interval ledger reverified against source; missing electrodes excluded before connectivity",
+    "cache_rejection": "Nonzero cached adjacency failed all-window measured raw reconstruction parity; no consistent audited construction provenance; not claimed to be fabricated",
+    "eigenvector": "unit L2 nonnegative principal vector via scipy.linalg.eigh; tied dominant eigenvalues within 1e-10*max(1,lambda) => NaN explicit unidentifiable; no-edge graph => defined zero convention; solver failures block",
+    "pagerank": "weighted .85 damping; uniform start/teleport and dangling redistribution; original n*1e-6 L1 convergence and max100 iterations; nonconvergence blocks",
+    "kcore": "nx.core_number/max(max_core,1), original repository convention",
+    "local_efficiency": "neighbor induced graph, reciprocal weight distance with 1e-8 floor; mean reciprocal shortest path over reachable ordered pairs, matching repository; SciPy Floyd-Warshall exact algorithm",
+    "schema": "seven window means then seven population stds, equal-seizure nan-aware mean; temporal strength change/max(dt,1); pairwise rank stability",
+    "strength_rank": "average tie rank mapped (rank-1)/(C-1); singleton .5; stability missing unless >=2 observed seizures",
+    "missing": "preserved NaN; only FIT-fitted imputation; no fake single-seizure stability",
+    "workers": 4,
+    "blas_threads": 1,
+    "degenerate_stop": "more than8 dimensions with no finite between-channel variation in >50% of original patients or <5% finite rows"
+  },
+  "preprocessing": {
+    "original88": "bitwise original D2 frozen banks, no refit",
+    "graph16": "unlabeled per-patient nanmean/nanstd z-score with 1e-8 floor; FIT SimpleImputer(mean) then FIT StandardScaler, dimension104 invariant; entirely missing FIT dimension blocks",
+    "G2": "stable seed42 cyclic derangement within identical valid-seizure availability signatures; complete16 vectors and missingness together; before population fitting; patient-wise z-score commutes with permutation",
+    "G3": "exact zeros for16 additional positions after graph preprocessing; not a full feature-dependent capacity control"
+  },
+  "model": {
+    "input": 104,
+    "hidden": 96,
+    "dropout": 0.15,
+    "source_rank": 4,
+    "parameters": 10789,
+    "frozen_D2_parameters": 9221,
+    "initialization": "fresh original SourceA0 initializer; seed42+1009*fold; all3 identical state hash; dedicated V generator42+7000+seed; no D2 warm start"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "clip": 1,
+    "max_epochs": 30,
+    "minimum_stop_epoch": 6,
+    "patience": 6,
+    "lambda_source": 0.001,
+    "source_regularizer": "mean(V^2)+mean_g[((N_FIT/4)/max(N_FIT_source,1))*(mean(u_g^2)+b_g^2)]",
+    "objective": "NEZ-positive weighted mean BCE within patient; FIT EZcount/NEZcount pos_weight; one update/patient",
+    "order": "sorted original FIT patient groups, default_rng(seed+epoch).permutation; same dropout reseed original trainer",
+    "device": "cuda float32; no AMP/TF32; original audited runtime312",
+    "resume": "exact epoch-boundary model/Adam/dropout/CPU+CUDA RNG and history, SHA-bound code/data/protocol"
+  },
+  "selection": {
+    "threshold": "round(arange(0,1.0001,.005),3); patientMF1,patientEZF1,pooledBA,proximity.5,smaller",
+    "checkpoint": "patientMF1,patientEZF1,earlier epoch",
+    "outer_test": false,
+    "additional_seeds": false,
+    "hyperparameter_search": false
+  },
+  "evaluation": {
+    "metrics": 11,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 42,
+    "unit": "unique patient-ID clusters; keep repeated appearances; patient-equal65 appearance point mean",
+    "contrasts": [
+      "G1-D2",
+      "G2-D2",
+      "G3-D2",
+      "G1-G2",
+      "G1-G3"
+    ],
+    "intervention": "G1 graph16=>neutral0 at same selected threshold without retraining; not D2",
+    "ranking": "canonical channel stable sort before exact original metric"
+  },
+  "gate": {
+    "G1_D2_macro": 0.015,
+    "G1_G2_macro": 0.01,
+    "EZF1_AP_nondecline": true,
+    "positive_folds_D2": 4,
+    "positive_folds_G2": 4,
+    "integrity_required": true,
+    "nondegenerate_required": true,
+    "measurably_used": "patient-equal mean abs NEZ probability change on neutralization >1e-6 AND any ranking or thresholded decision change",
+    "target": 0.7
+  },
+  "terminal_priority": [
+    "GRAPH_SOURCE_INTEGRITY_BLOCKED on invalid source",
+    "GRAPH_INFORMATION_DEGENERATE before training if >8 structurally unidentifiable dimensions",
+    "EXPERIMENT_BLOCKED on other engineering/integrity failure",
+    "GRAPHROLE_TARGET_0P70_REACHED only if all continuation gates and target pass",
+    "GRAPHROLE_INCREMENTAL_GAIN_SUPPORTED only if all continuation gates pass",
+    "GRAPHROLE_SHUFFLE_CONTROL_NOT_BEATEN if G1>D2 but G1<=G2",
+    "GRAPHROLE_CAPACITY_ONLY_GAIN if G1>D2 but G1<=G3",
+    "GRAPHROLE_NO_MEANINGFUL_GAIN otherwise"
+  ],
+  "interpretation": {
+    "clinical_onset_independently_verified": 0,
+    "causal_propagation": false,
+    "exploratory_repeated_development": true,
+    "outer_labels_loaded": false
+  },
+  "references": {
+    "D2_commit": "394dbff2085114d5f2d162cc7802384c95f0ef8d",
+    "EvoBrain_commit": "f48dbbd65e6b471311531e03418518c8418abe1d",
+    "EvoBrain_replication": false
+  }
+}

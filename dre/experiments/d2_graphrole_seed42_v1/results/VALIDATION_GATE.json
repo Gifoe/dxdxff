@@ -1,0 +1,20 @@
+{
+  "conditions": {
+    "EZAP_nondecline": true,
+    "EZF1_nondecline": true,
+    "delta_G1_D2_ge015": false,
+    "delta_G1_G2_ge010": false,
+    "graph_alignment_integrity": true,
+    "graph_source_integrity": true,
+    "measurably_used_by_G1": true,
+    "no_implementation_leakage": true,
+    "nondegenerate_information": true,
+    "positive_folds_D2_ge4": false,
+    "positive_folds_G2_ge4": false
+  },
+  "continuation_gate": false,
+  "outer_test_accessed": false,
+  "protocol_sha256": "1421ff533e6b951a288fc15e1da46add5f56c50f0f5e443881593b6b39af122b",
+  "target070": false,
+  "terminal": "GRAPHROLE_SHUFFLE_CONTROL_NOT_BEATEN"
+}

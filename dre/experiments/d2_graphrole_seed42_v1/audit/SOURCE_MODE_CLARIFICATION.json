@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "original_source_audit_preserved": true,
+  "uniform_semantics_all_centers_in_original_audit_refers_to": "unverified cached adjacency construction provenance",
+  "selected_source_mode": "RAW_REBUILT",
+  "selected_RAW_operator_uniform_all_centers": true,
+  "cached_and_rebuilt_graphs_mixed": false,
+  "measured_graphs_completed": 15074,
+  "disconnected_graphs": 12248,
+  "unidentifiable_dominant_eigenvector_graphs": 0,
+  "no_cache_zero_placeholder_claim": true,
+  "source_decision_frozen_before_extraction_and_training": true
+}

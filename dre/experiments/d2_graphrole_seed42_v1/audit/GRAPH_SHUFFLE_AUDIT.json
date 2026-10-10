@@ -1,0 +1,11 @@
+{
+  "availability_signatures_preserved": true,
+  "channels": 7635,
+  "complete_vectors_preserved": true,
+  "labels_used": false,
+  "shuffled_channels": 7633,
+  "shuffled_fraction": 0.9997380484610348,
+  "status": "PASS",
+  "unshufflable_singletons": 2,
+  "within_patient": true
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "parameter_counts": {"D2": 9221, "G1": 10789, "G2": 10789, "G3": 10789},
+  "additional_LayerNorm_parameters": 32,
+  "additional_Linear_parameters": 1536,
+  "identical_new_arm_topology": true,
+  "identical_initial_state_within_each_fold": true,
+  "initial_state_evidence": "results/MODEL_SELECTION.csv",
+  "count_test_evidence": "audit/ENGINEERING_TESTS.json check24",
+  "fresh_initialization_not_D2_warmstart": true,
+  "G3_zero_inputs_after_preprocessing": true,
+  "G3_graph_column_weights_can_receive_gradients_after_LayerNorm104": true,
+  "G1_GRAPH_ZERO_is_inference_only_not_another_formal_run": true,
+  "formal_new_training_runs": 15
+}

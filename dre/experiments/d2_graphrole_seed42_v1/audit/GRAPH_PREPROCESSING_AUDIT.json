@@ -1,0 +1,52 @@
+{
+  "folds": [
+    {
+      "FIT_patients": 51,
+      "VAL_patients": 13,
+      "feature_order_fixed": true,
+      "fold": 1,
+      "graph_imputer_scaler_hash": "546faef8fc9585a18497cd955ba477b717782f76c1ba3cf38097ae10f05885d9",
+      "original88_bitwise": true,
+      "train_only_fitted": true
+    },
+    {
+      "FIT_patients": 51,
+      "VAL_patients": 13,
+      "feature_order_fixed": true,
+      "fold": 2,
+      "graph_imputer_scaler_hash": "367c420b7746ac2a24d979ce61a2f3963d1b1b7a988eb73392ba3a74946556c4",
+      "original88_bitwise": true,
+      "train_only_fitted": true
+    },
+    {
+      "FIT_patients": 50,
+      "VAL_patients": 13,
+      "feature_order_fixed": true,
+      "fold": 3,
+      "graph_imputer_scaler_hash": "e85c46647cbbbd95e344b2383df2c36ced516971cd6cfddd7cadab98c961741f",
+      "original88_bitwise": true,
+      "train_only_fitted": true
+    },
+    {
+      "FIT_patients": 52,
+      "VAL_patients": 13,
+      "feature_order_fixed": true,
+      "fold": 4,
+      "graph_imputer_scaler_hash": "eff6a634c36074042eba13155f9fbb1c6ec15df78ecff20d7d3d56514922480a",
+      "original88_bitwise": true,
+      "train_only_fitted": true
+    },
+    {
+      "FIT_patients": 51,
+      "VAL_patients": 13,
+      "feature_order_fixed": true,
+      "fold": 5,
+      "graph_imputer_scaler_hash": "6cac1cdef9179779de27aa825499bb3e099ece8b75a7afb1aee608d4f000be6d",
+      "original88_bitwise": true,
+      "train_only_fitted": true
+    }
+  ],
+  "no_outer_labels_loaded": true,
+  "no_population_VAL_fit": true,
+  "status": "PASS"
+}

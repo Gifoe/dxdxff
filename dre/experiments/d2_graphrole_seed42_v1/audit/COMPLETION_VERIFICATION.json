@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "verified_original_reference_files_after_training": 101,
+  "frozen_reference_unchanged": true,
+  "formal_cells": [
+    {
+      "fold": 1,
+      "arm": "G1",
+      "completed_epochs": 8,
+      "selected_epoch": 2,
+      "sealed": true
+    },
+    {
+      "fold": 1,
+      "arm": "G2",
+      "completed_epochs": 8,
+      "selected_epoch": 2,
+      "sealed": true
+    },
+    {
+      "fold": 1,
+      "arm": "G3",
+      "completed_epochs": 8,
+      "selected_epoch": 2,
+      "sealed": true
+    },
+    {
+      "fold": 2,
+      "arm": "G1",
+      "completed_epochs": 8,
+      "selected_epoch": 2,
+      "sealed": true
+    },
+    {
+      "fold": 2,
+      "arm": "G2",
+      "completed_epochs": 8,
+      "selected_epoch": 2,
+      "sealed": true
+    },
+    {
+      "fold": 2,
+      "arm": "G3",
+      "completed_epochs": 9,
+      "selected_epoch": 3,
+      "sealed": true
+    },
+    {
+      "fold": 3,
+      "arm": "G1",
+      "completed_epochs": 11,
+      "selected_epoch": 5,
+      "sealed": true
+    },
+    {
+      "fold": 3,
+      "arm": "G2",
+      "completed_epochs": 11,
+      "selected_epoch": 5,
+      "sealed": true
+    },
+    {
+      "fold": 3,
+      "arm": "G3",
+      "completed_epochs": 14,
+      "selected_epoch": 8,
+      "sealed": true
+    },
+    {
+      "fold": 4,
+      "arm": "G1",
+      "completed_epochs": 20,
+      "selected_epoch": 14,
+      "sealed": true
+    },
+    {
+      "fold": 4,
+      "arm": "G2",
+      "completed_epochs": 20,
+      "selected_epoch": 14,
+      "sealed": true
+    },
+    {
+      "fold": 4,
+      "arm": "G3",
+      "completed_epochs": 19,
+      "selected_epoch": 13,
+      "sealed": true
+    },
+    {
+      "fold": 5,
+      "arm": "G1",
+      "completed_epochs": 11,
+      "selected_epoch": 5,
+      "sealed": true
+    },
+    {
+      "fold": 5,
+      "arm": "G2",
+      "completed_epochs": 24,
+      "selected_epoch": 18,
+      "sealed": true
+    },
+    {
+      "fold": 5,
+      "arm": "G3",
+      "completed_epochs": 17,
+      "selected_epoch": 11,
+      "sealed": true
+    }
+  ],
+  "formal_new_runs": 15,
+  "completed_epochs": 196,
+  "protocol_sha256": "1421ff533e6b951a288fc15e1da46add5f56c50f0f5e443881593b6b39af122b",
+  "all_executed_code_sha_unchanged": true,
+  "outer_test_accessed": false,
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-10-10.0.18363-SP0",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "networkx": "3.6.1"
+  },
+  "verified_utc": "2026-10-10T15:36:37.743418+00:00"
+}

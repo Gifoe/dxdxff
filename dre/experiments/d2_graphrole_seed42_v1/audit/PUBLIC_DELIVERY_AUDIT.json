@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "test": "tests/public_delivery.py",
+  "exactly_15_new_formal_runs": true,
+  "completed_epochs": 196,
+  "all_38_engineering_checks_passed_before_training": true,
+  "all_15_FIT_only_smokes_passed_before_training": true,
+  "all_executed_code_hashes_match_pretraining_audit": true,
+  "frozen_reference_files_unchanged_after_training": 101,
+  "paired_bootstrap_metric_contrasts": 55,
+  "bootstrap_draws_per_contrast": 10000,
+  "bootstrap_unique_ID_clusters": 47,
+  "development_patient_fold_appearances": 65,
+  "outer_TEST_accessed": false,
+  "uploaded_individual_graph_rows_or_predictions": false,
+  "uploaded_EEG_checkpoints_logs_secrets": false,
+  "CSV_and_JSON_identity_score_label_columns_absent": true,
+  "test_code_not_equivalent_to_manual_privacy_guarantee": true,
+  "manual_review": "Only schema field names, input/code/checkpoint hashes, source/group/fold aggregates and reproducible code are released. No private artifact contents are released."
+}

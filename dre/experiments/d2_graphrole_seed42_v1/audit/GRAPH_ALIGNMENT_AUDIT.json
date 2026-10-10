@@ -1,0 +1,24 @@
+{
+  "all_window_centers_match_feature_source": true,
+  "binding": {
+    "code": {
+      "extract.py": "b184a19834bfe79d8ce31d64c6cff1a27d4753cd7ce98c8f82c78872d4dfda82",
+      "graph_metrics.py": "de465d4a0f31b0739af768c82a3f5027ddcf0f97bd0c17d754fd31602a829e5a",
+      "repository_graph.py": "141005d07f8d135a6bfddc0ba99c033f940365ecdd196ebee63d1cae247d871b"
+    },
+    "mode": "RAW_REBUILT",
+    "protocol": "1421ff533e6b951a288fc15e1da46add5f56c50f0f5e443881593b6b39af122b",
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733"
+  },
+  "canonical_channels": 7635,
+  "graph_bank_sha256": "e9cf21b9b87626bf34d45ba3896e72fc5cc27dfaf5707fb31786ae1499f30c80",
+  "independent_onset_verified": false,
+  "no_dropped_or_duplicated_channels": true,
+  "outer_labels_used": false,
+  "patients": 80,
+  "runs": 256,
+  "status": "PASS",
+  "strict_one_to_one_identity_join": true,
+  "valid_channel_windows": 1471965,
+  "valid_graph_windows": 15074
+}

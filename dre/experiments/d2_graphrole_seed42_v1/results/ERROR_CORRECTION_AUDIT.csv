@@ -1,0 +1,5 @@
+method,TP_gained,TP_lost,FP_added,FP_removed,errors_recovered,correct_spoiled,channels
+G1,99,75,215,129,228,290,6273
+G1_GRAPH_ZERO,106,34,316,60,166,350,6273
+G2,63,79,103,198,261,182,6273
+G3,71,30,163,89,160,193,6273

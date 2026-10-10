@@ -1,0 +1,15 @@
+{
+  "classification_is_separate_frozen_threshold_diagnostic": true,
+  "classification_outputs": "SCALE_ONLY_CLASSIFICATION.csv",
+  "formal_max_historical_probability_metric_error": 0.0,
+  "formal_max_math_rank_error": 0.0,
+  "formal_max_operational_PR_logit_ranking_error": 0.0,
+  "max_float64_constant_identity_error": 5.2735593669694936e-15,
+  "max_rank_metric_error": 0.0,
+  "mean_subtraction_not_causal_ranking_explanation": true,
+  "operational_float32_vs_float64_logit_max_error": 6.750245136188937e-07,
+  "patients": 124,
+  "rank_comparison_uses_direct_float64_logits": true,
+  "scale_only_saturated_probabilities": 0,
+  "status": "PASS"
+}

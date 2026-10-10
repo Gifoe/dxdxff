@@ -1,0 +1,6 @@
+{
+  "beta_and_source_bias_zero": true,
+  "initial_logit_equals_C0": true,
+  "new_heads_identical_initial_tensors": true,
+  "status": "PASS"
+}

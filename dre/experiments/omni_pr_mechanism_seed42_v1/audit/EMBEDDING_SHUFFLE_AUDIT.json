@@ -1,0 +1,99 @@
+{
+  "fixed_per_training_and_evaluation_role": true,
+  "inference_PR_shuffle_uses_same_prelocked_permutation": true,
+  "partitions": [
+    {
+      "channels": 9896,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 1,
+      "labels_logits_source_unchanged": true,
+      "patients": 99,
+      "role": "FIT"
+    },
+    {
+      "channels": 2606,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 1,
+      "labels_logits_source_unchanged": true,
+      "patients": 25,
+      "role": "HELD"
+    },
+    {
+      "channels": 10169,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 2,
+      "labels_logits_source_unchanged": true,
+      "patients": 100,
+      "role": "FIT"
+    },
+    {
+      "channels": 2333,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 2,
+      "labels_logits_source_unchanged": true,
+      "patients": 24,
+      "role": "HELD"
+    },
+    {
+      "channels": 9806,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 3,
+      "labels_logits_source_unchanged": true,
+      "patients": 99,
+      "role": "FIT"
+    },
+    {
+      "channels": 2696,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 3,
+      "labels_logits_source_unchanged": true,
+      "patients": 25,
+      "role": "HELD"
+    },
+    {
+      "channels": 10169,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 4,
+      "labels_logits_source_unchanged": true,
+      "patients": 99,
+      "role": "FIT"
+    },
+    {
+      "channels": 2333,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 4,
+      "labels_logits_source_unchanged": true,
+      "patients": 25,
+      "role": "HELD"
+    },
+    {
+      "channels": 9968,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 5,
+      "labels_logits_source_unchanged": true,
+      "patients": 99,
+      "role": "FIT"
+    },
+    {
+      "channels": 2534,
+      "fixed_point_fraction": 0.0,
+      "fixed_points": 0,
+      "fold": 5,
+      "labels_logits_source_unchanged": true,
+      "patients": 25,
+      "role": "HELD"
+    }
+  ],
+  "pseudonymous_SHA256_seed": true,
+  "status": "PASS",
+  "within_patient_bijection": true
+}

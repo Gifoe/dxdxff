@@ -1,0 +1,7 @@
+{
+  "all_good_channels_including_unknown": true,
+  "epsilon": 1e-05,
+  "historical_float32_z_exact": true,
+  "labels_used_for_moments": false,
+  "status": "PASS"
+}

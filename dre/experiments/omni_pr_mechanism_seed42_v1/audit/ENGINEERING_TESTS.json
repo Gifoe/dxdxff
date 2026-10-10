@@ -1,0 +1,267 @@
+{
+  "checks": [
+    {
+      "check": "Manifest SHA",
+      "number": 1,
+      "pass": true
+    },
+    {
+      "check": "Immutable original fold memberships",
+      "number": 2,
+      "pass": true
+    },
+    {
+      "check": "137 exact record identities",
+      "number": 3,
+      "pass": true
+    },
+    {
+      "check": "10202 canonical labeled channels",
+      "number": 4,
+      "pass": true
+    },
+    {
+      "check": "All original CNN hashes",
+      "number": 5,
+      "pass": true
+    },
+    {
+      "check": "620 immutable embedding cells",
+      "number": 6,
+      "pass": true
+    },
+    {
+      "check": "Historical original CNN exact logit replay",
+      "number": 7,
+      "pass": true
+    },
+    {
+      "check": "Historical PR checkpoints frozen",
+      "number": 8,
+      "pass": true
+    },
+    {
+      "check": "PR AUROC exact",
+      "number": 9,
+      "pass": true
+    },
+    {
+      "check": "PR AP exact",
+      "number": 10,
+      "pass": true
+    },
+    {
+      "check": "PR historical classification exact",
+      "number": 11,
+      "pass": true
+    },
+    {
+      "check": "Exactly35 parameters all corrected heads",
+      "number": 12,
+      "pass": true
+    },
+    {
+      "check": "Zero initialization logit identity",
+      "number": 13,
+      "pass": true
+    },
+    {
+      "check": "Exact authoritative bias and optimizer implementation",
+      "number": 14,
+      "pass": true
+    },
+    {
+      "check": "ABS is population-global,not patient normalized",
+      "number": 15,
+      "pass": true
+    },
+    {
+      "check": "Global patient-equal variance retains between-patient variation",
+      "number": 16,
+      "pass": true
+    },
+    {
+      "check": "Exact historical PR transform",
+      "number": 17,
+      "pass": true
+    },
+    {
+      "check": "All good channels including unknown used",
+      "number": 18,
+      "pass": true
+    },
+    {
+      "check": "Shuffle preserves multiset",
+      "number": 19,
+      "pass": true
+    },
+    {
+      "check": "Shuffle labelblind signature",
+      "number": 20,
+      "pass": true
+    },
+    {
+      "check": "CNN logits not permuted",
+      "number": 21,
+      "pass": true
+    },
+    {
+      "check": "Permutation confined within patient",
+      "number": 22,
+      "pass": true
+    },
+    {
+      "check": "Outer-held labels rejected by training API",
+      "number": 23,
+      "pass": true
+    },
+    {
+      "check": "Only own fold CNN bank used",
+      "number": 24,
+      "pass": true
+    },
+    {
+      "check": "Exact historical inner assignments",
+      "number": 25,
+      "pass": true
+    },
+    {
+      "check": "Epoch selection uses FIT inner OOF only",
+      "number": 26,
+      "pass": true
+    },
+    {
+      "check": "Threshold selection uses FIT OOF only",
+      "number": 27,
+      "pass": true
+    },
+    {
+      "check": "Normalization frozen before new outer",
+      "number": 28,
+      "pass": true
+    },
+    {
+      "check": "No CNN train/extraction entry points",
+      "number": 29,
+      "pass": true
+    },
+    {
+      "check": "Direct float64 scale-only ranking identity",
+      "number": 30,
+      "pass": true
+    },
+    {
+      "check": "Historical metric implementation validated",
+      "number": 31,
+      "pass": true
+    },
+    {
+      "check": "Same124/10202 evaluation population",
+      "number": 32,
+      "pass": true
+    },
+    {
+      "check": "Paired bootstrap unit unique patient",
+      "number": 33,
+      "pass": true
+    },
+    {
+      "check": "Finite realFIT smokes and exact deterministic resume",
+      "number": 34,
+      "pass": true
+    },
+    {
+      "check": "Checkpoint and prediction original SHA snapshots",
+      "number": 35,
+      "pass": true
+    },
+    {
+      "check": "Exact C0 recovery with additions off",
+      "number": 36,
+      "pass": true
+    }
+  ],
+  "code": {
+    "evaluate.py": "7ca993a27dfd6b55be9602d7e1fb63ca9d20b39a87e5c342bfc77eb377222050",
+    "prepare.py": "943c53c6bd48b19c116c54a0f5dce7108c4065535a40367e5edea61ae87d7b3a",
+    "report.py": "f68123c5c91ccc4f2857e64e4a867a6c5152beb4dae7ffe53d998671a6765cb0",
+    "source.py": "152821f7176eb5dba8e8058d8ae6ae14ebb6180227c38edac3f8284008f6e4d8",
+    "train_controls.py": "6fb8db6fc78f31c4273f50f885d0a4b6e2ad58ef6eae7466a7cc78b99dc8bc3b",
+    "transforms.py": "45dd1fca79f719fa1fb0368f9becd28346d94a11476db8b453aad57fa7a2ca76"
+  },
+  "exact_resume": true,
+  "protocol": "37453f811edc2f70d873dbe87b04641a9956521c75e166b6652aee20779e6f48",
+  "real_FIT_smokes": [
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 1,
+      "method": "C1-ABS"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 1,
+      "method": "C1-SHUFFLE"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 2,
+      "method": "C1-ABS"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 2,
+      "method": "C1-SHUFFLE"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 3,
+      "method": "C1-ABS"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 3,
+      "method": "C1-SHUFFLE"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 4,
+      "method": "C1-ABS"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 4,
+      "method": "C1-SHUFFLE"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 5,
+      "method": "C1-ABS"
+    },
+    {
+      "FIT_only": true,
+      "epochs": 2,
+      "finite": true,
+      "fold": 5,
+      "method": "C1-SHUFFLE"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,4 @@
+method,TP_gained,TP_lost,FP_added,FP_removed,errors_recovered,correct_spoiled,channels,patient_equal_predicted_ez_fraction_delta
+R0,35,96,138,98,133,234,6273,-0.00513413939919292
+R1,22,41,93,90,112,134,6273,-0.0020488138457952403
+R2,17,31,75,52,69,106,6273,0.0027674912560389964

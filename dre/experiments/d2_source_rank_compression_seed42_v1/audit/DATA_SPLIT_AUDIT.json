@@ -1,0 +1,153 @@
+{
+  "all_cohort_y_member_loaded": false,
+  "canonical_pairs": 7635,
+  "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+  "features": 88,
+  "folds": [
+    {
+      "FIT_channels": 4623,
+      "FIT_only_preprocessor": true,
+      "FIT_patients": 51,
+      "VAL_channels": 1381,
+      "VAL_patients": 13,
+      "features88_bitwise": true,
+      "fold": 1,
+      "outer_excluded": true,
+      "source_patient_counts_FIT": [
+        22,
+        13,
+        12,
+        4
+      ],
+      "source_patient_counts_VAL": [
+        5,
+        4,
+        1,
+        3
+      ],
+      "split_and_identity_match": true
+    },
+    {
+      "FIT_channels": 4951,
+      "FIT_only_preprocessor": true,
+      "FIT_patients": 51,
+      "VAL_channels": 1186,
+      "VAL_patients": 13,
+      "features88_bitwise": true,
+      "fold": 2,
+      "outer_excluded": true,
+      "source_patient_counts_FIT": [
+        25,
+        18,
+        5,
+        3
+      ],
+      "source_patient_counts_VAL": [
+        4,
+        1,
+        3,
+        5
+      ],
+      "split_and_identity_match": true
+    },
+    {
+      "FIT_channels": 4725,
+      "FIT_only_preprocessor": true,
+      "FIT_patients": 50,
+      "VAL_channels": 1164,
+      "VAL_patients": 13,
+      "features88_bitwise": true,
+      "fold": 3,
+      "outer_excluded": true,
+      "source_patient_counts_FIT": [
+        19,
+        16,
+        9,
+        6
+      ],
+      "source_patient_counts_VAL": [
+        6,
+        2,
+        4,
+        1
+      ],
+      "split_and_identity_match": true
+    },
+    {
+      "FIT_channels": 4943,
+      "FIT_only_preprocessor": true,
+      "FIT_patients": 52,
+      "VAL_channels": 1267,
+      "VAL_patients": 13,
+      "features88_bitwise": true,
+      "fold": 4,
+      "outer_excluded": true,
+      "source_patient_counts_FIT": [
+        26,
+        11,
+        12,
+        3
+      ],
+      "source_patient_counts_VAL": [
+        8,
+        2,
+        2,
+        1
+      ],
+      "split_and_identity_match": true
+    },
+    {
+      "FIT_channels": 5025,
+      "FIT_only_preprocessor": true,
+      "FIT_patients": 51,
+      "VAL_channels": 1275,
+      "VAL_patients": 13,
+      "features88_bitwise": true,
+      "fold": 5,
+      "outer_excluded": true,
+      "source_patient_counts_FIT": [
+        24,
+        12,
+        11,
+        4
+      ],
+      "source_patient_counts_VAL": [
+        5,
+        5,
+        1,
+        2
+      ],
+      "split_and_identity_match": true
+    }
+  ],
+  "labels_from_hash_verified_original_FIT_VAL_banks": true,
+  "outer_TEST_labels_scores_metrics_read": false,
+  "patients": 80,
+  "protocol_sha256": "d552acea82b037ec42dceda277ef00babb06dba901346896a803cc17094b6bbe",
+  "source_categories": [
+    {
+      "channels": 3667,
+      "patients": 36,
+      "source": "HUP"
+    },
+    {
+      "channels": 2141,
+      "patients": 21,
+      "source": "LZU"
+    },
+    {
+      "channels": 925,
+      "patients": 15,
+      "source": "multicenter"
+    },
+    {
+      "channels": 902,
+      "patients": 8,
+      "source": "pediatric"
+    }
+  ],
+  "status": "PASS",
+  "validation_appearances": 65,
+  "validation_channel_appearances": 6273,
+  "validation_unique_ids": 47
+}

@@ -1,0 +1,25 @@
+{
+  "experiment": "d2_source_rank_compression_seed42_v1",
+  "status": "FROZEN_BEFORE_NEW_TRAINING_AND_OUTCOMES",
+  "seed": 42,
+  "new_arms": {"R0":0,"R1":1,"R2":2},
+  "frozen_reference": "R4 exact historical D2, not retrained",
+  "formal_new_runs": 15,
+  "primary_registered_hypothesis": "R2 improves over frozen R4",
+  "input_sha256": {
+    "feature_export":"1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "split":"fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "feature_order":"b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+    "a0_core":"1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a"
+  },
+  "data": {"patients":80,"channels":7635,"dimension":88,"development_appearances":65,"unique_development_IDs":47,"development_channel_appearances":6273,"EZ":0,"NEZ":1,"source_order":["HUP","LZU","multicenter","pediatric"],"preprocessing":"exact original patient_z then FIT-only SimpleImputer and StandardScaler; bitwise archived bank; no feature re-extraction; NPZ y never loaded"},
+  "architecture": {"shared":"LN88/Linear88x96/GELU/Dropout.15/Linear96x1","source":"rank-r original UV and four scalar biases; R0 bias only; unknown source zero correction","parameters":{"R0":8821,"R1":8921,"R2":9021,"R4":9221},"initialization":"seed42+1009*fold; shared state identical; dedicated CPU generator42+7000+training_seed for V Normal(0,.01); u,b zero; no warmstart","rank_audit":"float64 U@V; SVD numerical rank tolerance96*eps(float64)*largest singular value; zero matrix rank0; factor weights not identifiable"},
+  "training": {"optimizer":"AdamW","lr":0.001,"weight_decay":0.0001,"max_epochs":30,"minimum_stop_epoch":6,"patience":6,"gradient_clip":1.0,"lambda_source":0.001,"loss":"NEZ-positive mean BCE with FIT EZcount/NEZcount pos_weight; one update per FIT patient","order":"original sorted groups, default_rng(seed+epoch).permutation; reseed after model construction","regularizer":"mean(V^2)+mean_g[w_g*(mean(u_g^2)+b_g^2)], w_g=(N_FIT/4)/max(n_FIT,g,1); R0 removes nonexistent V/u terms only; rank-dependent mean-square spaces not compensated","device":"cuda float32, no AMP/TF32; original audited runtime312","resume":"exact complete epoch model/Adam/CPU+CUDA RNG/history; SHA bindings; no outcome-based repetition"},
+  "selection": {"threshold":"201 grid0:.005:1, patientMF1/patientEZF1/pooledBA/proximity.5/smaller","checkpoint":"patientMF1/patientEZF1/earlier epoch","R4":"archived selected checkpoint/threshold, exact frozen scores after fresh forward drift<2e-6","hyperparameter_search":false,"outer_TEST":false},
+  "evaluation": {"metrics":11,"contrasts":["R0-R4","R1-R4","R2-R4","R2-R1","R1-R0","R2-R0"],"bootstrap_draws":10000,"bootstrap_seed":42,"unit":"unique patient-ID clusters preserving repeated development appearances, appearance-equal point metrics","positive_patient_definition":"unique-ID mean contrast across all its appearances >0, not counting repeated appearances separately","no_threshold_reoptimization":true},
+  "interventions": {"arms":["R1","R2"],"A":"disable direction retain bias","B":"disable bias retain direction","classification":"same checkpoint and selected numeric threshold, NEZ float32 sigmoid","ranking":"bias is source-constant within patient; verify float64 component-order translation; reuse full-model frozen ranking for bias-off to prevent numerical tie artifacts; direction-off ranks by shared base; quantify direction-induced pair reversals","retrained":false,"additional_formal_runs":0},
+  "gate": {"macro_delta":0.010,"EZF1_AP_nondecline":true,"positive_folds":4,"severe_source_collapse":"any source patient-equal Macro-F1 drop >0.050 vs frozen R4 blocks supported terminal; no posthoc explanation waiver","integrity_and_finite_required":true,"rank_constraint_required":true,"target":0.700},
+  "terminal_priority": ["EXPERIMENT_BLOCKED on integrity/engineering failure","SOURCE_RANK_TARGET_0P70_REACHED if any qualifying compressed candidate reaches.700, disclose R2 gate separately","RANK2_COMPRESSION_GAIN_SUPPORTED if full R2 gate passes","RANK1_COMPRESSION_GAIN_SUPPORTED if R1 magnitude/fold/EZF1/AP/source/finite gates pass; exploratory secondary candidate","SOURCE_BIAS_ONLY_SUFFICIENT if R0 same gates pass; exploratory secondary candidate","RANK4_REMAINS_BEST if all new Macro-F1 point estimates <=R4","NO_MEANINGFUL_GAIN otherwise"],
+  "interpretation": {"exploratory_repeated_development":true,"nominal_CIs_not_search_or_multiplicity_adjusted":true,"unseen_center_transfer_evaluated":false,"source_is_acquisition_metadata_not_biology":true,"causal_overfitting_claim":false},
+  "public": "code, protocol/input/checkpoint hashes, non-identifying aggregate metrics/mechanism audits only"
+}

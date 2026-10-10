@@ -1,0 +1,280 @@
+{
+  "FIT_smokes": [
+    {
+      "FIT_channels": 64,
+      "finite_loss_gradient_parameters": true,
+      "fold": 1,
+      "method": "R0"
+    },
+    {
+      "FIT_channels": 64,
+      "finite_loss_gradient_parameters": true,
+      "fold": 1,
+      "method": "R1"
+    },
+    {
+      "FIT_channels": 64,
+      "finite_loss_gradient_parameters": true,
+      "fold": 1,
+      "method": "R2"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 2,
+      "method": "R0"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 2,
+      "method": "R1"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 2,
+      "method": "R2"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 3,
+      "method": "R0"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 3,
+      "method": "R1"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 3,
+      "method": "R2"
+    },
+    {
+      "FIT_channels": 64,
+      "finite_loss_gradient_parameters": true,
+      "fold": 4,
+      "method": "R0"
+    },
+    {
+      "FIT_channels": 64,
+      "finite_loss_gradient_parameters": true,
+      "fold": 4,
+      "method": "R1"
+    },
+    {
+      "FIT_channels": 64,
+      "finite_loss_gradient_parameters": true,
+      "fold": 4,
+      "method": "R2"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 5,
+      "method": "R0"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 5,
+      "method": "R1"
+    },
+    {
+      "FIT_channels": 86,
+      "finite_loss_gradient_parameters": true,
+      "fold": 5,
+      "method": "R2"
+    }
+  ],
+  "checks": [
+    {
+      "description": "original80 cohort",
+      "id": 1,
+      "status": "PASS"
+    },
+    {
+      "description": "original7635 identities",
+      "id": 2,
+      "status": "PASS"
+    },
+    {
+      "description": "all5 original folds",
+      "id": 3,
+      "status": "PASS"
+    },
+    {
+      "description": "original88 feature order",
+      "id": 4,
+      "status": "PASS"
+    },
+    {
+      "description": "exact patient-relative normalization",
+      "id": 5,
+      "status": "PASS"
+    },
+    {
+      "description": "FIT-only original imputer/scaler bitwise",
+      "id": 6,
+      "status": "PASS"
+    },
+    {
+      "description": "EZ0 NEZ1 and finite bank labels",
+      "id": 7,
+      "status": "PASS"
+    },
+    {
+      "description": "R4 state and forward compatibility",
+      "id": 8,
+      "status": "PASS"
+    },
+    {
+      "description": "exact frozen R4 metric replay",
+      "id": 9,
+      "status": "PASS"
+    },
+    {
+      "description": "rank0 parameter count",
+      "id": 10,
+      "status": "PASS"
+    },
+    {
+      "description": "rank1 parameter count",
+      "id": 11,
+      "status": "PASS"
+    },
+    {
+      "description": "rank2 parameter count",
+      "id": 12,
+      "status": "PASS"
+    },
+    {
+      "description": "rank4 parameter count",
+      "id": 13,
+      "status": "PASS"
+    },
+    {
+      "description": "all UV shapes",
+      "id": 14,
+      "status": "PASS"
+    },
+    {
+      "description": "identical shared initial state every fold and dedicated RNG",
+      "id": 15,
+      "status": "PASS"
+    },
+    {
+      "description": "exact zero initial source correction",
+      "id": 16,
+      "status": "PASS"
+    },
+    {
+      "description": "source forward exact formula",
+      "id": 17,
+      "status": "PASS"
+    },
+    {
+      "description": "unknown shared-head fallback",
+      "id": 18,
+      "status": "PASS"
+    },
+    {
+      "description": "nonzero shared gradient",
+      "id": 19,
+      "status": "PASS"
+    },
+    {
+      "description": "zero-u initial V data gradient and nonzero u,b",
+      "id": 20,
+      "status": "PASS"
+    },
+    {
+      "description": "locked source regularizer each rank",
+      "id": 21,
+      "status": "PASS"
+    },
+    {
+      "description": "FIT-only NEZ class weighting",
+      "id": 22,
+      "status": "PASS"
+    },
+    {
+      "description": "one update per sorted FIT patient",
+      "id": 23,
+      "status": "PASS"
+    },
+    {
+      "description": "identical deterministic patient ordering",
+      "id": 24,
+      "status": "PASS"
+    },
+    {
+      "description": "exact201-grid tie selection parity",
+      "id": 25,
+      "status": "PASS"
+    },
+    {
+      "description": "checkpoint MF1 EZF1 earlier parity",
+      "id": 26,
+      "status": "PASS"
+    },
+    {
+      "description": "effective UV numerical rank",
+      "id": 27,
+      "status": "PASS"
+    },
+    {
+      "description": "source-constant bias does not change mathematical ranking",
+      "id": 28,
+      "status": "PASS"
+    },
+    {
+      "description": "direction and bias intervention arithmetic",
+      "id": 29,
+      "status": "PASS"
+    },
+    {
+      "description": "no clinical label inputs",
+      "id": 30,
+      "status": "PASS"
+    },
+    {
+      "description": "no outer test evaluation",
+      "id": 31,
+      "status": "PASS"
+    },
+    {
+      "description": "exact epoch-boundary model optimizer selection resume",
+      "id": 32,
+      "status": "PASS"
+    },
+    {
+      "description": "finite synthetic and15 actual FIT smokes",
+      "id": 33,
+      "status": "PASS"
+    },
+    {
+      "description": "same original identities across4 ranks",
+      "id": 34,
+      "status": "PASS"
+    }
+  ],
+  "code_sha256": {
+    "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+    "finalize.py": "845dfb269f7c2a8ef922c1e97727f8c2b0de925dd2dd5da2362416d5d0ff042b",
+    "mechanism.py": "f59f05b23757317dcd5169b2bd6ea5c7d4e0113ec513e61af0deb3f5c8a23384",
+    "model.py": "dcdd347947a54c1602ad17a8fd4ca35d99667819597b214052b1987b38688e82",
+    "prepare.py": "a8e8e47748fadd64c0550a3e70853928031861b5c91446bc35a6b8245ee19e8e",
+    "run_training.py": "282324461967c4b7cf49ee0f1fc0d31da9236f16125217836b449093d5295e05",
+    "runtime.py": "c7a498ce8ed1c5099fe4871bb22cc05eca49449008dfec82bf4af0abd99e1206",
+    "train.py": "d4c4524e53a52cede7996081abf2c198104a0176e1653d4910fdf55940223823"
+  },
+  "formal_checkpoints_modified": false,
+  "independent_original_metric_parity_cases": 15,
+  "protocol_sha256": "d552acea82b037ec42dceda277ef00babb06dba901346896a803cc17094b6bbe",
+  "status": "PASS"
+}

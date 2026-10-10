@@ -1,0 +1,10 @@
+center,method,patients,AUROC_improved_patients,AP_improved_patients
+HUP,C1,10,4,5
+Open-iEEG,C1,103,56,56
+SourceSink,C1,11,8,9
+HUP,C2,10,4,5
+Open-iEEG,C2,103,52,53
+SourceSink,C2,11,5,7
+HUP,C3,10,3,4
+Open-iEEG,C3,103,54,55
+SourceSink,C3,11,8,9

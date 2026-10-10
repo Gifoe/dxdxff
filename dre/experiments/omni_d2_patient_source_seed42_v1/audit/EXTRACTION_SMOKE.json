@@ -1,0 +1,8 @@
+{
+  "CNN_state_unchanged": true,
+  "all_patient_metrics_equal": true,
+  "frozen_baseline_score_max_error": 0.0,
+  "no_new_head_training": true,
+  "original_segment_api_finite": true,
+  "status": "PASS"
+}

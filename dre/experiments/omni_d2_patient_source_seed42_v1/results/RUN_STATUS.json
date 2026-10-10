@@ -1,0 +1,12 @@
+{
+  "folds": 5,
+  "inner_training_runs": 45,
+  "labeled_unique_patient_channels": 10202,
+  "new_CNN_training": false,
+  "outer_labels_used_for_selection": false,
+  "patients": 124,
+  "prediction_ledger_sha256": "398a199208cc9579ec71370ba0f33a7f3a68f8ebc0a04dc195ecb0aec06abe3f",
+  "refits": 15,
+  "status": "COMPLETE",
+  "terminal": "SOURCE_SHUFFLE_CONTROL_NOT_BEATEN"
+}

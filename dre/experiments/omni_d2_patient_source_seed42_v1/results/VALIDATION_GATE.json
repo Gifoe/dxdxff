@@ -1,0 +1,21 @@
+{
+  "AUROC_target_reached": true,
+  "pooled8061_not_used": true,
+  "primary_conditions": {
+    "AP_nondecline": true,
+    "AUROC_positive_folds_ge4": true,
+    "C2_C0_AUROC_ge010": true,
+    "C2_C1_AUROC_ge005": false,
+    "C2_C3_AUROC_ge005": false,
+    "MRR_Top1_nondecline": true,
+    "cohort_checkpoint_alignment_integrity": true,
+    "matched_FIT_threshold_MacroF1_nondecline": true,
+    "meaningful_direction": false,
+    "pathological_F1_decline_le010": true,
+    "small_source_AUROC_decline_le050": true
+  },
+  "primary_supported": false,
+  "protocol": "25e9c5b18e44ef7176915b5b5d8252e03437236c43a4e422d342373b487e807b",
+  "reused_cohort_exploratory": true,
+  "terminal": "SOURCE_SHUFFLE_CONTROL_NOT_BEATEN"
+}

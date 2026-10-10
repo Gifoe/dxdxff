@@ -1,0 +1,177 @@
+{
+  "all_source_permutations_labelblind": true,
+  "limitation": "Open-iEEG103/124; marginal-preserving permutation cannot change every source ID",
+  "partitions": [
+    {
+      "changed_fraction": 0.24242424242424243,
+      "counts_randomized": {
+        "HUP": 8,
+        "Open-iEEG": 82,
+        "SourceSink": 9
+      },
+      "counts_real": {
+        "HUP": 8,
+        "Open-iEEG": 82,
+        "SourceSink": 9
+      },
+      "fold": 1,
+      "labelblind": true,
+      "partition": "fit",
+      "patients": 99
+    },
+    {
+      "changed_fraction": 0.28,
+      "counts_randomized": {
+        "HUP": 2,
+        "Open-iEEG": 21,
+        "SourceSink": 2
+      },
+      "counts_real": {
+        "HUP": 2,
+        "Open-iEEG": 21,
+        "SourceSink": 2
+      },
+      "fold": 1,
+      "labelblind": true,
+      "partition": "held",
+      "patients": 25
+    },
+    {
+      "changed_fraction": 0.28,
+      "counts_randomized": {
+        "HUP": 8,
+        "Open-iEEG": 83,
+        "SourceSink": 9
+      },
+      "counts_real": {
+        "HUP": 8,
+        "Open-iEEG": 83,
+        "SourceSink": 9
+      },
+      "fold": 2,
+      "labelblind": true,
+      "partition": "fit",
+      "patients": 100
+    },
+    {
+      "changed_fraction": 0.3333333333333333,
+      "counts_randomized": {
+        "HUP": 2,
+        "Open-iEEG": 20,
+        "SourceSink": 2
+      },
+      "counts_real": {
+        "HUP": 2,
+        "Open-iEEG": 20,
+        "SourceSink": 2
+      },
+      "fold": 2,
+      "labelblind": true,
+      "partition": "held",
+      "patients": 24
+    },
+    {
+      "changed_fraction": 0.2727272727272727,
+      "counts_randomized": {
+        "HUP": 8,
+        "Open-iEEG": 82,
+        "SourceSink": 9
+      },
+      "counts_real": {
+        "HUP": 8,
+        "Open-iEEG": 82,
+        "SourceSink": 9
+      },
+      "fold": 3,
+      "labelblind": true,
+      "partition": "fit",
+      "patients": 99
+    },
+    {
+      "changed_fraction": 0.32,
+      "counts_randomized": {
+        "HUP": 2,
+        "Open-iEEG": 21,
+        "SourceSink": 2
+      },
+      "counts_real": {
+        "HUP": 2,
+        "Open-iEEG": 21,
+        "SourceSink": 2
+      },
+      "fold": 3,
+      "labelblind": true,
+      "partition": "held",
+      "patients": 25
+    },
+    {
+      "changed_fraction": 0.30303030303030304,
+      "counts_randomized": {
+        "HUP": 8,
+        "Open-iEEG": 83,
+        "SourceSink": 8
+      },
+      "counts_real": {
+        "HUP": 8,
+        "Open-iEEG": 83,
+        "SourceSink": 8
+      },
+      "fold": 4,
+      "labelblind": true,
+      "partition": "fit",
+      "patients": 99
+    },
+    {
+      "changed_fraction": 0.4,
+      "counts_randomized": {
+        "HUP": 2,
+        "Open-iEEG": 20,
+        "SourceSink": 3
+      },
+      "counts_real": {
+        "HUP": 2,
+        "Open-iEEG": 20,
+        "SourceSink": 3
+      },
+      "fold": 4,
+      "labelblind": true,
+      "partition": "held",
+      "patients": 25
+    },
+    {
+      "changed_fraction": 0.30303030303030304,
+      "counts_randomized": {
+        "HUP": 8,
+        "Open-iEEG": 82,
+        "SourceSink": 9
+      },
+      "counts_real": {
+        "HUP": 8,
+        "Open-iEEG": 82,
+        "SourceSink": 9
+      },
+      "fold": 5,
+      "labelblind": true,
+      "partition": "fit",
+      "patients": 99
+    },
+    {
+      "changed_fraction": 0.24,
+      "counts_randomized": {
+        "HUP": 2,
+        "Open-iEEG": 21,
+        "SourceSink": 2
+      },
+      "counts_real": {
+        "HUP": 2,
+        "Open-iEEG": 21,
+        "SourceSink": 2
+      },
+      "fold": 5,
+      "labelblind": true,
+      "partition": "held",
+      "patients": 25
+    }
+  ],
+  "status": "PASS"
+}

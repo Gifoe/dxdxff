@@ -1,0 +1,8 @@
+{
+  "C2_C3_identical": true,
+  "V_init_std": 0.01,
+  "initial_C2_sha256": "85ca89e2424e70d725205924c0028d7a21e005dae09dc57c98aecd67fd054b6a",
+  "source_second_zero_gate": false,
+  "status": "PASS",
+  "zero_correction_all_arms": true
+}

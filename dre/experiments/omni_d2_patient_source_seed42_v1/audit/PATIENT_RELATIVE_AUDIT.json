@@ -1,0 +1,9 @@
+{
+  "all_unknown_good_retained": true,
+  "finite": true,
+  "normalization_labelblind": true,
+  "patient_fold_cells": 620,
+  "status": "PASS",
+  "unknown_good_canonical_OOF_channels": 2300,
+  "zero_variance_rule": "population variance +1e-5"
+}

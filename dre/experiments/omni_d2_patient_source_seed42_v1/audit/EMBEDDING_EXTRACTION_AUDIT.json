@@ -1,0 +1,13 @@
+{
+  "BN_eval_dropout_disabled": true,
+  "all_backbones_frozen_unchanged": true,
+  "embedding_dim": 32,
+  "labels_accessed_in_extractor": false,
+  "numpy": "2.2.6",
+  "patient_fold_cells": 620,
+  "records_per_fold": 137,
+  "segments_per_edf": 30,
+  "shared_spectrum_exact_transform": true,
+  "status": "PASS",
+  "torch": "2.8.0+cu128"
+}

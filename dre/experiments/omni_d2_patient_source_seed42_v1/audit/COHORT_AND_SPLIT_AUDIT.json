@@ -1,0 +1,24 @@
+{
+  "CNN_checkpoints": {
+    "1": "c7afdb90621ddd241c07a03663207a4f7c1ac674bd581fbdb370133dae4bbf33",
+    "2": "da183d3f2dc26cc59b5aeee447f26427191328e2c683692af8a6fb29a0a6ef42",
+    "3": "1781f49ee222162a2aded9cdd8f14c0d4bf27d06c8296dcfe2905b4ef7e6cdae",
+    "4": "30eb0b8676cba0dec4b8efb375d9247d99c7f7a88aa0dfed265dfbfc1176f2ba",
+    "5": "c323228678bebb61085da8707c92db37ed196b4075c1abc4b22efccfd953004a"
+  },
+  "folds": 5,
+  "labeled_units": 10202,
+  "normal": 9089,
+  "original_manifest_sha256": "9a326a4f7841129f430a7afa6e5456d416fd723efd8558d4f0716e3930858a1d",
+  "pathological": 1113,
+  "patients": 124,
+  "private_label_vault_separate_from_labelblind_extractor": true,
+  "records": 137,
+  "source_counts": {
+    "HUP": 10,
+    "Open-iEEG": 103,
+    "SourceSink": 11
+  },
+  "status": "PASS",
+  "unknown_good_occurrences": 2339
+}

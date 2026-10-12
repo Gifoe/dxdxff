@@ -1,0 +1,7 @@
+{
+  "new_training_cells": 5,
+  "no_post_result_tuning": true,
+  "reused_cells": 15,
+  "scientific_status": "POSTHOC_OUTER_INFORMED_COMBINATION_EXPLORATORY_REPEATED_TEST",
+  "status": "COMBINED_DELETION_OUTER_COMPLETE"
+}

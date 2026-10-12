@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source_free_model_parameters": 8817,
+  "input_dimensions": 88,
+  "retained_columns": 62,
+  "excluded_ZDELTA_columns": 26,
+  "excluded_auxiliary_duplicate_columns": 8,
+  "reference_checkpoint_and_bank_pairs_verified_unchanged_after_evaluation": 15,
+  "published_individual_predictions": false,
+  "installed_skills_used": []
+}

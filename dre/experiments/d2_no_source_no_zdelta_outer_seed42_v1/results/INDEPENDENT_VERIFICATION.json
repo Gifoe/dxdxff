@@ -1,0 +1,13 @@
+{
+  "analysis_only_numpy": "2.3.5",
+  "analysis_only_sklearn": "1.7.2",
+  "bootstrap_draws": 10000,
+  "maximum_metric_drift": 3.3306690738754696e-16,
+  "metrics_per_cell": 11,
+  "model_patient_cells": 320,
+  "new_training_epochs": 45,
+  "no_model_replay": true,
+  "no_threshold_changes": true,
+  "paired_effects_checked": 33,
+  "status": "PASS"
+}

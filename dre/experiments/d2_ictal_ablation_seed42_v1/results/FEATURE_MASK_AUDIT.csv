@@ -1,0 +1,8 @@
+arm,retained_feature_count,excluded_feature_count,retained_views,constant_zero_retained,varying_dimensions_retained,retained_auxiliary_duplicate_count,all_same_view_duplicate_copies_masked_together,mask_after_full_preprocessing
+Full D2,88,0,"abs,delta,zdelta,ratio",16,72,16,True,True
+w/o Patient Z,88,0,"abs,delta,zdelta,ratio",16,72,16,True,True
+w/o Source,88,0,"abs,delta,zdelta,ratio",16,72,16,True,True
+ABS Only,18,70,abs,4,14,0,True,True
+w/o DELTA,62,26,"abs,zdelta,ratio",12,50,8,True,True
+w/o ZDELTA,62,26,"abs,delta,ratio",12,50,8,True,True
+w/o RATIO,70,18,"abs,delta,zdelta",12,58,16,True,True

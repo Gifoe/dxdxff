@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scientific_runtime_unchanged": {"torch": "2.11.0+cu128", "numpy": "2.4.3", "sklearn": "1.8.0"},
+  "failure": "Independent verification native Windows access violation at sklearn NumPy-backed cached unique-label operation",
+  "confirmed_native_exit": "0xC0000005",
+  "successful_analysis_runtime": {"torch": "2.11.0+cu128", "numpy": "2.3.5", "sklearn": "1.7.2"},
+  "alternative_runtime_preexisted": true,
+  "alternative_runtime_fixture": "Hand-calculated tied-score Macro-F117/35, AUROC11/18, AP0.7; tolerance1e-12, PASS",
+  "identical_verification_script_used": true,
+  "verification_script_sha256": "8dc3440b1e26340b0572a3ddf799c3a10a11af26513b4e6993a64b2aeb30a287",
+  "alternative_runtime_trains_or_runs_models": false,
+  "training_checkpoint_prediction_threshold_or_label_changes": false,
+  "fold_center_weighted_aggregation_checks": 14,
+  "fold_center_metrics_checked_per_comparison": 11,
+  "aggregate_tolerance": 1e-12,
+  "native_failure_logs_retained_privately": true
+}

@@ -1,0 +1,872 @@
+{
+  "binding": {
+    "dependencies": {
+      "amendment": "452a4f6957d18125a9ea1b32d827c5f50fbc81c22d9d41100173bddcd2e22503",
+      "core": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+      "evidence_views": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+      "feature_aggregation": "426344bfa6ef0dd4b1dc59fe267d7920cef020fdcb42e834efc9a9ae6b4ca273",
+      "features": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+      "full_freeze": "f82bba4564cd4020ccd942160c2fd299b61147ce7080b5b6876765f40cfaa43b",
+      "full_seal": "2fda68490c84eac173e061178c774d13d464e12f485ee01681a1cba596c91ffd",
+      "newcode_ablation_core.py": "c567196692be1149795d93586fe25e2b474f071511bd2fbd0f561db82e00b7d5",
+      "newcode_run_study.py": "c39506f5b8cc5b908dc3ba45b6cc6fa626d858879c49e97b03913b151904f114",
+      "newcode_verify_completed.py": "8dc3440b1e26340b0572a3ddf799c3a10a11af26513b4e6993a64b2aeb30a287",
+      "newtest_engineering.py": "2fdc6e3a266f58195f32a1503053905c6102221363ea2d8b068127720576ee54",
+      "noZ_bank_1": "dcdcebb8ccc6bd7082cd1de311c4260090ce93aa3badb2a808c1251b90f9fe1e",
+      "noZ_bank_2": "a7a2ecdf47bdb6fa98dd64c301f32e2cab2c569850ce9e8722f01681d2702439",
+      "noZ_bank_3": "69949478178760b004d7d7ffaed9de0f25fa71ed038c5a49203642af7959d6fc",
+      "noZ_bank_4": "7ae8ca81bdf536454ad5fae10ada74907a429a9a938597ceecc4ee72665d7519",
+      "noZ_bank_5": "a58d118a86bc76edcc1420195631fe220fc3a6fb1dddd9ef50d80846d374eb40",
+      "noZ_checkpoint_1": "8a01b8e93d0d213a70fcbe5ae5d25f8a38a25a4354d27ce2c5777971658dc0b9",
+      "noZ_checkpoint_2": "1de750947e0a653c79b06c5bc8a82afc905d0d9f17e653d0798ed78514883c6a",
+      "noZ_checkpoint_3": "ed96284b61976a3b0c1a615ddea64fb209667042b7dbab968afecde3fb4727c5",
+      "noZ_checkpoint_4": "52eee12405a2ed0d11df7775dd40b400094dc229d75f483951fb01efd9b2d2c1",
+      "noZ_checkpoint_5": "125015ce7cc7734bf69faf3ecdcd7586d8b3c05ec2d5db79cf5dd1823f2c6e72",
+      "noZ_freeze": "3c5b19aaaad83dbd41f5306f31440e717e049d46290e062145b510deadb28b8e",
+      "noZ_seal": "459253f1dd88f8adb94050ad0170e036deac8d110571cc0b765b77d3ca905343",
+      "original_bank_1": "a863a36a983d77d3e78675ee1761c9edba3e35f8dd6e52d7d12d03109e415a1a",
+      "original_bank_2": "6efc5b4d4934b3847207d32b94cac884df2e8b34ec7d170214ae1450d04f2fea",
+      "original_bank_3": "d936ef38ba96bb27d13dc417ac92582b3b7a150ef5d725e32e629ec9f2fee6cd",
+      "original_bank_4": "bc4ca7fb9b0bb860015a61dcea4146980386ce5db70a66e58817e50b40ef3ac2",
+      "original_bank_5": "a4a809d1146d719504fbbc14eaba58d4f932f746f1a617ef2e6853967a9f50dd",
+      "original_checkpoint_1": "c29f08173dd5ac65898e35648233fa2954925edd22e4038517b6b50da76e47b9",
+      "original_checkpoint_2": "6814f0a8e9fbb04d80560009b9fb55481210d40dcf10f9f0e0214083fb6bfbf3",
+      "original_checkpoint_3": "be7c1f963ba4d56e103391c84e0aa6f00177307ccca5724434168062a00c65ef",
+      "original_checkpoint_4": "c1e380d0c26dc65ff3213d8b825126270c85a3c8ddd6117b881a38ca9ba4064a",
+      "original_checkpoint_5": "f8d17c6c8da4fe976b3a6fd4355145dfcb3c0fb848d525f1cb533077b5cc3711",
+      "outer_helper": "0133d7623f1dc67442591edd19cd07d4b3d7b4742b6833a8a227bb2ef274c60c",
+      "protocol": "b2d518d350a7450c32e02eae593db4d5348d05c046594719131311fb2ec1d1e0",
+      "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+    },
+    "original_training_code": {
+      "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+      "finalize.py": "620e1e5cdfbe7a75f0887ffd1beb5f4bfbceb2d254f27d5bb0824094f3b8e9cf",
+      "model.py": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+      "posterior.py": "8cbe1a39b6035c11c9531aaba82652dd17de0a4d4a7c131bcf718ff0824737ba",
+      "prepare.py": "8cc9632b698edeb07f98a098d5d810cf1ab4c71db4b0f6539130c91bd773d114",
+      "run_fold.py": "7a984df72b6668a2f9ce59cdc178bbc277f64e5b3b8107295feaf4704cad9bf5",
+      "train.py": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+      "verify_fold.py": "e875020d7e79732b96fa6e06b3b4a7e68ec96f228d5c8598b80bc6bbb2509e29"
+    }
+  },
+  "columns": [
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 0,
+      "name": "b0_abs__log_bp_delta__seizure_mean",
+      "physiological_feature": "log_bp_delta",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 1,
+      "name": "b0_abs__log_bp_delta__seizure_std",
+      "physiological_feature": "log_bp_delta",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 2,
+      "name": "b0_abs__log_bp_theta__seizure_mean",
+      "physiological_feature": "log_bp_theta",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 3,
+      "name": "b0_abs__log_bp_theta__seizure_std",
+      "physiological_feature": "log_bp_theta",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 4,
+      "name": "b0_abs__log_bp_beta__seizure_mean",
+      "physiological_feature": "log_bp_beta",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 5,
+      "name": "b0_abs__log_bp_beta__seizure_std",
+      "physiological_feature": "log_bp_beta",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 6,
+      "name": "b0_abs__log_bp_low_gamma__seizure_mean",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 7,
+      "name": "b0_abs__log_bp_low_gamma__seizure_std",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 8,
+      "name": "b0_abs__log_bp_high_gamma__seizure_mean",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 9,
+      "name": "b0_abs__log_bp_high_gamma__seizure_std",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 10,
+      "name": "b0_abs__rms__seizure_mean",
+      "physiological_feature": "rms",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 11,
+      "name": "b0_abs__rms__seizure_std",
+      "physiological_feature": "rms",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 12,
+      "name": "b0_abs__variance__seizure_mean",
+      "physiological_feature": "variance",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 13,
+      "name": "b0_abs__variance__seizure_std",
+      "physiological_feature": "variance",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 14,
+      "name": "b0_abs__line_length_per_sec__seizure_mean",
+      "physiological_feature": "line_length_per_sec",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 15,
+      "name": "b0_abs__line_length_per_sec__seizure_std",
+      "physiological_feature": "line_length_per_sec",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 16,
+      "name": "b0_abs__spectral_entropy__seizure_mean",
+      "physiological_feature": "spectral_entropy",
+      "view": "abs"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 17,
+      "name": "b0_abs__spectral_entropy__seizure_std",
+      "physiological_feature": "spectral_entropy",
+      "view": "abs"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 18,
+      "name": "b0_delta__log_bp_delta__seizure_mean",
+      "physiological_feature": "log_bp_delta",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 19,
+      "name": "b0_delta__log_bp_delta__seizure_std",
+      "physiological_feature": "log_bp_delta",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 20,
+      "name": "b0_delta__log_bp_theta__seizure_mean",
+      "physiological_feature": "log_bp_theta",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 21,
+      "name": "b0_delta__log_bp_theta__seizure_std",
+      "physiological_feature": "log_bp_theta",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 22,
+      "name": "b0_delta__log_bp_beta__seizure_mean",
+      "physiological_feature": "log_bp_beta",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 23,
+      "name": "b0_delta__log_bp_beta__seizure_std",
+      "physiological_feature": "log_bp_beta",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 24,
+      "name": "b0_delta__log_bp_low_gamma__seizure_mean",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 25,
+      "name": "b0_delta__log_bp_low_gamma__seizure_std",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 26,
+      "name": "b0_delta__log_bp_high_gamma__seizure_mean",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 27,
+      "name": "b0_delta__log_bp_high_gamma__seizure_std",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 28,
+      "name": "b0_delta__rms__seizure_mean",
+      "physiological_feature": "rms",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 29,
+      "name": "b0_delta__rms__seizure_std",
+      "physiological_feature": "rms",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 30,
+      "name": "b0_delta__variance__seizure_mean",
+      "physiological_feature": "variance",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 31,
+      "name": "b0_delta__variance__seizure_std",
+      "physiological_feature": "variance",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 32,
+      "name": "b0_delta__line_length_per_sec__seizure_mean",
+      "physiological_feature": "line_length_per_sec",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 33,
+      "name": "b0_delta__line_length_per_sec__seizure_std",
+      "physiological_feature": "line_length_per_sec",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 34,
+      "name": "b0_delta__spectral_entropy__seizure_mean",
+      "physiological_feature": "spectral_entropy",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 35,
+      "name": "b0_delta__spectral_entropy__seizure_std",
+      "physiological_feature": "spectral_entropy",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 36,
+      "name": "b0_zdelta__log_bp_delta__seizure_mean",
+      "physiological_feature": "log_bp_delta",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 37,
+      "name": "b0_zdelta__log_bp_delta__seizure_std",
+      "physiological_feature": "log_bp_delta",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 38,
+      "name": "b0_zdelta__log_bp_theta__seizure_mean",
+      "physiological_feature": "log_bp_theta",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 39,
+      "name": "b0_zdelta__log_bp_theta__seizure_std",
+      "physiological_feature": "log_bp_theta",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 40,
+      "name": "b0_zdelta__log_bp_beta__seizure_mean",
+      "physiological_feature": "log_bp_beta",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 41,
+      "name": "b0_zdelta__log_bp_beta__seizure_std",
+      "physiological_feature": "log_bp_beta",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 42,
+      "name": "b0_zdelta__log_bp_low_gamma__seizure_mean",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 43,
+      "name": "b0_zdelta__log_bp_low_gamma__seizure_std",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 44,
+      "name": "b0_zdelta__log_bp_high_gamma__seizure_mean",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 45,
+      "name": "b0_zdelta__log_bp_high_gamma__seizure_std",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 46,
+      "name": "b0_zdelta__rms__seizure_mean",
+      "physiological_feature": "rms",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 47,
+      "name": "b0_zdelta__rms__seizure_std",
+      "physiological_feature": "rms",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 48,
+      "name": "b0_zdelta__variance__seizure_mean",
+      "physiological_feature": "variance",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 49,
+      "name": "b0_zdelta__variance__seizure_std",
+      "physiological_feature": "variance",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 50,
+      "name": "b0_zdelta__line_length_per_sec__seizure_mean",
+      "physiological_feature": "line_length_per_sec",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 51,
+      "name": "b0_zdelta__line_length_per_sec__seizure_std",
+      "physiological_feature": "line_length_per_sec",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 52,
+      "name": "b0_zdelta__spectral_entropy__seizure_mean",
+      "physiological_feature": "spectral_entropy",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 53,
+      "name": "b0_zdelta__spectral_entropy__seizure_std",
+      "physiological_feature": "spectral_entropy",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 54,
+      "name": "b0_ratio__log_bp_delta__seizure_mean",
+      "physiological_feature": "log_bp_delta",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 55,
+      "name": "b0_ratio__log_bp_delta__seizure_std",
+      "physiological_feature": "log_bp_delta",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 56,
+      "name": "b0_ratio__log_bp_theta__seizure_mean",
+      "physiological_feature": "log_bp_theta",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": true,
+      "index": 57,
+      "name": "b0_ratio__log_bp_theta__seizure_std",
+      "physiological_feature": "log_bp_theta",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 58,
+      "name": "b0_ratio__log_bp_beta__seizure_mean",
+      "physiological_feature": "log_bp_beta",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 59,
+      "name": "b0_ratio__log_bp_beta__seizure_std",
+      "physiological_feature": "log_bp_beta",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 60,
+      "name": "b0_ratio__log_bp_low_gamma__seizure_mean",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 61,
+      "name": "b0_ratio__log_bp_low_gamma__seizure_std",
+      "physiological_feature": "log_bp_low_gamma",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 62,
+      "name": "b0_ratio__log_bp_high_gamma__seizure_mean",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 63,
+      "name": "b0_ratio__log_bp_high_gamma__seizure_std",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 64,
+      "name": "b0_ratio__rms__seizure_mean",
+      "physiological_feature": "rms",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 65,
+      "name": "b0_ratio__rms__seizure_std",
+      "physiological_feature": "rms",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 66,
+      "name": "b0_ratio__variance__seizure_mean",
+      "physiological_feature": "variance",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 67,
+      "name": "b0_ratio__variance__seizure_std",
+      "physiological_feature": "variance",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 68,
+      "name": "b0_ratio__line_length_per_sec__seizure_mean",
+      "physiological_feature": "line_length_per_sec",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 69,
+      "name": "b0_ratio__line_length_per_sec__seizure_std",
+      "physiological_feature": "line_length_per_sec",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 70,
+      "name": "b0_ratio__spectral_entropy__seizure_mean",
+      "physiological_feature": "spectral_entropy",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "std",
+      "block": "b0",
+      "constant_zero_in_frozen_export": false,
+      "index": 71,
+      "name": "b0_ratio__spectral_entropy__seizure_std",
+      "physiological_feature": "spectral_entropy",
+      "view": "ratio"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 44,
+      "index": 72,
+      "name": "physics_zdelta__log_bp_high_gamma__seizure_mean",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 45,
+      "index": 73,
+      "name": "physics_zdelta__log_bp_high_gamma__seizure_std",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 50,
+      "index": 74,
+      "name": "physics_zdelta__line_length_per_sec__seizure_mean",
+      "physiological_feature": "line_length_per_sec",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 51,
+      "index": 75,
+      "name": "physics_zdelta__line_length_per_sec__seizure_std",
+      "physiological_feature": "line_length_per_sec",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 46,
+      "index": 76,
+      "name": "physics_zdelta__rms__seizure_mean",
+      "physiological_feature": "rms",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 47,
+      "index": 77,
+      "name": "physics_zdelta__rms__seizure_std",
+      "physiological_feature": "rms",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 48,
+      "index": 78,
+      "name": "physics_zdelta__variance__seizure_mean",
+      "physiological_feature": "variance",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 49,
+      "index": 79,
+      "name": "physics_zdelta__variance__seizure_std",
+      "physiological_feature": "variance",
+      "view": "zdelta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 26,
+      "index": 80,
+      "name": "physics_delta__log_bp_high_gamma__seizure_mean",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 27,
+      "index": 81,
+      "name": "physics_delta__log_bp_high_gamma__seizure_std",
+      "physiological_feature": "log_bp_high_gamma",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 32,
+      "index": 82,
+      "name": "physics_delta__line_length_per_sec__seizure_mean",
+      "physiological_feature": "line_length_per_sec",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 33,
+      "index": 83,
+      "name": "physics_delta__line_length_per_sec__seizure_std",
+      "physiological_feature": "line_length_per_sec",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 28,
+      "index": 84,
+      "name": "physics_delta__rms__seizure_mean",
+      "physiological_feature": "rms",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 29,
+      "index": 85,
+      "name": "physics_delta__rms__seizure_std",
+      "physiological_feature": "rms",
+      "view": "delta"
+    },
+    {
+      "aggregation": "mean",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 30,
+      "index": 86,
+      "name": "physics_delta__variance__seizure_mean",
+      "physiological_feature": "variance",
+      "view": "delta"
+    },
+    {
+      "aggregation": "std",
+      "block": "physics",
+      "constant_zero_in_frozen_export": false,
+      "duplicate_of": 31,
+      "index": 87,
+      "name": "physics_delta__variance__seizure_std",
+      "physiological_feature": "variance",
+      "view": "delta"
+    }
+  ],
+  "feature_order_sha256": "b29b29129d4d4a275d9cd077aa47e46cf428fe0f25913dea75a51ff0c7ea6ca9",
+  "group_counts": {
+    "abs": 18,
+    "delta": 26,
+    "ratio": 18,
+    "zdelta": 26
+  },
+  "indices_zero_based": true,
+  "source_name_parity": true,
+  "status": "PASS"
+}

@@ -1,0 +1,11 @@
+{
+  "formal_models": 4,
+  "new_outer_accessed": false,
+  "new_training_cells": 15,
+  "outer_pending_gate": false,
+  "reused_B0_cells": 5,
+  "scientific_status": "VALIDATION_SELECTED_EXPLORATORY_DEVELOPMENT_ON_HISTORICALLY_VIEWED_COHORT",
+  "status": "DEVELOPMENT_AND_MECHANISM_COMPLETE",
+  "unique_validation_patients": 47,
+  "validation_appearances": 65
+}

@@ -1,0 +1,10 @@
+{
+  "all_new_selections_before_inference": true,
+  "all_predictions_before_full_y": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "e483515d7da8cd5016f272cbdbc167ce50ff00c25ded28760318cb3ee97e3b51",
+  "old_checkpoints_banks_and_predictions_unchanged": true,
+  "patients_per_arm": 80,
+  "prediction_seal_sha256": "8c91e1ad261950aa5e1f241d6d1802ce0f6492bcae166a5e5fcc99de7ae0975f",
+  "status": "PASS"
+}

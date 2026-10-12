@@ -1,0 +1,155 @@
+{
+  "auxiliary_duplicates": [
+    {
+      "auxiliary_index": 72,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 44,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 73,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 45,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 74,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 50,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 75,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 51,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 76,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 46,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 77,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 47,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 78,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 48,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 79,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 49,
+      "max_absolute_difference": 0.0,
+      "view": "zdelta"
+    },
+    {
+      "auxiliary_index": 80,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 26,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 81,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 27,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 82,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 32,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 83,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 33,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 84,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 28,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 85,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 29,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 86,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 30,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    },
+    {
+      "auxiliary_index": 87,
+      "exact_export_parity": true,
+      "exact_synthetic_generation_parity": true,
+      "main_index": 31,
+      "max_absolute_difference": 0.0,
+      "view": "delta"
+    }
+  ],
+  "constant_cross_view_equalities_not_treated_as_information_leak": true,
+  "constant_zero_dimension_count": 16,
+  "constant_zero_indices": [
+    0,
+    1,
+    2,
+    3,
+    18,
+    19,
+    20,
+    21,
+    36,
+    37,
+    38,
+    39,
+    54,
+    55,
+    56,
+    57
+  ],
+  "exact_duplicate_auxiliary_dimensions": 16,
+  "no_deduplication_or_reextraction": true,
+  "status": "PASS"
+}

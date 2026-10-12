@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "model_patient_cells": 560,
+  "metrics_per_cell": 11,
+  "maximum_metric_absolute_drift": 4.440892098500626e-16,
+  "checkpoint_bank_prediction_bindings_checked": 35,
+  "actual_FIT_VAL_masks_checked": 25,
+  "new_training_epochs": 250,
+  "all_seven_aggregate_rows_independently_verified": true,
+  "paired_bootstrap_metrics": 66,
+  "bootstrap_draws": 10000,
+  "bootstrap_direction": "Full minus ablated",
+  "no_model_replay": true,
+  "no_threshold_reoptimization": true,
+  "source_sha256": "8dc3440b1e26340b0572a3ddf799c3a10a11af26513b4e6993a64b2aeb30a287"
+}

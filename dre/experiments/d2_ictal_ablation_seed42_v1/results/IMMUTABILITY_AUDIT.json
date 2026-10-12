@@ -1,0 +1,187 @@
+{
+  "actual_TEST_mask_checks": [
+    {
+      "arm": "w/o Source",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 1,
+      "outer_channels": 1631,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o Source",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 2,
+      "outer_channels": 1498,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o Source",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 3,
+      "outer_channels": 1746,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o Source",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 4,
+      "outer_channels": 1425,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o Source",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 5,
+      "outer_channels": 1335,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "ABS Only",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 1,
+      "outer_channels": 1631,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "ABS Only",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 2,
+      "outer_channels": 1498,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "ABS Only",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 3,
+      "outer_channels": 1746,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "ABS Only",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 4,
+      "outer_channels": 1425,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "ABS Only",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 5,
+      "outer_channels": 1335,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o DELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 1,
+      "outer_channels": 1631,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o DELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 2,
+      "outer_channels": 1498,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o DELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 3,
+      "outer_channels": 1746,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o DELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 4,
+      "outer_channels": 1425,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o DELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 5,
+      "outer_channels": 1335,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o ZDELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 1,
+      "outer_channels": 1631,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o ZDELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 2,
+      "outer_channels": 1498,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o ZDELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 3,
+      "outer_channels": 1746,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o ZDELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 4,
+      "outer_channels": 1425,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o ZDELTA",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 5,
+      "outer_channels": 1335,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o RATIO",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 1,
+      "outer_channels": 1631,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o RATIO",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 2,
+      "outer_channels": 1498,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o RATIO",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 3,
+      "outer_channels": 1746,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o RATIO",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 4,
+      "outer_channels": 1425,
+      "retained_preprocessing_unchanged": true
+    },
+    {
+      "arm": "w/o RATIO",
+      "excluded_input_columns_exact_zero": true,
+      "fold": 5,
+      "outer_channels": 1335,
+      "retained_preprocessing_unchanged": true
+    }
+  ],
+  "all_35_selections_before_new_outer": true,
+  "all_predictions_before_full_y": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "c001a58553ec16c303e96256384f6089c4a56bcccbe1ae1aa418f93fb3e2e16b",
+  "historical_inputs_models_and_predictions_unchanged": true,
+  "patients_per_arm": 80,
+  "prediction_seal_sha256": "02958e762001cc5ce083b7ba004c1dad2a2a56b8d5af1f664f5415a484abeab7",
+  "status": "PASS"
+}

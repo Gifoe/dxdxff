@@ -1,0 +1,6 @@
+{
+  "complete": 25,
+  "status": "ALL_25_NEW_TRAIN_VALIDATION_COMPLETE",
+  "torch_version": "2.11.0+cu128",
+  "total": 25
+}

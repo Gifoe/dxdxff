@@ -1,0 +1,22 @@
+{
+  "conditions": {
+    "AUPRC_nondecrease": true,
+    "B3_B0_AUROC": false,
+    "B3_B1_AUROC": false,
+    "B3_B2_AUROC": false,
+    "EZF1_preserved": true,
+    "MacroF1_nondecrease": true,
+    "correct_beats_wrong": false,
+    "engineering_and_independent_verification": true,
+    "positive_folds": false,
+    "specificity_preserved": false
+  },
+  "deltas": {
+    "B0": -0.0002748399415281044,
+    "B1": 0.0003096444828667444,
+    "B2": -0.00025897005106723103
+  },
+  "no_new_outer": true,
+  "positive_folds": 2,
+  "status": "FAIL"
+}

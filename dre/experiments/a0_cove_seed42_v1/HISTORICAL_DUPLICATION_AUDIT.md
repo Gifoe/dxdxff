@@ -1,0 +1,19 @@
+# Historical mechanism admission (before new training)
+
+No exact conditional-residual, paired-input interaction on compact F0 was found in the inspected available experiments. This is a bounded repository/source audit, not a universal novelty claim. Ridge residualization and multiplicative features are established mathematical operations; a new acronym is not evidence of a new scientific contribution.
+
+| Inspected study | Actual mechanism | Relevant prior evidence | Exact COVE on F0? |
+|---|---|---|---|
+| Compact raw-first ablation | Source-free F0; post-full-preprocess view masks; original LayerNorm; raw-only control | Establishes compact 62-position baseline and view-removal controls | No |
+| Compact DELTA/RATIO-only follow-up | Scratch-trained single-view masks, same original trainer | Development DELTA Only AUROC0.716600 versus F00.716569; RATIO Only0.709422. Single-view results do not isolate conditional interaction utility | No |
+| No Source + no ZDELTA | Original source-free 8,817-param network, masked ZDELTA | Authoritative F0 checkpoints/validation protocol, not a nuisance model | Baseline only |
+| D2 complete ablation | Source/PZ/view deletion; exact manifest/name/dedup audit | 16 global constant-zero positions and 16 auxiliary duplicate positions in the 88D export; compact F0 retains12/8 respectively | No |
+| PR-Spline | FIT-quantile monotonic input curves; positive-scaling and width2 input residual controls | Historical development gate failed:0.710482 versus its all88 source-free A00.710667; only1/5 positive folds | No; different baseline input and transformations |
+| PMA | Mean/log-SD magnitude-conditioned hidden residual, matched capacity and no-LN controls | Historical gate failed:0.711474 versus its all88 A00.710667. Nonzero residual usage did not establish incremental utility | No; different baseline and hidden interface |
+| Ranking bottleneck/source audit | A1 semantic/random two-branch36D encoder; attention, objective, center/selection interventions | Semantic view-separation AUPRC change−0.014438 versus original; its registered gate failed | No; A1, no FIT-only Ridge residual pairs, not compact F0 |
+| A1 patient-conditioned low-rank adapter | Frozen64D R4, rank4 low-rank correction with patient set-conditioned coefficients | Prior declared controls/gate did not establish useful context benefit; its monolithic loader materialized outer labels before role filtering | No; prior label-loader limitation is not inherited |
+| Absolute-context complementarity probe | Frozen A1 R4 plus a learned hidden/logit residual on absolute/context representations | Prior residual complementarity gate failed; not new raw information | No |
+
+Reviewed the original model/factory/trainer, feature-view and aggregation source, manifest and relevant reports. Inspected live server implementations of the ranking audit, low-rank adapter and absolute-context probe; local PMA/PR-Spline source/reports and their prior duplication audits; and scoped source-pattern searches in the named available experiment directories. The live-source scan found generic residuals but no corresponding Ridge/cross-fitted 14-pair COVE implementation. Relevant older view-gated fusion/diffusion files are generic fusion mechanisms, not this exact compact-F0 experiment. Archived and live source availability limits the coverage; absence in this audit is not proof of universal absence.
+
+Historical numbers above are copied from existing **development** reports, not rerun here. They are not matched COVE comparator rows. COVE's baseline is compact F0, not the older all88 A0 used by PMA/PR-Spline. No historical outer predictions or label arrays are loaded for this audit, training, architecture choice or evaluation. New COVE evidence must come from all three registered matched controls and frozen interventions.

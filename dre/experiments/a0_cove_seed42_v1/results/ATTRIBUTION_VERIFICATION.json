@@ -1,0 +1,9 @@
+{
+  "all14_group_effects": true,
+  "all280_pair_coordinate_summaries": true,
+  "no_model_inference": true,
+  "no_outer_access": true,
+  "ranking_patient_cells": 1170,
+  "script_sha256": "fea865dee49162b7c44e278cb5ead0721e68df87159467e61853ec55583426b4",
+  "status": "PASS"
+}

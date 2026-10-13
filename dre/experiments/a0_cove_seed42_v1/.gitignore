@@ -1,0 +1,8 @@
+__pycache__/
+*.pt
+*.npz
+*.npy
+*.log
+*.err
+*.partial
+*_PRIVATE*

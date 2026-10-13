@@ -1,0 +1,11 @@
+{
+  "Ridge_trainable_torch_parameters": 0,
+  "new_trainable_per_arm": 28,
+  "parameters": {
+    "B0": 8817,
+    "B1": 8845,
+    "B2": 8845,
+    "B3": 8845
+  },
+  "status": "PASS"
+}

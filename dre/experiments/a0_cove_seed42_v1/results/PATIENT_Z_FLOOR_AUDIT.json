@@ -1,0 +1,8 @@
+{
+  "cutoff_from_pinned_original_core": true,
+  "no_feature_selection_or_model_change": true,
+  "no_labels_or_outer_access": true,
+  "rows": 420,
+  "script_sha256": "d91e4b6989990ee33916a3e7858b9f2e333c9fc10d8eade85fd87014a848351d",
+  "status": "DESCRIPTIVE_ONLY"
+}

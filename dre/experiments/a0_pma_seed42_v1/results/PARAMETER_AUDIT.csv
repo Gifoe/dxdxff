@@ -1,0 +1,5 @@
+arm,parameters,magnitude_access,source_conditioning
+B0,8817,False,False
+B1,8641,False,False
+B2,15185,False,False
+B3,15185,True,False

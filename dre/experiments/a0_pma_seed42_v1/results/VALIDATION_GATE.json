@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "B3_AP_not_lower_than_B0": true,
+    "B3_EZF1_delta_ge_minus_0.005": true,
+    "B3_MacroF1_delta_ge_minus_0.005": true,
+    "B3_minus_B0_AUROC_ge_0.010": false,
+    "B3_minus_B2_AUROC_ge_0.005": false,
+    "engineering_integrity_numerical_checks": true,
+    "positive_AUROC_folds_ge4": false
+  },
+  "failed_criteria": [
+    "B3_minus_B0_AUROC_ge_0.010",
+    "B3_minus_B2_AUROC_ge_0.005",
+    "positive_AUROC_folds_ge4"
+  ],
+  "mechanism_terminal": "DEVELOPMENT_MAGNITUDE_CORRESPONDENCE_SIGNAL_EXPLORATORY",
+  "outer_authorized": false,
+  "pass": false,
+  "positive_AUROC_folds": 3
+}

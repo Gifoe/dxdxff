@@ -1,0 +1,20 @@
+{
+  "all_aggregate_and_gate_parity": true,
+  "analysis_environment": {
+    "numpy": "2.3.5",
+    "sklearn": "1.7.2",
+    "torch": "2.11.0+cu128"
+  },
+  "checkpoint_threshold_bank_seal_hashes_verified": true,
+  "cluster_IDs": 47,
+  "development_freeze_sha256": "e8bb619758ed94ceeeca161dc5b503820e841fa47ebc05daf0111ccf53013410",
+  "max_absolute_metric_drift": 2.220446049250313e-16,
+  "metric_backend": "independent sklearn",
+  "outer_accessed": false,
+  "paired_intervals_verified": 66,
+  "parameters_and_stat_buffers_verified": true,
+  "patient_metric_cells": 390,
+  "retained_appearances": 65,
+  "status": "PASS",
+  "unique_ID_cluster_bootstrap_draws": 10000
+}

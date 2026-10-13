@@ -1,0 +1,10 @@
+{
+  "status": "DEVELOPMENT_GATE_FAILED_PMA_INCREMENT_NOT_ESTABLISHED",
+  "development_and_mechanism_complete": true,
+  "independent_verification": "PASS",
+  "new_outer_performed": false,
+  "additional_models_or_rescue_experiments": false,
+  "magnitude_correspondence_dependence": "observed_in_frozen_development_intervention",
+  "incremental_predictive_gain": "not_established_vs_A0_or_parameter_matched_B2",
+  "recommended_as_main_model": false
+}

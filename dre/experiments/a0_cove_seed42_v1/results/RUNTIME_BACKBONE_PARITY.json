@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "python": "3.13.9",
+  "torch": "2.11.0+cu128",
+  "cudnn": 91900,
+  "CPU_CUDA": {
+    "cpu": {
+      "logit_drift": 0.0,
+      "gradient_drift": 0.0,
+      "AdamW_update_drift": 0.0
+    },
+    "cuda": {
+      "logit_drift": 0.0,
+      "gradient_drift": 0.0,
+      "AdamW_update_drift": 0.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "folds": 3,
+  "max_coefficient_drift": 1.1574075031717257e-14,
+  "max_scale_drift": 8.881784197001252e-16,
+  "max_normalized_residual_drift": 3.6770586575585185e-13,
+  "max_q_drift": 1.1890488593735427e-13,
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "sklearn": "1.7.2",
+  "torch": "2.11.0+cu128",
+  "cudnn": 91900,
+  "torch_C_sha256": "605dd8b73b28a30eea2517b79a684502377a3a505ef207d3e2ac2160b0294d17",
+  "no_clinical_model_outcomes_or_outer": true
+}

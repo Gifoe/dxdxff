@@ -1,0 +1,11 @@
+{
+  "drift_rows": 140,
+  "geometry_rows": 420,
+  "legal_FIT_VAL_rows_only": true,
+  "no_labels_used": true,
+  "no_model_inference": true,
+  "no_new_selection": true,
+  "no_outer_access": true,
+  "script_sha256": "cacaff8e28989d7177524e279f60524fec5de2bafa71b639ede592d41042f1f7",
+  "status": "COMPLETE_DESCRIPTIVE_ONLY"
+}

@@ -1,0 +1,14 @@
+{
+  "all_primary_fold_center_unique_ID_tables_verified": true,
+  "bootstrap_draws": 10000,
+  "max_metric_drift": 3.3306690738754696e-16,
+  "metric_cells": 1160,
+  "no_new_model_inference": true,
+  "numpy": "2.3.5",
+  "original_sources_banks_checkpoints_thresholds_score_hashes_verified": true,
+  "scientific_status": "USER_DEFINED_COMPACT_BASELINE_OUTER_INFORMED_EXPLORATORY_REPEATED_COHORT; no blind clinical confirmation",
+  "stage": "FEATURE",
+  "status": "PASS",
+  "torch": "2.11.0+cu128",
+  "verified_intervals": 224
+}

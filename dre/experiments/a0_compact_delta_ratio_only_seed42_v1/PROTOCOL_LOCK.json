@@ -1,0 +1,33 @@
+{
+ "experiment":"a0_compact_delta_ratio_only_seed42_v1",
+ "seed":42,"fold_seed":"42+1009*fold","new_cells":10,
+ "matrix":{
+  "F0":{"views":["abs","delta","ratio"],"retained":62,"status":"frozen_historical_reuse"},
+  "ABS_ONLY":{"views":["abs"],"retained":18,"status":"frozen_historical_F2_reuse"},
+  "DELTA_ONLY":{"views":["delta"],"retained":26,"status":"new_five_folds"},
+  "RATIO_ONLY":{"views":["ratio"],"retained":18,"status":"new_five_folds"}
+ },
+ "architecture":"exact original source-free LayerNorm88 Linear88to96 GELU Dropout0.15 Linear96to1; 8817 parameters",
+ "masking":"after original full88 patientZ and FIT-only imputer/scaler; zero excluded coordinates; retain historical duplicate DELTA auxiliaries",
+ "patient_z":true,"layernorm":true,"source":false,"input_width":88,
+ "feature_manifest_sha256":"f7869e994e8494397761e4efa0a2a2057c2a13541331e5933e94c6f7b82a065f",
+ "outer_transform_sha256":"0133d7623f1dc67442591edd19cd07d4b3d7b4742b6833a8a227bb2ef274c60c",
+ "historical_hashes":{
+  "F0_freeze":"e483515d7da8cd5016f272cbdbc167ce50ff00c25ded28760318cb3ee97e3b51",
+  "F0_seal":"8c91e1ad261950aa5e1f241d6d1802ce0f6492bcae166a5e5fcc99de7ae0975f",
+  "ABS_ONLY_freeze":"99aa15df09686ebb26383c2adbdc3a88c988111679bfa2e30ebf4eb458fcf884",
+  "ABS_ONLY_seal":"227916f57803b8fcf808047105d9d4dd00afbaf374dd6cd0d6f634d28a5d3a45",
+  "ABS_ONLY_independent":"900dd5c1ec725a0e4105b7321dcfa1b451458c63776d7c6c87a4ebff51d4ccdd"
+ },
+ "cohort":{"patients":80,"channels":7635,"seizures":256,"EZ":1743,"NEZ":5892},
+ "outer_fold_patients":[16,16,17,15,16],"outer_fold_channels":[1631,1498,1746,1425,1335],
+ "training":{"implementation":"unchanged original trainer","device":"cuda","optimizer":"AdamW","lr":0.001,"weight_decay":0.0001,"clip":1,"max_epochs":30,"patience":6,"minimum_stop_epoch":6,"penalty":0,"objective":"original FIT class-weighted NEZ-positive BCE; one update per patient","selection":"validation patient Macro-F1, EZ-F1 tie, earlier epoch","threshold":"own validation0.005 grid; original ties"},
+ "metrics":["macro_f1","ez_f1","nez_f1","balanced_accuracy","ez_auprc","ez_auroc","ez_mrr","top1_is_ez","sensitivity","specificity","accuracy","predicted_ez_fraction","TP","FP","TN","FN"],
+ "development":{"appearances":65,"unique_IDs":47,"primary":"equal fold appearance","secondary":"mean within ID then mean47"},
+ "outer":{"primary":"equal80 patients","secondary":"pooled channel; never confuse with primary"},
+ "bootstrap":{"draws":10000,"seed":42,"clusters":"patient IDs retaining development appearances","comparisons":["F0 minus DELTA_ONLY","F0 minus RATIO_ONLY","ABS_ONLY minus DELTA_ONLY","ABS_ONLY minus RATIO_ONLY","DELTA_ONLY minus RATIO_ONLY"],"threshold_reoptimized":false,"interval":"unadjusted descriptive percentile95"},
+ "parity":{"logit_cpu_cuda_atol":0.000002,"score_cpu_cuda_atol":0.0000002,"decisions_exact":true,"metric_atol":1e-12},
+ "scientific_status":"OUTER_INFORMED_EXPLORATORY_REPEATED_COHORT; not blind confirmation",
+ "no_raw_access":true,"no_extra_arm_seed_search":true,"installed_skills_used":[],
+ "publish":"only code hashes anonymous aggregates; no private identities scores weights raw logs or credentials"
+}

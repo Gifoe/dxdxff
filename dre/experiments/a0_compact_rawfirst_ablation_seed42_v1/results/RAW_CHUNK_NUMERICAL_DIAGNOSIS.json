@@ -1,0 +1,45 @@
+{
+  "clinical_data_used": false,
+  "model_or_training_change": false,
+  "note": "Training uses averaged BCE and window/seizure means; synthetic summed coordinate probe accumulates FP32 scale. Loss normalization changes only fixture units, not tolerance or clinical objective.",
+  "results": [
+    {
+      "denominator": 1,
+      "failed_gradient_tensors_at_locked_limits": 1,
+      "fixture": "weighted_sum_fixture",
+      "max_forward_drift": 5.960464477539062e-07,
+      "max_gradient_drift": 0.0013142824172973633,
+      "max_tensor_relative_gradient_drift": 0.00012502263416536152,
+      "pair": "chunk4_vs256"
+    },
+    {
+      "denominator": 1,
+      "failed_gradient_tensors_at_locked_limits": 0,
+      "fixture": "weighted_sum_fixture",
+      "max_forward_drift": 0.0,
+      "max_gradient_drift": 2.0265579223632812e-06,
+      "max_tensor_relative_gradient_drift": 1.5003088549292443e-07,
+      "pair": "same256_self_replay"
+    },
+    {
+      "denominator": 640,
+      "failed_gradient_tensors_at_locked_limits": 0,
+      "fixture": "valid_element_mean_fixture",
+      "max_forward_drift": 5.960464477539062e-07,
+      "max_gradient_drift": 1.6889243852347136e-06,
+      "max_tensor_relative_gradient_drift": 0.00010282104631187394,
+      "pair": "chunk4_vs256"
+    },
+    {
+      "denominator": 640,
+      "failed_gradient_tensors_at_locked_limits": 0,
+      "fixture": "valid_element_mean_fixture",
+      "max_forward_drift": 0.0,
+      "max_gradient_drift": 3.725290298461914e-09,
+      "max_tensor_relative_gradient_drift": 1.4109214419022464e-07,
+      "pair": "same256_self_replay"
+    }
+  ],
+  "script_sha256": "8e3e0b1b14ba2c65ff6e97c3a1caa33a3366daeb2030618f322b2de67dc0f794",
+  "status": "DIAGNOSTIC_ONLY_NOT_A_GATE_RELAXATION"
+}

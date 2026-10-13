@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE_NEGATIVE_DATA_AUDIT",
+  "stage_A_executed": true,
+  "stages_B_to_F_executed": false,
+  "models_trained": 0,
+  "new_outer_evaluations": 0,
+  "private_waveforms_ids_paths_or_predictions_exported": false
+}

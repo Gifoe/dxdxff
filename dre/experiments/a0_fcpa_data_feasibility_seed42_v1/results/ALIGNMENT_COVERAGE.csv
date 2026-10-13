@@ -1,0 +1,6 @@
+center,patients,records,seizure_channel_incidences,feature_windows,valid_complete_feature_windows,invalid_feature_boundary_windows,nominal59_invalid_windows,padded_records,EDF_resolved_records,EDF_paired_records,EDF_pair_record_rate,EDF_onset_independently_matched
+ALL,80,256,24995,15074,15074,0,30,3,256,256,1.0,162
+hup,36,117,12384,6903,6903,0,0,0,117,117,1.0,117
+lzu,21,72,7251,4221,4221,0,27,2,72,72,1.0,0
+multicenter,15,45,2815,2652,2652,0,3,1,45,45,1.0,45
+pediatric,8,22,2545,1298,1298,0,0,0,22,22,1.0,0

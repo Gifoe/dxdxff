@@ -1,0 +1,27 @@
+[
+  {
+    "name": "FEATURE_GROUP_AUDIT.md",
+    "repository_path": "dre/experiments/d2_ictal_ablation_seed42_v1/FEATURE_GROUP_AUDIT.md",
+    "sha256": "8a8a34ddcbbd357f45e5c029e9f54b58d0cffbdcb9aec0b779c7e1abfcb3a762"
+  },
+  {
+    "name": "FEATURE_GROUP_MANIFEST.json",
+    "repository_path": "dre/experiments/d2_ictal_ablation_seed42_v1/FEATURE_GROUP_MANIFEST.json",
+    "sha256": "f7869e994e8494397761e4efa0a2a2057c2a13541331e5933e94c6f7b82a065f"
+  },
+  {
+    "name": "RAW_DATA_COVERAGE_AUDIT.json",
+    "repository_path": "dre/experiments/rawtiny_patient_relative_seed42_v1/RAW_DATA_COVERAGE_AUDIT.json",
+    "sha256": "8a4c0044573c8ad329b7d4e987ecd8fb18f45f3474723bf55c4e832819afd618"
+  },
+  {
+    "name": "RAW_PREPROCESSING_AUDIT.json",
+    "repository_path": "dre/experiments/rawtiny_patient_relative_seed42_v1/RAW_PREPROCESSING_AUDIT.json",
+    "sha256": "4a4071a30d94f457aa105791bf06fd80b05c456dd3c31dfc3468494759e8fc40"
+  },
+  {
+    "name": "CHANNEL_ALIGNMENT_AUDIT.json",
+    "repository_path": "dre/experiments/rawtiny_patient_relative_seed42_v1/CHANNEL_ALIGNMENT_AUDIT.json",
+    "sha256": "0b34617c47961576abb0021f64529e0046b4f033c111fb33c430da1171569ad4"
+  }
+]

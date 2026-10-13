@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "dependencies": {
+    "protocol": "8bb97073d2f8b3e31cf21204fd58aed1cc60272c03ddacdee9e0a36f3e3b10e2",
+    "references": "0441d5104532e2e4178e796664c977efa1cb540c6e08536ea8d76813c87522e6",
+    "discovery": "d7ccb7d924f05bdfcfaa60a7d0e8b8403e7b5e711efd29cbef875e282959b9ed",
+    "edf_plan": "3f8aab92befdbbf63410e794eaac0e07f1958a4bb2f2342a26fcb9198e628fd3",
+    "export": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "code": {
+      "audit.py": "dc7642a4deceff30036019319a1773d2841bffd527cebfed3fe426058f8f242b",
+      "discover.py": "b7bdc0e1818b8376681ec07739d5532bcd3873f6215f8443b653b66fd6c01dda"
+    },
+    "tests": {
+      "signal_contract.py": "2928317177af66db62a587fb3747109b01a7fddc27028956f97750297260b36a"
+    },
+    "source": {
+      "neuroez_c/evidence_views.py": "201f888411a8f45fa363cfb2ac11c165a04ae2eef5abcd3aad64aedfe3098b03",
+      "ez_features.py": "18ec360e9d9ec7e5b56b05208c0ef6575c13769ab6866ef241e4d65e8a554c72",
+      "module2_preprocessing.py": "099f3e9bbf03204e63f4d216ce81ec1249cf9dd332d40d901173be92ce891ac9",
+      "build_neuroez_c_four_center_caches.py": "018605af0fa967a1e6e56b241a06c5ccaa19329ed9f2e55e9b8dc5fcbdcbe296",
+      "run_baseline_three_centers/build_center_caches_from_patient_records.py": "fe474670b2dae114524551baf6ad15e2fb256ff44bc77fa5e3995ca4f3898514",
+      "bn_pdgs_ranker/data_readers/edf.py": "e654e786f74b809d5618faf9bce4376d002f9e7b0a03376c92af51955f642ebb",
+      "bn_pdgs_ranker/data_readers/schemas.py": "84ce173dd862dda603251a63c47dc379d187526e9bbec417bf2656bce615fa42",
+      "bn_pdgs_ranker/data_readers/bids_loader.py": "c3b7fbfc648992c347fdf396a28b6746e1326c4c0b39cc5bc45b19b053da6bb7",
+      "bn_pdgs_ranker/data_readers/lzu.py": "c53d44963d730f75a9c09d8f246be670638ce047ccaec662f41eb1dc4c6dba1d",
+      "neuroez_c/data/pediatric.py": "9692913e771b4f7ab56cc4c95b7e604481ff84441d1ec798b0b137a951b05152",
+      "neuroez_c/dual_view_data.py": "3d661a06eaf5eab8561eb1dd37133ce62d7eb0f3a75391329d887e42c4ae791c"
+    }
+  },
+  "cache_hashes": {
+    "A0_window": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "raw_primary": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "raw_task2_other": "2d11efe0eb261ed71e9bfbaf7edaa2e689a88a533c0d083b52aeedaa9b09d297",
+    "feature_success_failure_other": "58fff0912967bc4a0526df82903e84e0c19cebd6c3c2f655bcd3bb6af7c2e166"
+  },
+  "thresholds_frozen_before_PSD": true,
+  "full_A0_x_y_materialized": false,
+  "model_or_prediction_artifacts_opened": false,
+  "EDF_signal_PSD_run": false,
+  "metadata_only_engineering_repair": true,
+  "original_pre_PSD_freeze_sha256": "8daca96ee09fe5a39d225a81dc008e66f1799a97bedef28b4edd4f6f06c6e404",
+  "retained_raw_PSD_sha256": "d8f9c7160e009c77cd0c2dfefce8c046c410911dd7e913a53d7e010b741c6d09",
+  "raw_PSD_recomputed": false,
+  "EDF_annotation_TAL_not_parsed": true,
+  "EDF_channel_names": "Exact original MNE default duplicate-name algorithm",
+  "EDF_native_reader": "Bounded16-bit digital-to-physical calibration; synthetic MNE parity tested"
+}

@@ -1,0 +1,34 @@
+{
+  "stage": "A",
+  "pass_gate": false,
+  "terminal": "LF_DATA_FIDELITY_GATE_FAILED",
+  "signal_provenance": "LOW_FREQUENCY_PROVENANCE_UNVERIFIED",
+  "canonical_channels": 7635,
+  "verified_candidate_channels": 925,
+  "verified_fraction": 0.12115258677144729,
+  "required_fraction": 0.95,
+  "all_centers_have_verified_candidate_evidence": false,
+  "raw_generation_provenance_verified": false,
+  "raw_route_pass": false,
+  "EDF_recovery_route_pass": false,
+  "cohort_and_original_A0_preserved": true,
+  "no_padding_in_measured_windows": true,
+  "old100percent_or_historical27_gate_used_as_FCPA95_gate": false,
+  "input_hashes": {
+    "protocol": "f08877699e7ec99a5ab273a56bd5cb9429aca40b0dea0156afd1342a21785103",
+    "stage_A_code": "c91c487cc0a8d568c5296833f31b80a9407e8422555259d128548cf7ceb9d514",
+    "initial_signal_protocol": "8bb97073d2f8b3e31cf21204fd58aed1cc60272c03ddacdee9e0a36f3e3b10e2",
+    "metadata_freeze": "936e06fa20acb0cf1a3016699baaa98a937fccaca438992d35cc5e81e725f337",
+    "measured_Raw_PSD": "d8f9c7160e009c77cd0c2dfefce8c046c410911dd7e913a53d7e010b741c6d09",
+    "private_EDF_plan": "3f8aab92befdbbf63410e794eaac0e07f1958a4bb2f2342a26fcb9198e628fd3",
+    "old_signal_gate": "628daee9c3fcb1252eb193d432bc4b99648cafc9ce947f362e0e82ab1747386e"
+  },
+  "training_performed": false,
+  "LF24_extracted": false,
+  "baseline_development_replayed": false,
+  "new_outer_accessed": false,
+  "reasons": [
+    "Raw cache exact filtering/build provenance remains unproven",
+    "Independently corroborated time/acquisition evidence fails95percent canonical coverage and all-center requirement"
+  ]
+}

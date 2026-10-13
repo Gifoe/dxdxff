@@ -1,0 +1,150 @@
+{
+  "scope": "Historical documents and relevant model/training operators inspected read-only; no historical checkpoint, private score, or outer-label loader executed",
+  "references": [
+    {
+      "reference": "d2_ictal_ablation_seed42_v1/FEATURE_GROUP_AUDIT.md",
+      "sha256": "8a8a34ddcbbd357f45e5c029e9f54b58d0cffbdcb9aec0b779c7e1abfcb3a762",
+      "location": "local_repository"
+    },
+    {
+      "reference": "d2_ictal_ablation_seed42_v1/FEATURE_GROUP_MANIFEST.json",
+      "sha256": "f7869e994e8494397761e4efa0a2a2057c2a13541331e5933e94c6f7b82a065f",
+      "location": "local_repository"
+    },
+    {
+      "reference": "d2_ictal_ablation_seed42_v1/results/FEATURE_DUPLICATION_AUDIT.json",
+      "sha256": "607d958a48969bf2a3eef3013ab1bec2570dd831347dadb58c2f26213d905175",
+      "location": "local_repository"
+    },
+    {
+      "reference": "d2_ictal_ablation_seed42_v1/IMPLEMENTATION_AUDIT.md",
+      "sha256": "08a9162bc0baf29e8fafdb2d931794cd703e4883913ec056015947bede405a50",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_pma_seed42_v1/code/model.py",
+      "sha256": "204e973e9ce1484f1bf0e85a8a1437a13b7b06a08e8b5fe0c1f2d4fb9d6a3ec1",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_pma_seed42_v1/code/runtime.py",
+      "sha256": "ba28cdb5eafe07585f5cc7828831099e006b8227b03d3f5f4b2551af95c2bdee",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_pma_seed42_v1/code/train.py",
+      "sha256": "59d794af8bbab7775e96d424403b162ef0fab1b369a016ef24c102c8322e8781",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_pma_seed42_v1/FINAL_REPORT.md",
+      "sha256": "599d4fce527dcbbacd3f31838d998e0f92db42a3fdbc6dea64d698acd9676243",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_b1_no_layernorm_outer_seed42_v1/PROTOCOL_AMENDMENT.json",
+      "sha256": "61bbd96850ce900cbb094237c062d651427be7b2178efbcd2c9e406474fc766c",
+      "location": "local_repository"
+    },
+    {
+      "reference": "d2_no_source_no_zdelta_outer_seed42_v1/PROTOCOL_LOCK.json",
+      "sha256": "41b6fde2fea168556fea67b0e07c4c7f2830ab04c0d80777c4c6347975915c59",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_tabm_ensemble_seed42_v1/code/model.py",
+      "sha256": "f20f88cc9862a95d093ff17fa9ced4d59f5d53903ed020479df973b543e8cfde",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_tabm_ensemble_seed42_v1/FINAL_REPORT.md",
+      "sha256": "be250d2a8fc48a3c0d69d37c9ca524581d288405c242981b1c3f7b10581daeb1",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_temporal_cotar_seed42_v1/code/model.py",
+      "sha256": "ccb517c0a047906e80eb780171c7552b1b42a642b76f93d6a7ffa38f1dae0969",
+      "location": "local_repository"
+    },
+    {
+      "reference": "a0_temporal_cotar_seed42_v1/FINAL_REPORT.md",
+      "sha256": "566e14e4c99d722d3640b98943a09a157730d9f9cdd79a99027e843f1b0f8313",
+      "location": "local_repository"
+    },
+    {
+      "reference": "d2_graphrole_seed42_v1/code/model.py",
+      "sha256": "3ed629f50b236082d3c55d786e9df5d3d5002ebf149ed03413a845a8aa9f4f32",
+      "location": "local_repository"
+    },
+    {
+      "reference": "d2_graphrole_seed42_v1/FINAL_REPORT.md",
+      "sha256": "102ad78059f47d8bdc9b559e14b274f0074f4b364b09020094fd90a01125bd6c",
+      "location": "local_repository"
+    },
+    {
+      "reference": "rawtiny_patient_relative_seed42_v1/RAW_DATA_COVERAGE_AUDIT.json",
+      "sha256": "8a4c0044573c8ad329b7d4e987ecd8fb18f45f3474723bf55c4e832819afd618",
+      "location": "local_repository"
+    },
+    {
+      "reference": "rawtiny_patient_relative_seed42_v1/RAW_PREPROCESSING_AUDIT.json",
+      "sha256": "4a4071a30d94f457aa105791bf06fd80b05c456dd3c31dfc3468494759e8fc40",
+      "location": "local_repository"
+    },
+    {
+      "reference": "representation_bottleneck_audit_seed42_v1/IMPLEMENTATION_AUDIT.md",
+      "sha256": "77a01247b901013efde641bc940b59f2c4640112963e9f65dfb8fce276e1247f",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "representation_bottleneck_audit_seed42_v1/FINAL_REPORT.md",
+      "sha256": "be180ffe0f7117941848c095e50fd0be841420a7e5aa8efbe10a8ed7740f8bf9",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "representation_bottleneck_audit_seed42_v1/code/run_frozen_probes.py",
+      "sha256": "9e374aa14035a7e6ad73ff49d86fc1c8925ade957671aca1a5bac62f916cebf2",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "ranking_bottleneck_source_audit_seed42_v1/IMPLEMENTATION_AUDIT.md",
+      "sha256": "da46d81c7862a4c88810944c35bba063f977d562e4c7caf238fc27b901f2bc70",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "ranking_bottleneck_source_audit_seed42_v1/FINAL_REPORT.md",
+      "sha256": "78869d17476449ee89c10ae287ccda89faacc833af374346c0d90f6865bbea9b",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "ranking_bottleneck_source_audit_seed42_v1/code/train_variants.py",
+      "sha256": "171b05b90c05fa794de2747aaeb93ca608a70cca338f973c35e98d480d6204b3",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "a1_patient_conditioned_lowrank_adapter_seed42_v1/IMPLEMENTATION_AUDIT.md",
+      "sha256": "53671570d757d972b7196c2b83be33df2114726ba33e80275725ae8d9eef3b56",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "a1_patient_conditioned_lowrank_adapter_seed42_v1/FINAL_REPORT.md",
+      "sha256": "de95074f73c98ff7680883561db5732917f9c265207fe25df13d88c6a4fa92ef",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "a1_patient_conditioned_lowrank_adapter_seed42_v1/code/adapter.py",
+      "sha256": "58b835dfc1b1f3ed0e3a97a0b287687b84c9f0e2ecdb99d192d3d4144b44fd99",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "a0_source_posterior_decoder_seed42_v1/code/model.py",
+      "sha256": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+      "location": "trusted_server_source"
+    },
+    {
+      "reference": "a0_source_posterior_decoder_seed42_v1/code/train.py",
+      "sha256": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+      "location": "trusted_server_source"
+    }
+  ]
+}

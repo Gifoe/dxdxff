@@ -1,0 +1,20 @@
+{
+  "lzu": {
+    "records": 65,
+    "channels": 6635,
+    "direct_header_match": 6606,
+    "trimmed_direct_header_match": 6606,
+    "simple_unique_match": 6146,
+    "original_EDF_normalizer_unique_match": 0,
+    "header_NUL_padding": 0
+  },
+  "pediatric": {
+    "records": 22,
+    "channels": 2545,
+    "direct_header_match": 2545,
+    "trimmed_direct_header_match": 2545,
+    "simple_unique_match": 0,
+    "original_EDF_normalizer_unique_match": 1450,
+    "header_NUL_padding": 0
+  }
+}

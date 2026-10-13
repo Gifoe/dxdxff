@@ -1,0 +1,6 @@
+diagnostic,status
+M1_DisableResidual,NOT_RUN_STAGE_A_FAILED
+M2_ShuffleLF,NOT_RUN_STAGE_A_FAILED
+M3_AdditiveIntervention,NOT_RUN_STAGE_A_FAILED
+M4_Contribution,NOT_RUN_STAGE_A_FAILED
+M5_Reliability,NOT_RUN_STAGE_A_FAILED

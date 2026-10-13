@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "records": 256,
+  "patients": 80,
+  "canonical_channels": 7635,
+  "Nyquist_hz": 125,
+  "high_gamma80_150_reextracted": false,
+  "raw_PSD_sha256": "d8f9c7160e009c77cd0c2dfefce8c046c410911dd7e913a53d7e010b741c6d09"
+}

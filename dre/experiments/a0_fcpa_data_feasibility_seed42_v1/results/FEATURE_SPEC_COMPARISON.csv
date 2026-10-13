@@ -1,0 +1,13 @@
+band,source,status,evidence,feature_name,nonzero_fraction,finite_fraction,definition,frequency_lo,frequency_hi,paired_records
+delta,A0_88D,HISTORICAL16_DELTA_THETA_COLUMNS_CONSTANT_ZERO,historical_name_manifest_and_frozen_export_hash,,,,,,,
+delta,Window_cache,MEASURED_BY_NAME,,log_bp_delta,0.0,1.0,"zero compatible with no retained PSD bins, not evidence of absent raw signal",,,
+delta,Raw_primary,MEASURED_WELCH_VALID_WINDOWS_PROVENANCE_UNPROVEN,,,,,,1.0,4.0,
+delta,EDF,PARTIAL_MATCHED_COVERAGE_AND_DEVICE_FILTER_AUDIT,,,,,,,,256.0
+theta,A0_88D,HISTORICAL16_DELTA_THETA_COLUMNS_CONSTANT_ZERO,historical_name_manifest_and_frozen_export_hash,,,,,,,
+theta,Window_cache,MEASURED_BY_NAME,,log_bp_theta,0.0,1.0,"zero compatible with no retained PSD bins, not evidence of absent raw signal",,,
+theta,Raw_primary,MEASURED_WELCH_VALID_WINDOWS_PROVENANCE_UNPROVEN,,,,,,4.0,8.0,
+theta,EDF,PARTIAL_MATCHED_COVERAGE_AND_DEVICE_FILTER_AUDIT,,,,,,,,256.0
+alpha,A0_88D,ABSENT_FROM_PRUNED,historical_name_manifest_and_frozen_export_hash,,,,,,,
+alpha,Window_cache,MEASURED_BY_NAME,,log_bp_alpha,1.0,1.0,10<=f<13 candidate under historical spectral_min10; not full alpha,,,
+alpha,Raw_primary,MEASURED_WELCH_VALID_WINDOWS_PROVENANCE_UNPROVEN,,,,,,8.0,13.0,
+alpha,EDF,PARTIAL_MATCHED_COVERAGE_AND_DEVICE_FILTER_AUDIT,,,,,,,,256.0

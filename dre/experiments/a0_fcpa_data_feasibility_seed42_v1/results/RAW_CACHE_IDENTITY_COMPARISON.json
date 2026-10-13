@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "records": 256,
+  "identical_waveform_byte_hashes": 256,
+  "identical_time_channel_metadata": 256,
+  "other_raw_independent_lowfreq_source": false
+}

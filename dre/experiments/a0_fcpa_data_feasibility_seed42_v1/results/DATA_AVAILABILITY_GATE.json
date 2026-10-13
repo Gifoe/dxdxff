@@ -1,0 +1,20 @@
+{
+  "decision": "STOP_DATA_NOT_IDENTIFIABLE",
+  "raw_exact_generation_provenance": "PROVENANCE_NOT_PROVEN",
+  "complete_independent_EDF_time_channel_mapping": false,
+  "full_lowfreq_hardware_filter_contract": false,
+  "partial_alpha_hardware_contract": false,
+  "historical27_mask_reconciled": false,
+  "historical_mask_ledger_available": false,
+  "observed_nominal_boundary_invalid_windows": 30,
+  "paired_delta_theta_alpha_numerical_gate": true,
+  "raw_identity_complete": true,
+  "raw_finite_rate_all_bands": 1.0,
+  "data_quality_patient_selection": false,
+  "thresholds_changed_after_PSD": false,
+  "training_performed": false,
+  "classifier_metrics_or_outer_results_used": false,
+  "A0_feature_export_unchanged": true,
+  "split_unchanged": true,
+  "signals_and_individual_details_private": true
+}

@@ -1,0 +1,7 @@
+{
+  "terminal": "LF_DATA_FIDELITY_GATE_FAILED",
+  "stage_completed": "A",
+  "later_stages": "NOT_RUN_MANDATORY_DATA_GATE",
+  "method_efficacy": "NOT_EVALUATED",
+  "new_outer_accessed": false
+}

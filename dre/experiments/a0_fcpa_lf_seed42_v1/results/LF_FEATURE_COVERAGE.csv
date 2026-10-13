@@ -1,0 +1,6 @@
+center,records,canonical_channels,candidate_4s_geometric_channels,diagnostically_paired_channels,sidecar_onset_corroborated_channels,known_LF_capable_acquisition_channels,independently_verified_candidate_channels,verified_fraction,LF24_feature_bank_extracted,status
+ALL,256,7635,7635,7635,4592,925,925,0.12115258677144729,False,STAGE_A_GEOMETRY_AND_FIDELITY_NOT_LF_FEATURES
+hup,117,3667,3667,3667,3667,0,0,0.0,False,STAGE_A_GEOMETRY_AND_FIDELITY_NOT_LF_FEATURES
+lzu,72,2141,2141,2141,0,0,0,0.0,False,STAGE_A_GEOMETRY_AND_FIDELITY_NOT_LF_FEATURES
+multicenter,45,925,925,925,925,925,925,1.0,False,STAGE_A_GEOMETRY_AND_FIDELITY_NOT_LF_FEATURES
+pediatric,22,902,902,902,0,0,0,0.0,False,STAGE_A_GEOMETRY_AND_FIDELITY_NOT_LF_FEATURES

@@ -1,0 +1,8 @@
+{
+  "user_request_sha256": "27c842c9506f95fabcb70f7cecdc660172e7092df79a0f39d03d14d61ed0f9ac",
+  "research_task": "FCPA-LF trustworthy low/high-frequency complementarity",
+  "mandatory_first_stage": "Actual EDF/Raw source fidelity and valid-window audit",
+  "failed_gate_requires_stop_before_model_training": true,
+  "new_outer_authorized": false,
+  "intended_model_implementation_is_conditional_not_a_completed_stage": true
+}

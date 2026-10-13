@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "records_examined": 256,
+  "private_pair_files": 256,
+  "correlations_are_signal_only": true,
+  "classifier_outputs_accessed": false
+}

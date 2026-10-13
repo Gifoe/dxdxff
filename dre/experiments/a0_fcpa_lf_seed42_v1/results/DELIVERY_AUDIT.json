@@ -1,0 +1,19 @@
+{
+  "scientific_terminal": "LF_DATA_FIDELITY_GATE_FAILED",
+  "public_delivery": "Source, hashes, anonymous aggregate signal/header statistics and negative audit reports only",
+  "private_waveforms_EDFs_checkpoints_patient_channel_records_predictions_logs_secrets_in_delivery": false,
+  "original_features_split_and_test_seal_unchanged": true,
+  "installed_skills_used": [],
+  "gate_tests_pass_local_and_server": true,
+  "negative_audit_integrity_pass_local_and_server": true,
+  "models_trained": 0,
+  "new_outer_evaluations": 0,
+  "unexecuted_downstream_outputs": "Explicit NOT_RUN/NA; no fabricated metric or interval",
+  "spectral_helper_comment_qualification": {
+    "executed_sha256": "271f0eef545babb31f39c2e933a74cb2401d931eea37d672088c965be9c8c5e5",
+    "delivered_sha256": "cc401ab94e84938bd38e54f620e8781c782c5bc058d7644cf419c738796260db",
+    "AST_identical": true,
+    "numerical_math_or_gate_change": false
+  },
+  "timeline_and_native_bin_qualification": "Original diagnostics retained; V2 interpretation does not assert EDF+D timing or exact13to40 from unaligned residual integrals"
+}

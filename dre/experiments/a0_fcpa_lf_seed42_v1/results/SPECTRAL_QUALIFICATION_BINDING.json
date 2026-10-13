@@ -1,0 +1,9 @@
+{
+  "code_sha256": "1787dcee7d935626ad3256bbbbdfec24a402b9f5cf9033832e9dd22466d6145d",
+  "protocol_sha256": "f08877699e7ec99a5ab273a56bd5cb9429aca40b0dea0156afd1342a21785103",
+  "private_plan_sha256": "3f8aab92befdbbf63410e794eaac0e07f1958a4bb2f2342a26fcb9198e628fd3",
+  "original_index_diagnostic_retained": true,
+  "EDF_D_physical_timeline_claim": false,
+  "new_signal_feature_or_label_extraction": false,
+  "model_or_gate_changed": false
+}

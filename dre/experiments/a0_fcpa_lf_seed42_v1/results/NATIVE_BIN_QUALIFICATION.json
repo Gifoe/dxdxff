@@ -1,0 +1,9 @@
+{
+  "original_diagnostic_sha256": "c89b951703b57fbdb478ee38367649dec4f86207c269171f41a46f489505a588",
+  "qualifier_sha256": "27038d7667d9dd554cdc982d0b3d002a27eb63c4b3a6363eb5d598804a98abd8",
+  "correction": "Semantic qualification only; numerical values preserved",
+  "gate_changed": false,
+  "signals_recomputed": false,
+  "new_labels_or_model_outputs_read": false,
+  "dense_PSD_shape_or_exact_native13_40_proof": false
+}

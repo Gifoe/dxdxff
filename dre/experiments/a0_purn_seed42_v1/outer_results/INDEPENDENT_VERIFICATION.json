@@ -1,0 +1,12 @@
+{
+  "all_aggregate_parity": true,
+  "checkpoint_bank_threshold_prediction_source_checks": true,
+  "development_gate_unchanged_failed": true,
+  "draws": 10000,
+  "max_metric_drift": 3.3306690738754696e-16,
+  "metric_cells": 320,
+  "no_new_model_inference": true,
+  "status": "PASS",
+  "unique_clusters": 80,
+  "verified_contrast_intervals": 96
+}

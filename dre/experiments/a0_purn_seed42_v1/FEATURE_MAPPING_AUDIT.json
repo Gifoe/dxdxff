@@ -1,0 +1,843 @@
+{
+  "all_legal_postprocessed_banks_checked": true,
+  "columns": [
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 0,
+      "main_name": null,
+      "name": "b0_abs__log_bp_delta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 1,
+      "main_name": null,
+      "name": "b0_abs__log_bp_delta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 2,
+      "main_name": null,
+      "name": "b0_abs__log_bp_theta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 3,
+      "main_name": null,
+      "name": "b0_abs__log_bp_theta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 4,
+      "main_name": null,
+      "name": "b0_abs__log_bp_beta__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 5,
+      "main_name": null,
+      "name": "b0_abs__log_bp_beta__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 6,
+      "main_name": null,
+      "name": "b0_abs__log_bp_low_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 7,
+      "main_name": null,
+      "name": "b0_abs__log_bp_low_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 8,
+      "main_name": null,
+      "name": "b0_abs__log_bp_high_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 9,
+      "main_name": null,
+      "name": "b0_abs__log_bp_high_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 10,
+      "main_name": null,
+      "name": "b0_abs__rms__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 11,
+      "main_name": null,
+      "name": "b0_abs__rms__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 12,
+      "main_name": null,
+      "name": "b0_abs__variance__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 13,
+      "main_name": null,
+      "name": "b0_abs__variance__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 14,
+      "main_name": null,
+      "name": "b0_abs__line_length_per_sec__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 15,
+      "main_name": null,
+      "name": "b0_abs__line_length_per_sec__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 16,
+      "main_name": null,
+      "name": "b0_abs__spectral_entropy__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 17,
+      "main_name": null,
+      "name": "b0_abs__spectral_entropy__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 18,
+      "main_name": null,
+      "name": "b0_delta__log_bp_delta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 19,
+      "main_name": null,
+      "name": "b0_delta__log_bp_delta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 20,
+      "main_name": null,
+      "name": "b0_delta__log_bp_theta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 21,
+      "main_name": null,
+      "name": "b0_delta__log_bp_theta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 22,
+      "main_name": null,
+      "name": "b0_delta__log_bp_beta__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 23,
+      "main_name": null,
+      "name": "b0_delta__log_bp_beta__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 24,
+      "main_name": null,
+      "name": "b0_delta__log_bp_low_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 25,
+      "main_name": null,
+      "name": "b0_delta__log_bp_low_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 26,
+      "main_name": null,
+      "name": "b0_delta__log_bp_high_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 27,
+      "main_name": null,
+      "name": "b0_delta__log_bp_high_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 28,
+      "main_name": null,
+      "name": "b0_delta__rms__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 29,
+      "main_name": null,
+      "name": "b0_delta__rms__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 30,
+      "main_name": null,
+      "name": "b0_delta__variance__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 31,
+      "main_name": null,
+      "name": "b0_delta__variance__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 32,
+      "main_name": null,
+      "name": "b0_delta__line_length_per_sec__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 33,
+      "main_name": null,
+      "name": "b0_delta__line_length_per_sec__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 34,
+      "main_name": null,
+      "name": "b0_delta__spectral_entropy__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 35,
+      "main_name": null,
+      "name": "b0_delta__spectral_entropy__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 36,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_delta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 37,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_delta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 38,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_theta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 39,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_theta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 40,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_beta__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 41,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_beta__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 42,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_low_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 43,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_low_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 44,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_high_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 45,
+      "main_name": null,
+      "name": "b0_zdelta__log_bp_high_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 46,
+      "main_name": null,
+      "name": "b0_zdelta__rms__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 47,
+      "main_name": null,
+      "name": "b0_zdelta__rms__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 48,
+      "main_name": null,
+      "name": "b0_zdelta__variance__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 49,
+      "main_name": null,
+      "name": "b0_zdelta__variance__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 50,
+      "main_name": null,
+      "name": "b0_zdelta__line_length_per_sec__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 51,
+      "main_name": null,
+      "name": "b0_zdelta__line_length_per_sec__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 52,
+      "main_name": null,
+      "name": "b0_zdelta__spectral_entropy__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 53,
+      "main_name": null,
+      "name": "b0_zdelta__spectral_entropy__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 54,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_delta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 55,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_delta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 56,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_theta__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": true,
+      "duplicate_of": null,
+      "index": 57,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_theta__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 58,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_beta__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 59,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_beta__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 60,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_low_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 61,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_low_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 62,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_high_gamma__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 63,
+      "main_name": null,
+      "name": "b0_ratio__log_bp_high_gamma__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 64,
+      "main_name": null,
+      "name": "b0_ratio__rms__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 65,
+      "main_name": null,
+      "name": "b0_ratio__rms__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 66,
+      "main_name": null,
+      "name": "b0_ratio__variance__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 67,
+      "main_name": null,
+      "name": "b0_ratio__variance__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 68,
+      "main_name": null,
+      "name": "b0_ratio__line_length_per_sec__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 69,
+      "main_name": null,
+      "name": "b0_ratio__line_length_per_sec__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 70,
+      "main_name": null,
+      "name": "b0_ratio__spectral_entropy__seizure_mean",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": null,
+      "index": 71,
+      "main_name": null,
+      "name": "b0_ratio__spectral_entropy__seizure_std",
+      "statistic_representative": true
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 44,
+      "index": 72,
+      "main_name": "b0_zdelta__log_bp_high_gamma__seizure_mean",
+      "name": "physics_zdelta__log_bp_high_gamma__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 45,
+      "index": 73,
+      "main_name": "b0_zdelta__log_bp_high_gamma__seizure_std",
+      "name": "physics_zdelta__log_bp_high_gamma__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 50,
+      "index": 74,
+      "main_name": "b0_zdelta__line_length_per_sec__seizure_mean",
+      "name": "physics_zdelta__line_length_per_sec__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 51,
+      "index": 75,
+      "main_name": "b0_zdelta__line_length_per_sec__seizure_std",
+      "name": "physics_zdelta__line_length_per_sec__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 46,
+      "index": 76,
+      "main_name": "b0_zdelta__rms__seizure_mean",
+      "name": "physics_zdelta__rms__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 47,
+      "index": 77,
+      "main_name": "b0_zdelta__rms__seizure_std",
+      "name": "physics_zdelta__rms__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 48,
+      "index": 78,
+      "main_name": "b0_zdelta__variance__seizure_mean",
+      "name": "physics_zdelta__variance__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 49,
+      "index": 79,
+      "main_name": "b0_zdelta__variance__seizure_std",
+      "name": "physics_zdelta__variance__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 26,
+      "index": 80,
+      "main_name": "b0_delta__log_bp_high_gamma__seizure_mean",
+      "name": "physics_delta__log_bp_high_gamma__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 27,
+      "index": 81,
+      "main_name": "b0_delta__log_bp_high_gamma__seizure_std",
+      "name": "physics_delta__log_bp_high_gamma__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 32,
+      "index": 82,
+      "main_name": "b0_delta__line_length_per_sec__seizure_mean",
+      "name": "physics_delta__line_length_per_sec__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 33,
+      "index": 83,
+      "main_name": "b0_delta__line_length_per_sec__seizure_std",
+      "name": "physics_delta__line_length_per_sec__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 28,
+      "index": 84,
+      "main_name": "b0_delta__rms__seizure_mean",
+      "name": "physics_delta__rms__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 29,
+      "index": 85,
+      "main_name": "b0_delta__rms__seizure_std",
+      "name": "physics_delta__rms__seizure_std",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 30,
+      "index": 86,
+      "main_name": "b0_delta__variance__seizure_mean",
+      "name": "physics_delta__variance__seizure_mean",
+      "statistic_representative": false
+    },
+    {
+      "constant_zero": false,
+      "duplicate_of": 31,
+      "index": 87,
+      "main_name": "b0_delta__variance__seizure_std",
+      "name": "physics_delta__variance__seizure_std",
+      "statistic_representative": false
+    }
+  ],
+  "fixed_by_manifest": true,
+  "folds": [
+    {
+      "FIT_channels": 4623,
+      "FIT_patients": 51,
+      "bank_sha256": "2fdba271ead7b56d87b7e81c86bca1a4f96af72c5f13105e3e0b1627b092e000",
+      "constant_dimensions": 16,
+      "duplicate_pairs": 16,
+      "fold": 1,
+      "original_preprocessing_bitwise": true,
+      "original_x_sha256": "997f0d9b578204464fe4dbed53b56e38ccd39a9f54893f6da1b8aaefa5c8d983",
+      "outer_overlap": 0,
+      "representative_columns": 56,
+      "representatives_nonconstant_on_FIT": true,
+      "validation_patients": 13
+    },
+    {
+      "FIT_channels": 4951,
+      "FIT_patients": 51,
+      "bank_sha256": "45971afe99fe1c91328bcea3243c94c56bea404b94c11df013dc79d72802c67a",
+      "constant_dimensions": 16,
+      "duplicate_pairs": 16,
+      "fold": 2,
+      "original_preprocessing_bitwise": true,
+      "original_x_sha256": "50db6ec350c52afcb5478f7b8ebd4c251ec5d3b171228a787bc9d3977c40334f",
+      "outer_overlap": 0,
+      "representative_columns": 56,
+      "representatives_nonconstant_on_FIT": true,
+      "validation_patients": 13
+    },
+    {
+      "FIT_channels": 4725,
+      "FIT_patients": 50,
+      "bank_sha256": "4a72a4a467517d3c0c82651da4024f80ab1908db048beb2eb16424eaba2f6b71",
+      "constant_dimensions": 16,
+      "duplicate_pairs": 16,
+      "fold": 3,
+      "original_preprocessing_bitwise": true,
+      "original_x_sha256": "0e87c0d18f85e34d4343b5f6f9f57e3ce909a3ff4d5d8007337e9ff34f3152c8",
+      "outer_overlap": 0,
+      "representative_columns": 56,
+      "representatives_nonconstant_on_FIT": true,
+      "validation_patients": 13
+    },
+    {
+      "FIT_channels": 4943,
+      "FIT_patients": 52,
+      "bank_sha256": "c1b421fed740daa46ad193302d44d1142efc0796823e22400de9187d3d915386",
+      "constant_dimensions": 16,
+      "duplicate_pairs": 16,
+      "fold": 4,
+      "original_preprocessing_bitwise": true,
+      "original_x_sha256": "282a7d741c1cf05d788187044153fa15c2871c9880e694689305a0d6200c4cdc",
+      "outer_overlap": 0,
+      "representative_columns": 56,
+      "representatives_nonconstant_on_FIT": true,
+      "validation_patients": 13
+    },
+    {
+      "FIT_channels": 5025,
+      "FIT_patients": 51,
+      "bank_sha256": "5e23175c5b538ce79f05ba3b4793c5822560ef0748920d0404b3baba898ef4ce",
+      "constant_dimensions": 16,
+      "duplicate_pairs": 16,
+      "fold": 5,
+      "original_preprocessing_bitwise": true,
+      "original_x_sha256": "7e5d26fb12192930060bb31fd94a2fe7a8d1376317742411a72164fbe44fce03",
+      "outer_overlap": 0,
+      "representative_columns": 56,
+      "representatives_nonconstant_on_FIT": true,
+      "validation_patients": 13
+    }
+  ],
+  "input_width": 88,
+  "label_free": true,
+  "stat_indices": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71
+  ],
+  "status": "PASS"
+}

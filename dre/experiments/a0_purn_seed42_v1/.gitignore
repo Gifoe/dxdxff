@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*PRIVATE*
+*.pt
+*.pth
+*.npz
+*.npy
+*.edf
+*.h5
+*.log
+*.err

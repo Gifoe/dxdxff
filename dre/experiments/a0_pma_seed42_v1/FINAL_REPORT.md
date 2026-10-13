@@ -170,3 +170,12 @@ completed epoch discarded. All existing files were preserved.
 Training/evaluation artifacts and detailed patient/channel records remain
 private on the authorized server. Only source, hashes and anonymous compact
 aggregates are included here. No installed skills were used.
+
+## Subsequent B1-only outer extension
+
+The above report is the completed PMA-development snapshot. Afterwards, the
+user explicitly authorized frozen B1 outer evaluation, recorded separately
+in `../a0_b1_no_layernorm_outer_seed42_v1/FINAL_REPORT.md`. B1 outer AUROC
+is0.740841 versus reused B0's0.739768; paired difference+0.001073 with95% CI
+[−0.016461,+0.017722]. This does not establish a generalizable B1 ranking
+gain. The original PMA gate remains failed; B2/B3 outer remains unperformed.

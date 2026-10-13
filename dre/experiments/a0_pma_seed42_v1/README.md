@@ -42,3 +42,10 @@ predictions, patient IDs, credentials or runtime logs belong in this directory.
 
 See `FINAL_REPORT.md` for the completed result and stop decision. No installed
 skills were used in this experiment.
+
+## Subsequent explicit B1-only authorization
+
+After this development study was completed and published, the user requested
+a frozen B1 outer evaluation. That separate extension is documented in
+`../a0_b1_no_layernorm_outer_seed42_v1/FINAL_REPORT.md`. The failed PMA gate,
+original development outputs and lack of B2/B3 outer evaluation are unchanged.

@@ -1,0 +1,13 @@
+{
+  "status": "B1_OUTER_COMPLETE_NO_SUPPORTED_INCREMENTAL_GAIN",
+  "evaluation_complete": true,
+  "independent_verification": "PASS",
+  "patients": 80,
+  "channels": 7635,
+  "new_inference_models": ["B1"],
+  "B0_outer_scores_reused": true,
+  "training_or_threshold_reselection": false,
+  "PMA_gate_unchanged": true,
+  "B2_B3_outer_performed": false,
+  "scientific_status": "USER_AUTHORIZED_POST_DEVELOPMENT_MODEL_SELECTION_EXPLORATORY_REPEATED_OUTER"
+}

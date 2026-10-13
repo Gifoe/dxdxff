@@ -1,0 +1,16 @@
+{
+  "EZ": 1743,
+  "FIT_VAL_export_label_parity": true,
+  "NEZ": 5892,
+  "all15_new_predictions_before_full_y": true,
+  "all_dependencies_unchanged": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "a59e065c63cf8ce9a0a7dfbea8889c1e9dbfa706227b8dcfcecf12070b2ecad9",
+  "no_checkpoint_change": true,
+  "no_retraining": true,
+  "no_threshold_reselection": true,
+  "original_development_gate_unchanged_failed": true,
+  "patients_per_arm": 80,
+  "seal_sha256": "571756163fdc6235a21cf35afa7968383ff9f33595db3c93bddf10e16eaf766e",
+  "status": "PASS"
+}

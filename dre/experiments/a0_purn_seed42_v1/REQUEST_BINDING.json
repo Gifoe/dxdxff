@@ -1,0 +1,19 @@
+{
+  "experiment":"a0_purn_seed42_v1",
+  "branch":"codex/a0-purn-seed42-v1",
+  "original_request_sha256":"79f8b362b4cdc99100a90e3ca13e1772289379f44b89700129ae4a6747e13eef",
+  "public_parent_commit":"469101e2f7523eb1010575c00eb48836a13aa0e1",
+  "parent_tree":"c0903b1cd9107de59d9b4dbd010eb5e3a69808a0",
+  "development_protocol_sha256":"2130ce5f6ee4f85679c4dec497d769b2d5646fc8f9f42fbaabe0fe01a8392247",
+  "development_freeze_sha256":"8f71ea545914f119eec8f71fee25e6530ce5dfb1505c6ce3b18a8adcc50e18cc",
+  "development_terminal":"PURN_DEVELOPMENT_GATE_FAILED",
+  "new_training_cells":15,"reused_baseline_development_cells":5,
+  "outer_authorization":"Subsequent direct user request: 把outer跑完",
+  "outer_freeze_sha256":"a59e065c63cf8ce9a0a7dfbea8889c1e9dbfa706227b8dcfcecf12070b2ecad9",
+  "outer_status":"ONE_FROZEN_PURN_FOUR_ARM_OUTER_PASS_COMPLETE",
+  "outer_new_inference_cells":15,"outer_reused_B0_cells":5,
+  "outer_no_retraining":true,"outer_no_threshold_reselection":true,
+  "development_gate_unchanged_failed":true,
+  "scientific_status":"USER_AUTHORIZED_POST_DEVELOPMENT_EXPLORATORY_REPEATED_OUTER_NOT_BLIND_CONFIRMATION",
+  "installed_skills_used":[]
+}

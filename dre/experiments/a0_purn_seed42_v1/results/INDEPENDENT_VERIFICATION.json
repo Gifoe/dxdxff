@@ -1,0 +1,13 @@
+{
+  "all_aggregate_gate_parity": true,
+  "draws": 10000,
+  "independent_numpy_statistic_checks": true,
+  "max_metric_drift": 3.3306690738754696e-16,
+  "metric_cells": 260,
+  "new_outer_accessed": false,
+  "retained_appearances": 65,
+  "source_bank_buffer_affine_threshold_checks": true,
+  "status": "PASS",
+  "unique_clusters": 47,
+  "verified_contrast_intervals": 96
+}

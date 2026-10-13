@@ -1,0 +1,9 @@
+{
+  "channels": 7635,
+  "development_gate_unchanged_failed": true,
+  "new_inference_cells": 15,
+  "patients": 80,
+  "reused_B0_cells": 5,
+  "scientific_status": "USER_AUTHORIZED_POST_DEVELOPMENT_EXPLORATORY_REPEATED_OUTER_NOT_BLIND_CONFIRMATION",
+  "status": "ONE_FROZEN_PURN_FOUR_ARM_OUTER_PASS_COMPLETE"
+}

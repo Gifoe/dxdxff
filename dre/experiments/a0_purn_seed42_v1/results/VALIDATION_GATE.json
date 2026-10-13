@@ -1,0 +1,18 @@
+{
+  "AUROC_B3_minus_B0_CI_excludes_zero": true,
+  "criteria": {
+    "AUPRC_not_decreased": true,
+    "AUROC_B3_minus_B0_ge0_010": false,
+    "AUROC_B3_minus_B1_ge0_005": false,
+    "AUROC_B3_minus_B2_ge0_005": true,
+    "EZF1_decline_at_most0_005": true,
+    "MacroF1_not_decreased": true,
+    "all_identity_parameter_numerical_leakage_checks": true,
+    "no_fold_preprocessing_or_feature_mismatch": true,
+    "positive_AUROC_folds_ge4": true,
+    "specificity_decline_at_most0_010": false
+  },
+  "new_outer_authorized": false,
+  "pass_gate": false,
+  "positive_AUROC_folds": 5
+}

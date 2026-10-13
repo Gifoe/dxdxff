@@ -1,0 +1,14 @@
+{
+  "all_five_masks_independently_name_verified": true,
+  "all_retained_values_and_preprocessor_statistics_exact": true,
+  "independent_pooled_metric_drift": 8.326672684688674e-17,
+  "masked_columns": 26,
+  "no_threshold_reselection": true,
+  "no_training_or_new_model_inference": true,
+  "numpy": "2.3.5",
+  "scientific_code_unchanged_after_outcomes": true,
+  "script_sha256": "56251a0920622d007fe9941ab210a9d431826bdb4d00774ed1bc8af7683901e0",
+  "source_free_original_banks_unchanged": true,
+  "status": "PASS",
+  "torch": "2.11.0+cu128"
+}

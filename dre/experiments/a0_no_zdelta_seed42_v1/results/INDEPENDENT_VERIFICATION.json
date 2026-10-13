@@ -1,0 +1,12 @@
+{
+  "all_aggregates_verified": true,
+  "all_checkpoints_banks_sources_protocol_thresholds_unchanged": true,
+  "bootstrap_draws": 10000,
+  "development_unique_clusters": 47,
+  "max_metric_drift": 3.3306690738754696e-16,
+  "metric_cells": 290,
+  "no_new_model_inference": true,
+  "outer_unique_clusters": 80,
+  "status": "PASS",
+  "verified_contrast_intervals": 32
+}

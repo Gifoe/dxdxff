@@ -1,0 +1,13 @@
+{
+  "EZ": 1743,
+  "NEZ": 5892,
+  "all_new_predictions_sealed_before_full_y": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "b42c1295c1e1d5e3c4b0382a5c0a20cc7f65dbabbef98aa8dd88f6eff982dc45",
+  "new_inference_cells": 5,
+  "patients_per_arm": 80,
+  "reused_A0_cells": 5,
+  "scientific_status": "Exploratory repeated development and repeated outer; no blind external confirmation; seed42 only; no outcome-driven iteration",
+  "seal_sha256": "d4e64c43308f4265d099920c0b06808ad24db6012c309a8a72a1647e06ed5c66",
+  "status": "ONE_FROZEN_A0_NO_ZDELTA_OUTER_PASS_COMPLETE"
+}

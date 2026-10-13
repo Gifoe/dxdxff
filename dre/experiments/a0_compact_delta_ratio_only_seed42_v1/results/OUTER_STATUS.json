@@ -1,0 +1,11 @@
+{
+  "all_new_scores_before_full_y": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "68354dea9210e0dd6448c813d065bcfe37f1cce6a24baf437bb87985c3f64f60",
+  "historical_refs_reused": true,
+  "new_cells": 10,
+  "patients_per_arm": 80,
+  "scientific_status": "OUTER_INFORMED_EXPLORATORY_REPEATED_COHORT; not blind confirmation",
+  "seal_sha256": "2d9f2d90e76f1dde8758732815ec7ab53b315af425a6ad06d3eceee5d3367bf7",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

@@ -1,0 +1,13 @@
+{
+  "all_aggregate_and_gate_parity": true,
+  "draws": 10000,
+  "hash_parameter_buffer_threshold_and_FIT_knot_checks": true,
+  "independent_backend": "sklearn",
+  "max_metric_drift": 2.220446049250313e-16,
+  "metric_cells": 390,
+  "new_outer_accessed": false,
+  "paired_intervals_verified": 112,
+  "retained_appearances": 65,
+  "status": "PASS",
+  "unique_clusters": 47
+}

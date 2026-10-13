@@ -1,0 +1,17 @@
+{
+  "AUROC_B3_minus_B0_CI_excludes_zero": false,
+  "criteria": {
+    "AUPRC_not_decreased": false,
+    "AUROC_B3_minus_B0_ge0.010": false,
+    "AUROC_B3_minus_B1_ge0.005": false,
+    "AUROC_B3_minus_B2_ge0.005": false,
+    "EZF1_decline_at_most0.005": true,
+    "MacroF1_not_decreased": true,
+    "all_pretraining_integrity_checks": true,
+    "positive_folds_ge4": false,
+    "specificity_decline_at_most0.010": true
+  },
+  "new_outer_authorized": false,
+  "pass_gate": false,
+  "positive_AUROC_folds": 1
+}

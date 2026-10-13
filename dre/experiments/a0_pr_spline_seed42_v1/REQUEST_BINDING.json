@@ -1,0 +1,15 @@
+{
+  "experiment": "a0_pr_spline_seed42_v1",
+  "request_sha256": "638b6020e700f3ff2bb46a8be92e22cfe9842f81815e3609032e73e66c7be8c1",
+  "branch": "codex/a0-pr-spline-seed42-v1",
+  "public_parent_commit": "a8887eb1a54213a31fc4e72830c6a191a3370438",
+  "parent_tree": "8c7794a845a487d821c4840076429b96159d9381",
+  "executed_arms": ["B0", "B1", "B2", "B3"],
+  "new_training_cells": 15,
+  "replayed_baseline_cells": 5,
+  "development_freeze_sha256": "5590218716c36f226791d4db08798ee8cc68be80b64aa3a85c974d7124507a92",
+  "new_outer_authorized": false,
+  "new_outer_accessed": false,
+  "installed_skills_used": [],
+  "terminal": "PR_SPLINE_DEVELOPMENT_GATE_FAILED"
+}

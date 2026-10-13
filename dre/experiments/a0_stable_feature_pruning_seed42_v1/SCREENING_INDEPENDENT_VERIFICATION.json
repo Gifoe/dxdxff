@@ -1,0 +1,64 @@
+{
+  "all_eligibility_and_random_controls_exact": true,
+  "all_nested_roles_disjoint": true,
+  "cells": 330,
+  "group_screen_rows": 315,
+  "inner_training_only_preprocessor": true,
+  "no_outer_access": true,
+  "no_training_or_inference": true,
+  "original_executed_source_hashes_unchanged": true,
+  "patient_metric_cells": 5610,
+  "selection_summary": [
+    {
+      "fold": 1,
+      "random_groups": [
+        15
+      ],
+      "selected_count": 1,
+      "selected_groups": [
+        18
+      ]
+    },
+    {
+      "fold": 2,
+      "random_groups": [
+        10
+      ],
+      "selected_count": 1,
+      "selected_groups": [
+        2
+      ]
+    },
+    {
+      "fold": 3,
+      "random_groups": [
+        13
+      ],
+      "selected_count": 1,
+      "selected_groups": [
+        12
+      ]
+    },
+    {
+      "fold": 4,
+      "random_groups": [
+        14
+      ],
+      "selected_count": 1,
+      "selected_groups": [
+        7
+      ]
+    },
+    {
+      "fold": 5,
+      "random_groups": [
+        1
+      ],
+      "selected_count": 1,
+      "selected_groups": [
+        7
+      ]
+    }
+  ],
+  "status": "PASS"
+}

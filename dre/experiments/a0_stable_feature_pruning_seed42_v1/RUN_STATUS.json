@@ -1,0 +1,10 @@
+{
+  "aliases": 0,
+  "final_cells": 20,
+  "no_new_outer": true,
+  "screening_cells": 330,
+  "status": "COMPLETE",
+  "terminal": "STRUCTURAL_COMPRESSION_VERIFIED_PREDICTIVE_PRUNING_NOT_ESTABLISHED",
+  "unique_ids": 47,
+  "validation_appearances": 65
+}

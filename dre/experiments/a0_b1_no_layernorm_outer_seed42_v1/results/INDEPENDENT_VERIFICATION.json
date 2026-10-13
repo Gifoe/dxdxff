@@ -1,0 +1,15 @@
+{
+  "absolute_intervals_checked": 22,
+  "backend": "independent sklearn",
+  "draws": 10000,
+  "freeze_sha256": "eebe4b73e449af3970e85b85de2be9c11b689608280a00e724643db649ee816f",
+  "max_absolute_metric_drift": 3.3306690738754696e-16,
+  "no_new_inference": true,
+  "no_threshold_refitting": true,
+  "numpy": "2.3.5",
+  "paired_intervals_checked": 11,
+  "patient_cells": 160,
+  "seed": 42,
+  "sklearn": "1.7.2",
+  "status": "PASS"
+}

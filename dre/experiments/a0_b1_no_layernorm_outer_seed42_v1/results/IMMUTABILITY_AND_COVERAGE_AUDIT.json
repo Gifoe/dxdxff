@@ -1,0 +1,25 @@
+{
+  "B0_scores_reused": true,
+  "B1_parameters": 8641,
+  "B2_B3_outer_accessed": false,
+  "EZ": 1743,
+  "FIT_VAL_label_parity": true,
+  "NEZ": 5892,
+  "PMA_gate_unchanged": true,
+  "all_dependencies_unchanged": true,
+  "channels_unique_once": 7635,
+  "freeze_sha256": "eebe4b73e449af3970e85b85de2be9c11b689608280a00e724643db649ee816f",
+  "frozen_B1_thresholds": [
+    0.485,
+    0.405,
+    0.425,
+    0.435,
+    0.49
+  ],
+  "full_B1_predictions_sealed_before_y": true,
+  "patients_unique_once": 80,
+  "prediction_seal_sha256": "8c83d2d153eac8ec97196bdc60343c2218cf466743998d62762e8b561dd7428b",
+  "status": "PASS",
+  "threshold_reselection": false,
+  "training": false
+}

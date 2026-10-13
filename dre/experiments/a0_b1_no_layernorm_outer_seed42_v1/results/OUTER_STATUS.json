@@ -1,0 +1,10 @@
+{
+  "B0_reused": true,
+  "channels": 7635,
+  "freeze_sha256": "eebe4b73e449af3970e85b85de2be9c11b689608280a00e724643db649ee816f",
+  "independent_verification_pending": true,
+  "new_outer_model": "B1",
+  "patients": 80,
+  "scientific_status": "USER_AUTHORIZED_POST_DEVELOPMENT_MODEL_SELECTION_EXPLORATORY_REPEATED_OUTER",
+  "status": "ONE_USER_AUTHORIZED_FROZEN_B1_OUTER_COMPLETE"
+}

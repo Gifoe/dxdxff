@@ -1,0 +1,10 @@
+{
+  "development_freeze_sha256": "5590218716c36f226791d4db08798ee8cc68be80b64aa3a85c974d7124507a92",
+  "new_outer_accessed": false,
+  "new_training_cells": 15,
+  "registered_protocol_unchanged": true,
+  "reused_baseline_cells": 5,
+  "status": "ALL_DEVELOPMENT_AND_MECHANISM_COMPLETE",
+  "unique_validation_patients": 47,
+  "validation_appearances": 65
+}

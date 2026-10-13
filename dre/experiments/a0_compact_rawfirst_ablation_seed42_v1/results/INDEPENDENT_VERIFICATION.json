@@ -1,0 +1,22 @@
+{
+  "all9_pooled_confusion_counts_verified": true,
+  "checked_bootstrap_intervals": 256,
+  "checked_patient_model_cells": 1450,
+  "feature_status": "PASS",
+  "historical_model_fold_cells_reused": 15,
+  "max_metric_drift": 3.3306690738754696e-16,
+  "new_model_fold_cells": 30,
+  "new_training_epochs": 333,
+  "no_new_inference_or_tuning": true,
+  "raw_F0_feature_F0_exact_union_parity": true,
+  "raw_publication_commit": "22425ef38e34cf65d64e5dc761bdf375e3c8d20c",
+  "raw_result_published_before_feature_training": true,
+  "raw_status": "PASS",
+  "script_sha256": "473b1ceddd989ab38b0b8e43213033898e1bc186f9ae7929fa62a1fa826fc305",
+  "stage_audit_sha256": {
+    "FEATURE": "4493e1137dbc989dacd7eb0ed42d53f1bcaf23874e3242fdeead1c47c2b802d5",
+    "RAW": "9f409536401b9814a95283586d7bf3c0e071a499cf8c9ddf564a5fc7fbb80639"
+  },
+  "status": "PASS",
+  "unique_arm_patient_appearance_cells": 1305
+}

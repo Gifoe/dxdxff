@@ -1,7 +1,10 @@
 # Raw input and provenance
 
-This document records the prespecified contract, not a new measured coverage
-claim. Use the executed `results/RAW_ALIGNMENT_AUDIT.json` for actual admission.
+The prespecified contract below has now passed actual admission:
+`results/RAW_ALIGNMENT_AUDIT.json` confirms80 patients/256 records/7635
+channels/24995 run-channel incidences and1471965 valid channel-windows;
+all source slice parity checks pass. These are actual new audit counts,
+not assumed historical coverage. Physical-clock/filter limitations remain.
 The historical raw cache has155 patients/501 records, but only the fixed80
 patients/256 seizure records are in scope. Raw and feature-window cache SHA
 must match the old RawTiny protocol. Compound run/seizure keys and normalized

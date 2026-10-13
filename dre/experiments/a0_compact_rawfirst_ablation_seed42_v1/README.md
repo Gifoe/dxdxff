@@ -14,8 +14,12 @@ outer/verification → final separate raw-baseline and component tables.
 Raw-first stage is complete and independently verified. R0 outer AUROC
 0.633626, AUPRC0.408496, Macro-F10.543958 versus F0's
 0.736977/0.530653/0.624236. See [RAW_ONLY_REPORT.md](RAW_ONLY_REPORT.md).
-Feature F1–F5 training remains NOT_RUN at this first raw-result publication.
-Executed status and results are in `results/`; unfinished arms remain NOT_RUN.
+All F1–F5 cells and their frozen outer passes are now complete after that
+first raw-result publication. See [FINAL_REPORT.md](FINAL_REPORT.md) for the
+two separate tables, all effects and limits. Terminal:
+`COMPLETE_A0_COMPACT_RAW_FIRST_ABLATION_OUTER_EXPLORATORY`.
+The raw report is the unchanged Stage II snapshot; its then-pending wording
+records the required execution order, not the current final status.
 No raw outcome can select the next arm. No installed skill is used.
 
 ## Trusted server execution

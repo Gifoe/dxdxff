@@ -1,0 +1,10 @@
+{
+  "all9_configurations_complete": true,
+  "feature_ablations_complete": true,
+  "historical_reused_cells": 15,
+  "new_feature_cells": 25,
+  "new_raw_cells": 5,
+  "no_new_model_or_test_driven_iteration": true,
+  "raw_complete": true,
+  "status": "COMPLETE_A0_COMPACT_RAW_FIRST_ABLATION_OUTER_EXPLORATORY"
+}

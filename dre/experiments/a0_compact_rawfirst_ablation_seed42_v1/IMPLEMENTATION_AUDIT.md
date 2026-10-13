@@ -26,6 +26,12 @@
 - Stage III requires verified Stage II results and a recorded verified public
   raw-result commit. Raw performance cannot alter this gate or the fixed matrix.
 
-Tests are executed on the trusted server before clinical raw training. Actual
-PASS/FAIL, numerical drift, raw parameter count, resource use and completed
-cells are runtime outputs, not assumed here. No installed skill is used.
+Tests were executed before clinical raw training. Raw input purity, pooling,
+mask/gradient and initial-state tests PASS; exact CPU model/optimizer resume
+and CPU/CUDA RNG restore PASS. GPU arithmetic bitwise resume is not claimed.
+Two preclinical fixture fixes and unchanged tolerances are disclosed by
+`PRECLINICAL_ENGINEERING_AMENDMENT.json`, the numerical diagnosis and raw report.
+All30 new competitive cells complete,333 epochs; both independent stages and
+the reporting-only nine-arm union PASS. `verification/finalize_aggregates.py`
+was added only for reporting after outcomes; scientific frozen code is unchanged.
+No installed skill was used.

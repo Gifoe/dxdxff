@@ -1,0 +1,10 @@
+arm,unit,TP,FP,TN,FN,channels
+F0,secondary_pooled_confusion_counts,729,799,5093,1014,7635
+F1,secondary_pooled_confusion_counts,630,1089,4803,1113,7635
+F2,secondary_pooled_confusion_counts,691,945,4947,1052,7635
+F3,secondary_pooled_confusion_counts,702,857,5035,1041,7635
+F4,secondary_pooled_confusion_counts,736,868,5024,1007,7635
+F5,secondary_pooled_confusion_counts,723,1010,4882,1020,7635
+F6,secondary_pooled_confusion_counts,742,834,5058,1001,7635
+F7,secondary_pooled_confusion_counts,748,855,5037,995,7635
+R0,secondary_pooled_confusion_counts,643,1235,4657,1100,7635

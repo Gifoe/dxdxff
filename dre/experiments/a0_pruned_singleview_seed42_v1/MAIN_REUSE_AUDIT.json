@@ -1,0 +1,132 @@
+{
+  "binding": {
+    "authoritative": {
+      "dependencies": {
+        "bank1": "a863a36a983d77d3e78675ee1761c9edba3e35f8dd6e52d7d12d03109e415a1a",
+        "bank2": "6efc5b4d4934b3847207d32b94cac884df2e8b34ec7d170214ae1450d04f2fea",
+        "bank3": "d936ef38ba96bb27d13dc417ac92582b3b7a150ef5d725e32e629ec9f2fee6cd",
+        "bank4": "bc4ca7fb9b0bb860015a61dcea4146980386ce5db70a66e58817e50b40ef3ac2",
+        "bank5": "a4a809d1146d719504fbbc14eaba58d4f932f746f1a617ef2e6853967a9f50dd",
+        "baseline_bank1": "c57f8d869e9ac5dfb0517e839cbef988542e88d4b127a63a2ba25ab4be555135",
+        "baseline_bank2": "483a350d5de5fbd7cda69375aea3fb76bc6fac133d8caf59a8172859aba0fb80",
+        "baseline_bank3": "93c025c3217a5de2c20e6449c93de5c4b669d3477d4fe51c8488c0d211246b1f",
+        "baseline_bank4": "b8f316db06d45908c44a0cf2f824ea3b2110ea64b146fe94cce10fa6933451eb",
+        "baseline_bank5": "6ecb4a11f1a25d068d8b3a49f1fd0886857ff298da40afd49bd302b502d43af0",
+        "baseline_checkpoint1": "e71d20862fc3a39fc283033fec0f932955f85058b5af8ec4f749295c37b1694a",
+        "baseline_checkpoint2": "b2a23b0aecb2a95d4722ab5f48384bd6d4c2c1d9244cf0c677397c2e56a01ea4",
+        "baseline_checkpoint3": "1af962560becfdba3e92ad242284cd19a119b4a7d4f3a1d776970c6b83d613ac",
+        "baseline_checkpoint4": "1e47d21bcf7c5de9e2f0d9f6e8bdc0ddfd7f74211e4cce0af02478d210afaf28",
+        "baseline_checkpoint5": "54c1f53d9d5fe9245f9b1748b20e52cfc46cd16a2da250a3255c7b9a8dd0ba02",
+        "core": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+        "feature_archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+        "source_free_factory": "c567196692be1149795d93586fe25e2b474f071511bd2fbd0f561db82e00b7d5",
+        "source_selection_metadata": "c001a58553ec16c303e96256384f6089c4a56bcccbe1ae1aa418f93fb3e2e16b",
+        "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+      },
+      "original_code": {
+        "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+        "finalize.py": "620e1e5cdfbe7a75f0887ffd1beb5f4bfbceb2d254f27d5bb0824094f3b8e9cf",
+        "model.py": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+        "posterior.py": "8cbe1a39b6035c11c9531aaba82652dd17de0a4d4a7c131bcf718ff0824737ba",
+        "prepare.py": "8cc9632b698edeb07f98a098d5d810cf1ab4c71db4b0f6539130c91bd773d114",
+        "run_fold.py": "7a984df72b6668a2f9ce59cdc178bbc277f64e5b3b8107295feaf4704cad9bf5",
+        "train.py": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+        "verify_fold.py": "e875020d7e79732b96fa6e06b3b4a7e68ec96f228d5c8598b80bc6bbb2509e29"
+      }
+    },
+    "auxiliary_code": {
+      "bootstrap.py": "3b9a71811d818a23f8b881214f2bded45ff2b202ab1c8606b6546648433f744a",
+      "dependencies.py": "63f2a35cab34585294c4245f25a7d50565a09d42db4407ce1b858495f2e9c6a1",
+      "metrics.py": "ece0d8abf411a575ad1d9794b48b7d5dcb202af1bb72a230d27005dc1ee0fab4"
+    },
+    "new": {
+      "AUTHORITATIVE_FEATURE_MANIFEST.json": "f7869e994e8494397761e4efa0a2a2057c2a13541331e5933e94c6f7b82a065f",
+      "PROTOCOL_LOCK.json": "ae74eedaed43bfb3c39ee60b8b0ffb0b188679af0ce8b7398b9f6b5a7cd038ec",
+      "code\\folding.py": "e020624b8cb6938dd054c34b4bef85e90319d51e7c53544148764634306a4718",
+      "code\\run.py": "4dad639515b7c51ab28896584fc0f74780659fad5018b9d6f8642267b7405f73",
+      "code\\views.py": "cfdb6ca44eb0d05d345b1efad4a288827e08779249e7b125f329827c34320e28",
+      "tests\\test_folding.py": "2db9d432ffa3aeab46f349ddbded53f605a91dad3864aca695aa55c012b8ce83",
+      "tests\\test_views.py": "3030607f7bd013f4c8b865853ad5604aee65bca7c806faa5def47daa601424e3"
+    },
+    "prior": {
+      "DEVELOPMENT_FREEZE_PRIVATE.json": "abd3d8a3122ef597945682bfc2c058f03a6f98902d28dab20f2e635aaa5aa858",
+      "INPUT_FREEZE_PRIVATE.json": "49663afa943aa660e4da56a41a94ed7cba1a626ce74248349052c91de4c5fea8",
+      "PREDICTION_SEAL_PRIVATE.json": "b23e7ef3f38ea4e684d47cf95bdd3e4bdf4b95b3dbaca7a7942e68e3fe4d2c06",
+      "PREPARED_PRIVATE.pt": "f51979016e2c2869dd1c2baf7781811953f9067426fdc47c8005beb38909cc8e",
+      "public/INDEPENDENT_VERIFICATION.json": "decdf281f9210fd6badee6ab77afd0400fb2f4ae4aa20501f86db92cb4db2d05"
+    },
+    "prior_executed_sources": {
+      "PROTOCOL_LOCK.json": "7dbd3204f87ec76ead60fe5deab3909fc88dbe475d68d8d07bc54777b1f0978a",
+      "code\\folding.py": "e020624b8cb6938dd054c34b4bef85e90319d51e7c53544148764634306a4718",
+      "code\\run.py": "49c86000fe71d10fe7ef064dab8ceb3cdd044c66afb27a589427438be3d3b6f8",
+      "tests\\test_folding.py": "2db9d432ffa3aeab46f349ddbded53f605a91dad3864aca695aa55c012b8ce83"
+    }
+  },
+  "metrics": {
+    "ez_auprc": 0.5173307071740828,
+    "ez_auroc": 0.719569975390029,
+    "ez_f1": 0.43763109261853367,
+    "ez_mrr": 0.6912190315700592,
+    "macro_f1": 0.6427219679229726
+  },
+  "no_main_retraining": true,
+  "no_new_outer": true,
+  "selections": [
+    {
+      "arm": "MAIN_B2",
+      "checkpoint_sha256": "637943dbceb85e7547d86130da487f15b832f27a378b846e558d716a1261fd7a",
+      "coordinates": 36,
+      "epoch": 2,
+      "fold": 1,
+      "historical_reuse": true,
+      "parameters": 3649,
+      "prediction_sha256": "c725b0eed684a3828b08f7ec3e221fd94e00b65cef27f7dd4b24ce2572a20e4a",
+      "threshold": 0.455
+    },
+    {
+      "arm": "MAIN_B2",
+      "checkpoint_sha256": "b25f6c921f5c0e55f19b227f78135e0a4a76adca0d37b25829600a3fce1a6d70",
+      "coordinates": 36,
+      "epoch": 2,
+      "fold": 2,
+      "historical_reuse": true,
+      "parameters": 3649,
+      "prediction_sha256": "fbd4f8ae99413494b85f36dd38499505842f29ff7a5bd23d244f6ca415d11aee",
+      "threshold": 0.28
+    },
+    {
+      "arm": "MAIN_B2",
+      "checkpoint_sha256": "2a6f8122fb16a2c5e21bc1f388405fdaccbd2727fdcb6cbdf6888f5c03cc8980",
+      "coordinates": 36,
+      "epoch": 3,
+      "fold": 3,
+      "historical_reuse": true,
+      "parameters": 3649,
+      "prediction_sha256": "106c3445a917534f8a2c555822dd0f8978e2fe1adf79f7620cffcade09617763",
+      "threshold": 0.345
+    },
+    {
+      "arm": "MAIN_B2",
+      "checkpoint_sha256": "d401211f068e241d34260310cadb1fd73470dcc273a49d702c4ed75a90c49ba8",
+      "coordinates": 36,
+      "epoch": 3,
+      "fold": 4,
+      "historical_reuse": true,
+      "parameters": 3649,
+      "prediction_sha256": "54492f821d08732261e1335b2985ba8ece957dbf8fcf7bb6bec9a71a246ca308",
+      "threshold": 0.33
+    },
+    {
+      "arm": "MAIN_B2",
+      "checkpoint_sha256": "099049b8774c7a7b0bb3bfd0513df3de45db3fa9538027119d773676b8d52af5",
+      "coordinates": 36,
+      "epoch": 4,
+      "fold": 5,
+      "historical_reuse": true,
+      "parameters": 3649,
+      "prediction_sha256": "76681938f9d14fdb29bc83c3748d87622a4fc8d31e11025f8cec69a115a833bf",
+      "threshold": 0.415
+    }
+  ],
+  "status": "PASS"
+}

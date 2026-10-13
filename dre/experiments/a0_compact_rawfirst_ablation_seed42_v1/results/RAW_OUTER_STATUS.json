@@ -1,0 +1,11 @@
+{
+  "all_new_scores_before_global_y": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "1075da9d86d903ef2b9fc5891c6392a32dbd2d0b20b681aafa0f74683d7e7895",
+  "full_experiment_matrix_frozen_before_raw_outcomes": true,
+  "new_cells": 5,
+  "patients_per_arm": 80,
+  "scientific_status": "USER_DEFINED_COMPACT_BASELINE_OUTER_INFORMED_EXPLORATORY_REPEATED_COHORT; no blind clinical confirmation",
+  "seal_sha256": "55ec7a61613c551a50e997774715313bb12bad469c4db13d6c9d3db6caa0435b",
+  "status": "ONE_FROZEN_RAW_OUTER_PASS_COMPLETE"
+}

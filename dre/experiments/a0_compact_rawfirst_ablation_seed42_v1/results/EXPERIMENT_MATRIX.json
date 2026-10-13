@@ -1,0 +1,118 @@
+{
+  "experiment_freeze_sha256": "e53cdfa60f35797b84af66d66631ab347f12251ed4824a24f49d9fc88f74d843",
+  "matrix": {
+    "F0": {
+      "layernorm": true,
+      "parameters": 8817,
+      "patient_z": true,
+      "retained": 62,
+      "source": false,
+      "status": "historical_verify_reuse",
+      "views": [
+        "abs",
+        "delta",
+        "ratio"
+      ]
+    },
+    "F1": {
+      "layernorm": true,
+      "parameters": 8817,
+      "patient_z": false,
+      "retained": 62,
+      "source": false,
+      "status": "new_5_folds",
+      "views": [
+        "abs",
+        "delta",
+        "ratio"
+      ]
+    },
+    "F2": {
+      "layernorm": true,
+      "parameters": 8817,
+      "patient_z": true,
+      "retained": 18,
+      "source": false,
+      "status": "new_5_folds",
+      "views": [
+        "abs"
+      ]
+    },
+    "F3": {
+      "layernorm": true,
+      "parameters": 8817,
+      "patient_z": true,
+      "retained": 36,
+      "source": false,
+      "status": "new_5_folds",
+      "views": [
+        "abs",
+        "ratio"
+      ]
+    },
+    "F4": {
+      "layernorm": true,
+      "parameters": 8817,
+      "patient_z": true,
+      "retained": 44,
+      "source": false,
+      "status": "new_5_folds",
+      "views": [
+        "abs",
+        "delta"
+      ]
+    },
+    "F5": {
+      "layernorm": false,
+      "parameters": 8641,
+      "patient_z": true,
+      "retained": 62,
+      "source": false,
+      "status": "new_5_folds",
+      "views": [
+        "abs",
+        "delta",
+        "ratio"
+      ]
+    },
+    "F6": {
+      "layernorm": true,
+      "parameters": 8817,
+      "patient_z": true,
+      "retained": 88,
+      "source": false,
+      "status": "historical_ZDELTA_restoration_control",
+      "views": [
+        "abs",
+        "delta",
+        "zdelta",
+        "ratio"
+      ]
+    },
+    "F7": {
+      "layernorm": true,
+      "parameters": 9221,
+      "patient_z": true,
+      "retained": 62,
+      "source": true,
+      "status": "historical_Source_restoration_control",
+      "views": [
+        "abs",
+        "delta",
+        "ratio"
+      ]
+    },
+    "R0": {
+      "input": "raw_waveform",
+      "network": "exact original initialized shared LayerNorm88 Linear88to96 GELU Dropout0.15 Linear96to1",
+      "parameters_expected": 18153,
+      "patient_z": "population SD floor1e-8; constant dimensions exactly0; all valid canonical channels",
+      "pool": "all valid2s window embeddings mean per seizure then masked seizure mean and population std",
+      "projection": "Linear64to88",
+      "status": "new_5_folds_first"
+    }
+  },
+  "new_cells": 30,
+  "previous_experiment_freeze_sha256": "dcbb661fe12af048aeaedaeb08d37d84cb8609540e9abe954124d0673edccc43",
+  "status": "FROZEN_BEFORE_RAW_NEW_OUTCOMES"
+}

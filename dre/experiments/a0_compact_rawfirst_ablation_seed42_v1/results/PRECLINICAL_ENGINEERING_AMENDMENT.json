@@ -1,0 +1,23 @@
+{
+  "amendment_type": "gradient_and_resume_fixture",
+  "changed_binding_keys": [
+    "tests_contract.py"
+  ],
+  "corrected_test_sha256": "61e2a65515876953fd69613335e172951671299652a912e6f0841f2bcbab3484",
+  "initial_freeze_and_audits_preserved": true,
+  "new_experiment_freeze_sha256": "e53cdfa60f35797b84af66d66631ab347f12251ed4824a24f49d9fc88f74d843",
+  "new_raw_metrics_viewed": false,
+  "no_data_model_loss_split_threshold_or_hyperparameter_change": true,
+  "previous_generated_hashes": {
+    "BASELINE_REPRODUCTION.json": "57e531267e28289bea5b6b9b98b86045fc614e22b5b2c65b246b6051412e7a36",
+    "EXPERIMENT_FREEZE.json": "dcbb661fe12af048aeaedaeb08d37d84cb8609540e9abe954124d0673edccc43",
+    "EXPERIMENT_MATRIX.json": "068786982035a5e8c473b241e04bfe84f3407233854c1bff86e8a4a8b82d7128",
+    "FEATURE_PRETRAIN_AUDIT.json": "17b226863dab6a3fd267bfc6383581633ac297e090a6d74a2ca6b4e2737d373a",
+    "PRECLINICAL_ENGINEERING_AMENDMENT.json": "0977b911998f355c6d23746776f20fbe2cf700869be0ee35365ee3a03f6dd32c"
+  },
+  "previous_test_sha256": "3a2d40abb5fd3763979e96164a729b1742ce51dbe2888ea06104ab94cb167f88",
+  "raw_registry_still_binds_initial_same_scientific_freeze": true,
+  "script_sha256": "2b994648db94221e987036b344f7552e28cae5c9638a8ea8993496e2cded2f4e",
+  "status": "PASS",
+  "training_started": false
+}

@@ -1,0 +1,143 @@
+{
+  "candidates": [
+    {
+      "arm": "M4_FEATURE_CORRECTION",
+      "base_unchanged": true,
+      "discarded_FIT_smoke_steps": 3,
+      "gradients": [
+        {
+          "norms": {
+            "head.0.bias": 0.0,
+            "head.0.weight": 0.0,
+            "head.2.bias": 0.04388093948364258,
+            "head.2.weight": 0.04765728488564491
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "head.0.bias": 3.080304304603487e-05,
+            "head.0.weight": 0.0001121800160035491,
+            "head.2.bias": 0.043836213648319244,
+            "head.2.weight": 0.04759341850876808
+          },
+          "step": 2
+        },
+        {
+          "norms": {
+            "head.0.bias": 6.158670294098556e-05,
+            "head.0.weight": 0.00022421390167437494,
+            "head.2.bias": 0.04379108548164368,
+            "head.2.weight": 0.04771162569522858
+          },
+          "step": 3
+        }
+      ],
+      "initial_identity_exact": true,
+      "status": "PASS",
+      "total": 1794,
+      "trainable": 257
+    },
+    {
+      "arm": "M5_STAGE_CORRECTION",
+      "base_unchanged": true,
+      "discarded_FIT_smoke_steps": 3,
+      "gradients": [
+        {
+          "norms": {
+            "head.0.bias": 0.0,
+            "head.0.weight": 0.0,
+            "head.2.bias": 0.04388093948364258,
+            "head.2.weight": 0.13005992770195007
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "head.0.bias": 4.566909046843648e-05,
+            "head.0.weight": 0.00036007026210427284,
+            "head.2.bias": 0.04377687722444534,
+            "head.2.weight": 0.12991291284561157
+          },
+          "step": 2
+        },
+        {
+          "norms": {
+            "head.0.bias": 9.161468915408477e-05,
+            "head.0.weight": 0.0007205078727565706,
+            "head.2.bias": 0.04367068409919739,
+            "head.2.weight": 0.13078154623508453
+          },
+          "step": 3
+        }
+      ],
+      "initial_identity_exact": true,
+      "status": "PASS",
+      "total": 2258,
+      "trainable": 721
+    },
+    {
+      "arm": "M6_MORPH_CORRECTION",
+      "base_unchanged": true,
+      "discarded_FIT_smoke_steps": 3,
+      "gradients": [
+        {
+          "norms": {
+            "cnn.0.bias": 0.0,
+            "cnn.0.weight": 0.0,
+            "cnn.2.bias": 0.0,
+            "cnn.2.weight": 0.0,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 0.0,
+            "gate.network.2.weight": 0.0,
+            "head.0.bias": 0.0,
+            "head.0.weight": 0.0,
+            "head.2.bias": 0.04388093948364258,
+            "head.2.weight": 0.2107861489057541
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "cnn.0.bias": 0.00010308312630513683,
+            "cnn.0.weight": 0.0009075924172066152,
+            "cnn.2.bias": 6.142938218545169e-05,
+            "cnn.2.weight": 0.0015920147998258471,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 2.5719684628583428e-12,
+            "gate.network.2.weight": 7.871934212744236e-05,
+            "head.0.bias": 7.9106364864856e-05,
+            "head.0.weight": 0.0010502396617084742,
+            "head.2.bias": 0.04365295171737671,
+            "head.2.weight": 0.2102465033531189
+          },
+          "step": 2
+        },
+        {
+          "norms": {
+            "cnn.0.bias": 0.00021084281615912914,
+            "cnn.0.weight": 0.001812718459405005,
+            "cnn.2.bias": 0.00012361332483123988,
+            "cnn.2.weight": 0.003153861267492175,
+            "gate.network.0.bias": 4.5441815643698646e-08,
+            "gate.network.0.weight": 4.038215877244511e-07,
+            "gate.network.2.bias": 3.462085018668404e-08,
+            "gate.network.2.weight": 0.00015537736180704087,
+            "head.0.bias": 0.0001632931234780699,
+            "head.0.weight": 0.0021245013922452927,
+            "head.2.bias": 0.043402355164289474,
+            "head.2.weight": 0.22135140001773834
+          },
+          "step": 3
+        }
+      ],
+      "initial_identity_exact": true,
+      "status": "PASS",
+      "total": 11018,
+      "trainable": 9481
+    }
+  ],
+  "status": "PASS"
+}

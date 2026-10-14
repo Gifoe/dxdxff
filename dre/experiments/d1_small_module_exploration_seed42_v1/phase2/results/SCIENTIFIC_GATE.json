@@ -1,0 +1,15 @@
+{
+  "adaptive_repeated_Development": true,
+  "independent_confirmation": false,
+  "no_new_Outer": true,
+  "phase2_complete": true,
+  "point_target_met": false,
+  "protocol_sha256": "05087be7147f0436c0278e4dd80c5ca568dba16f6e014f418899bb7829d57f30",
+  "selected_MacroF1": 0.6616290950932293,
+  "selected_common_candidate": "M6_MORPH_CORRECTION",
+  "selected_gain": 0.017082633158593485,
+  "selection": "one global candidate; never choose architecture separately per fold",
+  "target_met_with_quality_gates": false,
+  "total_exploration_candidates": 6,
+  "total_training_cells": 30
+}

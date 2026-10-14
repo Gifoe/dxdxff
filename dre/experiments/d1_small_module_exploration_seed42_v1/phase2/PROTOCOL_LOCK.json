@@ -1,0 +1,22 @@
+{
+  "experiment":"d1_small_module_exploration_seed42_v1_phase2",
+  "phase1_protocol":"2ba5848389181f247c13e1e614085bf86b4e642bdf11d104bac7be44425d3bdd",
+  "adaptive_reason":"Phase1 completed all15 cells; best MacroF1 gain+.006843, below+.02; several folds select alpha near0. Prospectively test direct D1-error correction without standalone auxiliary classification and slow zero scalar gate, not alter any previous outcome.",
+  "models":["M4_FEATURE_CORRECTION","M5_STAGE_CORRECTION","M6_MORPH_CORRECTION"],
+  "definitions":{
+    "M4_FEATURE_CORRECTION":"Frozen D1 preprocessed R14 -> Linear14to16 GELU Linear16to1, zero last;257 trainable",
+    "M5_STAGE_CORRECTION":"Same corrected-scale deterministic stage DELTA28 as phase1 M2 -> Linear28to24 GELU Linear24to1, zero last;721 trainable",
+    "M6_MORPH_CORRECTION":"Same corrected-scale phase1 M1 Raw morphology/gate/PatientZ96, zero last residual-head layer; remove alpha;9481 trainable"
+  },
+  "residual":"final=D1+1.0*tanh(correction_logit); fixed cap1.0, last output weight/bias0; exactD1 at step0. No trainable scalar gate or independent auxiliary-head loss.",
+  "training":{"seed":"42+1009*fold","AdamW_lr":0.0003,"weight_decay":0.001,"clip":1,"max_epochs":30,"min_stop":6,"patience":6,"loss":"original FIT NEZ-class weighted BCE(final) only","updates":"one channel mean/FITpatient","selection":"original patient MacroF1/EZF1/earlier epoch; originalNEZ .005 grid/ties"},
+  "data":"Exact original D1 banks/checkpoints; frozen completed DGM7D window registry; phase1 scales reused by hash, FIT only floor1e-30 clip8. No new extraction, patients or frequencies.",
+  "primary":"65 original Development appearances/47 IDs; all15 cells reported; repeatedly studied, adaptive and selection-conditioned",
+  "target":{"MacroF1_gain":0.02,"absolute_MacroF1_target":0.6645464619346358,"AUROC_gain_min":0,"AP_gain_min":0,"EZF1_gain_min":0,"sensitivity_gain_min":-0.01,"positive_MacroF1_folds_min":4},
+  "bootstrap":{"draws":10000,"seed":42,"unit":"unique IDs retaining all appearances","thresholds_fixed":true,"CI":"95% percentile, selection-conditioned; no independence or selection-bias correction claimed"},
+  "global_choice":"one common candidate acrossfolds, never cherry-pick bestarchitecture per fold",
+  "no_new_Outer":true,
+  "no_extra_seeds_or_hidden_variants_in_phase2":true,
+  "installed_skills_used":[],
+  "publish":"code/hashes/anonymous aggregates only; all individual data/weights/predictions private on server D"
+}

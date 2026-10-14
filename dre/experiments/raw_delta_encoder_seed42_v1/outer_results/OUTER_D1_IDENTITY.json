@@ -1,0 +1,36 @@
+{
+  "folds": [
+    {
+      "D1_original_threshold_decisions_exact": true,
+      "embedded_D1_logit_max_difference": 2.384185791015625e-07,
+      "fold": 1,
+      "gamma0_exact_embedded_logit": true
+    },
+    {
+      "D1_original_threshold_decisions_exact": true,
+      "embedded_D1_logit_max_difference": 2.384185791015625e-07,
+      "fold": 2,
+      "gamma0_exact_embedded_logit": true
+    },
+    {
+      "D1_original_threshold_decisions_exact": true,
+      "embedded_D1_logit_max_difference": 2.384185791015625e-07,
+      "fold": 3,
+      "gamma0_exact_embedded_logit": true
+    },
+    {
+      "D1_original_threshold_decisions_exact": true,
+      "embedded_D1_logit_max_difference": 2.384185791015625e-07,
+      "fold": 4,
+      "gamma0_exact_embedded_logit": true
+    },
+    {
+      "D1_original_threshold_decisions_exact": true,
+      "embedded_D1_logit_max_difference": 2.384185791015625e-07,
+      "fold": 5,
+      "gamma0_exact_embedded_logit": true
+    }
+  ],
+  "no_weights_changed": true,
+  "status": "PASS"
+}

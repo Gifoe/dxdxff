@@ -1,0 +1,21 @@
+{
+  "FIT_VAL_label_parity": true,
+  "all25_predictions_sealed_before_y": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "1a4504f32a5ee2e2a267533031bce3b2bd48aa83c6504f0f6ad4d96cfb330c4a",
+  "models": [
+    "D0",
+    "E1",
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "no_new_extraction": true,
+  "no_retraining": true,
+  "no_threshold_or_scaler_refit": true,
+  "original_Development_terminal_unchanged": true,
+  "patients_per_arm": 80,
+  "scientific_status": "USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "3c88ae2fed392006383fabddffd8d117c6901a489d08009033a317600a47dcbf",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

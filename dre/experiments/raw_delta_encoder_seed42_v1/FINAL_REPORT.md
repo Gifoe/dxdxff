@@ -1,5 +1,7 @@
 # Raw-Delta Encoder — Seed42 Development
 
+This is the original Development-only report at commit `f8792c2`. The user subsequently authorized a frozen Outer addition, documented separately in [OUTER_REPORT.md](OUTER_REPORT.md). No-Outer statements below describe that original execution scope; its metrics, protocol lock and failed gate remain unchanged.
+
 | Model | Input | Total parameters | AUROC | AUPRC | Macro-F1 | EZ-F1 | MRR |
 |---|---|---:|---:|---:|---:|---:|---:|
 | Historical D0, replayed | Engineered DELTA | 8,817 | 0.716600 | 0.504414 | 0.642347 | 0.443493 | 0.695850 |

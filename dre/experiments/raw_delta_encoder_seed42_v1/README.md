@@ -1,6 +1,6 @@
 # Raw-Delta Encoder — Seed42
 
-RequestedD1–D3 with required matchedE1 control and historicalD0 Development replay. Original80/256/7635 cohort and fixed5 folds; **no new Outer authorized**. No installed skill used.
+RequestedD1–D3 with required matchedE1 control and historicalD0 Development replay. Original80/256/7635 cohort and fixed5 folds. The original Development phase had **no Outer authorization**; the subsequently authorized addition is documented below. No installed skill used.
 
 StageA first rechecks exact caches, named/compound alignment and every500-sample genuine Raw slice, then reconstructs historical all-pre DELTA and tests E14 archive parity and fixed4/5 A/B-family Spearman gate. Original PSD/RMS/entropy formulas and bandwidth restrictions are preserved. A failed gate is a scientific terminal, not permission to alter bands, features or train a larger network.
 
@@ -10,7 +10,13 @@ Trusted-server first-stage command: `code/prepare.py --runtime NEW_PRIVATE_RUNTI
 
 Completed: Stage A and B PASS; all D1/D2/D3 five-fold Development runs and matched E1 completed. Final terminal: **RAW_INFORMATION_POSSIBLY_USEFUL_TEMPORAL_ORDER_NOT_ESTABLISHED**. Primary AUROC/Macro-F1: D1 0.725978/0.644546; D2 0.732515/0.650238; D3 0.727976/0.649008. D2 misses both registered AUROC minimum-effect gates. See [FINAL_REPORT.md](FINAL_REPORT.md) for all metrics, cluster intervals, interventions and limitations.
 
-Publish only source, hashes, anonymous aggregates and reports. Raw, identity/clinical fields, private reconstruction tables, weights, predictions and logs remain on the trusted server. No new Outer run was performed.
+Publish only source, hashes, anonymous aggregates and reports. Raw, identity/clinical fields, private reconstruction tables, weights, predictions and logs remain on the trusted server. No Outer run was part of the original Development execution.
+
+## Subsequently authorized Outer addition
+
+The user later explicitly authorized Outer evaluation. [OUTER_REPORT.md](OUTER_REPORT.md) and `outer_results/` contain the separate completed80-patient/7,635-channel fixed evaluation, not a replacement Development estimator. D1/D2/D3 patient AUROC:0.732636/0.737004/0.737659; Macro-F1:0.616556/0.619995/0.616865. All weights, preprocessing and thresholds remained frozen. Correct temporal-order superiority is not established, and the original Development gate remains failed. Scientific status: exploratory repeated-test.
+
+Only this amendment permits `code/evaluate_outer.py freeze` followed by `code/evaluate_outer.py evaluate`, with the original `--runtime`; `code/verify_outer.py` independently checks saved scores/aggregates without new inference. `OUTER_PROTOCOL_AMENDMENT.json` defines the expanded authorization and fixed estimands. Original private inputs are required. See the Outer report for the D:-staged verifier workaround necessitated by full E: disk; do not delete unrelated files or accept a zero-byte transfer as executable evidence.
 
 ## Reproduction sequence
 

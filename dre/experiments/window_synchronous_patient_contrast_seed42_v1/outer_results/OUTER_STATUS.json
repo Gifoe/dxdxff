@@ -1,0 +1,11 @@
+{
+  "channels": 7635,
+  "final_probe_fits": 15,
+  "freeze_sha256": "a74fdf84708d8972d7b3253852907921a80782b18ed31c2bf7cb72d9d9d02cbb",
+  "no_further_iteration": true,
+  "one_fixed_prediction_pass": true,
+  "outer_gate_pass": false,
+  "patients": 80,
+  "scientific_status": "USER_AUTHORIZED_POST_INNER_EXPLORATORY_REPEATED_OUTER_NOT_BLIND_CONFIRMATION",
+  "status": "COMPLETE"
+}

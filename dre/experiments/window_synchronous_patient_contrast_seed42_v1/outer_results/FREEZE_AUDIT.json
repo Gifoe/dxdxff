@@ -1,0 +1,199 @@
+{
+  "all15_frozen_before_outer_inference": true,
+  "dependencies": {
+    "ENGINEERING_REPAIR_LOCK.json": "b4e4d60a4d8958e487f0a773c1fdb507aca6a5735912559092dc4236f33b59cd",
+    "OUTER_PROTOCOL_LOCK.json": "e62f1a9fc0d4eb0c17eb70a10e3d806cde6fbc6b860fc0a6bba4aceb9a6b73af",
+    "PROTOCOL_LOCK.json": "f0dc835d05559e0d8e510162774ccd46bb6371ab4b040abd23049eff407455c5",
+    "feature_archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "outer_code_run.py": "c318364434320e7cd5d9f7652f512083706b0d3496f50d688823b661165b9ba7",
+    "outer_test_test_outer.py": "0b7b70b238a3254334ceb7b33142a55231914f45c068461c21a45b85bf6e17a0",
+    "parent_code\\audit_data.py": "3fc6599f9b326cbe3407b9e590e7ecf873398a58411cd82d69d026a87e593fd9",
+    "parent_code\\bootstrap.py": "a5bbbdadcd096c0242eb2deb6e3f1f7bd67e8cdd13ceb0363fecbc361a06ba32",
+    "parent_code\\common.py": "95cb7756a762c516a0a8bfc772dfa7267f7ce0d8feab89c1cbbfb021cb5e97bd",
+    "parent_code\\construct_patient_context.py": "8e86f23a16e9b3fc7b32f00bb5682f2b724f87f0ba2c69f3c281ba71be9b5bad",
+    "parent_code\\evaluate.py": "5fcc5bda1ca2485312fcdb59a4515f30930d77d27d5d1fc7cffdb1aad78cc9ad",
+    "parent_code\\fit_probe.py": "22c9f30ec6613032dc7cbe02411d12c0a1a7d22b806992925157da5e9ed25ae0",
+    "parent_code\\run.py": "c9803eebb369eb9ceaf9af67b461d63f3256748ee4daca0142cc8cc64c179a3e",
+    "parent_code\\summarize_temporal_features.py": "58ce99f37a579f5f080d52e5102e86e97d306938f72235d504f6b830946ff907",
+    "parent_code\\synchronization_controls.py": "5f12e4c51364c27d00dd7ca4e2f058a0b669f0016e94bf57fa45dcb6e167645d",
+    "parent_code\\validated_alignment.py": "3ec0f20ec33e9ce443e07a6443f0c74ce8ed989c7f1d06ec5c553a1134ad2dfd",
+    "parent_code\\verify.py": "a80825b4f4c6c1e55449aa9b090b4c81716c87134633229ffa65bfb527d46caa",
+    "parent_tests\\test_audit.py": "185609008f1f139c1c658d1529a8c28a2789a826c8a1e2f1c678967c4dcd999a",
+    "private_parent_CONTEXT_TABLES_PRIVATE.pkl": "1d66c9ea6d1f1bb9ccb307bf3b115b66ef6cd62038450e0b0ec95ce6790c60f0",
+    "private_parent_FIT_LABELS_PRIVATE.pkl": "c84f18d5a3a7e8c0864d3bc77db795e8e8eb1b7cc2e87a50c545bdfe7d949c3e",
+    "private_parent_INPUT_FREEZE_PRIVATE.json": "1fb10c4e2933fb78a4c655fe41fdae6cd0e7bd74647ae94fb36d4c5d5ffb7b86",
+    "private_parent_PROBE_FREEZE_PRIVATE.json": "ea322d587e6bd2f820b852bc434f95ccfd688e1552fb6fab0a52446d0d4f12c4"
+  },
+  "files": {
+    "1_C0": "99f24817d2340aabf5468ef5d95ee0f5a38cee86990c7a12645228946b7fbd9c",
+    "1_C1": "1a954ed9346bb20c052e2f1e0f0c26be9edeff4bc6689fac2682a0e300be10a3",
+    "1_C2": "875dffe1c6751e8e36032b9ee27d7dd7f8311039151e9adcfd4975e4f0070420",
+    "2_C0": "3a512fe0519af2e841819a8c9114ca3312563cf10913c66405cb5a929ef36185",
+    "2_C1": "4b5b62abd22d1ec2f675d274d3a81178ba273db441e4f92f425e0657763014fc",
+    "2_C2": "963d21303651925dd10de2f61a55868c9434622ac9f030845db89753fea44815",
+    "3_C0": "69e3174fadc9fed2c49ba3dad625c3da7e46d878dc9b8d2f1e4e0734ba37eced",
+    "3_C1": "f2546e218b156495110f6968b40752d4d081b4c42d8cb1b0066545025d2fa0bd",
+    "3_C2": "d227ad77210310ef1310fbb5e6b13ec32183b2ed9828f417295c09d04b06161f",
+    "4_C0": "02102df27cd09b895f56b0c03e0e07189add4633ff3c200799ec4b4cd65cb34f",
+    "4_C1": "3ed4d5ce945e3b6c7f28fca03e8a38d1412ff329c3d697712ceda73a8ccd43e6",
+    "4_C2": "3320bbaf0eaa239d581cf1cb6d70c119a67c3558200d1d228c3c70f0584ca6aa",
+    "5_C0": "06ac81ce8bbfcf4190483175bc74ae34b2d9418579a1942305d454c0390a9b91",
+    "5_C1": "b5be76b03bff50dffd92eccc1192ebef25908e681e19c8a620756e6451ec05de",
+    "5_C2": "ce31509297372c4382c56d56b4c724819ae155546d80027e0a1d9920d6738ba8"
+  },
+  "original_Development_labels_unused": true,
+  "outer_clinical_labels_unread": true,
+  "selections": [
+    {
+      "arm": "C0",
+      "fold": 1,
+      "iterations": 22,
+      "model_sha256": "99f24817d2340aabf5468ef5d95ee0f5a38cee86990c7a12645228946b7fbd9c",
+      "threshold": 0.385,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C1",
+      "fold": 1,
+      "iterations": 28,
+      "model_sha256": "1a954ed9346bb20c052e2f1e0f0c26be9edeff4bc6689fac2682a0e300be10a3",
+      "threshold": 0.285,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C2",
+      "fold": 1,
+      "iterations": 27,
+      "model_sha256": "875dffe1c6751e8e36032b9ee27d7dd7f8311039151e9adcfd4975e4f0070420",
+      "threshold": 0.295,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C0",
+      "fold": 2,
+      "iterations": 24,
+      "model_sha256": "3a512fe0519af2e841819a8c9114ca3312563cf10913c66405cb5a929ef36185",
+      "threshold": 0.265,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C1",
+      "fold": 2,
+      "iterations": 28,
+      "model_sha256": "4b5b62abd22d1ec2f675d274d3a81178ba273db441e4f92f425e0657763014fc",
+      "threshold": 0.305,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C2",
+      "fold": 2,
+      "iterations": 30,
+      "model_sha256": "963d21303651925dd10de2f61a55868c9434622ac9f030845db89753fea44815",
+      "threshold": 0.31,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C0",
+      "fold": 3,
+      "iterations": 26,
+      "model_sha256": "69e3174fadc9fed2c49ba3dad625c3da7e46d878dc9b8d2f1e4e0734ba37eced",
+      "threshold": 0.245,
+      "threshold_patients": 10,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C1",
+      "fold": 3,
+      "iterations": 31,
+      "model_sha256": "f2546e218b156495110f6968b40752d4d081b4c42d8cb1b0066545025d2fa0bd",
+      "threshold": 0.335,
+      "threshold_patients": 10,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C2",
+      "fold": 3,
+      "iterations": 33,
+      "model_sha256": "d227ad77210310ef1310fbb5e6b13ec32183b2ed9828f417295c09d04b06161f",
+      "threshold": 0.265,
+      "threshold_patients": 10,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C0",
+      "fold": 4,
+      "iterations": 22,
+      "model_sha256": "02102df27cd09b895f56b0c03e0e07189add4633ff3c200799ec4b4cd65cb34f",
+      "threshold": 0.2,
+      "threshold_patients": 11,
+      "train_patients": 41,
+      "width": 182
+    },
+    {
+      "arm": "C1",
+      "fold": 4,
+      "iterations": 26,
+      "model_sha256": "3ed4d5ce945e3b6c7f28fca03e8a38d1412ff329c3d697712ceda73a8ccd43e6",
+      "threshold": 0.27,
+      "threshold_patients": 11,
+      "train_patients": 41,
+      "width": 182
+    },
+    {
+      "arm": "C2",
+      "fold": 4,
+      "iterations": 24,
+      "model_sha256": "3320bbaf0eaa239d581cf1cb6d70c119a67c3558200d1d228c3c70f0584ca6aa",
+      "threshold": 0.24,
+      "threshold_patients": 11,
+      "train_patients": 41,
+      "width": 182
+    },
+    {
+      "arm": "C0",
+      "fold": 5,
+      "iterations": 19,
+      "model_sha256": "06ac81ce8bbfcf4190483175bc74ae34b2d9418579a1942305d454c0390a9b91",
+      "threshold": 0.52,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C1",
+      "fold": 5,
+      "iterations": 23,
+      "model_sha256": "b5be76b03bff50dffd92eccc1192ebef25908e681e19c8a620756e6451ec05de",
+      "threshold": 0.39,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    },
+    {
+      "arm": "C2",
+      "fold": 5,
+      "iterations": 22,
+      "model_sha256": "ce31509297372c4382c56d56b4c724819ae155546d80027e0a1d9920d6738ba8",
+      "threshold": 0.41,
+      "threshold_patients": 11,
+      "train_patients": 40,
+      "width": 182
+    }
+  ],
+  "status": "PASS"
+}

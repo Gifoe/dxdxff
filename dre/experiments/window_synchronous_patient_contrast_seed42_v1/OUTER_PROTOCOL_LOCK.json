@@ -1,0 +1,22 @@
+{
+ "experiment":"window_synchronous_patient_contrast_seed42_v1_outer_extension",
+ "authorization":"User requested outer做完一起上传, then selected fitting3 final probes per fold using a fixed TRAIN/threshold-selection split within original FIT. This explicitly supersedes the original no-Outer stop ONLY for this separate phase; original inner protocol/results unchanged.",
+ "seed":42,"arms":["C0","C1","C2"],"width":182,"final_fits":15,
+ "original_protocol_sha256":"f0dc835d05559e0d8e510162774ccd46bb6371ab4b040abd23049eff407455c5",
+ "feature_archive_sha256":"1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+ "source":"Already frozen label-free80-patient tables; no reconstruction, new stage, raw/EDF, feature change or new reference/control.",
+ "assignment":"Within each original FIT fold: sorted IDs, default_rng(42+1009*fold+90000).permutation; first ceil(0.20*n) threshold selection, remaining TRAIN. No original Development validation IDs in corresponding fold, no Outer IDs. Same assignments all arms.",
+ "preprocessing":"Exact existing TRAIN-only finite patient-weighted median and weighted StandardScaler; same first98 coordinates across arms; C0 context standardized0 and coefficients0",
+ "classifier":"Exact existing L2 LR C1 lbfgs max_iter1000 tol1e-4 seed42; patient-equal total1 each; class_weight None; no search",
+ "threshold":"Exact existing0:.005:1 selection patient-mean MacroF1, EZF1, balanced_accuracy, nearest0.5, smaller threshold; never use original Development or Outer labels for threshold selection",
+ "freeze":"All15 final model/preprocessor/threshold artifacts seal before Outer inference; all15 scores seal before any authorized global clinical y access. Only y after prediction seal, for exactly80 unique original Outer identities/7635 channels. Do not read original x, clinical validation banks, prior Outer predictions/metrics.",
+ "test_patients_by_fold":[16,16,17,15,16],"test_channels_by_fold":[1631,1498,1746,1425,1335],
+ "label_orientation":"original y_nez0 is EZ; probability is EZ-positive; p>=frozen tau predictsEZ; stable canonical-channel-string ranking ties",
+ "metrics":["ez_auroc","ez_auprc","macro_f1","ez_f1","nez_f1","balanced_accuracy","sensitivity","specificity","ez_mrr","top1_is_ez","accuracy","predicted_ez_fraction","TP","FP","TN","FN"],
+ "primary_unit":"80 unique original Outer patients exactlyonce, patient-equal mean; no pooling into historical inner estimator",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"80 unique patient ID clusters","comparisons":[["C1","C0"],["C1","C2"],["C2","C0"]],"fixed_thresholds":true,"CI":"unadjusted percentile95, same common draws"},
+ "gate":"Report same prespecified inner predictive conditions on Outer as separate exploratory replication diagnostic: AUC C1-C0>=.010,C1-C2>=.005,AP nondecrease both,MF1/EZF1 losses<=.005 vsC0,specificity loss<=.010 vsC0,>=4 positivefolds,C1-C2 AUROC CI lower>0, prior controlPASS and current integrityPASS. Do not rewrite inner gate or choose subgroups.",
+ "scientific_status":"USER_AUTHORIZED_POST_INNER_EXPLORATORY_REPEATED_OUTER_NOT_BLIND_CONFIRMATION",
+ "stop":"One frozen Outer pass; no result-driven changes, additional seeds, deep model, TIDE or further evaluations. Finish and publish inner+Outer code and anonymous aggregates together.",
+ "installed_skills_used":[]
+}

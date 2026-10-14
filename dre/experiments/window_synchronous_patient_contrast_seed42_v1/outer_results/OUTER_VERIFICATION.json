@@ -1,0 +1,18 @@
+{
+  "EZ": 1743,
+  "NEZ": 5892,
+  "TRAIN_only_preprocessing_reconstructed": true,
+  "all15_model_hashes_unchanged": true,
+  "all15_prediction_hashes_unchanged": true,
+  "all_dependencies_unchanged": true,
+  "channels_once_per_arm": 7635,
+  "freeze_sha256": "a74fdf84708d8972d7b3253852907921a80782b18ed31c2bf7cb72d9d9d02cbb",
+  "independent_sklearn_metric_parity": true,
+  "no_Development_evaluation": true,
+  "no_raw_or_EDF": true,
+  "patient_id_once_per_arm": 80,
+  "patient_metric_cells": 240,
+  "prediction_seal_sha256": "d47141e4fe4821d54503c8914b66b98721b35a5befb66c159187001c003089ae",
+  "status": "PASS",
+  "threshold_replay_exact": true
+}

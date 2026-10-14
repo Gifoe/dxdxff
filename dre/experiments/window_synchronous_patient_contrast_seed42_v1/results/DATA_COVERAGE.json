@@ -1,0 +1,91 @@
+{
+  "actual_feature_mapping": [
+    [
+      [
+        "log_bp_beta",
+        3
+      ],
+      [
+        "log_bp_low_gamma",
+        4
+      ],
+      [
+        "log_bp_high_gamma",
+        5
+      ],
+      [
+        "rms",
+        7
+      ],
+      [
+        "variance",
+        8
+      ],
+      [
+        "line_length_per_sec",
+        9
+      ],
+      [
+        "spectral_entropy",
+        10
+      ]
+    ]
+  ],
+  "archive_label_member_never_loaded": true,
+  "boundary_rejected_windows": 27,
+  "cache_relative_timing_only": true,
+  "canonical_channels": 7635,
+  "canonical_early_supported_fraction": 1.0,
+  "center_spacing_range": [
+    0.9999990463256836,
+    1.0000009536743164
+  ],
+  "incidental_supplied_pickle_metadata_deserialization_possible": true,
+  "invalid_time_windows": 0,
+  "label_fields_never_indexed": true,
+  "missing_record_channels": 272,
+  "no_full_FIT_VAL_or_outer_model_bank_opened": true,
+  "no_raw_or_EDF_processing": true,
+  "noncanonical_reference_channel_instances": 0,
+  "nonfinite_feature_channel_windows": 0,
+  "observed_record_channels": 24995,
+  "patients": 80,
+  "patients_by_seizure_count": {
+    "1": 7,
+    "2": 16,
+    "3+": 57
+  },
+  "record_channel_slots": 25267,
+  "seizures": 256,
+  "source_binding": {
+    "code": {
+      "code\\audit_data.py": "39a9325404c07373845d41db5f5c54ad28243b89cbd540e086980220c355d89c",
+      "code\\bootstrap.py": "a5bbbdadcd096c0242eb2deb6e3f1f7bd67e8cdd13ceb0363fecbc361a06ba32",
+      "code\\common.py": "95cb7756a762c516a0a8bfc772dfa7267f7ce0d8feab89c1cbbfb021cb5e97bd",
+      "code\\construct_patient_context.py": "8e86f23a16e9b3fc7b32f00bb5682f2b724f87f0ba2c69f3c281ba71be9b5bad",
+      "code\\evaluate.py": "db6bc28933fb5a5a6a17365bff59dab8ed7ed33677f9f1ae0a130589ff55a0ce",
+      "code\\fit_probe.py": "22c9f30ec6613032dc7cbe02411d12c0a1a7d22b806992925157da5e9ed25ae0",
+      "code\\run.py": "c9803eebb369eb9ceaf9af67b461d63f3256748ee4daca0142cc8cc64c179a3e",
+      "code\\summarize_temporal_features.py": "58ce99f37a579f5f080d52e5102e86e97d306938f72235d504f6b830946ff907",
+      "code\\synchronization_controls.py": "5f12e4c51364c27d00dd7ca4e2f058a0b669f0016e94bf57fa45dcb6e167645d",
+      "code\\validated_alignment.py": "3ec0f20ec33e9ce443e07a6443f0c74ce8ed989c7f1d06ec5c553a1134ad2dfd",
+      "code\\verify.py": "6d438808861799c9150110fa71ac43ecddc5412fedab7606d07911f37146dfdd",
+      "tests\\test_audit.py": "185609008f1f139c1c658d1529a8c28a2789a826c8a1e2f1c678967c4dcd999a"
+    },
+    "historical_review": "085d415ddafdbf90bb0fd40d02d6dfec17b40cd6c4b227e4c332486b34e561dd",
+    "inputs": {
+      "archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+      "cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+      "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+    },
+    "protocol": "f0dc835d05559e0d8e510162774ccd46bb6371ab4b040abd23049eff407455c5"
+  },
+  "status": "PASS",
+  "window_count_histogram": {
+    "40": 1,
+    "51": 1,
+    "56": 1,
+    "59": 253
+  },
+  "window_width_seconds": 2
+}

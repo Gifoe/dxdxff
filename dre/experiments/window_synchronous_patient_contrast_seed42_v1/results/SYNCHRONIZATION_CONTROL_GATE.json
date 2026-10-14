@@ -1,0 +1,19 @@
+{
+  "all_sequences": 349930,
+  "changed_context_summary_coordinate_fraction": 0.6666666666666666,
+  "conditions": {
+    "cyclic_autocorrelation_preserved": true,
+    "mask_and_multiset_identity": true,
+    "material_disruption": true,
+    "nonzero_shifts": true,
+    "query_context_correlation_reduced": true,
+    "summary_disruption": true
+  },
+  "constant_sequences_retained": true,
+  "eligible_sequences": 349930,
+  "material_change_fraction": 1.0,
+  "max_cyclic_autocorrelation_drift": 7.771561172376096e-16,
+  "mean_absolute_query_context_correlation_reduction": 0.40304164072524773,
+  "nonzero_shift_fraction": 1.0,
+  "status": "PASS"
+}

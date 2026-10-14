@@ -1,0 +1,59 @@
+{
+  "binding": {
+    "code": {
+      "code\\audit_data.py": "39a9325404c07373845d41db5f5c54ad28243b89cbd540e086980220c355d89c",
+      "code\\bootstrap.py": "a5bbbdadcd096c0242eb2deb6e3f1f7bd67e8cdd13ceb0363fecbc361a06ba32",
+      "code\\common.py": "95cb7756a762c516a0a8bfc772dfa7267f7ce0d8feab89c1cbbfb021cb5e97bd",
+      "code\\construct_patient_context.py": "8e86f23a16e9b3fc7b32f00bb5682f2b724f87f0ba2c69f3c281ba71be9b5bad",
+      "code\\evaluate.py": "db6bc28933fb5a5a6a17365bff59dab8ed7ed33677f9f1ae0a130589ff55a0ce",
+      "code\\fit_probe.py": "22c9f30ec6613032dc7cbe02411d12c0a1a7d22b806992925157da5e9ed25ae0",
+      "code\\run.py": "c9803eebb369eb9ceaf9af67b461d63f3256748ee4daca0142cc8cc64c179a3e",
+      "code\\summarize_temporal_features.py": "58ce99f37a579f5f080d52e5102e86e97d306938f72235d504f6b830946ff907",
+      "code\\synchronization_controls.py": "5f12e4c51364c27d00dd7ca4e2f058a0b669f0016e94bf57fa45dcb6e167645d",
+      "code\\validated_alignment.py": "3ec0f20ec33e9ce443e07a6443f0c74ce8ed989c7f1d06ec5c553a1134ad2dfd",
+      "code\\verify.py": "6d438808861799c9150110fa71ac43ecddc5412fedab7606d07911f37146dfdd",
+      "tests\\test_audit.py": "185609008f1f139c1c658d1529a8c28a2789a826c8a1e2f1c678967c4dcd999a"
+    },
+    "historical_review": "085d415ddafdbf90bb0fd40d02d6dfec17b40cd6c4b227e4c332486b34e561dd",
+    "inputs": {
+      "archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+      "cache": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+      "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+    },
+    "protocol": "f0dc835d05559e0d8e510162774ccd46bb6371ab4b040abd23049eff407455c5"
+  },
+  "engineering_repair": {
+    "additional_engineering_fix": "NumPy2 treats batched RHS shape(draws,7) as matrix RHS; add an explicit trailing singleton column then squeeze after solve. Same frozen OLS equations, draws, data and estimator. Synthetic identity-matrix batched-vector test passed.",
+    "files": {
+      "code\\audit_data.py": {
+        "after": "3fc6599f9b326cbe3407b9e590e7ecf873398a58411cd82d69d026a87e593fd9",
+        "before": "39a9325404c07373845d41db5f5c54ad28243b89cbd540e086980220c355d89c"
+      },
+      "code\\evaluate.py": {
+        "after": "5fcc5bda1ca2485312fcdb59a4515f30930d77d27d5d1fc7cffdb1aad78cc9ad",
+        "before": "db6bc28933fb5a5a6a17365bff59dab8ed7ed33677f9f1ae0a130589ff55a0ce"
+      },
+      "code\\verify.py": {
+        "after": "a80825b4f4c6c1e55449aa9b090b4c81716c87134633229ffa65bfb527d46caa",
+        "before": "6d438808861799c9150110fa71ac43ecddc5412fedab7606d07911f37146dfdd"
+      }
+    },
+    "no_FIT_cohort_patients": 1,
+    "no_feature_change": true,
+    "no_metric_change": true,
+    "no_prediction_change": true,
+    "no_refit": true,
+    "no_split_change": true,
+    "no_threshold_change": true,
+    "original_FIT_appearance_histogram": {
+      "1": 2,
+      "2": 11,
+      "3": 33,
+      "4": 33
+    },
+    "procedure": "Preserve original input/table/model/prediction seals and original binding. Allow only exact before-to-after source hashes above. Evaluation-only resume; no probe execution. Independent verifier checks every sealed model artifact hash and all metric/bootstrap outputs.",
+    "reason": "The unchanged source split has 80 cohort identities but 255 original FIT-fold appearances across only79 unique identities. One cohort patient has zero FIT roles. A hardcoded80 evaluation assertion failed after all60 models/thresholds/predictions sealed and before aggregate scoring. Derive the reporting count from the exact frozen FIT union. Do not admit the excluded patient's labels.",
+    "scope": "FIT_union_count_and_numpy_batch_shape_only"
+  },
+  "status": "PASS"
+}

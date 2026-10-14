@@ -1,0 +1,3 @@
+comparison,status,adjusted_delta_at64_channels2_seizures_equal_folds,ci_low,ci_high,log_channel_count_slope,seizure_count_slope,bootstrap_estimable_draws,draws,unique_patients,causal_claim
+C1 minus C0,ESTIMABLE,0.08356632514372234,0.03406591221703781,0.13298100801083385,-0.020974794997651917,-0.007015293472447352,10000,10000,79,False
+C1 minus C2,ESTIMABLE,0.05217914385904335,0.011962417402179714,0.09409611112172436,-0.04252174140246288,-0.009642916116910948,10000,10000,79,False

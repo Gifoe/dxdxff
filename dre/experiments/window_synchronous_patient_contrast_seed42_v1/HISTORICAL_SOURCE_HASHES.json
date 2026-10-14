@@ -1,0 +1,32 @@
+{
+ "status":"REVIEW_SOURCE_HASHES_RECHECKED", "note":"Report hashes refer to reviewed local repository versions, except seizure geometry reviewed on the trusted server. Live protocols/components were rechecked. Local final reports and unfinished live server reports may differ; do not substitute one for another.",
+ "reports":{
+ "a0_temporal_cotar_seed42_v1":"566e14e4c99d722d3640b98943a09a157730d9f9cdd79a99027e843f1b0f8313",
+ "r1_hlv_ictal_dynamics_seed42_v1":"c53d726d0a3484fd9b323cb646e36f6bc80ec9f6dc47df94b45c4b85faa6aeb8",
+ "a0_sss_mil_seed42_v1":"53adba4d21f744545640a63bdcae376b28899711e4e15c9427781b45fbb2680f",
+ "rawtiny_patient_relative_seed42_v1":"d3568904d68bcafcc5cc1bc841aba368beecddbdb0920da118aab407ab07fa97",
+ "seizure_resolved_geometry_identifiability_seed42_v1":"25022e5bcf7c4c66d3a5442e42f42fb9bd53997a50473818a5633f863eb1df1d",
+ "patient_set_relational_ranking_seed42_v1":"2bde4c31f450496af59e440ee345a4e0882ddf63c76ccc885e2109581dfd2899",
+ "d2_graphrole_seed42_v1":"102ad78059f47d8bdc9b559e14b274f0074f4b364b09020094fd90a01125bd6c",
+ "a0_cove_seed42_v1":"e85c5609c0965a2ac1709fe7e9bd3cc4ceb8d6e16ce76a78686a8396b20b263c",
+ "a0_stable_feature_pruning_seed42_v1":"ab128b89510ea63e5bc6f8051d6f9b827e1ae4250d3bf4f134b34fd05683d2fe",
+ "a0_fcpa_lf_seed42_v1":"cad5c48145c69c067796a9a31e9aa784eed6807cf22768e44e9f99d1b51b0536"},
+ "live_protocols":{
+ "a0_temporal_cotar_seed42_v1":"5248ceff37183afe412080530d1580a4a12d8c2d2c0ce40bc885ea40d88e1e50",
+ "r1_hlv_ictal_dynamics_seed42_v1":"1ba2d1f6f524993c799aff984ea64050d07f43d0ffc4f9738e36f023ba7d6a84",
+ "a0_sss_mil_seed42_v1":"052c2c9e6fac8daad3e65449c6ebaf0fc989b26ef24bce5bca77814d9d3a31b7",
+ "rawtiny_patient_relative_seed42_v1":"028a951709f095459c39986f3823110fa9826078f24290d6afe9017c2ed621d2",
+ "seizure_resolved_geometry_identifiability_seed42_v1":"d9d29091e7d298b02e5031359f0ad913a6b911d0a0b49cf2ed7a55b83d79ce29",
+ "patient_set_relational_ranking_seed42_v1":"66f8468cf0987e0f53ee9cff204f1caefc12886a5cc3737d568c4a402920865b",
+ "d2_graphrole_seed42_v1":"1421ff533e6b951a288fc15e1da46add5f56c50f0f5e443881593b6b39af122b",
+ "a0_cove_seed42_v1":"f0268e28ed5d8f4c3423471f102945adb22c51d94ed07d5a08888b364ae8e045",
+ "a0_stable_feature_pruning_seed42_v1":"7dbd3204f87ec76ead60fe5deab3909fc88dbe475d68d8d07bc54777b1f0978a",
+ "a0_fcpa_lf_seed42_v1":"f08877699e7ec99a5ab273a56bd5cb9429aca40b0dea0156afd1342a21785103"},
+ "live_components":{
+ "graph_spectral_encoder.py":"b63e99a7e0a111c1bab94ebc8ca2e147f0a4a10d400af15fbc6375e4df0279ff",
+ "temporal_encoder.py":"5233c458a619d703e51fecea230ea8f8be64d311c2555c92dc273cc1b347af64",
+ "seizure_aggregator.py":"061fd4fa1f934ba72a015e7b9f22a2263aecc69e8092778f538ebe1071f79066",
+ "patient_channel_ranker.py":"7bb03ec9a86fe252e5e037b5f59a8166d997cc8c6b7f9db8576ab87f34d5e78e",
+ "neuroez_c/physics_dynamics.py":"566fa4786262fd409f64e22eccf747af59d8cd0e58b7f21cec8f3464eb27ec8a",
+ "neuroez_c/model.py":"c3413ff6d3e7e226919b7b3b1c779c3b62cd65ba78900129540006006fd27e6c"}
+}

@@ -1,0 +1,19 @@
+{
+  "all_pass": false,
+  "conditions": {
+    "AP_C1_ge_C0": true,
+    "AP_C1_ge_C2": true,
+    "AUROC_C1_C0": true,
+    "AUROC_C1_C2": true,
+    "C1_C2_AUROC_CI_positive": false,
+    "EZF1_preserved": true,
+    "MacroF1_preserved": true,
+    "integrity_PASS": true,
+    "positive_original_folds": true,
+    "specificity_preserved": true,
+    "synchronization_control_PASS": true
+  },
+  "no_independent_confirmation": true,
+  "positive_folds": 4,
+  "scientific_status": "USER_AUTHORIZED_POST_INNER_EXPLORATORY_REPEATED_OUTER_NOT_BLIND_CONFIRMATION"
+}

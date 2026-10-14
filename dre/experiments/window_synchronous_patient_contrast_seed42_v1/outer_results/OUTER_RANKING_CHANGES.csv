@@ -1,0 +1,3 @@
+reference,spearman,pair_reversal_fraction,top1_changed,TP_recovered,TP_spoiled,FP_added,FP_removed
+C0,0.6988340528673825,0.21677172142975382,0.5125,2.125,3.25,3.275,9.825
+C2,0.8408172262929133,0.14828855793884307,0.325,1.075,1.05,1.65,3.1375

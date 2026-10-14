@@ -1,0 +1,48 @@
+{
+  "TRAIN_only_preprocessors_reconstructed": true,
+  "all_training_threshold_evaluation_roles_disjoint": true,
+  "appearances_per_arm": 255,
+  "control_PASS": true,
+  "engineering_repair": {
+    "additional_engineering_fix": "NumPy2 treats batched RHS shape(draws,7) as matrix RHS; add an explicit trailing singleton column then squeeze after solve. Same frozen OLS equations, draws, data and estimator. Synthetic identity-matrix batched-vector test passed.",
+    "files": {
+      "code\\audit_data.py": {
+        "after": "3fc6599f9b326cbe3407b9e590e7ecf873398a58411cd82d69d026a87e593fd9",
+        "before": "39a9325404c07373845d41db5f5c54ad28243b89cbd540e086980220c355d89c"
+      },
+      "code\\evaluate.py": {
+        "after": "5fcc5bda1ca2485312fcdb59a4515f30930d77d27d5d1fc7cffdb1aad78cc9ad",
+        "before": "db6bc28933fb5a5a6a17365bff59dab8ed7ed33677f9f1ae0a130589ff55a0ce"
+      },
+      "code\\verify.py": {
+        "after": "a80825b4f4c6c1e55449aa9b090b4c81716c87134633229ffa65bfb527d46caa",
+        "before": "6d438808861799c9150110fa71ac43ecddc5412fedab7606d07911f37146dfdd"
+      }
+    },
+    "no_FIT_cohort_patients": 1,
+    "no_feature_change": true,
+    "no_metric_change": true,
+    "no_prediction_change": true,
+    "no_refit": true,
+    "no_split_change": true,
+    "no_threshold_change": true,
+    "original_FIT_appearance_histogram": {
+      "1": 2,
+      "2": 11,
+      "3": 33,
+      "4": 33
+    },
+    "procedure": "Preserve original input/table/model/prediction seals and original binding. Allow only exact before-to-after source hashes above. Evaluation-only resume; no probe execution. Independent verifier checks every sealed model artifact hash and all metric/bootstrap outputs.",
+    "reason": "The unchanged source split has 80 cohort identities but 255 original FIT-fold appearances across only79 unique identities. One cohort patient has zero FIT roles. A hardcoded80 evaluation assertion failed after all60 models/thresholds/predictions sealed and before aggregate scoring. Derive the reporting count from the exact frozen FIT union. Do not admit the excluded patient's labels.",
+    "scope": "FIT_union_count_and_numpy_batch_shape_only"
+  },
+  "model_threshold_feature_protocol_unchanged": true,
+  "original_VAL_TEST_labels_not_used": true,
+  "paired_bootstrap_metrics": 48,
+  "patient_metric_cells": 765,
+  "probe_fits": 60,
+  "source_unchanged_except_hash_locked_count_repair": true,
+  "status": "PASS",
+  "synthetic_tests_PASS": true,
+  "unique_ids": 79
+}

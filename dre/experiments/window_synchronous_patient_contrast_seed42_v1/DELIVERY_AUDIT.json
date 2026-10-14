@@ -1,0 +1,16 @@
+{
+ "status":"PASS",
+ "local_synthetic_and_aggregate_tests":18,"server_original_synthetic_tests":13,"server_outer_synthetic_tests":2,
+ "inner_independent_metric_cells":765,"outer_independent_metric_cells":240,
+ "post_completion_server_model_and_score_hashes_rechecked":30,
+ "outer_freeze_sha256":"a74fdf84708d8972d7b3253852907921a80782b18ed31c2bf7cb72d9d9d02cbb",
+ "outer_prediction_seal_sha256":"d47141e4fe4821d54503c8914b66b98721b35a5befb66c159187001c003089ae",
+ "inner_aggregate_transfer_zip_sha256":"ba3e41600e40cb31dd2a50426882d16a00c86cfbaec91b6b0f72f63162e4d6c2",
+ "outer_aggregate_transfer_zip_sha256":"5ffd5092636b240e902002cb389c6c0c6c7a664ef6f730fc020b6c90f76ab1e9",
+ "transfer_hash_parity":true,
+ "public_artifacts":"Source, protocol/repair/hash locks, historical review and nonidentifying aggregate reports only. Private files were never fetched or staged.",
+ "no_raw_EDF_cache_weights_scores_labels_IDs_logs_secrets_published":true,
+ "original_inner_protocol_unchanged":true,"outer_separate_user_authorization":true,
+ "original_Development_not_evaluated":true,"all_Outer_thresholds_train_side":true,
+ "installed_skills_used":[],"no_deep_model_or_TIDE":true,"stop_after_this_fixed_pass":true
+}

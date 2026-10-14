@@ -1,0 +1,11 @@
+{
+ "inner_terminal":"SYNCHRONIZATION_MECHANISM_PROMISING_NOT_INDEPENDENTLY_CONFIRMED",
+ "inner_gate_pass":true,"inner_appearances":255,"inner_unique_patients":79,
+ "outer_user_authorized_after_inner":true,"outer_patients":80,"outer_channels":7635,
+ "outer_C1_C0_AUROC_delta":0.03919462187954433,"outer_C1_C2_AUROC_delta":0.013444239062505612,
+ "outer_C1_C2_AUROC_CI":[-0.006017937976283552,0.034423273935866326],
+ "outer_gate_pass":false,"failed_outer_gate":"C1_C2_AUROC_CI_positive",
+ "combined_terminal":"PATIENT_CONTEXT_POSSIBLY_USEFUL_SYNCHRONIZATION_NOT_IDENTIFIED",
+ "scientific_status":"USER_AUTHORIZED_POST_INNER_EXPLORATORY_REPEATED_OUTER_NOT_BLIND_CONFIRMATION",
+ "total_fixed_LR_fits":75,"TIDE_training":false,"additional_outcome_driven_iteration":false
+}

@@ -1,0 +1,27 @@
+{
+  "actual": {
+    "C1_C0_AUROC": 0.06810964682374832,
+    "C1_C2_AUROC": 0.02607959390081216,
+    "C1_C2_AUROC_ci_low": 0.010008653517582351,
+    "positive_original_folds": 5
+  },
+  "conditions": {
+    "AP_C1_ge_C0": true,
+    "AP_C1_ge_C2": true,
+    "AUROC_C1_C0": true,
+    "AUROC_C1_C2": true,
+    "C1_C2_AUROC_CI_positive": true,
+    "EZF1_preserved": true,
+    "MacroF1_preserved": true,
+    "alignment_and_leakage_PASS": true,
+    "positive_original_folds": true,
+    "specificity_preserved": true,
+    "synchronization_control_PASS": true
+  },
+  "independent_verification_pending": false,
+  "integrity_verification": "PASS",
+  "no_Development_or_outer_evaluation": true,
+  "no_TIDE_training": true,
+  "pass_all": true,
+  "terminal": "SYNCHRONIZATION_MECHANISM_PROMISING_NOT_INDEPENDENTLY_CONFIRMED"
+}

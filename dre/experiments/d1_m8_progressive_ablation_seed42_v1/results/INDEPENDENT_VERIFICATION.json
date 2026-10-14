@@ -1,0 +1,25 @@
+{
+  "DELTA14_exact_original_R14": true,
+  "aggregate_hashes": {
+    "CONFUSION_AND_SENSITIVITY.csv": "5ccaa958fd02378d2e78f3d61a8a0369603c738b7f98d8c9105ec0d069a8bf86",
+    "DEVELOPMENT_BY_CENTER.csv": "ecc2093f36386e6545735f30933c415e76240550750e731c58f0952e41451b9f",
+    "DEVELOPMENT_BY_FOLD.csv": "5f317b4ca4052983491dd30ad98d4b8cc6fb26ba6fd22ba58718fbbfed257968",
+    "DEVELOPMENT_SUMMARY.csv": "c4d469d8fa54038981c7be2d83f4be4493cb131cadc6d43eb3350aaf7e7a4340",
+    "MODEL_SELECTION.csv": "d390d3cf07784db4a9ebcd2e4dd40e8fe51d153b2d2450186bf776986520193f",
+    "OUTER_BY_CENTER.csv": "6e0b0a5479ad1143febf5f88e510409ba168f8cd15e74e13346d450ee790ac3d",
+    "OUTER_BY_FOLD.csv": "f3078d7c1040d08dbd559ff1a090daeea4617705f7e313ad4199351a73c7f142",
+    "OUTER_SUMMARY.csv": "817e58269d1e17cdd219a300a9e1f93626f1bbfb885e0915a3c3cf81f1eb64ca",
+    "PAIRED_BOOTSTRAP.csv": "2d75fe33ca2ee513ca7e15ba971c582586d93921b093a9dcda7414931bd5d429",
+    "PROGRESSIVE_INCREMENT.csv": "e19a8b0b0c515417a31c1f455776a9d59be015c87185c6b8271e4eacd05496aa",
+    "TRAINING_HISTORY.csv": "04c879af7720f2371e68a2941f7513dde9f59c4c7e126da242aa00ed15b4520c"
+  },
+  "bootstrap_independent_multinomial_exact": true,
+  "freeze_sha256": "53afbec76d6e9837b40a4435fbcc65159298ee1851eac33aa3b3a7bc86950510",
+  "new_cells": 10,
+  "original_reference_checkpoints_unchanged": true,
+  "patient_metric_rows_checked": 320,
+  "prediction_seal_sha256": "9a8cd7d353092c51e2b628c4f42f9adfd29bc2b054d6b7eb8488a656329ee17d",
+  "protocol_sha256": "2386f9685b0eee462b9b559a06cfa3d85695159bf9506fb45f2cda25a25c943b",
+  "reused_cells": 10,
+  "status": "PASS"
+}

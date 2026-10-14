@@ -1,0 +1,159 @@
+{
+  "experiment": "d1_m8_progressive_ablation_seed42_v1",
+  "seed": 42,
+  "models": [
+    "A0",
+    "A1",
+    "A2",
+    "A3"
+  ],
+  "matrix": {
+    "A0": "Raw ABS14 / no PatientZ / scratch CompactDelta1537",
+    "A1": "Raw DELTA14 / no PatientZ / scratch CompactDelta1537",
+    "A2": "Original frozen D1; same DELTA14 + original PatientZ; no refit",
+    "A3": "Original frozen M8 whole package; no refit"
+  },
+  "new_training_cells": 10,
+  "hashes": {
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "window": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "features": [
+    "raw_log_bp_beta",
+    "raw_log_bp_low_gamma",
+    "raw_partial_high_gamma_80_125",
+    "raw_rms",
+    "raw_variance",
+    "raw_line_length_per_sec",
+    "raw_spectral_entropy_10_125"
+  ],
+  "feature_calculation": {
+    "source_function": "exact pinned compute_spectral_channel_features",
+    "dtype": "float32",
+    "nperseg": 500,
+    "noverlap": 250,
+    "window": "default periodic Hann",
+    "detrend": false,
+    "scaling": "density",
+    "average": "mean",
+    "spectral_min_freq": 10,
+    "spectral_max_freq": 150,
+    "available_max": 125,
+    "band_edges": "original low<=f<high on restricted available bins",
+    "integral": "trapezoid then float32",
+    "log": "log1p, not natural log power",
+    "rms": "sqrt(mean(square)+1e-8)",
+    "variance": "population",
+    "line_length": "sum abs diff /2seconds",
+    "entropy": "original PSD sum clip1e-8 and normalized log(number bins); do not replace with conventional unit-normalized entropy"
+  },
+  "aggregation": {
+    "baseline": "float32 mean of all genuine actual center<0 windows; at least1; no CoTAR[-10,0) substitution or all-window fallback",
+    "within_record": "original float32 mean of finite window-level DELTA across all genuine source windows",
+    "across_records": "masked mean and population std across genuinely present seizures, single-record std0; feature-major mean/std14",
+    "no_extra_copies": true
+  },
+  "ABS14": "All genuinely valid windows mean per seizure; masked available-seizure mean/populationSD; feature-major mean/std",
+  "delta_gate": "Exact elementwise original R14 plus original registered tolerance diagnostic",
+  "patient_z": "Absent A0/A1; frozen original float64 populationSD <=1e-8 denominator1 A2; M8 unchanged",
+  "training": {
+    "width": 14,
+    "parameters": 1537,
+    "LayerNorm": "exact duplicate/zero-aware original88-position semantics, no nativeLN14",
+    "patient_z": "original float64 population nanstd, <=1e-8 denominator1",
+    "preprocess": "original SimpleImputer/StandardScaler fitted independently on original FIT for E1/R14, never VAL orTEST",
+    "initialization": "same foldseed scratch original source-free88D initializer folded for E1/D1, no trained E1 warmstart",
+    "optimizer": "AdamW0.001 wd0.0001",
+    "objective": "original NEZ-positive FIT class weighted BCE, one channel-mean update per FITpatient",
+    "clip": 1,
+    "max_epochs": 30,
+    "min_stop_epoch": 6,
+    "patience": 6,
+    "dropout": 0.15,
+    "selection": "validation patient MacroF1, EZF1, earlier epoch; originalNEZ0.005 grid/ties"
+  },
+  "threshold_orientation": "NEZ sigmoid; EZ iff score < numeric threshold; original grid/tie rules; each scratch model selects own validation threshold",
+  "initialization": "42+1009*fold; identical fresh original CompactDelta1537 constructor; no warmstart",
+  "cohort": {
+    "patients": 80,
+    "records": 256,
+    "channels": 7635,
+    "historical_EZ": 1743,
+    "historical_NEZ": 5892,
+    "original_folds": 5,
+    "development_appearances": 65,
+    "development_unique_IDs": 47
+  },
+  "patients_by_fold": [
+    16,
+    16,
+    17,
+    15,
+    16
+  ],
+  "channels_by_fold": [
+    1631,
+    1498,
+    1746,
+    1425,
+    1335
+  ],
+  "outer": "Explicitly authorized; 10 new frozen inference cells; seal predictions before full new TEST label read; reuse D1/M8 original hash-verified ledgers",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 42,
+    "clusters": 80,
+    "paired": true,
+    "threshold_reoptimization": false,
+    "CI": "unadjusted percentile95"
+  },
+  "comparisons": [
+    "A1-A0",
+    "A2-A1",
+    "A3-A2"
+  ],
+  "no_architecture_search": true,
+  "no_post_outer_iteration": true,
+  "monotonic_improvement": "Hypothesis only, not a tuning target",
+  "interpretation": "A2->A3 is entire M8 package, physiology gate and changed objective included; A1->A2 concerns physiological input PatientZ only",
+  "scientific_status": "EXPLORATORY_REPEATED_DEVELOPMENT_AND_OUTER_TEST",
+  "installed_skills_used": [],
+  "publication": "Code, hashes, anonymous aggregates/reports only; all signals/IDs/labels/weights/scalers/private predictions/logs remain on trusted server",
+  "reference_file_hashes": {
+    "D1/PROTOCOL_LOCK.json": "1f59ed0604fe3f896ce5e954c9dd682feb43d2f0b751ddccc81fe8241e052673",
+    "D1/code/construct_delta.py": "04781d5705eed9e99169eb6e0cab688bf795830a97dd7d3a69fd4011ab8cfa95",
+    "D1/code/raw_physiological_features.py": "2db7ff90a3ab4f863aa919809b18e36fa9385ada5b2471b852f0bc405d8a88a0",
+    "D1/code/compact_delta_classifier.py": "a354387e792b391799c18300300582bc0e507b24e629ee8093859edf42bf4793",
+    "D1/code/train.py": "d2d56cf21b2df18ab1284a77f919a1814979269e347ecfb488748478d3ff4e46",
+    "D1/code/evaluate_outer.py": "5cdfa4c6bf0bbadb227882776071697ee0969866e79fcb3f11ffb0dc589d3827",
+    "D1/code/dependencies.py": "021af42f53235bee923291f30408f9ef8d250eeee9b35e680063416338a86fba",
+    "D1/code/io_utils.py": "0a969ccff693a51d4827e946d218f6970543f1f3cfb3daf823ab0dc41244f71b",
+    "D1/code/raw_store.py": "60a57feaa15eda7d5fbfac278b0bed64d48949702892617bdeb0cec7dbba974c",
+    "D1/code/evaluate.py": "04b90abd38f4796d490d08f45b1f55831753b6aaa568b95ac8d4d42a285a9f19",
+    "D1/code/bootstrap.py": "afd641aba433ee49d3904d4f9e8859ef08709c9df124066b1431468aea22276b",
+    "M8/phase2/code/direct_correction.py": "0baf33a7245039074df798f5ff3e275958cdbc145e1f672c5860f9df8e50651c",
+    "M8/phase3/code/decision_modules.py": "8b35ce9bc8035fc7d40b0759c28e12b2b702257b61c692bd07f9e0fbe2c0497f",
+    "M8/tools/best_recipe.py": "d9b1b44dd22ea7bac13165fb53f4932c362ac70631a59e56876b6abdac49ad4f"
+  },
+  "read_document_hashes": {
+    "dre/experiments/raw_delta_encoder_seed42_v1/OUTER_REPORT.md": "dfd3897a01b897d8bddea6e96f358487295a1829480f1e9c23e81d6d71966a79",
+    "dre/experiments/d1_small_module_exploration_seed42_v1/EXPLORATION_FINAL_REPORT.md": "8932d3ed615610b191dcf5407daa3792434b628e274ada35ed7f5e608f53bc75",
+    "dre/experiments/d1_small_module_exploration_seed42_v1/OUTER_REPORT.md": "6cdd39821417d6d819434070003e4f36bda1fd3c742479eb65c8d2022e57595a",
+    "dre/experiments/d1_small_module_exploration_seed42_v1/outer_results/OUTER_SUMMARY.csv": "639c707f6543074244f4ed19e7fa3c92db2931376d0d7e6e9b7d01d8c0f6a929",
+    "dre/experiments/d1_small_module_exploration_seed42_v1/outer_results/OUTER_BY_FOLD.csv": "83859344f08cde5cdf5a7e9eb1077bbbbcd49938e9e29688ce89f1759822baec",
+    "dre/experiments/a0_no_patient_z_seed42_v1/PROTOCOL_LOCK.json": "eaeda8477d05e023d21f4521c14b36223023f33986f2e0b371fb1c4306d1a2d7",
+    "dre/experiments/d2_no_patient_z_outer_seed42_v1/PROTOCOL_LOCK.json": "77751ec4f9ce33f9b2df79212271e742520893ea4a2c3bb3a9cda74602c7aad6",
+    "dre/experiments/a0_compact_rawfirst_ablation_seed42_v1/FEATURE_GROUP_AUDIT.md": "c7f4a098dff8d6c6663a0a1f2cf2dbd035735e0d141a78ca01e304eb37b19bab"
+  },
+  "new_code_hashes": {
+    "bootstrap.py": "3e4ec174c174a9f9b4c781a9325168f24725736bb2303d33157a80fefeb4a412",
+    "evaluate.py": "e55022499c0c7cc8b07988c271b064fdbee7df8b0f9023c3cb158bafa986c72f",
+    "prepare_features.py": "7b7094a1aa71a7e1384b44e72efbcbff2e9d038f5d8f0137391d72cd76de363c",
+    "preprocessing.py": "50c0e6139fdd1be0e78045583830e6effd9c03430e101f723cd2c69396a1c573",
+    "support.py": "b239eed2983826388cdd365fed961328492b390ac91edadc6a2feab0e956b340",
+    "train.py": "70104ca9e4d6ca71d44ae0533a7be6c138429774e2b45e8c6de249219a796880",
+    "verify.py": "26127330823cada94d4b9c66c850e950e2c0c169e53ef7fb905f3d4dd5251eef"
+  }
+}

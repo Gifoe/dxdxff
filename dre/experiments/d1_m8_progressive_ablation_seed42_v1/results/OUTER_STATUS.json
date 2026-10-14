@@ -1,0 +1,12 @@
+{
+  "A2_A3_patient_metrics_exact_original": true,
+  "all_predictions_sealed_before_new_full_y": true,
+  "channels_per_model": 7635,
+  "freeze_sha256": "53afbec76d6e9837b40a4435fbcc65159298ee1851eac33aa3b3a7bc86950510",
+  "new_cells": 10,
+  "patients_per_model": 80,
+  "reused_cells": 10,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "9a8cd7d353092c51e2b628c4f42f9adfd29bc2b054d6b7eb8488a656329ee17d",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

@@ -1,0 +1,117 @@
+{
+  "PatientZ_A0_A1": false,
+  "PatientZ_A2_original": true,
+  "cells": [
+    {
+      "arm": "A0",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 51,
+      "fold": 1,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 3.4495646999566816
+    },
+    {
+      "arm": "A1",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 51,
+      "fold": 1,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 1.086242499994114
+    },
+    {
+      "arm": "A0",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 51,
+      "fold": 2,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 0.7292604999965988
+    },
+    {
+      "arm": "A1",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 51,
+      "fold": 2,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 0.7151629000436515
+    },
+    {
+      "arm": "A0",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 50,
+      "fold": 3,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 0.7816571000148542
+    },
+    {
+      "arm": "A1",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 50,
+      "fold": 3,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 1.996460800000932
+    },
+    {
+      "arm": "A0",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 52,
+      "fold": 4,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 0.7406947000417858
+    },
+    {
+      "arm": "A1",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 52,
+      "fold": 4,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 1.1940850999671966
+    },
+    {
+      "arm": "A0",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 51,
+      "fold": 5,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 0.7172675000037998
+    },
+    {
+      "arm": "A1",
+      "finite": true,
+      "fit_only": true,
+      "fit_patients": 51,
+      "fold": 5,
+      "patient_z": false,
+      "test_excluded": true,
+      "validation_patients": 13,
+      "wall_seconds": 0.631626199989114
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,83 @@
+{
+  "DELTA14_exact_original_R14": true,
+  "binding": {
+    "code": {
+      "bootstrap.py": "3e4ec174c174a9f9b4c781a9325168f24725736bb2303d33157a80fefeb4a412",
+      "evaluate.py": "e55022499c0c7cc8b07988c271b064fdbee7df8b0f9023c3cb158bafa986c72f",
+      "prepare_features.py": "7b7094a1aa71a7e1384b44e72efbcbff2e9d038f5d8f0137391d72cd76de363c",
+      "preprocessing.py": "50c0e6139fdd1be0e78045583830e6effd9c03430e101f723cd2c69396a1c573",
+      "support.py": "b239eed2983826388cdd365fed961328492b390ac91edadc6a2feab0e956b340",
+      "train.py": "70104ca9e4d6ca71d44ae0533a7be6c138429774e2b45e8c6de249219a796880",
+      "verify.py": "26127330823cada94d4b9c66c850e950e2c0c169e53ef7fb905f3d4dd5251eef"
+    },
+    "dependencies": {
+      "D0_bank1": "6ec2c6019fe0c7c2236f83081841a8bf2c3db74284629b08aa0dfcd8221262b7",
+      "D0_bank2": "5e058551d292aac8e60cec8d51e32aea50a662c806bda6a794d0af289d25ab9b",
+      "D0_bank3": "cae4196e0a5b3139bf70b8cc3f5ca16da02266c86f509dd068e6f6796029e53a",
+      "D0_bank4": "30fc4c48a4a49251c291266e22592f6565f8385e94af8a4e59481f2f6966aa50",
+      "D0_bank5": "f7c5bba32ac430573f133570f27f2cffd973c25a8021f8a2c0cccb27d77dda66",
+      "D0_checkpoint1": "48ee0e83bee605cbc08438b7ac6cb59423e83af133bcad0fc828b544e7ad4d77",
+      "D0_checkpoint2": "f9872863419aca7c8bb58590fd8e375354c26bc76f6668d29d989d56cbc77460",
+      "D0_checkpoint3": "2492bb227981103aa76ac3c0afe7c2352ac1911178a0c5dc741a7597aef37880",
+      "D0_checkpoint4": "261690958414e89a4f638bc862d6d26c0ac8a1d792cd0952335fec249ec0a0a8",
+      "D0_checkpoint5": "b296bbbaffe2f7f71f0e70e9494008f832ab7cb3e4a5257597bd31288f61742a",
+      "core": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+      "factory": "c567196692be1149795d93586fe25e2b474f071511bd2fbd0f561db82e00b7d5",
+      "historical_development_freeze": "30a205b9cfd07202acf2ef33214629b3fafd7be62d269927ae070d5089b07d66",
+      "legal_bank1": "a863a36a983d77d3e78675ee1761c9edba3e35f8dd6e52d7d12d03109e415a1a",
+      "legal_bank2": "6efc5b4d4934b3847207d32b94cac884df2e8b34ec7d170214ae1450d04f2fea",
+      "legal_bank3": "d936ef38ba96bb27d13dc417ac92582b3b7a150ef5d725e32e629ec9f2fee6cd",
+      "legal_bank4": "bc4ca7fb9b0bb860015a61dcea4146980386ce5db70a66e58817e50b40ef3ac2",
+      "legal_bank5": "a4a809d1146d719504fbbc14eaba58d4f932f746f1a617ef2e6853967a9f50dd",
+      "manifest": "f7869e994e8494397761e4efa0a2a2057c2a13541331e5933e94c6f7b82a065f",
+      "original_code": {
+        "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+        "finalize.py": "620e1e5cdfbe7a75f0887ffd1beb5f4bfbceb2d254f27d5bb0824094f3b8e9cf",
+        "model.py": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+        "posterior.py": "8cbe1a39b6035c11c9531aaba82652dd17de0a4d4a7c131bcf718ff0824737ba",
+        "prepare.py": "8cc9632b698edeb07f98a098d5d810cf1ab4c71db4b0f6539130c91bd773d114",
+        "run_fold.py": "7a984df72b6668a2f9ce59cdc178bbc277f64e5b3b8107295feaf4704cad9bf5",
+        "train.py": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+        "verify_fold.py": "e875020d7e79732b96fa6e06b3b4a7e68ec96f228d5c8598b80bc6bbb2509e29"
+      }
+    },
+    "protocol": "2386f9685b0eee462b9b559a06cfa3d85695159bf9506fb45f2cda25a25c943b",
+    "raw_registry": "48fb162c51ae34c3e29e4803a87577535a0f9e01ea09276acc0da8c8ef4c40f6",
+    "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609",
+    "references": {
+      "D1/PROTOCOL_LOCK.json": "1f59ed0604fe3f896ce5e954c9dd682feb43d2f0b751ddccc81fe8241e052673",
+      "D1/code/bootstrap.py": "afd641aba433ee49d3904d4f9e8859ef08709c9df124066b1431468aea22276b",
+      "D1/code/compact_delta_classifier.py": "a354387e792b391799c18300300582bc0e507b24e629ee8093859edf42bf4793",
+      "D1/code/construct_delta.py": "04781d5705eed9e99169eb6e0cab688bf795830a97dd7d3a69fd4011ab8cfa95",
+      "D1/code/dependencies.py": "021af42f53235bee923291f30408f9ef8d250eeee9b35e680063416338a86fba",
+      "D1/code/evaluate.py": "04b90abd38f4796d490d08f45b1f55831753b6aaa568b95ac8d4d42a285a9f19",
+      "D1/code/evaluate_outer.py": "5cdfa4c6bf0bbadb227882776071697ee0969866e79fcb3f11ffb0dc589d3827",
+      "D1/code/io_utils.py": "0a969ccff693a51d4827e946d218f6970543f1f3cfb3daf823ab0dc41244f71b",
+      "D1/code/raw_physiological_features.py": "2db7ff90a3ab4f863aa919809b18e36fa9385ada5b2471b852f0bc405d8a88a0",
+      "D1/code/raw_store.py": "60a57feaa15eda7d5fbfac278b0bed64d48949702892617bdeb0cec7dbba974c",
+      "D1/code/train.py": "d2d56cf21b2df18ab1284a77f919a1814979269e347ecfb488748478d3ff4e46",
+      "M8/phase2/code/direct_correction.py": "0baf33a7245039074df798f5ff3e275958cdbc145e1f672c5860f9df8e50651c",
+      "M8/phase3/code/decision_modules.py": "8b35ce9bc8035fc7d40b0759c28e12b2b702257b61c692bd07f9e0fbe2c0497f",
+      "M8/tools/best_recipe.py": "d9b1b44dd22ea7bac13165fb53f4932c362ac70631a59e56876b6abdac49ad4f"
+    }
+  },
+  "channels": 7635,
+  "feature_file_sha256": "8598f60976be5c45b9c5d717c1113a33c7ade7394da3bd6e7f4b003573a23642",
+  "features": [
+    "raw_log_bp_beta",
+    "raw_log_bp_low_gamma",
+    "raw_partial_high_gamma_80_125",
+    "raw_rms",
+    "raw_variance",
+    "raw_line_length_per_sec",
+    "raw_spectral_entropy_10_125"
+  ],
+  "genuine_channel_windows": 1471965,
+  "max_absolute_delta_error": 0.0,
+  "no_labels_used_in_extraction": true,
+  "patients": 80,
+  "records": 256,
+  "single_seizure_zero_std_coordinates": 4536,
+  "source_masks_exact": true,
+  "status": "PASS"
+}

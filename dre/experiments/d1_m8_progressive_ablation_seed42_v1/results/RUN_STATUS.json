@@ -1,0 +1,9 @@
+{
+  "channels": 7635,
+  "new_outer_cells": 10,
+  "new_training_cells": 10,
+  "patients": 80,
+  "reused_reference_cells": 10,
+  "scientific_terminal": "PROGRESSIVE_IMPROVEMENT_OBSERVED",
+  "status": "COMPLETE_VERIFIED"
+}

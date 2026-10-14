@@ -1,0 +1,14 @@
+{
+  "PR_effect": "input PatientZ in physiological D1 branch; not separately M8 Raw PatientZ",
+  "RawCorrection_effect": "complete M8 package, includes physiology gate and changed training objective",
+  "no_test_driven_iteration": true,
+  "strict_monotonic_order": {
+    "ez_auprc": true,
+    "ez_auroc": true,
+    "ez_f1": true,
+    "macro_f1": true
+  },
+  "terminal": "PROGRESSIVE_IMPROVEMENT_OBSERVED",
+  "test_reuse": "EXPLORATORY_REPEATED_TEST",
+  "unadjusted_uncertainty": true
+}

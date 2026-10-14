@@ -1,0 +1,37 @@
+{
+  "audit_source_sha256": "9f2ef309ea2d4d674c28d0d57f6f1dd1ffc3135ec22bf631bf7b176420e42146",
+  "folds": [
+    {
+      "A0_A1_exact_original_initial_state": true,
+      "fold": 1,
+      "original_D1_checkpoint_sha256": "f6e8e6f9d34f5a5bcca0ab967a43008f8e99812767933578ac21cb540595ac30",
+      "original_recorded_initial_state_sha256": "3b6cdcdd37bdd23bc9df0b56800cd87c8774dab6ad1dd2b26548ba7336559977"
+    },
+    {
+      "A0_A1_exact_original_initial_state": true,
+      "fold": 2,
+      "original_D1_checkpoint_sha256": "b27b046f841d8e6c909457f880de286dc1925e4d2d3fa42838e2d3827ca1c887",
+      "original_recorded_initial_state_sha256": "3695900df87e65327d61c98ec17a8ef0ccc15ab8dbe53caa8831284d07ebd72d"
+    },
+    {
+      "A0_A1_exact_original_initial_state": true,
+      "fold": 3,
+      "original_D1_checkpoint_sha256": "e11000e3a2f8d5c787e86a20decfe55054a5d2e12ea2682f6c0585cb54d12747",
+      "original_recorded_initial_state_sha256": "5310309de48ebfd063b3e553a0d9dc9f57a6f41e631f839c3535719cda493203"
+    },
+    {
+      "A0_A1_exact_original_initial_state": true,
+      "fold": 4,
+      "original_D1_checkpoint_sha256": "c3fc94dae329389d277d570435d9bd101613361f1c64d3eadda14892190300b8",
+      "original_recorded_initial_state_sha256": "38e1ec190fc8e02c6283cfe2904f000259a6be72e8d89b26c562d5f9bfcf7498"
+    },
+    {
+      "A0_A1_exact_original_initial_state": true,
+      "fold": 5,
+      "original_D1_checkpoint_sha256": "37b1a7d0342161683674d613a443c33837a424da35228c79033e66c5b45c7915",
+      "original_recorded_initial_state_sha256": "2c6e08780aeb1e3192bfe53cc73570672816c94659d836d5366e97f287f5cf14"
+    }
+  ],
+  "new_training": false,
+  "status": "PASS"
+}

@@ -1,0 +1,57 @@
+{
+  "folds": [
+    {
+      "all_legal_bank_rows_checked": true,
+      "checkpoint_sha256": "48ee0e83bee605cbc08438b7ac6cb59423e83af133bcad0fc828b544e7ad4d77",
+      "fold": 1,
+      "logit_fp32_max": 4.76837158203125e-07,
+      "logit_fp64_synthetic_max": 3.3306690738754696e-16,
+      "original_selection_exact": true,
+      "score_fp32_max": 1.1920928955078125e-07,
+      "validation_decisions_exact": true
+    },
+    {
+      "all_legal_bank_rows_checked": true,
+      "checkpoint_sha256": "f9872863419aca7c8bb58590fd8e375354c26bc76f6668d29d989d56cbc77460",
+      "fold": 2,
+      "logit_fp32_max": 5.960464477539062e-07,
+      "logit_fp64_synthetic_max": 4.440892098500626e-16,
+      "original_selection_exact": true,
+      "score_fp32_max": 1.1920928955078125e-07,
+      "validation_decisions_exact": true
+    },
+    {
+      "all_legal_bank_rows_checked": true,
+      "checkpoint_sha256": "2492bb227981103aa76ac3c0afe7c2352ac1911178a0c5dc741a7597aef37880",
+      "fold": 3,
+      "logit_fp32_max": 4.76837158203125e-07,
+      "logit_fp64_synthetic_max": 2.7755575615628914e-16,
+      "original_selection_exact": true,
+      "score_fp32_max": 1.1920928955078125e-07,
+      "validation_decisions_exact": true
+    },
+    {
+      "all_legal_bank_rows_checked": true,
+      "checkpoint_sha256": "261690958414e89a4f638bc862d6d26c0ac8a1d792cd0952335fec249ec0a0a8",
+      "fold": 4,
+      "logit_fp32_max": 4.76837158203125e-07,
+      "logit_fp64_synthetic_max": 2.220446049250313e-16,
+      "original_selection_exact": true,
+      "score_fp32_max": 1.1920928955078125e-07,
+      "validation_decisions_exact": true
+    },
+    {
+      "all_legal_bank_rows_checked": true,
+      "checkpoint_sha256": "b296bbbaffe2f7f71f0e70e9494008f832ab7cb3e4a5257597bd31288f61742a",
+      "fold": 5,
+      "logit_fp32_max": 4.76837158203125e-07,
+      "logit_fp64_synthetic_max": 4.440892098500626e-16,
+      "original_selection_exact": true,
+      "score_fp32_max": 1.1920928955078125e-07,
+      "validation_decisions_exact": true
+    }
+  ],
+  "original_D0_replayed_not_retrained": true,
+  "parameters": 1537,
+  "status": "PASS"
+}

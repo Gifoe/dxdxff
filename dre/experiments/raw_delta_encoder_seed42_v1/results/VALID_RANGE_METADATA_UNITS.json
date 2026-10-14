@@ -1,0 +1,25 @@
+{
+  "clinical_labels_used": false,
+  "feature_sampling_rate_metadata": {
+    "1000.0": 256
+  },
+  "integer_sample_bounds_not_comparable_until_rate_normalized": true,
+  "no_onset_clock_or_filter_provenance_claim": true,
+  "raw_sfreq": 250,
+  "records": 256,
+  "source_sha256": "f3d85a12464ea87bf5650b63e4b50332c69edbead0c103316027b506dcddae0c",
+  "status": "DIAGNOSTIC_ONLY",
+  "unknown_feature_rate_records": 0,
+  "valid_end_seconds_difference": {
+    "cases": 256,
+    "exact_seconds_agreement": 241,
+    "max_absolute_seconds": 0.0009999999999976694,
+    "median_absolute_seconds": 0.0
+  },
+  "valid_start_seconds_difference": {
+    "cases": 256,
+    "exact_seconds_agreement": 244,
+    "max_absolute_seconds": 0.001,
+    "median_absolute_seconds": 0.0
+  }
+}

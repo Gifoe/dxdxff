@@ -1,0 +1,23 @@
+{
+  "Development_reused_exploratory": true,
+  "Stage_A": "PASS",
+  "Stage_B": "PASS",
+  "Stage_C": "FAIL",
+  "conditions": {
+    "D2_D1_AP": true,
+    "D2_D1_AUROC": false,
+    "D2_D1_EZF1": true,
+    "D2_D1_MacroF1": true,
+    "D2_D3_AUROC": false,
+    "D2_D3_CI_lower_positive": true,
+    "D2_specificity": true,
+    "implementation_integrity": true,
+    "positive_folds": true,
+    "stage_A": true,
+    "stage_B": true,
+    "useful_actual_residual": true
+  },
+  "no_Outer": true,
+  "no_rescue": true,
+  "terminal": "RAW_INFORMATION_POSSIBLY_USEFUL_TEMPORAL_ORDER_NOT_ESTABLISHED"
+}

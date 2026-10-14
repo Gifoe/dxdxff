@@ -1,0 +1,32 @@
+{
+  "Nyquist": 125,
+  "band_support": {
+    "beta": {
+      "bins": 34,
+      "first_bin": 13.0,
+      "last_bin": 29.5
+    },
+    "low_gamma": {
+      "bins": 100,
+      "first_bin": 30.0,
+      "last_bin": 79.5
+    },
+    "raw_partial_high_gamma_80_125": {
+      "bins": 91,
+      "first_bin": 80.0,
+      "last_bin": 125.0
+    }
+  },
+  "bin_step": 0.5,
+  "detrend": false,
+  "entropy_support": [
+    10.0,
+    125.0
+  ],
+  "extra_filters_or_upsampling": false,
+  "high_gamma_full80_150_reconstructable": false,
+  "noverlap": 250,
+  "nperseg": 500,
+  "sfreq": 250,
+  "spectral_restricted_bins": 231
+}

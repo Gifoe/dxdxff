@@ -1,0 +1,13 @@
+# Evidence provenance
+
+- Original cohort size/EZ-NEZ counts, folds, raw bandwidth limitations and rounded D0 references originate in the user contract and historical files. No new global archive label count or Outer outcome was read to reproduce them.
+- `INITIAL_BULK_STAGE_A_GATE.json` and `INITIAL_BULK_E14_PARITY.json` are the actual first-run arithmetic failure, not the final scientific gate.
+- `E14_EXACT_AGGREGATION_DIAGNOSTIC.json` is the actual label-blind source-arithmetic diagnosis on the original window cache. The interrupted exact-arithmetic run produced no completed gate and is retained privately.
+- Final `STAGE_A_GATE.json`, `RAW_COVERAGE.json` and feature/reference tables come from the full corrected, sample-verified run on all80/256/7,635 units. Protocol SHA256 stayed1f59ed0604fe3f896ce5e954c9dd682feb43d2f0b751ddccc81fe8241e052673. No thresholds/bands/family selection were changed after measurement.
+- `COMPACT_PARITY.json` is an actual trained-D0 checkpoint replay on legal FIT/Development rows plus a deterministic float64 synthetic algebra test. D0's Development metrics are freshly replayed historical weights, not a new D0 training run.
+- E1/D1 metrics arise from ten new compact retraining cells; D2/D3 from ten new matched Raw-branch training cells. All65 Development appearances/47 identities are retained, without a fresh split or new Outer inference.
+- `RAW_DYNAMIC_ALIGNMENT.json` is an actual reread/hash and every-sample comparison of existing waveform-only banks against their exact original Raw source; temporal/permutation metadata is reconstructed from the verified compound ledger. No old 88D engineered values enter the Raw branch.
+- `RAW_BRANCH_INTERVENTIONS.csv`, error/ranking counts and residual-distribution summaries are actual frozen trained-D2 inference interventions. The auxiliary head uses fixed0.5 only as a diagnostic; intervention thresholds remain D2-selected values. No retrained absolute-Raw model was fabricated.
+- `VALID_RANGE_METADATA_UNITS.json` is a separate label-blind sampling-unit diagnostic, not a new gate or classification evaluation.
+- `INDEPENDENT_VERIFICATION.json` independently recomputes clinical metrics only from legal Development labels and frozen private scores, checks selections/checkpoint/source hashes, and verifies cluster bootstrap via multiplicity counts. It makes no model/Raw/Outer rerun.
+- All public CSVs are byte-identical transferred anonymous server aggregates. Private identities, scalers, weights, detailed predictions and waveforms were not transferred. Source `.py` hashes match executed server source; retained data/code bindings are in gate JSONs. Final prose interprets these files, not hypothetical experiments.

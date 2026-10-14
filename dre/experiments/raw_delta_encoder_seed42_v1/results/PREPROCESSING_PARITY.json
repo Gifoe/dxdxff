@@ -1,0 +1,117 @@
+{
+  "cells": [
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "E1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 51,
+      "fold": 1,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "D1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 51,
+      "fold": 1,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "E1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 51,
+      "fold": 2,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "D1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 51,
+      "fold": 2,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "E1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 50,
+      "fold": 3,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "D1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 50,
+      "fold": 3,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "E1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 52,
+      "fold": 4,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "D1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 52,
+      "fold": 4,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "E1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 51,
+      "fold": 5,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    },
+    {
+      "Outer_patients_loaded": 0,
+      "PatientZ_independent_exact": true,
+      "arm": "D1",
+      "engineered_values_in_D1_predictor": false,
+      "fit_patients": 51,
+      "fold": 5,
+      "input_finite": true,
+      "scaler_fit_only": true,
+      "validation_patients": 13
+    }
+  ],
+  "clinical_label_scope": "own FIT and validation only",
+  "initializations_matched": true,
+  "status": "PASS"
+}

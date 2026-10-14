@@ -1,0 +1,22 @@
+{
+  "changed_from_bulk_coordinates": 447,
+  "diagnostic_only": true,
+  "explanation": "Original per-channel mean of contiguous full44 evidence rows and per-coordinate1D cross-seizure mean/populationstd versus vectorized reductions over W,C,7 and S,C,7; same measurements/references/support, float32 accumulation/layout differences.",
+  "max_change_from_bulk": 1.4901161193847656e-08,
+  "no_labels_or_new_Raw_read": true,
+  "old_bulk_reconstruction_parity": {
+    "coordinates": 106890,
+    "max_absolute_difference": 1.4901161193847656e-08,
+    "pass_gate": false,
+    "violating_coordinates": 3
+  },
+  "parity": {
+    "coordinates": 106890,
+    "max_absolute_difference": 0.0,
+    "pass_gate": true,
+    "violating_coordinates": 0
+  },
+  "records": 256,
+  "source_hash": "426344bfa6ef0dd4b1dc59fe267d7920cef020fdcb42e834efc9a9ae6b4ca273",
+  "status": "PASS"
+}

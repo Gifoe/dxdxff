@@ -1,0 +1,11 @@
+# Raw feature fidelity
+
+Stage A passed the locked numerical gate with 5/5 A/B feature families. The label-blind FIT union has 79 distinct patients; all 80 remain in alignment coverage. Correlations use only estimable nonconstant patient-feature cases: 79 for seizure means and 72 for seizure standard deviations, with seven single-seizure/constant-SD cases disclosed rather than assigned a perfect correlation.
+
+Patient-median Spearman (mean / population SD): beta 1.000000 / 1.000000; low gamma 1.000000 / 1.000000; RMS 0.999985 / 0.999975; variance 0.999987 / 0.999983; line length 0.988159 / 0.981833. The gate is rank fidelity, not a claim that the physical values or preprocessing are identical. `FEATURE_FIDELITY_BY_GROUP.csv`, `FEATURE_FIDELITY_BY_CENTER.csv`, `FIT_FIDELITY_BY_ORIGINAL_FOLD.csv`, `RAW_DELTA_SCALE_AUDIT.csv` and `PREICTAL_REFERENCE_FIDELITY.csv` report actual discrepancies and denominators.
+
+Pinned original formulas are reused: float32 Welch with periodic Hann, 500 samples at 250 Hz, 250 overlap, no detrending, 10–150-Hz requested support restricted to available bins; trapezoidal integration, float32 conversion and log1p. RMS includes the original 1e-8 floor; variance is population variance; line length is divided by two seconds. Entropy retains the original PSD-sum floor and logarithmic bin-count normalization, not a substituted textbook entropy.
+
+Category A beta has available 13–29.5 Hz bins and low gamma 30–79.5 Hz. Category B time-domain values can change under sampling/filtering; especially line-length scale mismatch must not be concealed by its high rank correlation. Category C high gamma is explicitly `raw_partial_high_gamma_80_125`: Raw250 Nyquist is 125 Hz, so 125–150 Hz is absent. Raw entropy uses available 10–125-Hz support. Category C was not counted toward the 4/5 gate and cannot establish full historical bandwidth recovery.
+
+No filtering, upsampling, interpolation to claim extra spectral support, physiological-family selection or label-driven extraction tuning was performed. Exact cache hashes establish the archived object, not an independently verified native-rate EDF/device filter chain. Absolute amplitude and onset physiology remain acquisition-provenance limitations.

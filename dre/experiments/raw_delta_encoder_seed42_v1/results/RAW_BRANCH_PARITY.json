@@ -1,0 +1,42 @@
+{
+  "D2_D3_equal_initial_state": true,
+  "base_frozen": true,
+  "folds": [
+    {
+      "base_checkpoint_unchanged": true,
+      "embedded_D1_score_max_drift": 1.1920928955078125e-07,
+      "fold": 1,
+      "gamma_zero_logit_identity": true,
+      "intervention_threshold": "frozen D2 threshold, not D1 threshold"
+    },
+    {
+      "base_checkpoint_unchanged": true,
+      "embedded_D1_score_max_drift": 1.1920928955078125e-07,
+      "fold": 2,
+      "gamma_zero_logit_identity": true,
+      "intervention_threshold": "frozen D2 threshold, not D1 threshold"
+    },
+    {
+      "base_checkpoint_unchanged": true,
+      "embedded_D1_score_max_drift": 1.1920928955078125e-07,
+      "fold": 3,
+      "gamma_zero_logit_identity": true,
+      "intervention_threshold": "frozen D2 threshold, not D1 threshold"
+    },
+    {
+      "base_checkpoint_unchanged": true,
+      "embedded_D1_score_max_drift": 1.1920928955078125e-07,
+      "fold": 4,
+      "gamma_zero_logit_identity": true,
+      "intervention_threshold": "frozen D2 threshold, not D1 threshold"
+    },
+    {
+      "base_checkpoint_unchanged": true,
+      "embedded_D1_score_max_drift": 5.960464477539063e-08,
+      "fold": 5,
+      "gamma_zero_logit_identity": true,
+      "intervention_threshold": "frozen D2 threshold, not D1 threshold"
+    }
+  ],
+  "status": "PASS"
+}

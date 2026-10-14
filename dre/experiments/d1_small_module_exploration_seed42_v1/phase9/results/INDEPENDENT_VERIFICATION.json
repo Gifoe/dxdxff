@@ -1,0 +1,22 @@
+{
+  "MacroF1": 0.6930453861315332,
+  "aggregate_sha256": {
+    "CALIBRATION_SELECTION.csv": "de3ab4474f08634e21cf45538c70792be3b8f73608b199fec5d81829a0287190",
+    "DEVELOPMENT_BY_CENTER.csv": "a6e04200d986d9cbb7e74a59b67f835cabca010c7d60838d47e77a109f098718",
+    "DEVELOPMENT_BY_FOLD.csv": "a6f3db2a9383c4f6b8b05b065cae9caf2f04759495a85914266bb8a7acd4a3fc",
+    "DEVELOPMENT_SUMMARY.csv": "d95d1c798a967ee2c92450e48877cf31473d2ea41b9467ba5fd6444e3a828745",
+    "PAIRED_BOOTSTRAP.csv": "1881b8e5dad3d734e2de0bd9904adec9e857104bd8332d98cf64a11d4507f73b"
+  },
+  "all_source_maps_recomputed_validation_only": true,
+  "bootstrap_independent_multiplicity": true,
+  "calibration_cells": 40,
+  "configurations": 8,
+  "independent_patient_metric_cells": 520,
+  "no_TEST_access": true,
+  "original_ranking_exact_unchanged": true,
+  "own_fold_test_excluded": true,
+  "phase": 9,
+  "selected": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+  "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+  "status": "PASS"
+}

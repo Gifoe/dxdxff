@@ -1,0 +1,145 @@
+{
+  "folds": [
+    {
+      "combination": "E1_M8_M17",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 1,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E1_M8_M17",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 2,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E1_M8_M17",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 3,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E1_M8_M17",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 4,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E1_M8_M17",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 5,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E2_M8_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 1,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E2_M8_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 2,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E2_M8_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 3,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E2_M8_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 4,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E2_M8_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 5,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E3_M17_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 1,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E3_M17_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 2,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E3_M17_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 3,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E3_M17_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 4,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E3_M17_M18",
+      "components": 2,
+      "equal_weights_fixed": true,
+      "fold": 5,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E4_M8_M17_M18",
+      "components": 3,
+      "equal_weights_fixed": true,
+      "fold": 1,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E4_M8_M17_M18",
+      "components": 3,
+      "equal_weights_fixed": true,
+      "fold": 2,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E4_M8_M17_M18",
+      "components": 3,
+      "equal_weights_fixed": true,
+      "fold": 3,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E4_M8_M17_M18",
+      "components": 3,
+      "equal_weights_fixed": true,
+      "fold": 4,
+      "shared_D1_exact": true
+    },
+    {
+      "combination": "E4_M8_M17_M18",
+      "components": 3,
+      "equal_weights_fixed": true,
+      "fold": 5,
+      "shared_D1_exact": true
+    }
+  ],
+  "status": "PASS"
+}

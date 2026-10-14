@@ -1,6 +1,6 @@
 # Frozen D1 small-module exploration — Seed42 Phase1
 
-**New active Macro-F1>0.70 goal:** phases4–6 added seven prospectively locked recipes/35actual fold cells; bestDevelopment0.668015, target not reached. AllthreephaseverifiersPASS and failedoutcomesretained. No newOuteraccess in this extension. See [MACRO70_PROGRESS.md](MACRO70_PROGRESS.md); previous completedDevelopment/Outer below remain unchanged.
+**Macro-F1>0.70 investigation and requestedOuter now executed:** phases4–14 completed50new model/fold trainingcells and495validationcalibrationcells; bestfittedDevelopment0.695249, target notmet. FinalfrozendecoderOuterMacro-F1 **0.614959**, lowerthanoriginalM8 **0.634097**. AllindependentverifiersPASS; no after-Outertuning. Read [MACRO70_FINAL_REPORT.md](MACRO70_FINAL_REPORT.md), `MACRO70_TERMINAL.json` and `macro70_outer/results/`. Historical [MACRO70_PROGRESS.md](MACRO70_PROGRESS.md) preserves the earlier interimstatus, notcurrentcompletion. PreviouspublishedDevelopment/Outer values remainunchanged. This is a negative researchresult, nottargetsuccess.
 
 User-confirmed primary target: patient-average **Macro-F1 +absolute0.02**, from0.644546461935 to0.664546461935; inspect AUROC/AP/EZF1 and sensitivity. This is experimental exploration, not a promise that adding parameters guarantees two points.
 

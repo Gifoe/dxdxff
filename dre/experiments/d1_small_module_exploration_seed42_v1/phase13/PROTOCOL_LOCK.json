@@ -1,0 +1,16 @@
+{
+ "experiment":"d1_macro70_fixed_equal_branch_combination_phase13_seed42_v1",
+ "objective":"DevelopmentpatientMacroF1>0.70 then frozenOuter",
+ "adaptive_reason":"Allphase7representationcells andphase8-12source/offset/dispersioncalibrationcellscompleted/verified; best0.694013. Test orthogonalerrorcomplementarity usingfrozenbranches, notnewtraining or test-tuned weights.",
+ "combinations":{"E1_M8_M17":["M8_MACRO_AWARE","M17_TIME_SPECTRAL"],"E2_M8_M18":["M8_MACRO_AWARE","M18_TIME_CONTROL"],"E3_M17_M18":["M17_TIME_SPECTRAL","M18_TIME_CONTROL"],"E4_M8_M17_M18":["M8_MACRO_AWARE","M17_TIME_SPECTRAL","M18_TIME_CONTROL"]},
+ "weights":"Exactlyequal1/K,fixedbeforeevaluation. Float64meanNEZlogits thenfloat64sigmoid. AllconstituentssharetheexactsamefrozenD1sologitmeancontainsD1once. No learnedbeta/router or bestweightperfold.",
+ "policies":["GLOBAL","SOURCE_MIN1","SOURCE_SCALE_HALF"],
+ "calibration":"GLOBALoriginalpatientMacroF1grid/tiesonvalidationensembleprobability; SOURCE_MIN1knownFIT-sourcevalidationgroupthresholds, unknownsourceglobalfallback; SOURCE_SCALE_HALFsameknownsourcecalibrationonq=sigmoid(logit(p)/sqrt(patientSD(logit(p)))) withsd<=1e-8fallback1. Effectivedecoder cutoffinoriginalpspace, rankingprobabilitiesunchangedbycalibration.",
+ "matrix":"4fixedcombinationsby3policiesby5folds=60calibrationcells. No additional CNN training; all12globalconfigsreported. Onecommoncombination/policy acrossfolds, tieMacroF1/EZF1/fewerconstituents.",
+ "data":"Exactalreadyfrozenvalidationpredictions/checkpoints/roles. Newmodelusesmultiplebranchweightsandmustnotbeadvertisedassingle-small-moduleimprovement. No newRaw/EDF/physiologyextraction.",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47IDclusters65appearances","thresholds_fixed":true},
+ "no_TEST_access_while_selecting":true,
+ "outer":"Lockchosenconstituents/equalweights/checkpoints/scalers/sourcecutoffmaps/split/codebeforeoneOuter evaluation. No after-testweight/threshold/source-map changes.",
+ "privacy":"Onlysource/hash/anonymousmetrics. Allweights, maps,IDs,labels,individualpredictions/Raw/cache/logsremaintrustedserver.",
+ "caveat":"AdaptiveensemblescreeningandvalidationcalibrationinflateDevelopmentoptimism;0.70wouldnotbeindependentconfirmation. PriorOuterviewingmeanssubsequentOuterexploratoryrepeated-test."
+}

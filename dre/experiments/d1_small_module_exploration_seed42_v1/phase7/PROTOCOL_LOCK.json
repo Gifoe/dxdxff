@@ -1,0 +1,20 @@
+{
+ "experiment":"d1_macro70_native_spectral_morphology_phase7_seed42_v1",
+ "objective":"Development patientMacroF1 strictly>0.70 then selected frozenOuter",
+ "adaptive_reason":"All35phase4-6cells completed and independentlyverified; best0.668015. Decision/loss/cap/conditional-tree tweaks are insufficient. Test representation-level frequency complementarity against a matched time-only control.",
+ "models":["M16_SPECTRAL","M17_TIME_SPECTRAL","M18_TIME_CONTROL"],
+ "frequency":"Existinggenuine500sample250Hzwindows only. Hannperiodic taper after originalper-windowmean/SDfloor1e-6/clamp8. rFFTlength500; bins20..250 inclusive=10..125Hz, log(power+1e-8), per-windowspectrum mean/SDfloor1e-6. No upsampling or restorationofdelta/theta/full80-150Hz.",
+ "branches":{"time":"Original1→12Conv9stride4,GELU,12→24Conv7stride4,GELU,pool1=24D","spectral":"1→12Conv9stride3,GELU,12→24Conv5stride3,GELU,pool4=96D","combined":"concatenate24Dtime+96Dspectral; one shared finalcorrectionhead"},
+ "context":"Same-channel genuinepre-reference subtraction, bounded7Dphysiology multiplicativegate1+0.25tanh(7→32→E) withlastzero; early0-8s/late8-20s maskedmeans, across-seizuremean/popSD, patientZ4E, concatenate originalprocessedR14 toone(4E+14)→64→1head",
+ "residual":"FrozenD1+1.5*tanh(correction), lastheadprojectionzero givesexactD1atstep0. No trainablealpha and no separateexpert/router.",
+ "loss":"0.75 originalFIT-weightedBCE(final)+0.25patientSoftMacroF1(final)",
+ "training":{"seed":"42+1009fold","optimizer":"AdamW","lr":0.0003,"weight_decay":0.001,"clip":1,"max_epochs":30,"min_stop":6,"patience":6,"patient_equal":"one channel-mean supervisedupdateperFITpatient","selection":"originalvalidationpatientMacroF1,EZF1,earlierepoch, originalthresholdgrid/ties; epoch0D1alsoeligible"},
+ "raw_batch":4096,
+ "all15_cells_required":true,
+ "selection":"One common architectureacrossfivefolds bypatientMacroF1,tieEZF1,fewerparameters; allarmsretained",
+ "data":"Original80patient/256seizure/7635channel contract, exactownfoldD1 preprocessing andFITphysiology scales, masks/times/referenceunchanged. OnlineFFTispartofnewmodel, notnewRaw/EDF/physiological dataextraction.",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47IDclusters65appearances","thresholds_fixed":true},
+ "no_TEST_access_while_training":true,
+ "outer":"Select/freezefinalrecipecheckpoint/scaler/thresholdbeforeOuter; noOuterdriveniteration; historicalcohortexposure=exploratoryrepeated-test",
+ "privacy":"Onlycode/hash/anonymousaggregatespublic; Raw,IDs,labels,individualpredictions,weights,scalersandlogsprivateserverD"
+}

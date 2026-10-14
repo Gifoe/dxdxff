@@ -1,0 +1,18 @@
+{
+ "experiment":"d1_macro70_source_patient_dispersion_phase11_seed42_v1",
+ "objective":"LegalDevelopmentMacroF1>0.70 followedbyfrozenOuter",
+ "adaptive_reason":"Phase9best0.693045,phase10best0.691674; changingbase/offsetaloneis insufficient. Test patient-logitdispersion mismatch using no-labelobservables.",
+ "bases":["M8_MACRO_AWARE","M18_TIME_CONTROL"],
+ "offset_coefficients":[0.0,0.25,0.5,1.0],
+ "scale_exponents":[0.5,1.0],
+ "decision":"Fromoriginalfrozenp clip[1e-7,1-1e-7]forcalculus, z=logit(p), m=patientmedian(z), sd=patientpopulationSD(z), sd<=1e-8 replacedby1. q=sigmoid((z-lambda*m)/(sd^kappa)). SourceMIN1validationthresholdτselectedwithoriginal0.005grid/ties. Effectivecutoffinoriginalpspace=sigmoid(logit(τ)*sd^kappa+lambda*m). No patientlabel/EZcountinput and original ranking scoresunchanged.",
+ "source_coverage":"SourcegroupmustexistinoriginalFIT; absent/unknownsourceusesoriginalbaselineglobalthresholdintransformedspace; source-mapneverfitontest",
+ "matrix":"All16commonbase/lambda/kappaconfigurationsacrossfivefolds=80calibrationcells. Oneglobalconfiguration, no per-foldhyperparameter or per-patientoracle selection.",
+ "selection":"patient-averageMacroF1,tieEZF1,smallerlambda,smallerkappa; sideguardsAUROC/AP/EZF1notbelowD1",
+ "numerical_gate":"Assertq-basedandbacktransformedoriginalpdecisionsagree; refusemismatch",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47IDclusters65validationappearances","thresholds_fixed":true},
+ "no_TEST_access_while_fitting":true,
+ "outer":"Selectfreezeallnumericmaps/defaults/normalizationrule/basecheckpoints/source/input/splitbeforeOuter; noafter-testtuning",
+ "caveat":"Validation-onlysource-mapfitandveryadaptiveglobalscreeningbiasDevelopmentF1. Any0.70isfitteddecoderperformance, notindependent confirmation ornewrankinggain. FutureOuterisexploratoryrepeated-test.",
+ "privacy":"Onlycode/hash/anonymousaggregate; individualscore/ID/label/tinygroupmap/checkpointstateprivate"
+}

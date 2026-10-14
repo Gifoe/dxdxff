@@ -1,0 +1,40 @@
+{
+  "folds": [
+    {
+      "embedded_D1_max_difference": 0.0,
+      "fold": 1,
+      "ranking_exact_M18": true,
+      "transformed_and_original_decisions_equal": true,
+      "unknown_source_channels": 0
+    },
+    {
+      "embedded_D1_max_difference": 0.0,
+      "fold": 2,
+      "ranking_exact_M18": true,
+      "transformed_and_original_decisions_equal": true,
+      "unknown_source_channels": 0
+    },
+    {
+      "embedded_D1_max_difference": 0.0,
+      "fold": 3,
+      "ranking_exact_M18": true,
+      "transformed_and_original_decisions_equal": true,
+      "unknown_source_channels": 0
+    },
+    {
+      "embedded_D1_max_difference": 0.0,
+      "fold": 4,
+      "ranking_exact_M18": true,
+      "transformed_and_original_decisions_equal": true,
+      "unknown_source_channels": 0
+    },
+    {
+      "embedded_D1_max_difference": 0.0,
+      "fold": 5,
+      "ranking_exact_M18": true,
+      "transformed_and_original_decisions_equal": true,
+      "unknown_source_channels": 0
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,9 @@
+# Native spectral morphology — Phase7 prospective test
+
+Three matched-protocol candidates compare spectral-only, time+spectral and time-only representations. The previous35actual Macro70candidate/fold cells did not reach0.70; best is0.668015. This phase changes the learnedrepresentation, not patient/test threshold rules.
+
+Use only the existinggenuine500sample/250Hzwindow bank. The new onlineFFTmodel branch consumes bins10–125Hz from a periodicHann-tapered normalizedwindow. It does not extract newEDF/cache/clinicalfeatures or create fictitioushighfrequency/lowfrequency support. Log-spectrum normalization is withinwindow, never estimated fromvalidation/test. The spectralCNNretains fourfrequency-position pools, whereas the timeCNNis the original24Dwindow encoder. Combined features share a singlecorrection head, physiology gate, pre-reference operator andclassifier rather than forming two predictionexperts.
+
+Everycandidate uses the samecap1.5,7Dphysiology gate, originalprocessedR14input, same early/late andacross-seizure aggregation and originalD1/fold preprocessing. Zerooutputprojection givesexactD1initial logits; no deadtrainablescalar/auxiliaryclassifier. A newpatient-level supervised training experiment is required, not a model edit of oldcheckpoints. All15foldcells and unfavourableoutcomes must be retained. No newOuter is accessed untilfinalselection/freeze.
+
+Run `code/test_spectral.py` before `code/run.py`. Tests check independentNumPyFFTand physicalfrequencycoordinates, initialidentity, invalidwindowmasking, channelpermutationequivariance and actualbranchgradientflow. LegalFITgradient/identity admission is also performed onserver and discarded before eachcandidate's measuredtraining. Sources/inputs/scales/checkpoints are hashbound beforetraining and atomiccomplete-epochresume preserves originalstate. Sameenvironment paths/threadlimits aspreviousphases; allnewprivateartifacts remainserverD.

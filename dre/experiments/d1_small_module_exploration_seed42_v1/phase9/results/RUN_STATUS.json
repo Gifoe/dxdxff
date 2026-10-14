@@ -1,0 +1,10 @@
+{
+  "AUROC_AP_EZF1_vs_D1_quality": true,
+  "MacroF1": 0.6930453861315332,
+  "calibration_fitted_validation_not_independent": true,
+  "no_TEST_access": true,
+  "ranking_scores_exact_unchanged": true,
+  "selected": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+  "status": "ALL40_OFFSET_CALIBRATION_CELLS_COMPLETE",
+  "target_over_070": false
+}

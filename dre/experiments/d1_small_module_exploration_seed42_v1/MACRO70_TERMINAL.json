@@ -1,0 +1,20 @@
+{
+ "scientific_terminal":"MACRO70_TARGET_NOT_MET_AND_OUTER_CALIBRATION_FAILED",
+ "bounded_experiment_and_requested_Outer_execution_complete":true,
+ "target_MacroF1_over_070_achieved":false,
+ "best_Development_MacroF1":0.6952485841331941,
+ "final_Outer_MacroF1":0.6149590678223416,
+ "original_M8_Outer_MacroF1":0.6340971098987545,
+ "final_Outer_AUROC":0.7427036756249294,
+ "final_Outer_AP":0.5419245115225761,
+ "final_Outer_EZF1":0.4204439778548791,
+ "new_supervised_model_fold_cells":50,
+ "positive_neural_training_epochs":393,
+ "fitted_boosting_trees":2000,
+ "validation_calibration_cells":495,
+ "outer_patients_per_arm":80,
+ "outer_channels_per_arm":7635,
+ "all_independent_verifiers_PASS":true,
+ "no_after_Outer_tuning":true,
+ "no_claim_global_impossibility_or_independent_clinical_confirmation":true
+}

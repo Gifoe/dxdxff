@@ -1,0 +1,17 @@
+{
+ "experiment":"d1_macro70_cross_recipe_dispersion_phase12_seed42_v1",
+ "objective":"DevelopmentpatientMacroF1>0.70 then actualfrozenOuter",
+ "adaptive_reason":"All80phase11cellscomplete; commonbestM18nooffsetsquare-rootdispersioncalibration=0.694013194. Test the same label-freecalculus on existingalternativerepresentations withprespecifiedinverse-dispersioncontrol; no newCNN training.",
+ "bases":["M6_MORPH_CORRECTION","M7_MARGIN_GATED","M9_CONTEXT_SHIFT","M13_ADAPTIVE_CAP","M17_TIME_SPECTRAL"],
+ "offset_coefficients":[0.0,0.25],
+ "scale_exponents":[-0.5,0.5,1.0],
+ "matrix":"All30commonconfigurationsby5folds=150calibrationcells. No per-fold architecture/offset/scalechoice.",
+ "source_policy":"SameSOURCE_MIN1withFITsourcecoverage, originalvalidationthresholdgrid/ties andunknownsourceglobalfallback",
+ "decision":"Reuseexactphase11label-freepatientmedian/populationSDtransform/effectiveoriginalprobabilitycutoff, constant-SDfallback1. Originalrankingprobabilitiesunchanged.",
+ "selection":"patient-averageMacroF1,tieEZF1,smallerlambda,smallerabs(scale_exponent); allcomparatorsreported",
+ "bootstrap":{"draws":10000,"seed":42,"47clusters65appearances":true,"thresholds_fixed":true},
+ "no_TEST_access_while_selecting":true,
+ "outer":"Onlyfinalcommonrecipecheckpoint/sourcecutoffmap/default/input/split/codefrozenbeforeOuter. No after-testtuning orswitchingrecipe.",
+ "caveat":"This isa veryadaptivevalidationfit ofadecisiondecoder; hitting0.70doesnotprovemodelorclinicalgeneralization. Publicreportmuststateallcandidatecounts and separationfromrankingmetrics.",
+ "privacy":"Onlycode/hashes/anonymousaggregate; no tinygroupsourcemaps,IDs,individualscores/labels/weights/logs"
+}

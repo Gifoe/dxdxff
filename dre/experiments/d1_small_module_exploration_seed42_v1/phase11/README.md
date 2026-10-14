@@ -1,0 +1,5 @@
+# Label-free patient-score dispersion calibration
+
+Twobases×fourlocationcoefficients×twodispersionexponents×fivefolds:80actual calibrationcells. PopulationSD/median arecomputedfromunlabelledpatientscoredistribution; constantscalehasfixedfallback1. SourcecutoffsfitonlyownvalidationwithFITsourcecoverage. Originalrankingprobabilities areuntouched; bothdecisionrepresentationsagree.
+
+BestfittedDevelopmentMacro-F1: **0.694013194419**, `M18_TIME_CONTROL__SOURCE_LOCATION_0.0_SCALE_0.5`, below0.70. Two syntheticmath/fallback tests passed beforefreeze. Independentverification covers80maps/1040patient metrics, originalroles and10000bootstrap. All16globalconfigs remainreported; rootfinalreport shows lackofOutertransport.

@@ -1,0 +1,12 @@
+{
+  "MacroF1": 0.6952485841331941,
+  "all_declared_configs_retained": true,
+  "calibration_cells": 495,
+  "new_model_training_cells": 50,
+  "no_TEST_access": true,
+  "scientific_interpretation": "Best fitted repeatedDevelopment decoder, not independentconfirmation",
+  "selected_arm": "M18_TIME_CONTROL__EXACT_SOURCE_LOCATION_0.0_SCALE_0.5",
+  "selected_phase": 14,
+  "status": "PASS",
+  "target_over_070": false
+}

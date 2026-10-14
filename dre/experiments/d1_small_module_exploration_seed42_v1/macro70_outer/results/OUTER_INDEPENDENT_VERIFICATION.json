@@ -1,0 +1,20 @@
+{
+  "aggregate_sha256": {
+    "OUTER_BY_CENTER.csv": "f6851ca2d5b88998d8348e5eed78c9c8231b75e8435af134af760e2ef7c45d84",
+    "OUTER_BY_FOLD.csv": "208d9e4acba01d6bddd34b03407addcda705e3156e0bafda839404218859fa8e",
+    "OUTER_PAIRED_BOOTSTRAP.csv": "62e9005c2175e0e1d86092ff7d27c7beb201e90f4d6c7bfc0b5ad9aa62e5ad00",
+    "OUTER_POOLED_CHANNELS.csv": "7726eb82ad6bbc6a087187ac80f028bf0f2783df45b99a27f729d1b82cbd87b4",
+    "OUTER_SUMMARY.csv": "f33113769754fbac295874cb3dad3614ad194b81228226dab6cfe2fd63169edd"
+  },
+  "all15_checkpoint_bank_hashes_and5_maps_unchanged": true,
+  "channels_per_arm": 7635,
+  "decoder_recomputed_without_labels": true,
+  "independent_bootstrap_multiplicity": true,
+  "independent_sklearn_metrics": true,
+  "no_new_model_inference_or_training": true,
+  "patient_metric_cells": 320,
+  "patients_per_arm": 80,
+  "pooled_confusions_verified": true,
+  "ranking_exact_M18_unchanged": true,
+  "status": "PASS"
+}

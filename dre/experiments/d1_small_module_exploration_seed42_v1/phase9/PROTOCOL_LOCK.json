@@ -1,0 +1,17 @@
+{
+ "experiment":"d1_macro70_source_patient_offset_phase9_seed42_v1",
+ "objective":"LegalDevelopmentpatientMacroF1>0.70 then singlefrozenOuter",
+ "adaptive_reason":"Phase8sixcalibrationconfigscomplete; commonbestM18sourceMIN1 gives0.692411614. Newfixedlabel-freepatientoffset tests residualpatientcalibration mismatch, not a per-patientlabeloracle.",
+ "bases":["M8_MACRO_AWARE","M18_TIME_CONTROL"],
+ "lambdas":[0.25,0.5,0.75,1.0],
+ "source_policy":"MIN1withFITsourcecoverage. Knowncenterthresholdoptimizedonlyfromownfoldvalidationoriginal0.005grid/ties; unknownsourceusesbaselineglobalthreshold. Fitall8globalbase/lambdaconfigurations acrossall5folds, nofoldwiseλselection.",
+ "decision":"For eachpatient originalfiniteNEZprobabilityp, m=median(logit(p)) fromunlabelledchannels. q=sigmoid(logit(p)-lambda*m). Sourceτfitonqvalidation. Inferenceeffectiveoriginalprobabilitythreshold=sigmoid(logit(sourceτ)+lambda*m), oneconstantperpatient computedwithoutlabels/trueEZcounts. Originalpunchangedandusedforallrankingmetrics.",
+ "saturation":"Mapfinite0/1probabilitylimitsmonotonically usingclip[1e-7,1-1e-7]insideoffsetcalculus only; originalscoresareunchanged. Assertpredictionsfromtransformedqandbacktransformedeffectiveτagreeatselectedthreshold; refusalifnot.",
+ "metrics":"PrimarypatientMacroF1/EZF1/sensitivity/specificitycomputedfromactualeffectivecutoff; AUROC/AP/MRR/Top1originscoreunchanged, not claimed newrankinggain",
+ "selection":"Onecommonbase/lambda maximizingpatientMacroF1,tieEZF1then smallerlambda; fixedallmodels/sourcecutoffs/offsetrulebeforeOuter",
+ "default_unknown":"Originalglobalthresholdisretainedasthecutoffintransformedqspace; samefixedpatientoffsetruleapplieswithouttestfitting",
+ "bootstrap":{"draws":10000,"seed":42,"47clusters65appearances":true,"thresholds_fixed":true,"CI":"unadjustedcalibrationfitconditioned"},
+ "no_TEST_access_while_calibrating":true,
+ "privacy":"Alltinygroupsourcemaps/privatepatientscores/labels/weightsstaytrustedserver. Code/hash/anonymousoverall/foldsummaryonlypublic.",
+ "caveat":"This is a source-dependentdecisiondecoder fittedonvalidation, not a better rawencoder. Moredegreesoffreedom/repeatedvalidationcaninflateDevelopment; onlyfreshfrozenOuterquantifiesgeneralization. Historicalcohorttestexposuremeansrepeated-testexploratory."
+}

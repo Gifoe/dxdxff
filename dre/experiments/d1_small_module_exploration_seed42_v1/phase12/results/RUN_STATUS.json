@@ -1,0 +1,10 @@
+{
+  "AUROC_AP_EZF1_vs_D1_quality": true,
+  "MacroF1": 0.6912906491797463,
+  "calibration_fitted_validation_not_independent": true,
+  "no_TEST_access": true,
+  "ranking_scores_exact_unchanged": true,
+  "selected": "M9_CONTEXT_SHIFT__SOURCE_LOCATION_0.25_SCALE_0.5",
+  "status": "ALL150_CROSS_DISPERSION_CELLS_COMPLETE",
+  "target_over_070": false
+}

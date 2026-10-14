@@ -1,0 +1,10 @@
+{
+  "channels_per_arm": 7635,
+  "freeze_sha256": "6133aa150d5cc604c4e4f90fba3715a7a49590466c7412c5412fbcd1900f21c7",
+  "no_training_or_refit_or_extraction": true,
+  "patients_per_arm": 80,
+  "scientific_status": "USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "647fc354f4279b8aaa69d9ad5c29ffa7726d73ca112116ad35f5156a29f45851",
+  "source_map_unchanged": true,
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

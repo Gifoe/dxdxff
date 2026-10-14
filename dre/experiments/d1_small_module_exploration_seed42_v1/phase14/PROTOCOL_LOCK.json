@@ -1,0 +1,17 @@
+{
+ "experiment":"d1_macro70_exact_validation_operating_point_phase14_seed42_v1",
+ "objective":"Determinewhether0.70isattainableinthisboundedexperiment, thenrunOuterforfinalfrozenbestrecipe",
+ "adaptive_reason":"All50newneural/treecellsand435calibrationcellscomplete: best0.694013; combinations0.693092. Finalboundedcheckwhetheroriginal0.005validationthresholdgridlimitsclassificationF1. No morearchitecture/rescuephasesinthisexecution.",
+ "bases":["M8_MACRO_AWARE","M18_TIME_CONTROL"],
+ "offset_coefficients":[0.0,0.25],
+ "scale_exponents":[0.0,0.5,1.0],
+ "matrix":"12globalconfigsby5folds=60calibrationcells; noscore/modelchange",
+ "threshold":"KnownFIT-sourcevalidationgroups only. Candidate0,0.5,1andmidpointofeveryadjacentunique transformedvalidationprobability. Everyrealconfusionplateaurepresented withoutboundaryroundoff. OriginalpatientMacroF1/EZF1/pooledBA/closest0.5/lowerthresholdtieorder.",
+ "decision":"Exactphase11label-freemedian/popSDoffsetcalculus; constantSDfallback1, exponent0=identityscale; originalpunchangedandusedforallrankingmetrics. Unknownsourceoriginalglobalthreshold; asserttransformed/originaldecisionsmatch.",
+ "selection":"Onecommonglobalbase/coefficient/exponent byMacroF1,EZF1,smallercoefficient,smallerexponent; allresultsretained. SideguardsAUROC/AP/EZF1versusD1.",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47IDclusters65appearances","thresholds_fixed":true},
+ "outer":"AfterallboundedDevelopmentexperimentsandindependentverification, selectbesttestedcommonrecipeeveniftargetnotmet, freezeallcheckpoints/scalers/source-cutoffmaps/code/input/splitthenperformexplicitlyuser-requestedOuter. Do notclaim0.70ifnotachieved. Noafter-testretraining,weight/threshold/maptuning orcandidate-switching.",
+ "scientific_stop":"Answerwhetherthisexecutionreaches0.70fromactualevidence, notaguaranteeorimpossibilitytheorem. CompleteOuterandreportnegativefindingifnecessary; neverfabricate/rescale/redefineprimarymetric.",
+ "privacy":"Onlysource/hash/anonymousaggregates; privatemodels/maps/IDs/labels/individualscores/Raw/logsremainserver",
+ "caveat":"Thresholdmapfittedonrepeatedvalidation isoptimistic. Exactplateauoptimizationisnot independentbenchmark performance; Outerhistoricalexposure=repeated-testexploratory."
+}

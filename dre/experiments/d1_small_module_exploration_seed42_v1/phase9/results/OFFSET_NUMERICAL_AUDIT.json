@@ -1,0 +1,325 @@
+{
+  "cells": [
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.25",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.5",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.75",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_1.0",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.25",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.5",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.75",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_1.0",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.25",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.5",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.75",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_1.0",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.25",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.5",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.75",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_1.0",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.25",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.5",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_0.75",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M8_MACRO_AWARE__SOURCE_OFFSET_1.0",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.5",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.75",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_1.0",
+      "fold": 1,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.5",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.75",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_1.0",
+      "fold": 2,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.5",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.75",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_1.0",
+      "fold": 3,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.5",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.75",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_1.0",
+      "fold": 4,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.5",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_0.75",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    },
+    {
+      "arm": "M18_TIME_CONTROL__SOURCE_OFFSET_1.0",
+      "fold": 5,
+      "labels_not_input_to_patient_offset": true,
+      "predictions_equal_in_transformed_and_original_space": true,
+      "ranking_probabilities_exact_unchanged": true,
+      "source_mapping_validation_only": true
+    }
+  ],
+  "status": "PASS"
+}

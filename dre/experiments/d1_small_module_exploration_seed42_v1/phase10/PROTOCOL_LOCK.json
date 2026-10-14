@@ -1,0 +1,15 @@
+{
+ "experiment":"d1_macro70_cross_recipe_source_offset_phase10_seed42_v1",
+ "objective":"DevelopmentpatientMacroF1>0.70 then frozenOuter",
+ "adaptive_reason":"Phase9 all40calibrationcellscomplete; bestM18sourceoffset0.25=0.693045386. Test whether previouslytrained highAP/alternativeloss/margin/context/time-frequency recipes supply better thresholdable ranking than M8/M18. No additionalCNN training.",
+ "bases":["M6_MORPH_CORRECTION","M7_MARGIN_GATED","M9_CONTEXT_SHIFT","M13_ADAPTIVE_CAP","M17_TIME_SPECTRAL"],
+ "coefficients":[0.0,0.25,0.5],
+ "source_policy":"Same phase8SOURCE_MIN1withFITsourcecoverage. Samephase9label-freemedianlogitoffset/effectiveoriginalprobabilitycutoff; unknownsourceoriginalglobalthreshold; originalvalidation0.005grid/ties.",
+ "selection":"All15commonbase/coefficientconfigurations acrossallfiveoriginalfolds=75calibrationcells. Oneglobalbase/policy maximizingpatientMacroF1,tieEZF1,smallercoefficient. No bestbaseperfold or patient-specificlabelsat inference.",
+ "inputs":"Exactly frozen existingDevelopment scores/checkpoints alreadyverifiedin previousexperiments. No fittingweights, raw/physiologyextraction or newtestaccess.",
+ "ranking":"OriginalfrozenprobabilitiesremainunchangedandusedforAUROC/AP/MRR/Top1. Decoderchangesonlyclassificationoperatingpoint; cannot claima newrankingmetricgain.",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47clusters65appearances","thresholds_fixed":true},
+ "outer":"Lock onefinalbaseand source/offset/defaultcutoff maps/split/input/code before label access. One repeated-testOuter evaluation; no after-testrescue.",
+ "privacy":"Onlycode/hash/anonymousaggregates; individual patient/channelrecords/predictions, model/scaler/source-map states andlogs remainserverD",
+ "caveat":"Veryadaptive repeatedvalidation and source-mapfitting inflateDevelopmentoptimism. 0.70wouldbeafitteddecoderDevelopmentnumber, notindependentmodel/clinicalvalidation."
+}

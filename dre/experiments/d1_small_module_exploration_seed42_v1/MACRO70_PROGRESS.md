@@ -1,5 +1,7 @@
 # Active goal: Development patient Macro-F1>0.70, then frozen Outer
 
+Historical interimnote at commitb2721f8. Subsequentboundedphases and theuser-requestedOuter haveexecuted: bestfittedDevelopment0.695249, finalOuter0.614959, targetfailed. See [MACRO70_FINAL_REPORT.md](MACRO70_FINAL_REPORT.md) forcurrentactualevidence. No claim0.70wasachievedorimpossibleforfuturemethods. The interimno-newOuter statements and proposednextsteps below describe thatearlierstage, notan instructiontoignore thecompletedtest orautomaticallylaunchrescuetraining.
+
 The active user goal remains unachieved. Do not mark it complete, pause it without user direction, lower the threshold, change the denominator, substitute a threshold oracle or use newOuter outcomes to tune. The previous0.666795 was repeatedly usedDevelopment; previous completedM8Outer is0.634097. These must never be mixed.
 
 Since the user authorized the new goal, three prospectively locked adaptive phases have completed:

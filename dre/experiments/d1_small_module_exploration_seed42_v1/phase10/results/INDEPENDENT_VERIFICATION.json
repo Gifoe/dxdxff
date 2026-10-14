@@ -1,0 +1,22 @@
+{
+  "MacroF1": 0.691673839632443,
+  "aggregate_sha256": {
+    "CALIBRATION_SELECTION.csv": "979fd667d2326ff7eccfd6fba9452e250f014858057a72bcd9f5b20f04f71d52",
+    "DEVELOPMENT_BY_CENTER.csv": "f9d738f9e8ae4d998974d7882590e42d3bc0ca542efe137da050eed4d7f5ae7a",
+    "DEVELOPMENT_BY_FOLD.csv": "46c97d9bec80aa57f5220af7c9b8c6326a7db1bb988f26220c211d77a289b7a8",
+    "DEVELOPMENT_SUMMARY.csv": "4b172009997a902fc1c65837e77feaea98ec157ed8a0716a86edabb19ce50efc",
+    "PAIRED_BOOTSTRAP.csv": "065cec78810a4d6a8a57d249d5e0a6c30c1b8d6b5d3b4e6d88ee71e952820e45"
+  },
+  "all_source_maps_recomputed_validation_only": true,
+  "bootstrap_independent_multiplicity": true,
+  "calibration_cells": 75,
+  "configurations": 15,
+  "independent_patient_metric_cells": 975,
+  "no_TEST_access": true,
+  "original_ranking_exact_unchanged": true,
+  "own_fold_test_excluded": true,
+  "phase": 10,
+  "selected": "M9_CONTEXT_SHIFT__SOURCE_OFFSET_0.0",
+  "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+  "status": "PASS"
+}

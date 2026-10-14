@@ -1,0 +1,118 @@
+{
+  "no_training_or_TEST_access": true,
+  "phases": [
+    {
+      "MacroF1": 0.6924116140002663,
+      "aggregate_sha256": {
+        "CALIBRATION_PROVENANCE.csv": "80ecc11a56f44e10a96ee985ece57c2d9add5f90ecf84aa438450058f3293ff8",
+        "CALIBRATION_SELECTION.csv": "6981c003afc36be0f025e65e06cb8efd7aa626490cdb8a46b4124646af8e542f",
+        "DEVELOPMENT_BY_CENTER.csv": "1b5cbb5b93d11a340c816418f956423484f9d9997b8eb32e1e09bcf0f63e7364",
+        "DEVELOPMENT_BY_FOLD.csv": "7b56cddd05c1a71bc78babe621acf7cdf2220c67832788f6cc334fa2c17fe97b",
+        "DEVELOPMENT_SUMMARY.csv": "10e04bceb9915274180a35a106b87b4c9e73db020fcef8f5787cfbeac96dcc92",
+        "PAIRED_BOOTSTRAP.csv": "9897071112f1b63a9258f2fd928b253f3f8903ccaf13e65fd3d1d053baf2e4e1"
+      },
+      "all_source_maps_recomputed_validation_only": true,
+      "bootstrap_independent_multiplicity": true,
+      "calibration_cells": 30,
+      "configurations": 6,
+      "independent_patient_metric_cells": 390,
+      "no_TEST_access": true,
+      "original_ranking_exact_unchanged": true,
+      "own_fold_test_excluded": true,
+      "phase": 8,
+      "selected": "M18_TIME_CONTROL__SOURCE_MIN1",
+      "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+      "status": "PASS"
+    },
+    {
+      "MacroF1": 0.6930453861315332,
+      "aggregate_sha256": {
+        "CALIBRATION_SELECTION.csv": "de3ab4474f08634e21cf45538c70792be3b8f73608b199fec5d81829a0287190",
+        "DEVELOPMENT_BY_CENTER.csv": "a6e04200d986d9cbb7e74a59b67f835cabca010c7d60838d47e77a109f098718",
+        "DEVELOPMENT_BY_FOLD.csv": "a6f3db2a9383c4f6b8b05b065cae9caf2f04759495a85914266bb8a7acd4a3fc",
+        "DEVELOPMENT_SUMMARY.csv": "d95d1c798a967ee2c92450e48877cf31473d2ea41b9467ba5fd6444e3a828745",
+        "PAIRED_BOOTSTRAP.csv": "1881b8e5dad3d734e2de0bd9904adec9e857104bd8332d98cf64a11d4507f73b"
+      },
+      "all_source_maps_recomputed_validation_only": true,
+      "bootstrap_independent_multiplicity": true,
+      "calibration_cells": 40,
+      "configurations": 8,
+      "independent_patient_metric_cells": 520,
+      "no_TEST_access": true,
+      "original_ranking_exact_unchanged": true,
+      "own_fold_test_excluded": true,
+      "phase": 9,
+      "selected": "M18_TIME_CONTROL__SOURCE_OFFSET_0.25",
+      "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+      "status": "PASS"
+    },
+    {
+      "MacroF1": 0.691673839632443,
+      "aggregate_sha256": {
+        "CALIBRATION_SELECTION.csv": "979fd667d2326ff7eccfd6fba9452e250f014858057a72bcd9f5b20f04f71d52",
+        "DEVELOPMENT_BY_CENTER.csv": "f9d738f9e8ae4d998974d7882590e42d3bc0ca542efe137da050eed4d7f5ae7a",
+        "DEVELOPMENT_BY_FOLD.csv": "46c97d9bec80aa57f5220af7c9b8c6326a7db1bb988f26220c211d77a289b7a8",
+        "DEVELOPMENT_SUMMARY.csv": "4b172009997a902fc1c65837e77feaea98ec157ed8a0716a86edabb19ce50efc",
+        "PAIRED_BOOTSTRAP.csv": "065cec78810a4d6a8a57d249d5e0a6c30c1b8d6b5d3b4e6d88ee71e952820e45"
+      },
+      "all_source_maps_recomputed_validation_only": true,
+      "bootstrap_independent_multiplicity": true,
+      "calibration_cells": 75,
+      "configurations": 15,
+      "independent_patient_metric_cells": 975,
+      "no_TEST_access": true,
+      "original_ranking_exact_unchanged": true,
+      "own_fold_test_excluded": true,
+      "phase": 10,
+      "selected": "M9_CONTEXT_SHIFT__SOURCE_OFFSET_0.0",
+      "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+      "status": "PASS"
+    },
+    {
+      "MacroF1": 0.6940131944186193,
+      "aggregate_sha256": {
+        "CALIBRATION_SELECTION.csv": "27eb22c60b90e96b36f55429b818aaa6535a89910c11820f164efc5c1836d498",
+        "DEVELOPMENT_BY_CENTER.csv": "98f45ce5d8564e253540ba8db1a181698e67b6bf62af3b39ea521ac1ee945f86",
+        "DEVELOPMENT_BY_FOLD.csv": "72480643e61c69360ecb928a6024dfb58bfef9a97115e25e0e52d61dd565466a",
+        "DEVELOPMENT_SUMMARY.csv": "7efdd41a17d8352281864f2a8fed949cc50ded72a18997a8d2d58d4762f42488",
+        "PAIRED_BOOTSTRAP.csv": "8c4f5b1399de6876a663cfdd2989f73c18f1293d564f0964f69ead5837e0ce02"
+      },
+      "all_source_maps_recomputed_validation_only": true,
+      "bootstrap_independent_multiplicity": true,
+      "calibration_cells": 80,
+      "configurations": 16,
+      "independent_patient_metric_cells": 1040,
+      "no_TEST_access": true,
+      "original_ranking_exact_unchanged": true,
+      "own_fold_test_excluded": true,
+      "phase": 11,
+      "selected": "M18_TIME_CONTROL__SOURCE_LOCATION_0.0_SCALE_0.5",
+      "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+      "status": "PASS"
+    },
+    {
+      "MacroF1": 0.6912906491797463,
+      "aggregate_sha256": {
+        "CALIBRATION_SELECTION.csv": "5d5e8315614d43e978863b4e52079665feeed5778f37f092e35931616f50ebcb",
+        "DEVELOPMENT_BY_CENTER.csv": "662ef37995b6b54260e4c7680814be85a27fb75a3ac57d5003506c26141a9235",
+        "DEVELOPMENT_BY_FOLD.csv": "6c2dbc3095de7f0d4d7be5b8488010f33ec4439bec686b65c050da07903f0462",
+        "DEVELOPMENT_SUMMARY.csv": "7b8be1011494fc6a50358a90df75aa9025704da2ebd539159ec1c31cc7c6b69d",
+        "PAIRED_BOOTSTRAP.csv": "dc3878a9678934ba016744034125a4c4d718fa09731ca93550ccd02a75da1371"
+      },
+      "all_source_maps_recomputed_validation_only": true,
+      "bootstrap_independent_multiplicity": true,
+      "calibration_cells": 150,
+      "configurations": 30,
+      "independent_patient_metric_cells": 1950,
+      "no_TEST_access": true,
+      "original_ranking_exact_unchanged": true,
+      "own_fold_test_excluded": true,
+      "phase": 12,
+      "selected": "M9_CONTEXT_SHIFT__SOURCE_LOCATION_0.25_SCALE_0.5",
+      "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "total_calibration_cells": 375
+}

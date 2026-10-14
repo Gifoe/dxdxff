@@ -1,0 +1,17 @@
+{
+ "authorization":"User explicitly requested exploration whether0.70ispossible and thenOuter; prior explicitinstruction一定要跑outeralsoapplies.",
+ "development_selection":"After all bounded prospectivephases andglobalverifier, bestfitteddecoderphase14. Exactsource/dispersionpolicy frozen irrespectiveoftargetpass; no claimtargetachievedifnot.",
+ "models":["D1","M8_MACRO_AWARE","M18_TIME_CONTROL","FINAL_DECODER"],
+ "patients":80,"channels":7635,"EZ":1743,"NEZ":5892,
+ "patients_by_fold":[16,16,17,15,16],"channels_by_fold":[1631,1498,1746,1425,1335],
+ "prediction":"OriginalD1/M8scoresreusedonlyfromprevioushash-verifiedfrozenseal; M18newownfoldfrozeninference. FINAL_DECODERrankingexactlyM18, classificationcutoffcomputedfromfrozenvalidation-onlysourcemap andunlabelledpatient-scoreSD. No label/oracle inferenceinput.",
+ "freeze":"15selectedcheckpoints,5D1bankpreprocessors/FITphysiologyscales,5sourcemaps, allsource/input/split hasheslockedbeforetestsignal/labelaccess; all15model-foldscoresanddecoderdecisionssealedbeforefulltestlabels.",
+ "primary":"80uniqueheldoutpatientsequalweight, everypatientonceoriginalownTESTfold",
+ "secondary":"Pooled7635channelconfusionswithfrozenfold/source/patient-derivedcutoffs; nocrosspatientMRR",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"pairedunique80patientclusters","thresholds_fixed":true,"comparisons":[["FINAL_DECODER","D1"],["FINAL_DECODER","M8_MACRO_AWARE"],["FINAL_DECODER","M18_TIME_CONTROL"],["M18_TIME_CONTROL","D1"]]},
+ "no_training_or_extraction":true,
+ "no_TEST_driven_selection_or_rescue":true,
+ "scientific_status":"USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+ "privacy":"Onlycode/hash/nonidentifyingmetrics/reportpublic; scores,IDs,labels,weights,sourcecutoffmaps/normalizationstates,raw/cache/logsprivateserverD",
+ "stop":"ReportactualDevelopmentandOuter separately, includingtargetfailure/generalizationgap; no automaticafterOuteriterationinthisboundedexecution."
+}

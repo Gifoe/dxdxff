@@ -1,0 +1,16 @@
+{
+ "experiment":"d1_macro70_validation_source_calibration_phase8_seed42_v1",
+ "objective":"Determine whether DevelopmentMacroF1>0.70 can be reached by a legal validation-only decoder, then run frozenOuter",
+ "adaptive_reason":"Phase7 all15native morphologycells complete; commonwinnerM18MacroF1=0.6699827713712969. Ranking and thresholdedF1 are separate estimands; assess source-calibration rather than patient-label oracle.",
+ "bases":["M8_MACRO_AWARE","M18_TIME_CONTROL"],
+ "policies":["SOURCE_MIN3","SOURCE_MIN1","SOURCE_SHRINK5"],
+ "calibration":"Existingfrozen ownfold validation scores exactlyreused. Originalcommonthresholdoptimizer applied separately to center-defined validation groups; groupmusthaveFITsourcecoverage. MIN3requires>=3validationpatients; MIN1requires>=1. SHRINK5usesallcoveredgroups but blendssourceoptimum with originalglobalthreshold by n/(n+5). Others/unknownsource useoriginalglobalthreshold. No center-specific modelweights or per-patient threshold.",
+ "source_input":"Known canonical dataset/source center metadata available before labels; no subject/channel identity, trueEZcount, testlabels or predictionmetrics enter inference",
+ "grid":"Originalcoreselect_threshold0.005NEZgrid/ties; optimizepatient-averageMacroF1 thenEZF1; no test-optimization",
+ "matrix":"Bothglobalbasechoices timesallthree commonpolicies timesallfiveoriginalfolds=30calibrationcells. No raw/CNN training. Reportall6configurations, not bestbase independentlybyfold.",
+ "selection":"One globalbase/policy configuration acrossfolds bypatient-averageMacroF1,tieEZF1,thenfewer calibratedgroups; target>0.70; AUROC/AP/EZF1 guardagainstD1; separatelyreportM8/M18comparators",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47IDs65validationappearances","thresholds_fixed":true,"CI":"selection-conditioned, notunbiasedvalidationofcalibrationfit"},
+ "outer":"Lock chosenbasecheckpoints/source-thresholdmap/defaultthreshold/input/split/code before label access. Unseen/inadequatevalidation sourcefallsbackglobal. Single repeatedOuter pass without source-map edits after seeing outcomes.",
+ "privacy":"Private source maps/IDs/labels/individualscores remaintrustedserver. Publishcode/hashes/nonidentifyingaggregates, not tiny-group label-derived thresholds.",
+ "caveat":"More threshold degrees of freedom can inflate fittedDevelopmentF1. A0.70validation result would be decoderfit, not new ranking improvement or clinicalconfirmation; Outer supplies actualgeneralization measurement. PriorOuterhasbeenviewed."
+}

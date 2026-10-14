@@ -1,0 +1,23 @@
+{
+ "requested_work":"Investigate whether the previous0.66 can exceed0.70, then executeOuter; publish code and anonymous results",
+ "research_execution_complete":true,
+ "numeric_target_achieved":false,
+ "numeric_target_not_redefined_or_rounded_up":true,
+ "requirements":{
+  "previous_066_estimator_identified":{"status":"VERIFIED","evidence":"OriginalM8Development0.6667948222399955,65appearances47IDs; originalOuter0.6340971098987545,80patients"},
+  "actual_training_and_feasibility_investigation":{"status":"VERIFIED_NEGATIVE_RESULT","evidence":"50newmodel/foldcells,393positiveneuralepochs,2000fittedtrees,495validationcalibrationcells; allphase4-14declaredoutcomesretained"},
+  "whether_tested_execution_exceeds_070":{"status":"TARGET_NOT_MET","evidence":"GlobalbestfittedDevelopment0.6952485841331941; notproofnofuturemethodcanreach0.70"},
+  "select_common_recipe_before_Outer":{"status":"VERIFIED","evidence":"calibration_audit/results/FINAL_DEVELOPMENT_SELECTION.json; phase14bestselectedbeforeOuterinput/labels"},
+  "run_original_full_Outer":{"status":"VERIFIED","evidence":"macro70_outer/results/OUTER_STATUS.json:ONE_FROZEN_OUTER_PASS_COMPLETE,80patients7635channelsperarm; actualM18freshinferenceall5folds"},
+  "no_TEST_tuning":{"status":"VERIFIED","evidence":"15checkpoints5maps5scalers/FITscales/source/split/inputfreeze beforetest; allscores/decisionssealedbeforefulltestlabels; finalindependentverifierunchangedbindingsPASS"},
+  "same_patient_channel_seizure_and_folds":{"status":"VERIFIED","evidence":"Original80patients7635channels256seizures; ownfoldTESTexcludedfromFIT/validation;16/16/17/15/16TESTpatientcounts"},
+  "no_original_checkpoint_or_data_mutation":{"status":"VERIFIED","evidence":"Frozencheckpoint/bank/sourcehashesreverified,embeddedD1logitdrift0all5folds; nonewRaw/EDF/physiologyextraction/refit"},
+  "independent_metrics_and_uncertainty":{"status":"VERIFIED","evidence":"Alltraining/calibrationphaseverifiersPASS; final320patientmetriccells,pooledconfusions,10000seed42paired80-IDbootstrapindependentlychecked"},
+  "honest_final_results":{"status":"VERIFIED_NEGATIVE_RESULT","evidence":"FinalOuterMacroF10.6149590678223416<originalM80.6340971098987545; targetfailureandcalibrationgeneralizationgapreported"},
+  "public_privacy_scope":{"status":"VERIFIED","evidence":"Onlysource/hash/anonymousmetrics/reportsdownloaded; no.pt/.pkl/.npz/.edf/.h5/.log/.errinnewpublicfolders; credentials/individualIDs/predictionrowsabsent"},
+  "installed_skills":{"status":"VERIFIED","evidence":"Noneused"}
+ },
+ "scientific_terminal":"MACRO70_TARGET_NOT_MET_AND_OUTER_CALIBRATION_FAILED",
+ "scope_of_conclusion":"Completed bounded empiricalinvestigationandrequestedOuter, notclaimnumeric0.70success, clinicalconfirmationorglobalimpossibility",
+ "further_after_Outer_tuning_in_this_execution":false
+}

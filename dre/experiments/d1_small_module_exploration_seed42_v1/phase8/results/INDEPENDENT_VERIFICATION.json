@@ -1,0 +1,23 @@
+{
+  "MacroF1": 0.6924116140002663,
+  "aggregate_sha256": {
+    "CALIBRATION_PROVENANCE.csv": "80ecc11a56f44e10a96ee985ece57c2d9add5f90ecf84aa438450058f3293ff8",
+    "CALIBRATION_SELECTION.csv": "6981c003afc36be0f025e65e06cb8efd7aa626490cdb8a46b4124646af8e542f",
+    "DEVELOPMENT_BY_CENTER.csv": "1b5cbb5b93d11a340c816418f956423484f9d9997b8eb32e1e09bcf0f63e7364",
+    "DEVELOPMENT_BY_FOLD.csv": "7b56cddd05c1a71bc78babe621acf7cdf2220c67832788f6cc334fa2c17fe97b",
+    "DEVELOPMENT_SUMMARY.csv": "10e04bceb9915274180a35a106b87b4c9e73db020fcef8f5787cfbeac96dcc92",
+    "PAIRED_BOOTSTRAP.csv": "9897071112f1b63a9258f2fd928b253f3f8903ccaf13e65fd3d1d053baf2e4e1"
+  },
+  "all_source_maps_recomputed_validation_only": true,
+  "bootstrap_independent_multiplicity": true,
+  "calibration_cells": 30,
+  "configurations": 6,
+  "independent_patient_metric_cells": 390,
+  "no_TEST_access": true,
+  "original_ranking_exact_unchanged": true,
+  "own_fold_test_excluded": true,
+  "phase": 8,
+  "selected": "M18_TIME_CONTROL__SOURCE_MIN1",
+  "source_sha256": "4031acd34b2f874a37eb9d452f346367155bfd316469de1f67bedf6b03ec05df",
+  "status": "PASS"
+}

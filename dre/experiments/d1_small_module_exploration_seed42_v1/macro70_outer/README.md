@@ -1,0 +1,9 @@
+# Final frozen Outer — actual80patients, negative outcome
+
+Selectedrecipe was globally verified **before** thisOuter: M18withvalidation-onlyexactsourcecutoffs andlabel-free square-rootpatientlogitSD. FittedDevelopmentMacro-F10.695249 didnotreach0.70; theoriginaluseraskedwhetheritwaspossibleandthenrequestedOuter,whichhasnowexecutedratherthanbeingsubstitutedbyvalidationnumbers.
+
+`evaluate.py freeze` hash-locks15checkpoints, originalownfoldbank/scalers/FITscales,5sourcecutoffmaps andallsource/input/splitbindings. `evaluate.py evaluate` reusesexactoldfrozenD1/M8scoresandactuallyinfersM18oneach80heldoutpatient; privateatomicpatientcacheallowsidentical-bindingresumeonly. All15scorecells/5decoderdecisions aresealedbeforefullTESTlabels. `verify.py evaluate` independentlychecks320patientmetrics, pooledconfusions, unchangeddecisionmaps/weights and10000pairedpatientbootstrap, withoutnewRaw/modelinference. AllstatusesPASS.
+
+ActualMacro-F1: D10.616556, originalM80.634097, M180.621556, finaldecoder0.614959. FinaldecoderAUROC/AP/MRR/Top1 areexactlyM18'srankingmetrics,notnewrankingimprovement. DecoderFPincrease135versus8extraTPexplainssecondarypooledF1loss. Fullprecision/folds/centers/CI arein `results/`; see rootfinalreport forscientificlimitations.
+
+OneprefreezeUTF-8/GBKprotocolreaderrorwasfixedbeforeanynewtestsignal/labelaccess; failedsource/logretainedprivately. Successfulfrozeninferencecompletedoncewithoutinterruptions. Noafter-Outertuning, checkpointmodification, refit, newRaw/EDFfeatureextraction, unrelatedprocesschange orinstalledskill. Historicalcohortexposure/adaptivesearchmeansexploratoryrepeated-test,notblindclinicalconfirmation. Tinygroupsourcemaps, IDs/labels, Raw/weights/scalers/predictions/logsremaintrustedserveronly.

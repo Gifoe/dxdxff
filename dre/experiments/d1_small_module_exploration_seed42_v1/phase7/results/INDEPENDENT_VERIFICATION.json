@@ -1,0 +1,117 @@
+{
+  "all15_actual_training_cells": true,
+  "all15_strict_factory_checkpoint_replays": true,
+  "all_frozen_D1_weights_exact": true,
+  "bootstrap_independent_multiplicity": true,
+  "folds": [
+    {
+      "arm": "M16_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "4663a91c06b4946d49bc25bd448aeb4e5aadcc8562ca5051c5a3e85d0d23e150",
+      "fold": 1,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M16_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "33531009f892dd1443a4cd8a787ed038fcd18cf5263ee68ceca023dbed976f8c",
+      "fold": 2,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M16_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "4662d83bcbad49cd1d441d211a2a7132a9983ee9b71336736c96435d952966a0",
+      "fold": 3,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M16_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "96d7621507f03425334b204b7bc7fa77d8749909f84ff8702e64d74e2fe2f187",
+      "fold": 4,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M16_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "2ecfcc9e9661dd4176c5c84152ac8862d9b3c48e10ef2376c89f65cee1c952f5",
+      "fold": 5,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M17_TIME_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "a62c3e20bafd1ade745c5ebc3bb133bdbc068685cf9dd56eaacca42d94b10c91",
+      "fold": 1,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M17_TIME_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "8bc08a132d72c34b2a3d7d6f647418e71a2d74cbbc033ace5026a67b4ebe7e1a",
+      "fold": 2,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M17_TIME_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "504f186947a4d6611cb9c0ede9aecf58ab1a63830ebda0e1c5e62026681c8b24",
+      "fold": 3,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M17_TIME_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "de1d3818188f186bb95c2314bba51ed36e58c63a2b03cccfdfa9df8df3577638",
+      "fold": 4,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M17_TIME_SPECTRAL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "28253a90f22d7e292bfd6cd02c412dd7fe87e8708ab4688bcf664112b63baa4e",
+      "fold": 5,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M18_TIME_CONTROL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "aec57623ce0d4b9f75e0b7fa1ba5242b4486075bdcce55510a4c459785d9ca69",
+      "fold": 1,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M18_TIME_CONTROL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "e050bd8d0371f91394a8dca56acae1a1a36c693e9e65bb5ea7255de71db90277",
+      "fold": 2,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M18_TIME_CONTROL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "cf6f7f59df7810993d83172842c0cbf5c4a324619e95b6168d7a0a7d42dfa2c7",
+      "fold": 3,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M18_TIME_CONTROL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "82c380cfbe8da5f94e37d84571a898f34464075c9a5251beff4d6f27ac1cda1e",
+      "fold": 4,
+      "selected_checkpoint_replay_max_difference": 0.0
+    },
+    {
+      "arm": "M18_TIME_CONTROL",
+      "base_exact_frozen": true,
+      "checkpoint_sha256": "0d156c282e60794b9563da0db19eee5ea4d838a77c5baa84af05239218db6e19",
+      "fold": 5,
+      "selected_checkpoint_replay_max_difference": 0.0
+    }
+  ],
+  "independent_sklearn_cells": 195,
+  "no_TEST_access": true,
+  "original_roles_preserved": true,
+  "status": "PASS"
+}

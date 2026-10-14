@@ -1,0 +1,20 @@
+{
+  "MacroF1": 0.6930923381297105,
+  "aggregate_sha256": {
+    "CALIBRATION_SELECTION.csv": "817739612b2cae3d8ca9707b72ed525818474640ff0382bc6306fb1fafb43202",
+    "DEVELOPMENT_BY_CENTER.csv": "a15e8b2ed3e0eff927cc8441b70f65bb8af970c5894ff18923f6d4fc7670b574",
+    "DEVELOPMENT_BY_FOLD.csv": "ebb0004cebefe51d79ccb1b7a9a602e4f611cdccdb6990c7addf10af78c29421",
+    "DEVELOPMENT_SUMMARY.csv": "98cd743ddd36a40c213cc9287ef3a6126fd389de89b5e1fd254284db51fc30a2",
+    "PAIRED_BOOTSTRAP.csv": "2fed165884fd3415df4f0f4adda263349ee840888d096d87f0f1de19b6590e02"
+  },
+  "all_checkpoint_and_bank_hashes_verified": true,
+  "all_maps_or_fixed_weights_recomputed": true,
+  "bootstrap_independent_multiplicity": true,
+  "calibration_cells": 60,
+  "independent_patient_metric_cells": 780,
+  "no_TEST_access": true,
+  "own_fold_test_excluded": true,
+  "phase": 13,
+  "selected": "E4_M8_M17_M18__SOURCE_SCALE_HALF",
+  "status": "PASS"
+}

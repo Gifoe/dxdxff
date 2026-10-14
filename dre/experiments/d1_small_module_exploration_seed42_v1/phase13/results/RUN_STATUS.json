@@ -1,0 +1,10 @@
+{
+  "AUROC_AP_EZF1_vs_D1_quality": true,
+  "MacroF1": 0.6930923381297105,
+  "calibration_fitted_validation_not_independent": true,
+  "multiple_branch_model": true,
+  "no_TEST_access": true,
+  "selected": "E4_M8_M17_M18__SOURCE_SCALE_HALF",
+  "status": "ALL60_FIXED_COMBINATION_CELLS_COMPLETE",
+  "target_over_070": false
+}

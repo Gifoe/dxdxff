@@ -1,0 +1,11 @@
+{
+  "reason": "Source root inserted before importing pinned feature_aggregation; missing ez_features import repaired before first extraction/training",
+  "old_window_delta_sha256": "e3588285d4957fc50b128a609f1cbbd3a7770e53763bee5d7ac8dfb915d17029",
+  "new_window_delta_sha256": "4ac68f533505d29a9386da876c8a67eb748a4d3b564b62d2629b8258c1338e03",
+  "protocol_sha256_unchanged": "775f762915172a73b3f261e192dfeef2ce85db739b6f4695787f2d124a7368ab",
+  "new_models_trained": 0,
+  "feature_files_written": 0,
+  "D1_replay_pass": true,
+  "science_changed": false,
+  "old_input_freeze_retained": true
+}

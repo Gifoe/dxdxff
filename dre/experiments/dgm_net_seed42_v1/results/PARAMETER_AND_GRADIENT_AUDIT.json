@@ -1,0 +1,39 @@
+{
+  "frozen_D1_unchanged": true,
+  "gradients": [
+    {
+      "alpha": 0.010546425357460976,
+      "cnn.0.weight": 0.06720280647277832,
+      "cnn.2.weight": 0.11352207511663437,
+      "gate.network.0.weight": 0.0,
+      "gate.network.2.weight": 0.0040420303121209145,
+      "head.0.weight": 0.08167468011379242,
+      "step": 1
+    },
+    {
+      "alpha": 0.014242279343307018,
+      "cnn.0.weight": 0.06586488336324692,
+      "cnn.2.weight": 0.1123705729842186,
+      "gate.network.0.weight": 1.8857741451938637e-05,
+      "gate.network.2.weight": 0.004053601063787937,
+      "head.0.weight": 0.07928541302680969,
+      "step": 2
+    }
+  ],
+  "identity_at_initialization_exact": true,
+  "legal_FIT_smoke_steps": 2,
+  "no_recurrent_or_attention_module": true,
+  "parameters": {
+    "CNN": 2160,
+    "alpha": 1,
+    "frozen_D1": 1537,
+    "gate": 1048,
+    "head": 6273
+  },
+  "physiology_requires_grad": false,
+  "smoke_model_discarded": true,
+  "status": "PASS",
+  "total": 11019,
+  "trainable": 9482,
+  "trained_gate_identity_aux_logit_max_change": 0.002166152000427246
+}

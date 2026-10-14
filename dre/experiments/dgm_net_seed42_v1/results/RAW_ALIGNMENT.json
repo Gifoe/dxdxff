@@ -1,0 +1,16 @@
+{
+  "channels": 7635,
+  "historical_exact_sample_audit_sha256": "b41514c0461f6ba1b178722f6a71d59512f1336a1469ebffb48a31dd7da7004d",
+  "new_checks": "All current raw bank hashes matched original every-sample verified registry; compound channel/mask/reference identities rechecked during recomputation",
+  "new_inference_Outer": false,
+  "new_source_hashes": {
+    "archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+    "window": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087"
+  },
+  "patients": 80,
+  "records": 256,
+  "status": "PASS",
+  "valid_channel_windows": 1471965
+}

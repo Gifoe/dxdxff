@@ -1,0 +1,12 @@
+{
+  "full_vector_shuffled": true,
+  "padded_windows_excluded": true,
+  "same_window_raw_and_phys": true,
+  "scale_fit_only": true,
+  "shuffle_counts": {
+    "changed": 49990,
+    "eligible": 49990,
+    "singletons": 0
+  },
+  "status": "PASS"
+}

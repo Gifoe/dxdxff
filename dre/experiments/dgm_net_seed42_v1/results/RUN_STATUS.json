@@ -1,0 +1,9 @@
+{
+  "A0_retrained": false,
+  "A2_training_cells": 5,
+  "bootstrap_draws": 10000,
+  "no_new_Outer": true,
+  "status": "ALL_AUTHORIZED_A2_DEVELOPMENT_COMPLETE",
+  "terminal": "RAW_MORPHOLOGY_MINIMUM_INCREMENT_NOT_ESTABLISHED",
+  "trained_controls": 0
+}

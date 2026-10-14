@@ -1,0 +1,34 @@
+{
+  "A1_A3_A4": "NOT_RUN_USER_SCOPE",
+  "A2_A0_delta": {
+    "accuracy": 0.006021852663778859,
+    "balanced_accuracy": 0.005661856794977216,
+    "ez_auprc": 0.008095701543830769,
+    "ez_auroc": 0.0034349759874000574,
+    "ez_f1": 0.006666801628167296,
+    "ez_mrr": 0.000720884923425813,
+    "macro_f1": 0.006034775186369301,
+    "nez_f1": 0.005402748744571251,
+    "predicted_ez_fraction": -0.0024555929286854405,
+    "sensitivity": 0.003810131853895782,
+    "specificity": 0.007513581736058761,
+    "top1_is_ez": 0.0
+  },
+  "A2_A0_minimum_predictive_gate": false,
+  "Development_reused_selection_conditioned": true,
+  "conditions": {
+    "AP_nondecline": true,
+    "AUROC_min": false,
+    "EZF1_min": false,
+    "EZ_sensitivity_nondecline_margin": true,
+    "MacroF1_min": false,
+    "MacroF1_positive_folds": false
+  },
+  "full_DGM_gate": "NOT_EVALUABLE_UNRUN_MATCHED_CONTROLS",
+  "independent_confirmation": false,
+  "integrity": "PASS",
+  "no_new_Outer": true,
+  "positive_MacroF1_folds": 3,
+  "shuffle_inference_measurable_change": true,
+  "terminal": "RAW_MORPHOLOGY_MINIMUM_INCREMENT_NOT_ESTABLISHED"
+}

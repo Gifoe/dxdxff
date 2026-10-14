@@ -1,0 +1,8 @@
+{
+  "all_five_original_folds": true,
+  "bootstrap": "Independent multiplicity matrix matched original cluster bootstrap to1e-12",
+  "exact_65_appearances_47_IDs": true,
+  "patient_metrics": "Independent sklearn metrics compared to original per patient to1e-12",
+  "published_CSV_roundtrip": true,
+  "status": "PASS"
+}

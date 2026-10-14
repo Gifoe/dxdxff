@@ -1,0 +1,28 @@
+{
+  "experiment": "dgm_net_seed42_v1",
+  "scope_amendment": "User requested only A2; A0 frozen replay and A2 five Development folds/interventions authorized. A1/A3/A4 training NOT_RUN_USER_SCOPE. No new Outer.",
+  "base_commit": "92daa733d32fbcdaf0e6545704ccc3fc03c00b93",
+  "seed": 42,
+  "hashes": {
+    "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+    "window": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087",
+    "archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+  },
+  "cohort": {"patients": 80, "records": 256, "channels": 7635, "valid_channel_windows": 1471965, "EZ": 1743, "NEZ": 5892, "folds": 5, "development_appearances": 65, "unique_development_IDs": 47},
+  "frozen_base": "Exact D1 R14, duplicate-aware 88-position LN semantics, original FIT-only imputer/scaler, own-fold BEST; no retraining",
+  "features": ["log_bp_beta", "log_bp_low_gamma", "log_bp_high_gamma", "rms", "variance", "line_length_per_sec", "spectral_entropy"],
+  "window_delta": "Pinned original float32 physiology on genuine unnormalized 500-sample Raw250; all genuine centers<0 mean reference; full-view float32 reduction layout preserved for R14; no filters, upsampling, new bands, or onset certainty claims",
+  "parity": {"R14_relative_tolerance": 0.000002, "R14_absolute_tolerance": "8 float32 ULP at absolute reference coordinate", "D1_score_max": 0.000001, "D1_decisions_exact": true, "original_metrics_atol": 0.00000051},
+  "conditioning_scale": {"estimator": "Median of per-patient median absolute DELTA, using all genuine available windows/channels/seizures per FIT patient. Each FIT patient contributes exactly one magnitude estimate per family; median across FIT patients. Not a pooled-window median.", "absolute_positive_floor": 0.000001, "normalization": "clip(delta/scale,-8,8)", "labels_used": false, "validation_or_Outer_fitting": false},
+  "architecture": {"CNN": "Conv1d1to12 k9 s4 GELU Conv1d12to24 k7 s4 GELU AdaptiveAvgPool1d1", "raw_normalization": "per-window mean/populationSD floor1e-6 clip[-8,8]", "latent_reference": "all genuine center<0 mean, same seizure/channel", "gate": "Linear7to32 GELU Linear32to24, last weight/bias zero", "guided_embedding": "(1+0.25*tanh(g))*latent_DELTA", "within_seizure": "masked means [0,8) and [8,20); no sequence encoder", "across_seizure": "masked mean/populationSD, singleton SD0", "patient_z": "float64 across valid canonical channels, SD<=1e-8 denominator1, then float32", "head": "Linear96to64 GELU Linear64to1", "residual": "D1+0.5*tanh(alpha)*tanh(raw_logit); alpha0", "frozen_parameters": 1537, "trainable_parameters": 9482, "total_parameters": 11019},
+  "training": {"fold_seed": "42+1009*fold", "optimizer": "AdamW", "lr": 0.0003, "weight_decay": 0.001, "clip": 1.0, "max_epochs": 30, "min_stopping_epoch": 6, "patience": 6, "objective": "Original FIT NEZ-positive class-weighted BCE(final)+0.25*BCE(raw), channel mean then one update per FIT patient", "selection": "Validation patient MacroF1, EZF1, earlier epoch; original NEZ0:0.005:1 grid and exact tie rules", "extra_seeds_or_rescue": false},
+  "controls": {"shuffle": "SHA256(seed42,patient,compound seizure key,canonical channel,stage) RNG permutation; move full7-vector, force nonidentity if >=2 eligible; no Raw/time/reference/mask changes", "static": "Within seizure/channel/stage mean of raw physiological DELTA, repeat then apply same fixed normalization", "feature_neutral": "normalized coordinate0", "intervention_threshold": "Always selected A2 threshold, including residual-disabled D1 replay"},
+  "bootstrap": {"draws": 10000, "seed": 42, "clusters": "47 unique patient IDs retaining all65 appearances", "CI": "unadjusted percentile95, selection-conditioned", "threshold_reoptimization": false},
+  "mechanism_change_epsilon": 0.000001,
+  "minimum_A2_A0": {"macro_f1": 0.010, "ez_f1": 0.010, "ez_auroc": 0.005, "ez_auprc": 0.0, "positive_macro_f1_folds": 4, "sensitivity_min": -0.010},
+  "full_scientific_gate": "NOT_EVALUABLE_UNRUN_MATCHED_CONTROLS; no DGM_NET_DEVELOPMENT_PROMISING terminal without A1/A3/A4 trained contrasts",
+  "no_new_Outer": true,
+  "publish": "Source/protocol hashes and anonymous aggregates only; raw/IDs/labels/banks/checkpoints/predictions/logs private on original server",
+  "installed_skills_used": []
+}

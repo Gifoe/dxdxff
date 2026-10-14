@@ -1,0 +1,36 @@
+{
+  "binding": {
+    "D1_freeze": "576344e1a3456e4a3106cb37a17dcac29bfc8851dc5dc0403e27bada85db0233",
+    "baseline_protocol": "1f59ed0604fe3f896ce5e954c9dd682feb43d2f0b751ddccc81fe8241e052673",
+    "code": {
+      "bootstrap.py": "9c0360b7fe6d8a852d30cb98f20dc73a1611cd65ae184b19555d9ea01210cfb1",
+      "controls.py": "59351234323ce781616ce7af9bd0c90d0a40f6b4c0785d611362484e80ec6a73",
+      "dgm_net.py": "8cd2a0bb476f071374902ba544224a449925b8f9c2e7faa95d65cb3a12a3d511",
+      "evaluate.py": "997d9c9847e988944740546dbfbc04823b97b7500f30958adfb647527c387b9c",
+      "physiology_gate.py": "bd48409d7c7528d5c84dcf224be4c7310cd5c685bf267a6b4c1990d47603df48",
+      "report_a2.py": "2bee5b4cb2d7c60b40061e1fbd808dd990286ff9901f5574f191f6126b8be168",
+      "runtime_support.py": "76da5f88e440363003fceca90b37d0ad29cf3a66fbe4c4130bb0428242f808b1",
+      "train.py": "7ce4bbaad9f7060f01779fd258ec59d49576a4d70283152bc9a25b22fb139340",
+      "verify.py": "bb83937bdea9b6cbe592de10371865438bc42e58676bc89578583188e332dba8",
+      "window_delta.py": "4ac68f533505d29a9386da876c8a67eb748a4d3b564b62d2629b8258c1338e03"
+    },
+    "inputs": {
+      "archive": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+      "raw": "011d7ffaa55469c9f34259be04b7136a987d6d95f0ce9cc443a06751557db733",
+      "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+      "window": "9b5bb58a0175aba494ad79e30c5a65c7cee33c7d464273f9bcf62b9b280b0087"
+    },
+    "protocol": "775f762915172a73b3f261e192dfeef2ce85db739b6f4695787f2d124a7368ab",
+    "raw_registry": "48fb162c51ae34c3e29e4803a87577535a0f9e01ea09276acc0da8c8ef4c40f6",
+    "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609"
+  },
+  "channels": 7635,
+  "maximum_actual_7D_reaggregation_error": 0.0,
+  "no_labels_used_in_extraction": true,
+  "original_tolerance_unchanged": true,
+  "patients": 80,
+  "records": 256,
+  "registry_sha256": "43cb64729c038e08ce16434d5a50e77cc4f3864f8895059929877cb48b1b8f0e",
+  "status": "PASS",
+  "valid_channel_windows": 1471965
+}

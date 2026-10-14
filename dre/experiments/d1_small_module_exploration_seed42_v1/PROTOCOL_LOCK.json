@@ -1,0 +1,26 @@
+{
+  "experiment":"d1_small_module_exploration_seed42_v1",
+  "parent_commit":"46e93286d3bf1f9715cbd49188b789dc25da8ab2",
+  "user_objective":"Frozen D1 small-module exploration; primary patient MacroF1 absolute gain >=0.02; inspect AUROC/AP/EZF1",
+  "phase":1,
+  "models":["M1_SCALED_DGM","M2_STAGE_DELTA","M3_DELTA_SET"],
+  "candidate_definitions":{
+    "M1_SCALED_DGM":"Exact completed A2 architecture, with prospectively corrected FIT-only conditioning scale floor; frozen D1 + Raw CNN + multiplicative physiology gate; trainable9482",
+    "M2_STAGE_DELTA":"Normalized7D window DELTA -> genuine early/late means -> across-seizure mean/popSD -> PatientZ28 -> Linear28to24 GELU Linear24to1; alpha residual; trainable722",
+    "M3_DELTA_SET":"Normalized7D genuine-window DELTA -> Linear7to16 GELU Linear16to8 -> early/late means -> across-seizure mean/popSD -> PatientZ32 -> Linear32to32 GELU Linear32to1; alpha residual; trainable1354"
+  },
+  "data":"No new Raw/EDF extraction. Reuse verified DGM same-window7D DELTA registry and original waveform banks, exact80/256/7635/1471965 contract. Reverify source hashes and D1 replay.",
+  "base":"Original D1 selected own-fold checkpoint, R14/PatientZ/FIT imputer/scaler frozen; no D1 retraining",
+  "scale":{"estimator":"Median of per-FIT-patient median abs DELTA, then median across patients, exactly old estimator","floor":1e-30,"clip":[-8,8],"reason":"Native V-power deltas ~1e-12..1e-9 must not be collapsed by universal1e-6; floor is negligible except numerical zero, fixed before new training","fitting_labels":false,"same_for_all_candidates":true},
+  "pooling":{"stages":[[0,8],[8,20]],"within":"masked genuine window mean","across":"available seizure mean/populationSD; singleton SD0","PatientZ":"float64 populationSD across canonical channels; <=1e-8 denominator1; input normalized to comparable units before pooling","no_chronology_claim":true},
+  "training":{"seed":"42+1009*fold","optimizer":"AdamW","lr":0.0003,"weight_decay":0.001,"clip":1,"max_epochs":30,"min_stop":6,"patience":6,"loss":"FIT-only original NEZ positive-class weighted BCE(final)+0.25BCE(auxiliary)","updates":"one channel-mean update per FIT patient","selection":"original validation patient MacroF1/EZF1/earlier; originalNEZ0:.005:1 threshold grid/ties","residual":"D1+0.5*tanh(alpha)*tanh(aux); alpha0"},
+  "primary_estimand":"65 validation appearances/47 unique IDs, original5 patient-held-out folds; repeatedly used selection-conditioned Development",
+  "primary_target":{"MacroF1_gain":0.02,"MacroF1_reference":0.6445464619346358,"MacroF1_target":0.6645464619346358,"AUROC_gain_min":0,"AP_gain_min":0,"EZF1_gain_min":0,"sensitivity_gain_min":-0.01,"positive_MacroF1_folds_min":4},
+  "selection_across_candidates":"One common candidate maximizing primary Development mean MacroF1 subject to target side gates; no per-fold cherry picking between architectures; all candidates/results retained",
+  "bootstrap":{"draws":10000,"seed":42,"clusters":"47 unique IDs retaining65 appearances","thresholds_fixed":true,"CI":"percentile95 selection-conditioned; secondary Bonferroni3 primary-MacroF1 98.333% descriptive intervals, not correction for checkpoint/threshold/repeated-development selection"},
+  "interventions":["full","residual0","identity_M1_only","shuffle","static","neutral_each7"],
+  "no_new_Outer":true,
+  "no_new_seeds_or_posthoc_hyperparameter_rescue_in_phase1":true,
+  "installed_skills_used":[],
+  "privacy":"Only source/hashes/anonymous aggregate files may leave trusted server; no Raw/IDs/labels/checkpoints/private predictions/logs"
+}

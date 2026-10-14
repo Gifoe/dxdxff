@@ -1,0 +1,9 @@
+{
+  "all15_cells": true,
+  "all_candidates_reported": true,
+  "bootstrap_original_vs_independent_multiplicity_parity": true,
+  "exact_65_appearances_47_unique_IDs": true,
+  "original_D1_frozen": true,
+  "per_patient_sklearn_parity_to_1e12": true,
+  "status": "PASS"
+}

@@ -1,0 +1,35 @@
+{
+  "folds": [
+    {
+      "checkpoint_sha256": "f6e8e6f9d34f5a5bcca0ab967a43008f8e99812767933578ac21cb540595ac30",
+      "decisions_exact": true,
+      "fold": 1,
+      "max_score_difference": 0.0
+    },
+    {
+      "checkpoint_sha256": "b27b046f841d8e6c909457f880de286dc1925e4d2d3fa42838e2d3827ca1c887",
+      "decisions_exact": true,
+      "fold": 2,
+      "max_score_difference": 0.0
+    },
+    {
+      "checkpoint_sha256": "e11000e3a2f8d5c787e86a20decfe55054a5d2e12ea2682f6c0585cb54d12747",
+      "decisions_exact": true,
+      "fold": 3,
+      "max_score_difference": 0.0
+    },
+    {
+      "checkpoint_sha256": "c3fc94dae329389d277d570435d9bd101613361f1c64d3eadda14892190300b8",
+      "decisions_exact": true,
+      "fold": 4,
+      "max_score_difference": 0.0
+    },
+    {
+      "checkpoint_sha256": "37b1a7d0342161683674d613a443c33837a424da35228c79033e66c5b45c7915",
+      "decisions_exact": true,
+      "fold": 5,
+      "max_score_difference": 0.0
+    }
+  ],
+  "status": "PASS"
+}

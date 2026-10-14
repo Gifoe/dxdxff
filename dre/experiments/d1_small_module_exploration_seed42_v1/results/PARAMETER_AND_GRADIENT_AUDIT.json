@@ -1,0 +1,122 @@
+{
+  "candidates": [
+    {
+      "FIT_two_step_smoke_discarded": true,
+      "arm": "M1_SCALED_DGM",
+      "frozen_D1": 1537,
+      "gradients": [
+        {
+          "norms": {
+            "alpha": 0.010546425357460976,
+            "cnn.0.bias": 0.006535016465932131,
+            "cnn.0.weight": 0.06720280647277832,
+            "cnn.2.bias": 0.00425907364115119,
+            "cnn.2.weight": 0.11352209001779556,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 1.9041483667603387e-10,
+            "gate.network.2.weight": 0.007054525427520275,
+            "head.0.bias": 0.005868339445441961,
+            "head.0.weight": 0.08167468011379242,
+            "head.2.bias": 0.012145401909947395,
+            "head.2.weight": 0.06196582689881325
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "alpha": 0.014256313443183899,
+            "cnn.0.bias": 0.006551509257405996,
+            "cnn.0.weight": 0.06583981215953827,
+            "cnn.2.bias": 0.004174830857664347,
+            "cnn.2.weight": 0.11236666887998581,
+            "gate.network.0.bias": 2.325072955500218e-06,
+            "gate.network.0.weight": 2.749564555415418e-05,
+            "gate.network.2.bias": 2.0546124233078444e-06,
+            "gate.network.2.weight": 0.007060152478516102,
+            "head.0.bias": 0.005748662631958723,
+            "head.0.weight": 0.07927440851926804,
+            "head.2.bias": 0.011181920766830444,
+            "head.2.weight": 0.0615999735891819
+          },
+          "step": 2
+        }
+      ],
+      "initial_D1_identity_exact": true,
+      "status": "PASS",
+      "total": 11019,
+      "trainable": 9482
+    },
+    {
+      "FIT_two_step_smoke_discarded": true,
+      "arm": "M2_STAGE_DELTA",
+      "frozen_D1": 1537,
+      "gradients": [
+        {
+          "norms": {
+            "alpha": 0.0018372249323874712,
+            "head.0.bias": 0.00926170777529478,
+            "head.0.weight": 0.06201658025383949,
+            "head.2.bias": 0.0166579969227314,
+            "head.2.weight": 0.0450836643576622
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "alpha": 0.0014225690392777324,
+            "head.0.bias": 0.009185509756207466,
+            "head.0.weight": 0.06166593357920647,
+            "head.2.bias": 0.016545604914426804,
+            "head.2.weight": 0.044726595282554626
+          },
+          "step": 2
+        }
+      ],
+      "initial_D1_identity_exact": true,
+      "status": "PASS",
+      "total": 2259,
+      "trainable": 722
+    },
+    {
+      "FIT_two_step_smoke_discarded": true,
+      "arm": "M3_DELTA_SET",
+      "frozen_D1": 1537,
+      "gradients": [
+        {
+          "norms": {
+            "alpha": 0.0005617514252662659,
+            "encoder.0.bias": 0.0026651269290596247,
+            "encoder.0.weight": 0.02466968074440956,
+            "encoder.2.bias": 1.5807301023684772e-09,
+            "encoder.2.weight": 0.03907113894820213,
+            "head.0.bias": 0.006166859529912472,
+            "head.0.weight": 0.05120420455932617,
+            "head.2.bias": 0.018952101469039917,
+            "head.2.weight": 0.046556178480386734
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "alpha": 0.0012150452239438891,
+            "encoder.0.bias": 0.0026513475459069014,
+            "encoder.0.weight": 0.024482784792780876,
+            "encoder.2.bias": 1.1903475982677492e-09,
+            "encoder.2.weight": 0.038637835532426834,
+            "head.0.bias": 0.0061592962592840195,
+            "head.0.weight": 0.05098205804824829,
+            "head.2.bias": 0.018793512135744095,
+            "head.2.weight": 0.046375736594200134
+          },
+          "step": 2
+        }
+      ],
+      "initial_D1_identity_exact": true,
+      "status": "PASS",
+      "total": 2891,
+      "trainable": 1354
+    }
+  ],
+  "status": "PASS"
+}

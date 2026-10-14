@@ -1,0 +1,30 @@
+{
+  "folds": [
+    {
+      "embedded_D1_logit_max_difference": 0.0,
+      "fold": 1,
+      "residual_cap_verified": true
+    },
+    {
+      "embedded_D1_logit_max_difference": 0.0,
+      "fold": 2,
+      "residual_cap_verified": true
+    },
+    {
+      "embedded_D1_logit_max_difference": 0.0,
+      "fold": 3,
+      "residual_cap_verified": true
+    },
+    {
+      "embedded_D1_logit_max_difference": 0.0,
+      "fold": 4,
+      "residual_cap_verified": true
+    },
+    {
+      "embedded_D1_logit_max_difference": 0.0,
+      "fold": 5,
+      "residual_cap_verified": true
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "OUTER_POINT_GAIN_BUT_TWO_POINT_MACRO_F1_TARGET_NOT_MET",
+  "source": "Actual completed frozen Outer, not Development extrapolation",
+  "patients_per_arm": 80,
+  "channels_per_arm": 7635,
+  "MacroF1_gain_target": 0.02,
+  "MacroF1_gain_actual": 0.01754063088544936,
+  "MacroF1_gain_CI95": [-0.001153096299872599,0.03680560273348898],
+  "two_point_target_met": false,
+  "MacroF1_unadjusted_CI_excludes_zero": false,
+  "AUROC_gain_actual": 0.029760940037809124,
+  "AP_gain_actual": 0.026892191333184483,
+  "AUROC_and_AP_unadjusted_CI_exclude_zero": true,
+  "positive_MacroF1_folds": 5,
+  "scientific_status": "USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+  "no_test_driven_rescue_or_threshold_tuning": true
+}

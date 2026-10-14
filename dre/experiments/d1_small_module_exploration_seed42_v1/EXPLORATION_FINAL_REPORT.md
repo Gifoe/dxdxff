@@ -1,5 +1,7 @@
 # Frozen D1 small-module exploration — completed
 
+This is the completed Development report. The subsequent user-authorized fixed Outer is documented separately in [OUTER_REPORT.md](OUTER_REPORT.md): Macro-F1 gain0.017541, below the requested0.02, paired95% CI crosses zero. No-Outer statements below describe this original Development phase, not the later addition. Development numbers and the selected model are unchanged.
+
 **Selected recipe: M8_MACRO_AWARE. Primary Development target met: Macro-F1 +absolute0.02224836 (2.224836 percentage points).**
 
 | Metric | Frozen D1 | M8 | Absolute difference |

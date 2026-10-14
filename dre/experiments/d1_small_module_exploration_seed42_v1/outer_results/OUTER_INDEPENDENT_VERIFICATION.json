@@ -1,0 +1,20 @@
+{
+  "aggregate_sha256": {
+    "OUTER_ABSOLUTE_INTERVALS.csv": "8492128cdcf335062595b441b4277183cd1ee3d57ea4e4575bdd9733b9688bee",
+    "OUTER_BY_CENTER.csv": "ceb54d1697967cfc454bc4a6f58afcd1eb4dd77ccb41569127edd95213339acf",
+    "OUTER_BY_FOLD.csv": "83859344f08cde5cdf5a7e9eb1077bbbbcd49938e9e29688ce89f1759822baec",
+    "OUTER_PAIRED_BOOTSTRAP.csv": "76c678aed5bb4218e0885ab3646f27a506967d2296f844a839d0a14f9e44c5c7",
+    "OUTER_POOLED_CHANNELS.csv": "8efdf2ad277e7f63e9e188a4c5a14332662fb90e5550026ad50a80bee95fabc3",
+    "OUTER_SUMMARY.csv": "639c707f6543074244f4ed19e7fa3c92db2931376d0d7e6e9b7d01d8c0f6a929"
+  },
+  "all_frozen_dependencies_unchanged": true,
+  "channels_per_arm": 7635,
+  "independent_bootstrap_counts": true,
+  "independent_sklearn_metrics": true,
+  "model_fold_cells": 10,
+  "no_model_or_raw_replay": true,
+  "patient_metric_cells": 160,
+  "patients_per_arm": 80,
+  "pooled_confusions_checked": true,
+  "status": "PASS"
+}

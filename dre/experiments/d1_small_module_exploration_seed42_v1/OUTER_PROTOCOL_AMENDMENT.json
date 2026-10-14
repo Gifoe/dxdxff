@@ -1,0 +1,21 @@
+{
+  "authorization": "User explicitly requested Outer for the completed globally selected M8 and frozen D1, with GitHub aggregate publication.",
+  "models": ["D1", "M8_MACRO_AWARE"],
+  "development_tip": "ecd4f21222fc75767ebddfa80d82ca7030e88ea3",
+  "patients": 80,
+  "channels": 7635,
+  "seizures": 256,
+  "patients_by_fold": [16,16,17,15,16],
+  "channels_by_fold": [1631,1498,1746,1425,1335],
+  "primary": "Equal weight per unique patient, own original TEST fold, selected checkpoint and numeric Development threshold unchanged",
+  "secondary": "Pooled channels with respective frozen fold thresholds; no cross-patient ranking",
+  "training": false,
+  "refit_or_threshold_reselection": false,
+  "new_raw_or_physiology_extraction": false,
+  "bootstrap": {"draws":10000,"seed":42,"unit":"paired unique patient-ID cluster","CI":"unadjusted percentile95","thresholds_fixed":true},
+  "prediction_seal": "Freeze ten checkpoints, five bank preprocessors and FIT conditioning scales, all source and input hashes before inference; seal all ten prediction cells before full TEST label read",
+  "scientific_status": "USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+  "limitations": "Prior cohort outcomes viewed; adaptive M8 selection uses repeatedly viewed Development appearances which can overlap other folds' TEST IDs. Own-fold fitting excludes TEST, but this is not independent nested architecture selection or blind confirmation.",
+  "stop": "One frozen evaluation, no model/threshold changes after viewing Outer",
+  "publish": "Code, hashes, non-identifying aggregates and report only"
+}

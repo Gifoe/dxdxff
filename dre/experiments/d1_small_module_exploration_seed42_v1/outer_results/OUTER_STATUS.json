@@ -1,0 +1,12 @@
+{
+  "all10_cells_sealed_before_test_labels": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "4882d62e0492618a277897e56e434578b8481b7a8192213d01cd3a5b5f420d5d",
+  "no_new_extraction": true,
+  "no_threshold_or_scaler_refit": true,
+  "no_training": true,
+  "patients_per_arm": 80,
+  "scientific_status": "USER_AUTHORIZED_POSTHOC_OUTER_EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "aa5ae8daeec58fb392e6587a89f24cb26ce34fc83a1125f8f6ae4a575ab81e02",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

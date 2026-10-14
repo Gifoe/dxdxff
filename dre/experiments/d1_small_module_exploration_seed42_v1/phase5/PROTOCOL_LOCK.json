@@ -1,0 +1,17 @@
+{
+ "experiment":"d1_macro70_joint_readout_phase5_seed42_v1",
+ "objective":"Development patientMacroF1>0.70 then selected frozenOuter",
+ "adaptive_evidence":"Phase4 all15cells complete and verified: best0.668015. Frozen-evidence threshold/readout adapters do not close the gap; train representation interaction instead.",
+ "models":["M12_JOINT_READOUT","M13_ADAPTIVE_CAP"],
+ "initialization":"Exact selected own-fold M8 including CNN/physiology gate/head. Expand96→64 head to110→64, append14 processedD1 coordinates with zero weights; unchanged first96/head bias/lastlayer. Exact initial M8 logits. D1 remains frozen.",
+ "M12":"D1+1*tanh(aux), morphology96+processedR14 input14 jointly interpreted by110→64→1 head",
+ "M13":"Same asM12, with learnable residualcap3*sigmoid(a), a=log(1/2), initialcap1. No separate predictor/fusion coefficient.",
+ "loss":"0.5 originalFIT-weightedBCE(final)+0.5 patientSoftMacroF1(final/0.5)",
+ "training":{"seed":"42+1009fold","optimizer":"AdamW","lr":0.0001,"weight_decay":0.001,"clip":1,"max_epochs":20,"min_stop":6,"patience":6,"patient_equal":"one channel-mean loss update perFITpatient","selection":"include frozenM8epoch0; validationpatientMacroF1,EZF1,earlier epoch; originalthresholdgrid/ties"},
+ "preprocessing":"Original ownfold D1 FIT imputer/scaler and phase1FITphysiology scales unchanged; no new waveform/physiology extraction",
+ "selection":"One common model acrossallfivefolds bypatientMacroF1,tieEZF1,fewerparameters; no foldwisearchitecturecherry picking",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47IDclusterspreserving65appearances","thresholds_fixed":true},
+ "no_new_Outer_during_training":true,
+ "stop":"Reportboth10cells; freeze selectedcheckpoint/scaler/thresholdbeforeOuter; noOuterfeedbacktuning",
+ "privacy":"Onlysource/hash/anonymousaggregatespublic; privateRaw,weights,scalers,IDs,labels,individualpredictionsremainserverD"
+}

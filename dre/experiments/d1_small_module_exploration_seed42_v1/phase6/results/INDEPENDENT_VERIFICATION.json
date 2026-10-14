@@ -1,0 +1,92 @@
+{
+  "FIT_only_pruning_recomputed": true,
+  "all10_completed_cells": true,
+  "all10_fitted_tree_probability_replays": true,
+  "bootstrap_independent_multiplicity": true,
+  "folds": [
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M14_SHALLOW_COMPLEMENT",
+      "checkpoint_sha256": "ef00ebc0fee0f61f5274de50571867aa5b085858bfe830b2571b85acd559ac69",
+      "fold": 1,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M14_SHALLOW_COMPLEMENT",
+      "checkpoint_sha256": "fd9c23ca5e6dac417e73f9013c32a93f14473b81179c9a21c92fcace22cc90b2",
+      "fold": 2,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M14_SHALLOW_COMPLEMENT",
+      "checkpoint_sha256": "01ddfadbd805c82baa7478f762e6e3c249d91f84a08a6334aca931cd14d8005f",
+      "fold": 3,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M14_SHALLOW_COMPLEMENT",
+      "checkpoint_sha256": "782daadcf2df11c9e847d5618404e6d1d575ab6c009c7907975797803fcdebf9",
+      "fold": 4,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M14_SHALLOW_COMPLEMENT",
+      "checkpoint_sha256": "c754cd530efaf0ccd35d7f7215d7e7fd1af954edbe7ac4614c789fba5c51eba4",
+      "fold": 5,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M15_DEPTH3_COMPLEMENT",
+      "checkpoint_sha256": "f9da5605625ac5be5d1f0cc2505d077b56ec451aaebe2374231f0a57a02d33b2",
+      "fold": 1,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M15_DEPTH3_COMPLEMENT",
+      "checkpoint_sha256": "ef85f9b7200000ad247115597ea30dcea7998d3489de3e67422e62f79aacf91c",
+      "fold": 2,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M15_DEPTH3_COMPLEMENT",
+      "checkpoint_sha256": "8bde777eb82227fc43f9cc284fe7cdf5da22e6168fd6d86d0e75e2e3f58ebce7",
+      "fold": 3,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M15_DEPTH3_COMPLEMENT",
+      "checkpoint_sha256": "b430ac2daf9e0d33eb31666e30e07402fe1cda1e238133488e7c16d3f1459c3d",
+      "fold": 4,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    },
+    {
+      "FIT_pruning_recomputed": true,
+      "arm": "M15_DEPTH3_COMPLEMENT",
+      "checkpoint_sha256": "4771139182bb3d7333f7be19769c483f8f90a0bef65ccc9d01d121edec009fc2",
+      "fold": 5,
+      "own_fold_TEST_excluded": true,
+      "tree_probability_replay_max_difference": 0.0
+    }
+  ],
+  "independent_patient_metric_cells": 130,
+  "no_TEST_access": true,
+  "original_ownfold_preprocessors_unchanged": true,
+  "status": "PASS"
+}

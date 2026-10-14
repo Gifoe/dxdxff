@@ -1,0 +1,16 @@
+{
+ "experiment":"d1_macro70_conditional_tree_phase6_seed42_v1",
+ "objective":"PatientMacroF1>0.70 using existingFIT/VAL evidence; then freeze and runOuter",
+ "adaptive_reason":"Phase4 best0.668015; Phase5 joint fine-tuning best0.667791. Larger shared linear readout/loss/cap tweaks do not close gap. Test nonlinear feature-complementarity without newRaw extraction.",
+ "models":["M14_SHALLOW_COMPLEMENT","M15_DEPTH3_COMPLEMENT"],
+ "inputs":"Frozen M8 observable evidence33D (logits,patient percentile,R14,context) plus exact original ownfold processed88D source featurebank. FIT-only remove exact constants/duplicates by explicit first-name index, never labels or validation. NoIDs/center feature.",
+ "architecture":"GradientBoostingClassifier, log_loss, frozenM8probability initializer, so learned trees are logit residuals on originalM8",
+ "configs":{"M14_SHALLOW_COMPLEMENT":{"max_depth":2,"min_samples_leaf":80},"M15_DEPTH3_COMPLEMENT":{"max_depth":3,"min_samples_leaf":40}},
+ "training":{"learning_rate":0.03,"max_trees":200,"subsample":1,"max_features":null,"random_state":"42+1009fold","sample_weight":"eachFITpatient equal channel-total weight; originalglobalFIT NEZpositive classweight","validation_checkpoints":[0,20,40,60,80,100,120,140,160,180,200]},
+ "selection":"original validationpatientMacroF1,EZF1,earlier treecount; originalthresholdgrid/ties; one commonconfigallfolds, tie fewerleaves",
+ "data":"NoRaw/EDF/physiology extraction, no scaler refit; original88D preprocessing alreadyfit on originalFITpatients; bankroles/sourcehashverified",
+ "bootstrap":{"draws":10000,"seed":42,"clusters":"47IDs65appearances","thresholds_fixed":true},
+ "no_TEST_access_during_selection":true,
+ "caveat":"RepeatedadaptiveDevelopment; not independently nested model selection, not proof of target in newpatients",
+ "publish":"Onlysource/hash/nonidentifyingaggregates; allweights/identities/labels/predictions/cacheprivate"
+}

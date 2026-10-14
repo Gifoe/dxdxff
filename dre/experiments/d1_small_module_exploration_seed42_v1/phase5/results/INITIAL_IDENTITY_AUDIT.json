@@ -1,0 +1,64 @@
+{
+  "folds": [
+    {
+      "arm": "M12_JOINT_READOUT",
+      "fold": 1,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10377
+    },
+    {
+      "arm": "M12_JOINT_READOUT",
+      "fold": 2,
+      "initial_M8_max_logit_difference": 0.0,
+      "parameters": 10377
+    },
+    {
+      "arm": "M12_JOINT_READOUT",
+      "fold": 3,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10377
+    },
+    {
+      "arm": "M12_JOINT_READOUT",
+      "fold": 4,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10377
+    },
+    {
+      "arm": "M12_JOINT_READOUT",
+      "fold": 5,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10377
+    },
+    {
+      "arm": "M13_ADAPTIVE_CAP",
+      "fold": 1,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10378
+    },
+    {
+      "arm": "M13_ADAPTIVE_CAP",
+      "fold": 2,
+      "initial_M8_max_logit_difference": 0.0,
+      "parameters": 10378
+    },
+    {
+      "arm": "M13_ADAPTIVE_CAP",
+      "fold": 3,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10378
+    },
+    {
+      "arm": "M13_ADAPTIVE_CAP",
+      "fold": 4,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10378
+    },
+    {
+      "arm": "M13_ADAPTIVE_CAP",
+      "fold": 5,
+      "initial_M8_max_logit_difference": 1.1920928955078125e-07,
+      "parameters": 10378
+    }
+  ]
+}

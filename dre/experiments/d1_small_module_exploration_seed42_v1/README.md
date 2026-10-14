@@ -1,5 +1,7 @@
 # Frozen D1 small-module exploration — Seed42 Phase1
 
+**New active Macro-F1>0.70 goal:** phases4–6 added seven prospectively locked recipes/35actual fold cells; bestDevelopment0.668015, target not reached. AllthreephaseverifiersPASS and failedoutcomesretained. No newOuteraccess in this extension. See [MACRO70_PROGRESS.md](MACRO70_PROGRESS.md); previous completedDevelopment/Outer below remain unchanged.
+
 User-confirmed primary target: patient-average **Macro-F1 +absolute0.02**, from0.644546461935 to0.664546461935; inspect AUROC/AP/EZF1 and sensitivity. This is experimental exploration, not a promise that adding parameters guarantees two points.
 
 **Completed all three locked phases:** eight candidates/40 cells/503 epochs. Selected M8_MACRO_AWARE reached Development Macro-F1 **0.666795**, D1 gain **+0.022248**; AUROC/AP/EZF1 also increased. Read [EXPLORATION_FINAL_REPORT.md](EXPLORATION_FINAL_REPORT.md) for the complete Development evidence. The original Phase1 report below remains unchanged as historical evidence.

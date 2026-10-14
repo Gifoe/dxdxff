@@ -1,0 +1,9 @@
+# Joint morphology/physiology readout — prospective Phase5
+
+Phase4's actual fifteen cells and independent verifier completed; patient decision adapters top out at DevelopmentMacro-F10.668015, not0.70. This adaptive new phase trains two fixed candidates across all five original FIT/validation folds. No new Outer is opened.
+
+The selected own-fold M8 weights are preserved as input artifacts. A new model expands the first correction-head layer from96 to110 inputs, copying the original96D weights and bias and zeroing the appended14 processed-physiology weights. M12 retains cap1; M13 has a single bounded learnable cap3*sigmoid(a), initialized at1. Genuine legal-FIT initial identity is checked against the original M8, and D1 stays frozen. This allows the same readout to use morphology and existing processed physiological evidence jointly instead of a second frozen-evidence decoder.
+
+CNN/gate/readout can fine-tune under the predeclared small learning rate. No preprocessing/refit or feature extraction is added; original FIT scales and masks remain fixed. The original M8 is included as epoch0, so validation checkpoint selection cannot silently discard the starting model. All ten new training cells, including epoch0 selections and unfavorable outcomes, must be reported. Selection remains one shared candidate across folds; no per-fold architecture oracle.
+
+Commands: `code/test_joint.py`, `code/run.py`; same trusted-server environment paths and scientific runtime as earlier phases. Full objective and caps/optimizer/loss/stopping rules are in `PROTOCOL_LOCK.json`, frozen before execution. Development remains repeatedly/adaptively selected; this phase does not transform historical Outer into a blind holdout. Private weights, banks, labels/identities and individual outputs remain serverD; only code/anonymous aggregates may be uploaded.

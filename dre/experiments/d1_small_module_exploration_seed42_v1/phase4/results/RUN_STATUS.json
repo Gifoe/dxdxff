@@ -1,0 +1,10 @@
+{
+  "AUROC_AP_EZF1_vs_D1_quality": true,
+  "MacroF1": 0.6680152704619962,
+  "adaptive_repeated_Development": true,
+  "no_new_Outer": true,
+  "not_independent_confirmation": true,
+  "selected_common_candidate": "M9_CONTEXT_SHIFT",
+  "status": "ALL15_DEVELOPMENT_CELLS_COMPLETE",
+  "target_strictly_over_070": false
+}

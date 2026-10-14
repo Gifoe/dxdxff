@@ -1,0 +1,67 @@
+{
+  "folds": [
+    {
+      "D1_bank_sha256": "89f019920fc20c5f3801bd50b9ff5b6e3e141c92be36b411fd1681c28756baae",
+      "FIT_patients": 51,
+      "M8_checkpoint_sha256": "f665ce47a6d5e1f8e7bcf8eb338655d701a701bfafa624478995ffd55196bcae",
+      "features": 129,
+      "fold": 1,
+      "patient_observable_only": true,
+      "scale_sha256": "7bb751f3040c563aead83027e237035cd828c21e3205f03db23fd66bf67e6403",
+      "scaler_fit_only": true,
+      "validation_frozen_logit_max_difference": 0.0,
+      "validation_patients": 13
+    },
+    {
+      "D1_bank_sha256": "55ba2b09e627c60f9b76e22cca27de3bfcba07f0048f19abcdbcdb899bcc0365",
+      "FIT_patients": 51,
+      "M8_checkpoint_sha256": "ecd4629c624f6df488453ad47aa03cca9872ff19648caaeded4155a2bf1c3d92",
+      "features": 129,
+      "fold": 2,
+      "patient_observable_only": true,
+      "scale_sha256": "58e2696fc163072273b9eb39129a6ffeeb77406d6186d704097276b6fb84ad85",
+      "scaler_fit_only": true,
+      "validation_frozen_logit_max_difference": 0.0,
+      "validation_patients": 13
+    },
+    {
+      "D1_bank_sha256": "31f5e130ef92daf2918ceef667a0e7f489b60c7a5876d950d9d20ef9577f9c1d",
+      "FIT_patients": 50,
+      "M8_checkpoint_sha256": "a6bcfc7d9d7a6dbe022227382d494a8aadaac9bb70031147514f33fa974e13e6",
+      "features": 129,
+      "fold": 3,
+      "patient_observable_only": true,
+      "scale_sha256": "b755a9a1f49f2a6b4a80d3e744aeef7b600120407bfe476264c09e68482e3c7c",
+      "scaler_fit_only": true,
+      "validation_frozen_logit_max_difference": 0.0,
+      "validation_patients": 13
+    },
+    {
+      "D1_bank_sha256": "56c4167cf7f8cc74bedc4d1888de7d513b22f3df1976a586760a597739280bce",
+      "FIT_patients": 52,
+      "M8_checkpoint_sha256": "2c4c13c23960d4c8b24f50518e4f275b2cd43b68884fc0c7d6aa806973e62193",
+      "features": 129,
+      "fold": 4,
+      "patient_observable_only": true,
+      "scale_sha256": "c85a0355623c8cd0a3968c5ff2017794e858b9e48db9cb911b463a1e32533d95",
+      "scaler_fit_only": true,
+      "validation_frozen_logit_max_difference": 0.0,
+      "validation_patients": 13
+    },
+    {
+      "D1_bank_sha256": "c96402c86219f44aaa1052eb2ce34174973fafe474b08e38a70385896b7d24e8",
+      "FIT_patients": 51,
+      "M8_checkpoint_sha256": "15cfe348ec3ea155f8da6ff6276a8d93b75090c885c0af284bbdd808cd23cb4f",
+      "features": 129,
+      "fold": 5,
+      "patient_observable_only": true,
+      "scale_sha256": "1f178ff06784b2f204ea04fe2115eb0158eabb77de1cbfb104d2aaca07964a88",
+      "scaler_fit_only": true,
+      "validation_frozen_logit_max_difference": 0.0,
+      "validation_patients": 13
+    }
+  ],
+  "no_TEST_access": true,
+  "no_retraining_or_extraction": true,
+  "status": "PASS"
+}

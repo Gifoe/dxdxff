@@ -1,0 +1,18 @@
+{
+ "experiment":"d1_macro70_patient_decision_phase4_seed42_v1",
+ "objective":"Development patient Macro-F1 strictly greater than0.70, then one frozen Outer evaluation",
+ "development_tip":"da7f65b2573d5fbe9a83693087104133ebf65f51",
+ "adaptive_reason":"Selected M8 actualDevelopment0.666795, diagnostic patient-specific label-derived threshold ceiling0.728583. Learn patient decision context without inference labels instead of reporting oracle performance.",
+ "models":["M9_CONTEXT_SHIFT","M10_CONTEXT_READOUT","M11_SHARP_READOUT"],
+ "base":"Frozen own-fold M8 and embedded frozen D1; no base weight modification, no Raw/physiology extraction",
+ "features":"129D: M8logit,D1logit,within-patient average-tie score percentile,R14processed14,frozen M8 head-input96,patient-observable16(score11quantiles,log channel count,M8mean/SD,D1mean/SD)",
+ "preprocessing":"FIT-only patient-equal feature mean and population SD; floor1e-6; apply fixed to validation; no patient/center identity feature",
+ "architectures":{"M9_CONTEXT_SHIFT":"last16 context features→16→GELU→1, last zero; one shared patient logit shift, cap1","M10_CONTEXT_READOUT":"129→48→GELU→1, last zero; channel-specific residual cap1","M11_SHARP_READOUT":"same129→48→GELU→1 and cap1"},
+ "loss":{"M9_CONTEXT_SHIFT":"0.5 FIT-weighted BCE(final)+0.5 SoftMacroF1(final/0.5)","M10_CONTEXT_READOUT":"0.5 FIT-weighted BCE(final)+0.5 SoftMacroF1(final/0.5)","M11_SHARP_READOUT":"0.25 FIT-weighted BCE(final)+0.75 SoftMacroF1(final/0.25)"},
+ "training":{"seed":"42+1009fold","optimizer":"AdamW","lr":0.0003,"weight_decay":0.001,"gradient_clip":1,"max_epochs":60,"min_stop":10,"patience":10,"unit":"one mean supervised update per FIT patient per epoch","checkpoint":"original validation patientMacroF1, EZF1, earlier epoch","threshold":"original core grid/ties; validation-only each selected epoch"},
+ "selection":"one common architecture across5folds by patientMacroF1, tieEZF1, then fewer parameters; report all15cells; no foldwise architecture picking",
+ "quality":"target>0.70 with AUROC/AP/EZF1 not below originalD1 development; no claim target guaranteed",
+ "bootstrap":{"draws":10000,"seed":42,"unit":"47 unique IDs preserving65 appearances","thresholds_fixed":true},
+ "privacy":"source/hash/anonymous aggregate only; weights,scalers,banks,labels,identities,predictions stay trusted serverD",
+ "outer":"No Outer access while training/selection; selected model/checkpoint/threshold/scaler locked first. Previous Outer viewed; next evaluation exploratory repeated-test. No post-Outer tuning."
+}

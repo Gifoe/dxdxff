@@ -1,0 +1,82 @@
+{
+  "actual10_training_cells": true,
+  "all_D1_weights_unchanged": true,
+  "all_checkpoint_hashes_verified": true,
+  "bootstrap_independent_multiplicity": true,
+  "folds": [
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 7,
+      "arm": "M12_JOINT_READOUT",
+      "checkpoint_sha256": "6a553bfd73c05e25b76ec9522bce24acf1b1b1fa76db8eeb1710c23f671a946e",
+      "fold": 1
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 8,
+      "arm": "M12_JOINT_READOUT",
+      "checkpoint_sha256": "7604785101e30686f5fbaeccc819437a35da5b8160838f712a2e4c1b077f11e2",
+      "fold": 2
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 10,
+      "arm": "M12_JOINT_READOUT",
+      "checkpoint_sha256": "cd0a81b1d5a94655ee6799210c53db574ba3fbc3e72acf89fcf9b1d77ecccba9",
+      "fold": 3
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 6,
+      "arm": "M12_JOINT_READOUT",
+      "checkpoint_sha256": "a9a6343cf9d73228b338fa1640c890feeb607899045c1af197e031f8aca2ed82",
+      "fold": 4
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 6,
+      "arm": "M12_JOINT_READOUT",
+      "checkpoint_sha256": "3d5114ed55346de3e50e13d1567c90097528680933c5b79558df63229d9edbe2",
+      "fold": 5
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 7,
+      "arm": "M13_ADAPTIVE_CAP",
+      "checkpoint_sha256": "7a42bd822213fb4c013fc42554e665c5580c601b5c266c6e81b6b18b01144f6a",
+      "fold": 1
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 8,
+      "arm": "M13_ADAPTIVE_CAP",
+      "checkpoint_sha256": "8cd5fab13a4dafc82f7fca082aa05426d9fa651270dc3798afb763276cc6bec7",
+      "fold": 2
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 10,
+      "arm": "M13_ADAPTIVE_CAP",
+      "checkpoint_sha256": "402cd1eb6527645037cbcaf1054da6b57dec71515f7c01fa63fdb2073a9796b5",
+      "fold": 3
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 6,
+      "arm": "M13_ADAPTIVE_CAP",
+      "checkpoint_sha256": "c462ed91a7cd7559ce239448df2338f25c31b311acd91343f2dd7678ccf1ad6c",
+      "fold": 4
+    },
+    {
+      "D1_parameters_exact_unchanged": true,
+      "actual_training_epochs": 6,
+      "arm": "M13_ADAPTIVE_CAP",
+      "checkpoint_sha256": "ea5e8569cff2dcefe9fbb76f5e24e5dc1e371632b46651acf1bea1e9fe890c10",
+      "fold": 5
+    }
+  ],
+  "independent_sklearn_cells": 130,
+  "no_TEST_access": true,
+  "selected": "M13_ADAPTIVE_CAP",
+  "status": "PASS"
+}

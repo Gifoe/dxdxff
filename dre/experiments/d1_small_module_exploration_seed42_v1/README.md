@@ -2,6 +2,8 @@
 
 User-confirmed primary target: patient-average **Macro-F1 +absolute0.02**, from0.644546461935 to0.664546461935; inspect AUROC/AP/EZF1 and sensitivity. This is experimental exploration, not a promise that adding parameters guarantees two points.
 
+**Completed all three locked phases:** eight candidates/40 cells/503 epochs. Selected M8_MACRO_AWARE reached Macro-F1 **0.666795**, D1 gain **+0.022248**; AUROC/AP/EZF1 also increased. Read [EXPLORATION_FINAL_REPORT.md](EXPLORATION_FINAL_REPORT.md) for the complete table, controls/limitations and current best recipe. The original Phase1 report below remains unchanged as historical evidence; target success is in Phase3, not a retroactive replacement of the failed first phase. No new Outer result.
+
 Fixed before new training: three candidates×five original folds. M1 corrects the previous DGM conditioning floor without changing the topology; M2 adds722 parameters to preserve deterministic early/late7D DELTA statistics; M3 adds1354 parameters to learn nonlinear per-window DELTA co-occurrence before set/statistical pooling. All have the same frozen D1 and bounded residual identity, original training loss/schedule/selection, shared FIT-only magnitude scales, genuine masks/windows and patient-level evaluation.
 
 Historical evidence: D2 and A2 added only~.006 Macro-F1; temporal CoTAR on older A0 did not reach a useful primary increment. PMA did not establish hidden-state magnitude benefit. Thus a large backbone, repeated attention/graph addition or merely copying a previously failed gate is not justified. These smaller candidates target specific all-window aggregation loss, and correct the measured unit-floor problem in a **new** prospective experiment. No original A2 artifact is changed.
@@ -22,3 +24,5 @@ Only genuine precomputed Raw250-derived7D window physiology is reused; no EDF/Ra
 All candidates, failed gates, folds/centers, fixed-threshold interventions and10000 paired47-ID draws must be reported. Choosing a winner across validation-selected candidates is repeated, selection-conditioned Development, not independent confirmation. A failed phase does not authorize hidden rescue variants; further exploration needs its own prospective phase lock.
 
 Only source/hashes/anonymous aggregate outputs may be exported. Weights, scalers, IDs, labels, raw/masks, per-channel predictions and logs remain on trusted server. Scoped attributes preserve actual source/protocol/output SHA256 bytes.
+
+Best-recipe reusable factory/loss: `tools/best_recipe.py`. Actual all-fold checkpoint-compatible zero-drift fresh Development replay: `final_audit/BEST_RECIPE_REPLAY.json`. Full40-cell source/checkpoint/target audit: `final_audit/GOAL_COMPLETION_AUDIT.json`. This is adaptive Development exploration, not independent clinical confirmation; use a newly named prospective protocol/runtime for any further changes and do not reopen Outer for selection.

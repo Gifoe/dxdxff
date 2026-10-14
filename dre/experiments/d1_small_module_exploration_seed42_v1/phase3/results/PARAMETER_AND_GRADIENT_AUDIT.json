@@ -1,0 +1,135 @@
+{
+  "candidates": [
+    {
+      "arm": "M7_MARGIN_GATED",
+      "base_unchanged": true,
+      "discarded_legal_FIT_smoke_steps": 3,
+      "gradients": [
+        {
+          "norms": {
+            "cnn.0.bias": 0.0,
+            "cnn.0.weight": 0.0,
+            "cnn.2.bias": 0.0,
+            "cnn.2.weight": 0.0,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 0.0,
+            "gate.network.2.weight": 0.0,
+            "head.0.bias": 0.0,
+            "head.0.weight": 0.0,
+            "head.2.bias": 0.04388093948364258,
+            "head.2.weight": 0.2107861489057541,
+            "margin_a": 0.0,
+            "margin_b": 0.0
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "cnn.0.bias": 0.00010308312630513683,
+            "cnn.0.weight": 0.000907592533621937,
+            "cnn.2.bias": 6.142938218545169e-05,
+            "cnn.2.weight": 0.0015920147998258471,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 2.5719684628583428e-12,
+            "gate.network.2.weight": 7.871934212744236e-05,
+            "head.0.bias": 7.9106364864856e-05,
+            "head.0.weight": 0.0010502396617084742,
+            "head.2.bias": 0.04365295171737671,
+            "head.2.weight": 0.2102465033531189,
+            "margin_a": 0.00011308197281323373,
+            "margin_b": 0.00020729503012262285
+          },
+          "step": 2
+        },
+        {
+          "norms": {
+            "cnn.0.bias": 0.00021088114590384066,
+            "cnn.0.weight": 0.0018130461685359478,
+            "cnn.2.bias": 0.00012363547284621745,
+            "cnn.2.weight": 0.0031544289086014032,
+            "gate.network.0.bias": 4.544968135178351e-08,
+            "gate.network.0.weight": 4.0389568312093616e-07,
+            "gate.network.2.bias": 3.463004816239845e-08,
+            "gate.network.2.weight": 0.00015540597087237984,
+            "head.0.bias": 0.00016331992810592055,
+            "head.0.weight": 0.0021248687990009785,
+            "head.2.bias": 0.043408747762441635,
+            "head.2.weight": 0.22138892114162445,
+            "margin_a": 0.00024199757899623364,
+            "margin_b": 0.000441261800006032
+          },
+          "step": 3
+        }
+      ],
+      "initial_identity_exact": true,
+      "status": "PASS",
+      "total": 11020,
+      "trainable": 9483
+    },
+    {
+      "arm": "M8_MACRO_AWARE",
+      "base_unchanged": true,
+      "discarded_legal_FIT_smoke_steps": 3,
+      "gradients": [
+        {
+          "norms": {
+            "cnn.0.bias": 0.0,
+            "cnn.0.weight": 0.0,
+            "cnn.2.bias": 0.0,
+            "cnn.2.weight": 0.0,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 0.0,
+            "gate.network.2.weight": 0.0,
+            "head.0.bias": 0.0,
+            "head.0.weight": 0.0,
+            "head.2.bias": 0.023576218634843826,
+            "head.2.weight": 0.19594350457191467
+          },
+          "step": 1
+        },
+        {
+          "norms": {
+            "cnn.0.bias": 9.577963646734133e-05,
+            "cnn.0.weight": 0.0008920981199480593,
+            "cnn.2.bias": 6.454184040194377e-05,
+            "cnn.2.weight": 0.0015647533582523465,
+            "gate.network.0.bias": 0.0,
+            "gate.network.0.weight": 0.0,
+            "gate.network.2.bias": 1.8559179800620162e-12,
+            "gate.network.2.weight": 7.51367915654555e-05,
+            "head.0.bias": 6.576937448699027e-05,
+            "head.0.weight": 0.001010980922728777,
+            "head.2.bias": 0.02339574322104454,
+            "head.2.weight": 0.19550146162509918
+          },
+          "step": 2
+        },
+        {
+          "norms": {
+            "cnn.0.bias": 0.0001953855826286599,
+            "cnn.0.weight": 0.001782159903086722,
+            "cnn.2.bias": 0.00012952896940987557,
+            "cnn.2.weight": 0.0031032529659569263,
+            "gate.network.0.bias": 4.530857466988891e-08,
+            "gate.network.0.weight": 3.848920755444851e-07,
+            "gate.network.2.bias": 3.325222053263133e-08,
+            "gate.network.2.weight": 0.00014894500782247633,
+            "head.0.bias": 0.000137124938191846,
+            "head.0.weight": 0.0020451978780329227,
+            "head.2.bias": 0.023195955902338028,
+            "head.2.weight": 0.20640134811401367
+          },
+          "step": 3
+        }
+      ],
+      "initial_identity_exact": true,
+      "status": "PASS",
+      "total": 11018,
+      "trainable": 9481
+    }
+  ],
+  "status": "PASS"
+}

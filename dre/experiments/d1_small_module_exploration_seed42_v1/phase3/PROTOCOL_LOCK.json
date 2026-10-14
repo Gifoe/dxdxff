@@ -1,0 +1,21 @@
+{
+  "experiment":"d1_small_module_exploration_seed42_v1_phase3",
+  "adaptive_reason":"All30 prior cells complete: M6 direct morphology correction gained MacroF1+.0170826/AUROC+.0270294/AP+.0426988/EZF1+.0281864, positiveMF in5/5 folds. Test two fixed mechanisms addressing decision metric/conditional trust rather than enlarging backbone. Prior results untouched.",
+  "models":["M7_MARGIN_GATED","M8_MACRO_AWARE"],
+  "definitions":{
+    "M7_MARGIN_GATED":"Exact M6 with additional2 zero scalar parameters: margin=tanh(abs(frozenD1logit)); gain=1+0.5*tanh(a*margin+b). Multiply raw correction tanh(aux) by gain. This is uncalibrated logit magnitude, not certified clinical uncertainty.9483 trainable.",
+    "M8_MACRO_AWARE":"Exact M6 morphology/correction model,9481 trainable; patient loss0.75 original weightedBCE(final)+0.25 softMacroF1loss(final,y)."
+  },
+  "initialization":"M6 shared state identical from exact foldseed; last correction projection zero; margin_a/b zero consume no RNG; step0 exactlyfrozenD1",
+  "softMacroF1":"p_NEZ=sigmoid(final); F_NEZ=2sum(p*y)/clamp(sum(p)+sum(y),1e-8); F_EZ=2sum((1-p)*(1-y))/clamp(sum(1-p)+sum(1-y),1e-8); loss1-mean(F_NEZ,F_EZ). No numerator epsilon or true-EZ-count input at inference; FIT-only label counts used in supervised loss. Fixed surrogate sigmoid0.5, no train/validation threshold fitting inside loss.",
+  "training":{"seed":"42+1009*fold","optimizer":"AdamW","lr":0.0003,"weight_decay":0.001,"clip":1,"max_epochs":30,"min_stop":6,"patience":6,"patient_equal":"one channel-mean/loss update per FITpatient","selection":"original validation patientMacroF1/EZF1/earlier; original .005 NEZ threshold grid/ties"},
+  "data":"Exact D1 ownfold weights/preprocessing and verified phase1 corrected FIT scales/window masks/Raw/DELTA; no new extraction, labels, metadata or source change",
+  "target":{"MacroF1_gain":0.02,"MacroF1_target":0.6645464619346358,"AUROC_gain_min":0,"AP_gain_min":0,"EZF1_gain_min":0,"sensitivity_gain_min":-0.01,"positive_MacroF1_folds_min":4},
+  "inference_interventions":["full","residual0","shuffle","static","neutral_each7","physiology_gate_identity","margin_identity_M7"],
+  "bootstrap":{"draws":10000,"seed":42,"unit":"47 unique IDs preserving65 appearances","thresholds_fixed":true,"CI":"unadjusted selection-conditioned percentile95; adaptive candidate selection not independent evidence"},
+  "no_new_Outer":true,
+  "all10_cells_required":true,
+  "no_additional_hidden_configs_or_seeds_in_phase3":true,
+  "publish":"source/hashes/anonymous aggregate only; private patient/channel data, weights and logs retained on serverD",
+  "installed_skills_used":[]
+}

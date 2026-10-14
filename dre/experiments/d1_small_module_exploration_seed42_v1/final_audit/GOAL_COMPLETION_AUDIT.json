@@ -1,0 +1,58 @@
+{
+  "AUROC_AP_EZF1_nondecline": true,
+  "M6_M8_initial_state_exact": true,
+  "M8_initial_and_disabled_D1_identity_verified": true,
+  "absolute_gain": 0.022248360305359705,
+  "actual_completed_training_cells": 40,
+  "all_candidates_retained": true,
+  "baseline_MacroF1": 0.6445464619346358,
+  "clinical_independent_confirmation": false,
+  "no_new_Outer": true,
+  "original_D1_checkpoints_banks_unchanged": true,
+  "other_metric_deltas": {
+    "accuracy": 0.01467659548418665,
+    "balanced_accuracy": 0.024761988974998372,
+    "ez_auprc": 0.03862533072795882,
+    "ez_auroc": 0.030655245970306333,
+    "ez_f1": 0.0337126020159762,
+    "ez_mrr": 0.041205641952038796,
+    "macro_f1": 0.022248360305359705,
+    "nez_f1": 0.01078411859474293,
+    "predicted_ez_fraction": 0.001805726738710628,
+    "sensitivity": 0.03873073793911819,
+    "specificity": 0.01079324001087878,
+    "top1_is_ez": 0.0461538461538461
+  },
+  "phases": [
+    {
+      "all_BEST_LAST_COMPLETE_hashes_match": true,
+      "all_public_hashes_match": true,
+      "cells": 15,
+      "code_protocol_hashes_match": true,
+      "phase": 1
+    },
+    {
+      "all_BEST_LAST_COMPLETE_hashes_match": true,
+      "all_public_hashes_match": true,
+      "cells": 15,
+      "code_protocol_hashes_match": true,
+      "phase": 2
+    },
+    {
+      "all_BEST_LAST_COMPLETE_hashes_match": true,
+      "all_public_hashes_match": true,
+      "cells": 10,
+      "code_protocol_hashes_match": true,
+      "phase": 3
+    }
+  ],
+  "positive_folds": 4,
+  "primary_MacroF1": 0.6667948222399955,
+  "primary_appearances": 65,
+  "private_artifacts_not_exported": true,
+  "source_tests_and_reproducible_training_commands_delivered": true,
+  "status": "PASS",
+  "total_saved_epochs": 503,
+  "two_absolute_percentage_points_met": true,
+  "unique_IDs": 47
+}

@@ -1,0 +1,60 @@
+{
+  "all5_development_folds_freshly_replayed": true,
+  "best_recipe_factory_strict_checkpoint_compatible": true,
+  "exact_declared_loss": true,
+  "folds": [
+    {
+      "base_logit_exact": true,
+      "checkpoint_sha256": "f665ce47a6d5e1f8e7bcf8eb338655d701a701bfafa624478995ffd55196bcae",
+      "decisions_exact": true,
+      "fold": 1,
+      "logit_max_difference": 0.0
+    },
+    {
+      "base_logit_exact": true,
+      "checkpoint_sha256": "ecd4629c624f6df488453ad47aa03cca9872ff19648caaeded4155a2bf1c3d92",
+      "decisions_exact": true,
+      "fold": 2,
+      "logit_max_difference": 0.0
+    },
+    {
+      "base_logit_exact": true,
+      "checkpoint_sha256": "a6bcfc7d9d7a6dbe022227382d494a8aadaac9bb70031147514f33fa974e13e6",
+      "decisions_exact": true,
+      "fold": 3,
+      "logit_max_difference": 0.0
+    },
+    {
+      "base_logit_exact": true,
+      "checkpoint_sha256": "2c4c13c23960d4c8b24f50518e4f275b2cd43b68884fc0c7d6aa806973e62193",
+      "decisions_exact": true,
+      "fold": 4,
+      "logit_max_difference": 0.0
+    },
+    {
+      "base_logit_exact": true,
+      "checkpoint_sha256": "15cfe348ec3ea155f8da6ff6276a8d93b75090c885c0af284bbdd808cd23cb4f",
+      "decisions_exact": true,
+      "fold": 5,
+      "logit_max_difference": 0.0
+    }
+  ],
+  "metrics": {
+    "accuracy": 0.7898461057173849,
+    "balanced_accuracy": 0.7109212268890828,
+    "ez_auprc": 0.5422264205648775,
+    "ez_auroc": 0.7566327539212013,
+    "ez_f1": 0.477249338229556,
+    "ez_mrr": 0.6997080697080698,
+    "macro_f1": 0.6667948222399955,
+    "nez_f1": 0.8563403062504349,
+    "predicted_ez_fraction": 0.1961768741523913,
+    "sensitivity": 0.5449755301601639,
+    "specificity": 0.8768669236180016,
+    "top1_is_ez": 0.5692307692307692
+  },
+  "no_new_Outer": true,
+  "no_training_or_checkpoint_modification": true,
+  "only_aggregate_output": true,
+  "status": "PASS"
+}

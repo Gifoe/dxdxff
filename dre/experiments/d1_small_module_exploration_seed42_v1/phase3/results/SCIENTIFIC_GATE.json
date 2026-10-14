@@ -1,0 +1,16 @@
+{
+  "adaptive_repeated_Development": true,
+  "independent_confirmation": false,
+  "no_new_Outer": true,
+  "phase3_complete": true,
+  "point_target_met": true,
+  "primary_absolute_target": 0.6645464619346358,
+  "protocol_sha256": "5ff0c20ac2062af79fe6907ba41fd662badd1dd00fc05f36e366ca216bc45b09",
+  "selected_MacroF1": 0.6667948222399955,
+  "selected_common_candidate": "M8_MACRO_AWARE",
+  "selected_gain": 0.022248360305359705,
+  "selection": "one global model acrossfolds; all candidates retained",
+  "target_met_with_quality_gates": true,
+  "total_candidates": 8,
+  "total_training_cells": 40
+}

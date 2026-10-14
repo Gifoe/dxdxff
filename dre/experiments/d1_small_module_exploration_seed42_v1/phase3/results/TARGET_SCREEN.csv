@@ -1,0 +1,3 @@
+arm,MacroF1,delta_MacroF1,delta_AUROC,delta_AP,delta_EZF1,delta_sensitivity,positive_folds,point_target_met,all_quality_gates,MacroF1_two_points,AUROC_nondecline,AP_nondecline,EZF1_nondecline,sensitivity_margin,at_least4_positive_folds
+M7_MARGIN_GATED,0.661878477710697,0.017332015776061138,0.025286131608964535,0.043125961117236766,0.021067773482580154,0.01298600757407331,4,False,False,False,True,True,True,True,True
+M8_MACRO_AWARE,0.6667948222399955,0.022248360305359705,0.030655245970306333,0.03862533072795882,0.0337126020159762,0.03873073793911819,4,True,True,True,True,True,True,True,True

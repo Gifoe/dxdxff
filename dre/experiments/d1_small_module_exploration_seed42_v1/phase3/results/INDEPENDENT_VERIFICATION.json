@@ -1,0 +1,9 @@
+{
+  "all10_phase3_cells": true,
+  "all65_appearances_47_IDs": true,
+  "all_eight_candidates_retained": true,
+  "bootstrap_independent_multiplicity_parity": true,
+  "original_D1_frozen_and_exact": true,
+  "per_patient_independent_sklearn_parity": true,
+  "status": "PASS"
+}

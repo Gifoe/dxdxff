@@ -1,0 +1,183 @@
+{
+  "experiment": "m8_feature_pr_baselines_seed42_v1",
+  "reference_branch": "codex/d1-m8-progressive-ablation-seed42-v1",
+  "reference_commit": "e04d2a851175d95aab2e9931e2744cae6c247480",
+  "seed": 42,
+  "fold_seed": "42+1009*fold",
+  "input": "Exact D1 Raw-derived DELTA14 BEFORE PR, not ABS14, engineered ABS18, latent96 or 28D concatenation",
+  "pr": "Call original pinned uas_core.patient_z: float64 per-patient canonical-channel population mean/std; SD<=1e-8 => denominator1. This is M8's physiological D1-input PR, not its separate latent96 PR.",
+  "version_A": "Same DELTA14 without PR",
+  "version_B": "Same DELTA14 with original patient_z, still14D",
+  "preprocessing": "FIT-only mean imputer all classifiers; FIT-only StandardScaler LR/SVM/MLP; native unscaled RF/XGBoost. SVM calibration subfold preprocessors refitted on their own sub-FIT only.",
+  "weighting": "Every FIT patient has equal pre-class-weight sum; then inverse pooled FIT class-frequency weights; normalized patient weights mean1. Same policy A/B and all five classifiers. Platt uses patient-only weights, no class balancing.",
+  "cohort": {
+    "patients": 80,
+    "channels": 7635,
+    "records": 256,
+    "positive_EZ": 1743,
+    "negative_NEZ": 5892
+  },
+  "patients_by_fold": [
+    16,
+    16,
+    17,
+    15,
+    16
+  ],
+  "channels_by_fold": [
+    1631,
+    1498,
+    1746,
+    1425,
+    1335
+  ],
+  "inner_split": "Exact original M8 FIT/validation patients within each outer fold. Same split across all10 groups. No FIT+VAL refit.",
+  "hyperparameter_selection": "At each classifier/fold, choose ONE common configuration for A/B using equal mean validation patient MacroF1 across A/B, then mean patient AP, then mean patient AUROC, then earlier grid index. Versions share grid, selected topology/parameters and seed.",
+  "threshold_selection": "Each version uses own validation EZ-probability grid0..1 step.005. Max patient-mean classMacroF1, then positiveEZF1, nearest.5, lower threshold. No auxiliary metric in ties. EZ iff calibrated/native pEZ >= threshold.",
+  "svm_calibration": "RBF SVC;3 patient-held-out GroupKFold subfolds inside FIT only, shuffle seed42+1009*fold; refit scaler/imputer within sub-FIT; OOF margins -> patient-weighted Platt LogisticRegression(C1e6); finalSVC fits all legalFIT, calibration and numeric threshold frozen beforeTEST.",
+  "grids": {
+    "B1": [
+      {
+        "C": 0.1
+      },
+      {
+        "C": 1
+      },
+      {
+        "C": 10
+      }
+    ],
+    "B2": [
+      {
+        "C": 1,
+        "gamma": "scale"
+      },
+      {
+        "C": 1,
+        "gamma": 0.01
+      },
+      {
+        "C": 10,
+        "gamma": "scale"
+      },
+      {
+        "C": 10,
+        "gamma": 0.01
+      }
+    ],
+    "B3": [
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 1
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 5
+      },
+      {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      {
+        "max_depth": null,
+        "min_samples_leaf": 5
+      }
+    ],
+    "B4": [
+      {
+        "max_depth": 2,
+        "n_estimators": 200
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 500
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 200
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 500
+      }
+    ],
+    "B5": [
+      {
+        "hidden": [
+          32
+        ],
+        "alpha": 0.0001
+      },
+      {
+        "hidden": [
+          32
+        ],
+        "alpha": 0.01
+      },
+      {
+        "hidden": [
+          64,
+          32
+        ],
+        "alpha": 0.0001
+      },
+      {
+        "hidden": [
+          64,
+          32
+        ],
+        "alpha": 0.01
+      }
+    ]
+  },
+  "groups": 10,
+  "selected_cells": 50,
+  "candidate_cells": 190,
+  "extra_models_or_seeds": false,
+  "MLP": "sklearn MLPClassifier ReLU/Adam .001; max400; no row-wise validation early stopping; n_iter_no_change20, tol1e-5; candidate grid is only architecture variation; matched A/B selection.",
+  "RF": "300 trees, sqrt max_features, bootstrap; n_jobs2. No global scaling.",
+  "XGBoost": "3.0.5 isolated venv; CPU hist; eta.05, min_child_weight5, subsample/colsample1, reglambda1, n_jobs2; no GPU change.",
+  "positive_class": "EZ=1 derived from original yNEZ=0; continuous pEZ, not class predictions for AUROC/AP. Frozen references keep original decisions/NEZ thresholds.",
+  "primary_unit": "80 unique TEST patients equal weight; no fold-equal or pooled substitution",
+  "additional_units": [
+    "pooled_channels",
+    "per_outer_fold_patient_macro",
+    "per_outer_fold_pooled",
+    "unweighted5fold_mean_sampleSD_ddof1",
+    "four_center"
+  ],
+  "undefined_metrics": "AUROC NaN if single truth class; AP/F1/ranking NaN if no true positives; precision/NPV NaN if prediction denominator0; MCC NaN if any factor of denominator0; finite means and effective counts reported. No silent exclusions.",
+  "calibration_metrics": "Brier; LogLoss p clipped1e-15..1-1e-15; positive-class reliability ECE10 fixed uniform bins [0,.1),...,[.9,1]. Lower is better.",
+  "ranking": "Within patient only; descending continuous pEZ, canonical-channel name breaks ties; precision@3 denominator min(3,n); NDCG@5 binary relevance/log2 discount/ideal top positives; no positive =>NaN+coverage.",
+  "no_balanced_accuracy": true,
+  "paired_deltas": "Metric B minus A; main-table mean differences and paired-common-finite patient differences both reported where coverage differs. Optional descriptive paired10000seed42patient bootstrap, fixed selections/thresholds.",
+  "outer": "Freeze all50 model/preprocessor/calibration/threshold selections before one new frozen inference, seal50 prediction ledgers before full new TEST label read; no test-driven changes",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST_NOT_BLIND_CONFIRMATION",
+  "feature_cache_sha256": "8598f60976be5c45b9c5d717c1113a33c7ade7394da3bd6e7f4b003573a23642",
+  "reconstruction_sha256": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609",
+  "feature_gate_sha256": "b7c674d3bf179ab9890ab33832048baea788024e931069ee6780f8063482cd1e",
+  "split_sha256": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278",
+  "archive_sha256": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+  "reference_freeze_sha256": "4882d62e0492618a277897e56e434578b8481b7a8192213d01cd3a5b5f420d5d",
+  "reference_seal_sha256": "aa5ae8daeec58fb392e6587a89f24cb26ce34fc83a1125f8f6ae4a575ab81e02",
+  "code_sha256": {
+    "aggregate.py": "a3acccce22f8ea22cdfce325d0d02fa3eaffd85fb2c266fc4e6a0ad369059e94",
+    "evaluate.py": "d19af5a3e1c8da00ae478d0fd00b28f14e7193b51b25e6360b4cfdcad27658f4",
+    "models.py": "3df44e1f1ccb92af2abcb50e3bfb07d11c76bcc10b4d79f21ca86523f68b9a87",
+    "run_baselines.py": "3730edba3527bfe9aa5d33da8606f477a74352665f83828b6693c1862ac5d2be",
+    "support.py": "ef9626cbba740785f07f4a0f11aee7d255bb7a1e5b0f3285caf0b394b0731553",
+    "verify.py": "1f2ea5c87c1267f1049fb84cf4bf053106581c78e6a8cd5b2493db1b0e97afed"
+  },
+  "tests_sha256": {
+    "tests/test_metrics.py": "4f81ec02f78854da261f90082546de51794f4f562f150469a1f38f709a34e58d"
+  },
+  "original_source_sha256": {
+    "pr_uncertainty_aware_supervision_seed42_v1/code/uas_core.py": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+    "raw_delta_encoder_seed42_v1/PROTOCOL_LOCK.json": "1f59ed0604fe3f896ce5e954c9dd682feb43d2f0b751ddccc81fe8241e052673",
+    "raw_delta_encoder_seed42_v1/code/construct_delta.py": "04781d5705eed9e99169eb6e0cab688bf795830a97dd7d3a69fd4011ab8cfa95",
+    "raw_delta_encoder_seed42_v1/code/raw_physiological_features.py": "2db7ff90a3ab4f863aa919809b18e36fa9385ada5b2471b852f0bc405d8a88a0",
+    "raw_delta_encoder_seed42_v1/code/dependencies.py": "021af42f53235bee923291f30408f9ef8d250eeee9b35e680063416338a86fba"
+  },
+  "privacy": "Publish source, hashes and anonymous aggregates only; per_patient_metrics.csv and predictions.csv, models/preprocessors and all IDs/clinical labels remain trusted-server-private.",
+  "installed_skills_used": []
+}

@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "scientific_terminal": "PR_BROAD_AVERAGE_GAIN_NOT_UNIFORM_RANKING_OR_CALIBRATION",
+  "classifiers": 5,
+  "groups": 10,
+  "selected_fold_cells": 50,
+  "PR_positive_patient_macro_AUROC_models": 5,
+  "PR_positive_patient_macro_AP_models": 5,
+  "PR_positive_patient_macro_MacroF1_models": 5,
+  "PR_positive_patient_macro_ACC_models": 5,
+  "MRR_declined_models": [
+    "B2"
+  ],
+  "Hit1_declined_models": [
+    "B2"
+  ],
+  "LogLoss_worsened_models": [
+    "B1",
+    "B5"
+  ],
+  "ECE_worsened_models": [
+    "B1",
+    "B2"
+  ],
+  "best_primary_feature_baseline": "B1 Logistic Regression + PR",
+  "best_no_PR_MacroF1": "B4 XGBoost",
+  "best_no_PR_AUROC_AP": "B2 RBF SVM",
+  "MLP_candidate_iteration_cap_reached": 37,
+  "MLP_selected_iteration_cap_reached": 9,
+  "no_post_test_tuning": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST_SINGLE_SEED",
+  "not_M8_module_ablation": true
+}

@@ -1,0 +1,10 @@
+{
+  "candidate_cells": 190,
+  "groups": 10,
+  "installed_skills_used": [],
+  "patient_metric_rows": 800,
+  "reference_patient_rows": 160,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_cells": 50,
+  "status": "COMPLETE_VERIFIED"
+}

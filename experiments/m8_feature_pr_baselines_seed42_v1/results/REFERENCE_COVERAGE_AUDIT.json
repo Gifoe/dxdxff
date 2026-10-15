@@ -1,0 +1,7 @@
+{
+  "aggregate_sha256": "5300cc52e7a096683a4511aaf659c768f651747d21cb570905ed04247e59a215",
+  "no_model_or_prediction_changes": true,
+  "phase": "read-only post-inference reporting",
+  "source_sha256": "f5066fe43a57aa23d93bf8a551d6f94d4942c14829162803be5370f16b9cfabf",
+  "status": "PASS"
+}

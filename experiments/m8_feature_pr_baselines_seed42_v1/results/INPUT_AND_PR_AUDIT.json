@@ -1,0 +1,106 @@
+{
+  "binding": {
+    "code": {
+      "aggregate.py": "a3acccce22f8ea22cdfce325d0d02fa3eaffd85fb2c266fc4e6a0ad369059e94",
+      "evaluate.py": "d19af5a3e1c8da00ae478d0fd00b28f14e7193b51b25e6360b4cfdcad27658f4",
+      "models.py": "3df44e1f1ccb92af2abcb50e3bfb07d11c76bcc10b4d79f21ca86523f68b9a87",
+      "run_baselines.py": "3730edba3527bfe9aa5d33da8606f477a74352665f83828b6693c1862ac5d2be",
+      "support.py": "ef9626cbba740785f07f4a0f11aee7d255bb7a1e5b0f3285caf0b394b0731553",
+      "verify.py": "1f2ea5c87c1267f1049fb84cf4bf053106581c78e6a8cd5b2493db1b0e97afed"
+    },
+    "dependencies": {
+      "D0_bank1": "6ec2c6019fe0c7c2236f83081841a8bf2c3db74284629b08aa0dfcd8221262b7",
+      "D0_bank2": "5e058551d292aac8e60cec8d51e32aea50a662c806bda6a794d0af289d25ab9b",
+      "D0_bank3": "cae4196e0a5b3139bf70b8cc3f5ca16da02266c86f509dd068e6f6796029e53a",
+      "D0_bank4": "30fc4c48a4a49251c291266e22592f6565f8385e94af8a4e59481f2f6966aa50",
+      "D0_bank5": "f7c5bba32ac430573f133570f27f2cffd973c25a8021f8a2c0cccb27d77dda66",
+      "D0_checkpoint1": "48ee0e83bee605cbc08438b7ac6cb59423e83af133bcad0fc828b544e7ad4d77",
+      "D0_checkpoint2": "f9872863419aca7c8bb58590fd8e375354c26bc76f6668d29d989d56cbc77460",
+      "D0_checkpoint3": "2492bb227981103aa76ac3c0afe7c2352ac1911178a0c5dc741a7597aef37880",
+      "D0_checkpoint4": "261690958414e89a4f638bc862d6d26c0ac8a1d792cd0952335fec249ec0a0a8",
+      "D0_checkpoint5": "b296bbbaffe2f7f71f0e70e9494008f832ab7cb3e4a5257597bd31288f61742a",
+      "core": "1b1ccb0a361e6245cb2e6089347e147036aac90437c0992194f6db7bebf1503a",
+      "factory": "c567196692be1149795d93586fe25e2b474f071511bd2fbd0f561db82e00b7d5",
+      "historical_development_freeze": "30a205b9cfd07202acf2ef33214629b3fafd7be62d269927ae070d5089b07d66",
+      "legal_bank1": "a863a36a983d77d3e78675ee1761c9edba3e35f8dd6e52d7d12d03109e415a1a",
+      "legal_bank2": "6efc5b4d4934b3847207d32b94cac884df2e8b34ec7d170214ae1450d04f2fea",
+      "legal_bank3": "d936ef38ba96bb27d13dc417ac92582b3b7a150ef5d725e32e629ec9f2fee6cd",
+      "legal_bank4": "bc4ca7fb9b0bb860015a61dcea4146980386ce5db70a66e58817e50b40ef3ac2",
+      "legal_bank5": "a4a809d1146d719504fbbc14eaba58d4f932f746f1a617ef2e6853967a9f50dd",
+      "manifest": "f7869e994e8494397761e4efa0a2a2057c2a13541331e5933e94c6f7b82a065f",
+      "original_code": {
+        "common.py": "324d5e162989b9b4efa33a49d50f626ccd7f52bc261a31a456f4ee7532fcc0bb",
+        "finalize.py": "620e1e5cdfbe7a75f0887ffd1beb5f4bfbceb2d254f27d5bb0824094f3b8e9cf",
+        "model.py": "bcd2d6b84a8d0cb688e86708fcfb78158ae8267ee36ce50d02354b3a004b3cb8",
+        "posterior.py": "8cbe1a39b6035c11c9531aaba82652dd17de0a4d4a7c131bcf718ff0824737ba",
+        "prepare.py": "8cc9632b698edeb07f98a098d5d810cf1ab4c71db4b0f6539130c91bd773d114",
+        "run_fold.py": "7a984df72b6668a2f9ce59cdc178bbc277f64e5b3b8107295feaf4704cad9bf5",
+        "train.py": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+        "verify_fold.py": "e875020d7e79732b96fa6e06b3b4a7e68ec96f228d5c8598b80bc6bbb2509e29"
+      }
+    },
+    "feature_gate_sha256": "b7c674d3bf179ab9890ab33832048baea788024e931069ee6780f8063482cd1e",
+    "feature_sha256": "8598f60976be5c45b9c5d717c1113a33c7ade7394da3bd6e7f4b003573a23642",
+    "protocol_sha256": "44f8d2b530916484eedf1e412261412576f809a88199022c28a2c8cd5e52ded6",
+    "reconstruction_sha256": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "sklearn": "1.7.2",
+      "torch": "2.11.0+cu128",
+      "xgboost": "3.0.5"
+    }
+  },
+  "cohort_channels": 7635,
+  "cohort_patients": 80,
+  "folds": [
+    {
+      "PatientZ_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 51,
+      "fold": 1,
+      "scaled_PR_exact_D1_legal_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PatientZ_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 51,
+      "fold": 2,
+      "scaled_PR_exact_D1_legal_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PatientZ_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 50,
+      "fold": 3,
+      "scaled_PR_exact_D1_legal_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PatientZ_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 52,
+      "fold": 4,
+      "scaled_PR_exact_D1_legal_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PatientZ_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 51,
+      "fold": 5,
+      "scaled_PR_exact_D1_legal_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    }
+  ],
+  "no_raw_or_EDF_processing": true,
+  "seizures": 256,
+  "status": "PASS"
+}

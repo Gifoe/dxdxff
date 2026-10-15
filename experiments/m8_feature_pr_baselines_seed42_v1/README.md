@@ -1,0 +1,17 @@
+# M8 physiology-feature baselines with/without PR — seed42
+
+This experiment is **not an ablation of the complete M8 network**. It compares five conventional classifiers on the same D1 physiological DELTA14, before/after the original patient-local Patient Z used by M8's frozen physiological D1 branch. M8's separate96D Raw-latent normalization is not transplanted to these14D models. No14→28D concatenation, EEG processing, additional feature or new model module is introduced.
+
+The models are Logistic Regression, RBF SVM, Random Forest, XGBoost and sklearn MLP. Version A has no PR; Version B calls the exact original pinned Patient Z function. Each has all five original Outer folds:10 groups/50 selected model-fold cells. All candidate grids, weighting, calibration and selection rules are prospectively fixed in configs/PROTOCOL_LOCK.json. The original Inner FIT/validation patient identities are reused.
+
+For a controlled pair, a single common hyperparameter setting is chosen for A/B per classifier/fold using their equal-weight mean validation patient Macro-F1, then AP/AUROC and fixed grid order. Both versions therefore have the same selected architecture/settings, random seed and training procedure. Each selects its own validation-only numeric threshold. This is a matched-policy comparison, not two separately maximized AutoML searches. No refit on FIT+validation occurs before Outer.
+
+All fitting uses patient-equal sample weights followed by FIT-only class-frequency weights. Imputers fit FIT only. LR/SVM/MLP have FIT-only StandardScaler; RF/XGBoost use native unscaled inputs. SVM Platt calibration uses three patient-held-out subfolds inside FIT, with independent sub-FIT imputer/scaler fitting. Validation and TEST labels never calibrate probabilities. Other models use their native probabilities; these are not guaranteed calibrated.
+
+Run tests/test_metrics.py, then run_baselines.py gate, train, outer, verify, all with the same trusted-server --runtime argument. The original private data paths are defaults in support.py. Use the isolated environment recorded by the audit, NumPy/SciPy/sklearn before Torch, OMP/MKL/OpenBLAS threads1; RF/XGBoost use two CPU workers. No GPU or unrelated process is changed. An existing matching completed runtime is reused rather than run as a second scientific test.
+
+Primary summaries weight80 TEST patients equally; pooled-channel summaries and unweighted five-fold mean/sample-SD are distinct outputs. EZ is the positive class. AUROC and sklearn Average Precision use continuous scores, ranking is strictly within patient, and calibration uses ten fixed probability bins. Undefined metrics remain NaN with effective counts. The expressly excluded accuracy variant is neither calculated nor reported.
+
+Patient identities and individual predictions are intentionally absent from this public directory. They are saved as private/results/per_patient_metrics.csv and private/results/predictions.csv inside the trusted-server runtime, with hashes and exact CSV round-trip verification. Model/preprocessing/calibration files and runtime logs also stay private. Public results contain only non-identifying aggregates, source and hashes.
+
+The same cohort has extensive historical Development/Outer exposure. This is **exploratory repeated-test evidence**, not a new blind or clinical confirmation. Read report.md for actual results, all ten groups, PR differences and the frozen D1/M8 comparison. No installed skill is used.

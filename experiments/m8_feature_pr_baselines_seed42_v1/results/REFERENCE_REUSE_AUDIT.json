@@ -1,0 +1,14 @@
+{
+  "channels_per_model": 7635,
+  "expanded_metrics_recomputed_from_original_frozen_scores": true,
+  "models": [
+    "D1",
+    "M8"
+  ],
+  "no_checkpoint_inference_or_modification": true,
+  "original_freeze_sha256": "4882d62e0492618a277897e56e434578b8481b7a8192213d01cd3a5b5f420d5d",
+  "original_primary_metrics_exact": true,
+  "original_seal_sha256": "aa5ae8daeec58fb392e6587a89f24cb26ce34fc83a1125f8f6ae4a575ab81e02",
+  "patients_per_model": 80,
+  "status": "PASS"
+}

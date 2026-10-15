@@ -1,0 +1,13 @@
+{
+  "all50_sealed_before_full_new_test_y": true,
+  "channels_per_group": 7635,
+  "freeze_sha256": "5d69a5a885e0e170d2e6253c53269d8853478e8f4720e9efa44abdfae08a06aa",
+  "groups": 10,
+  "model_fold_cells": 50,
+  "patients_per_group": 80,
+  "private_patient_csv_sha256": "d830d102c6f1ae6e6466ec0242d51a9bc44f2905f1da1b08a9e8d976caa2063e",
+  "private_predictions_csv_sha256": "f2af65de226cb481a37f5bfddd191a45951dbf1548b58fe1760c6fc1d07b1d33",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "602ae16b25304267234f2f9e0a3220e391864c9529eb2ce3853a71abeddc405b",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

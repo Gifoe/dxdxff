@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "5d69a5a885e0e170d2e6253c53269d8853478e8f4720e9efa44abdfae08a06aa",
+  "matched_pair_hyperparameters": true,
+  "models": 50,
+  "own_fold_test_excluded": true,
+  "status": "PASS",
+  "validation_only_thresholds": true
+}

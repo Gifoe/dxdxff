@@ -1,0 +1,41 @@
+{
+  "anonymous_aggregate_hashes": {
+    "MODEL_SELECTION.csv": "23fd5d86ff5a4f3d869c7e15cff25be4c224c2b6fc9e4196cf2d019f5092b6e4",
+    "SVM_CALIBRATION_AUDIT.csv": "da49081c33d5beb2afe20db1e29427151c512a4f75f889c218198989976b38a1",
+    "VALIDATION_SEARCH.csv": "c75c3f28081320a51ea9afdb5bc1bb09b93925aa1d273e83c4a9f665cefed242",
+    "center_metrics.csv": "40327d09ca4b98afa4c5d94c1b8a1df7d73f73a0ac295502ed57b0bf64423254",
+    "confusion_matrices.csv": "f5d71e69baaa737107f40ce3603ec43d8c4c85a311179f10c78163dc813a49ec",
+    "extended_metrics.csv": "eefdbfdc2a025f909b18c2d5af74502c94a9c791bc5adabccd767a209edde67d",
+    "frozen_reference_metrics.csv": "cefb5f167574af4b7b2c35bece516fa3e581cff7373cc8b49a59512580e25ecf",
+    "main_results.csv": "82e50b2359b402d2b03aa5f4a12ca754cdcf7982ea6f435ca0e58100235918ab",
+    "metric_coverage.csv": "31619337f6b92ed3d984f34b9ae3e01bdf4d4bf6b78c9aa91a091663622a511d",
+    "outer_fold_mean_std.csv": "6eb257e2d8e391d6d4466ebd2ba6578742d2d3d0d1560d897d1d6102138b064f",
+    "outer_fold_metrics.csv": "b0e3622edc1fd20804c4510c90d26b7171a58af46a9d000a33e0ef288bc145f9",
+    "paired_pr_intervals.csv": "8714ff0acd7c93535dd27f944621a3a105b875386b79dfc804e0c42fa5384e70",
+    "pooled_metrics.csv": "8ad40692be28d7a3ab735c55b0942a4de870131b97f18c312ae1eb92e2f7386d",
+    "pr_delta.csv": "da383f23b9638ca780918be745f798d029565a7a0dfb029d690152f3966c286e",
+    "ranking_metrics.csv": "b13c6d39cf5976d34c4ea5228f3d2eb4a5d1036c9907a94792498f3f8406b68a",
+    "reference_comparison.csv": "84473517bc6cbc03e60817857388cb8fae7db29ca751f005a380872adc731f21"
+  },
+  "channels_per_group": 7635,
+  "feature_dimensions": 14,
+  "freeze_sha256": "5d69a5a885e0e170d2e6253c53269d8853478e8f4720e9efa44abdfae08a06aa",
+  "groups": 10,
+  "new_model_fold_cells": 50,
+  "no_forbidden_metric": true,
+  "paired_bootstrap_independently_reproduced": true,
+  "patient_metric_rows_checked": 960,
+  "patients_per_group": 80,
+  "private_csv_roundtrip_exact": true,
+  "private_patient_metrics_sha256": "d830d102c6f1ae6e6466ec0242d51a9bc44f2905f1da1b08a9e8d976caa2063e",
+  "private_predictions_sha256": "f2af65de226cb481a37f5bfddd191a45951dbf1548b58fe1760c6fc1d07b1d33",
+  "source_hashes": {
+    "aggregate.py": "a3acccce22f8ea22cdfce325d0d02fa3eaffd85fb2c266fc4e6a0ad369059e94",
+    "evaluate.py": "d19af5a3e1c8da00ae478d0fd00b28f14e7193b51b25e6360b4cfdcad27658f4",
+    "models.py": "3df44e1f1ccb92af2abcb50e3bfb07d11c76bcc10b4d79f21ca86523f68b9a87",
+    "run_baselines.py": "3730edba3527bfe9aa5d33da8606f477a74352665f83828b6693c1862ac5d2be",
+    "support.py": "ef9626cbba740785f07f4a0f11aee7d255bb7a1e5b0f3285caf0b394b0731553",
+    "verify.py": "1f2ea5c87c1267f1049fb84cf4bf053106581c78e6a8cd5b2493db1b0e97afed"
+  },
+  "status": "PASS"
+}

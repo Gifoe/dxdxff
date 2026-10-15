@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "tests_run_before_training": 8,
+  "synthetic_only": true,
+  "test_file": "tests/test_metrics.py",
+  "test_sha256": "4f81ec02f78854da261f90082546de51794f4f562f150469a1f38f709a34e58d",
+  "cases": ["binary metric parity", "undefined truth classes", "undefined prediction classes", "canonical ranking ties", "ECE edge bins", "patient-equal threshold selection", "FIT-only scaling", "patient-equal weights"]
+}

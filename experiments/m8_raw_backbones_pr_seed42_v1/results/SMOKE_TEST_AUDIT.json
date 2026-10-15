@@ -1,0 +1,69 @@
+{
+  "EZ_reporting_is_one_minus_NEZ": true,
+  "PR_matches_original_population_Z_exact": true,
+  "all_80_patient_split_exclusions_verified": true,
+  "binding_sha256": "5e4506e4422f6983b239292f8193147308bdb477a5a31101112ec0f61a1e4301",
+  "models": [
+    {
+      "BN_buffers_exact": true,
+      "channel_permutation_equivariant": true,
+      "chunk_score_max_error": 9.417533874511719e-06,
+      "gradient_cache_direct_logit_exact": true,
+      "gradient_cache_max_absolute_error": 1.1920928955078125e-07,
+      "model": "TimeConvCNN",
+      "padding_invariant": true,
+      "paired_initial_hash": "4fb2ce8b1d7bc7b27f768dc1f5c0a39d2a50b26d656e470bf14d207ce8d747a6",
+      "parameters": 11336737,
+      "seconds": 2.0912812999995367,
+      "status": "PASS"
+    },
+    {
+      "BN_buffers_exact": true,
+      "channel_permutation_equivariant": true,
+      "chunk_score_max_error": 2.2351741790771484e-07,
+      "gradient_cache_direct_logit_exact": true,
+      "gradient_cache_max_absolute_error": 1.5832483768463135e-08,
+      "model": "EEGNet",
+      "padding_invariant": true,
+      "paired_initial_hash": "8d0ceb6b1c2ab39b00a5753b997103510af9e45f8d31fa7affce7719cfebcce0",
+      "parameters": 2329,
+      "seconds": 0.45329080000010435,
+      "status": "PASS"
+    },
+    {
+      "BN_buffers_exact": true,
+      "channel_permutation_equivariant": true,
+      "chunk_score_max_error": 1.1324882507324219e-06,
+      "gradient_cache_direct_logit_exact": true,
+      "gradient_cache_max_absolute_error": 2.9802322387695312e-08,
+      "model": "SEEGNet",
+      "padding_invariant": true,
+      "paired_initial_hash": "e4d548fc3573d80c4945baa56ec3b126adfc2ff39bb0dca5efdca92fd5ea1650",
+      "parameters": 279950,
+      "seconds": 1.0817547000006016,
+      "status": "PASS"
+    },
+    {
+      "BN_buffers_exact": true,
+      "channel_permutation_equivariant": true,
+      "chunk_score_max_error": 5.21540641784668e-08,
+      "gradient_cache_direct_logit_exact": true,
+      "gradient_cache_max_absolute_error": 4.656612873077393e-10,
+      "model": "SEEGformer",
+      "padding_invariant": true,
+      "paired_initial_hash": "1978e84c45a8a807fab794132e4bc30d485e566a6238a560738812590c59cab3",
+      "parameters": 310278,
+      "seconds": 0.4914557000010973,
+      "status": "PASS"
+    }
+  ],
+  "no_outer_inference": true,
+  "real_FIT_admission": {
+    "channels": 64,
+    "complete_FIT_patient": true,
+    "discarded_smoke_state": true,
+    "seconds": 0.9609777000005124,
+    "valid_channel_windows": 11328
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "status":"VERIFIED_ARCHIVE_SOURCES",
+  "manifest":"dre/server_e_drive/SERVER_FILE_MANIFEST.csv",
+  "line_endings":"Local Git checkout is CRLF; normalized LF SHA256 matches the original manifest for all four vendored files. Runtime byte hashes are separately frozen below.",
+  "vendor_byte_sha256":{
+    "models/omni_archived.py":"5dbef8c09d0bfd2a4890128f9986967e5e7d61032a59295f2678fbadd37bee9b",
+    "models/seegformer/model.py":"1ff06b34705431e3058ed0cbe9760a2e417a1665bbbb6535402ec60232d0917a",
+    "models/seegformer/fft_frontend.py":"844ab4fab2a783379c9fa175211551f9d56585f934e85b33896aa1662735cf54",
+    "models/seegformer/transformer.py":"23496d671e6a4cb3a04ea0d1f8353c050a0581298c349dd3eb2fa84dceb83305"
+  },
+  "manifest_original_sha256":{
+    "493d3145da_omni_backbones.py":"f9c93b61b025073f7bd9820f638aa497bf50815835170c444edbbf196f46318c",
+    "6a2f4ae3e5_model.py":"a38e3324ec6ef3305be1a51a2eb477524773a3bccfbf0370a8b64aca20baf1e2",
+    "4248def112_fft_frontend.py":"29ea5f5ecc6b867738dbc2aa4df14cc2150010c5c5e2954778a0601cd9d6df5b",
+    "fd9bd87964_transformer.py":"150b81ef227e10cd6719616e8774218b90ae284ceb6bd65fa56b01c5285da7f0",
+    "4c69d75168_runner.py":"2ce0f1cc1117c32c7aec6e24effda527efb5b8c5b66070418b1a3ea958db2a55",
+    "848bed91a4_run_baseline.py":"d6d30bd729b8fbbf705e9dd7b73dc351e1800995bc0dbd5b4cc109f14c196846"
+  },
+  "EEGNet_source":"https://github.com/vlawhern/arl-eegmodels/blob/master/EEGModels.py",
+  "EEGNet_audit_date":"2026-10-15",
+  "adaptations":{
+    "TimeConvCNN":"Exact archived STFT224-bin/timeconv/full ResNet18/projection128 encoder, scratch weights; n_times500/sfreq250; separate head after differentiable full-window/seizure mean-SD pooling. Not published official60s Morlet CNN.",
+    "EEGNet":"PyTorch EEGNet-8,2-adapted: half-second temporal125, depthwise spatial Chans1 degeneracy, separable temporal31, pooling4/8, dropout0.5; mean-SD aggregation and single binary head; spatial maxnorm1 and head maxnorm0.25.",
+    "SEEGNet":"Exact archived multiscale temporal/SE/residual/BiLSTM/temporal attention encoder at n_times500/sfreq250; head after full-window/seizure pooling. SEEG-Net-adapted, not official paper protocol.",
+    "SEEGformer":"Exact archived FFT frontend and masked transformer blocks;500samples/fs250/FFT1000,0.5-125Hz; three branches and branch-weighted classifier retained; expose post-transformer channel embeddings and aggregate differentiably before heads. Head input expands64to128 for mean-SD. No MRI/coordinates or patient-specific supervised tuning. Cross-patient adapted protocol."
+  }
+}

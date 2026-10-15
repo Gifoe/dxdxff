@@ -1,0 +1,56 @@
+{
+  "initials": [
+    {
+      "fold": 1,
+      "sha256": "1978e84c45a8a807fab794132e4bc30d485e566a6238a560738812590c59cab3",
+      "version": "Original"
+    },
+    {
+      "fold": 2,
+      "sha256": "f1ed64e42549ee3d56cecfcf46f3c3df21435af36c3cf6c80cc4d4a49c9e7ba1",
+      "version": "Original"
+    },
+    {
+      "fold": 3,
+      "sha256": "ee25eac15791729d091508f89cdc5ce62706e2a1898abf97fd75febdbeabc0f6",
+      "version": "Original"
+    },
+    {
+      "fold": 4,
+      "sha256": "6c94d3f14d764897f0258e30012e2de837071dd759c3faaea4f7eb81168f06bd",
+      "version": "Original"
+    },
+    {
+      "fold": 5,
+      "sha256": "44b76d8cdc73374369f2eed4a981d7337faa57c959565db3749267b78c5b6261",
+      "version": "Original"
+    },
+    {
+      "fold": 1,
+      "sha256": "1978e84c45a8a807fab794132e4bc30d485e566a6238a560738812590c59cab3",
+      "version": "PR"
+    },
+    {
+      "fold": 2,
+      "sha256": "f1ed64e42549ee3d56cecfcf46f3c3df21435af36c3cf6c80cc4d4a49c9e7ba1",
+      "version": "PR"
+    },
+    {
+      "fold": 3,
+      "sha256": "ee25eac15791729d091508f89cdc5ce62706e2a1898abf97fd75febdbeabc0f6",
+      "version": "PR"
+    },
+    {
+      "fold": 4,
+      "sha256": "6c94d3f14d764897f0258e30012e2de837071dd759c3faaea4f7eb81168f06bd",
+      "version": "PR"
+    },
+    {
+      "fold": 5,
+      "sha256": "44b76d8cdc73374369f2eed4a981d7337faa57c959565db3749267b78c5b6261",
+      "version": "PR"
+    }
+  ],
+  "paired_initial_states_identical": true,
+  "status": "PASS"
+}

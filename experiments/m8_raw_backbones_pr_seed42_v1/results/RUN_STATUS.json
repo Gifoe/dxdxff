@@ -1,0 +1,10 @@
+{
+  "epoch": 7,
+  "fold": 5,
+  "model": "SEEGformer",
+  "new_Outer_access": false,
+  "patients_complete": 50,
+  "patients_total": 51,
+  "status": "TRAINING",
+  "version": "PR"
+}

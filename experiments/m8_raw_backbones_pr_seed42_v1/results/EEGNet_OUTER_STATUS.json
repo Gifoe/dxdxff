@@ -1,0 +1,11 @@
+{
+  "channels_per_version": 7635,
+  "freeze_sha256": "d5689c75f861df3d22279e2a2f4cc6a221c16e29bb36c8287ebe90fd430dced4",
+  "model": "EEGNet",
+  "patient_metrics_sha256": "254b1583cd899e55ea63779a580def91377a1cac74e44a0de0681e3e6f1b2b36",
+  "patients_per_version": 80,
+  "predictions_sha256": "115b79c865598817993932005ebb0dd3b9a9921b026e2acbbfd22fac3bf91369",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "de0f599a356d8f4aabeedeaf8ba62a3f7ce4cd298f813c9fd85141adbabce06a",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

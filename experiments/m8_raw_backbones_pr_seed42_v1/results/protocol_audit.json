@@ -1,0 +1,20 @@
+{
+  "all_patient_disjoint_splits": true,
+  "channels_per_configuration": 7635,
+  "completed_backbones": [
+    "TimeConvCNN",
+    "EEGNet",
+    "SEEGNet",
+    "SEEGformer"
+  ],
+  "completed_configurations": 8,
+  "full_patient_PR": true,
+  "no_handcrafted_feature_or_D1_input": true,
+  "no_window_subsampling": true,
+  "patients_per_configuration": 80,
+  "required_configurations": 8,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seed": 42,
+  "status": "COMPLETE",
+  "thresholds_validation_only": true
+}

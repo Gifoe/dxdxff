@@ -2,7 +2,9 @@
 
 Branch: `codex/m8-raw-backbones-pr-seed42-v1`.
 
-This experiment trains **four raw backbones × two independent PR versions × all five frozen Outer folds**. These are not the preceding feature-only classifiers and not a D1/M8 logit fusion. No fifth backbone is evaluated. Source and protocol audits plus the CUDA admission tests are complete; real training is running on the trusted server. Final metrics must come only from completed frozen Outer passes, not this admission test.
+**COMPLETE, 2026-10-16:** four raw backbones × two independently trained PR versions × all five frozen Outer folds. All 40 training cells and all eight Outer configurations finished. Each configuration covers 80 patients and 7,635 channels; 640 patient-level metric rows and 10,000 paired bootstrap draws passed independent verification. These are not the preceding feature-only classifiers or a D1/M8 logit fusion. No fifth backbone was evaluated.
+
+See [the complete report](report.md), [patient-macro main table](results/main_results.csv), [pooled table](results/pooled_metrics.csv), [paired PR intervals](results/paired_pr_intervals.csv), and [independent verification](results/INDEPENDENT_VERIFICATION.json). PR did not consistently improve AUROC/AP: TimeConv-CNN and EEGNet decreased, SEEG-Net and SEEGformer increased; only SEEG-Net's paired AUROC/AP intervals both excluded zero. None surpassed the same-cohort D1/M8 primary reference metrics. These are exploratory repeated-test results, not blind confirmation.
 
 ## Sources and adaptations
 
@@ -67,7 +69,9 @@ Trusted Windows uses the existing CUDA environment; all new data/checkpoints/log
 3. Each backbone freezes all ten selections before its single Outer pass; saves hash-bound per-patient score/embedding caches; seals all predictions before a new full Outer-label read.
 4. Epoch-boundary model/optimizer/RNG/selection resume; completed cells/checkpoints/patient predictions are reused only with exact source/data/freeze bindings.
 5. Each completed backbone produces actual anonymous main, extended, pooled, fold/center, foldmean±SD, ranking, metriccoverage, confusion, PRdelta and10,000seed42pairedpatient-bootstrap tables. Incomplete backbones do not get fabricated rows.
-6. `tests/verify_results.py` independently verifies all eight configurations from actual frozen predictions, selection histories, metrics and paired bootstraps.
+6. `tests/verify_results.py` checks all eight configurations from actual frozen predictions, selection histories, metrics and paired bootstraps. Its original float32 sklearn log-loss check failed after completion; the frozen metric engine correctly promotes to float64. The external [reporting-only precision wrapper](../../tools/m8_raw_backbones_pr_acceleration_v1/verify_reporting_v2.py) executes the same verifier with float64 probabilities before clipping, without editing any frozen scientific source. All 640 checks and bootstraps passed at the original 1e-12 tolerance. Prediction/checkpoint/threshold hashes remained unchanged; see [the audit](results/REPORTING_VERIFIER_AUDIT.json). No model was retrained or re-predicted for this correction.
+
+The legacy `RUN_STATUS.json` is only a last-writer training snapshot, not the final completion authority. Use all four `*_OUTER_STATUS.json` files together with `INDEPENDENT_VERIFICATION.json` and `REPORTING_VERIFIER_AUDIT.json`.
 
 Patient/channel predictions, labels, individual metrics, latent embeddings, checkpoints, optimizer/scaler state, logs and identifying manifests **stay on the trusted server**. `public/` aggregate artifacts alone may be copied into repository`results/`. Anonymous aggregates keep center/fold summaries but no patient/channel IDs. Undefined metrics stayNaN with coverage counts. Pooled metrics, patient means and foldmean±SD remain separate.
 

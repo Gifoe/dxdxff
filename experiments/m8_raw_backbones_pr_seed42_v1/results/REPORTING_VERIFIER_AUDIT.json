@@ -1,0 +1,20 @@
+{
+  "all_protected_artifact_hashes_unchanged": true,
+  "correction": "float64 probabilities before sklearn metrics and 1e-15 clipping, matching frozen metric engine",
+  "float64_sklearn_log_loss_max_error": 0.0,
+  "frozen_sources_changed": false,
+  "numerical_tolerance": 1e-12,
+  "original_probability_dtypes": {
+    "float32": 640
+  },
+  "original_sklearn_log_loss_max_error": 0.16906537126783738,
+  "original_verifier_sha256": "122058cdc00c197b1d52ce7990ccd4cb1f015c0fd279bff35942ac23f360344a",
+  "patient_rows": 640,
+  "predictions_changed": false,
+  "protected_artifact_count": 57,
+  "reporting_wrapper_sha256": "037eb19dacca2049199d55c4a213281957d8a2c9db693f87306dfbe46c21b2d5",
+  "status": "PASS",
+  "thresholds_changed": false,
+  "tolerance_unchanged": true,
+  "training_or_inference_run": false
+}

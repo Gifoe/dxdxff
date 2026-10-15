@@ -1,0 +1,11 @@
+{
+  "channels_per_version": 7635,
+  "freeze_sha256": "f5c853b8bb07a94787ad7c7b8aea805bec3de9b2a9ba70e920a42af7fd981dd0",
+  "model": "SEEGNet",
+  "patient_metrics_sha256": "ac9c18132bdc02618119bf47e6aa91446881440660030bd20a1ec9d5e73f2924",
+  "patients_per_version": 80,
+  "predictions_sha256": "b1477f60363efbc9e33a35e2b1d1702dc880c11ac6dfe140097c6190991c23ed",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "14ecaee0939910f26652daedb40f97d75278b202a679aff64b94fbb845610521",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

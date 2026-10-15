@@ -95,3 +95,30 @@ blind retry.
 Only code, hashes and compact anonymous admission/cutover audits may be public.
 All recovery checkpoint copies, patient/channel predictions, embeddings,
 identities, weights and runtime logs remain on the trusted server.
+
+## Completion and reporting-only verifier correction
+
+Both lanes completed all training and all four frozen Outer passes by approximately
+01:04 Asia/Shanghai on 2026-10-16. The coordinator then stopped at the original
+independent verifier's `log_loss` assertion, not a model/inference failure.
+The original verifier passed stored float32 probabilities directly to sklearn;
+its clipping precision differed from the frozen metric engine, which explicitly
+casts probabilities to float64 and clips at 1e-15.
+
+The new, separately hashed `verify_reporting_v2.py` leaves every frozen scientific
+file and the four operational files in `EXECUTION_MANIFEST.json` untouched.
+It checks the original verifier SHA256, changes only one probability-conversion
+expression in memory, and runs all its checks at the original 1e-12 tolerance.
+This is not a new training/execution engine or a relaxed numerical comparison.
+It performs no fitting, inference, threshold selection or prediction adjustment.
+
+Actually verified: 640 patient metric rows, all 40 checkpoint/validation selections,
+paired initialization identity, all eight 80-patient/7,635-channel configurations,
+and 10,000 paired patient bootstrap draws. Original float32 sklearn log-loss
+maximum discrepancy was 0.16906537126783738; float64 discrepancy is exactly zero.
+Bootstrap maximum error was 1.3877787807814457e-16. All 57 protected artifact
+hashes (input freeze, predictions, patient metrics, evaluation freezes/seals and
+selected checkpoints) were unchanged before/after verification. See the published
+`REPORTING_VERIFIER_AUDIT.json` and `INDEPENDENT_VERIFICATION.json` in the experiment
+results directory. Original coordinator failure logs/status are preserved privately;
+they are not overwritten to hide the precision-check failure.

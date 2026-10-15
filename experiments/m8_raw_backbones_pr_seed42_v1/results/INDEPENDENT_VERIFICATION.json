@@ -1,0 +1,14 @@
+{
+  "all_five_outer_folds_complete": true,
+  "bootstrap_draws": 10000,
+  "bootstrap_max_error": 1.3877787807814457e-16,
+  "bootstrap_seed": 42,
+  "channels_per_configuration": 7635,
+  "configurations": 8,
+  "independent_sklearn_check": true,
+  "paired_initializations_identical": true,
+  "patient_rows_verified": 640,
+  "public_CSV_privacy_check": true,
+  "status": "PASS",
+  "validation_only_selection_verified": true
+}

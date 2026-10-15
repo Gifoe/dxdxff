@@ -1,0 +1,11 @@
+{
+  "channels_per_version": 7635,
+  "freeze_sha256": "c544430179c969bd0f68a9432ea822c10c61b811f2a608cf5b8cf588f9c45077",
+  "model": "TimeConvCNN",
+  "patient_metrics_sha256": "02e3c1adc3d5d1462fbec6df311c970de0ff12ff11621fcf3b196ede3b1449ae",
+  "patients_per_version": 80,
+  "predictions_sha256": "3620dba716918162985cdc6e70e51274f0683dfca0dbf722f8107f7abca50058",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "cc9f705fd4325083648587af62e7519623c0bcdc2f90b2aaeaabf5d7a23f33ba",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

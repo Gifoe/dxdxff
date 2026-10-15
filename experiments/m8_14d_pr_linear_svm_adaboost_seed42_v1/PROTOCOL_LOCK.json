@@ -1,0 +1,31 @@
+{
+  "seed": 42,
+  "models": ["Linear_SVM", "AdaBoost"],
+  "versions": ["14D", "14D_PR"],
+  "folds": [1,2,3,4,5],
+  "patients": 80,
+  "channels": 7635,
+  "seizures": 256,
+  "features": "Exact parent D1 DELTA14, without PR or with original per-patient full-channel population Z, still14D; no Raw encoder, added features, patient/center inputs or new extraction",
+  "parent_feature_sha256": "8598f60976be5c45b9c5d717c1113a33c7ade7394da3bd6e7f4b003573a23642",
+  "parent_outer_freeze_sha256": "5d69a5a885e0e170d2e6253c53269d8853478e8f4720e9efa44abdfae08a06aa",
+  "parent_outer_seal_sha256": "602ae16b25304267234f2f9e0a3220e391864c9529eb2ce3853a71abeddc405b",
+  "linear_svm": "sklearn SVC(kernel='linear', probability=False), same parent RBF selected C in each fold; no gamma or new C search. FIT imputer/StandardScaler, patient-equal then FIT inverse class-frequency initial weights, original cache512/no max_iter limit.",
+  "linear_svm_C_by_fold": {"1":1,"2":1,"3":10,"4":1,"5":1},
+  "svm_calibration": "Exact parent3-fold GroupKFold shuffled by42+1009*fold inside FIT. Each subfold fits its own imputer/scaler/SVC; patient-held-out OOF margins train LogisticRegression Platt C1e6, patient-only weights. Final SVC fits legalFIT only. Validation/Outer never calibrate.",
+  "adaboost": "sklearn1.7.2 discrete SAMME, DecisionTreeClassifier(max_depth=1), native predict_proba, FIT-only mean imputer/no global scaling; same initial patient-equal then inverse FIT-class weights. Algorithm subsequently reweights misclassified examples; do not claim equal patient total at every boosting round.",
+  "adaboost_grid": [
+    {"n_estimators":100,"learning_rate":0.05},
+    {"n_estimators":100,"learning_rate":0.1},
+    {"n_estimators":300,"learning_rate":0.05},
+    {"n_estimators":300,"learning_rate":0.1}
+  ],
+  "selection": "AdaBoost shared config per fold selected by arithmetic mean across both PR arms of validation patient Macro-F1, AP, AUROC, earlier grid index, matching parent paired selection. Each arm keeps own validation threshold. SVM C fixed from previous paired validation-selected RBF, shared across arms; only own threshold selected. No FIT+validation refit.",
+  "threshold": "Parent validation-only EZ probability grid0:0.005:1, patient Macro-F1 then EZ-F1 then nearest0.5 then lower threshold; predEZ=(pEZ>=threshold)",
+  "split": "Exact original five outer FIT/validation/test patient-disjoint partitions. Both PR arms explicitly requested before any current run; no new seeds.",
+  "outer": "Freeze all20 new model/preprocessor/calibrator/threshold bundles before one sealed Outer pass. Reuse exact frozen old RBF-SVM scores in both PR arms only as reference; no old-model retraining or test tuning.",
+  "bootstrap_draws":10000,
+  "bootstrap_seed":42,
+  "scientific_status":"EXPLORATORY_REPEATED_TEST",
+  "privacy":"Publish only code/hashes/anonymous aggregates. Individual features/predictions/labels/IDs, fitted models, scalers and logs stay on trusted server. Do not touch unrelated GPU/CPU jobs."
+}

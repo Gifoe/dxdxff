@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "671c9afcb76589138e0d199bedcdc399e3373088429ac40c85421a9896302be4",
+  "matched_hyperparameters_across_PR": true,
+  "models": 20,
+  "patient_disjoint_validation": true,
+  "status": "PASS",
+  "validation_only_thresholds": true
+}

@@ -1,0 +1,33 @@
+{
+  "channels_per_group": 7635,
+  "freeze_sha256": "671c9afcb76589138e0d199bedcdc399e3373088429ac40c85421a9896302be4",
+  "groups": 4,
+  "new_models": 20,
+  "patients_per_group": 80,
+  "public_sha256": {
+    "INDEPENDENT_VERIFICATION.json": "e27c72f30b088d416f89798a6f2c2634897802ac0d279f6da9f9482df8e14fd4",
+    "INPUT_AUDIT.json": "fc20cc5db60971c0a0a7ee67b894b0096ed6e8d28c453f1aff42f1ec115d894c",
+    "MODEL_SELECTION.csv": "22201f908060df2a42bf58c6d598d9cdc7683604cc89e45e186caaed1b6c7a3f",
+    "OUTER_FREEZE_AUDIT.json": "cca291a32bd2742daa582cb9f9146455ff44fe70ec9541ac8a247506612773d1",
+    "REPORTING_REPAIR_AUDIT.json": "a2e7819cf4af5bf4b6500669db22b2b3d35a7306e2a08ff3b0d14b60b2980a9f",
+    "SOURCE_HASHES.json": "00cc572f0726857d2a30a89e30a06aed74f0291fc6eddf68e2f4b245802fe7e6",
+    "SVM_CALIBRATION_AUDIT.csv": "b5fa92f057e0e95a1dfe4a67a22e07a1b963e9873130fc970745514a48324d38",
+    "VALIDATION_SEARCH.csv": "e7c2487324f3e7be03a9f1a11bb7286109cdf245339f120218fb875a905ef282",
+    "center_metrics.csv": "37e47b95af05392609da0d3d1606e2175410a3142788ed39f69149d08946759b",
+    "confusion_matrices.csv": "aa5080649536c733398a31effda8cb26ced3b0656ff7c8ff5904aff6e1ca28d4",
+    "extended_metrics.csv": "26e51202913e2e8752dafeb6b67533e16efeadf19900fd4dc064a46270da9d92",
+    "main_results.csv": "82a3ea84785e24622a62de051b3c8454e195e7b597bcb8823539718ef053c34a",
+    "metric_coverage.csv": "b11141423c3e135c453e84086c9e0f310b76148a795b8d09e501744e8d152c61",
+    "outer_fold_mean_std.csv": "69cdc72d37b9f4a12a6796edf1301d82e01e100493d4ed761c95ad23cbc29122",
+    "outer_fold_metrics.csv": "3a64511fd80525a926da3d1c23e6b10fe62d1d7554dc4ec731619b47d3505175",
+    "paired_comparisons.csv": "713ccacac1ef91196ecdbaa85e085abe8ac9267136193363d47e416e35e25925",
+    "paired_pr_intervals.csv": "1cf8a7c67faad7e4c35674b5f88d77daf47b27abd90682f9f84682a656dc42c7",
+    "pooled_metrics.csv": "15fb84bb41c89158e12264ff483b5d988d28bc1472fdebbeb7b6ed5df9fab4e7",
+    "pr_delta.csv": "552e076b1fe731918e945d48dda7817f610062e36548bfdde47ed0f2c72b4396",
+    "ranking_metrics.csv": "f48afe57a134cccabc086bc47d03150e189ea5a023262a70917a3c6a95bbcca0"
+  },
+  "reference_groups": 2,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "16b35eadc6dbaa79a56c473a1cdfba9cbb475ca9432f197902bdc320f411c97f",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

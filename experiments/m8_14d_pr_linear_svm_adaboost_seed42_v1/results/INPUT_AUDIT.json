@@ -1,0 +1,63 @@
+{
+  "channels": 7635,
+  "feature_sha256": "8598f60976be5c45b9c5d717c1113a33c7ade7394da3bd6e7f4b003573a23642",
+  "folds": [
+    {
+      "PR_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 51,
+      "fold": 1,
+      "scaled_PR_exact_D1_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PR_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 51,
+      "fold": 2,
+      "scaled_PR_exact_D1_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PR_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 50,
+      "fold": 3,
+      "scaled_PR_exact_D1_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PR_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 52,
+      "fold": 4,
+      "scaled_PR_exact_D1_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    },
+    {
+      "PR_exact_original": true,
+      "dimension": 14,
+      "fit_patients": 51,
+      "fold": 5,
+      "scaled_PR_exact_D1_bank": true,
+      "test_patients_excluded": true,
+      "validation_patients": 13
+    }
+  ],
+  "no_raw_or_gpu_or_new_extraction": true,
+  "patients": 80,
+  "seizures": 256,
+  "source_sha256": "cd3e2ec7e6e6006833c545667fc2a0b4a275ae96f6af98320d605c6352621e44",
+  "status": "PASS",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "sklearn": "1.7.2",
+    "torch": "2.11.0+cu128",
+    "xgboost": "3.0.5"
+  }
+}

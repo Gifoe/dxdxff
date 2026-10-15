@@ -1,0 +1,19 @@
+{
+  "all_six_groups": true,
+  "bootstrap_direct_128_draws_max_tolerance": 1e-12,
+  "bootstrap_draws": 10000,
+  "candidate_cells": 50,
+  "channels_per_group": 7635,
+  "freeze_sha256": "671c9afcb76589138e0d199bedcdc399e3373088429ac40c85421a9896302be4",
+  "independent_sklearn_metrics": true,
+  "matched_PR_hyperparameters": true,
+  "new_model_fold_cells": 20,
+  "new_patient_rows": 320,
+  "patients_per_group": 80,
+  "privacy_columns_check": true,
+  "protected_artifacts_unchanged": true,
+  "reference_patient_rows": 160,
+  "reference_primary_max_error": 0.0,
+  "status": "PASS",
+  "validation_only_selection_reverified": true
+}

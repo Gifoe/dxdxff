@@ -1,0 +1,9 @@
+{
+  "cause": "Parent means default argument retained old classification list without NEZ-F1 and EZ-fraction bias",
+  "no_training_or_inference_called": true,
+  "original_training_source_sha256": "dba3909de3ad359fa29a2f66dc98423e724527de1a7ff535a84b15cc16940501",
+  "repair": "Replace reporting means default with expanded metric list; recompute aggregate tables from sealed scores only",
+  "reporting_helper_sha256": "df3acba62b79d5c670235745254bb5e2854c574f98b1208da270cf5bd60577e0",
+  "status": "PASS",
+  "twenty_score_hashes_verified": true
+}

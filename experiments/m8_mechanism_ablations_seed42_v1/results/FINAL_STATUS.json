@@ -1,0 +1,21 @@
+{
+  "bootstrap_direct_256_draws_match": true,
+  "bootstrap_draws": 10000,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "d9bb40652bb24d2422edcf1372dde1f544803f166ad4a6004e4217348f1bf1e4",
+  "fusion_fold_cells": 5,
+  "historical_primary_metrics_exact": true,
+  "historical_reference_cells": 15,
+  "independent_sklearn_and_ranking_checks": true,
+  "new_model_fold_cells": 20,
+  "original_training_budget": true,
+  "own_fold_patient_isolation": true,
+  "patients_per_arm": 80,
+  "protected_artifacts_unchanged": true,
+  "public_privacy_gate": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "dcc6516cb73213db7ec88e23c87d55c7b2aaab837f23a52e0c3490b293516ad3",
+  "status": "M8_MECHANISM_5FOLD_OUTER_COMPLETE",
+  "validation_only_weights_thresholds_and_epochs": true,
+  "verified_patient_rows": 640
+}

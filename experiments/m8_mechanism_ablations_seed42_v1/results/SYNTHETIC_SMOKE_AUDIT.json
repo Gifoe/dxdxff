@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "device": "cpu",
+      "feature_parity_max_error": 0.0,
+      "gradient_max_error": 0.0,
+      "identity_gate_delta_independent": true,
+      "no_raw_PR_channel_subset_independent": true,
+      "no_raw_pre_reference_pre_waveform_independent": true,
+      "original_self_replay_gradient_max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "device": "cuda",
+      "feature_parity_max_error": 0.0,
+      "gradient_max_error": 6.05359673500061e-09,
+      "identity_gate_delta_independent": true,
+      "no_raw_PR_channel_subset_independent": true,
+      "no_raw_pre_reference_pre_waveform_independent": true,
+      "original_self_replay_gradient_max_error": 4.190951585769653e-09,
+      "status": "PASS"
+    }
+  ]
+}

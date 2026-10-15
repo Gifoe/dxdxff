@@ -1,0 +1,9 @@
+{
+  "all_selected_before_new_outer": true,
+  "freeze_sha256": "d9bb40652bb24d2422edcf1372dde1f544803f166ad4a6004e4217348f1bf1e4",
+  "fusions": 5,
+  "historical_reference_models": 15,
+  "models": 20,
+  "own_fold_test_excluded": true,
+  "status": "PASS"
+}

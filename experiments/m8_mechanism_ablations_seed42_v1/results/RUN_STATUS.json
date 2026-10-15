@@ -1,0 +1,7 @@
+{
+  "arm": "A4_WO_PRE_REFERENCE",
+  "completed_model_folds": 20,
+  "fold": 5,
+  "status": "TRAINING",
+  "total_model_folds": 20
+}

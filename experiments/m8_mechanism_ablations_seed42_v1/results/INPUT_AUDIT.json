@@ -1,0 +1,20 @@
+{
+  "channels": 7635,
+  "exact_no_PR_base_and_bank_reused": true,
+  "no_extraction": true,
+  "original_gate_scales_verified": true,
+  "own_fold_patient_exclusion": true,
+  "patients": 80,
+  "raw_alignment_sha256": "b41514c0461f6ba1b178722f6a71d59512f1336a1469ebffb48a31dd7da7004d",
+  "seizures": 256,
+  "source": {
+    "PROTOCOL_LOCK.json": "88cd10978b26d68d4db2494caed6ff69e75470d9946d70a2710fad527a36832c",
+    "model.py": "f969c33060cf84d44d2e3975083e0b281a240bfddf06fdc70a073ca677a87b1c",
+    "reporting.py": "224745b5ec85f1af0abdf9c0994f7735ebec2489f333521c9a215ee28bb47f1d",
+    "runner.py": "f510ff15d697c44d8d92a2b14b0acfb9714731b80c731c5011405c00a19178eb",
+    "smoke.py": "caaf2f8796ef46fdd44789a4868098d6baeaec981431bb8b23acea6cd29120a5"
+  },
+  "status": "PASS",
+  "torch": "2.11.0+cu128",
+  "valid_raw_channel_windows": 1471965
+}

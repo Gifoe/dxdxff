@@ -1,0 +1,106 @@
+{
+  "folds": [
+    {
+      "arm": "A1_WO_FEATURE_PR",
+      "fold": 1,
+      "frozen_base_replay_max_error": 1.1920928955078125e-07
+    },
+    {
+      "arm": "A1_WO_FEATURE_PR",
+      "fold": 2,
+      "frozen_base_replay_max_error": 1.1920928955078125e-07
+    },
+    {
+      "arm": "A1_WO_FEATURE_PR",
+      "fold": 3,
+      "frozen_base_replay_max_error": 2.384185791015625e-07
+    },
+    {
+      "arm": "A1_WO_FEATURE_PR",
+      "fold": 4,
+      "frozen_base_replay_max_error": 2.384185791015625e-07
+    },
+    {
+      "arm": "A1_WO_FEATURE_PR",
+      "fold": 5,
+      "frozen_base_replay_max_error": 1.7881393432617188e-07
+    },
+    {
+      "arm": "A2_WO_RAW_PR",
+      "fold": 1,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A2_WO_RAW_PR",
+      "fold": 2,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A2_WO_RAW_PR",
+      "fold": 3,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A2_WO_RAW_PR",
+      "fold": 4,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A2_WO_RAW_PR",
+      "fold": 5,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A3_IDENTITY_GATE",
+      "fold": 1,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A3_IDENTITY_GATE",
+      "fold": 2,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A3_IDENTITY_GATE",
+      "fold": 3,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A3_IDENTITY_GATE",
+      "fold": 4,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A3_IDENTITY_GATE",
+      "fold": 5,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A4_WO_PRE_REFERENCE",
+      "fold": 1,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A4_WO_PRE_REFERENCE",
+      "fold": 2,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A4_WO_PRE_REFERENCE",
+      "fold": 3,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A4_WO_PRE_REFERENCE",
+      "fold": 4,
+      "frozen_base_replay_max_error": 0.0
+    },
+    {
+      "arm": "A4_WO_PRE_REFERENCE",
+      "fold": 5,
+      "frozen_base_replay_max_error": 0.0
+    }
+  ],
+  "status": "PASS",
+  "tolerance": 1e-06
+}

@@ -1,0 +1,9 @@
+{
+  "all5_Outer_scores_exact_convex_frozen_components": true,
+  "all5_weights_and_thresholds_reproduced": true,
+  "models_predictions_and_freeze_unchanged": true,
+  "no_training_or_new_inference": true,
+  "status": "PASS",
+  "validation_candidates_reconstructed": 105,
+  "verifier_sha256": "ba9b61859eacb272c288d4e6e615a0cf0c7b17bf0bc08d2d7591f5d1962bc881"
+}

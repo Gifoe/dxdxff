@@ -1,0 +1,18 @@
+{
+  "all_thresholds_reproduced": true,
+  "candidate_linear_probes_replayed": 390,
+  "candidate_patients_verified": 80,
+  "complete_M8_feature_discovery_goal": false,
+  "independent_sklearn_patient_metrics": true,
+  "no_training_or_Outer_evaluation_called": true,
+  "original_FULL7_probe_reproduced_in15screens": true,
+  "original_validation_and_Outer_excluded": true,
+  "public_privacy_gate": true,
+  "replay_max_probability_error": 0.0,
+  "rms_formula_six_patient_spotcheck_max_error": 0.0,
+  "seizures_verified": 256,
+  "status": "PASS",
+  "summary_independent_original_aggregation_max_error": 0.0,
+  "valid_windows_verified": 1471965,
+  "verifier_sha256": "36cc27484e7216ebd6488dabc54114a47124617e35eacafee1f7560c54b61ed4"
+}

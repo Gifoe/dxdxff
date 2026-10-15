@@ -1,0 +1,22 @@
+{
+  "candidate_summary_dimensions": 22,
+  "candidate_window_dimensions": 11,
+  "channels": 7635,
+  "efficacy_not_yet_evaluated": true,
+  "feature_cache_sha256": "8c856f6c92dca99fb8eb8b2218c5bdd5ffc50128eeb90c2b60aa7f10f6f1f70a",
+  "finite_fraction": 1.0,
+  "full_goal_complete": false,
+  "no_labels_used": true,
+  "no_outer_scores_or_outcomes_read": true,
+  "old7_actual_delta_to_R14_max_error": 0.0,
+  "patients": 80,
+  "seizures": 256,
+  "source": {
+    "AUDIT_PROTOCOL.json": "201cc8da87dd8fe906f7c89163bb4cfd384365f04601f1468f6a2e0887a4c437",
+    "extract_candidates.py": "776be6196c1882da9cb6a639dcbf2547071b190c0823876dc793415c3b105dbb",
+    "features.py": "c6867001fd5fe90bb56e756a520c6cc556d345e90d7a2cf87b448960af8499ba",
+    "test_features.py": "87b30fe16bcd7d4244becbbdfd1d577abe1ebc67bf88152d4bb182007151d8af"
+  },
+  "status": "ALL11_CANDIDATES_EXTRACTED_FULL_COHORT",
+  "valid_raw_channel_windows": 1471965
+}

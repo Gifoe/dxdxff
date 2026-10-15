@@ -1,0 +1,12 @@
+{
+  "full_goal_complete": false,
+  "linear_probe_cells": 225,
+  "nonlinear_M8_necessity_not_established": true,
+  "original_validation_and_outer_not_used": true,
+  "registry_sha256": "43cb64729c038e08ce16434d5a50e77cc4f3864f8895059929877cb48b1b8f0e",
+  "source": {
+    "AUDIT_PROTOCOL.json": "201cc8da87dd8fe906f7c89163bb4cfd384365f04601f1468f6a2e0887a4c437",
+    "audit_old7.py": "aeab9315b049d74729d986ddefaf3f390960cfa34bf926c0f0e84b389118feb2"
+  },
+  "status": "OLD7_FIT_ONLY_INITIAL_AUDIT_COMPLETE"
+}

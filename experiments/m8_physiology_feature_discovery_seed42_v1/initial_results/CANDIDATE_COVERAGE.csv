@@ -1,0 +1,6 @@
+center,patients,channels,seizures,valid_channel_windows,finite_fraction,constant_valid_windows,no_patient_or_channel_exclusion
+ALL,80,7635,256,1471965,1.0,232,True
+hup,36,3667,117,730656,1.0,177,True
+lzu,21,2141,72,425225,1.0,0,True
+multicenter,15,925,45,165929,1.0,55,True
+pediatric,8,902,22,150155,1.0,0,True

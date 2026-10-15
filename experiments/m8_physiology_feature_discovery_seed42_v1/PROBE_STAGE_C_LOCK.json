@@ -1,0 +1,12 @@
+{
+  "stage":"C_preliminary_linear_candidate_screening",
+  "required_extraction_status":"ALL11_CANDIDATES_EXTRACTED_FULL_COHORT",
+  "feature_cache_sha256":"8c856f6c92dca99fb8eb8b2218c5bdd5ffc50128eeb90c2b60aa7f10f6f1f70a",
+  "frozen_before_candidate_efficacy_read":true,
+  "classifier_and_partitions":"Identical patient-isolated three-way subFIT/calibration/screen and LogisticRegression C1 as audit_old7.py. Each original outerFIT independently; original validation and outer labels excluded.",
+  "variants":"FULL7,each11candidate-alone,each11added-to-old7,ALL18,ADD_SHAPE5(Hjorthmobility/complexity,PE,normalizedLL,kurtosis),ADD_SPECTRAL5(centroid,gamma-beta,partialHGfraction,flatness,slope).26variants*3screens*5outerFIT=390fits.",
+  "selection":"No final feature decision from these linear probes. Provisional per-outer-FIT eligibility uses previously fixed AUDIT_PROTOCOL screening rules; nonlinear/center controls and M8 retraining remain pending. Do not choose a global winner across original validation or Outer.",
+  "cache":"Retain private model,imputer,scaler,calibration/screen indices,labels,probabilities and patient metrics for independent replay. Publish only anonymous aggregates and per-FIT provisional eligibility.",
+  "no_outer_access":true,
+  "no_new_threshold_grid_or_regularization_search":true
+}

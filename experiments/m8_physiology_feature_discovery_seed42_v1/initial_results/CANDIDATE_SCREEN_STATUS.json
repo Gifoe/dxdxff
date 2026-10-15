@@ -1,0 +1,14 @@
+{
+  "M8_integration_and_final_validation_pending": true,
+  "all_scores_and_thresholds_retained_and_recomputed": true,
+  "full_goal_complete": false,
+  "nonlinear_and_center_heldout_confirmation_pending": true,
+  "original_validation_and_Outer_excluded": true,
+  "source": {
+    "AUDIT_PROTOCOL.json": "201cc8da87dd8fe906f7c89163bb4cfd384365f04601f1468f6a2e0887a4c437",
+    "PROBE_STAGE_C_LOCK.json": "c439cdfb7c07e94758e330f3bd7dba14f80787b0f088e2e931129ff0da81bd08",
+    "audit_old7.py": "aeab9315b049d74729d986ddefaf3f390960cfa34bf926c0f0e84b389118feb2",
+    "screen_candidates.py": "e5be95eb370891caf0667060796083666677fa68bb25d67d91b9ed03718bd70f"
+  },
+  "status": "ALL390_FIT_ONLY_LINEAR_CANDIDATE_PROBES_COMPLETE"
+}

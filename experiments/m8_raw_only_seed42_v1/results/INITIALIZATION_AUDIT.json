@@ -1,0 +1,35 @@
+{
+  "folds": [
+    {
+      "exact_original_M8_CNN_head_initialization": true,
+      "fold": 1,
+      "initial_state_sha256": "ca370d703b4ad8598ecfe7f9b569dc981964598c5198dafa50545bf0e47494b8",
+      "parameters": 8433
+    },
+    {
+      "exact_original_M8_CNN_head_initialization": true,
+      "fold": 2,
+      "initial_state_sha256": "6dc7edab75865983245d117d1e70a565c595c4ed0b79a9866e0647807cccef76",
+      "parameters": 8433
+    },
+    {
+      "exact_original_M8_CNN_head_initialization": true,
+      "fold": 3,
+      "initial_state_sha256": "45940435971dc7272c383cbed9a3edcd4b8f3e6650a80ddf3e04b9c88a2efdf9",
+      "parameters": 8433
+    },
+    {
+      "exact_original_M8_CNN_head_initialization": true,
+      "fold": 4,
+      "initial_state_sha256": "55f55d72ab9e129d0ca665f99e5c6381e6c1c98c3ee117af5037123e7d5349dd",
+      "parameters": 8433
+    },
+    {
+      "exact_original_M8_CNN_head_initialization": true,
+      "fold": 5,
+      "initial_state_sha256": "9ea76385144f2e24c4ddfaf1cae65c81cc3ce5631cb29330b1e4e8b4fb5973e4",
+      "parameters": 8433
+    }
+  ],
+  "status": "PASS"
+}

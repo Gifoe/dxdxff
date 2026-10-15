@@ -1,0 +1,20 @@
+{
+  "all_five_selections_frozen_before_outer": true,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 42,
+  "channels_per_arm": 7635,
+  "independent_bootstrap_check": true,
+  "independent_sklearn_checks": true,
+  "new_raw_only_models": 5,
+  "only_raw_model_interface": true,
+  "original_M8_objective_and_selection": true,
+  "original_m8_cnn_head_initializations_identical": true,
+  "patients_per_arm": 80,
+  "protected_parent_hashes_unchanged": true,
+  "public_privacy_gate": true,
+  "reference_primary_patient_metrics_exact": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "status": "PASS",
+  "trainable_parameters": 8433,
+  "verified_patient_rows": 240
+}

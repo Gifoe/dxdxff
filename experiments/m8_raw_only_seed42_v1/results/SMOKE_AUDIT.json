@@ -1,0 +1,11 @@
+{
+  "no_base_or_gate_parameters": true,
+  "original_M8_identity_gate_feature_max_error": 0.0,
+  "permutation_equivariant": true,
+  "raw_only_interface": true,
+  "smoke_state_discarded": true,
+  "status": "PASS",
+  "three_legal_FIT_gradient_steps_pass": true,
+  "trainable_parameters": 8433,
+  "zero_initial_logit": true
+}

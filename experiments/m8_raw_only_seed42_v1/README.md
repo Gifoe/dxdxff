@@ -1,5 +1,13 @@
 # M8 Raw-only matched ablation — seed42
 
+**COMPLETE, 2026-10-16:** all five new models,70 formal training epochs and all
+80-patient/7,635-channel Outer predictions finished. Raw-only patient-macro:
+AUROC0.725813, AP0.533535, Macro-F10.610596, EZ-F10.390272, NEZ-F10.830919,
+ACC0.749193, EZ-Frac.Bias−0.059205. All240 raw/reference patient rows and10,000
+paired bootstrap draws independently verified. See [report.md](report.md) and
+[main_results.csv](results/main_results.csv). Original reference primary metrics
+match exactly; no reference models were retrained or replayed.
+
 This experiment removes the 14D/D1 base prediction and the7D physiological
 conditioning gate from Full M8. The new network consumes only aligned Raw250
 waveforms, valid masks and original window times. It does not receive14D,
@@ -78,5 +86,7 @@ external confirmation. Do not infer that Raw is intrinsically uninformative from
 one small inherited-cap model and seed, or attribute the joint ablation entirely
 to either removed component.
 
-Actual final metrics will be added after independent verification, not inferred
-from smoke tests or earlier unrelated Raw backbones.
+Actual final metrics are completed frozen Outer results, not inferred from smoke
+tests or unrelated Raw backbones. `FINAL_STATUS.json` and
+`INDEPENDENT_VERIFICATION.json` are the final authorities; `RUN_STATUS.json` is
+only the last training progress snapshot. Original parent files remain unchanged.

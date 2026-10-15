@@ -1,0 +1,22 @@
+{
+  "all_five_selections_frozen_before_outer": true,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 42,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "c35f87abb8dcb9e4ee4c4d6452ec0647b41300df3cb6465a27d9084c8807127d",
+  "independent_bootstrap_check": true,
+  "independent_sklearn_checks": true,
+  "new_raw_only_models": 5,
+  "only_raw_model_interface": true,
+  "original_M8_objective_and_selection": true,
+  "original_m8_cnn_head_initializations_identical": true,
+  "patients_per_arm": 80,
+  "protected_parent_hashes_unchanged": true,
+  "public_privacy_gate": true,
+  "reference_primary_patient_metrics_exact": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "ae477ac1b9ffae0122811756cf0c49bd660ee2b765fc80d7711f37234b38e771",
+  "status": "M8_RAW_ONLY_FIVE_FOLD_OUTER_COMPLETE",
+  "trainable_parameters": 8433,
+  "verified_patient_rows": 240
+}

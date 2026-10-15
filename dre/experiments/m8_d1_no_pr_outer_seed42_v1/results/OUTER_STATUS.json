@@ -1,0 +1,12 @@
+{
+  "all_predictions_sealed_before_full_labels": true,
+  "channels_per_arm": 7635,
+  "freeze_sha256": "cbe108cff2892053ef41ec5a5d44c24b8c679d2c5e1b777de5c693bcf34d6b28",
+  "new_cells": 5,
+  "patients_per_arm": 80,
+  "reference_metrics_exact": true,
+  "reused_cells": 15,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "accedc5bb15c514ecb694212dff246af7e07e1ca19d4774a6e63891ca7e8fed1",
+  "status": "ONE_FROZEN_OUTER_PASS_COMPLETE"
+}

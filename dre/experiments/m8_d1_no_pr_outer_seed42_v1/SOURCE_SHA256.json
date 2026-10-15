@@ -1,0 +1,6 @@
+{
+  "PROTOCOL_LOCK.json": "60d9209bdfb6d55114e360055e099ded575fd89da16e8e803079737d7d03f3de",
+  "code/model.py": "1fd35afbfd8d14a04787d7c5c3469313d1eb738a357ba4ef6d2b7abf2328d508",
+  "code/run.py": "fd217ba0c5fcf5191e662762927b44a7fdfcf1546d4ddc7997285aa6b75880fe",
+  "tools/verify.py": "ebeb140ea07c0cdc02f6725defd2b24c4fa31e509eefb2cd4ca6946a54db73ee"
+}

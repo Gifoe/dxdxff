@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "seed": 42,
+  "new_training_cells": 5,
+  "new_training_arm": "M8_NO_PR",
+  "new_training_epochs": 71,
+  "new_training_epochs_per_fold": [23,11,11,16,10],
+  "new_outer_cells": 5,
+  "reused_outer_cells": 15,
+  "reused_arms": ["D1_PR","D1_NO_PR","M8_PR"],
+  "reused_D1_NO_PR_source": "Completed progressive-ablation A1 scratch CompactDelta (not sklearn MLP)",
+  "prior_checkpoint_or_scaler_modified": false,
+  "new_raw_extraction": false,
+  "new_hyperparameter_search": false,
+  "outer_threshold_selection": false,
+  "all_four_arms": {"patients":80,"canonical_patient_channels":7635,"seizures":256},
+  "all_20_outer_score_files_sealed_before_new_full_label_read": true,
+  "independent_patient_metric_rows_verified": 320,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "public_contents": "Source, hashes, anonymous aggregate metrics/audits and report only",
+  "trusted_server_only": "Raw/cache, weights, labels, scalers, individual predictions, IDs, logs and private manifests"
+}

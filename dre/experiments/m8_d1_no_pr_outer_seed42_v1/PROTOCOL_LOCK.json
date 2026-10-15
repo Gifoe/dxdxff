@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "arms": ["D1_PR", "D1_NO_PR", "M8_PR", "M8_NO_PR"],
+  "new_training": "Five M8 correction cells, frozen matched D1_NO_PR base; no new search",
+  "ablation": "Remove cross-channel Patient Z from both D1 14D input and M8 96D raw summary",
+  "preserved": ["same-channel physiological DELTA", "same-channel latent pre-reference", "within-window waveform normalization", "all valid masks", "original FIT-only D1 scaler", "original FIT-only physiology scale", "duplicate-aware CompactDelta LayerNorm", "M8 architecture and bounded residual"],
+  "training": {"optimizer": "AdamW", "lr": 0.0003, "weight_decay": 0.001, "loss": "0.75 original weighted BCE + 0.25 patient soft Macro-F1", "clip_grad_norm": 1.0, "max_epochs": 30, "min_epochs": 6, "patience": 6, "selection": "Original M8 patient Macro-F1, EZ-F1, earlier epoch", "threshold": "Exact original validation-only NEZ threshold grid and tie rules", "fold_seed": "42+1009*fold"},
+  "patients": 80, "channels": 7635, "seizures": 256,
+  "patients_by_fold": [16,16,17,15,16], "channels_by_fold": [1631,1498,1746,1425,1335],
+  "outer": "Freeze all five new selections before inference; seal all scores before full Outer label access; reuse three verified frozen reference ledgers",
+  "bootstrap": {"draws":10000,"seed":42,"cluster":"patient ID","paired":true,"threshold_reoptimized":false},
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "no_new_extraction": true,
+  "publish": "Code, hashes and anonymous aggregate audits only"
+}

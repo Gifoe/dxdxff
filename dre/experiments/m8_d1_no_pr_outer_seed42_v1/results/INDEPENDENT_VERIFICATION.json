@@ -1,0 +1,16 @@
+{
+  "all_20_score_files_hash_verified": true,
+  "draws": 10000,
+  "frozen_no_PR_D1_base_unchanged": true,
+  "original_M8_training_sources_unchanged": true,
+  "original_selection_and_threshold_rules_exact": true,
+  "own_TEST_excluded_from_all_fits": true,
+  "paired_bootstrap_comparisons": 4,
+  "paired_bootstrap_max_error": 1.0061396160665481e-16,
+  "patient_metric_max_error": 3.3306690738754696e-16,
+  "seed": 42,
+  "status": "PASS",
+  "verification_source_sha256": "ebeb140ea07c0cdc02f6725defd2b24c4fa31e509eefb2cd4ca6946a54db73ee",
+  "verified_outer_channels_per_arm": 7635,
+  "verified_patient_rows": 320
+}

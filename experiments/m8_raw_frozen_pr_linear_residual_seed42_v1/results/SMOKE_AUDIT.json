@@ -1,0 +1,6 @@
+{
+  "nonzero_gradient": true,
+  "patient_PR_mask_permutation_population_SD": true,
+  "status": "PASS",
+  "zero_residual_exact_identity": true
+}

@@ -1,0 +1,20 @@
+{
+  "FINAL_STATUS.json": "e570cfbb8c252100d61695a2c27ac65e3668be7b34817cc0d6a4ff0b2b47a28c",
+  "HEAD_PARAMETER_DIAGNOSTICS.csv": "bd98d31be9aa9680369ba5bd84763a7bbd2843d3cabdd19f1bf8e930832ba725",
+  "HEAD_TRAINING_HISTORY.csv": "1f1c735e387cc6cae65454931080a7b4b6c0c9cb59e6494b2088bd7123e3206b",
+  "INDEPENDENT_VERIFICATION.json": "68af726e8f56e3ce200cd9976f5232a8271296ee4ed770a1d86e801f6678c3d9",
+  "REPRESENTATION_REPLAY_AUDIT.csv": "28275c544989b78247d7fcd1b97e05bee829046a71987c288951bbc4d61c46ef",
+  "SELECTION_HISTORY_VERIFICATION.json": "a658df9f3b37ca606936ff3bdc386765738f53713c734507345f71f6d38d8911",
+  "SMOKE_AUDIT.json": "342a4b73bad13a720dfa2913f56827f8a50c54e170e77efeae488edf549db574",
+  "VALIDATION_SELECTION.csv": "8b2d7a6b5aa955739c7faa326518c8bbdd3dfae75b5262e32a83190fa00e0678",
+  "center_metrics.csv": "d3cd6110274b59eff6e9e53eac517fe09b8aa850dcb3f51595642020ddd5e454",
+  "confusion_matrices.csv": "1dd6facd0c20e42a4f4db0e064bb8fb40417c58efbdfe08d2b7af3d101c84329",
+  "fold_mean_std.csv": "c95bb4491a2ed257f992f489e13cd0ca4461e28b0b3724921e3c09d7d6b22cf5",
+  "fold_metrics.csv": "b02b7d8fbd1f65007d0c2590036bc63eeabea005fed2cda7a1ffe1b01e151ad9",
+  "main_results.csv": "57a30c9616518cb8174d9506fb84f64efb20cc86e11bd848a253cf852f92b9d5",
+  "metric_coverage.csv": "97c3581e81ea437094b190c03bdd93af80b407837e7405dd39487fb9c69c2588",
+  "paired_residual_intervals.csv": "c8c440b2335aeecfc3c7d4a2837ce14258fe93309ca0afd7c0994fc0d4162196",
+  "pooled_metrics.csv": "5b11b14b2fa4a3fe47584782bcc53d41d2141d1fdfb33238cf86fe73f63da493",
+  "ranking_metrics.csv": "4c2e59c63c92ecda7a2f311c525e94a77516cffa515e8d953c628a9b3becbd56",
+  "residual_improvement.csv": "b660813adc396741e40b302456cc56c10388f0e1d0dbe87e7f37cce71d4d8569"
+}

@@ -1,0 +1,10 @@
+{
+  "all_history_argmax_and_thresholds_recomputed": true,
+  "epoch_zero_candidate_included": true,
+  "heads_verified": 20,
+  "new_training_or_Outer_inference": false,
+  "parent_artifact_hashes_unchanged": true,
+  "patient_disjoint_fit_validation_outer": true,
+  "source_sha256": "977d06b934dfc7077f102600a59bf65aa25bfcc3936292569af8cf13fceeea18",
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "bootstrap_draws": 10000,
+  "bootstrap_max_error": 1.5265566588595902e-16,
+  "channels_per_configuration": 7635,
+  "configurations": 8,
+  "exact_original_metric_reuse": true,
+  "freeze_sha256": "c244cf17f4f892f1412475eaa5ff56e4eba4d9556435c7e88ed5e23517aeffd8",
+  "frozen_before_residual_outer": true,
+  "independent_sklearn_checks": true,
+  "parent_encoder_classifier_buffers_and_predictions_unchanged": true,
+  "patient_rows": 640,
+  "patients_per_configuration": 80,
+  "public_privacy_gate": true,
+  "residual_heads": 20,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "fb1870e8aab1288f2bdd36fb1e4733f8bb99c4544d45b9b212023230134535dc",
+  "status": "FROZEN_PR_LINEAR_RESIDUAL_ALL_FIVE_OUTER_COMPLETE",
+  "validation_only_selection": true
+}

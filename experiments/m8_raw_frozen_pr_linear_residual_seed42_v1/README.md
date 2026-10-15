@@ -1,5 +1,14 @@
 # Frozen Raw backbone + PR Linear Residual — seed42
 
+**COMPLETE, 2026-10-16.** All20 residual heads and all five Outer folds for all
+four backbones are finished. Eight baseline/residual configurations each cover
+80 patients and7,635 channels. All640 patient metric rows,10,000 paired bootstrap
+draws and20 epoch/threshold selections passed independent verification.
+See [the complete report](report.md) and [patient-macro results](results/main_results.csv).
+TimeConv-CNN+PR Linear Residual achieved AUROC0.646821, AP0.445751,
+Macro-F10.548726 and EZ-F10.359109. All four improved Macro-F1 with paired95% CIs
+excluding zero; only SEEG-Net's AUROC/AP paired intervals both excluded zero.
+
 User request: freeze each of the preceding four **Original** raw encoders and
 classifiers, reproduce their original Outer predictions, extract full-patient
 channel embeddings/logits, and train a separate lightweight PR linear residual
@@ -92,5 +101,8 @@ had been produced. Renaming the local constant to `TASK_ROOT` fixes only path
 resolution. The failed source and error log are preserved privately; the corrected
 source is frozen before extraction. No scientific configuration changed.
 
-Final numerical results will only be added after actual completion and independent
-verification; smoke/admission values are not localization results.
+All final values are actual completed Outer results, not smoke/admission values.
+Independent validation-history verification is provided separately under
+`tools/m8_raw_frozen_pr_linear_residual_selection_audit_v1/verify_selection.py`;
+it verifies epoch0 plus every history argmax and re-computes validation thresholds
+without fitting or Outer inference. Parent artifacts remain unchanged.

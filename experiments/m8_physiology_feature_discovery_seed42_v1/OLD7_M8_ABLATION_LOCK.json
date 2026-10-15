@@ -1,0 +1,17 @@
+{
+  "stage":"E_original7_matched_D1_and_full_M8_development_ablation",
+  "variants":"FULL_RETRAIN,each7DROP,each7ONLY,NONE=16variants*5folds.80D1fits+80M8correctionfits;allprespecified,notselectedusingvalidationperformance.",
+  "feature_removal":"Mask each removed physiological group's mean/std to zero AFTER original patientZ and FIT-only imputer/scaler. Independent per-coordinate transforms on retained groups unchanged. Feed corresponding window DELTA coordinate as zero to M8gate. Keep all14D1 slots/7gate slots and original88-position duplicate-aware normalization; no nativeLayerNorm14 or parameter-count change.",
+  "D1":"Scratch exact CompactDelta1537 originalinitializer/foldseed. Originaltrainer AdamW .001 wd .0001,NEZ-positive FITclassweightedBCE,onepatientupdate,clip1,max30,min6,patience6,ownvalidationMacroF1/EZF1/earlierselection,penalty0. No full-feature-trained base for a dropped-feature model.",
+  "M8":"Frozen newly selected ownfoldmasked D1+scratch exactoriginal CNN/head/gate,9481trainableparameters. Original rawpre-reference/rawPR/stagepool96 and .75weightedBCE+.25softMacroF1 objective,AdamW .0003 wd .001 clip1,max30,min6,patience6,onepatientupdate. Ownvalidationcheckpoint/thresholdselection. No feature/model hyperparameter search.",
+  "masking_is_training_not_posthoc_intervention":true,
+  "inference_only_MASK_is_not_a_completed_ablation":true,
+  "precision":"OriginalFP32 TF32off,chunk4096,noAMP/backendsubstitution",
+  "initialization":"Original foldseed42+1009*fold; matched correction CNN/head/gate initialstates. No trained Raw/M8 initializer. FULL_RETRAIN checks stochastic/software replay without forcing outcomes to historicalmetrics.",
+  "no_outcome_rescue":true,
+  "admissions":"All-onesmask actual completeFIT forward features exactly original; sourceinitializerstateparity; zeroheadresidualidentity; 3discardedFITgradientsteps; masked feature perturbation independence. NONE gate-firstlayer gradient may legitimately be zero.",
+  "development_report":"Originalvalidation65appearances/47uniqueIDs,selection-conditioned. Aggregate tables only after SELECTED_FEATURES_FIT_ONLY_PRIVATE.json and M8_INTEGRATION_LOCK.json are present,so noablation validation result chooses discoveryfeatures or the candidateintegrationarchitecture. Reportall16variants,baseandM8 separately,patient/fold/center/ranking/coverage and10000patient-IDclusterbootstrap preservingrepeatedappearances.",
+  "Outer":"No Outer feature,prediction,label oroutcome loader in thisstage. Any laterfinal evaluation requires its separateprospectivefreeze. Thisstagealone cannot proveclinicalnecessity orcompletegoal.",
+  "resume":"Onlyhash-boundcompleteepochs/cells;preservealllogs/checkpoints. CPU RNGbyte tensors restored asCPU evenifcheckpointloaded onCUDA; syntheticresumecheck required. No sourceprotocolchange toresume.",
+  "public":"Onlysource,hashes,anonymousaggregates,parametercounts andstatus. No raw,IDs,privatepredictions,weights,scalers orlogs."
+}

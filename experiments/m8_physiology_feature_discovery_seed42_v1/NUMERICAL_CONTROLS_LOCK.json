@@ -1,0 +1,13 @@
+{
+  "stage":"B2_stable_log_bandpower_numerical_controls",
+  "motivation":"Measured old PatientZ fallback and log1p(Vpower) scale; training-only discovery,not a new biological band or adjustment based on validation/Outer.",
+  "names":["stable_log_beta_13_30","stable_log_low_gamma_30_80","stable_log_partial_hg_80_125_inclusive"],
+  "formula":"Call exact pinned original Extractor on unchangedfloat32 raw500windows at250Hz,spectral_min10/max150. Read its first3 named legacy log1p power outputs,then log(max(expm1(float64(legacy_value)),1e-30)),castfloat32. Do not reestimate PSD with different dtype,band edges or filters.",
+  "supports":"beta13<=f<30; lowgamma30<=f<80; original highgamma80<=f<150 restricted by Nyquist125,including Nyquist125 as old source. Names explicitly partial. No full80-150 or low-frequency recovery.",
+  "reference":"Original genuine same-channel pre-onset mean subtraction,float32; all-valid-window seizuremean,then available-seizure mean/populationSD. No label input.",
+  "legacy_control_gate":"Re-extracted legacy3 window deltas must agree with frozen conditioning registry within8float32ULP of maximum original feature magnitude per patient,plus1e-30. Retain measured maxerror; do not optimize tolerance after observing labels.",
+  "coverage":{"patients":80,"channels":7635,"seizures":256,"valid_windows":1471965},
+  "old_registry_sha256":"43cb64729c038e08ce16434d5a50e77cc4f3864f8895059929877cb48b1b8f0e",
+  "does_not_modify_existing_features_or_frozen_sources":true,
+  "validation_and_Outer_outcome_access":false
+}

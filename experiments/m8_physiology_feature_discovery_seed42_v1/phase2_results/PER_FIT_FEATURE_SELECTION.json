@@ -1,0 +1,137 @@
+{
+  "folds": {
+    "1": {
+      "added_names": [],
+      "added_new_group_indices": [],
+      "deleted_names": [],
+      "deleted_old_group_indices": [],
+      "new_only_diagnostic_group_indices": [
+        14,
+        17,
+        11
+      ],
+      "new_only_diagnostic_names": [
+        "spectral_flatness_13_95",
+        "clipped_excess_kurtosis",
+        "spectral_centroid_13_95"
+      ],
+      "retained_old_group_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "2": {
+      "added_names": [
+        "clipped_excess_kurtosis"
+      ],
+      "added_new_group_indices": [
+        17
+      ],
+      "deleted_names": [],
+      "deleted_old_group_indices": [],
+      "new_only_diagnostic_group_indices": [
+        17,
+        13,
+        20
+      ],
+      "new_only_diagnostic_names": [
+        "clipped_excess_kurtosis",
+        "partial_high_gamma_fraction_80_125",
+        "stable_log_partial_hg_80_125_inclusive"
+      ],
+      "retained_old_group_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "3": {
+      "added_names": [],
+      "added_new_group_indices": [],
+      "deleted_names": [],
+      "deleted_old_group_indices": [],
+      "new_only_diagnostic_group_indices": [
+        16,
+        15,
+        9
+      ],
+      "new_only_diagnostic_names": [
+        "normalized_line_length",
+        "spectral_slope_proxy_20_95_notchgap",
+        "hjorth_complexity"
+      ],
+      "retained_old_group_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "4": {
+      "added_names": [],
+      "added_new_group_indices": [],
+      "deleted_names": [],
+      "deleted_old_group_indices": [],
+      "new_only_diagnostic_group_indices": [
+        17,
+        10,
+        13
+      ],
+      "new_only_diagnostic_names": [
+        "clipped_excess_kurtosis",
+        "permutation_entropy_m3_tau1",
+        "partial_high_gamma_fraction_80_125"
+      ],
+      "retained_old_group_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "5": {
+      "added_names": [],
+      "added_new_group_indices": [],
+      "deleted_names": [],
+      "deleted_old_group_indices": [],
+      "new_only_diagnostic_group_indices": [
+        18,
+        15,
+        17
+      ],
+      "new_only_diagnostic_names": [
+        "stable_log_beta_13_30",
+        "spectral_slope_proxy_20_95_notchgap",
+        "clipped_excess_kurtosis"
+      ],
+      "retained_old_group_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "full_goal_complete": false,
+  "original_validation_Outer_excluded": true,
+  "selection_freeze_sha256": "b8fbe6c059e83ae9ec7709be69d0fd372a7a8532b91d859f580c1612a6008be3",
+  "status": "PROSPECTIVE_FEATURE_LISTS_FROZEN"
+}

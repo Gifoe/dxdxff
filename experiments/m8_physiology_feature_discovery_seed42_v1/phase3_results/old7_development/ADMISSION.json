@@ -1,0 +1,69 @@
+{
+  "RNG_CPU_byte_resume_checked": true,
+  "all_ones_feature_parity_max_error": 0.0,
+  "dropped_gate_input_independent": true,
+  "original_correction_initialization": true,
+  "smoke": {
+    "arm": "M8_MACRO_AWARE",
+    "base_unchanged": true,
+    "discarded_legal_FIT_smoke_steps": 3,
+    "gradients": [
+      {
+        "norms": {
+          "cnn.0.bias": 0.0,
+          "cnn.0.weight": 0.0,
+          "cnn.2.bias": 0.0,
+          "cnn.2.weight": 0.0,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 0.0,
+          "gate.network.2.weight": 0.0,
+          "head.0.bias": 0.0,
+          "head.0.weight": 0.0,
+          "head.2.bias": 0.023576218634843826,
+          "head.2.weight": 0.19594350457191467
+        },
+        "step": 1
+      },
+      {
+        "norms": {
+          "cnn.0.bias": 9.577963646734133e-05,
+          "cnn.0.weight": 0.0008920978289097548,
+          "cnn.2.bias": 6.454184040194377e-05,
+          "cnn.2.weight": 0.0015647533582523465,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 1.8559179800620162e-12,
+          "gate.network.2.weight": 7.51367915654555e-05,
+          "head.0.bias": 6.576937448699027e-05,
+          "head.0.weight": 0.001010980922728777,
+          "head.2.bias": 0.02339574322104454,
+          "head.2.weight": 0.19550146162509918
+        },
+        "step": 2
+      },
+      {
+        "norms": {
+          "cnn.0.bias": 0.0001953855826286599,
+          "cnn.0.weight": 0.0017821606015786529,
+          "cnn.2.bias": 0.0001295285183005035,
+          "cnn.2.weight": 0.0031032527331262827,
+          "gate.network.0.bias": 4.530857822260259e-08,
+          "gate.network.0.weight": 3.848921608096134e-07,
+          "gate.network.2.bias": 3.325366293438492e-08,
+          "gate.network.2.weight": 0.00014894502237439156,
+          "head.0.bias": 0.00013712495274376124,
+          "head.0.weight": 0.0020451978780329227,
+          "head.2.bias": 0.023195955902338028,
+          "head.2.weight": 0.20640134811401367
+        },
+        "step": 3
+      }
+    ],
+    "initial_identity_exact": true,
+    "status": "PASS",
+    "total": 11018,
+    "trainable": 9481
+  },
+  "status": "PASS"
+}

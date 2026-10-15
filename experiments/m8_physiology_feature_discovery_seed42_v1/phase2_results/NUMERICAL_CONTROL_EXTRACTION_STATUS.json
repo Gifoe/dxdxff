@@ -1,0 +1,20 @@
+{
+  "channels": 7635,
+  "ez_features_sha256": "18ec360e9d9ec7e5b56b05208c0ef6575c13769ab6866ef241e4d65e8a554c72",
+  "feature_sha256": "efb9955989c7142bb86525d20acb2df98c54e14751a93966e302f09faaec2c2a",
+  "finite_fraction": 1.0,
+  "full_goal_complete": false,
+  "largest_registered_patient_tolerance": 2.9103830456733704e-11,
+  "legacy_replay_max_error": 0.0,
+  "no_filters_or_band_edge_changes": true,
+  "no_labels_or_Outer_read": true,
+  "patients": 80,
+  "seizures": 256,
+  "source": {
+    "NUMERICAL_CONTROLS_LOCK.json": "75c25374557687038aad09afe2ed4f13444fcf04745eaecb64a990f82eac48ba",
+    "extract_numeric_controls.py": "f30119941159500073c8626228feefb4911869e37eb54d0726e3bc0fc423febf",
+    "features.py": "c6867001fd5fe90bb56e756a520c6cc556d345e90d7a2cf87b448960af8499ba"
+  },
+  "status": "STABLE_LOG3_NUMERICAL_CONTROLS_COMPLETE",
+  "valid_windows": 1471965
+}

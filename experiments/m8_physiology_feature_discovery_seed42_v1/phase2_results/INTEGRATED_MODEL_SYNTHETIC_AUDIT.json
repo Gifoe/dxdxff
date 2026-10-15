@@ -1,0 +1,26 @@
+{
+  "base_parameters": 2113,
+  "constructor_CPU_RNG_exact": true,
+  "full94_float64_fold_error": 1.7763568394002505e-15,
+  "nondefault_LN_affine": true,
+  "raw_trainable": 9577,
+  "relative_to_legacy": 1.0609911054637866,
+  "source_sha256": "6d87693d75187fa1906cd099a3b699540d6b65719b18233179c3fab0e6b3c43d",
+  "status": "PASS",
+  "test_sha256": "c30f3605a51ac72464f9aec5a33fae889ebcb369f752564ec60a452131b5b926",
+  "tests": [
+    {
+      "device": "cpu",
+      "raw_prefix_feature_max_error": 0.0,
+      "status": "PASS",
+      "three_gradient_steps": true
+    },
+    {
+      "device": "cuda",
+      "raw_prefix_feature_max_error": 0.0,
+      "status": "PASS",
+      "three_gradient_steps": true
+    }
+  ],
+  "total_parameters": 11690
+}

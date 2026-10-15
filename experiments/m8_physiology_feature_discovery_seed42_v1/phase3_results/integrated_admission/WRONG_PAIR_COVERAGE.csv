@@ -1,0 +1,6 @@
+center,patients,channels,moved_channels,unchanged_singleton_channels,movement_fraction
+ALL,80,7635,7633,2,0.9997380484610348
+hup,36,3667,3667,0,1.0
+lzu,21,2141,2139,2,0.9990658570761326
+multicenter,15,925,925,0,1.0
+pediatric,8,902,902,0,1.0

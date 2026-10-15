@@ -1,0 +1,15 @@
+{
+  "M8_integration_and_full_goal_pending": true,
+  "center_cells": 520,
+  "feature_selection_freeze_sha256": "b8fbe6c059e83ae9ec7709be69d0fd372a7a8532b91d859f580c1612a6008be3",
+  "full_goal_complete": false,
+  "orientations_fit_subtrain_only": true,
+  "patient_cells": 705,
+  "source": {
+    "AUDIT_PROTOCOL.json": "201cc8da87dd8fe906f7c89163bb4cfd384365f04601f1468f6a2e0887a4c437",
+    "NONLINEAR_SCREEN_LOCK.json": "f7d3d9510e3c9a49c589b9e897475facde14e92191a310c6748cec757304c4b1",
+    "audit_old7.py": "aeab9315b049d74729d986ddefaf3f390960cfa34bf926c0f0e84b389118feb2",
+    "screen_nonlinear.py": "3a38362f7b76d35402c2ab5fb96e0a9bc4b558912d22569547d45e32203e0d80"
+  },
+  "status": "ALL1225_NONLINEAR_PATIENT_CENTER_SCREENS_COMPLETE"
+}

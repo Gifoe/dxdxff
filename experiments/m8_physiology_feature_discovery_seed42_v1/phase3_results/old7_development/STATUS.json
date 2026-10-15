@@ -1,0 +1,12 @@
+{
+  "FIT_selection_freeze_before_aggregate_read_sha256": "b8fbe6c059e83ae9ec7709be69d0fd372a7a8532b91d859f580c1612a6008be3",
+  "M8_cells": 80,
+  "appearances_per_variant": 65,
+  "base_cells": 80,
+  "folds": 5,
+  "full_goal_complete": false,
+  "no_Outer": true,
+  "status": "ALL80_MATCHED_OLD7_D1_AND_M8_DEVELOPMENT_CELLS_COMPLETE",
+  "unique_validation_patients": 47,
+  "variants": 16
+}

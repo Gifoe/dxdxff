@@ -1,0 +1,20 @@
+{
+  "stage":"D_fixed_nonlinear_patient_and_center_screens_inside_original_FIT",
+  "candidate_pool":"Original7 + original11new +3same-source stable-log power controls=21groups,42mean/stdcoordinates. Numerical controls do not alter old features.",
+  "estimator":{"class":"HistGradientBoostingClassifier","learning_rate":0.05,"max_iter":100,"max_leaf_nodes":7,"max_depth":3,"min_samples_leaf":20,"l2_regularization":1.0,"early_stopping":false,"max_bins":255},
+  "no_estimator_or_hyperparameter_search":true,
+  "preprocessing":"Per-patient original populationZ,then mean imputer fit subFIT only; trees need no global scaling. Patient-equal times inverse pooled subFIT class sample weights. EZ positive,validation threshold selector identical to earlier probes.",
+  "cv":"3shuffled patient GroupKFold inside each originalFIT,seed42+1009*outerfold; remaining patients split20percent calibration,seed+43*screen; no originalvalidation/Outer data in selection.",
+  "center_sensitivity":"Each originalFIT center held out in turn. Other centers split patient-isolated20percent calibration,seed+700+53*center_index(one-based). Calibration never includes held-out-center patients. All4centers retained,no patient exclusions.",
+  "cv_variants":"FULL7,ONLY_OLD_each7,DROP_OLD_each7,ONLY_NEW_each14,ADD_NEW_each14,ALL21,ADD_SHAPE5,ADD_SPECTRAL5,NUMERIC_REPLACE_POWER3=47*3*5=705fits",
+  "center_variants":"FULL7,DROP_OLD_each7,ADD_NEW_each14,ALL21,ADD_SHAPE5,ADD_SPECTRAL5,NUMERIC_REPLACE_POWER3=26*4*5=520fits",
+  "directional_stability":"For each42coordinate,orientation is chosen by patient-mean raw-AUC inside subFIT only. Report oriented-AUC and fraction>0.5 on untouched screening patients and by their center. No held-out sign fitting,no claim that a feature is clinically useless from coefficients/correlation.",
+  "prune_rule":"PeroriginalFIT:pairedpatientCVmean deletion-minus-FULL7 AUC>=-.002,AP>=-.002,MacroF1>=-.003; samebounds in>=2of3screens; center rule must pass. At most2groups,rank byMacroF1thenAPthenAUCthenloweroldindex.",
+  "add_rule":"PeroriginalFIT:addition-minus-FULL7 mean AUC>=.005 orAP>=.005; bothAUC/AP>=-.002;MacroF1>=0;samegain/noninferiority in>=2of3screens;center rule must pass. At most3;rank bymin(AUCdelta,APdelta),MacroF1delta,AUC+APdelta,lowerindex.",
+  "center_rule":"All4centers must have validpaired metrics. Median center-held-out deltas AUC>=-.002,AP>=-.002,MacroF1>=-.003; worstcenter AUC/AP>=-.01,MacroF1>=-.015. Registered before nonlinear results.",
+  "new_only_diagnostic":"Also freeze top3 newfeatures under same addition ranking for a separately declared new-only comparison,even when formaladdition gates fail. This diagnostic is not a forced augmentation or an assertion of utility. Formalaugmentedmodel uses eligiblefeatures only;noeligible means noaddition.",
+  "feature_selection_freeze":"Freeze independent per-outerFIT prune/add/new-only lists before any new M8 validation outcome is read. No globally selected best feature list. Exact later matchedM8 architecture/control protocol must be locked before its validation outcomes.",
+  "bootstrap":"10000patientpaired resamples perFIT andtask,fixedpredictions/thresholds,seed42;selection-conditioned descriptive intervals,not independentvalidation.",
+  "completed_screening_does_not_complete_goal":true,
+  "privacy":"Private models,scalers,identities,predictions and logs remain server. Publicsource,anonymousaggregates and per-FIT feature names only. No new Outer access."
+}

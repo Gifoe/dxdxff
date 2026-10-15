@@ -1,0 +1,30 @@
+{
+  "stage":"F_matched_lightweight_original_pruned_new_and_combined_M8",
+  "FIT_feature_freeze_sha256":"b8fbe6c059e83ae9ec7709be69d0fd372a7a8532b91d859f580c1612a6008be3",
+  "prospective":"Locked before reading new M8 ablation validation aggregate outcomes. Feature decisions remain per-originalFIT,never globally chosen from validation orOuter.",
+  "width":"Fixed10physiologicalslots=20mean/stdD1coordinates and10window-gatecoordinates. First7slots preserve old physiological positions; last3slots receive per-FIT selected newfeatures,unusedslotszero. RawCNN/pre-reference/rawPR/96Dsummary/head/tanhresidual unchanged.",
+  "normalization":"Generalizedduplicate-aware CompactDelta: original14coordinate multiplicities(sum22),6extra multiplicity1;66zerooriginal88positions retained;effectiveLayerNorm94 positions,not nativeLayerNorm20. Fold zero-position linear/affine contributions exactly. New raw-source columns initiallyzero;lastlayer and originalsourceinitializer retained. Slot10OLD7 control is mandatory because94-position geometry differs from original88.",
+  "parameters":{"D1_base":2113,"trainable_raw_correction":9577,"total":11690,"legacy_M8_total":11018,"maximum_allowed_relative_total":1.10},
+  "initialization":"Preserve original SourceA0/CompactDelta constructor RNG consumption; create widened layer inside fork_rng. RawCNN/head cloned from original fresh foldM8 initializer,not trained rawweights. Gate7->32->24 expandedto10->32->24,copyoriginal7columns,bias/outputprojection;extra3columnsinitiallyzero. Both correctionhead/outputgateprojections retain originalzero-outputinitialization.",
+  "variants":{
+    "SLOT10_OLD7":"Matched94-position architecture,original7,extra3zero;mandatory nuisance-controlbaseline",
+    "SLOT10_PRUNED":"Per-FIT eligible originaldeletions,extra3zero;noeligibledeletions means exactaliasOLD7",
+    "SLOT10_ELIGIBLE_ADD":"PRIMARY:original7 plus per-FIT eligible newfeatures(max3);noeligiblefeatures means exactaliasOLD7",
+    "SLOT10_TOP3_ADD":"SECONDARY diagnostic:original7 plus fixedFIT-ranked top3newfeatures,includingonesfailingformaladditiongate;not promoted based onOuter",
+    "SLOT10_NEW_ONLY3":"Diagnostic:new-only top3 inextraslots,alloriginal7slotszero;not a claim that3featurespassedformaladditiongate",
+    "SLOT10_NUMERIC_POWER7":"Replace originalfirst3bandpower slots with stable-log same-bandcontrols;retainoriginalRMS/variance/LL/entropy;extra3zero",
+    "SLOT10_D1_ONLY_NEW":"TOP3_ADD but newfeatures onlyinD1;extra3gatecoordinateszero",
+    "SLOT10_GATE_ONLY_NEW":"TOP3_ADD but D1extra3zero;newfeatures onlyingate",
+    "SLOT10_WRONG_PAIR_TOP3":"TOP3_ADD with label-blind fixedchannelpermutation ofnewfeatures only,within identicalseizure/windowavailability-maskgroups;samepermutationforD1summaryandwindowgate;singleton groups unchanged andcoverage reported"
+  },
+  "no_new_candidate_model_selection_from_validation":"All9procedures fixed;validation only selects eachmodel's epochandthreshold. Original/pruned/new-only/combinedandpathwayresults allreported. Do not hide failures orupgrade an exploratorysecondary to primary aftertest.",
+  "aliases":"Hash-identical actual foldinputs/featuremaps/routes mayreuse exact same frozen model/threshold instead ofduplicate nominaltraining. Reportlogical versusactualcells and inheritedhistory;nevercountalias as independentfit. IdenticalD1features mayreuse samebase across routecontrols.",
+  "preprocessing":"Originalper-patient float64populationZ,SD<=1e-8denominator1;FIT-onlymeanimputer/StandardScaler independentlypercoordinate. Original7prefixmustreproduceoriginalD1legalbank before widernormalization. Extra and numericallychanged gate scales: original median(per-FITpatient medianabswindowdelta),floor1e-30;unchangedoldcoordinates mustmatch frozen P1scales. No label-dependentfeaturetransform.",
+  "wrong_pair":"Seed42+patient hash,matched availability signatures acrossallseizures/windows,derangementwhereclasssize>=2,no masks/patients/windows dropped,no labelinput. Do not cross missing-observationpatterns just toforcepermutation.",
+  "training":"Same originalD1 andM8optimizers,patientupdates,losses,30maxepochs,min6,patience6,gradientclip1,foldseed42+1009fold,FP32TF32off andthresholdselectors as old7matchedmatrix. No newlearningrate,seed orthresholdsearch. Originaldata/splits preserved.",
+  "admission":"Syntheticfloat64proof of94-positionfolding includingnondefault LNaffines;float32CPU/GPUforward/gradientchecks,constructorRNGparity,gateextensionzero-inputparity;actualwholeFIT original-rawfeature parity and3discardedgradientsteps;basefreeze andnewgate/headgradients checked. No efficacyresults beforeadmissionPASS.",
+  "evaluation":"Finish5validationfolds forallprocedures;freeze featuremaps,scalers,gatescales,modelcheckpoints,thresholds andlogicalaliases before any newOuter inference. One registeredfinalOuterpass perlogicalarm,hash-boundprivatepatientcaches. OldOuter previouslyviewed,soEXPLORATORY_REPEATED_TEST,never blindconfirmation.",
+  "primary_success":"SLOT10_ELIGIBLE_ADD versus matchedSLOT10_OLD7 andlegacyFULL_RETRAIN:allpatientmean AUROC,AP,MacroF1 gains>=.005,EZF1nondecrease,totalparams<=1.10legacy. Report95percentpairedbootstrap andBonferroni99.1667percentintervals for3primarymetrics*2references,10000patientdraws. Ifnotmet,do notclaim confirmedimprovement. Secondaryandnew-onlyoutcomes remain separatelylabeled.",
+  "goal_completion":"Requires old7necessity/redundancy/centerstability,allmatchedintegratedvariants,actualfinalperformance,compute/params,independentverification andfullrequirementaudit. Negativecandidatefinding mustbe bounded to thesetestedprocedures,not globaloptimalityproof.",
+  "privacy":"Onlysource,hashes andanonymousaggregates;no raw,IDs,labels,models,scalers,individualpredictions,caches orlogs published. Preserve allhistoricalartifacts."
+}

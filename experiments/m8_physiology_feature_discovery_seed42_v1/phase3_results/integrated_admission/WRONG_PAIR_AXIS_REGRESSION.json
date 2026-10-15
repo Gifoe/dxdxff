@@ -1,0 +1,10 @@
+{
+  "channels": 64,
+  "independent_nested_loop_exact": true,
+  "seizures": 3,
+  "source_sha256": "1e38acfe791fd58bb1067c9019129b85a4eb79284d1c03b8995c7ee260477229",
+  "status": "PASS",
+  "test_sha256": "d7e472008bbf448039d089c96f0849862ea62f9934b574e39cf457cdebb5bfda",
+  "unchanged_old7_exact": true,
+  "windows": 59
+}

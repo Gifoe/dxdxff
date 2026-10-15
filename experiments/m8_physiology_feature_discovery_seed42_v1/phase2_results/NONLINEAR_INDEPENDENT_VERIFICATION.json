@@ -1,0 +1,38 @@
+{
+  "FIT_only_patient_and_center_isolation": true,
+  "all_feature_lists_independently_reproduced": [
+    {
+      "all_three_lists_independently_reproduced": true,
+      "fold": 1
+    },
+    {
+      "all_three_lists_independently_reproduced": true,
+      "fold": 2
+    },
+    {
+      "all_three_lists_independently_reproduced": true,
+      "fold": 3
+    },
+    {
+      "all_three_lists_independently_reproduced": true,
+      "fold": 4
+    },
+    {
+      "all_three_lists_independently_reproduced": true,
+      "fold": 5
+    }
+  ],
+  "all_initial_class_weight_priors_reproduced": true,
+  "all_thresholds_reproduced": true,
+  "cells": {
+    "center": 520,
+    "patient": 705
+  },
+  "full_goal_complete": false,
+  "imputers_subFIT_only": true,
+  "maximum_probability_replay_error": 0.0,
+  "no_training_or_Outer_evaluation_called": true,
+  "patient_metric_rows_checked": 18615,
+  "status": "PASS",
+  "verifier_sha256": "d011a01279670a1b16d99afe96c35f542f60f219b8b1416175a4edbab325464b"
+}

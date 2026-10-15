@@ -1,0 +1,18 @@
+{
+  "stage":"single_fixed_final_repeated_Outer_evaluation",
+  "prospective":"Registered before any new discovery Outer inference. This is evaluation of all fixed procedures, not a new selection stage.",
+  "old7_arms":"All16 original88-position full/drop7/single7/none M8 retraining procedures, original five folds; do not pick an old subset from validation/Outer averages",
+  "integrated_arms":"All9 already fixed SLOT10 procedures, all5folds; preserve logical aliases and per-FIT feature decisions exactly",
+  "reference":"Historical fullM8 checkpoint predictions additionally replayed, separately identified from the freshly retrained FULL_RETRAIN and same-width SLOT10_OLD7 controls",
+  "cohort":{"patients":80,"channels":7635,"seizures":256,"valid_raw_channel_windows":1471965},
+  "preconditions":"All80 old7 pairs complete and independently validated; all45 logical integrated cells frozen; actual FIT numerical/gradient admissions PASS; original splits,masks and protected artifact hashes intact",
+  "freeze":"Bind all model checkpoints,source hashes,preprocessors,feature maps,gate scales,wrong-pair permutations,input feature/cache hashes,patient roles and validation-selected thresholds before any new Outer inference; no fitting after freeze",
+  "inference":"Only each patient's own outer-held-out fold model; whole canonical patient channel set and genuine masks. Atomic private patient caches bound to freeze/checkpoint/transformed-input/source hashes; aliases reuse exact scores, never new independent scientific repeats",
+  "label_firewall":"Do not open full label archive until all26x5 armfold score files are sealed with content hashes. Development bank labels are not a substitute for ownfold Test labels",
+  "metrics":"EZpositive: patientmean primary AUROC,AP,MacroF1,EZF1,NEZF1,accuracy,sensitivity,specificity,balancedaccuracy,MCC,Brier,logloss,signedEZfractionbias,MRR,Top1 plus fixed other existing ranking endpoints. Separate pooled,fold,center,metriccoverage,confusion. Never pooled metrics described as patientmacro",
+  "uncertainty":"10000 paired original80patient bootstrap,seed42,fixed models/thresholds. 95percent intervals allcomparisons; primary eligible-add comparisons against SLOT10_OLD7 and LEGACY_FULL_RETRAIN additionally99.1666667percent Bonferroni intervals for3metricsx2references. Report trainingseed and repeatedtest limitations",
+  "primary_success":"As fixed in M8_INTEGRATION_LOCK: allthree mean AUROC,AP,MacroF1 gains>=0.005 against bothcontrols,EZF1nondecrease,totalparameters<=1.10legacy. Ifnotmet,no confirmedimprovement claim. No alternative feature procedure promoted aftertest",
+  "negative_finding":"If primary fails, quantify bounded evidence for old7 under tested feature formulas,routes,budgets,centres andseed; never claim exhaustive search or globaloptimality. Report unfavorable endpoints and counterexamples",
+  "scientific_status":"EXPLORATORY_REPEATED_TEST",
+  "privacy":"Onlysource,hashes andanonymousaggregates mayleave server; no identities,labels,predictions,embeddings,features,raw,models,scalers,cache orlogs"
+}

@@ -1,0 +1,17 @@
+{
+  "all130_score_hashes_verified": true,
+  "exact_frozen_report_and_classification_AST": true,
+  "frozen_evaluator_sha256": "e19360a92629d0f9b09037cf8df22701a239617fc1dd9c96836a331d1a64bb61",
+  "lower_level_native_cause_not_proven": true,
+  "metric_engine_sha256": "6c8974e097ff6cb85bbe6f8fa59b246d5e4100c91c50bbb4b082a7dbcf702688",
+  "no_model_creation_training_or_new_inference": true,
+  "numpy": "2.2.6",
+  "original_ranking_function_unmodified": true,
+  "pandas": "2.3.3",
+  "preceding_native_failures": "NumPy_lexsort_and_pandas_grouping_in_model_importing_processes",
+  "reporter_sha256": "7a1e6639bf37672087186e2f9e8861938bdc7cadd8b496b3174613f39f7fab00",
+  "scikit_learn": "1.7.2",
+  "status": "PASS",
+  "thresholds_models_scores_and_metrics_unchanged": true,
+  "torch_not_imported": true
+}

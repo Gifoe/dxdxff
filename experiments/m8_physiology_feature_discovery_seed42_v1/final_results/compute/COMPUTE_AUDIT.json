@@ -1,0 +1,23 @@
+{
+  "D1_epoch_timing_missing_reported_not_imputed": true,
+  "affine_counts_exclude_bias_nonlinearity_normalization_reductions_and_feature_extraction": true,
+  "affine_counts_not_full_end_to_end_FLOPs": true,
+  "channels": 7635,
+  "first_complete_FIT_patient_not_selected_by_speed": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "module_forward_hooks_and_actual_masks": true,
+  "no_Outer_outcomes_used": true,
+  "numpy": "2.3.5",
+  "offline_feature_cost_separately_measured": true,
+  "parameter_ratio": 1.0609911054637866,
+  "patients": 80,
+  "source_sha256": "cda284d0b2aa7be8817e5a4f8032e442b519761f51729d8225c9de3f2b507fb8",
+  "status": "PASS",
+  "timing_conditional_on_shared_Windows_GPU_display_and_this_runtime": true,
+  "torch": "2.11.0+cu128",
+  "total_parameters": [
+    11018,
+    11690
+  ],
+  "valid_windows": 1471965
+}

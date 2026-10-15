@@ -1,0 +1,11 @@
+{
+  "alias_binding_exact": true,
+  "all_nine_input_binding_changes_rejected": true,
+  "atomic_roundtrip": true,
+  "clinical_labels_predictions_unread": true,
+  "content_tampering_rejected": true,
+  "source_sha256": "e19360a92629d0f9b09037cf8df22701a239617fc1dd9c96836a331d1a64bb61",
+  "status": "PASS",
+  "synthetic_only": true,
+  "test_sha256": "3a1a575314a5cd8bf840829f84426668837da8fee5dfbd54dc1dcb158bedfdf0"
+}

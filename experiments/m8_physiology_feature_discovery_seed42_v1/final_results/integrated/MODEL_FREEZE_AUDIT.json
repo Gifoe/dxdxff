@@ -1,0 +1,11 @@
+{
+  "actual_D1_cells": 26,
+  "actual_M8_cells": 36,
+  "aliases": 9,
+  "all_feature_maps_preprocessing_scales_checkpoints_locked": true,
+  "freeze_sha256": "3af54612a66d08d0a7bbff6e22e5f7c6b22d1539454ef4cd7b87903105aedb26",
+  "full_goal_complete": false,
+  "logical_cells": 45,
+  "status": "ALL45_LOGICAL_INTEGRATED_MODELS_FROZEN_BEFORE_OUTER",
+  "validation_only_epoch_threshold": true
+}

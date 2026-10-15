@@ -1,0 +1,5 @@
+stage,head,epochs,epochs_with_measured_seconds,measured_epoch_seconds_sum,full_epoch_timing_available,imports_admissions_reporting_transfer_excluded
+old7_160fits,D1,831,0,,False,True
+old7_160fits,M8,1175,1175,1479.826712700029,True,True
+integrated_actual_fits,D1,312,0,,False,True
+integrated_actual_fits,M8,491,491,687.9951120999976,True,True

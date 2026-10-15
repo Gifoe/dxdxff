@@ -1,0 +1,23 @@
+{
+  "absolute_tolerance": 1e-12,
+  "all_classification_and_ranking_metrics": true,
+  "bootstrap_draws": 10000,
+  "cases": 35,
+  "maximum_metric_difference": 0.0,
+  "new_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+    "sklearn": "1.7.2"
+  },
+  "no_clinical_labels_or_predictions_read": true,
+  "reference_versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "sklearn": "1.7.2"
+  },
+  "source_sha256": "3ff4e1100298ea3d41e092b6b3bae69a203a596fe110c1769f5a3249373531aa",
+  "status": "PASS",
+  "synthetic_only": true
+}

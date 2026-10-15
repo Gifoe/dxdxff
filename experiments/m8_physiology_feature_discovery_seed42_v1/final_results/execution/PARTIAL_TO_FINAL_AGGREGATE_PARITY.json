@@ -1,0 +1,18 @@
+{
+  "cells_differing_above_1e_12": 0,
+  "files": [
+    "center_metrics.csv",
+    "confusion_matrices.csv",
+    "fold_mean_std.csv",
+    "fold_metrics.csv",
+    "INFERENCE_TIMING.csv",
+    "main_results.csv",
+    "metric_coverage.csv",
+    "paired_intervals.csv",
+    "pooled_metrics.csv"
+  ],
+  "final_values_independently_verified_against_sealed_scores": true,
+  "maximum_absolute_numeric_difference": 0.0,
+  "no_new_inference": true,
+  "status": "PASS"
+}

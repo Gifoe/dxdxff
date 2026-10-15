@@ -1,0 +1,343 @@
+{
+  "status": "ALL_RESEARCH_REQUIREMENTS_VERIFIED",
+  "date": "2026-10-16",
+  "objective": "以M8为基准，自主审计现有 7D 生理特征的必要性、冗余性与跨患者稳定性，结合最新研究探索更具 SOZ 定位价值的新特征。自主完成特征构建、筛选、消融、模型整合及性能验证，严格避免测试集信息泄漏。最终目标是在保持模型轻量化的同时提升 AUROC、AP 和 F1，并通过可复现实验明确哪些特征真正有效、为何有效，以及是否优于原始 7D，如果能找到需要依据，找不到需要证明现有的合理性。",
+  "scope_preserved": true,
+  "research_execution_complete": true,
+  "primary_improvement_established": false,
+  "global_optimality_claimed": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "completion_basis": "All specified discovery,matched ablation,integration,evaluation,independent verification and reporting are finished. The predeclared primary gain failed;bounded ranking signals,old7 combination utility,numerical risks and deletion counterexamples are reported without promoting test-selected winners.",
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Exact original7 definitions,cohort,windows,source identity and provenance",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "AUDIT_PROTOCOL.json",
+        "initial_results/CANDIDATE_EXTRACTION_STATUS.json",
+        "initial_results/CANDIDATE_COVERAGE.csv",
+        "FROZEN_SCIENTIFIC_SOURCE_AUDIT.json"
+      ],
+      "interpretation_limit": "80patients/7635channels/256seizures/1471965windows;identity verified privately,not released."
+    },
+    {
+      "id": "R02",
+      "requirement": "Recent primary-literature-grounded feature construction and numerical validity",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "LITERATURE_EVIDENCE.md",
+        "features.py",
+        "test_features.py",
+        "initial_results/INITIAL_AUDITS_INDEPENDENT_VERIFICATION.json",
+        "phase2_results/NUMERICAL_CONTROL_EXTRACTION_STATUS.json"
+      ],
+      "interpretation_limit": "11new+3same-bandcontrols;targeted review,not exhaustive;no unsupportedLF/fullHFO/PLHG/PEI/EIclaims."
+    },
+    {
+      "id": "R03",
+      "requirement": "Old7 numerical risks and redundancy distinguished from usefulness",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "initial_results/OLD_RMS_NUMERICAL_FLOOR_AUDIT.csv",
+        "initial_results/OLD7_NUMERIC_FIT_AUDIT.csv",
+        "initial_results/OLD7_REDUNDANCY_FIT_AUDIT.csv",
+        "REPORT.md"
+      ],
+      "interpretation_limit": "Correlation is not algebraic duplication or necessity;fixed-width normalization interactions and RMSfloor explicitly interpreted."
+    },
+    {
+      "id": "R04",
+      "requirement": "Patient-isolated and original-source-label stability analysis",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "phase2_results/NONLINEAR_INDEPENDENT_VERIFICATION.json",
+        "phase2_results/NONLINEAR_PATIENT_CENTER_ISOLATION.csv",
+        "phase2_results/FEATURE_DIRECTION_STABILITY.csv",
+        "phase2_results/NONLINEAR_PAIRED_FIT_INTERVALS.csv"
+      ],
+      "interpretation_limit": "705patient+520source holdouts;four source labels are not necessarilyfour physicalhospitals;smallgroup uncertainty retained."
+    },
+    {
+      "id": "R05",
+      "requirement": "NestedFIT-only selection,threshold/epoch separation and frozen decisions",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "NONLINEAR_SCREEN_LOCK.json",
+        "phase2_results/PER_FIT_FEATURE_SELECTION.json",
+        "M8_INTEGRATION_LOCK.json",
+        "final_results/integrated/MODEL_FREEZE_AUDIT.json"
+      ],
+      "interpretation_limit": "No global validation/Outer winner;formaladdition onlyfold2kurtosis,noeligibledeletions;diagnosticroutes staysecondary."
+    },
+    {
+      "id": "R06",
+      "requirement": "Real old7 full,single,drop,none neural ablations",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "OLD7_M8_ABLATION_LOCK.json",
+        "phase3_results/old7_development/MODEL_SELECTION.csv",
+        "phase3_results/old7_development/DEVELOPMENT_SUMMARY.csv",
+        "final_results/old7/INDEPENDENT_RETRAIN_VERIFICATION.json",
+        "final_results/outer/main_results.csv"
+      ],
+      "interpretation_limit": "160actualold7models;development65appearances/47unique separated from80patientOuter;no inference-switch substitute."
+    },
+    {
+      "id": "R07",
+      "requirement": "Matched lightweight integration,new-only,pruned,combined,pathway and negative controls",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "integrated_model.py",
+        "integrated_data_v2.py",
+        "train_integrated_v2.py",
+        "phase3_results/integrated_admission/REAL_FIT_ADMISSION.json",
+        "final_results/integrated/INDEPENDENT_TRAINING_VERIFICATION.json",
+        "final_results/compute/COMPUTE_AUDIT.json"
+      ],
+      "interpretation_limit": "45logical=26D1+36M8actual+9exactaliases;94-position nuisancecontrol;11690params;affineMACnotfullFLOPs;offlinecost included."
+    },
+    {
+      "id": "R08",
+      "requirement": "Single frozen final prediction pass,complete cohort and leakage firewall",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "FINAL_EVALUATION_LOCK.json",
+        "final_results/outer/COMPACT_FREEZE_AUDIT.json",
+        "final_results/outer/INDEPENDENT_FINAL_CACHE_VERIFICATION.json",
+        "final_results/outer/INDEPENDENT_FINAL_VERIFICATION.json",
+        "FROZEN_SCIENTIFIC_SOURCE_AUDIT.json"
+      ],
+      "interpretation_limit": "26procedures/130foldcells;full labels read only after allscoressealed;historicallyviewedOuter remains repeated-test,not blindconfirmation."
+    },
+    {
+      "id": "R09",
+      "requirement": "All requested endpoints,scope separation,uncertainty and independent reproducibility",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "final_results/outer/main_results.csv",
+        "final_results/outer/pooled_metrics.csv",
+        "final_results/outer/fold_metrics.csv",
+        "final_results/outer/center_metrics.csv",
+        "final_results/outer/metric_coverage.csv",
+        "final_results/outer/paired_intervals.csv",
+        "final_results/outer/INDEPENDENT_FINAL_VERIFICATION.json"
+      ],
+      "interpretation_limit": "2080patientrows;33paired10000draw comparisons;6adjustedprimaryintervals;undefinedmetricsnotzero-filled;fixed-model,one-seed uncertainty."
+    },
+    {
+      "id": "R10",
+      "requirement": "Evidence-backed mechanism and honest positive/negative conclusion",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "REPORT.md",
+        "final_results/outer/PRIMARY_SUCCESS_GATE.json",
+        "final_results/outer/paired_intervals.csv",
+        "phase3_results/integrated_admission/WRONG_PAIR_COVERAGE.csv"
+      ],
+      "interpretation_limit": "No simultaneousprimarygain;diagnosticranking signals butno samewidthMacroF1gain;old7combination useful yet notallnecessary or globallyoptimal;no posttest tuning."
+    },
+    {
+      "id": "R11",
+      "requirement": "Privacy-preserving deliverables,engineering provenance and verification",
+      "status": "VERIFIED_WITH_EXPLICIT_LIMITS",
+      "evidence": [
+        "README.md",
+        "WORKPLAN.md",
+        "ENGINEERING_PATCHES.md",
+        "final_results/outer/REPORTING_RECOVERY_AUDIT.json",
+        "final_results/execution/CPU_STATISTICS_RUNTIME_PARITY.json",
+        "final_results/execution/PARTIAL_TO_FINAL_AGGREGATE_PARITY.json",
+        "tools/verify_final_public.py",
+        "tools/verify_completion.py"
+      ],
+      "interpretation_limit": "Code/hash/anonymoussummaries only;allprivateartifacts/logs stayserver;nativecauseunproven;unchangedreportAST,no newpredictions;localcommit,notan unperformedGitHubpush."
+    }
+  ],
+  "verification_commands_observed": [
+    {
+      "command": "test_features.py (trusted server,Python3.10)",
+      "terminal": "FEATURE_UNIT_SCALE_SINE_CONSTANT_MASK_SINGLETON_TESTS_PASS",
+      "synthetic_only": true
+    },
+    {
+      "command": "tools/verify_public_initial.py",
+      "terminal": "INITIAL_PHASES_PUBLIC_SOURCE_COUNTS_PRIVACY_PASS_FULL_GOAL_STILL_ACTIVE",
+      "scope": "historicalinitialstageonly"
+    },
+    {
+      "command": "tools/verify_phase2_public.py",
+      "terminal": "PHASE2_PUBLIC_HASH_SOURCE_COUNTS_SELECTION_AND_PRIVACY_PASS"
+    },
+    {
+      "command": "tools/verify_phase3_public.py",
+      "terminal": "PHASE3_DEVELOPMENT_HASH_COUNTS_WEIGHTED_FOLDS_AND_ADMISSION_PASS_NOT_FINAL_OUTER"
+    },
+    {
+      "command": "tools/verify_final_public.py",
+      "terminal": "ALL_FINAL_PUBLIC_HASHES_SOURCES_222_ACTUAL_FITS_26_ARMS_AND_PRIMARY_ARITHMETIC_PASS"
+    },
+    {
+      "command": "python -m compileall -q experiments/m8_physiology_feature_discovery_seed42_v1",
+      "result": "PASS"
+    }
+  ],
+  "remaining_required_work": [],
+  "unperformed_optional_research": [
+    "New temporal-summary hypotheses",
+    "External/prospective cohort confirmation",
+    "Additional training seeds"
+  ],
+  "unperformed_optional_work_not_claimed_complete": true,
+  "external_push_performed": false,
+  "release_sha256": {
+    ".gitattributes": "22106984a6c1274ead5c283789ca11d75b303658949aaa627698747e7b2d6160",
+    "audit_compute.py": "cda284d0b2aa7be8817e5a4f8032e442b519761f51729d8225c9de3f2b507fb8",
+    "audit_old7.py": "aeab9315b049d74729d986ddefaf3f390960cfa34bf926c0f0e84b389118feb2",
+    "AUDIT_PROTOCOL.json": "201cc8da87dd8fe906f7c89163bb4cfd384365f04601f1468f6a2e0887a4c437",
+    "ENGINEERING_PATCHES.md": "46a0ce72393e1f17138caab5ca163a5b0b9cac26dfc6769e9b2fb73102535393",
+    "evaluate_final_v2.py": "e19360a92629d0f9b09037cf8df22701a239617fc1dd9c96836a331d1a64bb61",
+    "evaluate_final.py": "d66dd0f1538675b6289b2959c8daccc78b434ad7e0712be8a7291b85dc20aeb1",
+    "extract_candidates.py": "776be6196c1882da9cb6a639dcbf2547071b190c0823876dc793415c3b105dbb",
+    "extract_numeric_controls.py": "f30119941159500073c8626228feefb4911869e37eb54d0726e3bc0fc423febf",
+    "features.py": "c6867001fd5fe90bb56e756a520c6cc556d345e90d7a2cf87b448960af8499ba",
+    "FINAL_EVALUATION_LOCK.json": "aa1ac2e41eb3ad9780b929de4706c1110602f81e714fbbdf1e65e749c4bc45f2",
+    "FROZEN_SCIENTIFIC_SOURCE_AUDIT.json": "b58d09eff7f12655bbdf16ce0e4977503622c63f30e09c86b0189fe6399232d1",
+    "INITIAL_FINDINGS.md": "0b8a64b82f14a0853f5fef0d00ff95f62253b6ca7be27aa17569d7a27c452430",
+    "integrated_data_v2.py": "1e38acfe791fd58bb1067c9019129b85a4eb79284d1c03b8995c7ee260477229",
+    "integrated_data.py": "3f537341971752337572c0d91f6ecdd6d1b6a11d5cd06a4b34cee4620b6d73d2",
+    "integrated_model.py": "6d87693d75187fa1906cd099a3b699540d6b65719b18233179c3fab0e6b3c43d",
+    "LITERATURE_EVIDENCE.md": "652755dbbcd4399852d9c4976a593eaa40868260dacc9f70c337555429fbbc20",
+    "M8_INTEGRATION_LOCK.json": "4e05f41bad3d34d107ad728b79cf5b14185ac02f7dcabeb2700150f2e2f1591a",
+    "NONLINEAR_SCREEN_LOCK.json": "f7d3d9510e3c9a49c589b9e897475facde14e92191a310c6748cec757304c4b1",
+    "NUMERICAL_CONTROLS_LOCK.json": "75c25374557687038aad09afe2ed4f13444fcf04745eaecb64a990f82eac48ba",
+    "OLD7_M8_ABLATION_LOCK.json": "a1f703c8a8371e1b918c6ab305dcb207719afff2292a07f09367f57542c8d2b4",
+    "old7_m8_model.py": "b839fefd4db1344edc06b52453c701133a6a9c23968d77b89024e9dfe968f0b2",
+    "PHASE2_FINDINGS.md": "f32e27a8a491158a6649529145c361fbbfbee9e17d440e743f63e230cfec46ec",
+    "PROBE_STAGE_C_LOCK.json": "c439cdfb7c07e94758e330f3bd7dba14f80787b0f088e2e931129ff0da81bd08",
+    "ranking_safe.py": "0f3f461c7c36154c103f782ab3c51976b4a6561775bd9f9d17de2fec3e7d654a",
+    "README.md": "c633cb53f2f41136e599b1e78351966ab4bfa3098c89f69c9d84d1a087da7e63",
+    "report_final_cpu_isolated.py": "147dd8b4c50e5d3d4c3d05d6fa7cf6b92a970dcf40525ace68ef8f4091e53620",
+    "report_final_cpu_v2.py": "7a1e6639bf37672087186e2f9e8861938bdc7cadd8b496b3174613f39f7fab00",
+    "report_final_from_seal.py": "779c5cdb4cb40a75a9e30e0151fc35f44bc715aaba46586dede8caf188ba3d62",
+    "report_final_ranking_safe.py": "b52b1d58d01b9f0ff2ec68db0c67bae5676b89055b5515dbc8dc180d7e22adf3",
+    "REPORT.md": "2ead6fab447117871d4b8fb9c10f971ecf75993d54ce95beea985746e73ae271",
+    "screen_candidates.py": "e5be95eb370891caf0667060796083666677fa68bb25d67d91b9ed03718bd70f",
+    "screen_nonlinear.py": "3a38362f7b76d35402c2ab5fb96e0a9bc4b558912d22569547d45e32203e0d80",
+    "test_cpu_statistics_runtime_v2.py": "3ff4e1100298ea3d41e092b6b3bae69a203a596fe110c1769f5a3249373531aa",
+    "test_cpu_statistics_runtime.py": "0b3a8e790b3328b2e2fb7b944bd0808333e7b2686c25ced06fd426253cb0563b",
+    "test_features.py": "87b30fe16bcd7d4244becbbdfd1d577abe1ebc67bf88152d4bb182007151d8af",
+    "test_final_cache_protocol.py": "3a1a575314a5cd8bf840829f84426668837da8fee5dfbd54dc1dcb158bedfdf0",
+    "test_integrated_model.py": "c30f3605a51ac72464f9aec5a33fae889ebcb369f752564ec60a452131b5b926",
+    "test_pairing_index.py": "d7e472008bbf448039d089c96f0849862ea62f9934b574e39cf457cdebb5bfda",
+    "test_ranking_safe.py": "87dfbad8b6d066ef83c977558c055f5efb23f8be99e5d594540b88df0ea441eb",
+    "train_integrated_v2.py": "2f49f8d02b879654039cb366ca231ca2125c0d122ef9585b61934371d405bac3",
+    "train_integrated.py": "ae79eec776a3345a5a48d912cd57e5cbd28c6649ba26f42332b86fedbc552c2e",
+    "train_old7_m8.py": "c7685d069f1036d6e219571e95d57801fd9475759440c7e8a68abca5789ac03c",
+    "verify_final_cache_stage.py": "6e2067c6104a9c5c623b2bb897a63a16ccba7931bd8e59cfc4abb3ef40ebf631",
+    "verify_final_cpu_metrics.py": "e2304f50e575a4347e368f583f5dd46fc97b05040d28ae5e4ad34c399f170040",
+    "verify_final.py": "0384fa5f0b3df6841158c8281974546cfc8bb268887d9926235482f45d01ebf4",
+    "verify_integrated_training.py": "f9a3fb6762f1457ff2cb9781b22872588c912dc43235d5301d71d065818d274e",
+    "WORKPLAN.md": "e6f61b21e8345abc8a87d7b357d9c83016b7868aa93bb9ef5f324d08e4a48112",
+    "final_results/PUBLIC_SHA256.json": "fd9730d3e9f1bd9996656c3d7af9e656e66d7ad462f350c1325d3e9ed4831acf",
+    "final_results/compute/ACTUAL_TRAINING_WORK.csv": "fbb709f4ef53e26cd32ee4ed2795722c6a18194c45b4f79ddb0ca4eec92980a9",
+    "final_results/compute/AFFINE_COMPUTE_COUNTS.csv": "453da68ff99e62327f06b0903b98bdb32e01b5255524428c306a3f7fc6471625",
+    "final_results/compute/COMPUTE_AUDIT.json": "ac785368d878910c439a939f3217019816d15fdda48f9aabb7036646149c433b",
+    "final_results/compute/MATCHED_PATIENT_INFERENCE_TIMING.csv": "4608756104ac890f6b162a1ac2b0027eac9e6f2f3b5addd13fdc6c79c5db6e97",
+    "final_results/compute/MEASURED_MODULE_SHAPE_MACS.csv": "c4535fa90446b44eee2ca44d2c321e12552fb0a1f29022751d5861252764d7d6",
+    "final_results/compute/OFFLINE_FEATURE_EXTRACTION_TIMING.csv": "e8c3c110828d52a16d3e7326b45da5c2c01112014db18cce0673777d128a834d",
+    "final_results/compute/PARAMETER_AND_AFFINE_PROFILE.csv": "7cd9303f0729382c4c3a45af23f1ec1b06560172b46e174563da90db2bfc1395",
+    "final_results/execution/CPU_STATISTICS_RUNTIME_PARITY.json": "d0c1f07cf6ee43227e177e332833a45f6304b14c3aa918a55e412d882ea0be55",
+    "final_results/execution/FINAL_CACHE_PROTOCOL_UNIT_TEST.json": "5eceed599a2884a9c59ff032d3d8c08f413338e5b00c6d4629622140cb66b261",
+    "final_results/execution/PARTIAL_TO_FINAL_AGGREGATE_PARITY.json": "36902a3990da181233db483ad5df1c4b32ddd36f2832952e199785e8ee9c464e",
+    "final_results/execution/RANKING_SORT_EQUIVALENCE.json": "5748b042fa22491f94759d55e6dee1dccde0fa67f60494679a506fd621540e4b",
+    "final_results/integrated/INDEPENDENT_TRAINING_VERIFICATION.json": "fe2b056df02e43257f13f05bf4c9d6ac56039068ed5f0d914ac4209bfa76358f",
+    "final_results/integrated/MODEL_FREEZE_AUDIT.json": "ffe916cf2db1c2d9cb4d23761f9858087192cc2508bb4db55af8e9ad4aad1278",
+    "final_results/integrated/MODEL_SELECTION.csv": "a4df5f5b39f7259794cbcbcf1159650094af1dfa547dc0c4672905f30483de2e",
+    "final_results/integrated/TRAINING_HISTORY.csv": "8e04ff272bfa2ae8a357ed99a2705d3746514ebc5116b006010aa70a120a05bf",
+    "final_results/old7/INDEPENDENT_RETRAIN_VERIFICATION.json": "a3d81a4527ab529f031bfc23a2910ce3d1ad9b82d0e3bde28dd85b09cfa11913",
+    "final_results/outer/center_metrics.csv": "1c6128d829eedb4676e04c06958b8fcf952e2ea2aa5ee88cd35abee193be0d53",
+    "final_results/outer/COMPACT_FREEZE_AUDIT.json": "2063626ca746cf3c16e4a7a2bb57687171705631c40c037156fa0dff5657cd7b",
+    "final_results/outer/confusion_matrices.csv": "99b3982924469342532118381142ed10e62ce60db30066fa524f215121b40788",
+    "final_results/outer/fold_mean_std.csv": "0543dccd4887523f642d1a2142becccd76b1da8e4177712f3dddc8d7fdec5f7b",
+    "final_results/outer/fold_metrics.csv": "8799288a6e7f3ec093d70a233f9fed76e35c601cbb39273e0de3b58bac7132a6",
+    "final_results/outer/INDEPENDENT_FINAL_CACHE_VERIFICATION.json": "799415c921ad77769725d705bb895912a3d183e08904164020185dd0da89bb8b",
+    "final_results/outer/INDEPENDENT_FINAL_VERIFICATION.json": "2570b3871cdb211ec41b69ca76cd18cfa896c4aaf0faa2e9666b8c185c5ca707",
+    "final_results/outer/INDEPENDENT_METRIC_VERIFICATION.json": "44889938184efb48066b25f28c2b4c39c9dd04b95b8435caa64294ea02e2c72c",
+    "final_results/outer/INFERENCE_TIMING.csv": "c5073feca0fc50f5c07177caee087378ea28e833f48cda5cabad738c04b4508b",
+    "final_results/outer/main_results.csv": "eda65f6e2d0b0fa9b6feee14faee9e967ebf82271547ad6c8082e704f04145ab",
+    "final_results/outer/metric_coverage.csv": "3df2cbd44f50067b4837430bb04e1d64fd926113527a2b020b29a1ceced9111d",
+    "final_results/outer/paired_intervals.csv": "12f6d2ef28f37f0b0cfadeebde1161d2c8b67da71ad06b95850ae2b927a707a5",
+    "final_results/outer/pooled_metrics.csv": "17d794b44d0d74f5a7a7bf3bceb2df2342a321d9a645bdcbc82b1ebdbcb9def2",
+    "final_results/outer/PRIMARY_SUCCESS_GATE.json": "6964c240fe3fffbc5ab0859349263402cdc5c0d6aecc7518b9ec711248f9b07d",
+    "final_results/outer/REPORTING_RECOVERY_AUDIT.json": "be84a8fe5435ffe91464c06f74d0f5929fc9ac6d30eb23e2f18b990c83310474",
+    "final_results/outer/STATUS.json": "3041c98e4c064e7c75be4a49bc5f951d009d3df061abf4a0befa710d1ba514c2",
+    "initial_results/CANDIDATE_COVERAGE.csv": "a9924830fb31b0e8414c9b8090a3847d8b9f02e8f2fba6f5a5cc0e15cd694ce8",
+    "initial_results/CANDIDATE_EXTRACTION_STATUS.json": "52aeece5650c13ab32ad1574d594cc66e6aca1ed81cf542b5bb4d9d4fb1c7ce9",
+    "initial_results/CANDIDATE_FIT_CROSSFIT_SUMMARY.csv": "97537f6da008030023ec76e4609e80766403291b24d0f92d5a35bf7bd27c5d38",
+    "initial_results/CANDIDATE_INNER_PROBE_METRICS.csv": "469242edc9a367cea042cbf4572cdacfd98b49f3fe21d0b03666f2ac9fca68bd",
+    "initial_results/CANDIDATE_PROBE_DIFFERENCES.csv": "448f1d17157b20447e2221d642da19b8f08b0338b6877fe01c9836e0ee25d152",
+    "initial_results/CANDIDATE_PROVISIONAL_ELIGIBILITY.csv": "22b4850926e710079795554863caa95493d1abe1bf0aa7662cbd6dc752214896",
+    "initial_results/CANDIDATE_SCREEN_CENTER_METRICS.csv": "63d5ad14675ba2f0926a2af36ab90f5cd8592c84c9ad62b3356cf65d8f9fd8d8",
+    "initial_results/CANDIDATE_SCREEN_STATUS.json": "6c1bbe8811463cf49d87b1b0ea7955beaf9a6b7d47a5c8cdf24322938de258a3",
+    "initial_results/INITIAL_AUDITS_INDEPENDENT_VERIFICATION.json": "5830be341c62a46b337862f797a805cadec96764951bc7afec6ec3741a1be474",
+    "initial_results/OLD_RMS_NUMERICAL_FLOOR_AUDIT.csv": "efdf5f0f95a95a4e0c91e6c3695d9107bb2153c07e3c21f902cd727b12c14f35",
+    "initial_results/OLD7_AUDIT_STATUS.json": "e7c5a3fa91804c72525af0102e8c482e1808dc253a80b188d676ef5d4b13f8d1",
+    "initial_results/OLD7_INNER_PROBE_METRICS.csv": "5c1a75e7b7faae7dc7a2700ccd93addcebf115a648136de736fec4e7c95908fa",
+    "initial_results/OLD7_NUMERIC_FIT_AUDIT.csv": "6ff884fe44865bf3c408a937e3b6881cc17a184dd90d1dba1cd986350a0daba6",
+    "initial_results/OLD7_OUTER_FIT_CROSSFIT_SUMMARY.csv": "0cba43c98721604c27ceedc2c827aee4935119e295bb3a58a0e928bf2bffc0a1",
+    "initial_results/OLD7_PATIENT_ISOLATION_AUDIT.csv": "d635457d6385a5cb40cabe897f4e1ec840e0a5a70acbf0942543627bcad0e83e",
+    "initial_results/OLD7_PROBE_PAIRED_DIFFERENCES.csv": "363f1bf84e8f5a1e09d94cb9ee3f140a10a89e3f4fcef1604016d4ab3f8ad099",
+    "initial_results/OLD7_REDUNDANCY_FIT_AUDIT.csv": "55da9b4f622d1744891a8d0dfdc3acace1ada560af09f1b611e26f07edb74a54",
+    "initial_results/OLD7_SCREEN_CENTER_METRICS.csv": "9bd84f1e73be3c03d84004d7f3b5e9066a26a15211ad42bc15f7db1ceefa9a32",
+    "initial_results/PUBLIC_INITIAL_SHA256.json": "34882579b01848ca445e0e9934274c8075b06bfa7a89ce224f0f1d3c6fa8e5a8",
+    "phase2_results/FEATURE_DIRECTION_STABILITY.csv": "154ce8cee5182022faf81a6518b641d6f9170dda35b069b604c7cced29978cbc",
+    "phase2_results/INTEGRATED_MODEL_SYNTHETIC_AUDIT.json": "1d89b1c490889b15edb544b1922d39036ba41e72725e2aef83e882e40da80a76",
+    "phase2_results/NONLINEAR_FEATURE_ELIGIBILITY.csv": "289b1209c23c71b79eab35a276035df1f8f9959f2c90e683e88a8ce274ed0076",
+    "phase2_results/NONLINEAR_FIT_CROSSFIT_SUMMARY.csv": "2e0b53e0753ccfa93df2f8a5af81180ba5b249cfaee1df043258b0bb3f9f5fa1",
+    "phase2_results/NONLINEAR_INDEPENDENT_VERIFICATION.json": "2d611330549ab9cbfa7413bc484354cd5848b039e48e4f81fef3a84f56e0fc8e",
+    "phase2_results/NONLINEAR_INNER_AND_CENTER_METRICS.csv": "f27f7bad8f2da42f601cb90e167a17e68e0d1cf8e3c9dc19648fa1459fc4d885",
+    "phase2_results/NONLINEAR_PAIRED_FIT_INTERVALS.csv": "0048ca32de60a6176f7f8c284b85a9cefc8cf7b6f3b91e046297076569e9856a",
+    "phase2_results/NONLINEAR_PAIRED_SCREEN_DIFFERENCES.csv": "1f1a905ecd6402ad2b34de119809cf385cd8f24bc9ea323ef0b91de001ea0994",
+    "phase2_results/NONLINEAR_PATIENT_CENTER_ISOLATION.csv": "aa03213a7596b4805fb77d919d73314c67dc8b2112b50c35b8f4b3d0131bf9cd",
+    "phase2_results/NONLINEAR_SCREEN_STATUS.json": "95f20f2924879a4567f35a6b33a2b5e0eea41fba7bc64cb7b4273040541f3de9",
+    "phase2_results/NUMERICAL_CONTROL_EXTRACTION_STATUS.json": "ca0590a523585da050bf2870ab0f5b3b8f19732593399a9b6652b373cbb0bbd4",
+    "phase2_results/PER_FIT_FEATURE_SELECTION.json": "f38f822d89648e35d22c2f3a569e32c5c6e77db24c24cf78e5ff4995ae513fcb",
+    "phase2_results/PUBLIC_SHA256.json": "cae441edcd460131202003b8f03601d4553f17a5960d2714359463fd530ce904",
+    "phase3_results/PUBLIC_SHA256.json": "98ada6f05a2445fb754a318562c2f67ade6ddbd3fa6a9719ecdfdb5f96afa919",
+    "phase3_results/integrated_admission/REAL_FIT_ADMISSION.json": "64d5667d9a6c54cc6be6b0c3daf45fcbcc9109147960f22719759e5d62607617",
+    "phase3_results/integrated_admission/WRONG_PAIR_AXIS_REGRESSION.json": "311b3c56831734131c256b735c075eb78bd1af942dbc5db419138e9e78aaf0ba",
+    "phase3_results/integrated_admission/WRONG_PAIR_COVERAGE.csv": "5ec80f8a993a71c098041400579fb07117f3b838434bb5b5a17eaa24da40d946",
+    "phase3_results/old7_development/ADMISSION.json": "f9f4489a777f811bfe53443bd177baef90c072f58b1fdf92c91308efc7f28705",
+    "phase3_results/old7_development/DEVELOPMENT_BY_CENTER.csv": "2464fbe93575d4cd46cd89967190653aec1fcd0a119b487219388b05be3cf17b",
+    "phase3_results/old7_development/DEVELOPMENT_BY_FOLD.csv": "55d243959bf449e88f29bedecb510ce370d739f6270f212fffa720c35e7a0731",
+    "phase3_results/old7_development/DEVELOPMENT_SUMMARY.csv": "e1d01de7ca735007cf15e5e932e01e8d0fb98b8094a3331a09b92c66ddb948b5",
+    "phase3_results/old7_development/METRIC_COVERAGE.csv": "d6d4000a3b164d31b451cc7af99763b0530c8b6677a056f09e7c19f5d6874884",
+    "phase3_results/old7_development/MODEL_SELECTION.csv": "7291c492af0a279abf19b399769963519a342b070735830d64d4d1f0556b6374",
+    "phase3_results/old7_development/PAIRED_CLUSTER_INTERVALS.csv": "6187f1cb543fc6ea7df0e2d06aebe47a7d7ab98d2110d40bcbf4ce84077b0e30",
+    "phase3_results/old7_development/STATUS.json": "c28361c576a96ac62838ff50a896a64322e8f367f28cc439205b2e8d79cd1deb",
+    "phase3_results/old7_development/TRAINING_HISTORY.csv": "23977eff49dadc28411492121a5513ae6bafe78239722b23020f70b6aff5203f",
+    "tools/audit_frozen_sources.py": "0e39d3069bb2ff6f5e9db14f293ebaed764efa4f7344d94fbc0f181d7a3d54e5",
+    "tools/package_final_public.py": "c4a1cec4d657ac63300b7ecd22884da7cecb36b4d9ecfc7e228eaecbcab20c10",
+    "tools/package_initial.py": "fbaa47bba4d204ddf9ecc6afd4ba364d9c862f2d22863e412afee6a1ce4e98a6",
+    "tools/package_phase2.py": "2d9030668be2184f55e13e11df17c5a2a360410bb8def8fb17e9893ba1d9efc8",
+    "tools/package_phase3_development.py": "8bff6efc57389886ff22c07542d36f4f1b5616bd7b21858d964a59efab2b9351",
+    "tools/run_cpu_report_core16.ps1": "8a75f3c4bdfa4b154908eee9a4280af0f5c659e9e3ee0854cab7ec0828601e6e",
+    "tools/run_cpu_report_py310.ps1": "2f535d095596204b6eb063c1dcdfa38a48e272deba90e149345e530a2ba9bd1f",
+    "tools/run_final_stages_sustained.ps1": "5f87d7c1912cdddfe6fac224d5f48d6a3446a2b0d1683c8a0753a1c82ba3c75b",
+    "tools/run_integrated_sustained.ps1": "c43deada3a7a7bda1fa6c9b19779898ff53c8b1b14c57f18bee8125d8a3fba03",
+    "tools/run_integrated_v2_sustained.ps1": "22cbc3d5e5fa755b7619ef8e0e165003b2433da01024b7e9252bf23343834baa",
+    "tools/run_old7_sustained.ps1": "c1b9a435bde92aa70695fef85d5160b8c7221124b1d97b27381d977d8d029d04",
+    "tools/verify_after_integrated.ps1": "4dd0834f4dad5c389d28fbd396e838ef0cc9e802648db7225569af932c145954",
+    "tools/verify_completion.py": "7d91bd0ed4bcd977992ed017b975432272ee6d7063b28ef08bf05b6953903df5",
+    "tools/verify_final_core16.ps1": "1d7132d230f4ac96bda63c92362a1f9a2e884754b8979825fd79e1684acaff15",
+    "tools/verify_final_public.py": "c07169b7b9298f93f8e6bf0283dcb01376cae4622975c591494956ea542c96b7",
+    "tools/verify_initial_audits.py": "36cc27484e7216ebd6488dabc54114a47124617e35eacafee1f7560c54b61ed4",
+    "tools/verify_nonlinear.py": "d011a01279670a1b16d99afe96c35f542f60f219b8b1416175a4edbab325464b",
+    "tools/verify_old7_training.py": "b573888626930ae3e36dcef7f0058f0234afb0efe6806619a3d75418ee9beccb",
+    "tools/verify_phase2_public.py": "b608349b4fe4b743ed93d9d8e008d2cc2bf7e3b3f987e5cc9a6bcd53657613bb",
+    "tools/verify_phase3_public.py": "e03f5f3fec39bab94d636843a1f3c6c419b744dbe96009f7e263d00214e01363",
+    "tools/verify_public_initial.py": "2409192e255c196b5d4d7e8e931b6655b2490dbce354b23f9e725025ac4fdd3b",
+    "tools/watch_existing_old7.ps1": "28c9951e275d241f3b1faec4b73cb6016401cf5983d0491a81bfaf315c569feb"
+  }
+}

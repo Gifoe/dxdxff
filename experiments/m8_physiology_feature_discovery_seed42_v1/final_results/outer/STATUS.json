@@ -1,0 +1,11 @@
+{
+  "arms": 26,
+  "channels_per_arm": 7635,
+  "final_mechanism_compute_report_and_completion_audit_pending": true,
+  "foldcells": 130,
+  "full_goal_complete": false,
+  "patient_rows": 2080,
+  "patients_per_arm": 80,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "status": "ALL26_FEATURE_PROCEDURES_OUTER_EVALUATED_AND_METRICS_VERIFIED"
+}

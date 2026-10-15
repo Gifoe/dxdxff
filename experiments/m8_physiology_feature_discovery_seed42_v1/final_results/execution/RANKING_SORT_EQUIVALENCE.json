@@ -1,0 +1,10 @@
+{
+  "all_outputs_equal_atol1e_12": true,
+  "clinical_scores_labels_unread": true,
+  "singletons_and_no_positive_support": true,
+  "source_sha256": "0f3f461c7c36154c103f782ab3c51976b4a6561775bd9f9d17de2fec3e7d654a",
+  "status": "PASS",
+  "synthetic_cases": 33,
+  "test_sha256": "87dfbad8b6d066ef83c977558c055f5efb23f8be99e5d594540b88df0ea441eb",
+  "unicode_and_exact_score_ties": true
+}

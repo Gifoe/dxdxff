@@ -1,0 +1,16 @@
+{
+  "actual_models": 160,
+  "all80_D1_validation_inference_replayed": true,
+  "all80_M8_validation_inference_replayed": true,
+  "all_best_epochs_and_thresholds_reproduced": true,
+  "all_original_FIT_validation_test_roles_verified": true,
+  "full_goal_complete": false,
+  "independent_patient_metric_rows": 2080,
+  "maximum_logit_replay_error": 0.0,
+  "no_training_or_Outer_read": true,
+  "pairs": 80,
+  "protected_artifacts_unchanged": true,
+  "registered_absolute_tolerance": 1e-06,
+  "status": "PASS",
+  "verifier_sha256": "b573888626930ae3e36dcef7f0058f0234afb0efe6806619a3d75418ee9beccb"
+}

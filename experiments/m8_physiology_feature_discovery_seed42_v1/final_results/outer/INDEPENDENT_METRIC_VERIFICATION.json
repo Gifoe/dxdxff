@@ -1,0 +1,10 @@
+{
+  "all_sklearn_counts_AUC_AP_F1_logloss_ranking_replayed": true,
+  "arms": 26,
+  "bootstrap_256_direct_draws_match": true,
+  "bootstrap_draws": 10000,
+  "freeze_sha256": "6277e29ff347a5ad68066462bde244646efa7582534af4bbfdeb93aebeee4df3",
+  "patient_rows": 2080,
+  "seal_sha256": "00179fdd6b85c8780bd5225e2774e6f2d44f4f634a33122fe2d8fa65f3876caf",
+  "status": "PASS"
+}

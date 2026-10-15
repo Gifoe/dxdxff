@@ -1,0 +1,38 @@
+{
+  "final_integrated_and_old_model_freezes_unchanged": true,
+  "no_model_data_or_threshold_changes_after_final_freeze": true,
+  "no_training_or_inference_called": true,
+  "original_metric_engine_unchanged": true,
+  "phase_source_sha256": {
+    "final_prediction": {
+      "FINAL_EVALUATION_LOCK.json": "aa1ac2e41eb3ad9780b929de4706c1110602f81e714fbbdf1e65e749c4bc45f2",
+      "evaluate_final.py": "d66dd0f1538675b6289b2959c8daccc78b434ad7e0712be8a7291b85dc20aeb1",
+      "evaluate_final_v2.py": "e19360a92629d0f9b09037cf8df22701a239617fc1dd9c96836a331d1a64bb61",
+      "test_final_cache_protocol.py": "3a1a575314a5cd8bf840829f84426668837da8fee5dfbd54dc1dcb158bedfdf0",
+      "verify_integrated_training.py": "f9a3fb6762f1457ff2cb9781b22872588c912dc43235d5301d71d065818d274e"
+    },
+    "integrated": {
+      "M8_INTEGRATION_LOCK.json": "4e05f41bad3d34d107ad728b79cf5b14185ac02f7dcabeb2700150f2e2f1591a",
+      "audit_old7.py": "aeab9315b049d74729d986ddefaf3f390960cfa34bf926c0f0e84b389118feb2",
+      "integrated_data.py": "3f537341971752337572c0d91f6ecdd6d1b6a11d5cd06a4b34cee4620b6d73d2",
+      "integrated_data_v2.py": "1e38acfe791fd58bb1067c9019129b85a4eb79284d1c03b8995c7ee260477229",
+      "integrated_model.py": "6d87693d75187fa1906cd099a3b699540d6b65719b18233179c3fab0e6b3c43d",
+      "old7_m8_model.py": "b839fefd4db1344edc06b52453c701133a6a9c23968d77b89024e9dfe968f0b2",
+      "test_pairing_index.py": "d7e472008bbf448039d089c96f0849862ea62f9934b574e39cf457cdebb5bfda",
+      "train_integrated.py": "ae79eec776a3345a5a48d912cd57e5cbd28c6649ba26f42332b86fedbc552c2e",
+      "train_integrated_v2.py": "2f49f8d02b879654039cb366ca231ca2125c0d122ef9585b61934371d405bac3",
+      "train_old7_m8.py": "c7685d069f1036d6e219571e95d57801fd9475759440c7e8a68abca5789ac03c"
+    },
+    "old7": {
+      "AUDIT_PROTOCOL.json": "201cc8da87dd8fe906f7c89163bb4cfd384365f04601f1468f6a2e0887a4c437",
+      "OLD7_M8_ABLATION_LOCK.json": "a1f703c8a8371e1b918c6ab305dcb207719afff2292a07f09367f57542c8d2b4",
+      "audit_old7.py": "aeab9315b049d74729d986ddefaf3f390960cfa34bf926c0f0e84b389118feb2",
+      "old7_m8_model.py": "b839fefd4db1344edc06b52453c701133a6a9c23968d77b89024e9dfe968f0b2",
+      "train_old7_m8.py": "c7685d069f1036d6e219571e95d57801fd9475759440c7e8a68abca5789ac03c"
+    }
+  },
+  "protected_historical_artifacts_count": 22,
+  "protected_historical_artifacts_unchanged": true,
+  "source_sha256": "0e39d3069bb2ff6f5e9db14f293ebaed764efa4f7344d94fbc0f181d7a3d54e5",
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+{
+  "actual_all_patient_inputs_reconstructed": true,
+  "all_checkpoint_sources_roles_and_scores_verified": true,
+  "armfolds": 130,
+  "arms": 26,
+  "context_sha256": "e08cfcc9b4f676a7866b8c8d07b638d56af3ffabd2f54f1ab54b9ef9d44bcd75",
+  "no_full_label_archive_read": true,
+  "no_new_predictor_forward": true,
+  "original_verifier_sha256": "0384fa5f0b3df6841158c8281974546cfc8bb268887d9926235482f45d01ebf4",
+  "private_patient_cache_files": 1936,
+  "source_sha256": "6e2067c6104a9c5c623b2bb897a63a16ccba7931bd8e59cfc4abb3ef40ebf631",
+  "status": "PASS"
+}

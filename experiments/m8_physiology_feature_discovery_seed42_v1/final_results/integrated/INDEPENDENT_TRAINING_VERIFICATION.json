@@ -1,0 +1,201 @@
+{
+  "actual_D1_cells": 26,
+  "actual_M8_cells": 36,
+  "actual_validation_inference_replayed": true,
+  "aliases": 9,
+  "all_bases_frozen": true,
+  "all_per_FIT_feature_maps_and_routes_exact": true,
+  "all_preprocessing_and_gate_scales_reproduced": true,
+  "cells": [
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_OLD7"
+    },
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_TOP3_ADD"
+    },
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_NEW_ONLY3"
+    },
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_NUMERIC_POWER7"
+    },
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_D1_ONLY_NEW"
+    },
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_GATE_ONLY_NEW"
+    },
+    {
+      "fold": 1,
+      "status": "PASS",
+      "variant": "SLOT10_WRONG_PAIR_TOP3"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_OLD7"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_ELIGIBLE_ADD"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_TOP3_ADD"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_NEW_ONLY3"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_NUMERIC_POWER7"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_D1_ONLY_NEW"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_GATE_ONLY_NEW"
+    },
+    {
+      "fold": 2,
+      "status": "PASS",
+      "variant": "SLOT10_WRONG_PAIR_TOP3"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_OLD7"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_TOP3_ADD"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_NEW_ONLY3"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_NUMERIC_POWER7"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_D1_ONLY_NEW"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_GATE_ONLY_NEW"
+    },
+    {
+      "fold": 3,
+      "status": "PASS",
+      "variant": "SLOT10_WRONG_PAIR_TOP3"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_OLD7"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_TOP3_ADD"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_NEW_ONLY3"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_NUMERIC_POWER7"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_D1_ONLY_NEW"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_GATE_ONLY_NEW"
+    },
+    {
+      "fold": 4,
+      "status": "PASS",
+      "variant": "SLOT10_WRONG_PAIR_TOP3"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_OLD7"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_TOP3_ADD"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_NEW_ONLY3"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_NUMERIC_POWER7"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_D1_ONLY_NEW"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_GATE_ONLY_NEW"
+    },
+    {
+      "fold": 5,
+      "status": "PASS",
+      "variant": "SLOT10_WRONG_PAIR_TOP3"
+    }
+  ],
+  "epoch_thresholds_reconstructed": true,
+  "full_goal_complete": false,
+  "independent_FIT_moments_verified": true,
+  "logical_cells": 45,
+  "maximum_logit_replay_error": 4.76837158203125e-07,
+  "no_training_Outer_read": true,
+  "original_splits_preserved": true,
+  "registered_tolerance": 1e-06,
+  "status": "PASS",
+  "verifier_sha256": "f9a3fb6762f1457ff2cb9781b22872588c912dc43235d5301d71d065818d274e"
+}

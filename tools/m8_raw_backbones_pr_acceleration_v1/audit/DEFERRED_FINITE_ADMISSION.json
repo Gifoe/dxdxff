@@ -1,0 +1,34 @@
+{
+  "all_chunk_finite_flags_still_checked_before_loss": true,
+  "alternating_timings": [
+    {
+      "deferred": true,
+      "seconds": 1.2719853000016883
+    },
+    {
+      "deferred": false,
+      "seconds": 1.715477199999441
+    },
+    {
+      "deferred": false,
+      "seconds": 1.4999781000005896
+    },
+    {
+      "deferred": true,
+      "seconds": 1.3702990000019781
+    }
+  ],
+  "complete_legal_FIT_patient": true,
+  "deferred_forward_sha256": "d44ddad33c7aea6a37930c94bf36e7be5a1382e7cf612f29bf3e5b0e87a112fd",
+  "first_deferred_seconds": 1.2103868999984115,
+  "first_original_seconds": 2.877529000001232,
+  "logits_loss_all_gradients_BN_buffers_and_RNG_bit_identical": true,
+  "max_gradient_error": 0.0,
+  "no_optimizer_step_or_scientific_prediction_changes": true,
+  "original_forward_sha256": "058b3668a20272bd2b00926ae96e182f97d343952bc57e42dfca2be0c816dbdd",
+  "original_source_input_binding_sha256": "5e4506e4422f6983b239292f8193147308bdb477a5a31101112ec0f61a1e4301",
+  "status": "PASS",
+  "tensor_operations_autocast_RNG_BN_and_chunk_size_unchanged": true,
+  "valid_channel_windows": 11328,
+  "whole_raw_finite_check_retained": true
+}

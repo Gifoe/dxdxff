@@ -72,3 +72,15 @@ Trusted Windows uses the existing CUDA environment; all new data/checkpoints/log
 Patient/channel predictions, labels, individual metrics, latent embeddings, checkpoints, optimizer/scaler state, logs and identifying manifests **stay on the trusted server**. `public/` aggregate artifacts alone may be copied into repository`results/`. Anonymous aggregates keep center/fold summaries but no patient/channel IDs. Undefined metrics stayNaN with coverage counts. Pooled metrics, patient means and foldmean±SD remain separate.
 
 Scientific status: **EXPLORATORY_REPEATED_TEST**. The cohort has already been inspected in prior research. All new configurations are locked before evaluation; this does not make the historical cohort a new blind confirmation. Do not change later backbones after viewing an earlier backbone's Outer result.
+
+## User-requested execution acceleration
+
+After the user requested faster completion, a separately hash-locked operational
+wrapper was admitted without editing the frozen scientific sources or changing
+training chunks/budgets. It defers redundant finite-check host barriers with
+bit-identical real-FIT outputs/gradients/BN/RNG, and resumes at a completed-epoch
+checkpoint into two independent backbone execution lanes. See the
+[execution amendment](../../tools/m8_raw_backbones_pr_acceleration_v1/README.md)
+for measured timings, parity gates and safe recovery. The original serial
+`run_all.py` remains the reproduction entry point; do not launch it concurrently
+with the production lanes.

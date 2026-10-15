@@ -1,0 +1,16 @@
+{
+    "updated_utc":  "2026-10-15T15:03:23.9635263Z",
+    "original_protocol_sha256":  "cf3cbaa5e91996def37a21c0746f36972b509b6dfed9a0bd03a675de7ba69fd2",
+    "two_execution_lanes":  [
+                                "TimeConvCNN",
+                                "EEGNet then SEEGNet then SEEGformer"
+                            ],
+    "scientific_sources_modified":  false,
+    "backup_sha256":  "5526259caac5787bf8550cb37fd4ce8deb5b710c7971bfe1d6f1aa8eb5a2a374",
+    "checkpoint_sha256":  "5526259caac5787bf8550cb37fd4ce8deb5b710c7971bfe1d6f1aa8eb5a2a374",
+    "complete_epochs_preserved":  true,
+    "new_data_or_predictions":  false,
+    "status":  "PASS",
+    "original_input_freeze_sha256":  "47ec4dc8d03894c9a65ce734d1a6ae6a1cceaa68ff2ffb2eded83b97083c7741",
+    "new_hyperparameters":  false
+}

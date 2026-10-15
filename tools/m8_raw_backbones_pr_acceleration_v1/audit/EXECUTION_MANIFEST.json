@@ -1,0 +1,13 @@
+{
+    "updated_utc":  "2026-10-15T15:03:23.7755653Z",
+    "execution_code_sha256":  {
+                                  "parallel_resume.ps1":  "aef52a807a56c099d3431e2ebfe25fa490319455519b5ea41d42550525bcbee3",
+                                  "worker.py":  "5a1ec9f0cfab54a508e77011baeaf713bce62eb15b7d927be3fce2e1fae44f8e",
+                                  "admit_fast.py":  "8eda166de18c5c57f1ebe0dfae3a19cdeb72323cd3864e685f6d329d53d89398",
+                                  "fast_engine.py":  "aef7d2ea7bd54b708f3c99d644b35801b60fbe410562a31eba10f2adb154ac54"
+                              },
+    "scientific_sources_modified":  false,
+    "original_protocol_sha256":  "cf3cbaa5e91996def37a21c0746f36972b509b6dfed9a0bd03a675de7ba69fd2",
+    "status":  "LOCKED",
+    "original_input_freeze_sha256":  "47ec4dc8d03894c9a65ce734d1a6ae6a1cceaa68ff2ffb2eded83b97083c7741"
+}

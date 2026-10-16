@@ -1,0 +1,12 @@
+{
+  "parent_commit": "b0eeb9c1f1250340bdd9b1be2a846c4aa684d20a",
+  "task_sha256": "967d29a2d3f37b5c0b47ad11524cafbead5e2ba4f75c5fe5463f024c69dfc9a4",
+  "required_documents": {
+    "experiments/m8_joint_physiology_ablation_seed42_v1/REPORT.md": "4fce518f71afb397d8fba38d968dddc153dbb99e8dfb8857f5266d37cf7c24fc",
+    "experiments/m8_joint_physiology_ablation_seed42_v1/PROTOCOL_LOCK.json": "d47929bd289d888d45ce3a4b5889577add43cb473282ab337e7cc7db64229a26",
+    "experiments/m8_joint_physiology_ablation_seed42_v1/run.py": "1ba4b40301f609b814cad94471ce3271957fff4e9a8141b8a716141e8e5edb5b",
+    "dre/experiments/d1_m8_progressive_ablation_seed42_v1/FINAL_REPORT.md": "67aaeb8eb90e80d2953466a27d60e5f61533e0bb23559dea41062382c8760361",
+    "dre/experiments/m8_d1_no_pr_outer_seed42_v1/FINAL_REPORT.md": "f6c2e6d8ee53a7887846b171215343e62d23eb8dba6c294d9f86544a5f4c370c"
+  },
+  "reading_status": "Read_in_full_and_crosschecked_against_frozen_original_source_and_reference_metrics"
+}

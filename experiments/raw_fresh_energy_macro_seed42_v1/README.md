@@ -38,3 +38,19 @@ weights, individual predictions/latents and logs stay private. Any future Outer
 is exploratory repeated-test because historical outcomes have been viewed.
 An internal result, green admission, oracle or pooled metric cannot establish
 the requested full80-patient target. No unrun cells will be filled with proxies.
+
+## Completed internal stage, final stage pending
+
+All42registeredfreshfits/1062epochs and independent replay finished. First-path
+Macro-F1: WINDOW_MEAN0.600015, WINDOW_LOGENERGY0.599525, PRE_MEAN0.625949,
+PRE_LOGENERGY0.624857 (86appearances/59unique people, not full80Outer).
+The matched data do not establish an energy-pooling advantage over mean.
+Legal frozen choices are FROZEN_PRE/NATIVE/PRE_LOGENERGY/PRE_LOGENERGY/
+PRE_LOGENERGY for folds1–5. See [INTERNAL_REPORT.md](INTERNAL_REPORT.md) and
+[actual internal tables](results/internal_v1/FIRST_PATH_MAIN.csv).
+
+`FINAL_PROTOCOL_LOCK.json` and final code were frozen before original
+Development access. `run_final.ps1` performs the20freshfinalfits and one joint
+35-cell sealedOuter evaluation; the primary is the ownFIT-selected policy,
+not the best secondary Outer arm. No final result is claimed until its actual
+completion and verification. `python verify_public.py` checks public delivery.

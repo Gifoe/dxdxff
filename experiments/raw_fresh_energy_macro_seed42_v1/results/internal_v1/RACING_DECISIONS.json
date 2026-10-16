@@ -1,0 +1,60 @@
+{
+  "decisions": [
+    {
+      "AUROC_gain": 0.04174725389482847,
+      "Macro_gain": 0.020250060467442377,
+      "advanced": true,
+      "chosen": "WINDOW_LOGENERGY",
+      "fold": 1,
+      "promoted": [
+        "WINDOW_LOGENERGY",
+        "WINDOW_MEAN"
+      ]
+    },
+    {
+      "AUROC_gain": -0.0210491296188704,
+      "Macro_gain": -0.014444710815087691,
+      "advanced": false,
+      "chosen": "PRE_MEAN",
+      "fold": 2,
+      "promoted": []
+    },
+    {
+      "AUROC_gain": 0.07433245730326554,
+      "Macro_gain": 0.0582525852742064,
+      "advanced": true,
+      "chosen": "PRE_LOGENERGY",
+      "fold": 3,
+      "promoted": [
+        "PRE_LOGENERGY",
+        "WINDOW_MEAN",
+        "PRE_MEAN"
+      ]
+    },
+    {
+      "AUROC_gain": 0.012264881457938026,
+      "Macro_gain": 0.03438996190419108,
+      "advanced": true,
+      "chosen": "PRE_LOGENERGY",
+      "fold": 4,
+      "promoted": [
+        "PRE_LOGENERGY",
+        "WINDOW_MEAN",
+        "PRE_MEAN"
+      ]
+    },
+    {
+      "AUROC_gain": 0.0316178549990882,
+      "Macro_gain": 0.037022334460058426,
+      "advanced": true,
+      "chosen": "PRE_LOGENERGY",
+      "fold": 5,
+      "promoted": [
+        "PRE_LOGENERGY",
+        "WINDOW_MEAN",
+        "PRE_MEAN"
+      ]
+    }
+  ],
+  "status": "FRESH_INTERNAL_RACING"
+}

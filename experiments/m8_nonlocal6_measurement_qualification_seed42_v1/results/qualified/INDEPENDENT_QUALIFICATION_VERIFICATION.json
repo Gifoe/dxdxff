@@ -1,0 +1,15 @@
+{
+  "baseline_unavailable_channels_HG": 1,
+  "baseline_unavailable_channels_LL": 0,
+  "censored_time_channels_HG": 157,
+  "censored_time_channels_LL": 172,
+  "classifier_fits": 0,
+  "eligible_groups": 6,
+  "independently_reaggregated_coordinate_cells": 91620,
+  "inner_numeric_cells_checked": 450,
+  "labels_indexed": false,
+  "new_Outer_access": false,
+  "original_failure_preserved": true,
+  "status": "PASS",
+  "unit_stress_max_abs": 9.547918011776346e-14
+}

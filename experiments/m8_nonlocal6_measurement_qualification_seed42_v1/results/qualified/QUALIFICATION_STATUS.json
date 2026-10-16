@@ -1,0 +1,21 @@
+{
+  "channels": 7635,
+  "classifier_fits": 0,
+  "coordinates": 12,
+  "eligible_groups": 6,
+  "exact_permutation_checks": 160,
+  "existing_models_thresholds_and_pool_unchanged": true,
+  "goal_stable_minimum_or_predictive_increment_proven": false,
+  "groups": 6,
+  "inner_partitions": 20,
+  "input_freeze_sha256": "186868e99ddb2a984fd190e152ad2537a3529cbd54422c03d6081846a9fb617e",
+  "labels_indexed": false,
+  "new_Outer_access": false,
+  "patients": 80,
+  "private_measurements_sha256": "befd49133c1304684c46ec9ef922a6d129f7d01c67570c353cd28892dc728ceb",
+  "record_channel_units": 24995,
+  "records": 256,
+  "source_scalar_replay_max_abs_error": 0.0,
+  "status": "COMPLETE_UNLABELED_MEASUREMENT_QUALIFICATION",
+  "valid_channel_windows": 1471965
+}

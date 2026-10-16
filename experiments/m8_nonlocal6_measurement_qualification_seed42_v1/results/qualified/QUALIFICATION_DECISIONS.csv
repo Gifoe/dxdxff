@@ -1,0 +1,7 @@
+feature,source_quality_pass,primary_coverage_pass,minimum_20_partition_nonconstant_patient_fraction,all20_inner_partitions_pass,eligible_for_future_preregistered_supervised_comparison,predictive_usefulness_proven
+early_partial_HG_80_125_slope,True,True,1.0,True,True,False
+early_LL_slope,True,True,1.0,True,True,False
+baseline_crossing_partial_HG_80_125,True,True,1.0,True,True,False
+baseline_crossing_LL,True,True,0.9,True,True,False
+post_top20_partial_HG_80_125,True,True,1.0,True,True,False
+post_top20_LL,True,True,1.0,True,True,False

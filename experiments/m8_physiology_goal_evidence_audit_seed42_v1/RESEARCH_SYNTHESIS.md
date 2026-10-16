@@ -187,6 +187,20 @@ and this does not independently prove invalid Raw waveform samples. Exact
 creation CLI, acquisition filtering and clinical onset provenance remain
 unverified. No prior features, models or Outer scores were changed.
 
+The subsequent [six-group measurement qualification](../m8_nonlocal6_measurement_qualification_seed42_v1/REPORT.md)
+constructed12 canonical-channel coordinates without labels. Slopes and post
+top20% descriptors use equal-seizure mean/SD; crossing groups use observed
+position plus crossing proportion, separating unobserved events and invalid
+baselines from observed timing. All six groups met the fixed coverage and
+own-TRAIN variation criteria over20 inner partitions. There are157/172
+channels without an eligible observed high-gamma/line-length crossing and one
+high-gamma channel without an eligible baseline; all channels were retained.
+Independent reconstruction checked91,620 values and450 inner numeric entries.
+An exact-constant float-reduction failure was disclosed and corrected before
+acceptance, without changing the1e-9 gate or any previous feature/model. These
+results qualify new measurements for a distinct matched comparison, not for
+predictive adoption. They do not change the failed nonlinear transfer result.
+
 No new universal feature list is adopted. The study does not substantiate
 "7D is best," "these features are irreplaceable," or "the discovered minimum
 improves clinical SOZ localization." It substantiates a narrower separation:

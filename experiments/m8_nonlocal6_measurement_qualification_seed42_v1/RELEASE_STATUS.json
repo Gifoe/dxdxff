@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "actual_public_aggregate_files": 6,
+  "old_v2_files_unchanged": 135,
+  "previous_supplement_public_files_unchanged": 45,
+  "all_six_measurements_eligible": true,
+  "original_unit_gate_failure_preserved": true,
+  "classifier_fits": 0,
+  "new_Outer_access": false,
+  "goal_fully_achieved": false
+}

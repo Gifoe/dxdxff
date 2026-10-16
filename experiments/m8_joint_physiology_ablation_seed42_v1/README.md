@@ -60,3 +60,8 @@ after the immutable production driver: `tools/verify_all_intervals.py` and
 
 Terminal:
 `JOINT_2CUBED_COMPLETE_NO_INTERNAL_STABLE_4D_OR_5D_REPLACEMENT_EXPLORATORY_OUTER_ONLY`.
+
+Delivery convention requested by the user: finish by pushing source and anonymous
+aggregates to GitHub and verifying the remote commit, not by stopping at a local
+commit. Never push raw data, private identities/predictions, weights, caches,
+scalers, runtime logs or credentials.

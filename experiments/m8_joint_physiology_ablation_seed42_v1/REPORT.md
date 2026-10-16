@@ -142,6 +142,6 @@ D1/M8的目标函数、阈值和可训练路径本就不同，且每个删除配
 - 模型冻结SHA256：`a203206c864091605dc25f1bebbe50d7f6777c88364946caec94f8b30e9c38f1`。
 - Outer封存SHA256：`0cd465c077c111c6e1890e59751f02c0187a81ed30f12200defbda5ed34a818c`。
 
-只交付代码、哈希、非识别性汇总与审计。全部身份、原始波形、逐患者/通道结果、权重、scaler及运行日志留在可信服务器；没有使用安装的研究/提取skill。本分支本地提交，未将未执行的GitHub推送称作已上传。
+只交付代码、哈希、非识别性汇总与审计。全部身份、原始波形、逐患者/通道结果、权重、scaler及运行日志留在可信服务器；没有使用安装的研究/提取skill。交付分支为`codex/m8-joint-physiology-ablation-seed42-v1`，GitHub发布以实际推送后的远端提交核验为准，不将本地commit视作完成上传。
 
 最终状态：`JOINT_2CUBED_COMPLETE_NO_INTERNAL_STABLE_4D_OR_5D_REPLACEMENT_EXPLORATORY_OUTER_ONLY`。

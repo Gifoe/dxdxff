@@ -29,10 +29,10 @@ mpl.rcParams.update({
 
 
 def export(fig, output):
-    fig.savefig(output.with_suffix('.svg'), bbox_inches='tight')
-    fig.savefig(output.with_suffix('.pdf'), bbox_inches='tight')
-    fig.savefig(output.with_suffix('.png'), dpi=600, bbox_inches='tight')
-    fig.savefig(output.with_suffix('.tiff'), dpi=600, bbox_inches='tight',
+    fig.savefig(output.with_suffix('.svg'))
+    fig.savefig(output.with_suffix('.pdf'))
+    fig.savefig(output.with_suffix('.png'), dpi=600)
+    fig.savefig(output.with_suffix('.tiff'), dpi=600,
                 pil_kwargs={'compression': 'tiff_lzw'})
     plt.close(fig)
 

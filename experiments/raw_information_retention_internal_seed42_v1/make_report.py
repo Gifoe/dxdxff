@@ -101,6 +101,11 @@ def main(root, output):
     stability['arm'] = stability.arm.map(LABELS)
     stability = stability.rename(columns={'arm': '配置'})
     additional = pd.read_csv(root / 'ADDITIONAL_PATH_RESULTS.csv')
+    raced_intervals = pd.read_csv(root / 'RACED_PATH_PAIRED_INTERVALS.csv')
+    raced_intervals = raced_intervals[raced_intervals.metric.isin(['f1', 'auroc', 'auprc', 'macro_f1', 'mrr', 'hit_at_1'])]
+    raced_display = raced_intervals[['scope', 'fold', 'left', 'metric', 'mean', 'low', 'high',
+                                    'logical_patient_appearances', 'unique_patients']].copy()
+    raced_display['metric'] = raced_display.metric.map(METRICS)
     races = json.loads((root / 'RACING_DECISIONS.json').read_text(encoding='utf-8'))['decisions']
     assert len(races) == 5
     race_table = pd.DataFrame(races)[['fold', 'chosen', 'advanced', 'initial_f1_gain', 'initial_auroc_gain']]
@@ -193,6 +198,11 @@ C0减0.01，才追加另外两条内部路径。没有跨原始Outer折合并选
 追加结果仍是候选筛选数据，不能因其与第一条路径不同就称作独立验证。
 
 {table(additional.rename(columns=METRICS)) if len(additional) else '没有候选触发追加路径门槛。'}
+
+追加路径配对差及患者ID聚类区间如下，只包括实际触发门槛的FIT及其screen2/3，
+不混入选出候选所用的screen1。不同行的患者仍可能重叠，这些追加路径不是独立复现。
+
+{table(raced_display) if len(raced_display) else '没有追加路径配对区间。'}
 
 ## 跨来源结果
 

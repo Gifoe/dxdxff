@@ -39,8 +39,8 @@ On the trusted server, use the existing Raw banks; do not copy/reextract them:
 
 ```powershell
 $env:OMP_NUM_THREADS='1'; $env:MKL_NUM_THREADS='1'; $env:OPENBLAS_NUM_THREADS='1'
-E:\Anaconda\python.exe -m pytest D:\raw_latent_contrast_optimization_seed42_v1\test_model.py -q
-powershell -NoProfile -File D:\raw_latent_contrast_optimization_seed42_v1\run_stage1.ps1 -RunTag 01
+E:\Anaconda\python.exe D:\raw_latent_contrast_optimization_seed42_v1\run_tests_checked.py
+powershell -NoProfile -File D:\raw_latent_contrast_optimization_seed42_v1\run_checked.ps1 -RunTag 02 -StopAfter Stage1
 ```
 
 Keep the owning SSH command alive. Inspect process/log/status before any restart;
@@ -49,3 +49,9 @@ failure. Never run duplicate workers. Full metrics, uncertainty and source
 summaries will be derived only from executed runs. Publish code and anonymous
 aggregates only; waveforms, weights, identities, labels and individual rows stay
 on the trusted server.
+
+The first `run_stage1.ps1` launcher incorrectly treated a null Windows process
+ExitCode as failure after successful extraction. Its log is preserved; the
+scientific extraction is complete and is not rerun. `run_checked.ps1` pins the
+process handle, retains nonzero-exit failures, and requires each separate
+scientific completion gate. It also holds an exclusive coordinator lock.

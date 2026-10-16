@@ -201,6 +201,24 @@ acceptance, without changing the1e-9 gate or any previous feature/model. These
 results qualify new measurements for a distinct matched comparison, not for
 predictive adoption. They do not change the failed nonlinear transfer result.
 
+The [separate six-group conditional screen](../m8_nonlocal6_conditional_selection_seed42_v1/REPORT.md)
+then exhaustively tested64 subsets in four fixed contexts across20 original
+inner paths. Both old and new physiology received matched unit-equivariant
+preprocessing. All5,120 choice fits and574 assessment refits completed and
+replayed exactly; HELD labels were omitted from the selector inputs, and all
+assessment scores were sealed before evaluation. This remains a ridge screen,
+not a new full M8 or Outer experiment.
+
+Selected temporal descriptors alone reached AUROC0.707716 compared with
+0.743206 for matched original7. Their Raw-only incremental AUROC was0.004779
+[−0.002351,0.012482], without a clear clinical/ranking increment. Once Raw and
+original7 were present, selected-new four-endpoint utility decreased by
+0.005209[−0.010099,−0.000054]; final-set Jaccard was0.242. The registered
+continuation rule failed. No additional neural/Outer run was launched and no
+new set was adopted. Thus resolving the source gap did not itself produce a
+stable predictive improvement. This excludes the selected procedures in this
+matched setting, not the underlying biological attributes in every model.
+
 No new universal feature list is adopted. The study does not substantiate
 "7D is best," "these features are irreplaceable," or "the discovered minimum
 improves clinical SOZ localization." It substantiates a narrower separation:

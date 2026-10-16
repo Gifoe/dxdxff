@@ -1,0 +1,22 @@
+{
+  "automatic_full_M8_or_Outer_authorized": false,
+  "checks": {
+    "all_four_clinical_deltas_positive": false,
+    "all_known_source_AUROC_deltas_at_least_minus002": true,
+    "at_least_four_nonempty_final_sets": true,
+    "final_pairwise_Jaccard_at_least_point5": false,
+    "utility_interval_lower_positive": false
+  },
+  "independent_confirmation": false,
+  "previous32_group_nonlinear_gate_still_FAIL": true,
+  "source_AUROC_deltas": {
+    "hup": -0.0017526937687315503,
+    "lzu": -0.0005815407347365964,
+    "multicenter": 0.000842681393735778,
+    "pediatric": -0.011715254395559982
+  },
+  "status": "FAIL",
+  "utility_ci_high": -5.388206056228473e-05,
+  "utility_ci_low": -0.010098957672470805,
+  "utility_delta": -0.005208899252402547
+}

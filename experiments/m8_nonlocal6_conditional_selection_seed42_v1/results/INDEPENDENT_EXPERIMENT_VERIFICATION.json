@@ -1,0 +1,15 @@
+{
+  "HELD_labels_absent_in_selector_inputs": true,
+  "all_roles_and_train_only_scalers_verified": true,
+  "assessment_refits_replayed": 574,
+  "canonical_API_replay_not_independent_numerical_precision_test": true,
+  "context_choices_replayed": 80,
+  "independent_patient_metric_rows": 13260,
+  "maximum_assessment_probability_error": 0.0,
+  "maximum_choice_score_error": 0.0,
+  "new_Outer_access": false,
+  "qualified_old_and_new_values_independently_normalized": true,
+  "search_fits_replayed": 5120,
+  "source_sha256": "9a948138d612f9e2fbbc66d9747fab4df72275a6f731237ac7d39be5b0e724a2",
+  "status": "PASS"
+}

@@ -1,0 +1,24 @@
+{
+  "HELD_labels_omitted_from_selector_inputs": true,
+  "contexts": [
+    "PHYS",
+    "PHYS_OLD7",
+    "RAW",
+    "RAW_OLD7"
+  ],
+  "group_partition_checks": 120,
+  "new_Outer_access": false,
+  "new_encoders": 0,
+  "new_group_eligibility_counts": {
+    "0": 20,
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "5": 20
+  },
+  "original_inner_partitions": 20,
+  "registry_sha256": "32e5e54c85eba3cd2710c2d41c7ea9157a9477803e2b86d2d18ba2e985da78d3",
+  "status": "PASS",
+  "uniform_old_and_new_physiology_preprocessing": true
+}

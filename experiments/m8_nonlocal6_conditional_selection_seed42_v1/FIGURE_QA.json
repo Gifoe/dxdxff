@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "backend": "Python matplotlib",
+  "width_mm": 183,
+  "height_mm": 145,
+  "raster_dpi": 600,
+  "source_cardinality_rows": 28,
+  "source_frequency_cells": 24,
+  "source_interval_rows": 8,
+  "text_outside_canvas": [],
+  "curves_use_registered_appearance_equal_mean": true,
+  "shading": "five-fold sample SD, not CI",
+  "intervals": "10000 paired patient-ID cluster percentile95%, exploratory",
+  "private_identifiers_plotted": false,
+  "final_size_visual_inspection": "PASS: delivered PNG inspected; no clipping or legend/data overlap",
+  "PDF_selectable_text_characters": 693,
+  "PDF_fonts": "Embedded Arial TrueType, editable text",
+  "automated_source_preflight": "14 PASS,0 WARN,0 FAIL",
+  "nondrawn_tick_labels_excluded_from_canvas_check": "Only ticks outside their axis view interval; actual visible labels all checked"
+}

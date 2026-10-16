@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "anonymous_public_files": 21,
+  "actual_search_fits": 5120,
+  "actual_assessment_refits": 574,
+  "complete_search_and_head_replay": true,
+  "logical_patient_rows_dual_checked": 13260,
+  "main_report_metric_cells": 56,
+  "equal_k_report_numeric_cells": 36,
+  "figure_cardinality_rows": 28,
+  "figure_final_frequency_cells": 24,
+  "previous_v2_files_unchanged": 135,
+  "previous_supplement_public_files_unchanged": 51,
+  "allocation_gate": "FAIL",
+  "new_encoder_or_Outer_runs": 0,
+  "new_stable_minimum_or_neural_gain_proven": false
+}

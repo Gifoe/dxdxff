@@ -1,0 +1,20 @@
+{
+  "actual_assessment_refits": 574,
+  "actual_search_fits": 5120,
+  "all_logical_patient_rows_dual_checked": true,
+  "allocation_gate": "FAIL",
+  "assessment_score_cells": 60,
+  "context_paths": 80,
+  "goal_complete_proven": false,
+  "independent_patient_metric_engine": "sklearn_and_explicit_ranking",
+  "logical_patient_metric_rows": 13260,
+  "new_Outer_inference": false,
+  "new_encoder_training": 0,
+  "patient_appearances_per_arm": 255,
+  "private_metrics_sha256": "dc2718c4245cbab060bd450b233b7823c7aed90b2b8f69e69c90a4bc3848ffbf",
+  "repeated_internal_and_historical_test_exploratory": true,
+  "report_source_sha256": "1ea3efefd956d6a73c880e32b3d5af5670cac56e691fe1ea10edf5d479235226",
+  "score_seal_sha256": "029ff71ea0dd59a251d32a40ab1cd86722714be19c4bf797ab665e792228dae5",
+  "status": "COMPLETE_SEALED_INTERNAL_SIX_GROUP_SCREEN",
+  "unique_patients": 79
+}

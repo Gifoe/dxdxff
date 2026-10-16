@@ -19,3 +19,11 @@ Server order: `prepare_inputs.py`; `select_and_seal.py select`;
 Private source paths are server-local and contain no credentials. Publish
 only the whitelisted anonymous aggregates, never inputs, identities, heads,
 per-channel predictions or logs.
+
+## Actual outcome
+
+All5120 choice fits and574 distinct assessment refits completed and replayed
+exactly. The6-group continuation gate failed: no stable conditional increment
+over Raw+original7 was established. See [REPORT.md](REPORT.md), `results/`
+and `figures/`. No further full M8/Raw training or new Outer evaluation was
+triggered by this screen. Earlier models and outcomes remain unchanged.

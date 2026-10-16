@@ -1,0 +1,103 @@
+{
+  "additional_source": {
+    "evaluate_sealed.py": "1ea3efefd956d6a73c880e32b3d5af5670cac56e691fe1ea10edf5d479235226",
+    "export_public.py": "e9b396518d0dba2f7fd0d77e3cb64292d5645b4cfd7c77274b63c2c1945c5558",
+    "verify_experiment.py": "9a948138d612f9e2fbbc66d9747fab4df72275a6f731237ac7d39be5b0e724a2"
+  },
+  "files": {
+    "ALLOCATION_GATE.json": {
+      "bytes": 769,
+      "sha256": "b6475e09cc06b7becf3e5fbef14cdd449b6950a4f5f638742b56afc01323d4e3"
+    },
+    "CHOICE_STATUS.json": {
+      "bytes": 251,
+      "sha256": "4a4024732776c92e8687cd5e031cc1e3ceb9939e711e53b03b67fd795473f488"
+    },
+    "EXHAUSTIVE_CHOICE_RECORD.csv": {
+      "bytes": 1336051,
+      "sha256": "eb06fcaf0c9b6e47444b5634c2d53f32b1386e1dffed07e913bee5fd6e5b9a6e"
+    },
+    "FOLD_RESULTS.csv": {
+      "bytes": 57275,
+      "sha256": "ee04eb5fc337a15e94cf132e2256ba972956b4759c17385534aa795d92f45755"
+    },
+    "FROZEN_SELECTION_PLAN.csv": {
+      "bytes": 105211,
+      "sha256": "09e7b450e3fb5d1033a1c16ef1d3d988392f016b5f05bb95fc6c5f6af51a4cfc"
+    },
+    "IDENTITY_EQUAL_RESULTS.csv": {
+      "bytes": 9947,
+      "sha256": "4a04beb2a67adbc32c278d96f47e4a053aa1e2a40e4202f80813d94396b68771"
+    },
+    "INDEPENDENT_EXPERIMENT_VERIFICATION.json": {
+      "bytes": 623,
+      "sha256": "777716a9757ff8ea853538746918dd85f1a9ec7170561be3a4d0b1aa76582586"
+    },
+    "INNER_ROLE_ISOLATION.csv": {
+      "bytes": 521,
+      "sha256": "35d09248cfa551a69cafb953439a598c6f1ae077f133151364278c3218f602dc"
+    },
+    "INPUT_ADMISSION.json": {
+      "bytes": 554,
+      "sha256": "e6f0122056a84825c220f9be22f4856cbfde2b2e81f2d340c11b0871acb234a9"
+    },
+    "MAIN_RESULTS.csv": {
+      "bytes": 12351,
+      "sha256": "64d8f2e1334f02faaa88fdb924207c49378afc360bfc777718c306e2b608fd32"
+    },
+    "OWN_TRAIN_ELIGIBILITY.csv": {
+      "bytes": 9797,
+      "sha256": "c4f573a9fcf97991232b20863db953451d066e11438514f00f45a27883347d31"
+    },
+    "PAIRED_INTERVALS.csv": {
+      "bytes": 19817,
+      "sha256": "f4e70b2d90be5f4af4ab8d9d21fbb8bf018ba2a1ed4e9fbf2690b6b68d7177f2"
+    },
+    "REFIT_COUNTS.csv": {
+      "bytes": 1115,
+      "sha256": "2ec9fe1b2e845756b5acd76b4c3637d965753fd8a15bfec0164a40f8ef166399"
+    },
+    "REPORT_STATUS.json": {
+      "bytes": 886,
+      "sha256": "d010b78df3da299ebb672096184d97762a44f25f89c249aa4a09232a80ed8539"
+    },
+    "SEAL_STATUS.json": {
+      "bytes": 267,
+      "sha256": "48b158d4c8891a4dd50cf9c5beda4693ba5f7fae2d4dc1d7ce6fda10bbfd4aa0"
+    },
+    "SELECTION_FREQUENCY.csv": {
+      "bytes": 2948,
+      "sha256": "95626346bc280f38a02a890379e78623d03f9abb2264cfb9b13e8a8fa5e4fea7"
+    },
+    "SELECTION_OVERLAP_PAIRS.csv": {
+      "bytes": 21511,
+      "sha256": "cd95402ad6c6cfd5ae474f6f994d070bed58a13bf171412a130ccf5522d89bb0"
+    },
+    "SELECTION_STABILITY.csv": {
+      "bytes": 548,
+      "sha256": "f0ceb1c50dbffee2f4bc2a0fac5e4d39a1f62ac8b3094b2f6668956a52af6511"
+    },
+    "SIX_ENDPOINT_SIMULTANEOUS_SENSITIVITY.csv": {
+      "bytes": 23047,
+      "sha256": "8166b279ccfc04948faef1e308799f4d2b772ad1d30a9e5633eddf5c2f8d948e"
+    },
+    "SOURCE_RESULTS.csv": {
+      "bytes": 47033,
+      "sha256": "dacb13a360de251b7597b4b2c1fb24e1f38f089180b4bd1fbe2d5511edc0ef53"
+    },
+    "UTILITY_INTERVALS.csv": {
+      "bytes": 2143,
+      "sha256": "01a3a54cd4c91901285c01ecf233062aa5596d66a5d0215874d887acc6eb7d1d"
+    }
+  },
+  "no_private_arrays_models_scalers_or_identifiers": true,
+  "source": {
+    "PROTOCOL_LOCK.json": "bc24a3dff0792fd57649aabcd1147c1dbc0c72d870079112e04a2e86388207c4",
+    "prepare_inputs.py": "34717d50b8ff2bd844078a321b81e2dfdc89c83088f9be221c4f6923e67bca00",
+    "ridge.py": "75805a25ad0079061371485e9192e4268b9c906c4c9afea5c4eb838cd949d615",
+    "select_and_seal.py": "add5033e46e57e82cf368a4d8c1787051dd9fa7a19a9aec386a85f8fdfb83e12",
+    "study_io.py": "1524f7e9e49e4f36b8f35dce3d8084c1cbdd3f0ca8009b166c017d729f30f9b4",
+    "test_ridge.py": "d2d58fd3239a7d6ada8664115600c7030dae4b517b7b3dc05c9209edea33576c"
+  },
+  "status": "PASS"
+}

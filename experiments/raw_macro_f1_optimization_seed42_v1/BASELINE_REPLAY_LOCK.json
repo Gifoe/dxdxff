@@ -1,0 +1,15 @@
+{
+  "scope": "Reproduce only original legal validation scores of the historical Concat__RAW_ONLY reference; no fitting, threshold selection, source selection by outcome, or Outer read/inference.",
+  "reference_family": "Concat",
+  "reference_recipe": "RAW_ONLY",
+  "expected_folds": 5,
+  "expected_validation_appearances": 65,
+  "expected_unique_validation_patients": 47,
+  "maximum_logit_error": 0.000001,
+  "maximum_NEZ_probability_error": 0.000001,
+  "maximum_threshold_prediction_disagreements": 0,
+  "architectures": "Both 160D reference-shaped head (64 literal zero slots) and mapped96D head are replayed; same CNN and active head weights. The 160D reference-shaped head remains the default irrespective of relative errors. No manual physiological arrays are model inputs.",
+  "execution": "Original pinned Torch/NumPy runtime, FP32/TF32off, original default nondeterministic cuDNN, original4096window chunks. Do not adopt the previous deterministic study's backend setting for this baseline replay without a separately recorded engineering change.",
+  "failure": "Stop on source, identity, support or parity failure; preserve checkpoints/logs. No altered threshold, patient deletion, wider tolerance or blind retries.",
+  "privacy": "Only code and anonymous per-fold maximum parity errors/counts/hashes exported. No identities, raw, private predictions, weights, embeddings, labels or logs."
+}

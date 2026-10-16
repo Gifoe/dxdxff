@@ -30,7 +30,11 @@ mpl.rcParams.update({
 
 
 def export(fig, output):
-    fig.savefig(output.with_suffix('.svg'))
+    svg = output.with_suffix('.svg')
+    fig.savefig(svg)
+    # Formatting only: SVG path data keeps its newline separators.
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines()) + '\n',
+                   encoding='utf-8')
     fig.savefig(output.with_suffix('.pdf'))
     fig.savefig(output.with_suffix('.png'), dpi=600)
     fig.savefig(output.with_suffix('.tiff'), dpi=600,

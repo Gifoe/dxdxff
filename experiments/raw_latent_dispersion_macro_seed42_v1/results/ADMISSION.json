@@ -1,0 +1,161 @@
+{
+  "all15_role_source_checkpoint_identities_verified": true,
+  "calibration_replays": [
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 1,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 1,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 1,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 2,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 2,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 2,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 3,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 3,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 3,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 4,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 4,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 4,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 5,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 5,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_identical": true,
+      "fold": 5,
+      "logit_drift_recorded_not_claimed_bit_equivalent": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    }
+  ],
+  "complete_patient_direct_backward": [
+    {
+      "actual_complete_patient": true,
+      "all_gradients_finite": true,
+      "arm": "MEAN_TUNE",
+      "channels": 164,
+      "direct_forward_backward_seconds": 0.372401099986746,
+      "fold": 2,
+      "initial_logit_identity": true,
+      "largest_of_training_patients": 79,
+      "parameters": 12529,
+      "peak_allocated_bytes": 967662080,
+      "screen": 1,
+      "valid_windows": 48380
+    },
+    {
+      "actual_complete_patient": true,
+      "all_gradients_finite": true,
+      "arm": "MEAN_RESIDUAL",
+      "channels": 164,
+      "direct_forward_backward_seconds": 0.14759380000759847,
+      "fold": 2,
+      "initial_logit_identity": true,
+      "largest_of_training_patients": 79,
+      "parameters": 13105,
+      "peak_allocated_bytes": 977354240,
+      "screen": 1,
+      "valid_windows": 48380
+    },
+    {
+      "actual_complete_patient": true,
+      "all_gradients_finite": true,
+      "arm": "DISPERSION",
+      "channels": 164,
+      "direct_forward_backward_seconds": 0.04232100000081118,
+      "fold": 2,
+      "initial_logit_identity": true,
+      "largest_of_training_patients": 79,
+      "parameters": 13105,
+      "peak_allocated_bytes": 1153928704,
+      "screen": 1,
+      "valid_windows": 48380
+    }
+  ],
+  "formal_fits_started": 0,
+  "input_binding_sha256": "71b9b92a0c34707b5f6b2fca247c807bd662abcbdbaa86ec3499e360dba72615",
+  "new_Outer_access": false,
+  "precision": "FP32_TF32_OFF_CUDNN_DETERMINISTIC",
+  "status": "PASS",
+  "tests_collected": 4,
+  "tests_passed": 4
+}

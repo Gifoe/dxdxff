@@ -6,6 +6,13 @@ from refitting/conditioning only the classifier. This separate finite study
 changes the Raw encoder and fine-tunes it under the original Macro objective.
 No performance numbers are filled before the corresponding verified run.
 
+Admission has actually passed: four source tests, all15 original CAL logit
+replays with maximum error0, and full forward/backward for the largest complete
+patient among79 actual training identities (164channels,48,380valid windows).
+All three models had finite gradients and identical initial logits; maximum
+GPU allocation was1,153,928,704bytes. See `results/ADMISSION.json`. These are
+engineering checks, not evidence of improved classification performance.
+
 The original two convolutions produce24 learned responses at30 positions in
 each2-second waveform, then discard everything except the temporal mean.
 `DISPERSION` adds `0.25*tanh(W*latentSD)` to that mean. W is24×24 with no bias

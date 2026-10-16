@@ -1,0 +1,18 @@
+{
+  "files": {
+    ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "PROTOCOL_LOCK.json": "cc1bf66bbd68bca53ae8335ab371e4384cfd452132e34171792b90c6d88ba362",
+    "README.md": "c4bae99e0462bc858047b4cd3504ea41b8d34da0d348c552fdcdec1bf921a348",
+    "admit.py": "ebe4eb4f56e613c9e95b0d1f82c32b978fa1b358bc970bba008ca9f656c1964a",
+    "common.py": "b31e088a710b541bc21d7ee2abe93cffcefc2f72cffdf7bb9ca1cd22d1550247",
+    "model.py": "7e34c70ba6af6253cb55069ead80c83aec45e65a158fde28c8eacfa3e9f1a417",
+    "run_internal.ps1": "9ca9a0e59466becccc902231cb7d1e38325243d1b61196cd9450ad9414586668",
+    "summarize.py": "1b6c3d472a22b1d5e0130c226081618f05a8a06f4e3a008eda90dae657443c75",
+    "test_model.py": "d5a50f076ee35cdabcc9b2c710587efbc25bcd3268a2d6c995314e8ef799e1ea",
+    "train_internal.py": "72d117c68785c5c020eda3d41689ad756a588c0cec6b1006e2b5e11736e6802a",
+    "verify_public.py": "af4048a51a9532b51fbe650acc60f61bad703cac690931959fe5678f993bc024"
+  },
+  "internal_verified": false,
+  "scope": "public_consistency_not_private_Raw_replay",
+  "status": "PASS"
+}

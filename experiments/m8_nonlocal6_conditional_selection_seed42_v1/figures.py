@@ -15,6 +15,11 @@ GROUPS=['early_partial_HG_80_125_slope','early_LL_slope','baseline_crossing_part
         'baseline_crossing_LL','post_top20_partial_HG_80_125','post_top20_LL']
 
 
+def clean_svg_export(path):
+    """Mechanical whitespace normalization of matplotlib's vector export."""
+    path.write_text('\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8')
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     assert json.loads((DATA/'INDEPENDENT_EXPERIMENT_VERIFICATION.json').read_text())['status']=='PASS'
@@ -69,6 +74,7 @@ def main():
     ax.legend(loc='lower left',handlelength=1.2);ax.grid(axis='x',alpha=.15,linewidth=.5)
     for label,ax in zip('abcd',axes):ax.text(-.12,1.055,label,transform=ax.transAxes,fontweight='bold',fontsize=9,va='bottom')
     fig.savefig(OUT/'01_nonlocal6_cardinality_stability.svg')
+    clean_svg_export(OUT/'01_nonlocal6_cardinality_stability.svg')
     fig.savefig(OUT/'01_nonlocal6_cardinality_stability.pdf')
     fig.savefig(OUT/'01_nonlocal6_cardinality_stability.png',dpi=600)
     fig.savefig(OUT/'01_nonlocal6_cardinality_stability.tiff',dpi=600,pil_kwargs={'compression':'tiff_lzw'})

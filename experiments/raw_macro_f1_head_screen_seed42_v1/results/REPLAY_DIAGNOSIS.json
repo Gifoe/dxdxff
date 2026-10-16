@@ -1,0 +1,441 @@
+{
+  "new_fits": 0,
+  "outcome_metrics_read": false,
+  "reports": [
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 1,
+      "screen": 1
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 1,
+      "screen": 2
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 7.152557373046875e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 7.152557373046875e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 7.152557373046875e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 1,
+      "screen": 3
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 2,
+      "screen": 1
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 2,
+      "screen": 2
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.7881393432617188e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.7881393432617188e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 2,
+      "screen": 3
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 3,
+      "screen": 1
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 2.86102294921875e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 2.86102294921875e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 2.86102294921875e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 3,
+      "screen": 2
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 3,
+      "screen": 3
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 4,
+      "screen": 1
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 9.5367431640625e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.7881393432617188e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 1.9073486328125e-06,
+        "probability_max_error": 1.7881393432617188e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 4,
+      "screen": 2
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 4,
+      "screen": 3
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 5,
+      "screen": 1
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 7.152557373046875e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 7.152557373046875e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 7.152557373046875e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 5,
+      "screen": 2
+    },
+    {
+      "cpu64_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_full": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_no_mkldnn": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cpu_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 4.76837158203125e-07,
+        "probability_max_error": 1.1920928955078125e-07
+      },
+      "cuda_patient": {
+        "calibration_grid_disagreements": 0,
+        "logit_max_error": 0.0,
+        "probability_max_error": 0.0
+      },
+      "fold": 5,
+      "screen": 3
+    }
+  ]
+}

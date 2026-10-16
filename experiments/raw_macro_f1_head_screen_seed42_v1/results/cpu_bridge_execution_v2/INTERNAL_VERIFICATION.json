@@ -1,0 +1,735 @@
+{
+  "all_metrics_recomputed": true,
+  "appearances_per_arm": 255,
+  "checks": [
+    {
+      "arm": "NATIVE",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "REFIT",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "REFIT",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "REFIT",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "REFIT",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "REFIT",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "REFIT",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "REFIT",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "REFIT",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "REFIT",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "REFIT",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "REFIT",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "REFIT",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "REFIT",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "REFIT",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "NATIVE",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "REFIT",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PATIENT",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "LOCAL",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_REFERENCE",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_PHASES",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_SD",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "NO_Z",
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "screen": 3
+    }
+  ],
+  "input_binding_sha256": "aaf5611bb3420511981f5f8331e603e7cb53a622a5d7d8e89ff74f70bb555c02",
+  "logical_cells": 120,
+  "maximum_score_replay_error": 0.0,
+  "no_original_Development_or_Outer_used": true,
+  "patient_rows": 2040,
+  "selection_ownFIT_only": true,
+  "selection_sha256": "7f4c35543023cb8df9d597a12b134a907e3e3cffbf5e71eff0405bac731ee994",
+  "status": "PASS",
+  "unique_held_patients": 79
+}

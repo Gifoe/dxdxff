@@ -1,0 +1,23 @@
+{
+  "all_three_predeclared_procedures_reported": true,
+  "channels_per_procedure": 7635,
+  "goal_point_established": false,
+  "independent_confirmation": false,
+  "independent_sklearn_patient_metrics_pass": true,
+  "no_postOuter_tuning": true,
+  "patient_equal_macro_f1": {
+    "NATIVE": 0.6304930529317453,
+    "REFIT": 0.627736362391109,
+    "SELECTED": 0.6243139135286604
+  },
+  "patient_rows": 240,
+  "patients_per_procedure": 80,
+  "point_target_over_065": {
+    "NATIVE": false,
+    "REFIT": false,
+    "SELECTED": false
+  },
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "7f8f8635e325b0e7c8cdb7a6f7ef152d88d7e87bedf429e149f56d01ce10d6d7",
+  "status": "COMPLETE_VERIFIED_THREE_RAW_MACRO_PROCEDURES"
+}

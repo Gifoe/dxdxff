@@ -1,0 +1,33 @@
+{
+  "all80_patients_all7635_channels": true,
+  "all9_patient_metrics_independently_recomputed": true,
+  "archive_identity_exact": true,
+  "goal_point_established": false,
+  "maximum_patient_metric_error": 5.551115123125783e-17,
+  "no_training_or_inference_in_verifier": true,
+  "ownOuter_disjoint_from_ownFIT_Development": true,
+  "patient_rows": 240,
+  "reports": [
+    {
+      "macro_f1": 0.6304930529317453,
+      "patients": 80,
+      "procedure": "NATIVE",
+      "unique_channels": 7635
+    },
+    {
+      "macro_f1": 0.627736362391109,
+      "patients": 80,
+      "procedure": "REFIT",
+      "unique_channels": 7635
+    },
+    {
+      "macro_f1": 0.6243139135286604,
+      "patients": 80,
+      "procedure": "SELECTED",
+      "unique_channels": 7635
+    }
+  ],
+  "score_seal_sha256": "7f8f8635e325b0e7c8cdb7a6f7ef152d88d7e87bedf429e149f56d01ce10d6d7",
+  "status": "PASS",
+  "verifier_source_sha256": "2ad03dba6a2cabdbfa65a8890073037c4cd07cc35efd548030075005a9a07e97"
+}

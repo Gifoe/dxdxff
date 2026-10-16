@@ -1,0 +1,44 @@
+{
+  "fullOuter_labels_read": false,
+  "parity": [
+    {
+      "Native_decisions_unchanged": true,
+      "channels": 1631,
+      "fold": 1,
+      "native_probability_max_error": 1.1920928955078125e-07,
+      "patients": 16
+    },
+    {
+      "Native_decisions_unchanged": true,
+      "channels": 1498,
+      "fold": 2,
+      "native_probability_max_error": 1.1920928955078125e-07,
+      "patients": 16
+    },
+    {
+      "Native_decisions_unchanged": true,
+      "channels": 1746,
+      "fold": 3,
+      "native_probability_max_error": 1.1920928955078125e-07,
+      "patients": 17
+    },
+    {
+      "Native_decisions_unchanged": true,
+      "channels": 1425,
+      "fold": 4,
+      "native_probability_max_error": 1.1920928955078125e-07,
+      "patients": 15
+    },
+    {
+      "Native_decisions_unchanged": true,
+      "channels": 1335,
+      "fold": 5,
+      "native_probability_max_error": 1.1920928955078125e-07,
+      "patients": 16
+    }
+  ],
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_cells": 15,
+  "score_seal_sha256": "7f8f8635e325b0e7c8cdb7a6f7ef152d88d7e87bedf429e149f56d01ce10d6d7",
+  "status": "ALL15_FROZEN_SCORE_CELLS_SEALED"
+}

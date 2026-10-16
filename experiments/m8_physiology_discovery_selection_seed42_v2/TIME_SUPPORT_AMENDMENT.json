@@ -1,0 +1,11 @@
+{
+  "phase": "Prospective additional control before any newOuter; main training/feature decisions unchanged",
+  "reason": "Original physiologicalDELTA seizure means cover all valid cache windows, including20to30seconds, whereas originalRawsummary pools0to8 and8to20. Increment overRaw20 could mix feature representation with additional temporal evidence.",
+  "new_control": "Concat__RAW_SUPPORT30,5foldscratch fits, same12529parameters/initialization/head/optimizer/objective, zero64 physiology andIdentityGate; change only lateRawpool8to30 instead8to20. Pre-reference andearly0to8 unchanged.",
+  "implementation": "Immutable originalConcat subclass; temporary piecewise time-coordinate map only for interval predicates, checked exactly against native pre/early/late8to30 masks. Native clinical/cache times are not overwritten, extraction unchanged. No new raw data or extrapolated windows.",
+  "budget_amendment": "Add5scientifically necessary support-matched Raw fits to original80maximum, total85maximum; do not change prior fitted states,sourcebinding,selection orthresholdrules. Evaluate and report bothRaw20 andRaw30,not post-testbestRaw.",
+  "selection": "OriginalFIT training andoriginalDevelopment epoch/threshold only. This control never changes the feature selector,primaryM8procedure orwhich mainmodel is reported.",
+  "evidence_scope": "Tests one temporal-support confound,not physiological causality or fullrepresentation equivalence. Raw still standardizes each window andis a finite96D representation.",
+  "Outer": "Freeze main80 plusadditional5 before one105cell scoreseal,including20historicalreferencecells. No newOuter has been read bythisstudy atamendment. Exploratory repeated-test remains.",
+  "not_an_engineering_patch": true
+}

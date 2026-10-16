@@ -1,0 +1,12 @@
+{
+  "primary_procedure": "M8__SELECTED with per-fold feature/cardinality decisions already fixed inside ownFIT; not a post-Outer best family",
+  "new_score_cells": 85,
+  "historical_score_cells": 20,
+  "historical_references": {"HIST_M8": "REF_M8", "HIST_D1": "REF_D1", "HIST_RAW": "REF_RAW_ONLY", "HIST_SINGLE_HEAD_S4": "S4"},
+  "historical_policy": "Hash-verified sealed prior single-head experiment scores; no historical neural rerun. S4 is its own preselected6D+Gate model, not currentIdentityConcat or an architecture-matched baseline.",
+  "strict_order": "Replay and verify all80 main plus5 support-matched new validation predictions,original role/epoch/threshold/source/selection hashes before newOuter; freeze105model-fold cells,per-fold64Dpreprocessing,scales and selectedmaps; seal allscores before fullOuterlabel reporting. EachownOuterpatient must be excluded from its FIT/VAL and allnested selection roles.",
+  "primary_comparisons": "M8SELECTED vs samewidthM8OLD7,BEST_SWAP,RANDOM_A,RANDOM_B and matchedConcatRAW_ONLY; ConcatSELECTED vs ConcatOLD7 andRaw; D1SELECTED vsD1OLD7; M8SELECTED vsConcatSELECTED andD1SELECTED. AlsoM8/ConcatSELECTED vsRAW_SUPPORT30,andRAW_SUPPORT30vsRAW_ONLY for explicit temporal-support control. Six primary metrics AUROC/AP/MacroF1/EZF1/MRR/Top1 always reported;ACC/NEZF1/Bias likewise.",
+  "uncertainty": "10000 commonseed42 paired80patient bootstrap, frozenmodels/thresholds. Selected vsM8OLD7 eightendpoints also Bonferroni familywise95 interval. No noninferiority claim without prespecifiedmargin and independent evidence. Fullfold/source patientmacro and finitecoverage; no favorablemetric weighting replacement after outcomes.",
+  "stop": "One frozen exploratoryOuter pass, including exact hashbound engineering resume only. No feature/model/threshold/gate tuning or new winner selected from Outer.",
+  "public_only": "Hashes,anonymous aggregate outputs and plots only; no individual scores,labels,features,embeddings,weights or logs."
+}

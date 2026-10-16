@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "folds": 5,
+  "checks": [
+    {
+      "fold": 1,
+      "original_FIT_and_validation_indices_exact": true,
+      "original_channel_identity_and_order_exact": true,
+      "own_Outer_excluded": true,
+      "source_bound_replay_verified": true
+    },
+    {
+      "fold": 2,
+      "original_FIT_and_validation_indices_exact": true,
+      "original_channel_identity_and_order_exact": true,
+      "own_Outer_excluded": true,
+      "source_bound_replay_verified": true
+    },
+    {
+      "fold": 3,
+      "original_FIT_and_validation_indices_exact": true,
+      "original_channel_identity_and_order_exact": true,
+      "own_Outer_excluded": true,
+      "source_bound_replay_verified": true
+    },
+    {
+      "fold": 4,
+      "original_FIT_and_validation_indices_exact": true,
+      "original_channel_identity_and_order_exact": true,
+      "own_Outer_excluded": true,
+      "source_bound_replay_verified": true
+    },
+    {
+      "fold": 5,
+      "original_FIT_and_validation_indices_exact": true,
+      "original_channel_identity_and_order_exact": true,
+      "own_Outer_excluded": true,
+      "source_bound_replay_verified": true
+    }
+  ],
+  "raw_source_contract": "80patients/7635channels/256seizures/1471965windows",
+  "no_label_array_returned_by_original_reader": true,
+  "caveat": "Legacy metadata bundles are unpickled by the pinned reader; measurements and labels are not returned or model inputs.",
+  "additional_prediction_inferences": 0,
+  "new_Outer_passes": 0,
+  "private_rows_exported": false
+}

@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "folds": 5,
+  "validation_patient_appearances": 65,
+  "unique_validation_patients": 47,
+  "input_binding_sha256": "5f2f54b1657254bbe8c40cc489e77a428ec0b3192138680b43814bd20dd8db71",
+  "actual_frozen_checkpoint_replay": true,
+  "reports": [
+    {
+      "fold": 1,
+      "validation_patients": 13,
+      "channels": 1381,
+      "reference160_logit_max_error": 0.0,
+      "compact96_logit_max_error": 2.384185791015625e-07,
+      "probability_max_errors": [
+        0.0,
+        5.960464477539063e-08
+      ],
+      "threshold_prediction_disagreements": [
+        0,
+        0
+      ],
+      "checkpoint_sha256": "b972d5e1e0ac1c2e75c7808a545279e6c82df26b5df1d84bc473d2a1bbff9b97",
+      "threshold_unchanged": true,
+      "only_Raw_mask_original_times_model_inputs": true
+    },
+    {
+      "fold": 2,
+      "validation_patients": 13,
+      "channels": 1186,
+      "reference160_logit_max_error": 0.0,
+      "compact96_logit_max_error": 1.7881393432617188e-07,
+      "probability_max_errors": [
+        0.0,
+        8.940696716308594e-08
+      ],
+      "threshold_prediction_disagreements": [
+        0,
+        0
+      ],
+      "checkpoint_sha256": "57de5e205a90df80dc52c9f7bc099b0817c4e6a10f228d5703b2ae5c47a4f4a9",
+      "threshold_unchanged": true,
+      "only_Raw_mask_original_times_model_inputs": true
+    },
+    {
+      "fold": 3,
+      "validation_patients": 13,
+      "channels": 1164,
+      "reference160_logit_max_error": 0.0,
+      "compact96_logit_max_error": 0.0,
+      "probability_max_errors": [
+        0.0,
+        0.0
+      ],
+      "threshold_prediction_disagreements": [
+        0,
+        0
+      ],
+      "checkpoint_sha256": "0a4fff31d399e73b14ef278996d5cb5e0a9fd6e387421cc5d25ef6e65be4280c",
+      "threshold_unchanged": true,
+      "only_Raw_mask_original_times_model_inputs": true
+    },
+    {
+      "fold": 4,
+      "validation_patients": 13,
+      "channels": 1267,
+      "reference160_logit_max_error": 0.0,
+      "compact96_logit_max_error": 0.0,
+      "probability_max_errors": [
+        0.0,
+        0.0
+      ],
+      "threshold_prediction_disagreements": [
+        0,
+        0
+      ],
+      "checkpoint_sha256": "53272a24f63615a83209dfaff4d23f58e936660ec3a9d7000c6e567ae6d6ec5b",
+      "threshold_unchanged": true,
+      "only_Raw_mask_original_times_model_inputs": true
+    },
+    {
+      "fold": 5,
+      "validation_patients": 13,
+      "channels": 1275,
+      "reference160_logit_max_error": 0.0,
+      "compact96_logit_max_error": 0.0,
+      "probability_max_errors": [
+        0.0,
+        0.0
+      ],
+      "threshold_prediction_disagreements": [
+        0,
+        0
+      ],
+      "checkpoint_sha256": "b1d64c3dc218d87f38823efeac8f6ed344d717f6f5b370b0ff9085fe51d46589",
+      "threshold_unchanged": true,
+      "only_Raw_mask_original_times_model_inputs": true
+    }
+  ],
+  "no_new_training": true,
+  "new_Outer_passes": 0,
+  "primary_target": "patient-equal Macro-F1>0.65",
+  "default_head": "reference160_with64literal_zero_slots",
+  "private_predictions_or_identities_exported": false
+}

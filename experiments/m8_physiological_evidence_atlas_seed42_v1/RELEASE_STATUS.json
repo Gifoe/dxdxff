@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "verified_server_aggregate_files": 7,
+  "reported_association_numeric_flag_cells": 72,
+  "reported_recurrence_numeric_flag_cells": 40,
+  "group_evidence_ledger_rows": 38,
+  "historical_definition_resolution_rows": 28,
+  "new_patient_effects_replayed": 612,
+  "new_record_effects_replayed": 1296,
+  "old_effect_rows_audited": 800,
+  "old_source_rows_audited": 3200,
+  "previous_v2_files_unchanged": 135,
+  "previous_supplement_public_files_unchanged": 72,
+  "failed_predictive_gates_unchanged": true,
+  "new_classifier_or_Outer_runs": 0,
+  "stable_minimum_or_Raw_gain_proven": false
+}

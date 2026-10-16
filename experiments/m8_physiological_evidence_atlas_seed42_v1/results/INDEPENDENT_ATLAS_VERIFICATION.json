@@ -1,0 +1,17 @@
+{
+  "all_recurrence_counts_and_flags_checked": true,
+  "all_source_and_patient_bootstrap_intervals_checked": true,
+  "exact_original_role_counts_verified": true,
+  "independent_BH_engine": "scipy_false_discovery_control",
+  "independent_effect_engine": "sklearn_ROC_concordance_vs_MannWhitney_U",
+  "maximum_effect_error": 2.220446049250313e-16,
+  "model_fits": 0,
+  "new12_and_joint172_families_checked": true,
+  "new_Outer_access": false,
+  "new_patient_effects_independently_replayed": 612,
+  "new_record_effects_independently_replayed": 1296,
+  "original_failed_admission_preserved": true,
+  "primary_patients": 51,
+  "source_sha256": "9291010aa40167dcf5d21c9d6e7cba53592e9e30fa8d3b9a1c9e216caa4b60fd",
+  "status": "PASS"
+}

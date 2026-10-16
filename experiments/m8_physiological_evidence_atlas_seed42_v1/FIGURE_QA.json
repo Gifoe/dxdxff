@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "backend": "Python matplotlib",
+  "width_mm": 183,
+  "height_mm": 150,
+  "raster_dpi": 600,
+  "patient_coordinate_rows": 12,
+  "source_coordinate_cells": 48,
+  "primary_patients": 51,
+  "finite_patient_range": [
+    50,
+    51
+  ],
+  "all_sources_including_n4_pediatric_shown": true,
+  "no_significance_stars": true,
+  "interval": "10000 patient-bootstrap marginal95% percentile, exploratory",
+  "text_outside_canvas": [],
+  "no_patient_identifiers_plotted": true,
+  "final_size_visual_inspection": "PASS: delivered two-panel PNG inspected; no clipping or label overlap",
+  "PDF_selectable_text_characters": 940,
+  "PDF_fonts": "Embedded Arial TrueType, editable text",
+  "automated_source_preflight": "14 PASS,0 WARN,0 FAIL"
+}

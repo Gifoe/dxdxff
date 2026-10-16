@@ -1,0 +1,48 @@
+{
+  "additional_source": {
+    "export_public.py": "190440bed5899dbf02d9843aa5b2b4e410bd13e95f53ebabb40b1f65f72da135",
+    "verify_atlas.py": "9291010aa40167dcf5d21c9d6e7cba53592e9e30fa8d3b9a1c9e216caa4b60fd"
+  },
+  "admission_source": {
+    "ADMISSION_AMENDMENT.json": "1324b1e74d2c0219a4df4897751851ff43383a83ac3a242434e2e54a17feffc3",
+    "run_rolecount_checked.py": "646a34976f94066021acbe4ee9badd8b6e6ad46c3e83e6ba59a9bf2298f05a6a"
+  },
+  "files": {
+    "ATLAS_STATUS.json": {
+      "bytes": 934,
+      "sha256": "35308beec7c1dad47825712f6d00cc26fd546990a9b6502d03b2a7d88190ef96"
+    },
+    "INDEPENDENT_ATLAS_VERIFICATION.json": {
+      "bytes": 743,
+      "sha256": "f0f44c5606009a0ad9d331deca5585f1c54056f38a87adf5bdafd3d5a7ecfe1c"
+    },
+    "NEW12_PATIENT_ASSOCIATIONS.csv": {
+      "bytes": 2605,
+      "sha256": "a1468671935f0abf4c19fa321b5f74c8b77d00f966b1e5cbb64204b680ccb2c5"
+    },
+    "NEW12_REPEAT_SEIZURE_SUPPORT.csv": {
+      "bytes": 1136,
+      "sha256": "239f2bf380097fd3aa4d73c5438ef1429f5bd3f661e7b8f4d42adbb3eeba5b5f"
+    },
+    "NEW12_SOURCE_ASSOCIATIONS.csv": {
+      "bytes": 5291,
+      "sha256": "566c0dad52ec0ef0b85581b6b099f7cf98ed7f6b7cad843e18e4e1bdf67171b1"
+    },
+    "OLD_EFFECT_STATISTICAL_AUDIT.json": {
+      "bytes": 359,
+      "sha256": "c3b27c164521b2dadd60b66db54ae6818309bf2b7e596e3d800fd1f93f52052e"
+    },
+    "PRIMARY172_ASSOCIATION_ATLAS.csv": {
+      "bytes": 32015,
+      "sha256": "5c8d8349f29245dd5e26991ee5da6fd642b7e3270f9b5e87b2b15fe556688b8a"
+    }
+  },
+  "no_private_identity_or_effect_rows_transferred": true,
+  "source": {
+    "PROTOCOL_LOCK.json": "47563cdd20f26fdb66958784513bca2f90bf7cd140065a48c24456851571e239",
+    "atlas.py": "6228c900f16f245d6f446cf13738b56a5d012912e8e60af7d0fd401a80b68653",
+    "statistics_core.py": "f3579d6d0ec707ec07b0da3efed5b3eff7b8c361c5b7d9a35a70689c0efd0a34",
+    "test_statistics.py": "faa86e06892d6ce198ae616c3b483d409a50885994a888ef7d0be927245936e7"
+  },
+  "status": "PASS"
+}

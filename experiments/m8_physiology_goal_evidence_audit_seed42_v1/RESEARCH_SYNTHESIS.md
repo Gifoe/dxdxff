@@ -219,6 +219,25 @@ new set was adopted. Thus resolving the source gap did not itself produce a
 stable predictive improvement. This excludes the selected procedures in this
 matched setting, not the underlying biological attributes in every model.
 
+The [physiological evidence atlas](../m8_physiological_evidence_atlas_seed42_v1/REPORT.md)
+then filled the remaining descriptive gap for these record operators without
+new model fitting. All800 historical estimates and3200 source rows reproduced;
+the12 new coordinate associations were calculated in the original fold1 FIT51
+patients. Ten meet the fixed association-support rule, while only three of
+eight coordinates with a record analogue meet directed repetition support.
+For post top20% LL, mean rank-biserial effect was0.477551
+[0.384711,0.568515]. Source means have22/13/12/4 patients, so pediatric
+precision remains limited. Crossing positions are conditional on an observed
+eligible event and are not clinical onset latency.
+
+This is not a predictive reversal: the6-group continuation gate remains failed.
+The atlas joins32 window groups and6 record groups, and resolves all28 legacy
+definitions, while explicitly recording that no joint38-group model has run.
+The two unavailable LF fields and two order-dependent rank operators remain
+excluded on measurement grounds; source-mismatched graph operators are kept
+separate from their verified Raw-rebuilt counterparts. Physiological
+association, source eligibility and conditional adoption are different claims.
+
 No new universal feature list is adopted. The study does not substantiate
 "7D is best," "these features are irreplaceable," or "the discovered minimum
 improves clinical SOZ localization." It substantiates a narrower separation:

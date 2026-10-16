@@ -1,0 +1,13 @@
+{
+  "source": "Actual trusted-server runtime query after the atlas execution",
+  "python": "3.10.20",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "torch": "2.8.0+cu128",
+  "OMP_NUM_THREADS": 1,
+  "MKL_NUM_THREADS": 1,
+  "OPENBLAS_NUM_THREADS": 1,
+  "GPU_training_or_inference": false
+}

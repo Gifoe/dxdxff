@@ -1,0 +1,11 @@
+{
+  "effect_rows_reaggregated": 800,
+  "maximum_old_numeric_error": 1.1102230246251565e-16,
+  "numeric_or_flag_cells_checked": 10400,
+  "old_primary_BH_family_unchanged": 160,
+  "primary_unique_patients": 51,
+  "private_patient_effect_rows": 40800,
+  "raw_waveform_measurement_replay": false,
+  "source_rows_reaggregated": 3200,
+  "status": "PASS"
+}

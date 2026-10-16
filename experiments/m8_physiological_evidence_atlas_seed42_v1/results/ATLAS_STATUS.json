@@ -1,0 +1,22 @@
+{
+  "combined_exploratory_test_family": 172,
+  "independent_clinical_SOZ_or_onset_proven": false,
+  "input_freeze_sha256": "f146c1af571dd266bbf3320fd8272f6e145d571aaf622d75f0115414b309c40d",
+  "model_fits": 0,
+  "new_Outer_access": false,
+  "new_association_support_count": 10,
+  "new_coordinate_endpoints": 12,
+  "new_feature_selection": false,
+  "new_patient_effect_rows": 612,
+  "new_record_effect_rows": 1296,
+  "new_record_repetition_applicable": 8,
+  "new_repeated_direction_support_count": 3,
+  "old_overlapping_effect_rows_audited": 800,
+  "old_primary_endpoints": 160,
+  "old_source_rows_audited": 3200,
+  "previous_predictive_allocation_gates_unchanged": true,
+  "primary_patients": 51,
+  "private_new_effects_sha256": "090409209835ff030db9262acd85dc42683ecbbf743fc08b34bf0fffc1cea78b",
+  "stable_minimum_or_Raw_increment_proven": false,
+  "status": "COMPLETE_DESCRIPTIVE_PHYSIOLOGICAL_EVIDENCE_ATLAS"
+}

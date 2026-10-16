@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETE_PUBLIC_EVIDENCE_JOIN",
+  "qualified_groups": 38,
+  "numerical_coordinates_if_concatenated": 76,
+  "joint38_or76_coordinate_model_trained": false,
+  "original_window_groups": 32,
+  "distinct_record_groups": 6,
+  "historical_definitions_resolved": 28,
+  "original_primary_operational_support_endpoints": 109,
+  "new_association_support_endpoints": 10,
+  "new_repeated_direction_support_endpoints": 3,
+  "association_rules_differ_and_counts_are_not_a_cross_family_ranking": true,
+  "model_or_new_Outer_evaluations": 0,
+  "stable_minimum_or_Raw_gain_proven": false,
+  "source_files": {
+    "catalogue": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\FEATURE_CATALOGUE.csv",
+      "sha256": "84725632c6b30389ff5f3e0fff3632a7bae787ed91d6bc80826e9c39eb6ca5c6"
+    },
+    "attributes": {
+      "path": "m8_conditional_readout_validation_seed42_v1\\results\\ATTRIBUTE_MAP.csv",
+      "sha256": "81196a82a1191e7304dc411acfcf9d0974a24750ed3aa59d4fe72975ca1614c9"
+    },
+    "old_biology": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\results\\PHYSIOLOGICAL_EFFECTS.csv",
+      "sha256": "1cbb87c2bb3f3f8395be5e86d90a510e2e16b8dac1507bb65b3490591eaac55a"
+    },
+    "old_selection": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\results\\FROZEN_FEATURE_SELECTION.csv",
+      "sha256": "46a401cf47d22c888965c44eae8d89d25e5e8c8f06306d5f8aa0abc02471d263"
+    },
+    "conditional_selection": {
+      "path": "m8_rawconditional_feature_selection_seed42_v1\\results\\dense_reference\\FROZEN_INTERNAL_SELECTION.csv",
+      "sha256": "408265793dea46aea9a047fdd9fd1f7477ed6f55d1a98f35ab95db2f0d28f3d1"
+    },
+    "redundancy": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\results\\FIT_REDUNDANCY.csv",
+      "sha256": "485bf661a3833dd420804d1a2c9f525a6a5f9be4c699f533e0ddc9063b833aa8"
+    },
+    "new_effects": {
+      "path": "m8_physiological_evidence_atlas_seed42_v1\\results\\NEW12_PATIENT_ASSOCIATIONS.csv",
+      "sha256": "a1468671935f0abf4c19fa321b5f74c8b77d00f966b1e5cbb64204b680ccb2c5"
+    },
+    "new_recurrence": {
+      "path": "m8_physiological_evidence_atlas_seed42_v1\\results\\NEW12_REPEAT_SEIZURE_SUPPORT.csv",
+      "sha256": "239f2bf380097fd3aa4d73c5438ef1429f5bd3f661e7b8f4d42adbb3eeba5b5f"
+    },
+    "new_selection_frequency": {
+      "path": "m8_nonlocal6_conditional_selection_seed42_v1\\results\\SELECTION_FREQUENCY.csv",
+      "sha256": "95626346bc280f38a02a890379e78623d03f9abb2264cfb9b13e8a8fa5e4fea7"
+    },
+    "historical28": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\results\\HISTORICAL28_ELIGIBILITY.csv",
+      "sha256": "6d189699eaa59dad5aa8b547e267cbb74ead209f09da808ba1b9c4f96219677f"
+    }
+  }
+}

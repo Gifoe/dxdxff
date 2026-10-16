@@ -1,0 +1,156 @@
+{
+  "Raw_cache_actual_complete_patient": [
+    {
+      "Raw_cache_logit_loss_error": 0.0,
+      "all_trainable_gradients_finite": true,
+      "arm": "WINDOW_RESIDUAL",
+      "body_head_frozen": true,
+      "channels": 164,
+      "matrix_gradient_max_error": 0.0,
+      "peak_allocated_bytes": 1075644416,
+      "seconds": 0.10175240000535268,
+      "valid_windows": 48380
+    },
+    {
+      "Raw_cache_logit_loss_error": 0.0,
+      "all_trainable_gradients_finite": true,
+      "arm": "PRECOMPAND_RESIDUAL",
+      "body_head_frozen": true,
+      "channels": 164,
+      "matrix_gradient_max_error": 0.0,
+      "peak_allocated_bytes": 1084164096,
+      "seconds": 0.03447939999750815,
+      "valid_windows": 48380
+    }
+  ],
+  "body_head_updates": 0,
+  "input_binding_sha256": "471c8eac678af816492eca92a2d4861175c3270aa1052e4e12a79fe7fe6b052c",
+  "normalization_counts_include_repeated_encodings": true,
+  "original_Development_Outer_used": false,
+  "ownFIT_patient_cells": 765,
+  "phase_seal_sha256": "bd04ea02999ef38f1e83fde00f064782bd22781d8b6c7663cbec89905037ac06",
+  "reports": [
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4623,
+      "fold": 1,
+      "patients": 51,
+      "screen": 1
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4623,
+      "fold": 1,
+      "patients": 51,
+      "screen": 2
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4623,
+      "fold": 1,
+      "patients": 51,
+      "screen": 3
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4951,
+      "fold": 2,
+      "patients": 51,
+      "screen": 1
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4951,
+      "fold": 2,
+      "patients": 51,
+      "screen": 2
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4951,
+      "fold": 2,
+      "patients": 51,
+      "screen": 3
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4725,
+      "fold": 3,
+      "patients": 50,
+      "screen": 1
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4725,
+      "fold": 3,
+      "patients": 50,
+      "screen": 2
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4725,
+      "fold": 3,
+      "patients": 50,
+      "screen": 3
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4943,
+      "fold": 4,
+      "patients": 52,
+      "screen": 1
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4943,
+      "fold": 4,
+      "patients": 52,
+      "screen": 2
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 4943,
+      "fold": 4,
+      "patients": 52,
+      "screen": 3
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 5025,
+      "fold": 5,
+      "patients": 51,
+      "screen": 1
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 5025,
+      "fold": 5,
+      "patients": 51,
+      "screen": 2
+    },
+    {
+      "Native_all_ownFIT_logit_max_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "channels": 5025,
+      "fold": 5,
+      "patients": 51,
+      "screen": 3
+    }
+  ],
+  "status": "PASS",
+  "tests_passed": 4
+}

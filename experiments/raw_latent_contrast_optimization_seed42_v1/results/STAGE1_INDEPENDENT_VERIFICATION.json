@@ -1,0 +1,18 @@
+{
+  "all_five_recipe_choices_independently_replayed": true,
+  "all_roles_disjoint_and_own_FIT_only": true,
+  "assessment_patient_rows": 4080,
+  "logistic_fits": 560,
+  "maximum_metric_replay_error": 0.0,
+  "no_new_fit_or_Outer_access": true,
+  "source": {
+    "common.py": "c5dd9fb82fab45dd3b1e4ae0911f642a221fbf5bd039a5a642f838a3a5ffa499",
+    "metrics.py": "028a51ae271706c028aed60e55e02b2e06bf867a6d3ebd9b22d8758ede0388fa",
+    "model.py": "2a837032d9f2f2bc7a7b42c6d71c87863920a37ec5e35313c7ed1a6b54b20605",
+    "stage1.py": "106dd0e346e30b9b92fd68cc625f34228bd8898a8ff8755c5037313b41077eb4",
+    "verify_stage1.py": "c32411bf80adbd063c8edf801a592440f9ce23d40c4ba8bff06879de50b54fc6"
+  },
+  "status": "PASS",
+  "unique_patient_identities": 79,
+  "verified_recipe_freeze_sha256": "3901f2b6c3dcdc9ee8fa84e8b2e9db0eea92ffcf7604ace29ba09f82c6142043"
+}

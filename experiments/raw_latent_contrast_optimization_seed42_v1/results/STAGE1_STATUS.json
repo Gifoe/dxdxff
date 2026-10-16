@@ -1,0 +1,20 @@
+{
+  "encoder_paths": 20,
+  "encoder_updates_in_this_stage": 0,
+  "independent_patients_not_equal_to_logical_rows": true,
+  "logistic_fits": 560,
+  "new_Outer_access": false,
+  "original_Development_used": false,
+  "recipe_freeze_sha256": "3901f2b6c3dcdc9ee8fa84e8b2e9db0eea92ffcf7604ace29ba09f82c6142043",
+  "recipes": {
+    "1": "1001",
+    "2": "1001",
+    "3": "0111",
+    "4": "1001",
+    "5": "1011"
+  },
+  "stage2_not_yet_run": true,
+  "status": "ALL16_FACTORIAL_SCREEN_AND_FOLD_LOCAL_RECIPES_COMPLETE",
+  "target_F1_not_established": true,
+  "total_assessment_patient_rows": 4080
+}

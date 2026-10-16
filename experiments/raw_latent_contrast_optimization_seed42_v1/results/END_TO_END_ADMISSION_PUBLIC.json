@@ -1,0 +1,13 @@
+{
+  "D1_branches": 0,
+  "RNG_exact": true,
+  "all_complete_patient": true,
+  "arms": 4,
+  "attention_parameters": 8851,
+  "baseline_parameters": 8433,
+  "binding_sha256": "2617c9373ed49bcbcc452f637ac63a83b99f7ab7e3d1a0d3f19cc87abf89a4c2",
+  "full_gradient_max_error": 2.682209014892578e-07,
+  "logit_and_loss_max_error": 0.0,
+  "physiology_inputs": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+{
+  "all_complete_patient_Z": true,
+  "all_genuine_windows_used": true,
+  "complete_cells": 20,
+  "dimensions": 96,
+  "maximum_embedding_error": 0.0,
+  "maximum_mapped_head_error": 2.384185791015625e-07,
+  "no_new_Outer_access": true,
+  "patient_cells": 1020,
+  "recipes": 16,
+  "seal_sha256": "0dd5bf71b8ed6cda630e8bf7c8291cb9771f7270b57822c3e4d31139486aa67c",
+  "status": "PASS"
+}

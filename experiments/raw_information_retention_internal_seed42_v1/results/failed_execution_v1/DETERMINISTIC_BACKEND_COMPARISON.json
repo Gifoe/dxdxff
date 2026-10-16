@@ -1,0 +1,29 @@
+{
+  "formal_epochs": 0,
+  "no_cuDNN_disabling": true,
+  "no_model_data_loss_or_parameter_changes": true,
+  "original_gradient_tolerances_unchanged": true,
+  "reports": [
+    {
+      "arm": "C2_WINDOW_LONG",
+      "failed_parameters": [
+        {
+          "error": 2.592802047729492e-06,
+          "parameter": "cnn.2.weight"
+        }
+      ],
+      "forward_max_error": 0.0,
+      "gradient_max_error": 2.592802047729492e-06,
+      "original_gate_passed": false
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "failed_parameters": [],
+      "forward_max_error": 0.0,
+      "gradient_max_error": 1.4603137969970703e-06,
+      "original_gate_passed": true
+    }
+  ],
+  "source_binding_sha256": "525029c814857fe9141703ee419b406d4ffc962a1c30a8b39558954f634d2f94",
+  "status": "FAIL"
+}

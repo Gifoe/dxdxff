@@ -1,0 +1,165 @@
+{
+  "actual_source_hashes_verified": {
+    "inner_registry": "2b81e6460a1fcf64a550eb90224bf7205024d022b066269abea8cda175456cba",
+    "raw_registry": "48fb162c51ae34c3e29e4803a87577535a0f9e01ea09276acc0da8c8ef4c40f6",
+    "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609"
+  },
+  "formal_epochs": 0,
+  "input_binding_sha256": "525029c814857fe9141703ee419b406d4ffc962a1c30a8b39558954f634d2f94",
+  "original_gradient_tolerances_unchanged": true,
+  "results": [
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cuDNN_deterministic": false,
+      "direct_chunk_backward_order": [
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "direct_self_logit_error": 0.0,
+      "direct_self_replay": {
+        "failed_parameters": [],
+        "maximum_gradient_error": 7.450580596923828e-07,
+        "original_gate_passed": true
+      },
+      "forward": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 5.21540641784668e-07,
+        "original_gate_passed": true
+      },
+      "reverse": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 6.034970283508301e-07,
+        "original_gate_passed": true
+      }
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cuDNN_deterministic": false,
+      "direct_chunk_backward_order": [
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "direct_self_logit_error": 0.0,
+      "direct_self_replay": {
+        "failed_parameters": [],
+        "maximum_gradient_error": 5.364418029785156e-07,
+        "original_gate_passed": true
+      },
+      "forward": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 3.5762786865234375e-07,
+        "original_gate_passed": true
+      },
+      "reverse": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 3.427267074584961e-07,
+        "original_gate_passed": true
+      }
+    },
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cuDNN_deterministic": true,
+      "direct_chunk_backward_order": [
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "direct_self_logit_error": 0.0,
+      "direct_self_replay": {
+        "failed_parameters": [],
+        "maximum_gradient_error": 0.0,
+        "original_gate_passed": true
+      },
+      "forward": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 6.612390279769897e-08,
+        "original_gate_passed": true
+      },
+      "reverse": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 0.0,
+        "original_gate_passed": true
+      }
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cuDNN_deterministic": true,
+      "direct_chunk_backward_order": [
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "direct_self_logit_error": 0.0,
+      "direct_self_replay": {
+        "failed_parameters": [],
+        "maximum_gradient_error": 0.0,
+        "original_gate_passed": true
+      },
+      "forward": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 8.940696716308594e-08,
+        "original_gate_passed": true
+      },
+      "reverse": {
+        "failed_parameters": [],
+        "logit_error": 0.0,
+        "loss_error": 0.0,
+        "maximum_gradient_error": 0.0,
+        "original_gate_passed": true
+      }
+    }
+  ],
+  "status": "DIAGNOSIS_ONLY_NO_TRAINING"
+}

@@ -1,0 +1,26 @@
+{
+  "all_original_channels_preserved": true,
+  "eligible_arms": [
+    "C0_WINDOW_SHORT",
+    "C1_PRE_SHORT",
+    "C2_WINDOW_LONG",
+    "C3_PRE_LONG",
+    "C4_PRE_LONG_CONTEXT",
+    "DROP_PRE_REFERENCE",
+    "DROP_TWO_PHASES",
+    "DROP_SEIZURE_SD",
+    "DROP_PATIENT_Z"
+  ],
+  "input_binding_sha256": "525029c814857fe9141703ee419b406d4ffc962a1c30a8b39558954f634d2f94",
+  "labels_used": false,
+  "legal_FIT_unique_patients": 79,
+  "long_local_RF_samples": 535,
+  "normalization_coefficients_never_classifier_inputs": true,
+  "old_Outer_source_or_prediction_read": false,
+  "original_FIT_patient_appearances": 255,
+  "pre_family_eligible": true,
+  "pre_unit_max_error": 0.0,
+  "raw_valid_windows_audited": 1455327,
+  "short_local_RF_samples": 33,
+  "status": "PASS"
+}

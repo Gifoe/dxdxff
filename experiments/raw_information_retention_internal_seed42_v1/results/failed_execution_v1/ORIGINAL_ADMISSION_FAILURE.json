@@ -1,0 +1,11 @@
+{
+  "status":"FAILED_BEFORE_FORMAL_TRAINING",
+  "arm":"C2_WINDOW_LONG",
+  "parameter":"cnn.2.weight",
+  "reported_max_gradient_difference":1.103617250919342e-6,
+  "criterion":"torch.allclose(atol=1e-6,rtol=1e-5)",
+  "passed":false,
+  "formal_epochs":0,
+  "source_input_binding_sha256":"525029c814857fe9141703ee419b406d4ffc962a1c30a8b39558954f634d2f94",
+  "evidence":"Preserved original server train_internal_admit_01.err; no predictions or weights released"
+}

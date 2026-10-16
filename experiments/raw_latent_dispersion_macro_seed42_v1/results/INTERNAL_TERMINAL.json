@@ -1,0 +1,9 @@
+{
+  "actual_trainable_fits": 15,
+  "epochs": 77,
+  "goal_established": false,
+  "interpretation": "Previously used ownFIT screening data,not independent confirmation or full80patient final test.",
+  "logical_cells": 20,
+  "new_Outer_passes": 0,
+  "status": "COMPLETE_VERIFIED_DISPERSION_INTERNAL"
+}

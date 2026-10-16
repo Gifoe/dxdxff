@@ -1,0 +1,103 @@
+{
+  "actual_trainable_fits": 15,
+  "all_metrics_recomputed": true,
+  "checks": [
+    {
+      "arm": "DISPERSION",
+      "fold": 1,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_RESIDUAL",
+      "fold": 1,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_TUNE",
+      "fold": 1,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "DISPERSION",
+      "fold": 2,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_RESIDUAL",
+      "fold": 2,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_TUNE",
+      "fold": 2,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "DISPERSION",
+      "fold": 3,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_RESIDUAL",
+      "fold": 3,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_TUNE",
+      "fold": 3,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "DISPERSION",
+      "fold": 4,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_RESIDUAL",
+      "fold": 4,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_TUNE",
+      "fold": 4,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "DISPERSION",
+      "fold": 5,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_RESIDUAL",
+      "fold": 5,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "MEAN_TUNE",
+      "fold": 5,
+      "maximum_logit_replay_error": 0.0,
+      "screen": 1
+    }
+  ],
+  "logical_cells": 20,
+  "maximum_logit_replay_error": 0.0,
+  "original_Development_Outer_used": false,
+  "ownFIT_selection_sha256": "debd3d1b4f8aacb564d61d24c1754d288ba7d5b5de3d20d43bb5a57afe235eb9",
+  "patient_metric_rows": 344,
+  "score_seal_sha256": "8496913d168fae887ae2dab59566efc680cfb2660d3f1b27048705f5408fe803",
+  "status": "PASS"
+}

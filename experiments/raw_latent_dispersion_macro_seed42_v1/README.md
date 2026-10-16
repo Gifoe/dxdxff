@@ -6,6 +6,14 @@ from refitting/conditioning only the classifier. This separate finite study
 changes the Raw encoder and fine-tunes it under the original Macro objective.
 No performance numbers are filled before the corresponding verified run.
 
+The internal stage is now complete:15 end-to-end fits/77 epochs, independently
+verified with zero replay error. Native/Mean-tune/Mean-residual/Dispersion
+Macro-F1 is0.601974/0.602684/0.602684/0.601974 on the same86 assessment
+appearances (59unique patients). No fold advanced; allfive selections are
+Native. No new Development or Outer evaluation occurred. See
+[actual results and limits](RUN_REPORT.md); this is not completion of the0.65
+goal or evidence that all latent-dispersion models are ineffective.
+
 Admission has actually passed: four source tests, all15 original CAL logit
 replays with maximum error0, and full forward/backward for the largest complete
 patient among79 actual training identities (164channels,48,380valid windows).

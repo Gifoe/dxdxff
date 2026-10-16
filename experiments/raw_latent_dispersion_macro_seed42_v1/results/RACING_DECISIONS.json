@@ -1,0 +1,45 @@
+{
+  "decisions": [
+    {
+      "AUROC_gain": 0.0017294805172628491,
+      "Macro_gain": 0.003591133208215802,
+      "advanced": false,
+      "chosen": "MEAN_TUNE",
+      "first_path_selection_only": true,
+      "fold": 1
+    },
+    {
+      "AUROC_gain": 0.0,
+      "Macro_gain": 0.0,
+      "advanced": false,
+      "chosen": "MEAN_TUNE",
+      "first_path_selection_only": true,
+      "fold": 2
+    },
+    {
+      "AUROC_gain": 0.0,
+      "Macro_gain": 0.0,
+      "advanced": false,
+      "chosen": "MEAN_TUNE",
+      "first_path_selection_only": true,
+      "fold": 3
+    },
+    {
+      "AUROC_gain": 0.0,
+      "Macro_gain": 0.0,
+      "advanced": false,
+      "chosen": "MEAN_TUNE",
+      "first_path_selection_only": true,
+      "fold": 4
+    },
+    {
+      "AUROC_gain": 0.0,
+      "Macro_gain": 0.0,
+      "advanced": false,
+      "chosen": "MEAN_TUNE",
+      "first_path_selection_only": true,
+      "fold": 5
+    }
+  ],
+  "status": "RACING_INTERNAL"
+}

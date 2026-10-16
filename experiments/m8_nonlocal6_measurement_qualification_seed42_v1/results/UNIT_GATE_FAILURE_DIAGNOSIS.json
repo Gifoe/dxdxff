@@ -1,0 +1,119 @@
+{
+  "classifier_fits": 0,
+  "frozen_measurement_code_sha256": "fcdabe54ca06c421ca45d603e867ceffaaa71b119fe7f753537477ebd74acda4",
+  "input_artifact_sha256": "7dc2d618e662df4f6595519e0c60bc409618b0cf3e860ee94928d61b5a7f0560",
+  "labels_indexed": false,
+  "new_Outer_access": false,
+  "rows": [
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1e-12,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "early_partial_HG_80_125_slope",
+      "max_abs_error": 1.0658141036401503e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1e-12,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "early_LL_slope",
+      "max_abs_error": 1.662558979376172e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 12,
+      "coordinate_scale": 1e-12,
+      "exact_constant_patient_coordinates": 12,
+      "feature": "baseline_crossing_partial_HG_80_125",
+      "max_abs_error": 1.0,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 877
+    },
+    {
+      "affected_patient_coordinates": 14,
+      "coordinate_scale": 1e-12,
+      "exact_constant_patient_coordinates": 14,
+      "feature": "baseline_crossing_LL",
+      "max_abs_error": 1.0,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 995
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1e-12,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "post_top20_partial_HG_80_125",
+      "max_abs_error": 2.2648549702353193e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1e-12,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "post_top20_LL",
+      "max_abs_error": 8.526512829121202e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1000000000000.0,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "early_partial_HG_80_125_slope",
+      "max_abs_error": 2.7422508708241367e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1000000000000.0,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "early_LL_slope",
+      "max_abs_error": 1.965094753586527e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1000000000000.0,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "baseline_crossing_partial_HG_80_125",
+      "max_abs_error": 7.654987754790454e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 1,
+      "coordinate_scale": 1000000000000.0,
+      "exact_constant_patient_coordinates": 1,
+      "feature": "baseline_crossing_LL",
+      "max_abs_error": 1.0,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 44
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1000000000000.0,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "post_top20_partial_HG_80_125",
+      "max_abs_error": 2.4521183694670157e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    },
+    {
+      "affected_patient_coordinates": 0,
+      "coordinate_scale": 1000000000000.0,
+      "exact_constant_patient_coordinates": 0,
+      "feature": "post_top20_LL",
+      "max_abs_error": 9.547918011776346e-14,
+      "nonconstant_patient_coordinate_cases": [],
+      "violating_coordinate_cells": 0
+    }
+  ],
+  "status": "FROZEN_UNIT_GATE_FAIL",
+  "tolerance_unchanged": 1e-09
+}

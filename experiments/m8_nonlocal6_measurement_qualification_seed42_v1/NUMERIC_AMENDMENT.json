@@ -1,0 +1,11 @@
+{
+  "status": "PROSPECTIVE_ENGINEERING_ONLY_AFTER_UNLABELED_GATE_FAILURE",
+  "original_preregistration_commit": "82bef224f1e2552e521f8827c32ee48af8965dbb",
+  "original_qualification": "Failed the unchanged1e-9 unit-equivalence gate; preserved and not accepted.",
+  "diagnosis": "All failed patient-coordinates were exactly constant before scaling. Floating reduction of identical non-binary values produced nonzero SD and a spurious +/-1 patient-Z. No nonconstant patient-coordinate violated the gate.",
+  "repair": "For the unit-equivariant view only, detect finite per-patient exact range==0 and assign exactly0 to all its finite entries. All-missing remains NaN. Nonconstant coordinates retain the frozen float64 implementation byte-for-byte. Legacy diagnostic remains unchanged.",
+  "tolerance": 1e-9,
+  "not_changed": ["record scalars", "censoring", "aggregation", "cohort", "masks", "roles", "nonconstant threshold", "coverage gates", "existing32 groups", "old models", "old predictions"],
+  "acceptance": "New output namespace; independent aggregation and exact-constant guard verification. Do not replace or hide the failed original gate.",
+  "outcomes": "No labels, classifier fitting, selection by prediction or new Outer access. No biological/predictive conclusion from this repair."
+}

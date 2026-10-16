@@ -1,0 +1,15 @@
+{
+  "all256_record_identities_accounted": true,
+  "all80_patients_and7635_original_channels_retained": true,
+  "distribution_summary_cells_checked": 192,
+  "model_fits": 0,
+  "original_split_arrays_and_source_cache_unchanged": true,
+  "permutation_rows_reaggregated": 4096,
+  "prediction_or_classification_metrics_read": false,
+  "private_feature_record_rows_reaggregated": 2048,
+  "six_distinct_Raw250_scalar_operators_computable": true,
+  "source_replay_not_cache_creation_or_clinical_provenance": true,
+  "source_sha256": "25f3b44ac8604c9c465c49759dd38f457dfc3a72f26526d8c2c49c3575e881da",
+  "status": "PASS",
+  "two_rank_operators_fail_order_equivariance": true
+}

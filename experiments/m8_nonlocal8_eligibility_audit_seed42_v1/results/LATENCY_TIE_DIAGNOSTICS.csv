@@ -1,0 +1,17 @@
+mode,center,feature,records,channels,zero_pre_std_channels,no_crossing_channels,tied_latency_channels,min_pre_windows,min_post_windows,min_early_windows
+CACHE_ALL,hup,high_gamma,117,12384,3,1918,11986,29,30,11
+CACHE_ALL,hup,line_length,117,12384,0,1758,11997,29,30,11
+CACHE_ALL,lzu,high_gamma,72,7251,0,815,7004,10,30,11
+CACHE_ALL,lzu,line_length,72,7251,0,826,7025,10,30,11
+CACHE_ALL,multicenter,high_gamma,45,2815,2,342,2601,26,29,10
+CACHE_ALL,multicenter,line_length,45,2815,0,377,2646,26,29,10
+CACHE_ALL,pediatric,high_gamma,22,2545,0,842,2490,29,29,10
+CACHE_ALL,pediatric,line_length,22,2545,0,889,2485,29,29,10
+RAW250_VALID,hup,high_gamma,117,12384,3,1906,11975,29,30,11
+RAW250_VALID,hup,line_length,117,12384,0,1810,11984,29,30,11
+RAW250_VALID,lzu,high_gamma,72,7251,0,815,6998,10,30,11
+RAW250_VALID,lzu,line_length,72,7251,0,933,7005,10,30,11
+RAW250_VALID,multicenter,high_gamma,45,2815,1,369,2606,26,29,10
+RAW250_VALID,multicenter,line_length,45,2815,0,416,2621,26,29,10
+RAW250_VALID,pediatric,high_gamma,22,2545,0,880,2481,29,29,10
+RAW250_VALID,pediatric,line_length,22,2545,0,1121,2477,29,29,10

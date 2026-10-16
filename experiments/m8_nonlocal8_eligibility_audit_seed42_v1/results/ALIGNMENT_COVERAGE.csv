@@ -1,0 +1,6 @@
+center,records,record_channel_units,valid_Raw_channel_windows,valid_Raw_record_windows,raw_invalid_record_windows,native_invalid_record_windows,native_vs_Raw_mask_disagreement_record_windows,uniform_mask_records,native_geometry_records,min_valid_pre_windows,min_valid_post_windows
+ALL,256,24995,1471965,15074,0,27,27,256,256,10,29
+hup,117,12384,730656,6903,0,0,0,117,117,29,30
+lzu,72,7251,425225,4221,0,0,0,72,72,10,30
+multicenter,45,2815,165929,2652,0,17,17,45,45,26,29
+pediatric,22,2545,150155,1298,0,10,10,22,22,29,29

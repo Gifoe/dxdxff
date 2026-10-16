@@ -1,0 +1,23 @@
+{
+  "Raw_Nyquist": 125,
+  "Raw_sfreq": 250,
+  "canonical_channels": 7635,
+  "clinical_or_acquisition_provenance_proven": false,
+  "goal_full_completion_proven": false,
+  "input_freeze_sha256": "62d2c65190cc4d63f5d575d027f1f38224aee5f39baf43d559b8bdfd9eb630b7",
+  "labels_used": false,
+  "model_fits": 0,
+  "native_feature_rate_metadata": {
+    "1000.0": 256
+  },
+  "new_Outer_access": false,
+  "patients": 80,
+  "previous_features_models_thresholds_and_scores_unchanged": true,
+  "private_diagnostic_sha256": "8ecd98a79d3cbffc13cb6eba6ebd3528443ee07671f9e1f9e705e0aef66e8093",
+  "record_channel_units": 24995,
+  "records": 256,
+  "source_mask_records_complete": 256,
+  "status": "COMPLETE_UNLABELED_NONLOCAL8_ELIGIBILITY_AUDIT",
+  "valid_channel_windows": 1471965,
+  "valid_record_windows": 15074
+}

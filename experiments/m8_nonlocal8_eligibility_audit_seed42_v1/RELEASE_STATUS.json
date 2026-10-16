@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source_audit_public_files": 9,
+  "old_v2_release_files_unchanged": 135,
+  "old_conditional_and_readout_public_files_unchanged": 36,
+  "actual_model_fits": 0,
+  "new_Outer_inference": false,
+  "all8_cached_formulas_replay_exact": true,
+  "six_distinct_Raw250_scalar_operators_computable": true,
+  "two_rank_operators_rejected_as_order_dependent": true,
+  "stable_minimum_or_Raw_gain_proven": false,
+  "source_metadata_scope_not_clinical_provenance": true
+}

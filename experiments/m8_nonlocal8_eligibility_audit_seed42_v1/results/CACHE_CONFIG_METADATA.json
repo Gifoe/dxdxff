@@ -1,0 +1,13 @@
+{
+  "acquisition_filter": "UNKNOWN",
+  "cache_creation_source_SHA": "UNKNOWN",
+  "exact_creation_CLI": "UNKNOWN",
+  "independent_clinical_onset": false,
+  "numeric_fields": {
+    "raw_target_sampling_rate": "UNKNOWN_NOT_EMBEDDED",
+    "raw_temporal_sfreq": "UNKNOWN_NOT_EMBEDDED",
+    "spectral_max_freq": "UNKNOWN_NOT_EMBEDDED",
+    "spectral_min_freq": "UNKNOWN_NOT_EMBEDDED"
+  },
+  "source_function_hash_is_not_cache_creation_provenance": true
+}

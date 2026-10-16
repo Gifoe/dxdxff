@@ -1,0 +1,43 @@
+{
+  "files": {
+    "ALIGNMENT_COVERAGE.csv": {
+      "bytes": 527,
+      "sha256": "596c74fff3ecf5fe9dfa3a60924cb2d769fe2bfdb10342dfb50903c037c618dd"
+    },
+    "AUDIT_STATUS.json": {
+      "bytes": 820,
+      "sha256": "26612a173968afc45652bf15c91b4078420277b4e32c07e64e4bf3b68a40fe32"
+    },
+    "CACHE_CONFIG_METADATA.json": {
+      "bytes": 460,
+      "sha256": "5e211342e958aacf4fdc42a09cb5a49d3d8ba0e2c888dc7a2c0c80b519950d59"
+    },
+    "DESCRIPTOR_DISTRIBUTIONS.csv": {
+      "bytes": 28429,
+      "sha256": "ca2a6a38e571e3536155244c8415f1a03596bfe280df85f26fd1bce03d6e8799"
+    },
+    "ELIGIBILITY_DECISIONS.csv": {
+      "bytes": 1406,
+      "sha256": "523d36bf49a13185fc748b0e88bf9d258689dbfa8dcda5e2b0421958442c7421"
+    },
+    "FORMULA_MASK_SUMMARY.csv": {
+      "bytes": 4703,
+      "sha256": "5c93cfb71e92923d179afe9092840050b4b6ed4516a38866fe56058f3882ec9d"
+    },
+    "INDEPENDENT_AUDIT_VERIFICATION.json": {
+      "bytes": 681,
+      "sha256": "66e0889e83f0616c2fb2db6100e9234655182c89418e8b2a924d345690f7d4ab"
+    },
+    "LATENCY_TIE_DIAGNOSTICS.csv": {
+      "bytes": 1123,
+      "sha256": "814491c4200aa42f44017a3a0dc66bec0e4f26c5d9a018f01b786941c17ee1c8"
+    },
+    "PERMUTATION_EQUIVARIANCE.csv": {
+      "bytes": 5353,
+      "sha256": "289718c4c2728e807bcb7bfd39bb60ca9d3ed9a991db87d51e38dc7c332779fd"
+    }
+  },
+  "private_arrays_identifiers_and_logs_exported": false,
+  "source_sha256": "498b41653a2c99ae7aa152f70cc3aad1b110fa79b2d7861dffff5a96f83c1c54",
+  "status": "PASS"
+}

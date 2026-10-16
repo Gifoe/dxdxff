@@ -168,6 +168,25 @@ Raw increment.
 
 ## Decision for the model and the manuscript
 
+The subsequent
+[nonlocal-descriptor eligibility audit](../m8_nonlocal8_eligibility_audit_seed42_v1/AUDIT_REPORT.md)
+resolved part of the excluded historical8 measurement gap without using
+labels. All eight cached record descriptors replay exactly in256 matched
+records. However, reversing channel order changes23332/23352 of24995
+cached high-gamma/line-length rank values because equal latencies receive
+arbitrary different ranks. Those two operators are excluded unchanged, not
+declared biologically uninformative. Six valid-mask Raw250 scalar operators
+are computationally reconstructable as distinct retained-band candidates;
+they are not window-DELTA features or proven predictive improvements.
+
+This audit also clarifies mask scope. The original Raw-bank mask remains
+unchanged, but a native-cache metadata-based complete-window definition
+flags27 different boundary entries. That changes some cached crossing and
+upper-quintile descriptors. The two definitions must not be silently mixed,
+and this does not independently prove invalid Raw waveform samples. Exact
+creation CLI, acquisition filtering and clinical onset provenance remain
+unverified. No prior features, models or Outer scores were changed.
+
 No new universal feature list is adopted. The study does not substantiate
 "7D is best," "these features are irreplaceable," or "the discovered minimum
 improves clinical SOZ localization." It substantiates a narrower separation:

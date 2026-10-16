@@ -1,0 +1,13 @@
+{
+  "goal_completion_proven": false,
+  "execution_complete": true,
+  "final_global_minimum_identified": false,
+  "observed_final_fold_set_mean_jaccard": 0.25,
+  "no_selection_retraining_uncertainty_estimated": true,
+  "no_new_model_or_threshold_or_prediction": true,
+  "original_protocol_and_test_seal_unchanged": true,
+  "source_sha256": "dc8f2951210832a951b79f44d0e60db9310ac4137b199543df593197668bbf59",
+  "prior_seal_sha256": "d43c3fbcef6609cf35fde6095f2dface391dd27a6b89d33fee485cbdbc4e94bf",
+  "metric_artifact_sha256": "0c75f17fc1ce4b5ebd12ec5372e00d558a06ef2b48c6409d8e774fbd9593d90a",
+  "status": "EXECUTION_COMPLETE_SCIENTIFIC_MINIMUM_AND_STABLE_M8_INCREMENT_NOT_ESTABLISHED"
+}

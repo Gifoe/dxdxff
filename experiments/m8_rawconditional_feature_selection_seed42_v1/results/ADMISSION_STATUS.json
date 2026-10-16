@@ -1,0 +1,17 @@
+{
+  "actual_role_partitions": 20,
+  "exact_ridge_synthetic_tests": 2,
+  "no_new_training_or_prediction_in_this_admission": true,
+  "original_sources_and_all20_partitions_bound": true,
+  "parent_Outer_seal_unchanged": true,
+  "source": {
+    "PROTOCOL_LOCK.json": "3297f6b564ca6e9072b31b0a8f460b02f01ed34fd0ef1c76082e571966c697df",
+    "admit.py": "44535bac87f790a1c81381c107d322169b2fc868044f05ee336270cb9c2f2711",
+    "conditional_io.py": "853a816160a72f020231e3d867547a7822925ba5b017e3902b48190555f6a43c",
+    "conditional_ridge.py": "77979ea2364219f2b9d2787a6d968e0006eedac04a150b05b7c9872e324915ac",
+    "prepare_encoders.py": "da94882db128fcacd55cea251a3141a95e28b55510065f173431a9b6a9afc3b8",
+    "select_conditional.py": "b3eea616f677f6ef2e3a638d2fcc1d84fca1d6430e74dc6259905189b8c6ec9b",
+    "test_conditional_ridge.py": "0f4d8966f52af79aabee86857d525116ed7f694c4d22180294be8728138205a6"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,28 @@
+{
+  "study": "Internal-only Raw-conditional physiological discovery, seed42",
+  "parent_study_commit": "1c807db6a331f3bc1056b8478d181a080d16f2ea",
+  "rationale": "The already legal Development results show that a physiology-only LR preference does not establish complementarity to Raw or transfer to nonlinear heads. This separate study conditions selection on strictly cross-fitted Raw representations. It does not change v2 or select from its Outer scores.",
+  "cohort": {"patients": 80, "channels": 7635, "seizures": 256, "valid_channel_windows": 1471965},
+  "data": "Exact existing32-group pool and original own-FIT patients only. No new extraction or unsupported low-frequency data. Original validation and Outer excluded from every fit/calibration/choice/assessment in this study.",
+  "partitions": "Reuse the20 original v2 screen/final-path patient partitions byte-for-byte:15 assessment paths plus5 full-ownFIT paths. Four roles remain disjoint. Never use a fullFIT-trained encoder on inner assessment patients as if cross-fitted.",
+  "raw_encoder": "20 scratch Raw-only Concat encoders, same source architecture/seed42+1009fold/FP32/TF32off/optimizer/loss/budgets as v2. Each uses only its selection-training patients for optimization and calibration patients for checkpoint/threshold choice. Feature-choice and assessment labels never train/select the encoder. No v2 trained weights reused.",
+  "raw_context": "Frozen encoder produces both original0to20 and late-pool-extended0to30 96D patient-relative summaries, concatenated192D. Same CNN state; exact source support/masks. Conditioning includes the physiological summary's longer post-reference support, not a deliberately weaker information-limited Raw baseline.",
+  "screen": {
+    "model": "Weighted ridge least-squares binary target2EZminus1, fixed alpha1 and unpenalized intercept. Condition on all192 Raw coordinates; add selected2k physiological DELTA mean/SD coordinates. Own-selection-training imputation/scaling only, original unlabeled PatientZ for physiology.",
+    "implementation": "Exact block Schur complement of full weighted ridge solve, not a low-rank approximation. Admission requires independent sklearn/direct-solve parity for scores and threshold decisions. Raw Gram is reused for efficiency.",
+    "weights": "Original patient-equal inverse-class weights normalized to mean1. Bootstrap diagnostics multiply these fixed base weights by sampled patient multiplicities; preprocessing and encoder remain fixed in those diagnostics.",
+    "probability": "Fixed sigmoid of ridge score; original calibration-only0to1 step0.005 threshold/tie rule. No outcome-fitted temperature.",
+    "cardinalities": [0,1,2,3,4,5,6,7,8,9],
+    "feature_choice": "Fixed greedy utility0.25 each AUROC/AP/MacroF1/EZF1 on feature-choice patients. k0 is Raw-only and can win. No hyperparameter search.",
+    "assessment": "For each k, refit ridge on selection-training plus feature-choice, calibrate only calibration, evaluate untouched assessment. Raw encoder stays selection-training-only. Also assess exact old7 group set and k0.",
+    "choice_of_k": "OwnFIT assessment utility minus0.1 source utility sampleSD; smallest k within0.005 of maximum including0. No global crossfold consensus applied to patients.",
+    "replacements": "For each final ownFIT subset, fixed-seed randomA/B and best equal-k single swap on the same legal choice split. k0 replacement/randoms are exact aliases, not extra evidence.",
+    "stability": "15 assessment paths; additionally10 fixed-seed patient-weight bootstrap re-selections on each of5 final paths at its chosen k. Encoders/preprocessing/calibration/choice data held fixed in this diagnostic, not a claim of full training uncertainty. Bootstrap samples never include assessment/validation/Outer patients."
+  },
+  "budget": "At most20 neural encoder fits (max600 epochs, original early stop),20 greedy paths plus at most50 weight-perturbation paths; exact closed-form small-block screening. No new full M8/Concat candidate fits or Outer inference in this registration.",
+  "metrics": ["auroc","auprc","macro_f1","f1","nez_f1","accuracy","mrr","hit_at_1","ez_fraction_bias"],
+  "report": "All k0to9 results, original7 controls, all selections/frequencies/source/fold/coverage and paired patient-ID cluster10000-draw uncertainty. Selection-conditioned, overlapping FIT, one encoder training seed and heavily reused project cohort limitations explicit. Do not claim a new final clinical model or independent validation.",
+  "decision": "Report whether a stable conditional subset is supported. A zero-feature or unstable result is valid. No automatic rescue or extension of the feature universe. A later model-family-matched neural confirmation, if warranted by this legal internal evidence, requires its own prospective protocol before any fit. No automatic new Outer.",
+  "immutability": "Freeze protocol, code, original-source hashes, pool and exact role partitions before training. Existing v2 source/models/thresholds/private outputs never overwritten. Preserve every checkpoint and log; retry engineering failures only by exact checkpoint resume.",
+  "privacy": "Only code and anonymous aggregate audits/results uploaded. All raw, features/embeddings, identifiers, label vectors, weights, scalers, patient rows and logs stay on server."
+}

@@ -1,0 +1,6 @@
+*.py -text
+*.json -text
+*.csv -text
+*.md text eol=lf
+.gitattributes text eol=lf
+* whitespace=cr-at-eol

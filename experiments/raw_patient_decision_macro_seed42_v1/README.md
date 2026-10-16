@@ -35,5 +35,16 @@ Public delivery is limited to code, hashes, anonymous aggregate results and
 technical reports. Raw data, identities, truth, checkpoints, individual logits,
 decisions, caches and runtime logs stay on the trusted server.
 
-Registration status: implementation prepared; no new experiment result is
-claimed by this document. Actual results will be added only after verification.
+Execution is complete and independently verified: 120 internal cells, 45 final
+cells, nine reported procedures, all original 80 patients and valid Raw windows.
+**No procedure exceeded patient-equal Macro-F1 0.65.** Highest nominal Outer
+point: 0.633879; legal ownFIT-selected policy: 0.628030. Neither replaces the
+reference via best-Outer selection. See [RUN_REPORT.md](RUN_REPORT.md),
+[all metrics](results/final_stage_v1/OUTER_PATIENT_MEAN.csv) and
+[paired CIs](results/final_stage_v1/OUTER_PAIRED_CI.csv).
+
+Final reproduction uses `run_final_execution_v2.ps1`; this execution-only
+extension invokes the unchanged scientific stages and corrected reporting
+verifier. The original frozen verifier and failed log are preserved. The repair
+changes no model/configuration/prediction and repeats no inference. Public
+artifacts can be checked with `python verify_public.py` without private data.

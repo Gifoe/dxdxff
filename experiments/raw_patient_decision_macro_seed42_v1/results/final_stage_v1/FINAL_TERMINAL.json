@@ -1,0 +1,32 @@
+{
+  "all_predeclared_procedures_reported": true,
+  "goal_point_established": false,
+  "independent_confirmation": false,
+  "neural_updates": 0,
+  "outer_oracle": false,
+  "patient_equal_macro_f1": {
+    "NATIVE__MARGIN_GRID": 0.6300707489266025,
+    "NATIVE__ORIGINAL": 0.6304930529317453,
+    "NATIVE__PATIENT_Z": 0.6268111312323976,
+    "NATIVE__TOP_FRACTION": 0.621461988116953,
+    "PRECOMPAND_RESIDUAL__MARGIN_GRID": 0.6335816667052794,
+    "PRECOMPAND_RESIDUAL__ORIGINAL": 0.6314324049383006,
+    "PRECOMPAND_RESIDUAL__PATIENT_Z": 0.6338794718916507,
+    "PRECOMPAND_RESIDUAL__TOP_FRACTION": 0.6277293252886971,
+    "SELECTED": 0.6280297919345083
+  },
+  "point_over_065": {
+    "NATIVE__MARGIN_GRID": false,
+    "NATIVE__ORIGINAL": false,
+    "NATIVE__PATIENT_Z": false,
+    "NATIVE__TOP_FRACTION": false,
+    "PRECOMPAND_RESIDUAL__MARGIN_GRID": false,
+    "PRECOMPAND_RESIDUAL__ORIGINAL": false,
+    "PRECOMPAND_RESIDUAL__PATIENT_Z": false,
+    "PRECOMPAND_RESIDUAL__TOP_FRACTION": false,
+    "SELECTED": false
+  },
+  "postOuter_tuning": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "status": "COMPLETE_NINE_RAW_DECISION_PROCEDURES"
+}

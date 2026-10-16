@@ -1,0 +1,66 @@
+{
+  "cells": 45,
+  "channels_per_procedure": 7635,
+  "fullOuter_truth_read": false,
+  "parity": [
+    {
+      "all_original_binary_decisions_exact": true,
+      "channels": 1631,
+      "fold": 1,
+      "maximum_probability_error": {
+        "NATIVE": 1.1920928955078125e-07,
+        "PRECOMPAND_RESIDUAL": 0.0
+      },
+      "patients": 16,
+      "valid_windows": 333155
+    },
+    {
+      "all_original_binary_decisions_exact": true,
+      "channels": 1498,
+      "fold": 2,
+      "maximum_probability_error": {
+        "NATIVE": 1.1920928955078125e-07,
+        "PRECOMPAND_RESIDUAL": 0.0
+      },
+      "patients": 16,
+      "valid_windows": 265639
+    },
+    {
+      "all_original_binary_decisions_exact": true,
+      "channels": 1746,
+      "fold": 3,
+      "maximum_probability_error": {
+        "NATIVE": 1.1920928955078125e-07,
+        "PRECOMPAND_RESIDUAL": 0.0
+      },
+      "patients": 17,
+      "valid_windows": 375476
+    },
+    {
+      "all_original_binary_decisions_exact": true,
+      "channels": 1425,
+      "fold": 4,
+      "maximum_probability_error": {
+        "NATIVE": 1.1920928955078125e-07,
+        "PRECOMPAND_RESIDUAL": 0.0
+      },
+      "patients": 15,
+      "valid_windows": 244998
+    },
+    {
+      "all_original_binary_decisions_exact": true,
+      "channels": 1335,
+      "fold": 5,
+      "maximum_probability_error": {
+        "NATIVE": 1.1920928955078125e-07,
+        "PRECOMPAND_RESIDUAL": 0.0
+      },
+      "patients": 16,
+      "valid_windows": 252697
+    }
+  ],
+  "patients_per_procedure": 80,
+  "score_seal_sha256": "fc5ac982885e57f01d68ed64d95669dc0e5b2920b7b6bd3422a08801572d1353",
+  "status": "ALL45_FROZEN_MARGIN_DECISION_CELLS_SEALED",
+  "valid_windows": 1471965
+}

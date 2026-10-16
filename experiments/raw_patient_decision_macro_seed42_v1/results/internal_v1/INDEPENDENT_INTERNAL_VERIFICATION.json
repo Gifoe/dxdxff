@@ -1,0 +1,253 @@
+{
+  "checks": [
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 1,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 1,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 1,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 1,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 1,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 1,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 2,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 2,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 2,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 2,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 2,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 2,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 3,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 3,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 3,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 3,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 3,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 3,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 4,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 4,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 4,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 4,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 4,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 4,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 5,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 5,
+      "original_binary_replay_exact": true,
+      "screen": 1
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 5,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 5,
+      "original_binary_replay_exact": true,
+      "screen": 2
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "NATIVE",
+      "fold": 5,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    },
+    {
+      "CAL_refit_identical": true,
+      "HELD_scores_exact": true,
+      "body": "PRECOMPAND_RESIDUAL",
+      "fold": 5,
+      "original_binary_replay_exact": true,
+      "screen": 3
+    }
+  ],
+  "independent_sklearn_metrics": true,
+  "maximum_metric_error": 0.0,
+  "new_Outer_passes": 0,
+  "original_Macro_reproduced_exactly": true,
+  "ownFIT_selection_sha256": "1dcdd3bd8555786c67b5c452d9e260da07fb869d38955eeb7c88ab4f4841cbdf",
+  "patient_metric_rows": 2040,
+  "ranking_invariant_within_body": true,
+  "selection_uses_ownFIT_only": true,
+  "status": "PASS"
+}

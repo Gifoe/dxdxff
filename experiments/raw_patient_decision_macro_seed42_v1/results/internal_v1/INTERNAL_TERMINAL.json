@@ -1,0 +1,12 @@
+{
+  "goal_established": false,
+  "held_appearances_per_procedure": 255,
+  "independent_confirmation": false,
+  "logical_cells": 120,
+  "neural_fits": 0,
+  "oracle_is_non_deployable_not_goal_evidence": true,
+  "original_Development_Outer_used": false,
+  "scalar_fits": 90,
+  "status": "COMPLETE_VERIFIED_PATIENT_DECODERS_INTERNAL",
+  "unique_HELD_patients": 79
+}

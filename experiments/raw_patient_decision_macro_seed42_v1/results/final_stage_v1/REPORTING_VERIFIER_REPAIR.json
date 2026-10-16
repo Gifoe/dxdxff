@@ -1,0 +1,11 @@
+{
+  "model_config_score_threshold_changes": 0,
+  "new_training_or_inference": 0,
+  "original_bound_sources_unchanged": true,
+  "original_issue": "Verifier expected y in identity_and_banks(labels=False); KeyError before config replay.",
+  "original_logs_preserved": true,
+  "original_verifier_sha256": "1915ba9f90e7403e28b8cf58926dbbf7117373e23868f3fabf4e6da384dadc76",
+  "repair": "After existing full-score-seal gate, map already opened truth archive to original CAL bank archive indices.",
+  "status": "PASS",
+  "wrapper_sha256": "eef9bad23c1176e9359a072f3ae115cf836dae9297c18837493c4b491019a2d5"
+}

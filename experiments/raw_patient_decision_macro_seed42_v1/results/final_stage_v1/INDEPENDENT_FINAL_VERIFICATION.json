@@ -1,0 +1,84 @@
+{
+  "all45_score_cells_before_full_Outer_truth": true,
+  "all_original_binary_metrics_reproduced": true,
+  "channels_per_procedure": 7635,
+  "checks": [
+    {
+      "body": "NATIVE",
+      "body_matrix_hashes_identical": true,
+      "fold": 1,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "PRECOMPAND_RESIDUAL",
+      "body_matrix_hashes_identical": true,
+      "fold": 1,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "NATIVE",
+      "body_matrix_hashes_identical": true,
+      "fold": 2,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "PRECOMPAND_RESIDUAL",
+      "body_matrix_hashes_identical": true,
+      "fold": 2,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "NATIVE",
+      "body_matrix_hashes_identical": true,
+      "fold": 3,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "PRECOMPAND_RESIDUAL",
+      "body_matrix_hashes_identical": true,
+      "fold": 3,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "NATIVE",
+      "body_matrix_hashes_identical": true,
+      "fold": 4,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "PRECOMPAND_RESIDUAL",
+      "body_matrix_hashes_identical": true,
+      "fold": 4,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "NATIVE",
+      "body_matrix_hashes_identical": true,
+      "fold": 5,
+      "independent_Development_refit_identical": true
+    },
+    {
+      "body": "PRECOMPAND_RESIDUAL",
+      "body_matrix_hashes_identical": true,
+      "fold": 5,
+      "independent_Development_refit_identical": true
+    }
+  ],
+  "decision_freeze_sha256": "29164b7b023595edfc270d1bf820a66069d61d2b300e934806c196f6528149f0",
+  "goal_point_established": false,
+  "independent_confirmation": false,
+  "independent_paired_CI_checks": 99,
+  "logical_cells": 45,
+  "maximum_metric_difference": 0.0,
+  "no_training_or_inference_in_verifier": true,
+  "patient_rows": 720,
+  "patients_per_procedure": 80,
+  "procedures": 9,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "fc5ac982885e57f01d68ed64d95669dc0e5b2920b7b6bd3422a08801572d1353",
+  "selected_aliases_exact": true,
+  "status": "PASS",
+  "unbounded_margin_metrics_independently_recomputed": true,
+  "valid_raw250_windows": 1471965,
+  "within_body_rankings_invariant": true
+}

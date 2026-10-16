@@ -1,0 +1,2 @@
+# Preserve published/frozen source and aggregate bytes for SHA256 replay.
+* -text whitespace=cr-at-eol

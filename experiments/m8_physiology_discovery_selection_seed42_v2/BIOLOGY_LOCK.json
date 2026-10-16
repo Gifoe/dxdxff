@@ -1,0 +1,11 @@
+{
+  "primary_cohort": "Original fold1 FIT only, unique patients; all other outerFIT cohorts are overlapping sensitivity sets, not independent replication",
+  "phases": ["pre", "early0to8", "late8to20", "early_minus_pre", "late_minus_pre"],
+  "effect": "Signed rank-biserial EZ-vs-NEZ of per-channel equal-available-seizure phase means; post-minus-pre is within-channel before between-class ranking. Finite classes required; no missing-value fabricated zero.",
+  "interval": "10000 seed42 patient-cluster percentile95% mean-effect intervals; patient is replicate, channels/seizures/windows correlated",
+  "test": "Two-sided Wilcoxon signed-rank, zero_method=wilcox, method=auto; all-zero effects p1; BH across all32x5 primary effects. Source/otherfold descriptive CIs, no independent replication claim.",
+  "cross_seizure": "For each patient with >=2 finite nonzero per-seizure effects, majority sign fraction; retain zero-run counts separately. Patient aggregate medians and denominators, not individual identities.",
+  "operational_reproducibility_rule": "Primary BHq<0.05 and CI excludes0; >=60percent patients share mean direction; >=3 source groups with >=5 finite patients each share direction; >=10 repeat-seizure patients and median within-patient sign agreement>=0.7. Failure is insufficient stability evidence, not biological ineffectiveness. This flag never selects features or changes models.",
+  "trajectory": "Prespecified display of line_length_per_sec,partial_high_gamma_80_125,spectral_entropy_10_125,normalized_line_length,clipped_excess_kurtosis,rebuilt_strength_norm. Full32 supplied. Nonlearned nearest2-second cache-relative display bins from-28to18, tolerance1.01seconds; native actualtime remains authoritative for phase masks. Effects averaged within patient before across-patient intervals.",
+  "clinical_limits": "EZ/NEZ are stored project annotations, not surgical proof of epileptogenic tissue. Cache-relative pre/post times not independently proven clinical onset; acquisition/filter provenance remains qualified. No source/case exclusion by observed effects."
+}

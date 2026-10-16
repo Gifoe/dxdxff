@@ -1,0 +1,10 @@
+{
+  "family_parameters": {"D1": 6337, "Concat": 12529, "RawOnlyMatchedConcat": 12529, "M8_total": 16618, "M8_trainable": 10281, "Gate32": 1848},
+  "constant_global_slots": "32 group identities,64 mean/SD inputs; off groups exactly0 after common originalFIT preprocessing. No greedy-path slot permutation. NativeLN64 elementwise_affineFalse is a readout change versus legacy88, mandatory samewidthOLD7 comparisons.",
+  "D1_trainer": "Unmodified originalSourceA0 trainer with SourceA0 factory replaced only by FeatureHead64. lr0.001,wd0.0001,NEZpositiveweightedBCE,patientupdates,max30/min6/patience6,clip1,sourcepenalty0,original validationcheckpointthreshold rules. PROTOCOL optimization lr0.0003/wd0.001 belongs to Raw/Concat clause, not this originalD1 trainer.",
+  "Raw_trainer": "OriginalP3objective0.75weightedBCE+0.25patientsoftMacroF1; copied loop for both tuple-returningM8/Concat,AdamW0.0003/wd0.001/clip1,max30/min6/patience6; same perpatientorder andNEZthreshold rules,FP32 TF32off. M8D1frozen,ConcatnoD1. RNGrestore engineering convertsUint8state toCPU preserving checkpointresume.",
+  "initialization": "Original scratch discardedCompactDelta+MorphCorrection constructor matchesCNNandold7Gateinitializers; no trainedD1loaded into newmodels. SameglobalFeatureHead64seed acrossrecipes/fold. Gate32tail uniformoriginal7scale,first7prefixcopied,originalzero-lastGate. Concat160head independentfoldseed+170003,notzerooutput.",
+  "missing_graph_values": "Only mathematicallyundefined rebuilt eigenspace values may beNaN. Summary FITmean imputer; Gate missingwindowDELTA→0 baseline after preserving raw/masks, no patient/channel/window exclusion. Entire feature requires preregisteredfinite/nonconstant eligibility. Explicit finite counts remain reported,not represented as measuredzero.",
+  "screening_decisions_immutable": true,
+  "state": "Frozen before first new neural training or Development outcome; source hashes additionally bind actual run"
+}

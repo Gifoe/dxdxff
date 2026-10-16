@@ -60,3 +60,49 @@ and resume the same frozen run under a new RunTag. Never duplicate a live worker
 Only source and compact anonymous executed summaries are published; individual
 identities, waveforms, normalization coefficients, weights and scores stay on
 the trusted server. Unrun cells are never filled or represented as results.
+
+## Completed internal results
+
+The study completed **53 cells / 773 epochs**, including the45 balanced first-
+path cells and8 registered additional-path cells in two original FITs. The
+independent reconstruction checked908 private patient result rows and replayed
+every calibration score with maximum error0. The first-path comparison has86
+patient appearances per arm, involving59 unique held patients. New Outer
+passes=0. Frozen v2 scientific inputs/source and the protected parent test seal
+remain unchanged.
+
+The highest descriptive candidate EZ-F1 was0.404191, versus C0's0.395678;
+its paired gain0.008513 had95% interval[-0.016941,0.035089]. Additional raced
+paths gave paired EZ-F1 gain0.001221[-0.032062,0.036047]. These are internal
+selection-conditioned results, not evidence that the original>0.65 goal was
+reached. See [REPORT.md](REPORT.md) for all nine metrics/arms, end-to-end
+component contrasts, source/fold summaries, joint normalization-by-encoder
+interaction, and the explicitly non-deployable oracle-threshold diagnostic.
+
+### Reporting reproduction
+
+After the original independent internal terminal, trusted-server reporting runs:
+
+```powershell
+E:\Anaconda\python.exe D:\raw_information_retention_internal_seed42_v1\finalize_reporting.py
+E:\Anaconda\python.exe D:\raw_information_retention_internal_seed42_v1\diagnose_threshold_ceiling.py
+```
+
+These only aggregate already saved scores. They neither fit models nor change
+thresholds. The second command adds a retrospective, label-aware threshold
+ceiling diagnostic, not a legal model result or original preregistered endpoint.
+`PUBLIC_EXPORT_MANIFEST.json` allowlists21 compact aggregate artifacts. Preserve
+existing local files when transferring; verify identical hashes and skip them,
+never overwrite an existing file merely to repeat a transfer.
+
+With those anonymous artifacts under `results/deterministic_execution_v2`:
+
+```powershell
+python make_report.py --results results/deterministic_execution_v2 --output REPORT.md
+python plot_results.py --results results/deterministic_execution_v2 --output figures
+```
+
+The plotting source produces editable SVG/PDF and600dpi PNG/TIFF. The released
+figure QA records actual visual inspection; a fresh render returns its QA to
+pending until inspected. Input/admission failures remain in the technical
+appendix rather than being presented as classification performance.

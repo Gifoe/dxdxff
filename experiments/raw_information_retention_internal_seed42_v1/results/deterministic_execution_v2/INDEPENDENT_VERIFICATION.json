@@ -1,0 +1,386 @@
+{
+  "all_saved_score_metrics_recomputed": true,
+  "calibration_replay_max_error": 0.0,
+  "cells": 53,
+  "checks": [
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "arm": "C1_PRE_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 18
+    },
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 23
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 29
+    },
+    {
+      "arm": "DROP_PRE_REFERENCE",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 12
+    },
+    {
+      "arm": "DROP_TWO_PHASES",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "DROP_SEIZURE_SD",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "DROP_PATIENT_Z",
+      "cal_logit_max_error": 0.0,
+      "fold": 1,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 8
+    },
+    {
+      "arm": "C1_PRE_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 9
+    },
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 6
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 5
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "arm": "DROP_PRE_REFERENCE",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "DROP_TWO_PHASES",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 6
+    },
+    {
+      "arm": "DROP_SEIZURE_SD",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 19
+    },
+    {
+      "arm": "DROP_PATIENT_Z",
+      "cal_logit_max_error": 0.0,
+      "fold": 2,
+      "screen": 1,
+      "selected_epoch": 7
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 9
+    },
+    {
+      "arm": "C1_PRE_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 25
+    },
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 16
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 18
+    },
+    {
+      "arm": "DROP_PRE_REFERENCE",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "arm": "DROP_TWO_PHASES",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "arm": "DROP_SEIZURE_SD",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "arm": "DROP_PATIENT_Z",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 1,
+      "selected_epoch": 15
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 2,
+      "selected_epoch": 10
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 2,
+      "selected_epoch": 5
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 3,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 3,
+      "screen": 3,
+      "selected_epoch": 7
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "arm": "C1_PRE_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 8
+    },
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 5
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 9
+    },
+    {
+      "arm": "DROP_PRE_REFERENCE",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 6
+    },
+    {
+      "arm": "DROP_TWO_PHASES",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 20
+    },
+    {
+      "arm": "DROP_SEIZURE_SD",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 9
+    },
+    {
+      "arm": "DROP_PATIENT_Z",
+      "cal_logit_max_error": 0.0,
+      "fold": 4,
+      "screen": 1,
+      "selected_epoch": 6
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "C1_PRE_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 6
+    },
+    {
+      "arm": "C2_WINDOW_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 11
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 22
+    },
+    {
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 15
+    },
+    {
+      "arm": "DROP_PRE_REFERENCE",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 19
+    },
+    {
+      "arm": "DROP_TWO_PHASES",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 7
+    },
+    {
+      "arm": "DROP_SEIZURE_SD",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "DROP_PATIENT_Z",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 1,
+      "selected_epoch": 5
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 2,
+      "selected_epoch": 9
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 2,
+      "selected_epoch": 14
+    },
+    {
+      "arm": "C0_WINDOW_SHORT",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 3,
+      "selected_epoch": 1
+    },
+    {
+      "arm": "C3_PRE_LONG",
+      "cal_logit_max_error": 0.0,
+      "fold": 5,
+      "screen": 3,
+      "selected_epoch": 5
+    }
+  ],
+  "first_path_logical_patients_per_arm": 86,
+  "first_path_unique_patients": 59,
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "original_Development_and_Outer_unused": true,
+  "patient_rows": 908,
+  "private_rows_not_transferred": true,
+  "protected_previous_study_unchanged": true,
+  "status": "PASS"
+}

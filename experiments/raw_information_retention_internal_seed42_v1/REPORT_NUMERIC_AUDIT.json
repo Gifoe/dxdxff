@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "source": "independently_reconstructed_anonymous_internal_aggregates",
+  "arms": 9,
+  "new_outer_passes": 0,
+  "target_established": false,
+  "no_private_inputs": true,
+  "main_vs_interval_mean_tolerance": 1e-12,
+  "component_interval_direction_reversed_with_endpoints": true
+}

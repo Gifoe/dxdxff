@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "export_scope": "explicit_anonymous_aggregate_allowlist",
+  "executed_cells": 53,
+  "new_Outer_passes": 0,
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "private_files_exported": 0,
+  "files": [
+    {
+      "file": "RUN_STATUS.json",
+      "sha256": "58fe139d8df4b266bebbd6b5c42dcc0621470c0ae7a04cd955303201c6bbb9d7",
+      "bytes": 365,
+      "aggregate_rows": null
+    },
+    {
+      "file": "INTERNAL_TERMINAL.json",
+      "sha256": "aadf0fc808e8386584ec9f619525c0b90b455523c4560c31dde759fcc50e2108",
+      "bytes": 315,
+      "aggregate_rows": null
+    },
+    {
+      "file": "INDEPENDENT_VERIFICATION.json",
+      "sha256": "99c854100b0b7b39f332f541697b796f64080fbc5410d971ee03911c7aca7144",
+      "bytes": 8321,
+      "aggregate_rows": null
+    },
+    {
+      "file": "INTERNAL_CELL_RESULTS.csv",
+      "sha256": "bed6bbeef9bf6aa8038c2571c9305c886630f3942e84f2dd5f1c732dc0f798bd",
+      "bytes": 19537,
+      "aggregate_rows": 53
+    },
+    {
+      "file": "RACING_DECISIONS.json",
+      "sha256": "ac3219f0fe7bc85925dbde9cb01412cb29f06102fd53175605d1798cf4ba9d9e",
+      "bytes": 1434,
+      "aggregate_rows": null
+    },
+    {
+      "file": "FIRST_PATH_MAIN_RESULTS.csv",
+      "sha256": "6722f4d499982478adb2cca8b6abaad11687f7f01f865c3711ebb92108d8e05a",
+      "bytes": 1770,
+      "aggregate_rows": 9
+    },
+    {
+      "file": "FIRST_PATH_FOLD_RESULTS.csv",
+      "sha256": "3bc9241f9c0f15e3ae7851baf3e8da9a80df7b4346f9276b10bc635b4aa43f34",
+      "bytes": 8675,
+      "aggregate_rows": 45
+    },
+    {
+      "file": "FIRST_PATH_SOURCE_RESULTS.csv",
+      "sha256": "19db1e3e71777813c02f28af795f17012880ca5e47791fadc19cd4e1123791de",
+      "bytes": 7371,
+      "aggregate_rows": 36
+    },
+    {
+      "file": "FIRST_PATH_ABSOLUTE_INTERVALS.csv",
+      "sha256": "01ba5665990ce15163d335831ae309cf8eb50fb9dc07b4b4889687302836575d",
+      "bytes": 12817,
+      "aggregate_rows": 81
+    },
+    {
+      "file": "FIRST_PATH_PAIRED_INTERVALS.csv",
+      "sha256": "7c65885ec1445990693debc920ca0cd06f9d8bd2a2d8b6b3b2cb1ffab210dee0",
+      "bytes": 17696,
+      "aggregate_rows": 99
+    },
+    {
+      "file": "ADDITIONAL_PATH_RESULTS.csv",
+      "sha256": "4dd2948a5254483b6baf8b38c3d601448f9e49e520fb0f65feb8a3e7fe22540f",
+      "bytes": 1627,
+      "aggregate_rows": 8
+    },
+    {
+      "file": "INPUT_ADMISSION.json",
+      "sha256": "0bce6c0f0853a7b6d2fbc6ec4f4668353809cfbb89a3c7b5eeaf1d1ef9e5adf5",
+      "bytes": 790,
+      "aggregate_rows": null
+    },
+    {
+      "file": "GRADIENT_ADMISSION.json",
+      "sha256": "8369e370404d185fd879c4b0296c191c3fc607cbeca978c63c90d372edefae5e",
+      "bytes": 3867,
+      "aggregate_rows": null
+    },
+    {
+      "file": "EXECUTION_SOURCE_ADMISSION.json",
+      "sha256": "dc1c2b1f0f696d3352fe4bd2e0da4311ef16ba9f8ce5bd7e8f6a0d375bd4c342",
+      "bytes": 2429,
+      "aggregate_rows": null
+    },
+    {
+      "file": "NORMALIZATION_INPUT_AUDIT.csv",
+      "sha256": "056e835f832d855c1795c14d779039d8d048a23da5c35cef79029e46d4375a9c",
+      "bytes": 2574,
+      "aggregate_rows": 5
+    },
+    {
+      "file": "RACED_PATH_PAIRED_INTERVALS.csv",
+      "sha256": "2bab3a99b8e7b07a20a0743c446230c37ea87f0b1b0824187b7ba8b5926a54cc",
+      "bytes": 6013,
+      "aggregate_rows": 27
+    },
+    {
+      "file": "RACED_PATH_SUMMARY_AUDIT.json",
+      "sha256": "2a35ca2a5d63ef9d42575351060af262c83bc37931f31da5957cf1119c3e475b",
+      "bytes": 689,
+      "aggregate_rows": null
+    },
+    {
+      "file": "NORMALIZATION_ENCODER_INTERACTION.csv",
+      "sha256": "ba3ec6aee45db613bb1b2538088ef2518947899924efe37665cfc16f8f417571",
+      "bytes": 1406,
+      "aggregate_rows": 9
+    },
+    {
+      "file": "REPORTING_FINALIZATION_AUDIT.json",
+      "sha256": "bd642e848e57846cf1ae8c97ab3bb7c83ad6498417cf446244dcae073e3685c7",
+      "bytes": 678,
+      "aggregate_rows": null
+    },
+    {
+      "file": "INTERNAL_ORACLE_THRESHOLD_DIAGNOSTIC.csv",
+      "sha256": "c2bc08f88176c20f16fcd3f7ef493ed291f41b21d6666f68ec221a3348fcfd53",
+      "bytes": 4507,
+      "aggregate_rows": 27
+    },
+    {
+      "file": "ORACLE_DIAGNOSTIC_AUDIT.json",
+      "sha256": "f5ced6a38ef4297c7a58ded8d6b910cb6d2b06654df1c5875b2cfcfc4de099b6",
+      "bytes": 754,
+      "aggregate_rows": null
+    }
+  ]
+}

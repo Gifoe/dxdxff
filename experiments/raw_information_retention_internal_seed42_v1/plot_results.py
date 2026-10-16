@@ -22,6 +22,7 @@ mpl.rcParams.update({
     'font.family': 'sans-serif', 'font.sans-serif': ['Arial', 'DejaVu Sans'],
     'font.size': 7, 'axes.labelsize': 7, 'xtick.labelsize': 6.5,
     'ytick.labelsize': 6.5, 'legend.fontsize': 6.5,
+    'legend.frameon': False,
     'axes.spines.top': False, 'axes.spines.right': False,
     'axes.linewidth': .7, 'svg.fonttype': 'none', 'pdf.fonttype': 42,
     'savefig.facecolor': 'white',
@@ -78,7 +79,7 @@ def main(root, out):
     axes[1].set_yticklabels([])
     axes[0].set_xlabel('Patient EZ-F1')
     axes[1].set_xlabel('Patient ranking performance')
-    axes[1].legend(loc='lower right')
+    axes[1].legend(loc='lower left')
     axes[0].set_title('Decision performance', loc='left', fontsize=8)
     axes[1].set_title('Ranking performance', loc='left', fontsize=8)
     letter(axes[0], 'a'); letter(axes[1], 'b')

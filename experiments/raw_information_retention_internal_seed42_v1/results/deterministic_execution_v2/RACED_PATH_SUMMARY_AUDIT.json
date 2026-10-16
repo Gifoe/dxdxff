@@ -1,0 +1,14 @@
+{
+  "advanced_original_FITs": 2,
+  "executed_training_cells_unchanged": 53,
+  "first_path_selection_scores_excluded": true,
+  "independent_replication": false,
+  "individual_rows_exported": false,
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "interpretation": "Descriptive paired uncertainty for registered additional paths; overlapping patients/roles and selection condition prevent independent confirmation.",
+  "new_score_inferences": 0,
+  "repeated_patient_IDs_carried_together": true,
+  "rows": 27,
+  "source_private_table_sha256": "7d8e0d34375680ebfee9f92c3e5334ab4f845c65c6182903c1ae7a638c3bd8d9",
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "actual_cells": 53,
+  "epochs": 773,
+  "inner_candidate_selection_only": true,
+  "maximum_cells": 65,
+  "no_original_Development_or_Outer_access": true,
+  "seal_sha256": "657ec102ca94cfc339afbd110197afbc62524d648c8075632673c2673b820a4e",
+  "status": "ALL_REGISTERED_INTERNAL_CELLS_COMPLETE",
+  "target_F1_not_established_by_this_internal_study": true
+}

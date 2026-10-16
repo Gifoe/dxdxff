@@ -1,0 +1,14 @@
+{
+  "attribution": "encoder family, not isolated receptive-field change",
+  "executed_training_cells_unchanged": 53,
+  "individual_rows_exported": false,
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "interaction": "(C3_PRE_LONG-C2_WINDOW_LONG)-(C1_PRE_SHORT-C0_WINDOW_SHORT)",
+  "matched_first_path_appearances": 86,
+  "new_Outer_passes": 0,
+  "new_score_inferences": 0,
+  "source_private_table_sha256": "7d8e0d34375680ebfee9f92c3e5334ab4f845c65c6182903c1ae7a638c3bd8d9",
+  "status": "PASS",
+  "uncertainty": "joint four-arm patient-ID cluster bootstrap, not combined marginal intervals",
+  "unique_patients": 59
+}

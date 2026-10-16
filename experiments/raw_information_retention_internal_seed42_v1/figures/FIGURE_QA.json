@@ -1,0 +1,26 @@
+{
+  "status": "PASS_SOURCE_AND_VISUAL_REVIEW",
+  "visual_review": "Both actual rendered figures inspected; all arms, intervals and labels readable; legend moved away from data marks.",
+  "static_preflight": "13 PASS, 1 reviewed width-parser warning, 0 FAIL",
+  "reviewed_width_warning": "Static scanner reads 183/25.4 as 183 inches; actual figure width is 183mm, with no tight-bbox resizing.",
+  "backend": "python_matplotlib",
+  "width_mm": 183,
+  "dpi": 600,
+  "editable_vector_text": true,
+  "all_nine_arms_shown": true,
+  "all_five_fold_points_shown": true,
+  "statistical_unit": "patient_ID_cluster",
+  "interval": "10000-draw descriptive selection-conditioned percentile 95%",
+  "logical_patient_appearances_per_arm": 86,
+  "unique_patients": 59,
+  "new_outer_passes": 0,
+  "source_files": [
+    "FIRST_PATH_MAIN_RESULTS.csv",
+    "FIRST_PATH_ABSOLUTE_INTERVALS.csv",
+    "FIRST_PATH_PAIRED_INTERVALS.csv",
+    "FIRST_PATH_FOLD_RESULTS.csv"
+  ],
+  "source_data_exclusions": 0,
+  "additional_raced_paths_not_mixed_with_balanced_first_path": true,
+  "raster_transformations": "none; figures rendered directly from aggregate source tables"
+}

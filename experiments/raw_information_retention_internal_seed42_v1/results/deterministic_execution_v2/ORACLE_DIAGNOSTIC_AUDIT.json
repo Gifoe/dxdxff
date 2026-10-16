@@ -1,0 +1,15 @@
+{
+  "all_equal_score_ties_retained": true,
+  "all_nine_first_path_arms_retained": true,
+  "diagnostic_type": "retrospective internal per-patient label-aware threshold ceiling",
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "interpretation": "An optimistic finite-sample upper bound for threshold-only changes to these fixed scores, not a prediction of achievable test performance or a legal deployable threshold.",
+  "new_Outer_passes": 0,
+  "new_score_inferences": 0,
+  "new_training_cells": 0,
+  "not_a_classifier": true,
+  "not_an_original_preregistered_endpoint": true,
+  "private_rows_exported": false,
+  "scientific_selection_and_threshold_rules_unchanged": true,
+  "status": "PASS"
+}

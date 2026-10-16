@@ -1,0 +1,9 @@
+{
+  "executed_cells": 53,
+  "formal_epochs": 773,
+  "new_Outer_passes": 0,
+  "no_independent_confirmation_claim": true,
+  "previous_Outer_not_an_optimization_input": true,
+  "status": "COMPLETE_VERIFIED_INTERNAL_INFORMATION_RETENTION_STUDY",
+  "target_F1_still_requires_frozen_held_out_verification": true
+}

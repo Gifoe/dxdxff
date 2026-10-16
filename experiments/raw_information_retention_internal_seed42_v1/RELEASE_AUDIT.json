@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "anonymous_public_artifacts_verified": 21,
+  "frozen_v2_scientific_source_files_unchanged": 8,
+  "executed_cells": 53,
+  "executed_epochs": 773,
+  "reconstructed_private_patient_rows": 908,
+  "first_path_appearances_per_arm": 86,
+  "first_path_unique_patients": 59,
+  "main_vs_weighted_fold_max_error": 2.220446049250313e-16,
+  "cal_score_replay_max_error": 0.0,
+  "figure_widths_mm": [
+    182.99999983055554,
+    182.99999983055554
+  ],
+  "visual_review": "PASS",
+  "new_Outer_passes": 0,
+  "independent_confirmation_claim": false,
+  "goal_EZ_F1_greater_than_065_established": false,
+  "raw_weights_scores_identities_runtime_logs_exported": false,
+  "retrospective_oracle_diagnostic_not_a_classifier": true
+}

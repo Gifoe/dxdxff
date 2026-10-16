@@ -1,0 +1,45 @@
+{
+  "decisions": [
+    {
+      "advanced": false,
+      "chosen": "C2_WINDOW_LONG",
+      "decision_data": "own_FIT_screen1_selection_only_not_independent_confirmation",
+      "fold": 1,
+      "initial_auroc_gain": -0.015657865338443933,
+      "initial_f1_gain": -0.00642585258559375
+    },
+    {
+      "advanced": false,
+      "chosen": "C3_PRE_LONG",
+      "decision_data": "own_FIT_screen1_selection_only_not_independent_confirmation",
+      "fold": 2,
+      "initial_auroc_gain": 0.01663174470957174,
+      "initial_f1_gain": 0.019478109172151148
+    },
+    {
+      "advanced": true,
+      "chosen": "C3_PRE_LONG",
+      "decision_data": "own_FIT_screen1_selection_only_not_independent_confirmation",
+      "fold": 3,
+      "initial_auroc_gain": 0.04551394858849778,
+      "initial_f1_gain": 0.025663248735210142
+    },
+    {
+      "advanced": false,
+      "chosen": "C4_PRE_LONG_CONTEXT",
+      "decision_data": "own_FIT_screen1_selection_only_not_independent_confirmation",
+      "fold": 4,
+      "initial_auroc_gain": -0.008409093950709878,
+      "initial_f1_gain": 0.004951657982819102
+    },
+    {
+      "advanced": true,
+      "chosen": "C3_PRE_LONG",
+      "decision_data": "own_FIT_screen1_selection_only_not_independent_confirmation",
+      "fold": 5,
+      "initial_auroc_gain": 0.052775993541467,
+      "initial_f1_gain": 0.05601683898847071
+    }
+  ],
+  "status": "RACING"
+}

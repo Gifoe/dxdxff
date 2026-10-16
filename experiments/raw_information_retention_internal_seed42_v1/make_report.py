@@ -132,6 +132,18 @@ def main(root, output):
                              '标签已知的阈值上限': g.loc['oracle_f1', 'mean'],
                              '乐观上限减实际': gap['mean'],
                              '差值95%下界': gap.low, '差值95%上界': gap.high})
+    max_oracle = float(oracle[oracle.metric == 'oracle_f1']['mean'].max())
+    threshold_conclusion = ('这九组固定分数在本次内部患者上的标签已知阈值上限均值仍低于0.65，'
+                            '因此仅改变这些分数的阈值不足以在这组样本中达到目标，需改善排序表征。'
+                            if max_oracle < .65 else
+                            '阈值上限只显示有限样本中的乐观余量，尚不能据此判断可部署规则能否达到目标。')
+    race_policy = raced_intervals[(raced_intervals.scope == 'advanced_FITs_only_additional_paths') &
+                                  (raced_intervals.metric == 'f1')]
+    race_conclusion = ''
+    if len(race_policy):
+        rr = race_policy.iloc[0]
+        race_conclusion = (f"实际触发追加的FIT中，screen2/3的配对EZ-F1平均差为{rr['mean']:+.6f}，"
+                           f"区间[{rr.low:+.6f}, {rr.high:+.6f}]。")
     text = f'''# Raw信息保留与组件贡献：内部患者隔离实验
 
 ## 结论边界
@@ -146,6 +158,18 @@ def main(root, output):
 五个架构/归一化候选中的最高描述性EZ-F1为{max_row['mean']:.6f}
 （{LABELS[candidate_max]}，区间[{max_row.low:.6f}, {max_row.high:.6f}]）。
 这个全体表格最大值不是逐FIT的合法选择策略，也不是目标达成证据。
+
+## 结果判断
+
+患者上下文候选C4相对原C0的EZ-F1差为
+{paired_text('C4_PRE_LONG_CONTEXT', 'C0_WINDOW_SHORT', 'f1')}，没有提供稳定优于原模型的证据。
+它相对C3有所改善，但不能把修复较弱配置的收益等同于超过原基线。
+{race_conclusion}
+
+四项删除对照支持保留发作前潜变量参考；Patient-wise Z和分阶段池化改善了EZ-F1，
+但它们的AUROC差异没有显示同样的排序收益。跨发作SD没有显示稳定增量。
+这些结论限定于当前Raw CNN、损失、预算和内部划分，不能上升为普适生理必要性。
+保留波形相对幅度或加长CNN并未形成稳定的基线优势，也不能因此宣布生理幅度无效。
 
 ## 模型与比较问题
 
@@ -264,6 +288,7 @@ Long CNN只改变每个2秒窗口内部的编码，并未补回阶段内时间�
 {table(pd.DataFrame(oracle_table))}
 
 这一诊断只能指出现有分数中还有多少阈值层面的余量，不能把“上限超过0.65”写成目标已经达成。
+九组分数的最高上限均值为{max_oracle:.6f}。{threshold_conclusion}
 
 源表：`results/deterministic_execution_v2/FIRST_PATH_*`、`ADDITIONAL_PATH_RESULTS.csv`、
 `RACING_DECISIONS.json`及`INDEPENDENT_VERIFICATION.json`。图和所有数值由同一匿名汇总表生成。

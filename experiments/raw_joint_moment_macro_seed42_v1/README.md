@@ -44,3 +44,17 @@ Publish only source, hashes and actual anonymous aggregates. Raw, IDs,
 labels, weights, individual predictions/latents, caches and runtime logs stay
 private. Unrun results are not filled by templates or proxies. The broad
 full80 equal-patient Macro-F1>0.65 goal remains active and unachieved.
+
+## Actual execution snapshot, 2026-10-17
+
+Scientific code/protocol were pushed at `c66da777960020766ab3293362bc9b7eff01f638`
+before formal fitting. Five unique changed-path tests passed. The largest
+complete legal training patient (164channels/48,380validwindows) passed full
+backpropagation for allthree networks, with finite parameter gradients and
+nonzero CNN/head gradients. Admission made zero optimizer updates; its actual
+[aggregate artifact](results/internal_v1/ADMISSION.json) is included.
+
+At07:54Asia/Shanghai, the first complete internal fit was saved and the second
+was actively training, error log empty. This is a dated progress snapshot,
+not a claim that the full internal matrix or any new Outer is complete.
+No new performance or target achievement is claimed until actual verification.

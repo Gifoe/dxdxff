@@ -17,7 +17,11 @@ def table(frame):
     shown=frame.copy()
     for col in shown:
         if pd.api.types.is_float_dtype(shown[col]):shown[col]=shown[col].map(lambda v:f'{v:.6f}')
-    return shown.to_markdown(index=False,disable_numparse=True)
+    escape=lambda x:str(x).replace('|','\\|').replace('\n',' ')
+    lines=['| '+' | '.join(map(escape,shown.columns))+' |',
+           '| '+' | '.join(['---']*len(shown.columns))+' |']
+    lines.extend('| '+' | '.join(map(escape,row))+' |' for row in shown.itertuples(index=False,name=None))
+    return '\n'.join(lines)
 
 
 def main(root):
@@ -47,12 +51,19 @@ def main(root):
     loss_delta=float(values.loc[list(LABELS)[1],'f1']-values.loc[list(LABELS)[0],'f1'])
     pool_delta=float(values.loc[list(LABELS)[2],'f1']-values.loc[list(LABELS)[1],'f1'])
     attention_delta=float(values.loc[list(LABELS)[3],'f1']-values.loc[list(LABELS)[2],'f1'])
+    raw_pair=pd.read_csv(root/'PAIRED_INTERVALS.csv')
+    def interval(left,right,metric):
+        r=raw_pair[(raw_pair.left==left)&(raw_pair.right==right)&(raw_pair.metric==metric)].iloc[0]
+        return f"{r.delta:+.6f} [{r.low:+.6f}, {r.high:+.6f}]"
+    base=list(LABELS)[0];ez_arm=list(LABELS)[1];pool_arm=list(LABELS)[2];attention_arm=list(LABELS)[3]
+    decision_delta=float(values.loc[base+'__ALT_THRESHOLD','f1']-values.loc[base,'f1'])
+    matched_decision_delta=float(values.loc[ez_arm,'f1']-values.loc[base+'__ALT_THRESHOLD','f1'])
     report=f'''# 纯Raw潜变量组件与轻量优化：完整五折研究
 
 ## 1. 结果
 
 预先定义的目标是**患者平均EZ阳性F1＞0.65**。Development选择策略的Outer EZ-F1为
-**{selected.f1:.6f}**，患者配对抽样的绝对95%区间为**[{ci[0]:.6f}, {ci[1]:.6f}]**，
+**{selected.f1:.6f}**，患者bootstrap的95%区间为**[{ci[0]:.6f}, {ci[1]:.6f}]**，
 本轮**{target_text}目标**。Macro-F1为{selected.macro_f1:.6f}，AUROC为{selected.auroc:.6f}，AP为{selected.auprc:.6f}。
 这些指标不能互相替代，也没有按Outer挑选主模型。
 
@@ -142,6 +153,23 @@ AUROC、AP与排序分数不变；F1变化属于决策规则影响。
 {table(paired)}
 
 ## 6. 解释与边界
+
+**新增注意力没有带来可验证的增量。** A1减S1的EZ-F1配对差及95%区间为
+{interval(attention_arm,pool_arm,'f1')}。S1减B1为
+{interval(pool_arm,ez_arm,'f1')}，也没有明确支持选中池化优于原池化。
+S1相对B1的AUROC点估计下降{values.loc[ez_arm,'auroc']-values.loc[pool_arm,'auroc']:.6f}。
+因此，低成本冻结表征筛选的优势没有稳定转移到端到端定位，不能推荐注意力或所选池化取代原结构。
+
+**EZ-F1改善伴随决策权衡，而非整体定位能力同步提高。** B0同权重改用合法EZ优先阈值后，
+EZ-F1已提高{decision_delta:+.6f}，AUROC/AP/MRR/Top-1完全不变。
+B1对这个同阈值目标的B0敏感性版本仅再提高{matched_decision_delta:+.6f}的点估计。
+这不是可相加的损失因果分解，因为模型轮次选择也不同。
+Development选择策略减B0的EZ-F1为{interval('SELECTED_POLICY',base,'f1')}；
+但Macro-F1为{interval('SELECTED_POLICY',base,'macro_f1')}，
+AUROC为{interval('SELECTED_POLICY',base,'auroc')}。
+NEZ-F1为{interval('SELECTED_POLICY',base,'nez_f1')}，
+ACC为{interval('SELECTED_POLICY',base,'accuracy')}，两项下降。
+不能只报告EZ-F1的正向差而隐去非EZ识别和准确率损失。
 
 本轮将“组件是否给冻结表征增加条件信息”“内部选中的汇总能否转移到端到端训练”
 以及“Raw-only注意力是否增加最终定位能力”分开检验。最终集合由合法内部数据产生，

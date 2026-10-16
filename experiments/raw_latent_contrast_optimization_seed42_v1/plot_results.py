@@ -65,7 +65,7 @@ def factorial(root,out):
     export(fig,out/'factorial_screen')
     return dict(name='factorial_screen',width_mm=183,height_mm=140,archetype='quantitative_grid',
         source_data=['FACTORIAL_ASSESSMENT_RESULTS.csv','OWN_FIT_POOL_SELECTION.csv','FACTOR_CONDITIONAL_EFFECTS.csv'],
-        n='255 patient-fold assessment appearances,79 unique patients,20 frozen encoder paths; not independent folds',
+        n='255 patient-fold assessment appearances,79 unique patients,15 assessment encoder paths;5 additional choice-only paths are not plotted as assessment',
         intervals='Panel c: min/max over8 matched factor contexts, NOT confidence intervals',
         selection_data='All16 assessments used for own-FIT recipe choice; not unbiased final CNN evidence',
         exclusions='No factorial combinations or requested metrics omitted; distinct panels show EZ-F1 and AUROC, other metrics in source tables')
@@ -79,7 +79,10 @@ def final(root,out):
         colors=['#A7ADB4','#7FA6BC','#5C899C','#315F78','#BC8541']
         for i,model in enumerate(models):
             r=q.loc[model];ax.errorbar(r['mean'],i,xerr=[[r['mean']-r.low],[r.high-r['mean']]],fmt='o',color=colors[i],capsize=2,ms=4)
-        if metric=='f1':ax.axvline(.65,color='#A45E4B',lw=.8,ls='--',label='EZ-F1 target0.65');ax.legend(fontsize=5.5,loc='lower left')
+        if metric=='f1':
+            ax.axvline(.65,color='#A45E4B',lw=.8,ls='--')
+            ax.text(.645,.03,'Target 0.65',rotation=90,ha='right',va='bottom',color='#A45E4B',
+                    fontsize=6,transform=ax.get_xaxis_transform())
         ax.set_title(chr(97+j)+'  Patient-average '+title,fontsize=8,weight='bold',loc='left');ax.set_xlabel(title)
     ax=axes[2];q=paired[(paired.right==models[0])&(paired.metric=='f1')].set_index('left')
     for i,model in enumerate(models[1:],1):

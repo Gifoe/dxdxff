@@ -5,6 +5,19 @@ selection research. The target is **patient-average EZ-positive F1 > 0.65**.
 No result or improvement is assumed. Historical patient EZ-F1 around0.40–0.43
 does not justify promising this target; Macro-F1 is not a substitute.
 
+## Completed result
+
+All20 new training cells,224 epochs and the frozen fivefold Outer pass are
+complete. The Development-selected policy obtained patient EZ-F1 **0.444341**
+(95% patient-bootstrap interval0.396601–0.490857), Macro-F1 **0.616829**,
+AUROC **0.728786**, AP **0.540892**. **The EZ-F1>0.65 target was not met.**
+Attention did not improve on the selected-pooling model, and the selected pooling
+did not show a clear gain over original pooling under the same EZ-directed loss.
+EZ-F1 gains relative to the original-loss control include threshold/decision
+changes and accompany lower NEZ-F1/accuracy. See [REPORT.md](REPORT.md), the
+complete anonymous tables in `results/`, and editable figures in `figures/`.
+The stored stage1 status is its completion-time snapshot, not current train status.
+
 The fixed protocol is `PROTOCOL_LOCK.json`. Stage1 reuses20 genuinely
 inner-cross-fitted Raw-only encoders and compares the complete16 combinations
 of pre-onset latent subtraction, two temporal phases, between-seizure SD, and
@@ -42,6 +55,11 @@ $env:OMP_NUM_THREADS='1'; $env:MKL_NUM_THREADS='1'; $env:OPENBLAS_NUM_THREADS='1
 E:\Anaconda\python.exe D:\raw_latent_contrast_optimization_seed42_v1\run_tests_checked.py
 powershell -NoProfile -File D:\raw_latent_contrast_optimization_seed42_v1\run_checked.ps1 -RunTag 02 -StopAfter Stage1
 ```
+
+For the full registered training/evaluation path, use a fresh RunTag with
+`-StopAfter Outer`, then run `verify_results.py`. Existing complete stages and
+hash-verified private patient caches are reused; completed Outer inference is
+not repeated. `verify_stage1.py` must pass before the Outer stage.
 
 Keep the owning SSH command alive. Inspect process/log/status before any restart;
 use a new RunTag and the same verified private cache after diagnosed engineering

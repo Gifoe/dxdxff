@@ -1,0 +1,16 @@
+{
+  "actual_trained_cells": 20,
+  "bootstrap_draws": 10000,
+  "channels_per_model": 7635,
+  "freeze_sha256": "92f8d0adc186cf79dde4a5f25171ad115ae36ddc7effd1127a38df7cc60fcbc5",
+  "independent_metric_max_error": 0.0,
+  "metric_patient_rows": 720,
+  "no_post_Outer_tuning": true,
+  "patients_per_model": 80,
+  "primary_models": 5,
+  "reported_models": 9,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "da2424a9bbc5e2314f3ba15d8b68d142d1e19e2beefcaa79bfe5160809da8b19",
+  "scored_patient_cells": 320,
+  "status": "ONE_FROZEN_FIVEFOLD_OUTER_COMPLETE_VERIFIED"
+}

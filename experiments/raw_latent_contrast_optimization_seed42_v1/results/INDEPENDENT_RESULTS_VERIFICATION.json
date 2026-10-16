@@ -1,0 +1,14 @@
+{
+  "absolute_intervals": 81,
+  "all_20_model_and_score_freezes_unchanged": true,
+  "all_5_Development_policy_choices_replayed": true,
+  "bootstrap_count_matrix_max_error": 4.440892098500626e-16,
+  "draws_per_interval": 10000,
+  "independent_metric_max_error": 1.1102230246251565e-16,
+  "independently_recomputed_patient_metrics": 6480,
+  "paired_intervals": 54,
+  "patient_rows": 720,
+  "status": "PASS",
+  "threshold_sensitivities_not_used_for_Outer_selection": true,
+  "verifier_sha256": "e28683320ac77dd7129963b29cd42d4dceac4770b5e528ed359ef92e53fbbebc"
+}

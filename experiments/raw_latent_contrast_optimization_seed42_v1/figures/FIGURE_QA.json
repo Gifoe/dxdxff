@@ -1,0 +1,66 @@
+{
+  "backend": "Python_matplotlib",
+  "editable_text": true,
+  "dpi": 600,
+  "formats": [
+    "SVG",
+    "PDF",
+    "PNG",
+    "LZW_TIFF"
+  ],
+  "contracts": [
+    {
+      "name": "factorial_screen",
+      "width_mm": 183,
+      "height_mm": 140,
+      "archetype": "quantitative_grid",
+      "source_data": [
+        "FACTORIAL_ASSESSMENT_RESULTS.csv",
+        "OWN_FIT_POOL_SELECTION.csv",
+        "FACTOR_CONDITIONAL_EFFECTS.csv"
+      ],
+      "n": "255 patient-fold assessment appearances,79 unique patients,15 assessment encoder paths;5 additional choice-only paths are not plotted as assessment",
+      "intervals": "Panel c: min/max over8 matched factor contexts, NOT confidence intervals",
+      "selection_data": "All16 assessments used for own-FIT recipe choice; not unbiased final CNN evidence",
+      "exclusions": "No factorial combinations or requested metrics omitted; distinct panels show EZ-F1 and AUROC, other metrics in source tables"
+    },
+    {
+      "name": "end_to_end_results",
+      "width_mm": 183,
+      "height_mm": 83,
+      "archetype": "quantitative_grid",
+      "source_data": [
+        "ABSOLUTE_INTERVALS.csv",
+        "PAIRED_INTERVALS.csv"
+      ],
+      "n": "80 patients,7635 channels,5 held-out folds,seed42",
+      "center": "Patient-equal mean",
+      "intervals": "Unadjusted95% percentile intervals,10000 common paired patient bootstrap draws",
+      "scientific_status": "Exploratory repeated-test, not independent confirmation",
+      "exclusions": "Alternate threshold sensitivities are in tables, not substituted for primary model results"
+    }
+  ],
+  "rendered_inspection": "PASS",
+  "manual_review": [
+    {
+      "figure": "factorial_screen",
+      "png_sha256": "54d33a23b7e11fb5344715dd066d45e6d350f7d8d484f0731e99d99a6f2cb865",
+      "width_pixels": 4322,
+      "height_pixels": 3307,
+      "final_size_visual_review": "PASS",
+      "no_label_clipping": true,
+      "source_tables_checked": true,
+      "editable_SVG_text": true
+    },
+    {
+      "figure": "end_to_end_results",
+      "png_sha256": "21b7b604932b6a029d99a2fcc461e2c4eeea35f24b01ebe1608c0a49cc0738a3",
+      "width_pixels": 4322,
+      "height_pixels": 1960,
+      "final_size_visual_review": "PASS",
+      "no_label_clipping": true,
+      "source_tables_checked": true,
+      "editable_SVG_text": true
+    }
+  ]
+}

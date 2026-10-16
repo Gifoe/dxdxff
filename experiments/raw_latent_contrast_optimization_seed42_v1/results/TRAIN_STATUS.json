@@ -1,0 +1,15 @@
+{
+  "complete_cells": 20,
+  "deployment": {
+    "1": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+    "2": "S1_SELECTED_POOL_EZ_LOSS",
+    "3": "B1_ORIGINAL_POOL_EZ_LOSS",
+    "4": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+    "5": "B1_ORIGINAL_POOL_EZ_LOSS"
+  },
+  "epochs": 224,
+  "model_freeze_sha256": "ef751fbbd66dcf825f1157bc5bf029039f489647033f90368958c0063af5cc9a",
+  "no_new_Outer_access": true,
+  "status": "ALL20_RAW_MODELS_AND_DEPLOYMENT_FROZEN",
+  "total_cells": 20
+}

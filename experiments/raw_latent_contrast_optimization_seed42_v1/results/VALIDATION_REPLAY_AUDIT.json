@@ -1,0 +1,107 @@
+{
+  "cells": 20,
+  "checks": [
+    {
+      "arm": "B0_ORIGINAL_POOL_MACRO_LOSS",
+      "fold": 1,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B1_ORIGINAL_POOL_EZ_LOSS",
+      "fold": 1,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "S1_SELECTED_POOL_EZ_LOSS",
+      "fold": 1,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+      "fold": 1,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B0_ORIGINAL_POOL_MACRO_LOSS",
+      "fold": 2,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B1_ORIGINAL_POOL_EZ_LOSS",
+      "fold": 2,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "S1_SELECTED_POOL_EZ_LOSS",
+      "fold": 2,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+      "fold": 2,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B0_ORIGINAL_POOL_MACRO_LOSS",
+      "fold": 3,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B1_ORIGINAL_POOL_EZ_LOSS",
+      "fold": 3,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "S1_SELECTED_POOL_EZ_LOSS",
+      "fold": 3,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+      "fold": 3,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B0_ORIGINAL_POOL_MACRO_LOSS",
+      "fold": 4,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B1_ORIGINAL_POOL_EZ_LOSS",
+      "fold": 4,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "S1_SELECTED_POOL_EZ_LOSS",
+      "fold": 4,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+      "fold": 4,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B0_ORIGINAL_POOL_MACRO_LOSS",
+      "fold": 5,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "B1_ORIGINAL_POOL_EZ_LOSS",
+      "fold": 5,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "S1_SELECTED_POOL_EZ_LOSS",
+      "fold": 5,
+      "maximum_logit_error": 0.0
+    },
+    {
+      "arm": "A1_SELECTED_POOL_ATTENTION_EZ_LOSS",
+      "fold": 5,
+      "maximum_logit_error": 0.0
+    }
+  ],
+  "maximum_logit_error": 0.0,
+  "status": "PASS"
+}

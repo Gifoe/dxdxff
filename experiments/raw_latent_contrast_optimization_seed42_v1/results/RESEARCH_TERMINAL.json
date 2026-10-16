@@ -1,0 +1,10 @@
+{
+  "individual_component_end_to_end_effects_not_fully_identified": true,
+  "no_positive_attention_increment_established": true,
+  "no_post_Outer_model_threshold_or_selector_changes": true,
+  "objective_achievement_not_implied_by_computational_completion": true,
+  "observed": 0.44434137292834,
+  "status": "COMPUTATION_COMPLETE_TARGET_NOT_MET",
+  "target": 0.65,
+  "target_metric": "patient_average_EZ_positive_F1"
+}

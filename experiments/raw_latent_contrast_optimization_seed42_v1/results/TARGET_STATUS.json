@@ -1,0 +1,15 @@
+{
+  "Outer_is_exploratory_repeated_test": true,
+  "interval_lower_above_target": false,
+  "metric": "patient_average_EZ_positive_F1",
+  "no_independent_clinical_confirmation": true,
+  "observed": 0.44434137292834,
+  "patient_bootstrap_95percent": [
+    0.3966014522122939,
+    0.49085690224561224
+  ],
+  "point_target_met": false,
+  "primary_model": "SELECTED_POLICY",
+  "selected_using_Development_not_Outer": true,
+  "target_greater_than": 0.65
+}

@@ -1,0 +1,11 @@
+{
+  "all_role_preprocessing_cardinality_swap_bootstrap_checks_pass": true,
+  "assessment_head_fits_replayed": 165,
+  "assessment_patient_rows": 2805,
+  "canonical_API_replay_not_independent_numerical_replication": true,
+  "independent_assessment_patient_metrics": true,
+  "maximum_choice_utility_error": 5.551115123125783e-17,
+  "search_head_evaluations_replayed": 9179,
+  "source_sha256": "6e04dacfdeb749b46f11ae2fb81ea563cde791fcc20d5ad0c435c0a5a9ce5d66",
+  "status": "PASS"
+}

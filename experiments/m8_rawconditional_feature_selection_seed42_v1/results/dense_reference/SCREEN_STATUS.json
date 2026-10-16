@@ -1,0 +1,15 @@
+{
+  "actual_ridge_fits": 9344,
+  "assessment_rows": 2805,
+  "new_neural_candidate_or_Outer_inference": false,
+  "original_validation_and_Outer_used": false,
+  "per_fold_k": {
+    "1": 1,
+    "2": 0,
+    "3": 9,
+    "4": 2,
+    "5": 1
+  },
+  "positive_minimality_or_increment_not_assumed": true,
+  "status": "COMPLETE_INTERNAL_RAW_CONDITIONAL_SCREEN"
+}

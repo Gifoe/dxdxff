@@ -1,0 +1,14 @@
+{
+  "no_Raw_encoder_retraining": true,
+  "no_head_fit_or_prediction_repeated_by_this_finalizer": true,
+  "numerical_engine": {
+    "NUMERICAL_ENGINE_AMENDMENT.json": "e11060aab079e25599b3cc9d0df3cef972ba532d43c1de6f05c4421646dc06df",
+    "canonical_ridge.py": "c26b63c84b1ce0f9e8d5d0e1306e1dc78917beb6f11b3ceb57a82eeff4928d2b",
+    "run_dense_reference.py": "b712b35b97094f8088c89502416e5dd06aaa3d0b87d49903c200ad466b937937"
+  },
+  "original_failed_screen_and_all_checkpoints_preserved": true,
+  "original_v2_Outer_seal_unchanged": true,
+  "source_sha256": "6fbab8b9d7b6a02239c5ff10887676cd9e00dbab11c12aab1362aaa30bd13e18",
+  "status": "SCREEN_RECOMPUTED_PENDING_INDEPENDENT_VERIFICATION",
+  "terminal_nested_binding_KeyError_repaired_in_metadata_only": true
+}

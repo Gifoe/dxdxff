@@ -1,0 +1,15 @@
+{
+  "backend": "Python matplotlib",
+  "figures": 2,
+  "width_mm": 183,
+  "heights_mm": [157, 80],
+  "outputs": ["editable SVG", "TrueType PDF", "600dpi PNG", "600dpi LZW TIFF"],
+  "font_floor_pt": 5.2,
+  "source_preflight": {"PASS": 13, "WARN": 1, "FAIL": 0},
+  "warning_review": "Static validator does not infer variable-based figure dimensions. Script and rendered image dimensions both resolve to183 mm, not a paper submission compliance claim.",
+  "visual_review": "Actual PNG renders inspected: all32 rows/fivefolds visible; readable panel labels; no clipped axes; source legend moved below plot to avoid overlapping pediatric contrasts.",
+  "row_exclusions": 0,
+  "source_data": "All50 path rows,160 frequency rows,9 contrast rows and4 source rows retained. All source CSVs are generated from verified anonymous aggregates.",
+  "statistical_boundaries": "Selection-conditioned ownFIT, overlapping folds, fixed-encoder/preprocessing weight perturbations, unadjusted paired intervals. Not independent confirmation or new Outer.",
+  "journal_status": "JBHI-oriented research figures, not submission-format certification"
+}

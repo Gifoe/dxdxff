@@ -67,3 +67,57 @@ train a rescued final M8. A useful conditional subset, if actually supported,
 requires a separately fixed model-family confirmation protocol. A zero-feature
 or unstable result is reported as such, not followed by unbounded search.
 The full active research goal remains unproven until sufficient evidence exists.
+
+## Executed outcome
+
+The actual conditional study is complete and independently checked at the
+patient-metric/role/selection level. See [REPORT.md](REPORT.md),
+[ENGINEERING_AUDIT.md](ENGINEERING_AUDIT.md) and
+[the project-wide synthesis](../m8_physiology_goal_evidence_audit_seed42_v1/RESEARCH_SYNTHESIS.md).
+Twenty Raw encoders completed286 epochs. The accepted full-reference screen
+contains9344 head fits, plus25 distinct final-choice control fits. The initial
+9344-head block screen remains unaccepted because its actual score gate failed.
+
+Chosen cardinalities are1,0,9,2,1; final fold-set mean Jaccard is0.0. No new
+global feature set or neural clinical improvement is declared. The positive
+conditional internal contrasts are selection-conditioned and never replace
+the original neural Outer comparison. No new Outer was run in this follow-up.
+
+### Reproduce the already completed trusted-server artifacts
+
+The original scientific files, input freezes and numerical amendment are kept
+byte-identical. `run_internal.ps1` and `run_dense_reference.ps1` document the
+historical execution, including the failed shortcut and terminal metadata
+exception. Do not launch either against an already completed experiment.
+With the original licensed private artifacts installed at their pinned runtime
+locations, use the terminal recovery/check entry:
+
+```powershell
+$env:OMP_NUM_THREADS='1'
+$env:MKL_NUM_THREADS='1'
+$env:OPENBLAS_NUM_THREADS='1'
+& 'E:\Anaconda\envs\persist_stable_251\python.exe' -u `
+  'D:\m8_rawconditional_feature_selection_seed42_v1\resume_reference_checked.py'
+```
+
+It refuses a partial screen, checks original bindings, fills missing canonical
+admission/terminal metadata and verification only when needed, then completes
+the registered choice controls without neural training. Completed scientific
+screens are not replayed as new evidence. For an explicit full9179+165-head
+verification replay, run `verify_and_report_internal.py` under the same CPU
+environment after inspecting worker state. Keep the SSH foreground owner
+alive; never create a duplicate running worker.
+
+The public-only workflow requires NumPy, pandas and matplotlib, and does not
+require identifiers, private representations or GPU data:
+
+```powershell
+python experiments/m8_rawconditional_feature_selection_seed42_v1/figures_internal.py
+python experiments/m8_rawconditional_feature_selection_seed42_v1/verify_public_release.py
+```
+
+`results/dense_reference/` is the accepted canonical output. Earlier failed
+numerical admissions remain directly under `results/`; do not merge their
+status or pass them off as accepted results. Figure CSVs preserve all k0–9,
+all32 feature-frequency rows and all source strata. The original study's
+135-file release is also checked by the public release verifier.

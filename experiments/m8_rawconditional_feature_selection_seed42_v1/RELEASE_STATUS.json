@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "server_transfer_files": 19,
+  "original_release_files_unchanged": 135,
+  "raw_encoder_fits": 20,
+  "raw_encoder_epochs": 286,
+  "accepted_reference_head_fits": 9344,
+  "additional_registered_choice_control_fits": 25,
+  "failed_block_head_fits_retained_not_accepted": 9344,
+  "all_search_evaluations_replayed": 9179,
+  "all_assessment_fits_replayed": 165,
+  "independent_assessment_patient_metric_rows": 2805,
+  "new_Outer_inference": false,
+  "report_metric_cells_checked_against_full_precision": 96,
+  "stable_global_minimum_or_clinical_increment_proven": false,
+  "no_private_patient_channel_rows_or_predictions": true
+}

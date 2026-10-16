@@ -1,0 +1,10 @@
+{
+  "actual_ridge_fits": 25,
+  "choice_not_independent_assessment": true,
+  "duplicate_subsets_fit_once": true,
+  "no_new_selection_training_or_Outer": true,
+  "only_preexisting_frozen_feature_maps": true,
+  "recipe_rows": 30,
+  "source_sha256": "7ca4415e971b418a746b17e5c71d90942726898d7069199bc257c5c126d72359",
+  "status": "COMPLETE_REGISTERED_CHOICE_CONTROLS"
+}

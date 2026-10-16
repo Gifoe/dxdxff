@@ -1,0 +1,153 @@
+{
+  "assessment_choice_original_validation_Outer_labels_not_used": true,
+  "cells": [
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 1,
+      "maximum_score_error": 0.0,
+      "screen": 0
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 1,
+      "maximum_score_error": 0.0,
+      "screen": 1
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 1,
+      "maximum_score_error": 0.0,
+      "screen": 2
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 1,
+      "maximum_score_error": 0.0,
+      "screen": 3
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 2,
+      "maximum_score_error": 0.0,
+      "screen": 0
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 2,
+      "maximum_score_error": 0.0,
+      "screen": 1
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 2,
+      "maximum_score_error": 0.0,
+      "screen": 2
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 2,
+      "maximum_score_error": 0.0,
+      "screen": 3
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 3,
+      "maximum_score_error": 0.0,
+      "screen": 0
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 3,
+      "maximum_score_error": 0.0,
+      "screen": 1
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 3,
+      "maximum_score_error": 0.0,
+      "screen": 2
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 3,
+      "maximum_score_error": 0.0,
+      "screen": 3
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 4,
+      "maximum_score_error": 0.0,
+      "screen": 0
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 4,
+      "maximum_score_error": 0.0,
+      "screen": 1
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 4,
+      "maximum_score_error": 0.0,
+      "screen": 2
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 4,
+      "maximum_score_error": 0.0,
+      "screen": 3
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 5,
+      "maximum_score_error": 0.0,
+      "screen": 0
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 5,
+      "maximum_score_error": 0.0,
+      "screen": 1
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 5,
+      "maximum_score_error": 0.0,
+      "screen": 2
+    },
+    {
+      "actual_subset_solves": 36,
+      "all_calibration_grid_predictions_and_thresholds_identical": true,
+      "fold": 5,
+      "maximum_score_error": 0.0,
+      "screen": 3
+    }
+  ],
+  "maximum_score_error": 0.0,
+  "no_neural_training_or_prediction_rerun": true,
+  "old_primitives_sha256": "9d29784cce73f67329164ff25343f9dae8838a849cfad9632ee2cef77e0bbf0f",
+  "only_algebra_admission_ridge_refits": true,
+  "only_existing_frozen_representations_and_train_calibration_labels": true,
+  "source_sha256": "873fa1cda6362848e99fa1b957c8ea2b3200f86625259639f9a8af735157532f",
+  "status": "PASS",
+  "tolerance": 2e-10
+}

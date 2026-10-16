@@ -1,0 +1,83 @@
+{
+  "files": {
+    "ALL20_ACTUAL_RIDGE_ADMISSION.json": {
+      "bytes": 4450,
+      "sha256": "ff04a07f80273dba2f097e7fae181185a9281efeb672bc1cbc448bf5e600276d"
+    },
+    "ASSESSMENT_CARDINALITY.csv": {
+      "bytes": 10193,
+      "sha256": "46976856325b451b4b0db30e757132ff1b6786c3b1a294bcef124423d9599a62"
+    },
+    "ASSESSMENT_SOURCE.csv": {
+      "bytes": 41335,
+      "sha256": "9bbe6a64f580a72702962e42b78882604654a9dfc7098678bd0e6ade34d62d59"
+    },
+    "CANONICAL_ADMISSION_CONTEXT.json": {
+      "bytes": 378,
+      "sha256": "a35051b2c9b8367fd0266d21be3ded9cef36e4217501a723219c088db9ea7322"
+    },
+    "CHOICE_CONTROL_COMPARISON.csv": {
+      "bytes": 8661,
+      "sha256": "a34fd6a478e1b2d63dce5ee0376e14034ae3a950de12f4820f653d2ce2099166"
+    },
+    "CHOICE_CONTROL_STATUS.json": {
+      "bytes": 374,
+      "sha256": "f6e82a5bfb2963706c57341c0839efdaab14c7425598df2ebedb1b9d3811fb85"
+    },
+    "CONDITIONAL_SELECTION_STABILITY.csv": {
+      "bytes": 9041,
+      "sha256": "d3df29b1aacc86fb3b8d2d021d1231067c491284a94942663f66cf54273bff6f"
+    },
+    "ENCODER_STATUS.json": {
+      "bytes": 220,
+      "sha256": "d2f69c7cb317dd8f218498d054413d4a988d5039bc596e6355b2f72bfb4409aa"
+    },
+    "FROZEN_INTERNAL_SELECTION.csv": {
+      "bytes": 2470,
+      "sha256": "408265793dea46aea9a047fdd9fd1f7477ed6f55d1a98f35ab95db2f0d28f3d1"
+    },
+    "INTERNAL_FOLD_RESULTS.csv": {
+      "bytes": 2919,
+      "sha256": "1a833328c120cf5c547d60e92e3c178f220bcab77cfda3583eed0d41685d0df7"
+    },
+    "INTERNAL_MAIN_RESULTS.csv": {
+      "bytes": 721,
+      "sha256": "560768e257ddc6fa6ffa2ab7e53e613c7c0b19bf71e6f6365a629c0cf3b21358"
+    },
+    "INTERNAL_PAIRED_INTERVALS.csv": {
+      "bytes": 2000,
+      "sha256": "5d3e2b550cfcc9b4d6ec62a00a2789761ad870e59f8910bab784579145bd6f28"
+    },
+    "INTERNAL_REPLAY_VERIFICATION.json": {
+      "bytes": 488,
+      "sha256": "51d6373df7882d44cdf5013e751e36d6c0e4dae2e551a1ce907a763d61f2dcbf"
+    },
+    "INTERNAL_REPORT_STATUS.json": {
+      "bytes": 423,
+      "sha256": "889aec75f2c164b96e4086cff674231c04abc5e00e0f16755b71ca5ba2dabf95"
+    },
+    "INTERNAL_SOURCE_RESULTS.csv": {
+      "bytes": 2420,
+      "sha256": "b7c58b1b9d8ca8c231bdf91a18c6f3331c7a9322073cf22f673ab0f50e6df1bf"
+    },
+    "NUMERICAL_REPAIR_EXECUTION.json": {
+      "bytes": 774,
+      "sha256": "8cea6f01c0dcd4add3413714640964674ed016bb69ae06386b019dfafacf5ff4"
+    },
+    "SCREEN_STATUS.json": {
+      "bytes": 365,
+      "sha256": "8ae24d8bac598c8cff0d4aa985966294f0bcf009ad90d3b53e65569a3db536e6"
+    },
+    "SEARCH_RECORD.csv": {
+      "bytes": 2947684,
+      "sha256": "c3a1c68e88cd2314b8127d965d80ce54c52619cda1ab577d006f96220a9f855a"
+    },
+    "WEIGHT_BOOTSTRAP_RESELECTION.csv": {
+      "bytes": 4777,
+      "sha256": "c2652faa67f404ce017b5f18110f675129f23aea43e965932f218e5d5a62104c"
+    }
+  },
+  "original_v2_prediction_seal_unchanged": true,
+  "source_sha256": "baafd2f35349aa2c352f1cb9e26aa22110465e8613b429ac4932e99fdabee372",
+  "status": "PASS"
+}

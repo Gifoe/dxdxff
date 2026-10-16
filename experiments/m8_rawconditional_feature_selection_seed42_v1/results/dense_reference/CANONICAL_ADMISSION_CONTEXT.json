@@ -1,0 +1,8 @@
+{
+  "meaning": "Exact conformance to predefined sklearn canonical API; not independent numerical or clinical replication.",
+  "no_new_encoder_training_or_Outer": true,
+  "original_failed_Schur_gate_not_waived": true,
+  "source_sha256": "692317f2684dc176db41dbfacf4382320dbe3bc69553f442236a7e204f68fee5",
+  "status": "PASS",
+  "unchanged_absolute_score_tolerance": 2e-10
+}

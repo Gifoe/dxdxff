@@ -1,0 +1,9 @@
+{
+  "status": "ENGINEERING_GUARD_REPAIR_BEFORE_NEW_ASSOCIATION_RESULTS",
+  "original_preregistration_commit": "2ddb3724ffc811c8038cb5e424077ff41bfa6262",
+  "failure": "audit_old incorrectly asserted51 unique patients in every historical fold-feature-phase group. Actual original FIT counts are51,51,50,52,51; every private group matches its original fold and no duplicate rows exist.",
+  "repair": "Only replace that single assertion's literal51 with the exact own-fold FIT patient count derived from frozen split metadata. Preserve original atlas.py and all statistical operations unchanged. Assert the new expected counts match51,51,50,52,51 before running.",
+  "unchanged": ["fold1 primary51", "all original roles", "patient effects", "new12 endpoints", "rank effect", "bootstrap", "Wilcoxon", "BH families", "support thresholds", "old scores and results"],
+  "implementation": "AST transformation of exactly the expected named function assertion; assert exactly one replacement. Accepted namespace rolecount_checked is separate from original failed runtime and freeze.",
+  "source_diagnosis": "Trusted reconstruction split metadata and private effect-group counts agree exactly. No labels indexed during diagnosis. This was an erroneous audit assumption, not a data exclusion or a new scientific threshold."
+}

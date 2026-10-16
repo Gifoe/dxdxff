@@ -1,0 +1,7 @@
+{
+  "observed": "The legal-role import resets PyTorch threads from1 to2. Training explicitly restores1 after this import; the initial report restored1 before import and was reset to2. First-cell two-thread replay differed in2 logits by at most1.7881393432617188e-7. Restoring the declared production one-thread setting gave bit-exact error0.",
+  "repair": "Execution wrapper restores the already registered one-thread/highest-FP32 settings immediately after legal-role import, as the actual trainer did. Frozen report and all training/model/input sources stay byte unchanged.",
+  "unchanged": ["all90 trained heads", "928 epochs", "all encoders/representations", "all source and patient-role bindings", "selected features/cardinalities", "preprocessing", "epochs/thresholds", "seeds", "sealed assessment logits", "exact zero-error replay gate", "all report metrics and prospective allocation gate"],
+  "scope": "No training, prediction replacement, source/data filtering, tolerance change or new Outer. Full90-cell replay must still pass exactly. Original failure log and diagnostic retained.",
+  "status_before_retry": "Engineering setting mismatch diagnosed before any new assessment metrics were read"
+}

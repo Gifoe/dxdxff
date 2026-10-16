@@ -1,0 +1,7 @@
+study,level,mean_pairwise_jaccard,all5_fold_shared_count,shared,posthoc_descriptive,inputs_not_changed
+physiology_only,exact,0.25,0,,True,True
+physiology_only,attribute,0.25,0,,True,True
+physiology_only,coarse_family,0.33333333333333337,0,,True,True
+Raw_conditional,exact,0.0,0,,True,True
+Raw_conditional,attribute,0.01,0,,True,True
+Raw_conditional,coarse_family,0.05,0,,True,True

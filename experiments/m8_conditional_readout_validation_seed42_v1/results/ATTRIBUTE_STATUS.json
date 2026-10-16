@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE_PUBLIC_DEFINITION_SENSITIVITY",
+  "all32_definitions_mapped": true,
+  "no_new_labels_or_predictions": true,
+  "posthoc_not_feature_selection": true,
+  "coarsening_does_not_prove_substitutability": true
+}

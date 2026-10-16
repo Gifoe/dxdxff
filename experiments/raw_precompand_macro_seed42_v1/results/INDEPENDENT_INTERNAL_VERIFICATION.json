@@ -1,0 +1,192 @@
+{
+  "checks": [
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "arm": "WINDOW_RESIDUAL",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "arm": "PRECOMPAND_RESIDUAL",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    }
+  ],
+  "independent_sklearn_metrics_pass": true,
+  "matrix_fits": 30,
+  "maximum_replay_error": 0.0,
+  "original_Development_Outer_used": false,
+  "ownFIT_selection_only": true,
+  "ownFIT_selection_sha256": "2004582fe43e284a6f4ac29e88f33af7b77bd543d8408df6892fd740513a0512",
+  "patient_metric_rows": 765,
+  "status": "PASS"
+}

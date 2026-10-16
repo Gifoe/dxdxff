@@ -1,0 +1,9 @@
+{
+  "actual_matrix_fits": 10,
+  "body_head_updates": 0,
+  "development_not_independent": true,
+  "model_freeze_sha256": "4f936da78565bf823f0905a8e7fb6ba6da09f13c8b873c4cff4719e5c6319a9c",
+  "new_Outer_passes": 0,
+  "selected_rows_are_aliases_not_additional_fits": true,
+  "status": "ALL20_LOGICAL_MODELS_FROZEN"
+}

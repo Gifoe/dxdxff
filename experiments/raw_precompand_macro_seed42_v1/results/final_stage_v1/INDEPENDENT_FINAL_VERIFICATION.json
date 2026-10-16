@@ -1,0 +1,41 @@
+{
+  "all9_patient_metrics_independently_recomputed": true,
+  "all_frozen_body_matrix_threshold_hashes_verified": true,
+  "archive_identity_and_ownOuter_roles_exact": true,
+  "goal_point_established": false,
+  "logical_models": 20,
+  "maximum_metric_difference": 1.1102230246251565e-16,
+  "no_training_or_inference": true,
+  "patient_rows": 320,
+  "procedures": 4,
+  "reports": [
+    {
+      "channels": 7635,
+      "macro_f1": 0.6304930529317453,
+      "patients": 80,
+      "procedure": "NATIVE"
+    },
+    {
+      "channels": 7635,
+      "macro_f1": 0.6282107161453669,
+      "patients": 80,
+      "procedure": "WINDOW_RESIDUAL"
+    },
+    {
+      "channels": 7635,
+      "macro_f1": 0.6314324049383006,
+      "patients": 80,
+      "procedure": "PRECOMPAND_RESIDUAL"
+    },
+    {
+      "channels": 7635,
+      "macro_f1": 0.6290860143602925,
+      "patients": 80,
+      "procedure": "SELECTED"
+    }
+  ],
+  "score_seal_sha256": "2efe5fe40dbe327c8bfcec1869c214b2c41e2294133288a9f6bed5b46b46298f",
+  "selected_aliases_exact": true,
+  "status": "PASS",
+  "verifier_source_sha256": "6f132a590103f3653b62ebbda4f36f1a0c3c1f57f920fb6962243273bccf5c27"
+}

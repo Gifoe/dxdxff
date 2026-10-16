@@ -1,0 +1,11 @@
+{
+  "all20_scores_sealed_before_full_labels": true,
+  "all9_metrics_independently_recomputed": true,
+  "archive_identity_exact": true,
+  "channels_per_procedure": 7635,
+  "maximum_metric_error": 1.1102230246251565e-16,
+  "patient_rows": 320,
+  "patients_per_procedure": 80,
+  "score_seal_sha256": "2efe5fe40dbe327c8bfcec1869c214b2c41e2294133288a9f6bed5b46b46298f",
+  "status": "PASS"
+}

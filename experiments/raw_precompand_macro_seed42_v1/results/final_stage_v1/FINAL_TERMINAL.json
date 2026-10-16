@@ -1,0 +1,20 @@
+{
+  "all_predeclared_procedures_reported": true,
+  "goal_point_established": false,
+  "independent_confirmation": false,
+  "patient_equal_macro_f1": {
+    "NATIVE": 0.6304930529317453,
+    "PRECOMPAND_RESIDUAL": 0.6314324049383006,
+    "SELECTED": 0.6290860143602925,
+    "WINDOW_RESIDUAL": 0.6282107161453669
+  },
+  "point_over_065": {
+    "NATIVE": false,
+    "PRECOMPAND_RESIDUAL": false,
+    "SELECTED": false,
+    "WINDOW_RESIDUAL": false
+  },
+  "postOuter_tuning": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "status": "COMPLETE_VERIFIED_FOUR_PRECOMPAND_PROCEDURES"
+}

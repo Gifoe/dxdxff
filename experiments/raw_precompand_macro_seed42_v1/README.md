@@ -5,6 +5,12 @@ Target: patient-equal Macro-F1>0.65; actual complete-cohort Raw-only reference
 negative. This is a separate information-retention hypothesis, not a renamed
 positive result or an expansion of those frozen budgets.
 
+Completed and independently verified:30 internal plus10 final matrix fits.
+Full80-patient Macro-F1 Native/control/Precompand/selected is
+**0.630493/0.628211/0.631432/0.629086**. Precompand AUROC/AP improved to
+0.759384/0.570215,but its Macro difference interval crosseszero. **The0.65goal
+was not reached.** See [actual results and limits](RUN_REPORT.md).
+
 The original waveform view removes each window's amplitude by its own SD.
 The second view uses a common pre-only scale across complete channels within
 each seizure, then fixed asinh companding. It preserves relative channel and
@@ -30,6 +36,10 @@ the internal stage. No performance values are filled before verified runs.
 ```powershell
 & D:\raw_precompand_macro_seed42_v1\run_internal.ps1 -RunTag 01 -StopAfter Admission
 & D:\raw_precompand_macro_seed42_v1\run_internal.ps1 -RunTag 02 -StopAfter All
+& D:\raw_precompand_macro_seed42_v1\run_final.ps1 -RunTag 01 -StopAfter Admission
+& D:\raw_precompand_macro_seed42_v1\run_final.ps1 -RunTag 03 -StopAfter All
+& E:\Anaconda\python.exe D:\raw_precompand_macro_seed42_v1\verify_final.py
+& E:\Anaconda\python.exe D:\raw_precompand_macro_seed42_v1\verify_raw_coverage.py
 ```
 
 Use a sustained foreground SSH owner, new RunTags and preserved private logs.

@@ -1,0 +1,58 @@
+{
+  "new_Outer_passes": 0,
+  "patient_cells": 320,
+  "phase_seal_sha256": "a13de6ec6e377fb4556a56a45995885c50275aae69fe9bf693b925cfaecdab4f",
+  "reports": [
+    {
+      "Development_patients": 13,
+      "FIT_patients": 51,
+      "Native_validation_logit_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "body_sha256": "b972d5e1e0ac1c2e75c7808a545279e6c82df26b5df1d84bc473d2a1bbff9b97",
+      "channels": 6004,
+      "chosen_arm": "NATIVE",
+      "fold": 1
+    },
+    {
+      "Development_patients": 13,
+      "FIT_patients": 51,
+      "Native_validation_logit_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "body_sha256": "57de5e205a90df80dc52c9f7bc099b0817c4e6a10f228d5703b2ae5c47a4f4a9",
+      "channels": 6137,
+      "chosen_arm": "NATIVE",
+      "fold": 2
+    },
+    {
+      "Development_patients": 13,
+      "FIT_patients": 50,
+      "Native_validation_logit_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "body_sha256": "0a4fff31d399e73b14ef278996d5cb5e0a9fd6e387421cc5d25ef6e65be4280c",
+      "channels": 5889,
+      "chosen_arm": "NATIVE",
+      "fold": 3
+    },
+    {
+      "Development_patients": 13,
+      "FIT_patients": 52,
+      "Native_validation_logit_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "body_sha256": "53272a24f63615a83209dfaff4d23f58e936660ec3a9d7000c6e567ae6d6ec5b",
+      "channels": 6210,
+      "chosen_arm": "PRECOMPAND_RESIDUAL",
+      "fold": 4
+    },
+    {
+      "Development_patients": 13,
+      "FIT_patients": 51,
+      "Native_validation_logit_error": 0.0,
+      "all201_CAL_grid_decisions_unchanged": true,
+      "body_sha256": "b1d64c3dc218d87f38823efeac8f6ed344d717f6f5b370b0ff9085fe51d46589",
+      "channels": 6300,
+      "chosen_arm": "PRECOMPAND_RESIDUAL",
+      "fold": 5
+    }
+  ],
+  "status": "PASS"
+}

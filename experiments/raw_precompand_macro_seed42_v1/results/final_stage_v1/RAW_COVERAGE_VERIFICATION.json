@@ -1,0 +1,17 @@
+{
+  "all80_actual_Raw_banks_freshly_hash_verified": true,
+  "new_training_or_inference": false,
+  "original_full_patient_channels_and_masks_preserved": true,
+  "source_sha256": "0629a78f3550dc6266386b9424d94df65c7639392a8968c727b7c2c06939b5de",
+  "status": "PASS",
+  "totals": {
+    "channels": 7635,
+    "clipped_samples": 28,
+    "encoded_samples": 735982500,
+    "fallback_seizures": 0,
+    "patients": 80,
+    "seizures": 256,
+    "valid_windows": 1471965,
+    "zero_pre_channel_seizure_units": 0
+  }
+}

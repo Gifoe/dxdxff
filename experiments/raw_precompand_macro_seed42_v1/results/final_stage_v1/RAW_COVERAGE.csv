@@ -1,0 +1,6 @@
+fold,patients,channels,seizures,valid_windows,zero_pre_channel_seizure_units,fallback_seizures,encoded_samples,clipped_samples
+1,16,1631,54,333155,0,0,166577500,0
+2,16,1498,49,265639,0,0,132819500,26
+3,17,1746,61,375476,0,0,187738000,2
+4,15,1425,43,244998,0,0,122499000,0
+5,16,1335,49,252697,0,0,126348500,0

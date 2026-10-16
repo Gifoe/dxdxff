@@ -36,7 +36,7 @@ def main():
         fixed_pre_reference_and_two_phase_support_windows=counts['pre_windows']+counts['phase_0to8_windows']+counts['phase_8to20_windows'],
         minimum_valid_window_time=minimum,maximum_valid_window_time=maximum,
         raw_registry_sha256=c.io.EXPECTED_REG,reconstruction_sha256=c.io.EXPECTED_REC,
-        score_seal_sha256=c.sha(f.FINAL/'OUTER_SCORE_SEAL_PRIVATE.json'),audit_source_sha256=c.sha(c.HERE/'audit_raw_support.py'),
+        score_seal_sha256=c.sha(f.FINAL/'OUTER_SCORE_SEAL_PRIVATE.json'),audit_source_sha256=c.sha(c.Path(__file__)),
         inference_valid_window_count_matches_independent_mask_census=True,
         interpretation='Allvalidwindowsforwarded; original pooling uses pre and0to20 support. Anyat-or-after20 windows are not claimed to contribute to finalclassifications.',
         full_truth_archive_not_opened_by_audit=True,no_new_classification_metrics_computed=True,

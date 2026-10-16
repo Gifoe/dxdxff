@@ -7,7 +7,7 @@
     "PROTOCOL_LOCK.json": "a709a899892f2a5bdf1dcb25e7dd7c52cb6dcb0520615c903865846ce328ef19",
     "README.md": "b52096bf46a09b09c4e87fee610910eea426d6d4b1b91727b602d9a42febd4f3",
     "admit.py": "f496940902bb564bc2046b87ea5ea176512f31c6bcd340ad1589bb45f3b72b5c",
-    "audit_raw_support.py": "a529458387f6c0b936254e3258302954231254d50143b3b020872cc5f68d437a",
+    "audit_raw_support.py": "b04334b6b8206cdf2c848061898a79beb7a546aa334ff5ca47148088d1f45b9c",
     "common.py": "a1e658c87e8fcf31c8c1cc426c281e4eec6d6c63fa735031eb31f33c77a157b8",
     "final_stage.py": "a64b9c13d46d9bac7d99185468e7630fd6f5184ca5a3b09caf31ebd6c8a73eb1",
     "model.py": "d6683059bd0c7eff29f4e6d5b5c81335d7ff52523c3f0bc521e6cd85eacf3cbf",
@@ -33,7 +33,8 @@
     "test_model.py": "4b7bd446f56d2ebde92e2f5b4ca85cd5aeee4e1eec3a9116790742a4d407c29b",
     "train_internal.py": "70b8cbc2f7a1e3d527f1a7c61d9bd83b4197d71ab17e114656acae1f6ac00ebf",
     "verify_final.py": "79e7a797b96a04099dfa4aaecd413193b652daa6d9571f7d77210de0b39e96d0",
-    "verify_public.py": "8a73dbc8e110ffce4905f5273d65b0eaaa58f165b189d0cb8ff23f7a4e83c5ae"
+    "verify_public.py": "8a73dbc8e110ffce4905f5273d65b0eaaa58f165b189d0cb8ff23f7a4e83c5ae",
+    "verify_statistics.py": "2aa5b32b56d74a933fb54634c49d61656111be0da8898cacb4e799ec5eef3526"
   },
   "final_verified": false,
   "internal_verified": true,

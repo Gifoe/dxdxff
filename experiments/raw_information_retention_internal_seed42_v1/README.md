@@ -30,6 +30,19 @@ selection data. Repeated-source and patient-ID cluster intervals are descriptive
 not independent validation or evidence that the final Outer target was reached.
 All data support/threshold/training/racing rules are in `PROTOCOL_LOCK.json`.
 
+## Execution revision before formal training
+
+The initial gradient admission failed before any formal epoch. The original
+failure, direct self-replay noise and failed cross-backend gradient comparison
+remain in `results/failed_execution_v1/`. They are not relabeled as passed.
+`EXECUTION_AMENDMENT.json` fixes a separate deterministic-cuDNN execution for
+all arms and reverse chunk replay matching direct autograd. The original
+atol1e-6/rtol1e-5 gradient gate is unchanged. This is not claimed to be a
+same-backend numerically equivalent continuation of the failed version.
+All9 complete-patient gates must pass anew before any fitting. Original audit,
+source and logs are retained; formal epochs discarded=0. The current runtime
+is a separate `deterministic_execution_v2` subdirectory.
+
 ## Trusted-server execution
 
 The existing waveform registry must be present; do not copy/reextract Raw data.

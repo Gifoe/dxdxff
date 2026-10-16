@@ -1,0 +1,13 @@
+{
+  "identity":"prospective_deterministic_execution_v2",
+  "timing":"Before any formal training,calibration selection,candidate outcome evaluation or newOuter in this study",
+  "previous_formal_epochs":0,
+  "previous_input_binding_sha256":"525029c814857fe9141703ee419b406d4ffc962a1c30a8b39558954f634d2f94",
+  "failed_source_commit":"4dab8e0f8a315d2f2ceb1d2e98aef7947a289e44",
+  "observed_failure":"Original nondeterministic-CUDA direct/cache gate failed on C2 cnn.2.weight. Direct self-replay also varies. A cross-mode nondeterministic/deterministic gradient comparison failed the original tolerance for C2; that FAIL is retained and is not promoted or called numerical equivalence.",
+  "new_execution_contract":"cuDNN remains enabled,FP32 andTF32off unchanged. Set cuDNN deterministic=True for EVERY model arm and for both direct reference and cache. Replay chunks in the actual reverse direct-autograd order. Keep chunk1024,all data/model/loss/initial weights/budgets/roles/threshold/racing rules unchanged.",
+  "evidence":"Outcome-free C2/C4 diagnostics gave exact direct self-replay and reverse-cache gradients under deterministic cuDNN; both had forward/loss differences0. All9 arms must pass their original complete-patient direct/cache gate in this separately frozen execution before any formal training.",
+  "interpretation":"A new prospective execution,not a same-backend numerical-equivalent continuation of a passed original run. No old trained weights or completed formal epochs exist to resume/discard. Do not hide the failed cross-mode comparison or relax atol1e-6/rtol1e-5.",
+  "additional_validation":"Hard-check the actual reconstruction/raw-registry/inner-role-registry file hashes,not just record their expected values. This adds a read-only gate and changes no input. The diagnostic already independently verified all3 exact expected hashes.",
+  "preservation":"Keep original source files,input freeze,79-patient audit,failed admission and diagnostic outputs intact. Run the new execution in a new subdirectory;no raw cache copies,unrelated job/backend changes or newOuter. The previous completed20-cell study remains byte unchanged."
+}

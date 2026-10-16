@@ -7,7 +7,7 @@ import pandas as pd
 import torch
 
 HERE=Path(__file__).resolve().parent
-ROOT=Path(r'D:\raw_information_retention_internal_seed42_v1_runtime')
+ROOT=Path(r'D:\raw_information_retention_internal_seed42_v1_runtime\deterministic_execution_v2')
 PUB=ROOT/'public'
 PARENT=Path(r'D:\raw_latent_contrast_optimization_seed42_v1')
 PARENT_RUNTIME=Path(r'D:\raw_latent_contrast_optimization_seed42_v1_runtime')
@@ -27,11 +27,14 @@ sha,read,save,write,freeze,jr,digest=io.sha,io.read,io.save,io.write,io.freeze,i
 atomic_torch,seed_all,state_hash=io.atomic_torch,io.seed_all,io.state_hash
 RawStore,private_key=io.RawStore,io.private_key
 METRICS=io.METRICS
-CRITICAL=['PROTOCOL_LOCK.json','common.py','model.py','engine.py','audit_inputs.py','train_internal.py','summarize.py']
+CRITICAL=['PROTOCOL_LOCK.json','EXECUTION_AMENDMENT.json','common.py','model.py','engine.py','audit_inputs.py','train_internal.py','summarize.py']
 
 
 def setup():
     ROOT.mkdir(exist_ok=True);PUB.mkdir(exist_ok=True)
+    assert sha(io.BASE/'RECONSTRUCTION_PRIVATE.pkl')==io.EXPECTED_REC
+    assert sha(io.BASE/'RAW_DYNAMIC_REGISTRY_PRIVATE.pkl')==io.EXPECTED_REG
+    assert sha(io.OLD/'ENCODER_REGISTRY_PRIVATE.pkl')==io.EXPECTED_ENCODERS
     protected={n:sha(PARENT_RUNTIME/n) for n in ['MODEL_FREEZE_PRIVATE.json','FROZEN_BEFORE_OUTER_PRIVATE.json','OUTER_SCORE_SEAL_PRIVATE.json']}
     assert protected['MODEL_FREEZE_PRIVATE.json']=='ef751fbbd66dcf825f1157bc5bf029039f489647033f90368958c0063af5cc9a'
     assert protected['FROZEN_BEFORE_OUTER_PRIVATE.json']=='92f8d0adc186cf79dde4a5f25171ad115ae36ddc7effd1127a38df7cc60fcbc5'
@@ -43,6 +46,7 @@ def setup():
     freeze(ROOT/'INPUT_FREEZE_PRIVATE.json',binding)
     torch.set_num_threads(2);torch.set_float32_matmul_precision('highest')
     torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+    torch.backends.cudnn.deterministic=True
     return binding
 
 

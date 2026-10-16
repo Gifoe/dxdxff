@@ -25,9 +25,9 @@ def direct(model,raw,mask,times,y=None,pos=None,chunk=CHUNK):
 
 
 def cached(model,raw,mask,times,y=None,pos=None,chunk=CHUNK):
-    train=y is not None;flat=model.normalized_windows(raw,mask,times);parts=[];states=[]
+    train=y is not None;flat=model.normalized_windows(raw,mask,times);chunks=list(flat.split(chunk));parts=[];states=[]
     with torch.no_grad():
-        for q in flat.split(chunk):
+        for q in chunks:
             if train:states.append(rng())
             parts.append(model.cnn(q[:,None]).flatten(1))
     h=torch.cat(parts).detach().requires_grad_(train);assert torch.isfinite(h).all()
@@ -36,11 +36,15 @@ def cached(model,raw,mask,times,y=None,pos=None,chunk=CHUNK):
     if not train:return logit.detach(),z.detach()
     loss=pooling.objective(logit,y,pos,'ez_rank');assert torch.isfinite(loss);loss.backward()
     dh=h.grad.detach();assert torch.isfinite(dh).all();after=rng()
-    buffers={k:v.detach().clone() for k,v in model.named_buffers()};offset=0
+    buffers={k:v.detach().clone() for k,v in model.named_buffers()};offset=len(flat)
     try:
-        for q,state in zip(flat.split(chunk),states):
+        # Match the observed CatBackward/encoder scheduling of direct autograd.
+        # Deterministic cuDNN is separately fixed before any formal fit.
+        for q,state in zip(reversed(chunks),reversed(states)):
+            offset-=len(q)
             restore(state);emb=model.cnn(q[:,None]).flatten(1)
-            emb.backward(dh[offset:offset+len(q)]);offset+=len(q)
+            emb.backward(dh[offset:offset+len(q)])
+        assert offset==0
     finally:
         with torch.no_grad():
             for k,v in model.named_buffers():v.copy_(buffers[k])

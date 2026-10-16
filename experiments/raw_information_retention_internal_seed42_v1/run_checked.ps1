@@ -2,7 +2,7 @@ param([string]$RunTag='01',[ValidateSet('Audit','Admission','Train','All')][stri
 $ErrorActionPreference='Stop'
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new($false)
 $code='D:\raw_information_retention_internal_seed42_v1'
-$runtime='D:\raw_information_retention_internal_seed42_v1_runtime'
+$runtime='D:\raw_information_retention_internal_seed42_v1_runtime\deterministic_execution_v2'
 $env:OMP_NUM_THREADS='1';$env:MKL_NUM_THREADS='1';$env:OPENBLAS_NUM_THREADS='1';$env:PYTHONUNBUFFERED='1'
 New-Item -ItemType Directory -Force -Path $runtime | Out-Null
 $guard=[System.IO.File]::Open((Join-Path $runtime 'coordinator.lock'),[System.IO.FileMode]::OpenOrCreate,[System.IO.FileAccess]::ReadWrite,[System.IO.FileShare]::None)

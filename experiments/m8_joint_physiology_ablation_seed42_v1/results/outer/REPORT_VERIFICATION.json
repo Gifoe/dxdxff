@@ -1,0 +1,14 @@
+{
+  "all_sklearn_metric_and_ranking_checks": true,
+  "bootstrap_first32_draws_directly_verified": true,
+  "metric_engine_sha256": "6c8974e097ff6cb85bbe6f8fa59b246d5e4100c91c50bbb4b082a7dbcf702688",
+  "numpy": "2.2.6",
+  "paired_contrast_metric_rows": 558,
+  "pandas": "2.3.3",
+  "patient_rows": 1280,
+  "python_runtime": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "outer",
+  "source_sha256": "e4e21c20962de75805c57a13d72a18859bd26157a8c1f695013b1ac06019fec3",
+  "status": "PASS",
+  "thresholds_reoptimized": false
+}

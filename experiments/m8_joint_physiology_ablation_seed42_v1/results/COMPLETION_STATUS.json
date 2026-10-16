@@ -1,0 +1,16 @@
+{
+  "Outer_selection": false,
+  "choices_before_Outer": {
+    "D1": "000",
+    "M8": "000"
+  },
+  "configurations": 8,
+  "folds": 5,
+  "heads": 2,
+  "new_models": 40,
+  "patient_rows": 1280,
+  "reused_models": 40,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "0cd465c077c111c6e1890e59751f02c0187a81ed30f12200defbda5ed34a818c",
+  "status": "JOINT_2CUBED_D1_M8_OUTER_COMPLETE"
+}

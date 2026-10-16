@@ -1,0 +1,19 @@
+{
+  "actual_new_models": 40,
+  "all80_validation_models_replayed": true,
+  "maximum_logit_error": 0.0,
+  "model_freeze_sha256": "a203206c864091605dc25f1bebbe50d7f6777c88364946caec94f8b30e9c38f1",
+  "model_pairs": 40,
+  "new_complete_epochs": 434,
+  "reused_models": 40,
+  "source": {
+    "PROTOCOL_LOCK.json": "d47929bd289d888d45ce3a4b5889577add43cb473282ab337e7cc7db64229a26",
+    "analysis.py": "a6fe8dea9609a43d0516a08767e5142e5463843d083b84f25d2539c837c2dca9",
+    "report.py": "e4e21c20962de75805c57a13d72a18859bd26157a8c1f695013b1ac06019fec3",
+    "run.py": "1ba4b40301f609b814cad94471ce3271957fff4e9a8141b8a716141e8e5edb5b",
+    "test_analysis.py": "bf19849bae557d6d286d1f8e6caf97edc87b4f72798d9eea5522c3ce20407491",
+    "verify_results.py": "560f391a9e31d1b353b7c0eacbd1111e7740d2be6cb34258f389011bb2eb538c"
+  },
+  "status": "PASS",
+  "thresholds_epochs_original_roles_verified": true
+}

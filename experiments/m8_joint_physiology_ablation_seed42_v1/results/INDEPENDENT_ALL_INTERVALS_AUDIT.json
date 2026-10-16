@@ -1,0 +1,10 @@
+{
+  "absolute_metric_intervals": 288,
+  "adjusted_primary_intervals": 84,
+  "all10000_draws_independently_recomputed": true,
+  "identical_patient_pairing": true,
+  "no_training_inference_or_threshold_selection": true,
+  "paired_metric_intervals": 1116,
+  "source_sha256": "fed74a0803de2a1d00b43d3f7c288a50c61cc0389a69deef3cd313981750fe1a",
+  "status": "PASS"
+}

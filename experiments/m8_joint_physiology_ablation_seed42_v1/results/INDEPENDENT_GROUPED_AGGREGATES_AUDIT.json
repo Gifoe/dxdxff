@@ -1,0 +1,7 @@
+{
+  "all_fold_source_means_sampleSD_signed_stability_coverage_recomputed": true,
+  "source_sha256": "55b90b472bb7d08b9710d56be824aa4dfe86d4b71eb0d0205c0e4d76a922b26e",
+  "status": "PASS",
+  "training_or_inference": false,
+  "verified_numeric_fields": 5508
+}

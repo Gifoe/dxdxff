@@ -1,0 +1,7 @@
+{
+  "all_epochs_preserved": true,
+  "new_models": 40,
+  "no_new_Outer": true,
+  "reused_models": 40,
+  "status": "ALL40_MODEL_PAIRS_FROZEN"
+}

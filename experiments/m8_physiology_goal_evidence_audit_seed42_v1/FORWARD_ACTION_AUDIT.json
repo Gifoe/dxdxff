@@ -1,0 +1,67 @@
+{
+  "status": "EXTERNAL_RESEARCH_INPUT_OR_DECISION_REQUIRED",
+  "full_scientific_goal_achieved": false,
+  "goal_is_not_paused_or_marked_complete": true,
+  "current_goals_blocked_status_not_yet_set": true,
+  "first_consecutive_goal_turn_with_this_external_dependency": true,
+  "completed_Outer_score_cells": 105,
+  "completed_nonlinear_readouts": 90,
+  "completed_six_group_search_fits": 5120,
+  "completed_six_group_assessment_refits": 574,
+  "both_registered_predictive_continuation_gates": "FAIL",
+  "automatic_new_heads_seeds_hyperparameters_or_Outer": false,
+  "association_support_does_not_override_prediction_stopping_rules": true,
+  "joint38_global_minimum_claim": false,
+  "next_allowed_direction": "A substantive new scientific input/decision and prospective protocol, not an automatic rescue of failed screens.",
+  "evidence_required_for_independent_confirmation": "An unused patient cohort with verified labels, channel/time alignment and measurement provenance, not another read of already viewed Outer.",
+  "alternative_research_direction": "A genuinely new, explicitly chosen hypothesis must be separately scoped and prospectively controlled; no guaranteed gain.",
+  "scope_boundary": "No claim that other data do not exist on the server or in the world; no newly authorized independent cohort is present in these frozen experiment bindings.",
+  "new_model_fits": 0,
+  "new_Outer_access": false,
+  "evidence": {
+    "main_Outer_status": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\results\\OUTER_STATUS.json",
+      "sha256": "2ce12a8baf6efeb775750ed71123ab3e1b9b2d6f6e1c6875a68c2651b28cb98c"
+    },
+    "main_support_status": {
+      "path": "m8_physiology_discovery_selection_seed42_v2\\results\\SUPPORT30_STATUS.json",
+      "sha256": "572d949ae27ee42a57967af73d3d5f622745b55dd38a5533dab386b3c70305b6"
+    },
+    "nonlinear_status": {
+      "path": "m8_conditional_readout_validation_seed42_v1\\results\\readout\\READOUT_STATUS.json",
+      "sha256": "abe86fc25897feacd617ca0651fd96289829604cb290cd13b203c2d9497dddd4"
+    },
+    "nonlinear_protocol": {
+      "path": "m8_conditional_readout_validation_seed42_v1\\PROTOCOL_LOCK.json",
+      "sha256": "7561d1033a9de1e5b1c5ef99a58fddfc8d1228ab318d0a5724f38496dc0d1dc7"
+    },
+    "nonlinear_gate": {
+      "path": "m8_conditional_readout_validation_seed42_v1\\results\\readout\\ALLOCATION_GATE.json",
+      "sha256": "5b5bcba10bff8463550c6cfd4caa0389acd47e0371edeb9feb27358b4e842e4c"
+    },
+    "six_group_status": {
+      "path": "m8_nonlocal6_conditional_selection_seed42_v1\\results\\REPORT_STATUS.json",
+      "sha256": "d010b78df3da299ebb672096184d97762a44f25f89c249aa4a09232a80ed8539"
+    },
+    "six_group_protocol": {
+      "path": "m8_nonlocal6_conditional_selection_seed42_v1\\PROTOCOL_LOCK.json",
+      "sha256": "bc24a3dff0792fd57649aabcd1147c1dbc0c72d870079112e04a2e86388207c4"
+    },
+    "six_group_gate": {
+      "path": "m8_nonlocal6_conditional_selection_seed42_v1\\results\\ALLOCATION_GATE.json",
+      "sha256": "b6475e09cc06b7becf3e5fbef14cdd449b6950a4f5f638742b56afc01323d4e3"
+    },
+    "atlas_status": {
+      "path": "m8_physiological_evidence_atlas_seed42_v1\\results\\ATLAS_STATUS.json",
+      "sha256": "35308beec7c1dad47825712f6d00cc26fd546990a9b6502d03b2a7d88190ef96"
+    },
+    "atlas_release": {
+      "path": "m8_physiological_evidence_atlas_seed42_v1\\RELEASE_STATUS.json",
+      "sha256": "053a59d5cb6095bf3a3062345de2dbf9b932def58862a1a8be20dce7a0a1c5d4"
+    },
+    "evidence_ledger": {
+      "path": "m8_physiological_evidence_atlas_seed42_v1\\results\\FEATURE_EVIDENCE_LEDGER_STATUS.json",
+      "sha256": "d48e79d007464023567c318a96a2a7c3b0f5f0490a634eec1cbe1e7101ce717f"
+    }
+  }
+}

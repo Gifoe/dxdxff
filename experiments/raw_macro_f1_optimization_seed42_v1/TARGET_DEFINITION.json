@@ -1,0 +1,36 @@
+{
+  "identity": "raw_macro_f1_optimization_seed42_v1",
+  "user_clarification_recorded_utc": "2026-10-16T19:38:58Z",
+  "primary_target": "patient-equal Macro-F1 strictly greater than 0.65",
+  "definition": "For each patient compute (EZ-positive F1 + NEZ-positive F1)/2 on all original valid channels; then average patients equally. Not EZ-F1, pooled-channel F1, micro-F1, weighted-F1 or an equal-fold substitute.",
+  "reference": {
+    "experiment": "m8_physiology_discovery_selection_seed42_v2",
+    "model": "Concat__RAW_ONLY",
+    "scope": "historical frozen fivefold Outer, exploratory repeated-test",
+    "patients": 80,
+    "channels": 7635,
+    "macro_f1": 0.6304930529317453,
+    "ez_f1": 0.4264746812290129,
+    "nez_f1": 0.8345114246344775,
+    "auroc": 0.741295796761887,
+    "ap": 0.5501139010167981,
+    "mrr": 0.784454022095096,
+    "top1": 0.7,
+    "strict_target_gap": 0.0195069470682547,
+    "development_macro_f1": 0.6441400165106747,
+    "development_scope": "65 patient appearances / 47 unique patients, checkpoint/threshold-selection conditioned; not independent validation",
+    "evidence_status": "Existing anonymous source tables read now; no new neural prediction replay or Outer evaluation in this clarification step.",
+    "source_hashes": {
+      "results/outer/MAIN_RESULTS.csv": "58509d73244de0b387966fe0f2f3f2beaea60c52a71de606fc54a6d632e8c8ef",
+      "results/development/MAIN_RESULTS.csv": "e7c9d6a2c6c564d6ea602c2531834c96757ca973209b5ef9c84c1afe1949ec17",
+      "model.py": "d6487fd185121d6e4ac13438c4edb90e58457118ef4b2691dc9302cf46b624d5",
+      "IMPLEMENTATION_LOCK.json": "88011f409bd62ddef6b7d5f667e8c9e6139502f2c4aef5706661c668f45371f1"
+    }
+  },
+  "future_optimization": "Use Macro-F1-aligned loss and legal internal checkpoint/threshold/model selection. Preserve original patient-held-out roles, raw samples, masks, channels and seed42. No manual physiological feature inputs, no independent D1 branch. Report AUROC/AP/EZ-F1/NEZ-F1/ACC/MRR/Top1/bias and paired uncertainty alongside primary Macro-F1.",
+  "baseline_fidelity": "Start from the actual matched Raw-only reference, not a weaker reinitialization silently substituted for it. Its 160D head has 96 active Raw coordinates and 64 zero physiological slots. Pure96 mapping must copy the active first-layer weights/bias and later layers, then pass actual validation prediction parity before use. Do not feed artificial descriptors merely because legacy constructor interfaces contain their slots.",
+  "historical_studies": "The prior raw_latent_contrast and raw_information_retention studies were actually optimized for EZ-F1 under the agent's earlier interpretation. Preserve their frozen sources/results and negative findings. Do not retroactively change their selection rules or relabel their outcomes as Macro-F1-optimized experiments.",
+  "oracle_correction": "The previously reported per-patient oracle threshold ceiling around0.57-0.58 maximizes EZ-F1 only. It is neither a Macro-F1 ceiling nor evidence that patient Macro-F1>0.65 is unreachable.",
+  "new_training_or_Outer_in_this_step": 0,
+  "goal_achieved": false
+}

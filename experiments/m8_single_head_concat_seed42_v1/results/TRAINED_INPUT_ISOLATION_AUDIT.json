@@ -1,0 +1,121 @@
+{
+  "no_D1_in_any_new_model": true,
+  "no_training_or_Outer_read": true,
+  "original_initializers": [
+    {
+      "fold": 1,
+      "original_CNN_and_Gate_initial_state_exact": true
+    },
+    {
+      "fold": 2,
+      "original_CNN_and_Gate_initial_state_exact": true
+    },
+    {
+      "fold": 3,
+      "original_CNN_and_Gate_initial_state_exact": true
+    },
+    {
+      "fold": 4,
+      "original_CNN_and_Gate_initial_state_exact": true
+    },
+    {
+      "fold": 5,
+      "original_CNN_and_Gate_initial_state_exact": true
+    }
+  ],
+  "source_sha256": "2069df2be6f091bac6e5c6902ac4f02a9994ec26b5c822afd6258e3e0db7ce4f",
+  "status": "PASS",
+  "trained_checks": [
+    {
+      "fold": 1,
+      "maximum_logit_error": 0.0,
+      "model": "S0",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 1,
+      "maximum_logit_error": 0.0,
+      "model": "S2",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 1,
+      "maximum_logit_error": 0.0,
+      "model": "S4",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 2,
+      "maximum_logit_error": 0.0,
+      "model": "S0",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 2,
+      "maximum_logit_error": 0.0,
+      "model": "S2",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 2,
+      "maximum_logit_error": 0.0,
+      "model": "S4",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 3,
+      "maximum_logit_error": 0.0,
+      "model": "S0",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 3,
+      "maximum_logit_error": 0.0,
+      "model": "S2",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 3,
+      "maximum_logit_error": 0.0,
+      "model": "S4",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 4,
+      "maximum_logit_error": 0.0,
+      "model": "S0",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 4,
+      "maximum_logit_error": 0.0,
+      "model": "S2",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 4,
+      "maximum_logit_error": 0.0,
+      "model": "S4",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 5,
+      "maximum_logit_error": 0.0,
+      "model": "S0",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 5,
+      "maximum_logit_error": 0.0,
+      "model": "S2",
+      "trained_masked_input_isolation": true
+    },
+    {
+      "fold": 5,
+      "maximum_logit_error": 0.0,
+      "model": "S4",
+      "trained_masked_input_isolation": true
+    }
+  ],
+  "validation_only": true
+}

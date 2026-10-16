@@ -1,0 +1,59 @@
+{
+  "actual_matched_FIT_MAC_formulas": [
+    {
+      "expected_actual_affine_MAC": 836053248,
+      "matches_hooks": true,
+      "model": "S0"
+    },
+    {
+      "expected_actual_affine_MAC": 836053248,
+      "matches_hooks": true,
+      "model": "S1"
+    },
+    {
+      "expected_actual_affine_MAC": 836053248,
+      "matches_hooks": true,
+      "model": "S2"
+    },
+    {
+      "expected_actual_affine_MAC": 847290624,
+      "matches_hooks": true,
+      "model": "S3"
+    },
+    {
+      "expected_actual_affine_MAC": 847290624,
+      "matches_hooks": true,
+      "model": "S4"
+    },
+    {
+      "expected_actual_affine_MAC": 847325440,
+      "matches_hooks": true,
+      "model": "REF_M8"
+    },
+    {
+      "expected_actual_affine_MAC": 847325440,
+      "matches_hooks": true,
+      "model": "REF_M8_NO_VAR"
+    },
+    {
+      "expected_actual_affine_MAC": 92160,
+      "matches_hooks": true,
+      "model": "REF_D1"
+    },
+    {
+      "expected_actual_affine_MAC": 835995904,
+      "matches_hooks": true,
+      "model": "REF_RAW_ONLY"
+    },
+    {
+      "expected_actual_affine_MAC": 836088064,
+      "matches_hooks": true,
+      "model": "REF_LATE_FUSION"
+    }
+  ],
+  "full80_new_CNN_head_terms_and_Gate_multiple_checked": true,
+  "no_extra_inference_or_training": true,
+  "pooled_confusion_rows": 160,
+  "source_sha256": "e093e3c725f68983052183b56ded6c06d12bc61d9cb1cc48d006444fc2ad33a9",
+  "status": "PASS"
+}

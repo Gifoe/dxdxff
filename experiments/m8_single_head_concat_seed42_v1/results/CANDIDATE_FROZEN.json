@@ -1,0 +1,113 @@
+{
+  "Outer_used": false,
+  "model_freeze_sha256": "2e826458084522ecf38e97d2c6e5cfac550b03ca9826c759094273166d6d069b",
+  "scores": [
+    {
+      "accuracy": 0.7860186319088655,
+      "auprc": 0.5339581920816606,
+      "auroc": 0.7531059246949905,
+      "ez_fraction_bias": -0.010464592912158607,
+      "f1": 0.46798908434871855,
+      "fold_score_sample_sd": 0.025587437582520044,
+      "hit_at_1": 0.6307692307692307,
+      "macro_f1": 0.6614648227987607,
+      "model": "S1",
+      "mrr": 0.755333263228,
+      "nez_f1": 0.8549405612488027,
+      "parameters": 9329,
+      "physiology_groups": 7,
+      "score": 0.6091997099489481,
+      "weighted_mean": 0.6155965693445782
+    },
+    {
+      "accuracy": 0.7863755721446632,
+      "auprc": 0.5386662855872808,
+      "auroc": 0.7527362586776045,
+      "ez_fraction_bias": -0.014856200808028762,
+      "f1": 0.46602556605099393,
+      "fold_score_sample_sd": 0.025204347922529787,
+      "hit_at_1": 0.6461538461538462,
+      "macro_f1": 0.6611457814410696,
+      "model": "S2",
+      "mrr": 0.7630333409280778,
+      "nez_f1": 0.8562659968311452,
+      "parameters": 9329,
+      "physiology_groups": 6,
+      "score": 0.6096428476589713,
+      "weighted_mean": 0.6159439346396037
+    },
+    {
+      "accuracy": 0.7917529296951383,
+      "auprc": 0.5455691503654104,
+      "auroc": 0.7557737204360344,
+      "ez_fraction_bias": -0.021586373951300697,
+      "f1": 0.47157776368592985,
+      "fold_score_sample_sd": 0.027370411530925395,
+      "hit_at_1": 0.676923076923077,
+      "macro_f1": 0.6658844107576498,
+      "model": "S3",
+      "mrr": 0.7720247604970312,
+      "nez_f1": 0.8601910578293697,
+      "parameters": 10377,
+      "physiology_groups": 7,
+      "score": 0.6140952883178036,
+      "weighted_mean": 0.6209378912005349
+    },
+    {
+      "accuracy": 0.7871111421769577,
+      "auprc": 0.5446300722667324,
+      "auroc": 0.756589298758841,
+      "ez_fraction_bias": -0.008511591221422105,
+      "f1": 0.4732091824699914,
+      "fold_score_sample_sd": 0.027450156396434607,
+      "hit_at_1": 0.6923076923076923,
+      "macro_f1": 0.664677792950369,
+      "model": "S4",
+      "mrr": 0.7817819871642211,
+      "nez_f1": 0.8561464034307469,
+      "parameters": 10377,
+      "physiology_groups": 6,
+      "score": 0.613894288780152,
+      "weighted_mean": 0.6207568278792606
+    }
+  ],
+  "selected_model": "S4",
+  "selection_rule": {
+    "S0": "matched control,not candidate",
+    "candidates": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "close_score_allowance": 0.002,
+    "fold_sampleSD_penalty": 0.25,
+    "force_one_candidate": true,
+    "no_outer_rescue": true,
+    "scope": "legal original validation65appearances/47IDs only; never ownOuter; selection-conditioned exploratory,not new unbiased nestedCV",
+    "score": "weighted patient-appearance mean minus0.25*sampleSD of five fold weighted means",
+    "tie_order": "among models within0.002 of maxscore,fewer parameters,then fewer active physiological measurements,then higher score,MacroF1,AP,AUROC,modelID",
+    "weights": {
+      "auprc": 0.2,
+      "auroc": 0.2,
+      "f1": 0.2,
+      "macro_f1": 0.4
+    }
+  },
+  "source": {
+    "PROJECT_EVIDENCE.json": "95ed9daa13771e190a035d2cc144adb016c7ce0457a5338a76cabe3645f7c6ab",
+    "PROTOCOL_LOCK.json": "9fb4a35b2f7507389a34d421b56641504363e66034ec4edb448b8f6e98bf9e3e",
+    "common.py": "0ca339aa03851ab796a8f530817ea8881addd2e40a9b73c7a4c5b7770af6c916",
+    "complexity.py": "e337ccab4c46f303cd29817ba35a07a14710a303f4a1ea932be7e8e4a60e66e2",
+    "evaluate.py": "b7cb762151c5d119a2ee07bee760b4c6f2d6668f4b4af049aaf2aee9d5f7b3cc",
+    "model.py": "494ebcc2c5fafb008bed25baa0c67f417f5867e2521ee3308c665600f0807913",
+    "report.py": "96c11d019e2674613db0bdbe1142e5ed4f7566f61dca89a6312a781367ae22d1",
+    "selection.py": "d131b5be06a39872e6a4e92e3f55f1dae6cdc4a6d17db81fe6b51fb42a4b7823",
+    "test_model.py": "33c7331f798df107b2a33b0dc2e65b2b23a15c9d82265cbeffab00dd9c819573",
+    "test_protocol.py": "6d61ce3e92441891692c9ab948a488e2bfdae1080a1da7bda29a6e5ac8c64880",
+    "train.py": "ab0d8297b592d52702256c4fc4fe101358b3247bc08c414b60d9e797fbc97ed1",
+    "verify.py": "2bb6681ab6c902bd9a1f47f09ade957f7539c852e0f0bcf2ab56ccf0fc5eb654",
+    "verify_training.py": "2e35dc717d89def4bb35671a9a96f1ce2e7a0d10ccd010db67dee6442d41eac0"
+  },
+  "status": "SELECTED_BEFORE_NEW_OUTER"
+}

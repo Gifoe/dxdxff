@@ -1,0 +1,11 @@
+{
+  "all_sklearn_and_direct_ranking_checks": true,
+  "bootstrap_draws": 10000,
+  "patient_metric_rows": 520,
+  "scope": "development",
+  "selected_model": "S4",
+  "source_metric_sha256": "6c8974e097ff6cb85bbe6f8fa59b246d5e4100c91c50bbb4b082a7dbcf702688",
+  "source_sha256": "96c11d019e2674613db0bdbe1142e5ed4f7566f61dca89a6312a781367ae22d1",
+  "status": "PASS",
+  "threshold_reoptimized": false
+}

@@ -1,0 +1,17 @@
+{
+  "GPU": "NVIDIA GeForce RTX 5090",
+  "actual_input_shape": [
+    3,
+    64,
+    59,
+    500
+  ],
+  "all_models_state_unchanged": true,
+  "complete_FIT_only": true,
+  "fixed3warmups_10alternating_repetitions": true,
+  "hooked_affine_MACs_not_totalFLOPs": true,
+  "models": 10,
+  "original_raw_source_unchanged": true,
+  "source_sha256": "e337ccab4c46f303cd29817ba35a07a14710a303f4a1ea932be7e8e4a60e66e2",
+  "status": "PASS"
+}

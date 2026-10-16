@@ -1,0 +1,6 @@
+{
+  "epochs": 334,
+  "models": 25,
+  "no_new_Outer": true,
+  "status": "ALL25_SINGLE_HEAD_MODELS_FROZEN"
+}

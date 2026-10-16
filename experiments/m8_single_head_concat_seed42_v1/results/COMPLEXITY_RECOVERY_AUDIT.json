@@ -1,0 +1,12 @@
+{
+  "candidate_sha256_unchanged": "b1e7aff98b4cdf609a603b104f85bace146fe22f0611942b46dae92a874ca76b",
+  "executed_source_sha256": "fe11e280d56aa7d4c9b28b910939b4669ad344b29050aa029b46015fc8956c24",
+  "failure_stage": "label_free_FIT_complexity_before_any_new_Outer",
+  "new_models_or_training_changed": false,
+  "only_change": "Historical Raw-only benchmark checkpoint ['model'] -> ['state']",
+  "original_failure": "KeyError:model",
+  "original_source_preserved": true,
+  "original_source_sha256": "e337ccab4c46f303cd29817ba35a07a14710a303f4a1ea932be7e8e4a60e66e2",
+  "recovery_source_sha256": "3cf33f24b77790f240d4c568d17a6475254d1084f99aaf34361c96742bcfd5e5",
+  "status": "PASS"
+}

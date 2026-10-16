@@ -1,0 +1,24 @@
+{
+  "all_roles_epochs_thresholds_initializers_checked": true,
+  "epochs": 334,
+  "maximum_logit_error": 0.0,
+  "model_freeze_sha256": "2e826458084522ecf38e97d2c6e5cfac550b03ca9826c759094273166d6d069b",
+  "models": 25,
+  "no_D1_in_any_new_model": true,
+  "source": {
+    "PROJECT_EVIDENCE.json": "95ed9daa13771e190a035d2cc144adb016c7ce0457a5338a76cabe3645f7c6ab",
+    "PROTOCOL_LOCK.json": "9fb4a35b2f7507389a34d421b56641504363e66034ec4edb448b8f6e98bf9e3e",
+    "common.py": "0ca339aa03851ab796a8f530817ea8881addd2e40a9b73c7a4c5b7770af6c916",
+    "complexity.py": "e337ccab4c46f303cd29817ba35a07a14710a303f4a1ea932be7e8e4a60e66e2",
+    "evaluate.py": "b7cb762151c5d119a2ee07bee760b4c6f2d6668f4b4af049aaf2aee9d5f7b3cc",
+    "model.py": "494ebcc2c5fafb008bed25baa0c67f417f5867e2521ee3308c665600f0807913",
+    "report.py": "96c11d019e2674613db0bdbe1142e5ed4f7566f61dca89a6312a781367ae22d1",
+    "selection.py": "d131b5be06a39872e6a4e92e3f55f1dae6cdc4a6d17db81fe6b51fb42a4b7823",
+    "test_model.py": "33c7331f798df107b2a33b0dc2e65b2b23a15c9d82265cbeffab00dd9c819573",
+    "test_protocol.py": "6d61ce3e92441891692c9ab948a488e2bfdae1080a1da7bda29a6e5ac8c64880",
+    "train.py": "ab0d8297b592d52702256c4fc4fe101358b3247bc08c414b60d9e797fbc97ed1",
+    "verify.py": "2bb6681ab6c902bd9a1f47f09ade957f7539c852e0f0bcf2ab56ccf0fc5eb654",
+    "verify_training.py": "2e35dc717d89def4bb35671a9a96f1ce2e7a0d10ccd010db67dee6442d41eac0"
+  },
+  "status": "PASS"
+}

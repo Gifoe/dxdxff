@@ -1,0 +1,100 @@
+{
+  "all4_primary_classification_pass": false,
+  "all8_point_estimate_pass": false,
+  "candidate_selected_without_Outer": true,
+  "failed_metrics": [
+    {
+      "candidate": 0.7427982342639561,
+      "delta": -0.01736811937900029,
+      "metric": "accuracy",
+      "original_M8": 0.7601663536429564,
+      "passes": false
+    },
+    {
+      "candidate": 0.75368230701968,
+      "delta": -0.00871429659605416,
+      "metric": "auroc",
+      "original_M8": 0.7623966036157341,
+      "passes": false
+    },
+    {
+      "candidate": 0.627716225557034,
+      "delta": -0.006380884341720461,
+      "metric": "macro_f1",
+      "original_M8": 0.6340971098987545,
+      "passes": false
+    },
+    {
+      "candidate": 0.818388725255945,
+      "delta": -0.015718634396004294,
+      "metric": "nez_f1",
+      "original_M8": 0.8341073596519493,
+      "passes": false
+    }
+  ],
+  "failure_boundary": "Independent D1 branch cannot yet be removed without verified performance loss.",
+  "freeze_sha256": "34d95ce017d4b3993bc284a88834db367c646d3e154d148e2ff2a1eccacb8484",
+  "metrics": [
+    {
+      "candidate": 0.7427982342639561,
+      "delta": -0.01736811937900029,
+      "metric": "accuracy",
+      "original_M8": 0.7601663536429564,
+      "passes": false
+    },
+    {
+      "candidate": 0.75368230701968,
+      "delta": -0.00871429659605416,
+      "metric": "auroc",
+      "original_M8": 0.7623966036157341,
+      "passes": false
+    },
+    {
+      "candidate": 0.5687742560105296,
+      "delta": 0.014706969812032122,
+      "metric": "auprc",
+      "original_M8": 0.5540672861984974,
+      "passes": true
+    },
+    {
+      "candidate": 0.627716225557034,
+      "delta": -0.006380884341720461,
+      "metric": "macro_f1",
+      "original_M8": 0.6340971098987545,
+      "passes": false
+    },
+    {
+      "candidate": 0.43704372585812284,
+      "delta": 0.002956865712563095,
+      "metric": "f1",
+      "original_M8": 0.43408686014555975,
+      "passes": true
+    },
+    {
+      "candidate": 0.818388725255945,
+      "delta": -0.015718634396004294,
+      "metric": "nez_f1",
+      "original_M8": 0.8341073596519493,
+      "passes": false
+    },
+    {
+      "candidate": 0.8125118969776228,
+      "delta": 0.06320164321510091,
+      "metric": "mrr",
+      "original_M8": 0.7493102537625219,
+      "passes": true
+    },
+    {
+      "candidate": 0.725,
+      "delta": 0.08750000000000002,
+      "metric": "hit_at_1",
+      "original_M8": 0.6375,
+      "passes": true
+    }
+  ],
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "scientifically_confirmed_noninferiority": false,
+  "seal_sha256": "7ad3427cfe4b2c26077c4ac2350c2b87463d592df31d3376ff899a070937b5c9",
+  "selected_model": "S4",
+  "status": "FAIL_STRICT_M8_TARGET"
+}

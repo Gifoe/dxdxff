@@ -1,0 +1,28 @@
+{
+  "study": "m8_nonlocal6_measurement_qualification_seed42_v1",
+  "stage": "prospective_unlabeled_measurement_qualification_only",
+  "seed": 42,
+  "parent_preregistered_source_audit_commit": "901b882c480cb8b93f6081d4b361deccf09c4dbb",
+  "parent_actual_result_commit": "1f982b96cf4f5fb2146237e1fc8d0033f2648b01",
+  "parent_private_diagnostic_sha256": "8ecd98a79d3cbffc13cb6eba6ebd3528443ee07671f9e1f9e705e0aef66e8093",
+  "cohort": {"patients": 80, "channels": 7635, "records": 256, "record_channel_units": 24995, "valid_Raw250_channel_windows": 1471965},
+  "source": "Existing hash-verified Raw250 valid-window pool values only; partial high-gamma group2 and line-length group5. No new EEG extraction. Preserve original Raw masks, including the disclosed 27 native-mask disagreements.",
+  "groups": ["early_partial_HG_80_125_slope", "early_LL_slope", "baseline_crossing_partial_HG_80_125", "baseline_crossing_LL", "post_top20_partial_HG_80_125", "post_top20_LL"],
+  "source8_indices": [0, 1, 2, 3, 6, 7],
+  "continuous_aggregation": "Equal-seizure mean and population SD over present record-channel units. Float64 aggregation of the frozen float32 record scalars. No averaging across absent channels or padded records.",
+  "crossing_definition": "Frozen float32 pre mean + 2 pre SD; first post center meeting >= threshold; fraction normalized by max absolute retained center. This is not clinical onset time.",
+  "crossing_eligibility": "At least two pre and two post valid windows, all finite, pre population SD strictly positive. Zero-pre-SD units are quality missing, not early crossings.",
+  "crossing_aggregation": "Coordinate1 mean fraction only among observed eligible crossings; NaN if none. Coordinate2 observed/eligible seizure count; 0 if eligible but no crossing, NaN if no eligible episode. Never average the no-crossing fallback into coordinate1.",
+  "patient_relative_views": {
+    "unit_equivariant": "Float64 within-patient NaN-aware mean and population SD per coordinate; divide by positive SD, otherwise1. No absolute SD floor or clipping.",
+    "legacy_diagnostic": "Float64 within-patient NaN-aware mean and population SD; divide by max(SD,1e-8). Diagnostic comparator only, not a new trained arm."
+  },
+  "inner_preprocessing": "Reuse all20 original selection partitions; identity-only mapping to canonical archive. Fit imputer mean and population mean/SD exclusively on each selection TRAIN after patient-relative transform. SD0->1. Report CAL/CHOICE/HELD finite fraction and maximum absolute transformed values without labels or scores.",
+  "quality_gates": {"minimum_continuous_record_finite_rate": 0.99, "minimum_primary_coordinate_coverage": 0.99, "minimum_crossing_baseline_eligible_rate": 0.99, "minimum_selection_train_nonconstant_patient_fraction": 0.5, "nonconstant_relative_range_float32_eps_multiple": 64, "unit_stress_scales": [1e-12, 1e12], "unit_equivariance_atol": 1e-9, "permutation_atol": 0.0},
+  "censoring_policy": "Observed-crossing time missingness is legitimate censoring and separately reported; no minimum crossing prevalence. Its missingness cannot be counted as bad-source finite-rate failure. Crossing-rate coordinate must meet coverage gate.",
+  "group_eligibility": "Source coverage/baseline eligibility and required coordinate coverage pass, and at least one coordinate has nonconstant fraction>=0.5 in every one of20 own selection TRAIN partitions. Unit-equivalent transform and all fitted input arrays finite after TRAIN-only imputation. No outcome-based choice.",
+  "permutation": "Reverse channels and records independently; aggregate after inverse channel mapping and sorting records by frozen ledger ordinal must be exactly equal (NaN equal). Canonical summation order is mandatory.",
+  "unit_stress_scope": "Multiply already-defined coordinates by positive unit scales; this tests representation normalization only, not raw voltage-unit invariance of log1p power.",
+  "prohibitions": ["no labels indexed", "no classifier fit", "no prediction or classification metrics", "no original Development or Outer results read", "no model/pool/threshold changes", "no patient/channel/record exclusion to pass gates", "no rank operators", "no allocation gate relaxation"],
+  "next_stage": "Qualification is neither predictive contribution nor adoption. Any supervised study requires a separate prospective protocol, uniform matched preprocessing controls, and legal inner-only selection."
+}

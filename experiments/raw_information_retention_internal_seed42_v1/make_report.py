@@ -120,6 +120,18 @@ def main(root, output):
     max_row = absolute[(absolute.arm == candidate_max) & (absolute.metric == 'f1')].iloc[0]
     interaction = (values.loc['C3_PRE_LONG', 'f1'] - values.loc['C2_WINDOW_LONG', 'f1']
                    - values.loc['C1_PRE_SHORT', 'f1'] + values.loc['C0_WINDOW_SHORT', 'f1'])
+    interaction_ci = pd.read_csv(root / 'NORMALIZATION_ENCODER_INTERACTION.csv').set_index('metric').loc['f1']
+    assert abs(interaction - interaction_ci['mean']) < 1e-12
+    oracle = pd.read_csv(root / 'INTERNAL_ORACLE_THRESHOLD_DIAGNOSTIC.csv')
+    oracle_table = []
+    for arm in LABELS:
+        g = oracle[oracle.arm == arm].set_index('metric')
+        assert abs(g.loc['actual_f1', 'mean'] - values.loc[arm, 'f1']) < 1e-12
+        gap = g.loc['oracle_minus_actual']
+        oracle_table.append({'配置': LABELS[arm], '实际内部EZ-F1': g.loc['actual_f1', 'mean'],
+                             '标签已知的阈值上限': g.loc['oracle_f1', 'mean'],
+                             '乐观上限减实际': gap['mean'],
+                             '差值95%下界': gap.low, '差值95%上界': gap.high})
     text = f'''# Raw信息保留与组件贡献：内部患者隔离实验
 
 ## 结论边界
@@ -175,7 +187,8 @@ Pre-scale在两种CNN内分别与Window比较；Long与Short在两种归一化�
 
 Pre-scale在Short CNN内的EZ-F1差为{paired_text('C1_PRE_SHORT', 'C0_WINDOW_SHORT', 'f1')}；
 在Long CNN内为{paired_text('C3_PRE_LONG', 'C2_WINDOW_LONG', 'f1')}。
-两差之差的点估计为{interaction:+.6f}；这里不从两个边际区间推算交互区间。
+两差之差的点估计为{interaction:+.6f}，联合四臂患者聚类区间为
+[{interaction_ci.low:+.6f}, {interaction_ci.high:+.6f}]，不是从两个边际区间拼接得到。
 潜变量患者调制相对同一Long/Pre-scale主干的EZ-F1差为
 {paired_text('C4_PRE_LONG_CONTEXT', 'C3_PRE_LONG', 'f1')}。
 
@@ -233,6 +246,24 @@ cal最大回放误差为{verification['calibration_replay_max_error']:.9g}，
 本轮新Outer次数为0。历史Outer已经多次被查看，其既往结果只具有探索性解释。
 内部筛选结果仅决定是否值得另行注册少量最终训练与冻结评价；不能回看历史Outer选择配置，
 也不能把内部最大EZ-F1、Macro-F1、NEZ-F1或 pooled F1替代患者EZ-F1>0.65的目标。
+
+从源码可确定，阶段均值对同一阶段内窗口编码的排列不敏感，跨发作均值/SD也不保留发作顺序。
+Long CNN只改变每个2秒窗口内部的编码，并未补回阶段内时间顺序。
+这是一项表征结构限制，不是本轮数据证明的生理机制，也不证明加入序列模块必然提高定位性能。
+若继续优化，需先以新的有限预算注册检验该限制，不能把本轮预算事后扩成无限搜索。
+
+### 阈值瓶颈诊断，不是模型性能
+
+以下是训练开始后新增的事后内部诊断，不是原注册终点。
+对于每个held患者的固定通道分数，在已知该患者标签时枚举所有可由一个分数阈值实现的分类集合，
+计算最高EZ-F1；相同分数的通道必须一起纳入，不能按标签拆开平分。
+因此它只是当前有限样本、当前固定分数的乐观阈值上限，既使用了评价标签，又存在最大化偏差，
+不是合法预测规则，也不预测外部数据可达到的性能。
+实际阈值、权重、追加规则未因该诊断改变，诊断本身没有新增推理或Outer访问。
+
+{table(pd.DataFrame(oracle_table))}
+
+这一诊断只能指出现有分数中还有多少阈值层面的余量，不能把“上限超过0.65”写成目标已经达成。
 
 源表：`results/deterministic_execution_v2/FIRST_PATH_*`、`ADDITIONAL_PATH_RESULTS.csv`、
 `RACING_DECISIONS.json`及`INDEPENDENT_VERIFICATION.json`。图和所有数值由同一匿名汇总表生成。

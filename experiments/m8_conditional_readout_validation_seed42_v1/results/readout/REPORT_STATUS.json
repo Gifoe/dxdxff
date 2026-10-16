@@ -1,0 +1,10 @@
+{
+  "full_M8_or_end_to_end_Concat_tested_in_this_supplement": false,
+  "full_Raw_encoder_retraining": 0,
+  "goal_full_completion_proven": false,
+  "original_Development_or_Outer_used": false,
+  "patient_appearances_per_procedure": 255,
+  "rows": 1530,
+  "status": "COMPLETE_VERIFIED_BOUNDED_INTERNAL_READOUT_TRANSFER",
+  "unique_patients": 79
+}

@@ -31,3 +31,31 @@ selected set.
 
 No positive result is assumed and no further full model is automatically
 launched. Source and protocol are pushed before any new readout fitting.
+
+## Actual outcome and terminal reproduction
+
+All90 small readouts completed928 epochs. Every sealed logit, calibration
+threshold and epoch was replayed;1530 patient metric rows were independently
+checked. The prospective allocation gate failed. No full Raw/M8 model or
+new Outer is launched. See [REPORT.md](REPORT.md) and the complete anonymous
+tables under `results/readout/`.
+
+The original `run_checked.ps1` records the historical execution. Its initial
+report stage stopped on exact replay because a legacy import reset PyTorch
+threads. `diagnose_replay.py` established the setting mismatch without reading
+assessment metrics. `replay_one_thread.py` restores the declared production
+one-thread setting after that import, leaving every frozen source and output
+unchanged. Use that wrapper for explicit report replay, not a training restart:
+
+```powershell
+$env:OMP_NUM_THREADS='1'
+$env:MKL_NUM_THREADS='1'
+$env:OPENBLAS_NUM_THREADS='1'
+& 'E:\Anaconda\envs\persist_stable_251\python.exe' -u `
+  'D:\m8_conditional_readout_validation_seed42_v1\replay_one_thread.py'
+```
+
+Keep the foreground SSH owner alive, use new log filenames and inspect live
+workers first. `run_readouts.py` refuses to refit an already sealed experiment.
+The public-only `verify_release.py` needs NumPy/pandas, verifies transferred
+bytes and published arithmetic, and does not require private data or models.

@@ -1,0 +1,16 @@
+{
+  "MKL_NUM_THREADS": 1,
+  "OMP_NUM_THREADS": 1,
+  "OPENBLAS_NUM_THREADS": 1,
+  "device": "CPU",
+  "intraop_threads_after_imports": 1,
+  "new_Raw_encoder_or_Outer_inference": false,
+  "numpy": "2.2.6",
+  "objective_source_sha256": "8b35ce9bc8035fc7d40b0759c28e12b2b702257b61c692bd07f9e0fbe2c0497f",
+  "precision": "FP32 highest",
+  "process_affinity": [
+    16
+  ],
+  "python": "3.10.20",
+  "torch": "2.8.0+cu128"
+}

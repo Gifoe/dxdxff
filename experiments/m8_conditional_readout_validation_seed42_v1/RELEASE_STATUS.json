@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "transferred_public_files": 17,
+  "previous_v2_release_files_unchanged": 135,
+  "previous_conditional_public_files_unchanged": 19,
+  "readout_fits": 90,
+  "readout_epochs": 928,
+  "exact_sealed_logit_replays": 90,
+  "independent_patient_metric_rows": 1530,
+  "reported_main_metric_cells_checked": 24,
+  "allocation_gate": "FAIL",
+  "new_full_Raw_or_M8_training": 0,
+  "new_Outer_inference": false,
+  "stable_minimum_or_reliable_neural_increment_proven": false
+}

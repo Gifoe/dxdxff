@@ -1,0 +1,16 @@
+fold,screen,numeric_group_k,measurement_attributes,coarse_families,no_input_or_selection_change
+1,1,6,6,3,True
+1,2,5,5,4,True
+1,3,8,7,6,True
+2,1,7,6,5,True
+2,2,6,6,4,True
+2,3,9,9,6,True
+3,1,6,5,3,True
+3,2,9,9,5,True
+3,3,9,8,6,True
+4,1,7,7,5,True
+4,2,6,6,4,True
+4,3,5,5,4,True
+5,1,8,8,4,True
+5,2,5,4,2,True
+5,3,7,7,4,True

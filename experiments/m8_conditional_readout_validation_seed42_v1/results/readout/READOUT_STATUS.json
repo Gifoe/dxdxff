@@ -1,0 +1,15 @@
+{
+  "actual_input_mask_admission": true,
+  "actual_readout_fits": 90,
+  "assessment_not_used_for_new_cardinality": true,
+  "epochs": 928,
+  "formal_gradient_admission": true,
+  "logical_cells": 90,
+  "matched_initializers": true,
+  "neural_Raw_encoder_training": 0,
+  "not_full_M8_or_end_to_end_Concat": true,
+  "original_Development_or_Outer_used": false,
+  "parameters_per_readout": 16513,
+  "score_seal_sha256": "fc52493ef4c4bcc4820beb2f1d276a57cec046aec8bd5326b314d01bb06bb423",
+  "status": "ALL90_INTERNAL_READOUTS_SEALED_BEFORE_ASSESSMENT_REPORT"
+}

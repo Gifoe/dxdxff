@@ -1,0 +1,11 @@
+{
+  "all_calibration_thresholds_and_epochs_match": true,
+  "every_logit_replay_exact": true,
+  "independent_patient_metrics": true,
+  "logical_cells": 90,
+  "no_neural_training_or_new_Outer": true,
+  "patient_metric_rows": 1530,
+  "role_preprocessing_and_initialization_checks": true,
+  "source_sha256": "d02a1ea59efda44b5e1bd6483a987dcd5a421c7b08a70b710735da4863ac75b2",
+  "status": "PASS"
+}

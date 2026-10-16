@@ -1,0 +1,57 @@
+{
+  "after_legal_import": {
+    "float32_precision": "highest",
+    "interop_threads": 24,
+    "mkldnn": true,
+    "tf32_cudnn": true,
+    "tf32_matmul": false,
+    "threads": 2
+  },
+  "before_legal_import": {
+    "float32_precision": "highest",
+    "interop_threads": 24,
+    "mkldnn": true,
+    "tf32_cudnn": true,
+    "tf32_matmul": false,
+    "threads": 1
+  },
+  "checkpoint_and_preprocessing_unchanged": true,
+  "first_cell": {
+    "arm": "RAW_ONLY",
+    "fold": 1,
+    "screen": 1,
+    "seed": 42
+  },
+  "no_threshold_or_scientific_change": true,
+  "status": "DIAGNOSED_NO_FITTING_OR_OUTCOME_METRICS",
+  "tests": [
+    {
+      "array_equal": false,
+      "config": {
+        "float32_precision": "highest",
+        "interop_threads": 24,
+        "mkldnn": true,
+        "tf32_cudnn": true,
+        "tf32_matmul": false,
+        "threads": 2
+      },
+      "different_values": 2,
+      "max_absolute_error": 1.7881393432617188e-07,
+      "mode": "as_report"
+    },
+    {
+      "array_equal": true,
+      "config": {
+        "float32_precision": "highest",
+        "interop_threads": 24,
+        "mkldnn": true,
+        "tf32_cudnn": true,
+        "tf32_matmul": false,
+        "threads": 1
+      },
+      "different_values": 0,
+      "max_absolute_error": 0.0,
+      "mode": "explicit_production"
+    }
+  ]
+}

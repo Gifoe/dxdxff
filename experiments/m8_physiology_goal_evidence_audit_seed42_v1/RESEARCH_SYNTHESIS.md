@@ -142,6 +142,30 @@ contrasts cannot be substituted for independently held-out end-to-end neural
 performance. The corresponding feature sets were not stable, pediatric
 AUROC decreased, and no new candidate was sent to Outer.
 
+### Nonlinear transfer of the conditional internal signal
+
+The separately registered
+[frozen-Raw readout experiment](../m8_conditional_readout_validation_seed42_v1/REPORT.md)
+trained90 matched nonlinear heads on15 strictly internal assessment paths,
+with two head seeds and no new encoder or Outer inference. Each path selected
+its own k using feature-choice patients, not its assessment labels. All90
+models completed928 epochs and their sealed logits replayed exactly.
+
+Selected versus Raw-only AUROC was0.724060 versus0.723091, Macro-F1
+0.602533 versus0.601583 and EZ-F1 0.385705 versus0.383966. The paired
+four-endpoint utility change was0.002855[−0.005310,0.009238]. Classification
+changes were not positive in both head seeds. The predeclared continuation
+rule failed, so no additional full M8 training was launched. These fixed-CNN
+readouts test one transfer question; they are not renamed full M8 models.
+
+Definition grouping also did not rescue the feature identity stability.
+Raw-conditional final sets had exact/attribute/coarse-family mean Jaccard
+0.000/0.010/0.050; among nonempty folds, attribute/coarse-family overlap
+remained0.017/0.083. This post hoc sensitivity changes no model inputs and
+does not declare broad-family members interchangeable. The conditional ridge
+signal cannot currently support a stable minimal set or reliable nonlinear
+Raw increment.
+
 ## Decision for the model and the manuscript
 
 No new universal feature list is adopted. The study does not substantiate

@@ -1,0 +1,76 @@
+{
+  "code_sha256": "212c1220a24c3747b7f8caba1b765f78c68f112e48f4cddfc42c046fbbede4d7",
+  "files": {
+    "ALLOCATION_GATE.json": {
+      "bytes": 342,
+      "sha256": "5b5bcba10bff8463550c6cfd4caa0389acd47e0371edeb9feb27358b4e842e4c"
+    },
+    "ENVIRONMENT.json": {
+      "bytes": 431,
+      "sha256": "a3601b58b8477c77c4a069a3ee290e0b6c852e84a716e9b1114dc25e742bf31f"
+    },
+    "FROZEN_READOUT_PLAN.csv": {
+      "bytes": 5267,
+      "sha256": "5f5758a430fe5f4a8fc2f4997186e82bca788482ac4982cf497924a4bf128fae"
+    },
+    "READOUT_FOLD_RESULTS.csv": {
+      "bytes": 2916,
+      "sha256": "67f72b12ed09dec8bf69a6ccc0289f69ddf84d3ca65f7e7ae188f02a61e88cfd"
+    },
+    "READOUT_HEAD_SEED_STABILITY.csv": {
+      "bytes": 420,
+      "sha256": "b484516849bda5255163d81c7c1166d34c9bfca0a9049c1fcd4d4dfa1f8819f8"
+    },
+    "READOUT_MAIN_RESULTS.csv": {
+      "bytes": 674,
+      "sha256": "36b0d80ad9041de9c3402f8fc912df0737bf38144aab5c7c8b0dd43bfdcf6cf9"
+    },
+    "READOUT_PAIRED_INTERVALS.csv": {
+      "bytes": 2086,
+      "sha256": "0b473d52acbe0faae91b1e59f724f7d0e36cc5d372b26b539aa4002e36f4488d"
+    },
+    "READOUT_REPLAY_VERIFICATION.csv": {
+      "bytes": 3251,
+      "sha256": "41c69c83224e11f0eb80224639aa0d69281852d22c1649482cfea15e00826420"
+    },
+    "READOUT_SEED_RESULTS.csv": {
+      "bytes": 1275,
+      "sha256": "31bbc2f4b856d41dead10d3688dbca535dbb97ed5be9e69d054f289e07e39c8f"
+    },
+    "READOUT_SELECTION.csv": {
+      "bytes": 22152,
+      "sha256": "8f225790926ea3003722ee59de8b76d1570cd5a4c51afd93b571ae6614e82b00"
+    },
+    "READOUT_SOURCE_RESULTS.csv": {
+      "bytes": 2376,
+      "sha256": "b20a25a43ebc1cbb3621033e1355f8030d5f9b042e8cefda9de4aba06f362f6c"
+    },
+    "READOUT_STATUS.json": {
+      "bytes": 568,
+      "sha256": "abe86fc25897feacd617ca0651fd96289829604cb290cd13b203c2d9497dddd4"
+    },
+    "READOUT_UNIQUE_ID_BALANCED_RESULTS.csv": {
+      "bytes": 675,
+      "sha256": "8b21b2599daf9d45d11f1deae87660b089366f07f0d05f4fac87b72a82d82a7b"
+    },
+    "READOUT_UTILITY_INTERVALS.csv": {
+      "bytes": 185,
+      "sha256": "664f4c29fcffb4b83d755f0337395248da6c17370140fb28b2697e0c58b16608"
+    },
+    "REPLAY_DIAGNOSIS.json": {
+      "bytes": 1369,
+      "sha256": "f90ba62c549da7346196f070f6c6b2258aa7f4cf71fa1ae92e5983dd4f8b5314"
+    },
+    "REPLAY_STATUS.json": {
+      "bytes": 402,
+      "sha256": "1e148107e49dcc3d024a24e6c18eeaffcd3e869e48dddd96676ee7832d8202e7"
+    },
+    "REPORT_STATUS.json": {
+      "bytes": 353,
+      "sha256": "43945e023220319091cdc88284abc501c860b5ec55f389581c7c6d0e04a8ec63"
+    }
+  },
+  "original_scientific_inputs_and_Outer_seal_unchanged": true,
+  "sealed_scores_unchanged": true,
+  "status": "PASS"
+}

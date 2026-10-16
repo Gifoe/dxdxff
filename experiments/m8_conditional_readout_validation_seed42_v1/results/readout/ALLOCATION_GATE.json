@@ -1,0 +1,9 @@
+{
+  "all_source_AUROC_deltas_at_least_minus002": true,
+  "each_primary_mean_positive_in_both_head_seeds": false,
+  "four_endpoint_utility_CI_lower_positive": false,
+  "no_full_Raw_M8_training_automatically_authorized": true,
+  "not_independent_confirmation": true,
+  "stable_minimal_feature_set_not_proven": true,
+  "status": "FAIL"
+}

@@ -1,0 +1,39 @@
+{
+  "cells": 35,
+  "coverage": [
+    {
+      "channels": 1631,
+      "fold": 1,
+      "patients": 16,
+      "valid_windows": 333155
+    },
+    {
+      "channels": 1498,
+      "fold": 2,
+      "patients": 16,
+      "valid_windows": 265639
+    },
+    {
+      "channels": 1746,
+      "fold": 3,
+      "patients": 17,
+      "valid_windows": 375476
+    },
+    {
+      "channels": 1425,
+      "fold": 4,
+      "patients": 15,
+      "valid_windows": 244998
+    },
+    {
+      "channels": 1335,
+      "fold": 5,
+      "patients": 16,
+      "valid_windows": 252697
+    }
+  ],
+  "fullOuter_truth_read": false,
+  "primary": "SELECTED",
+  "score_seal_sha256": "0e8c2454ac21ad3af3b980294da28e06f01327ef26844a09210babeb4a2245ae",
+  "status": "ALL35_FROZEN_FRESH_RAW_SCORE_CELLS_SEALED"
+}

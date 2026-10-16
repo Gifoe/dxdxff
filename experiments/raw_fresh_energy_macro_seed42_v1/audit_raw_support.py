@@ -1,4 +1,7 @@
 """Post-seal, label-free Raw mask/support census; no model fit or prediction."""
+# Match the verified training/evaluation dependency order. Importing torch
+# first aborts this Windows environment on duplicate OpenMP initialization.
+import numpy as np
 import torch
 import final_stage as f
 c=f.c
@@ -12,11 +15,18 @@ def main():
     meta,_=c.io.identity_and_banks(labels=False);store=c.RawStore()
     counts=dict(patients=0,canonical_channels=0,seizure_records=0,valid_windows=0,pre_windows=0,
         phase_0to8_windows=0,phase_8to20_windows=0,at_or_after20_windows=0,channel_seizure_units=0,
-        available_channel_seizure_units_missing_pre=0,channels_missing_0to8_in_all_seizures=0,channels_missing_8to20_in_all_seizures=0)
+        available_channel_seizure_units_missing_pre=0,channels_missing_0to8_in_all_seizures=0,channels_missing_8to20_in_all_seizures=0,
+        invalid_window_slots=0,invalid_slots_with_nonfinite_times=0,valid_windows_with_nonfinite_times=0)
     minimum=maximum=None
     for pid in sorted(set(meta['patient'])):
         ii=c.np.flatnonzero(meta['patient']==pid);raw,mask,times=store.get(pid,meta['channel'][ii],device='cpu')
-        assert torch.isfinite(raw).all() and torch.isfinite(times).all() and raw.shape[-1]==500
+        bad_time=(~torch.isfinite(times))[:,None,:].expand_as(mask)
+        counts['invalid_window_slots']+=int((~mask).sum())
+        counts['invalid_slots_with_nonfinite_times']+=int((bad_time&~mask).sum())
+        counts['valid_windows_with_nonfinite_times']+=int((bad_time&mask).sum())
+        # Historical padding may have NaN time. Its mask is false and it is
+        # never encoded or pooled. Do not convert it into a valid window.
+        assert torch.isfinite(raw).all() and not (bad_time&mask).any() and raw.shape[-1]==500
         pre=mask&(times[:,None,:]<0);a=mask&((times[:,None,:]>=0)&(times[:,None,:]<8))
         b=mask&((times[:,None,:]>=8)&(times[:,None,:]<20));late=mask&(times[:,None,:]>=20)
         assert torch.equal(pre|a|b|late,mask);available=mask.any(-1)

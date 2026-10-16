@@ -1,0 +1,25 @@
+{
+  "goal_requires_independent_completion_audit": true,
+  "independent_confirmation": false,
+  "outer_oracle": false,
+  "patient_equal_macro_f1": {
+    "FROZEN_PRE": 0.6314324049383006,
+    "NATIVE": 0.6304930529317453,
+    "PRE_LOGENERGY": 0.61979471732669,
+    "PRE_MEAN": 0.6349363631124058,
+    "SELECTED": 0.6243652605899375,
+    "WINDOW_LOGENERGY": 0.6192375376520328,
+    "WINDOW_MEAN": 0.6155955090922889
+  },
+  "postOuter_tuning": false,
+  "primary": "SELECTED",
+  "primary_point_over_065": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "secondary_points_over_065": {
+    "PRE_LOGENERGY": false,
+    "PRE_MEAN": false,
+    "WINDOW_LOGENERGY": false,
+    "WINDOW_MEAN": false
+  },
+  "status": "COMPLETE_SEVEN_FRESH_RAW_PROCEDURES"
+}

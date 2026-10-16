@@ -2,8 +2,9 @@
 
 This is the completed **internal** study, not a complete80-patient Outer
 result and not an achievement of the >0.65 goal. Final FIT/Development training
-was started only after the independent internal gate passed. Its results are
-not filled into this report.
+was started only after the independent internal gate passed. Its now-completed
+results are kept separate in [RUN_REPORT.md](RUN_REPORT.md): final primary
+0.624365 and no fixed secondary >0.65.
 
 ## Executed and verified
 

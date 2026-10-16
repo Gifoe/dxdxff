@@ -1,0 +1,166 @@
+{
+  "Development_checks": [
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_MEAN",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_LOGENERGY",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_LOGENERGY",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_MEAN",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_LOGENERGY",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_LOGENERGY",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_MEAN",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_LOGENERGY",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_LOGENERGY",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_MEAN",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_LOGENERGY",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_LOGENERGY",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_MEAN",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "WINDOW_LOGENERGY",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_LOGENERGY",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    }
+  ],
+  "all9_patient_metrics_independent": true,
+  "all_four_initializers_exact_per_fold": true,
+  "channels_per_procedure": 7635,
+  "fresh_fits": 20,
+  "independent_confirmation": false,
+  "independent_paired_CI_checks": 90,
+  "logical_cells": 35,
+  "maximum_metric_error": 1.1102230246251565e-16,
+  "model_freeze_sha256": "73b7708f4a6f41e87337fb03797398f3e99eb54913fd7339dd63843718685ef8",
+  "no_training_or_Outer_inference_in_verifier": true,
+  "patient_metric_rows": 560,
+  "patients_per_procedure": 80,
+  "primary": "SELECTED",
+  "primary_point_over_065": false,
+  "procedures": 7,
+  "reference_predictions_unchanged": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "0e8c2454ac21ad3af3b980294da28e06f01327ef26844a09210babeb4a2245ae",
+  "selected_aliases_exact": true,
+  "source_role_and_archive_identity_exact": true,
+  "status": "PASS",
+  "valid_Raw250_windows": 1471965
+}

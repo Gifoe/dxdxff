@@ -1,6 +1,12 @@
 # Fresh-start Raw response-energy factorial, Macro-F1, seed42
 
-Prospective protocol. No new result or target achievement is claimed yet.
+Completed and independently verified; **the >0.65 target was not achieved**.
+Full80 primary Macro-F1 is **0.624365**; Native remains **0.630493**.
+The highest fixed secondary point is PRE_MEAN **0.634936**, with its paired
+gain CI crossing zero. It is not adopted as a best-Outer winner.
+See [RUN_REPORT.md](RUN_REPORT.md),
+[all seven procedures](results/final_stage_v1/OUTER_PATIENT_MEAN.csv), and
+[delivery/target audit](results/final_stage_v1/DELIVERY_COMPLETION_AUDIT.json).
 Goal: original complete80-patient equal-weight Macro-F1 >0.65. Existing exact
 Native Raw-only reference: 0.6304930529317453. Earlier negative warm-adaptation
 and EZ-first studies are preserved, not relabeled as successful Macro fits.
@@ -39,7 +45,7 @@ is exploratory repeated-test because historical outcomes have been viewed.
 An internal result, green admission, oracle or pooled metric cannot establish
 the requested full80-patient target. No unrun cells will be filled with proxies.
 
-## Completed internal stage, final stage pending
+## Completed internal and final stages
 
 All42registeredfreshfits/1062epochs and independent replay finished. First-path
 Macro-F1: WINDOW_MEAN0.600015, WINDOW_LOGENERGY0.599525, PRE_MEAN0.625949,
@@ -52,5 +58,9 @@ PRE_LOGENERGY for folds1–5. See [INTERNAL_REPORT.md](INTERNAL_REPORT.md) and
 `FINAL_PROTOCOL_LOCK.json` and final code were frozen before original
 Development access. `run_final.ps1` performs the20freshfinalfits and one joint
 35-cell sealedOuter evaluation; the primary is the ownFIT-selected policy,
-not the best secondary Outer arm. No final result is claimed until its actual
-completion and verification. `python verify_public.py` checks public delivery.
+not the best secondary Outer arm. No final result was claimed before actual
+completion and verification. Final20fits/474epochs,35sealedcells and560patient
+metricrows are now independently verified. The Raw mask census and162CI-row
+checks also passed. The fixed aggregator uses pre and0to20 support;
+247393validlatewindows are encoded but not claimed to affect classification.
+`python audit_completion.py` and `python verify_public.py` check public delivery.

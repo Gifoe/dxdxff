@@ -1,0 +1,15 @@
+{
+  "all9_metric_coverage_80perprocedure": true,
+  "all_absolute_paired_and_factorial_CIs": true,
+  "fold_means_and_sampleSD_exact": true,
+  "independent_bootstrap_metric_checks": 162,
+  "maximum_bootstrap_difference": 2.220446049250313e-16,
+  "metric_artifact_sha256": "050b5fb1d9893dce661bea4b5fb3a2de5462fc8c75177b6b23d987f5fbb9f92f",
+  "no_training_or_prediction": true,
+  "scope": "already_independently_verified_patient_metrics",
+  "score_seal_sha256": "0e8c2454ac21ad3af3b980294da28e06f01327ef26844a09210babeb4a2245ae",
+  "small_source_suppression_verified": true,
+  "source_groups_checked": 28,
+  "status": "PASS",
+  "verifier_source_sha256": "2aa5b32b56d74a933fb54634c49d61656111be0da8898cacb4e799ec5eef3526"
+}

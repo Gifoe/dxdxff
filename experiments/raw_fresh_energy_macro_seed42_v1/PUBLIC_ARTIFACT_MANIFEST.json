@@ -7,6 +7,7 @@
     "PROTOCOL_LOCK.json": "a709a899892f2a5bdf1dcb25e7dd7c52cb6dcb0520615c903865846ce328ef19",
     "README.md": "b52096bf46a09b09c4e87fee610910eea426d6d4b1b91727b602d9a42febd4f3",
     "admit.py": "f496940902bb564bc2046b87ea5ea176512f31c6bcd340ad1589bb45f3b72b5c",
+    "audit_raw_support.py": "a529458387f6c0b936254e3258302954231254d50143b3b020872cc5f68d437a",
     "common.py": "a1e658c87e8fcf31c8c1cc426c281e4eec6d6c63fa735031eb31f33c77a157b8",
     "final_stage.py": "a64b9c13d46d9bac7d99185468e7630fd6f5184ca5a3b09caf31ebd6c8a73eb1",
     "model.py": "d6683059bd0c7eff29f4e6d5b5c81335d7ff52523c3f0bc521e6cd85eacf3cbf",

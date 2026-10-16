@@ -32,14 +32,16 @@ def main():
     assert counts['patients']==80 and counts['canonical_channels']==7635 and counts['seizure_records']==256 and counts['valid_windows']==1471965
     assert counts['available_channel_seizure_units_missing_pre']==counts['channels_missing_0to8_in_all_seizures']==counts['channels_missing_8to20_in_all_seizures']==0
     encoded=sum(r['valid_windows'] for r in status['coverage']);assert encoded==counts['valid_windows']
-    c.write(f.PUBLIC/'RAW_SUPPORT_AUDIT.json',dict(status='PASS',counts=counts,valid_samples_encoded_per_fresh_procedure=counts['valid_windows']*500,
+    c.write(f.PUBLIC/'RAW_SUPPORT_AUDIT.json',dict(status='PASS',counts=counts,valid_input_samples_forwarded_per_fresh_procedure=counts['valid_windows']*500,
         fixed_pre_reference_and_two_phase_support_windows=counts['pre_windows']+counts['phase_0to8_windows']+counts['phase_8to20_windows'],
         minimum_valid_window_time=minimum,maximum_valid_window_time=maximum,
         raw_registry_sha256=c.io.EXPECTED_REG,reconstruction_sha256=c.io.EXPECTED_REC,
         score_seal_sha256=c.sha(f.FINAL/'OUTER_SCORE_SEAL_PRIVATE.json'),audit_source_sha256=c.sha(c.HERE/'audit_raw_support.py'),
         inference_valid_window_count_matches_independent_mask_census=True,
         interpretation='Allvalidwindowsforwarded; original pooling uses pre and0to20 support. Anyat-or-after20 windows are not claimed to contribute to finalclassifications.',
-        no_labels_or_classification_metrics_read=True,no_training_or_prediction=True,no_masks_or_data_changed=True))
+        full_truth_archive_not_opened_by_audit=True,no_new_classification_metrics_computed=True,
+        legacy_mixed_metadata_physically_unpickled_but_no_y_returned=True,
+        no_training_or_prediction=True,no_masks_or_data_changed=True))
     print('FRESH_RAW_INDEPENDENT_SUPPORT_CENSUS_PASS',counts,flush=True)
 
 

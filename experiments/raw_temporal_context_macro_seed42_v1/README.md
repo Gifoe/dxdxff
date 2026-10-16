@@ -39,3 +39,15 @@ passes; it needs its own frozen final implementation. All historical Outer is
 exploratory repeated-test, not independent confirmation. Public delivery is
 code, hashes and anonymous aggregates only; private data, identities, weights,
 scores, raw banks and logs remain on the trusted server.
+
+## Actual outcome
+
+All 15 first-path fine-tunes / 126 epochs and independent replay completed.
+Temporal Macro-F1: **0.605692**, equal-size MLP: **0.605650** on the same 86
+internal patient appearances / 59 unique patients. Their paired difference
+is +0.000042, CI [-0.000125, 0.000254]. All five advancement gates failed;
+there were **zero new Development fits or Outer passes**. This is not an
+80-patient final test and does not achieve the >0.65 goal. See
+[RUN_REPORT.md](RUN_REPORT.md), [all metrics](results/FIRST_PATH_MAIN.csv),
+[paired intervals](results/FIRST_PATH_PAIRED_CI.csv) and
+[cross-study mechanism evidence](MECHANISM_EVIDENCE.md).

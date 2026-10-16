@@ -1,0 +1,118 @@
+{
+  "actual_neural_fits": 15,
+  "all9_patient_metrics_independent": true,
+  "all_race_decisions_recomputed": true,
+  "checks": [
+    {
+      "arm": "CHANNEL_MLP",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "arm": "PRE_TUNE",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "arm": "TEMPORAL_CONTEXT",
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "arm": "CHANNEL_MLP",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "PRE_TUNE",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "TEMPORAL_CONTEXT",
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "CHANNEL_MLP",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "PRE_TUNE",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "TEMPORAL_CONTEXT",
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "CHANNEL_MLP",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "PRE_TUNE",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "TEMPORAL_CONTEXT",
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "CHANNEL_MLP",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "PRE_TUNE",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    },
+    {
+      "arm": "TEMPORAL_CONTEXT",
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 0
+    }
+  ],
+  "logical_cells": 25,
+  "maximum_replay_error": 0.0,
+  "original_Development_Outer_used": false,
+  "ownFIT_selection_sha256": "4927bca76c9f857bf8e93438330404f12deb67e417587f82078f23405fc0e967",
+  "patient_metric_rows": 430,
+  "status": "PASS"
+}

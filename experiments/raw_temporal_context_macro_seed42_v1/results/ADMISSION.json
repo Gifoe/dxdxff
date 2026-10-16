@@ -1,0 +1,152 @@
+{
+  "all15_initial_CAL_replays": [
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 1,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 2,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 3,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 4,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "fold": 5,
+      "logit_max_error": 0.0,
+      "probability_max_error": 0.0,
+      "screen": 3
+    }
+  ],
+  "complete_patient_backward": [
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "PRE_TUNE",
+      "complete_channels": 164,
+      "initial_logits_exact": true,
+      "largest_of_unique_training_patients": 79,
+      "parameters": 13105,
+      "peak_allocated_bytes": 1777326080,
+      "seconds": 0.37289999998756684,
+      "shared_gradient_gate_pass": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "CHANNEL_MLP",
+      "complete_channels": 164,
+      "initial_logits_exact": true,
+      "largest_of_unique_training_patients": 79,
+      "parameters": 14089,
+      "peak_allocated_bytes": 2832324096,
+      "seconds": 0.14010240000789054,
+      "shared_gradient_gate_pass": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "TEMPORAL_CONTEXT",
+      "complete_channels": 164,
+      "initial_logits_exact": true,
+      "largest_of_unique_training_patients": 79,
+      "parameters": 14089,
+      "peak_allocated_bytes": 2947763200,
+      "seconds": 0.09860640001716092,
+      "shared_gradient_gate_pass": true,
+      "valid_windows": 48380
+    }
+  ],
+  "formal_fits_started": 0,
+  "input_binding_sha256": "03b178b5255ddb5dd6ffcc130bddc886034fda0392c99090a40a87398769dca5",
+  "original_Development_Outer_used": false,
+  "status": "PASS",
+  "tests_passed": 4
+}

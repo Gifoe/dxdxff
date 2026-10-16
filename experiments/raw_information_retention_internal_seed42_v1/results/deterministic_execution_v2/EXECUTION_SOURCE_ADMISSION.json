@@ -1,0 +1,42 @@
+{
+  "RNG_parity": true,
+  "actual_complete_patient_gradient_admissions": 9,
+  "actual_data_hashes": {
+    "inner_roles": "2b81e6460a1fcf64a550eb90224bf7205024d022b066269abea8cda175456cba",
+    "raw_registry": "48fb162c51ae34c3e29e4803a87577535a0f9e01ea09276acc0da8c8ef4c40f6",
+    "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609"
+  },
+  "actual_qualified_old_post_gain_invariance_max_error": 0.0,
+  "audit_fields_identical_to_preserved_execution_v1": 1501,
+  "audit_patient_count": 79,
+  "cuDNN_deterministic": true,
+  "cuDNN_enabled": true,
+  "individual_audit_rows_exported": false,
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "maximum_direct_cache_gradient_error": 0.0,
+  "no_label_outcome_read_for_execution_choice": true,
+  "old_cross_backend_gradient_comparison_status": "FAIL_RETAINED_NOT_EQUIVALENT",
+  "parent_source": {
+    "common.py": "c5dd9fb82fab45dd3b1e4ae0911f642a221fbf5bd039a5a642f838a3a5ffa499",
+    "metrics.py": "028a51ae271706c028aed60e55e02b2e06bf867a6d3ebd9b22d8758ede0388fa",
+    "model.py": "2a837032d9f2f2bc7a7b42c6d71c87863920a37ec5e35313c7ed1a6b54b20605"
+  },
+  "precision": "FP32_TF32_OFF",
+  "protected_previous_study": {
+    "FROZEN_BEFORE_OUTER_PRIVATE.json": "92f8d0adc186cf79dde4a5f25171ad115ae36ddc7effd1127a38df7cc60fcbc5",
+    "MODEL_FREEZE_PRIVATE.json": "ef751fbbd66dcf825f1157bc5bf029039f489647033f90368958c0063af5cc9a",
+    "OUTER_SCORE_SEAL_PRIVATE.json": "da2424a9bbc5e2314f3ba15d8b68d142d1e19e2beefcaa79bfe5160809da8b19"
+  },
+  "scope": "Admission_and_input_audit_not_classification_performance",
+  "source": {
+    "EXECUTION_AMENDMENT.json": "a6a5c76417f0c87517776b9aafa0f9ef0c3616f49c2c47e3b637e9f874b825a4",
+    "PROTOCOL_LOCK.json": "3c1e31ef6b93eb1b512c25440bddd83138f73b4ce0d50b9c08c3bd3b5b495333",
+    "audit_inputs.py": "1bdc3e9c3f52941006262548052bafa6866dcbdd5fc4178773b7daaaedb1c36e",
+    "common.py": "edd9bbf32c23af983c3fcf635623b8c076f5ba870841aff935ae50e6c5a2d1af",
+    "engine.py": "cefc78b370ddb2ff92f17c75a14bd39a5c768bee1b085e797f4e9db5f4ff0afb",
+    "model.py": "7bdda0e07fba1fbcd1f45118d1fb615bd15c1927c9d3fe5980705ee3652e7196",
+    "summarize.py": "1f3fe3bd6d663477f329b5636c40b1089e698d180f9721cc0b4c308e30203b45",
+    "train_internal.py": "e0313461f7c8fad279d92e75a9ad5814914f9785368e4f63be4cf5215d3aa829"
+  },
+  "status": "PASS"
+}

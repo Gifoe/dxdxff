@@ -1,0 +1,110 @@
+{
+  "actual_complete_patient": true,
+  "formal_epochs_discarded": 0,
+  "input_binding_sha256": "f436a31d2951da42a02a2c34c40d0bc01a0344811cd4c1997e36b19245b7e4ad",
+  "no_manual_features_or_D1": true,
+  "paired_initial_shared_weights_exact": true,
+  "precision": "FP32_TF32_OFF",
+  "reports": [
+    {
+      "RNG_exact": true,
+      "arm": "C0_WINDOW_SHORT",
+      "cached_seconds": 0.32519909999973606,
+      "direct_seconds": 0.4667339999869,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1c8c324916358e736a6a387c6a377c46c2c0a971a128165b24d91dce60e2ef0a",
+      "logit_loss_error": 0.0,
+      "parameters": 8433
+    },
+    {
+      "RNG_exact": true,
+      "arm": "C1_PRE_SHORT",
+      "cached_seconds": 0.021601600004942156,
+      "direct_seconds": 0.028924099999130704,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1c8c324916358e736a6a387c6a377c46c2c0a971a128165b24d91dce60e2ef0a",
+      "logit_loss_error": 0.0,
+      "parameters": 8433
+    },
+    {
+      "RNG_exact": true,
+      "arm": "C2_WINDOW_LONG",
+      "cached_seconds": 0.10669950000010431,
+      "direct_seconds": 0.05957869999110699,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "d7d6d2a17e2ba17651167239ab901e441db4b63ced98e3b2564c5ac708a8c5ed",
+      "logit_loss_error": 0.0,
+      "parameters": 14241
+    },
+    {
+      "RNG_exact": true,
+      "arm": "C3_PRE_LONG",
+      "cached_seconds": 0.11035269999410957,
+      "direct_seconds": 0.04210530000273138,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "d7d6d2a17e2ba17651167239ab901e441db4b63ced98e3b2564c5ac708a8c5ed",
+      "logit_loss_error": 0.0,
+      "parameters": 14241
+    },
+    {
+      "RNG_exact": true,
+      "arm": "C4_PRE_LONG_CONTEXT",
+      "cached_seconds": 0.116393500007689,
+      "direct_seconds": 0.04604319999634754,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1a5d110cba5561c2a38f538066ff53ef04b0a50749214901050222a5403c31ec",
+      "logit_loss_error": 0.0,
+      "parameters": 17969
+    },
+    {
+      "RNG_exact": true,
+      "arm": "DROP_PRE_REFERENCE",
+      "cached_seconds": 0.02864150000095833,
+      "direct_seconds": 0.01273879999644123,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1c8c324916358e736a6a387c6a377c46c2c0a971a128165b24d91dce60e2ef0a",
+      "logit_loss_error": 0.0,
+      "parameters": 8433
+    },
+    {
+      "RNG_exact": true,
+      "arm": "DROP_TWO_PHASES",
+      "cached_seconds": 0.029425100001390092,
+      "direct_seconds": 0.012452499999199063,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1c8c324916358e736a6a387c6a377c46c2c0a971a128165b24d91dce60e2ef0a",
+      "logit_loss_error": 0.0,
+      "parameters": 8433
+    },
+    {
+      "RNG_exact": true,
+      "arm": "DROP_SEIZURE_SD",
+      "cached_seconds": 0.028009100002236664,
+      "direct_seconds": 0.013890199988964014,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1c8c324916358e736a6a387c6a377c46c2c0a971a128165b24d91dce60e2ef0a",
+      "logit_loss_error": 0.0,
+      "parameters": 8433
+    },
+    {
+      "RNG_exact": true,
+      "arm": "DROP_PATIENT_Z",
+      "cached_seconds": 0.030468900004052557,
+      "direct_seconds": 0.012955999991390854,
+      "discarded_formal_epochs": 0,
+      "full_gradient_max_error": 0.0,
+      "initial_sha256": "1c8c324916358e736a6a387c6a377c46c2c0a971a128165b24d91dce60e2ef0a",
+      "logit_loss_error": 0.0,
+      "parameters": 8433
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,37 @@
+{
+  "task": "DREChannNet_physiological_discovery_selection_v2",
+  "seed": 42,
+  "cohort": {"patients": 80, "channels": 7635, "seizures": 256, "valid_channel_windows": 1471965, "folds": 5},
+  "research_questions": ["Within-patient and pre/post physiological differences", "Historical28 and new-candidate eligibility", "Cardinality1to7 and diagnostic8to9", "Equal-cardinality best-swap and fixed random replacements", "D1 versus matched single-head and M8 Raw complementarity"],
+  "signal_contract": "Original250Hz/500sample banks, canonical identity join and exact masks. No EDF/source/filter substitution. Clinical onset/acquisition history remains incompletely proven. Relative times are cache-relative, not independent clinical onset verification. No full delta/theta/alpha recovery; no full80-150HFO claim.",
+  "pool": "Up to32 window-local measurements: original7, previously built11 morphology/spectral candidates, same-band stable-log3, original pinned partial-alpha10to13/total10to125/Hjorth2, and7 verified RAW_REBUILT graph node metrics. Two-coordinate DELTA seizure mean/populationSD per measurement, original PatientZ and FIT-only preprocessing. Legacy28 cached graph mismatch and nonlocal onset/burst definitions audited separately, not silently mixed with valid-window descriptors. Any failed source admission stops that family without labeling physiology ineffective.",
+  "label_blind_eligibility": {"window_finite_fraction_min": 0.99, "FIT_patient_nonconstant_fraction_min": 0.5, "exact_duplicate_policy": "Audit and deterministically canonicalize exact duplicate feature groups on ownFIT only; correlation alone never proves redundancy", "clinical_significance_not_implied": true},
+  "biology": "After protocol freeze, effect analysis reads only each fold original FIT labels. Primary nonduplicated descriptive sample is fold1FIT; otherFIT folds overlap and are sensitivity,not independent replication. Signed rank-biserial EZvsNEZ per patient after equal available-seizure aggregation, pre/early0to8/late8to20 and post-minus-pre contrasts. Cross-seizure sign agreement for patients with >=2 seizures. Patient-cluster10000 bootstrap, Wilcoxon zero-effect tests with BH across feature-phase family. No effect-size/univariate label filtering of candidates. Never pool windows as independent observations.",
+  "selection": {
+    "method": "Bounded patient-isolated sequential forward selection, fixed LR C1; no hyperparameter search",
+    "cardinalities": [1,2,3,4,5,6,7,8,9],
+    "screen_splits": 3,
+    "nesting": "Each original outerFIT divided into3 patient-held-out assessment groups. Within remaining patients deterministically split60percent selection-training,20percent threshold-calibration,20percent feature-choice. Greedy path trained only on selection-training; threshold only calibration; subset score only feature-choice. Each cardinality then refits on selection-training+feature-choice, calibration still excluded; evaluate untouched assessment. Original Development and ownOuter excluded throughout.",
+    "probe": "LogisticRegression C1 lbfgs max_iter1000 tol1e-6, patient-equal inverse class weighting; original patientZ, own-subFIT imputer/scaler; no raw labels repeated per window",
+    "utility": {"auroc": 0.25, "auprc": 0.25, "macro_f1": 0.25, "f1": 0.25},
+    "threshold": "Calibration only, EZ probability grid0to1 step0.005, original patientMacroF1/EZF1/nearest0.5/lower tie semantics",
+    "cardinality_choice": "On ownFIT assessment patient means, utility minus0.1 source utility sampleSD; choose smallest k within0.005 of maximum, then higher score. Diagnostic8/9 may be selected if materially better; no forced7D/6D.",
+    "final_subset": "Repeat fixed greedy procedure on deterministic60/20/20 split of complete ownFIT, take chosen k. No cross-fold global winning subset. Consensus/frequency is descriptive only, not new evaluated fixed subset.",
+    "replacement": "Among all single-coordinate group swaps of own final subset, choose highest same-k feature-choice utility; never reselect from Development/Outer. RandomA/B use two fixed seed42/fold/k draws before outcomes, no rerolling. Exact identical subsets are aliases, not independent fits.",
+    "stability": "Selection frequency over15 assessment paths and5 final paths, cardinality-conditioned Jaccard and chance-adjusted overlap. Overlapping training sets are not independent replication; no global selection from these frequencies. Report full path/search record and fixed budget.",
+    "original7": "Unchanged original7 as a reference, not privileged default or required final subset"
+  },
+  "final_training": {
+    "recipes": ["SELECTED", "BEST_SWAP", "RANDOM_A", "RANDOM_B", "OLD7"],
+    "families": ["physiology_only_D1", "single_head_Concat", "D1_plus_Raw_M8"],
+    "raw_control": "Matched single-head zero-physiology Identity-Gate Raw-only,5folds",
+    "budget": "At most80 actual new fits, reduced only by exact source/input aliases; not thousands of fullRaw models. All recipes fit originalFIT only; original Development selects epochs/thresholds only.",
+    "model_contract": "Common32 globally identified measurement slots (64 coordinates), masks after common FIT-only preprocessing, same per-feature initial weights and fixed nativeLN64 without affine, D1 width96/dropout0.15. No subset-dependent slot permutation. Common Raw24CNN/96summary/pre-reference/RawPR. Concat160to64to1GELU,unboundedNEZlogit,identityGate. M8 frozen scratch-trained D1 plus original bounded tanh Raw correction and32to32to24Gate. Same-widthOLD7 required; historicM8/Concat/raw reused as explicitly architecture-different references. Larger registered capacity is disclosed, not attributed to new feature information.",
+    "optimization": "Original frozen trainers: D1 original weightedNEZBCE, patient-equal updates; Raw/Concat0.75weightedBCE+0.25patientsoftMacroF1; AdamW0.0003/wd0.001/clip1,max30,min6,patience6,originalepochthresholdrules; FP32 TF32off; matched seeds42+1009fold. No trained legacyD1/logits initialize new networks.",
+    "no_post_development_rescue": true
+  },
+  "evaluation": "Freeze per-fold chosen sets,k,masks,source,input,scalers,all model checkpoints,epochs and thresholds before one new fivefoldOuter pass. Seal scores before full label reporting. Patientmacro AUROC/AP/MacroF1/EZF1/NEZF1/ACC/MRR/Top1 and bias; original center labels and folds; fixed-score10000 common patient-cluster bootstrap. Matched SELECTED-vsOLD7/BEST_SWAP/RANDOMA/RANDOMB/Raw and D1/Concat/M8 pathway differences. No per-outcome best model selection.",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST; one seed, extensively reused cohort, no independent clinical validation or universal irreplacability/optimality claim",
+  "publication": "JBHI-oriented Markdown with source-grounded physiological rationale, executed-only results, fullnegative findings, feature eligibility, cardinality/stability, matched replacements and Rawincrement. Python/matplotlib editableSVG/PDF plusPNG, quantitative source tables, final-size QA. No simulated results.",
+  "privacy_delivery": "Only code,hashes and anonymous summaries/figures/report published to GitHub with verified remote tip. No identities,raw,labels,individual feature/effect/prediction rows,weights,embeddings,scalers or runtime logs. Preserve previous frozen artifacts and unrelated jobs."
+}

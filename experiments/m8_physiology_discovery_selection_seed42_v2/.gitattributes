@@ -1,0 +1,6 @@
+*.py -text
+*.json -text
+*.csv -text
+*.ps1 -text
+*.md text eol=lf
+*.svg -text

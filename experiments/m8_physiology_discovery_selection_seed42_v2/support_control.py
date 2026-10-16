@@ -3,7 +3,10 @@ import gc
 from common import *
 from model_io import Inputs,make,restore_cpu_rng
 from model import Concat
-from train import fit_raw,predict
+# common/model_io add historical source directories; never resolve a generic
+# train module through their mutable search-path order.
+_train=load('physiology_v2_pinned_frozen_trainer',HERE/'train.py')
+fit_raw,predict=_train.fit_raw,_train.predict
 
 
 class ConcatSupport30(Concat):

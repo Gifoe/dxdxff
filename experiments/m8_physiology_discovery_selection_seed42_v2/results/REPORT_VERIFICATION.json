@@ -1,0 +1,13 @@
+{
+  "all4_history_references_reproduced": true,
+  "bootstrap_draws": 10000,
+  "independent_sklearn_and_direct_ranking": true,
+  "metric_source_sha256": "6c8974e097ff6cb85bbe6f8fa59b246d5e4100c91c50bbb4b082a7dbcf702688",
+  "no_refit_or_threshold_reoptimization": true,
+  "patient_metric_rows": {
+    "development": 1105,
+    "outer": 1680
+  },
+  "source_sha256": "05f95cfcdef741a2145bfa7dc847357f4306fd8a8006927caa38f545e7c93da8",
+  "status": "PASS"
+}

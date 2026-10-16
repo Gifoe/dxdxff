@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "a98db12225811d22906f34ca6466d6915856f1ee7c52d5aa9ec2734fb0f705e0",
+  "historical_reused_cells": 20,
+  "new_models": 85,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "seal_sha256": "d43c3fbcef6609cf35fde6095f2dface391dd27a6b89d33fee485cbdbc4e94bf",
+  "status": "ALL105_FROZEN_SCORE_CELLS_SEALED"
+}

@@ -1,0 +1,18 @@
+{
+  "actual_probe_fits": 5388,
+  "assessment_rows": 2295,
+  "feature_freeze_sha256": "3f5a35c4d4888f0d3481090e349f677e4a7409d40c5d686dc20ce857699fc0d8",
+  "feature_search_rows": 5253,
+  "global_consensus_not_used_as_evaluated_subset": true,
+  "nested_assessment_cells": 135,
+  "original_validation_and_Outer_used": false,
+  "screened_groups": 32,
+  "selection_paths": 20,
+  "source": {
+    "PROTOCOL_LOCK.json": "dcba96023e60bc994d451cd9e48ddbc4e21c01980035bdfa8ad23012354ec183",
+    "common.py": "cd73340e7dbcebc65df60ca59dbc5019888815f2b6dec89a5f1c5bb17c5bfd76",
+    "probes.py": "9d29784cce73f67329164ff25343f9dae8838a849cfad9632ee2cef77e0bbf0f",
+    "select_features.py": "e9fb79cc010ecf18a80682665047939dad946a6c5aeb8b9ddef35ec1b64bc0ff"
+  },
+  "status": "ALL5_FIT_ONLY_SELECTIONS_FROZEN"
+}

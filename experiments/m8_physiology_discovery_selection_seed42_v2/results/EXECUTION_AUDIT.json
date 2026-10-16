@@ -1,0 +1,71 @@
+{
+  "Outer_freeze_sha256": "a98db12225811d22906f34ca6466d6915856f1ee7c52d5aa9ec2734fb0f705e0",
+  "all_sources_bound_before_scores": true,
+  "frozen_evaluation_sources": {
+    "EVALUATION_LOCK.json": "edd61cf0ff384634cb15aedac5cc2c2d56b214feb2adb430cfece3d65e7c0b8f",
+    "TIME_SUPPORT_AMENDMENT.json": "c43252d833fa937a9c64648aabc655bc8e3f56908b17f74481e0c19e7d01f505",
+    "common.py": "cd73340e7dbcebc65df60ca59dbc5019888815f2b6dec89a5f1c5bb17c5bfd76",
+    "evaluate.py": "01f6d7e9d5dd909a5dcc975222566f118ec96e045b2604cc3be3d309a208b494",
+    "model.py": "d6487fd185121d6e4ac13438c4edb90e58457118ef4b2691dc9302cf46b624d5",
+    "model_io.py": "3bd5323f47536e2ad8648ec3e6ec1a96fa614be4ae4a23a224132457ed8c372c",
+    "support_control.py": "330de7f78ba4111b4daac5e23bda837784910b06e017e94245a58d3b612ed8b6",
+    "train.py": "163911286a44c59eef51b4e41eeb2d1cabd777e17f56d0f21c08983fef51d5d7"
+  },
+  "historical_score_cells_reused": 20,
+  "logical_and_actual_new_fits": 85,
+  "main_epochs": 1033,
+  "main_model_freeze_sha256": "172b0f4074d0e77ffb1f836b440594f8481cb30512c721190c2a3d196db31b93",
+  "main_scientific_source": {
+    "IMPLEMENTATION_LOCK.json": "88011f409bd62ddef6b7d5f667e8c9e6139502f2c4aef5706661c668f45371f1",
+    "PROTOCOL_LOCK.json": "dcba96023e60bc994d451cd9e48ddbc4e21c01980035bdfa8ad23012354ec183",
+    "common.py": "cd73340e7dbcebc65df60ca59dbc5019888815f2b6dec89a5f1c5bb17c5bfd76",
+    "model.py": "d6487fd185121d6e4ac13438c4edb90e58457118ef4b2691dc9302cf46b624d5",
+    "model_io.py": "3bd5323f47536e2ad8648ec3e6ec1a96fa614be4ae4a23a224132457ed8c372c",
+    "train.py": "163911286a44c59eef51b4e41eeb2d1cabd777e17f56d0f21c08983fef51d5d7"
+  },
+  "matched_support_controls": [
+    {
+      "FIT_scale_identical": true,
+      "fold": 1,
+      "initial_state_identical": true,
+      "only_pool_support_changed": true,
+      "seed_identical": true
+    },
+    {
+      "FIT_scale_identical": true,
+      "fold": 2,
+      "initial_state_identical": true,
+      "only_pool_support_changed": true,
+      "seed_identical": true
+    },
+    {
+      "FIT_scale_identical": true,
+      "fold": 3,
+      "initial_state_identical": true,
+      "only_pool_support_changed": true,
+      "seed_identical": true
+    },
+    {
+      "FIT_scale_identical": true,
+      "fold": 4,
+      "initial_state_identical": true,
+      "only_pool_support_changed": true,
+      "seed_identical": true
+    },
+    {
+      "FIT_scale_identical": true,
+      "fold": 5,
+      "initial_state_identical": true,
+      "only_pool_support_changed": true,
+      "seed_identical": true
+    }
+  ],
+  "new_score_cells": 85,
+  "no_individual_data_or_roles_in_this_export": true,
+  "original_D1_trainer_sha256": "043887c9805e22ebb76df236d405d4e7bbb437c8a456f444c8ccad9c0c8a6e66",
+  "original_Raw_trainer_sha256": "c6ecb0db5553ffdfcf17097e031dc09dd96faf93419e353caf1f1d835027eb25",
+  "selected_feature_freeze_sha256": "3f5a35c4d4888f0d3481090e349f677e4a7409d40c5d686dc20ce857699fc0d8",
+  "status": "PASS",
+  "support_epochs": 75,
+  "support_model_freeze_sha256": "be8da085facb7f366e696091fda6dac5411de4eb84a4fb60a896cb8f2665a982"
+}

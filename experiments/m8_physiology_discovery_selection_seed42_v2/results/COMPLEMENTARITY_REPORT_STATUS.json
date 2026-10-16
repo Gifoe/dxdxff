@@ -1,0 +1,9 @@
+{
+  "compensation_rows": 72,
+  "main_primary_tables_unchanged": true,
+  "no_predictions_training_or_selection": true,
+  "score_only_posthoc_diagnostic": true,
+  "source_contrast_rows": 1332,
+  "source_sha256": "ca2e6460f297c41328d0f26886e7915e810c5a57068d87ce0d47ee255d3ae7aa",
+  "status": "PASS"
+}

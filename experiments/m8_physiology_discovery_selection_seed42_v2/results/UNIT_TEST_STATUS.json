@@ -1,0 +1,13 @@
+{
+  "collected": 10,
+  "failed": 0,
+  "passed": 10,
+  "role": "Synthetic end-of-run regression checks; chronological initial-test incident disclosed separately.",
+  "skipped": 0,
+  "source": {
+    "test_model.py": "4378b43ac234fd29fd79fef267dcbde020fe4df1703621b93732976e90e9887b",
+    "test_pool.py": "00b0f2e4a620239e4003463fb460328985b9f6edb23531558c6bfeff3003e037",
+    "test_probes.py": "00f0500d00d71eeaaf1a4dc69310e0708a7e40284501c67263d09b924669d325"
+  },
+  "status": "PASS"
+}

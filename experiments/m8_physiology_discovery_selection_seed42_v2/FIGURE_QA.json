@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "figure": "01_physiological_effects",
+      "width_px": 4251,
+      "height_px": 3960,
+      "dpi": 599.9988,
+      "source_rows": 160,
+      "visual_QA": "opened_and_inspected",
+      "editable_vector_text": true
+    },
+    {
+      "figure": "02_phase_trajectories",
+      "width_px": 4251,
+      "height_px": 2280,
+      "dpi": 599.9988,
+      "source_rows": 144,
+      "visual_QA": "opened_and_inspected",
+      "editable_vector_text": true
+    },
+    {
+      "figure": "03_feature_cardinality",
+      "width_px": 4251,
+      "height_px": 2640,
+      "dpi": 599.9988,
+      "source_rows": 81,
+      "visual_QA": "opened_and_inspected",
+      "editable_vector_text": true
+    },
+    {
+      "figure": "04_feature_stability",
+      "width_px": 4251,
+      "height_px": 3720,
+      "dpi": 599.9988,
+      "source_rows": 288,
+      "visual_QA": "opened_and_inspected",
+      "editable_vector_text": true
+    },
+    {
+      "figure": "05_matched_replacement_raw_increment",
+      "width_px": 4251,
+      "height_px": 3240,
+      "dpi": 599.9988,
+      "source_rows": 48,
+      "visual_QA": "opened_and_inspected",
+      "editable_vector_text": true
+    },
+    {
+      "figure": "06_redundancy",
+      "width_px": 4251,
+      "height_px": 4080,
+      "dpi": 599.9988,
+      "source_rows": 992,
+      "visual_QA": "opened_and_inspected",
+      "editable_vector_text": true
+    }
+  ],
+  "static_source_checks": "14PASS_0WARN_0FAIL",
+  "statistics_not_validated_by_static_checker": true
+}

@@ -1,0 +1,21 @@
+{
+  "all10000_draw_intervals_replayed": true,
+  "all105_score_files_intact": true,
+  "all85_model_feature_sets_still_frozen": true,
+  "all9_cardinalities_replayed": true,
+  "all9_metrics_independently_recomputed": true,
+  "all_aggregate_tables_replayed": true,
+  "no_training_prediction_or_threshold_optimization": true,
+  "scope_patient_and_paired_rows": {
+    "development": [
+      1105,
+      297
+    ],
+    "outer": [
+      1680,
+      333
+    ]
+  },
+  "source_sha256": "dac945b1b7bbaa598a28202f6735efd84e240079cc9b693731ae267deb469ad1",
+  "status": "PASS"
+}

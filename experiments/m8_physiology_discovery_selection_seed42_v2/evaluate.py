@@ -4,7 +4,7 @@ import time
 from common import *
 from model_io import Inputs,bank,masked,make,transform
 from model import FeatureHead
-from train import predict
+predict=load('physiology_v2_pinned_frozen_trainer',HERE/'train.py').predict
 from support_control import promote
 
 HISTORY=Path(r'D:\m8_single_head_concat_seed42_v1_runtime')

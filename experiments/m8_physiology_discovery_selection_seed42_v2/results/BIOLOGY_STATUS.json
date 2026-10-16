@@ -1,0 +1,17 @@
+{
+  "Outer_and_Development_labels_used": false,
+  "all_feature_phase_effects": 800,
+  "feature_selection_uses_these_effects": false,
+  "independent_onset_or_clinical_EZ_not_proven": true,
+  "patient_is_replicate": true,
+  "primary_patients": 51,
+  "primary_test_family": 160,
+  "source": {
+    "BIOLOGY_LOCK.json": "cec89481daf18288f6e5cc00b4872513c139ad118ab5c584ce544e3ad08e3352",
+    "PROTOCOL_LOCK.json": "dcba96023e60bc994d451cd9e48ddbc4e21c01980035bdfa8ad23012354ec183",
+    "biology.py": "167ce78e2a2976139bd08b4f9813df345fc3a2c4c225314c449f0e3c1b9f6f28",
+    "common.py": "cd73340e7dbcebc65df60ca59dbc5019888815f2b6dec89a5f1c5bb17c5bfd76"
+  },
+  "source_effect_fields": 3200,
+  "status": "COMPLETE_FIT_ONLY_PHYSIOLOGICAL_ASSOCIATIONS"
+}

@@ -1,0 +1,99 @@
+{
+  "CNN_initializers_pairwise_exact": true,
+  "actual_complete_FIT": true,
+  "formal_epochs_discarded": 0,
+  "reports": [
+    {
+      "family": "M8",
+      "gradient_steps": [
+        {
+          "cnn.0.bias": 0.0,
+          "cnn.0.weight": 0.0,
+          "cnn.2.bias": 0.0,
+          "cnn.2.weight": 0.0,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 0.0,
+          "gate.network.2.weight": 0.0,
+          "head.0.bias": 0.0,
+          "head.0.weight": 0.0,
+          "head.2.bias": 0.13574732840061188,
+          "head.2.weight": 0.3395230174064636
+        },
+        {
+          "cnn.0.bias": 0.0001617515808902681,
+          "cnn.0.weight": 0.001797922421246767,
+          "cnn.2.bias": 0.00013997328642290086,
+          "cnn.2.weight": 0.0033671639394015074,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 3.990796842295863e-12,
+          "gate.network.2.weight": 6.707375723635778e-05,
+          "head.0.bias": 0.00020723351917695254,
+          "head.0.weight": 0.0019309819908812642,
+          "head.2.bias": 0.13569986820220947,
+          "head.2.weight": 0.33907780051231384
+        },
+        {
+          "cnn.0.bias": 0.000332405703375116,
+          "cnn.0.weight": 0.0036058651749044657,
+          "cnn.2.bias": 0.00028139533242210746,
+          "cnn.2.weight": 0.006689997389912605,
+          "gate.network.0.bias": 6.914157069104476e-08,
+          "gate.network.0.weight": 5.156085194357729e-07,
+          "gate.network.2.bias": 3.0143574747398816e-08,
+          "gate.network.2.weight": 0.0001348366349702701,
+          "head.0.bias": 0.00042007636511698365,
+          "head.0.weight": 0.003889509243890643,
+          "head.2.bias": 0.13565193116664886,
+          "head.2.weight": 0.35986408591270447
+        }
+      ],
+      "masked_inputs_independent": true,
+      "original_Raw_identity_parity_exact": true,
+      "padding_ignored": true,
+      "parameters": 16618
+    },
+    {
+      "family": "Concat",
+      "gradient_steps": [
+        {
+          "cnn.0.bias": 0.03163303807377815,
+          "cnn.0.weight": 0.21371915936470032,
+          "cnn.2.bias": 0.013680617325007915,
+          "cnn.2.weight": 0.48297765851020813,
+          "head.0.bias": 0.0428779311478138,
+          "head.0.weight": 0.4755805432796478,
+          "head.2.bias": 0.1266038864850998,
+          "head.2.weight": 0.3340643048286438
+        },
+        {
+          "cnn.0.bias": 0.029481008648872375,
+          "cnn.0.weight": 0.1974923312664032,
+          "cnn.2.bias": 0.01290495041757822,
+          "cnn.2.weight": 0.45980358123779297,
+          "head.0.bias": 0.04237397015094757,
+          "head.0.weight": 0.46450212597846985,
+          "head.2.bias": 0.1265740990638733,
+          "head.2.weight": 0.3259139657020569
+        },
+        {
+          "cnn.0.bias": 0.02751467190682888,
+          "cnn.0.weight": 0.18040971457958221,
+          "cnn.2.bias": 0.012154039926826954,
+          "cnn.2.weight": 0.4357651174068451,
+          "head.0.bias": 0.04203519970178604,
+          "head.0.weight": 0.4535205066204071,
+          "head.2.bias": 0.12655074894428253,
+          "head.2.weight": 0.31979990005493164
+        }
+      ],
+      "masked_inputs_independent": true,
+      "original_Raw_identity_parity_exact": true,
+      "padding_ignored": true,
+      "parameters": 12529
+    }
+  ],
+  "status": "PASS",
+  "three_discarded_steps": true
+}

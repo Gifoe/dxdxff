@@ -1,0 +1,10 @@
+{
+  "Outer_channels_used": false,
+  "correlation_rows": 4960,
+  "interpretation": "Correlation alone is not conditional redundancy; candidate replacement remains the predictive test.",
+  "labels_used": false,
+  "numerical_quality_rows": 320,
+  "selection_exclusions_or_model_changes": false,
+  "source_sha256": "d9957cf7034eaa7c45c4be900a47539d58a4f03250636270e04160c19839e70e",
+  "status": "PASS"
+}

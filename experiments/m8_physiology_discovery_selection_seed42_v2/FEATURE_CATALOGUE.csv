@@ -1,0 +1,33 @@
+group,feature,definition,rationale_and_boundary,measured_window_finite_fraction,selected_folds,selection_is_not_biological_eligibility
+0,log_bp_beta,Pinned legacy `log1p` band power13–30 Hz,Amplitude recruitment; numerical units matter,1.0,0,True
+1,log_bp_low_gamma,Pinned legacy30–80 Hz power,Faster recruitment; not HFO,1.0,0,True
+2,partial_high_gamma_80_125,Pinned legacy partial80–125 Hz power,Restricted high-frequency activity; not full80–150 Hz or PLHG,1.0,0,True
+3,rms_legacy,`sqrt(mean(x²)+1e-8)`,Amplitude; floor is part of the historical formula,1.0,0,True
+4,variance,Pinned variance formula,Dispersion; may overlap RMS but conditional utility requires testing,1.0,0,True
+5,line_length_per_sec,Sum of absolute adjacent differences divided by duration,Combined amplitude/roughness; not a pure frequency measure,1.0,3,True
+6,spectral_entropy_10_125,Pinned normalized PSD entropy over retained bins,"Spectral distribution, not permutation entropy",1.0,0,True
+7,log_variance_stable,"`log(max(var(x),1e-30))`",Dynamic-range control; not algebraically equivalent preprocessing,1.0,0,True
+8,hjorth_mobility_per_second,"`250 sqrt(var(diff(x))/max(var(x),1e-30))`",Time-scale/roughness with physical sample-rate factor,1.0,0,True
+9,hjorth_complexity_stable,"Ratio of derivative mobility to signal mobility, stabilized floors","Shape complexity, not clinical excitation/inhibition",1.0,1,True
+10,permutation_entropy_m3_tau1,"Normalized ordinal entropy, length3, delay1, stable tie order",Ordinal complexity; not the published full postictal PEI,1.0,0,True
+11,spectral_centroid_13_95,PSD-weighted frequency in13–95 Hz,Spectral center of mass; retained-band descriptor,1.0,0,True
+12,log_gamma_beta_ratio,Log power30–80 minus log power13–30 Hz,"Relative spectrum, not an absolute fast-activity measure",1.0,0,True
+13,partial_high_gamma_fraction_80_125,Power80–125 divided by13–125 Hz power,Restricted-band fraction; not full broadband fraction,1.0,0,True
+14,spectral_flatness_13_95,Geometric/arithmetic mean of normalized retained-bin PSD,Tonal versus broadband spectral shape,1.0,0,True
+15,spectral_slope_proxy_20_95_notchgap,OLS log-PSD/log-frequency slope over20–45 and65–95 Hz bins,"Not FOOOF decomposition, nor a validated EI estimate",1.0,0,True
+16,normalized_line_length,"Line length divided by signal SD, floor1e-15",Amplitude-normalized roughness; different from legacy line length,1.0,0,True
+17,clipped_excess_kurtosis,"Centered SD-normalized samples clipped to±8, standardized fourth moment minus3","Tail/spike-shape proxy, not a detector with event labels",1.0,0,True
+18,stable_log_beta_sameband,"Log of inverse-`log1p` original beta power, floor1e-30",Same-band numeric control; not recovered physiology,1.0,2,True
+19,stable_log_low_gamma_sameband,Same transformation for original low gamma,Dynamic-range control,1.0,0,True
+20,stable_log_partial_high_gamma_sameband,Same transformation for original partial high gamma,Dynamic-range control,1.0,0,True
+21,partial_alpha_10_13_legacy,Original alpha definition restricted by the10 Hz spectral minimum,"Only10–13 Hz, not complete8–13 Hz alpha",1.0,1,True
+22,log_total_power_10_125_legacy,Pinned total power on retained spectral support,Broad retained-band amplitude; not complete1–125 Hz power,1.0,0,True
+23,hjorth_mobility_legacy,Original epsilon-regularized Hjorth source formula,Keep distinct from stable per-second implementation,1.0,0,True
+24,hjorth_complexity_legacy,Original epsilon-regularized Hjorth source formula,Units/floors can dominate; do not merge by name,1.0,0,True
+25,rebuilt_degree_norm,Degree of the existing verified Raw-rebuilt window graph,Network topology; legacy cached graph is a different source,1.0,0,True
+26,rebuilt_strength_norm,Weighted node strength in that graph,Connectivity magnitude; not channel band power,1.0,0,True
+27,rebuilt_clustering_coeff,Node clustering in that graph,Local neighborhood topology,1.0,0,True
+28,rebuilt_eigenvector_centrality,Principal-eigenvector node centrality,Dependent on exact adjacency and eigensolver conventions,1.0,0,True
+29,rebuilt_pagerank,PageRank in that graph,Global network prominence,1.0,0,True
+30,rebuilt_kcore_norm,Normalized core number in that graph,Network embedding depth,1.0,0,True
+31,rebuilt_local_efficiency,Efficiency among a node's neighbors,Graph-defined local communication proxy,1.0,0,True

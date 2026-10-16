@@ -1,0 +1,232 @@
+{
+  "excluded_epoch_history_copies": true,
+  "files": {
+    "BIOLOGY_STATUS.json": {
+      "bytes": 760,
+      "sha256": "1456b2cd1e712e72b632dc37a374d62cff372124db681dd5c4043a5ae4fc5827"
+    },
+    "CARDINALITY_ASSESSMENT_BY_FOLD.csv": {
+      "bytes": 8116,
+      "sha256": "0b4af4d0172e432ec424cd3c0a49dcbb0fb873e4bd47c7c9832320a3c77025a9"
+    },
+    "CARDINALITY_CURVE.csv": {
+      "bytes": 9741,
+      "sha256": "14d4ac5f80dbc294d7ebf3d98ada2a50c32b1b57e5bac0deb8378d90418eb09a"
+    },
+    "COMPLEMENTARITY_REPORT_STATUS.json": {
+      "bytes": 306,
+      "sha256": "666509540db5d577e32e2912fd56b25450efbf3d198ae7eb17b1d35d0446f8e3"
+    },
+    "EXECUTION_AUDIT.json": {
+      "bytes": 3165,
+      "sha256": "460ffb5854277b944b3438aba5bee7fffc64e8c79239d17f94b119619f355fbe"
+    },
+    "FEATURE_SEARCH_RECORD.csv": {
+      "bytes": 1692936,
+      "sha256": "e2578dc5e3cf5767514663d82179d1c33e79fa9d98c9b4dbbb73a33ff71b7b60"
+    },
+    "FINAL_FACTS.json": {
+      "bytes": 4701,
+      "sha256": "5881534e11c5a62e098c0f51275960b210d4b7f9418a9359da3e7c69c542af59"
+    },
+    "FINAL_FEATURE_FREQUENCY.csv": {
+      "bytes": 1289,
+      "sha256": "cfab28d259eeb341df38fb11435eac8ba3a4668ddc03f884886bd97d9d01130a"
+    },
+    "FIT_ELIGIBILITY.csv": {
+      "bytes": 35838,
+      "sha256": "96dbd0971cd66eb2ac39ef5fe1ce0e71794c38f1a90e06de660fff45a9ddca5b"
+    },
+    "FIT_NUMERICAL_QUALITY.csv": {
+      "bytes": 27382,
+      "sha256": "ab11ac45b45d9f8f113f09117cfdbe57673a68d78810982865867c31e11015a2"
+    },
+    "FIT_REDUNDANCY.csv": {
+      "bytes": 831876,
+      "sha256": "485bf661a3833dd420804d1a2c9f525a6a5f9be4c699f533e0ddc9063b833aa8"
+    },
+    "FROZEN_FEATURE_SELECTION.csv": {
+      "bytes": 1994,
+      "sha256": "46a401cf47d22c888965c44eae8d89d25e5e8c8f06306d5f8aa0abc02471d263"
+    },
+    "GPU_ENVIRONMENT.json": {
+      "bytes": 323,
+      "sha256": "f153450dc45376e879777ff0a77ec4f0fe7bd5db7f26ebaad7a1b1db365dc307"
+    },
+    "HISTORICAL28_ELIGIBILITY.csv": {
+      "bytes": 4362,
+      "sha256": "6d189699eaa59dad5aa8b547e267cbb74ead209f09da808ba1b9c4f96219677f"
+    },
+    "INDEPENDENT_RESULTS_VERIFICATION.json": {
+      "bytes": 583,
+      "sha256": "6afae993434b03e05959a3738bfb188dc8d296277d1b256d69ec13c25f067df3"
+    },
+    "INDEPENDENT_SELECTION_VERIFICATION.json": {
+      "bytes": 527,
+      "sha256": "45bf3f74f67042054d4022f276e3c9f2faa006771862a1cf93c73a153ef8f283"
+    },
+    "NESTED_ROLE_ISOLATION.csv": {
+      "bytes": 547,
+      "sha256": "453fa353d55596ffdca8859812defabfacf4097acd0f7edeca4dd2ce2bf7f0f4"
+    },
+    "NEURAL_ADMISSION.json": {
+      "bytes": 3566,
+      "sha256": "31309d696872ebe7d9b418ab6a0e4d8c7ceb4413f8edabc43bcdee9d7191353e"
+    },
+    "NEURAL_SELECTION.csv": {
+      "bytes": 18413,
+      "sha256": "77a1e85dbe42a1a0cb4a7e273cef541bdf513a8fa11ac5119e74808abc150c22"
+    },
+    "NEURAL_STATUS.json": {
+      "bytes": 793,
+      "sha256": "0025d90795a4b6ba1ae1a78861593bbeae5be029429df3b29569d91869f7a94c"
+    },
+    "NEURAL_VALIDATION_VERIFICATION.json": {
+      "bytes": 8822,
+      "sha256": "6eebf8cf1d22bebbe2ffaf74adee3e1e656e506b76b928e1c8bf0b0f45303cb6"
+    },
+    "OUTER_FORWARD_COST.csv": {
+      "bytes": 4512,
+      "sha256": "bbec7400ac633bea5ff63849431f2bd44ec29634f725c9654faa14405b2165fe"
+    },
+    "OUTER_STATUS.json": {
+      "bytes": 334,
+      "sha256": "2ce12a8baf6efeb775750ed71123ab3e1b9b2d6f6e1c6875a68c2651b28cb98c"
+    },
+    "PHYSIOLOGICAL_EFFECTS.csv": {
+      "bytes": 162715,
+      "sha256": "1cbb87c2bb3f3f8395be5e86d90a510e2e16b8dac1507bb65b3490591eaac55a"
+    },
+    "PHYSIOLOGY_SOURCE_EFFECTS.csv": {
+      "bytes": 345493,
+      "sha256": "6c79b68592d38b8e2d8e4064cd4e40319d0c8ef2e22b0ca17941c93c08be82fc"
+    },
+    "PHYSIOLOGY_TRAJECTORY.csv": {
+      "bytes": 70279,
+      "sha256": "0a44093e39327ab197682a9c38b8d3c38f81d2b5e8c89fb8bccfe563921e904a"
+    },
+    "POOL_QUALITY.csv": {
+      "bytes": 2742,
+      "sha256": "0b76dcc05051c53d6df7f073ff343d359c311499b394a5f1930b6fd6479b3f85"
+    },
+    "POOL_STATUS.json": {
+      "bytes": 1559,
+      "sha256": "0065bbc1937c8b84aa17988930eeed002d135f7795e8ec045ac1b8e4615ddfb1"
+    },
+    "REDUNDANCY_STATUS.json": {
+      "bytes": 408,
+      "sha256": "cb15225af456164212bf2000cae3bf648895e76c2d5769c0dc9c27398dcda9e5"
+    },
+    "REPORT_VERIFICATION.json": {
+      "bytes": 462,
+      "sha256": "1c4de15fe46a2812ac4aa775822d665fa7a4475d1bbcf636950cb000d119366c"
+    },
+    "SCREEN_STATUS.json": {
+      "bytes": 812,
+      "sha256": "c13dcdfa9bbf6418b52cb1ca964e6ecc921dfc03106ed598eea9a04d60232c26"
+    },
+    "SELECTION_FREQUENCY.csv": {
+      "bytes": 14409,
+      "sha256": "e7ae009eae3ea93d1b258be1fa960267c81c9c69bdc319a00feec9d35d0b21d1"
+    },
+    "SELECTION_STABILITY.csv": {
+      "bytes": 36617,
+      "sha256": "0cdc8a0604a879f8796f0b01a9b8842572b3d6d5f6ed90a15c3676c2cb815d5a"
+    },
+    "STABILITY_SUMMARY.csv": {
+      "bytes": 809,
+      "sha256": "b79447c24869109c115364ac5155d24346ea1f022fcff15e6a47af73b26b5ff0"
+    },
+    "STATISTICS_ENVIRONMENT.json": {
+      "bytes": 295,
+      "sha256": "c7a551d91038c8683a8e936380321d907e0ab2505b019c048dae8fd078cd2764"
+    },
+    "SUPPORT30_SELECTION.csv": {
+      "bytes": 1023,
+      "sha256": "da2ac6728c0ffafb10a4882bf3c8ae752ad5329eceb4cddc300b40dee7a040e6"
+    },
+    "SUPPORT30_STATUS.json": {
+      "bytes": 791,
+      "sha256": "572d949ae27ee42a57967af73d3d5f622745b55dd38a5533dab386b3c70305b6"
+    },
+    "UNIT_TEST_STATUS.json": {
+      "bytes": 496,
+      "sha256": "195c3b1e18f242557d865fe1fa548760ccd015cf0797d3ebcf198f5c21b82aea"
+    },
+    "development/ABSOLUTE_INTERVALS.csv": {
+      "bytes": 13695,
+      "sha256": "13e10c85f454239e4c6e3bfe54513680e06439cfac099fc65035ccded06da131"
+    },
+    "development/CONFUSION_COUNTS.csv": {
+      "bytes": 9843,
+      "sha256": "18e7aa41d083607c51e3b6d2a7d0971b8a518807d0f2bd1baada91fac9467a3f"
+    },
+    "development/FOLD_RESULTS.csv": {
+      "bytes": 16821,
+      "sha256": "510038c7297658379a6dacbd64f25fd69283e738b8c962c45156b0b036dd842d"
+    },
+    "development/FOLD_STABILITY.csv": {
+      "bytes": 9641,
+      "sha256": "6b8a795068981cabfe4dd956bb86d39e64bdfdcda2f11dc19b86da2053b0be0c"
+    },
+    "development/MAIN_RESULTS.csv": {
+      "bytes": 3757,
+      "sha256": "e7c9d6a2c6c564d6ea602c2531834c96757ca973209b5ef9c84c1afe1949ec17"
+    },
+    "development/METRIC_COVERAGE.csv": {
+      "bytes": 4517,
+      "sha256": "1bf53a95de19e8795827bde89473bc8aa79807b3bfb2f0d240bc769554e26f89"
+    },
+    "development/PAIRED_COMPARISONS.csv": {
+      "bytes": 35885,
+      "sha256": "7972b9db871bf87b42d268efba5471dc78f41723b1eadd7d3c51748b542287d3"
+    },
+    "development/SOURCE_RESULTS.csv": {
+      "bytes": 13615,
+      "sha256": "3a8a931f86b2749aeb73f29069207eb0cd033d37cab3134fe91af99db1e84fc7"
+    },
+    "outer/ABSOLUTE_INTERVALS.csv": {
+      "bytes": 16129,
+      "sha256": "c6bfeb537d6f27ece292d9e390c99d192b97742978ee844087610d2ad23abd07"
+    },
+    "outer/CONFUSION_COUNTS.csv": {
+      "bytes": 12129,
+      "sha256": "a2423bec0f627a85e10ebcec81fd501f6628b529edb279a094139e820a68d9b8"
+    },
+    "outer/FOLD_RESULTS.csv": {
+      "bytes": 19648,
+      "sha256": "fa9c39060c4cbb0e94aa757172991243e035f8e986d7d8cd633307febd08db41"
+    },
+    "outer/FOLD_STABILITY.csv": {
+      "bytes": 11751,
+      "sha256": "d7c072e538beb045c136a76fed623c48833d284497e883d2c4146be28ad2b335"
+    },
+    "outer/MAIN_RESULTS.csv": {
+      "bytes": 4318,
+      "sha256": "58509d73244de0b387966fe0f2f3f2beaea60c52a71de606fc54a6d632e8c8ef"
+    },
+    "outer/METRIC_COVERAGE.csv": {
+      "bytes": 5454,
+      "sha256": "1fdcdbd6dd0fb773624151e2aa48a43f0b85dc4289199e94e24bf2dd566ffd87"
+    },
+    "outer/PAIRED_COMPARISONS.csv": {
+      "bytes": 38827,
+      "sha256": "b2fb9ab1d31857dc287d2870a0d7df63103956fa57b9aa78493704d33879470b"
+    },
+    "outer/RAW_COMPENSATION_DIAGNOSTIC.csv": {
+      "bytes": 15148,
+      "sha256": "e3abbb4a2d0902523ad37f0c5549432406cb0725b519c1322add80ebd514bc29"
+    },
+    "outer/SOURCE_PAIRED_COMPARISONS.csv": {
+      "bytes": 163730,
+      "sha256": "859d825bfbdd27f3a473a9043ee7ba37e868dec162cff21642fd99439e81008b"
+    },
+    "outer/SOURCE_RESULTS.csv": {
+      "bytes": 16451,
+      "sha256": "79fff6565a0f3a110f10c3461e8278250bace79712bf5d783d75be768dd89133"
+    }
+  },
+  "no_individual_fields_exported": true,
+  "private_runtime_never_recursively_copied": true,
+  "status": "PASS"
+}

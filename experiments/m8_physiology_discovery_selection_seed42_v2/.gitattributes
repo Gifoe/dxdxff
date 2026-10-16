@@ -4,3 +4,8 @@
 *.ps1 -text
 *.md text eol=lf
 *.svg -text
+*.bib text eol=lf
+.gitattributes text eol=lf
+* whitespace=cr-at-eol
+# Matplotlib's generated SVG path serialization contains harmless EOL spaces.
+*.svg -whitespace

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "public_transfer_files": 56,
+  "release_files": 135,
+  "all_transferred_bytes_match_server": true,
+  "all_frozen_scientific_sources_match": true,
+  "all6_figures_complete": true,
+  "no_individual_patient_channel_data_or_runtime_logs": true,
+  "new_neural_fits": 85,
+  "total_epochs": 1108,
+  "terminal": "COMPLETE_NO_STABLE_NEW_M8_FEATURE_SET_SMALL_CONCAT_RANKING_INCREMENT_EXPLORATORY"
+}

@@ -1,0 +1,11 @@
+{
+  "all_final_cardinalities_features_swaps_randoms_reconstructed": true,
+  "all_search_fits_independently_retrained": 5253,
+  "assessment_probability_replays": 135,
+  "feature_freeze_sha256": "3f5a35c4d4888f0d3481090e349f677e4a7409d40c5d686dc20ce857699fc0d8",
+  "maximum_choice_score_error": 8.326672684688674e-17,
+  "no_Development_or_Outer_used": true,
+  "roles_preprocessing_and_thresholds_checked": true,
+  "source_sha256": "9cd7c54cfa02118a6393700ee419e11d964a3a13db923afb3290f559d6eb0f1a",
+  "status": "PASS"
+}

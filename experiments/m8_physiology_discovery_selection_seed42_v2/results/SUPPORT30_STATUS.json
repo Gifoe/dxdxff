@@ -1,0 +1,15 @@
+{
+  "before_Outer": true,
+  "epochs": 75,
+  "main_models_unchanged": true,
+  "model_freeze_sha256": "be8da085facb7f366e696091fda6dac5411de4eb84a4fb60a896cb8f2665a982",
+  "source": {
+    "TIME_SUPPORT_AMENDMENT.json": "c43252d833fa937a9c64648aabc655bc8e3f56908b17f74481e0c19e7d01f505",
+    "common.py": "cd73340e7dbcebc65df60ca59dbc5019888815f2b6dec89a5f1c5bb17c5bfd76",
+    "model.py": "d6487fd185121d6e4ac13438c4edb90e58457118ef4b2691dc9302cf46b624d5",
+    "model_io.py": "3bd5323f47536e2ad8648ec3e6ec1a96fa614be4ae4a23a224132457ed8c372c",
+    "support_control.py": "330de7f78ba4111b4daac5e23bda837784910b06e017e94245a58d3b612ed8b6",
+    "train.py": "163911286a44c59eef51b4e41eeb2d1cabd777e17f56d0f21c08983fef51d5d7"
+  },
+  "status": "ALL5_SUPPORT_MATCHED_RAW_MODELS_FROZEN"
+}

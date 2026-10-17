@@ -1,0 +1,49 @@
+{
+  "decisions": [
+    {
+      "AUROC_gain": -0.01827367965531157,
+      "Macro_gain": -0.04162285704831936,
+      "advanced": false,
+      "chosen": "FRESH_BASE",
+      "fold": 1,
+      "promoted": []
+    },
+    {
+      "AUROC_gain": 0.01353433519944336,
+      "Macro_gain": 0.007309621253935528,
+      "advanced": false,
+      "chosen": "FRESH_POINTWISE",
+      "fold": 2,
+      "promoted": []
+    },
+    {
+      "AUROC_gain": 0.006527335261230505,
+      "Macro_gain": -0.009903826242359082,
+      "advanced": false,
+      "chosen": "FRESH_BASE",
+      "fold": 3,
+      "promoted": []
+    },
+    {
+      "AUROC_gain": 0.009089014539752971,
+      "Macro_gain": 0.022266277607058904,
+      "advanced": true,
+      "chosen": "FRESH_POINTWISE",
+      "fold": 4,
+      "promoted": [
+        "FRESH_BASE",
+        "FRESH_POINTWISE",
+        "FRESH_TEMPORAL"
+      ]
+    },
+    {
+      "AUROC_gain": 0.008449885867762186,
+      "Macro_gain": -0.008938009590641505,
+      "advanced": false,
+      "chosen": "FRESH_TEMPORAL",
+      "fold": 5,
+      "promoted": []
+    }
+  ],
+  "status": "FRESH_TEMPORAL_RAW_INTERNAL_RACING"
+}

@@ -1,0 +1,80 @@
+{
+  "gates": [
+    {
+      "arm": "FRESH_BASE",
+      "contrasts": [
+        {
+          "AUROC_gain": -0.00030732265596233876,
+          "Macro_gain": 0.02446006603180484,
+          "paired_Macro_high": 0.05173371353754612,
+          "paired_Macro_low": -0.0030087638122483005,
+          "passed": false,
+          "path_wins": 2,
+          "reference": "NATIVE"
+        },
+        {
+          "AUROC_gain": -0.0052718054634652844,
+          "Macro_gain": 0.015902394765962113,
+          "paired_Macro_high": 0.041120676258795355,
+          "paired_Macro_low": -0.008824008949546408,
+          "passed": false,
+          "path_wins": 1,
+          "reference": "FROZEN_PRE"
+        }
+      ],
+      "eligible": false,
+      "fold": 4
+    },
+    {
+      "arm": "FRESH_POINTWISE",
+      "contrasts": [
+        {
+          "AUROC_gain": -0.00011675817762468732,
+          "Macro_gain": 0.025887152044962725,
+          "paired_Macro_high": 0.05338077985965785,
+          "paired_Macro_low": -0.0017391180125551783,
+          "passed": false,
+          "path_wins": 2,
+          "reference": "NATIVE"
+        },
+        {
+          "AUROC_gain": -0.005081240985127633,
+          "Macro_gain": 0.01732948077912,
+          "paired_Macro_high": 0.04268219408498174,
+          "paired_Macro_low": -0.00773257507850818,
+          "passed": false,
+          "path_wins": 1,
+          "reference": "FROZEN_PRE"
+        }
+      ],
+      "eligible": false,
+      "fold": 4
+    },
+    {
+      "arm": "FRESH_TEMPORAL",
+      "contrasts": [
+        {
+          "AUROC_gain": 0.0003737354705118934,
+          "Macro_gain": 0.01205933436921125,
+          "paired_Macro_high": 0.038398559953819404,
+          "paired_Macro_low": -0.014383034075190176,
+          "passed": false,
+          "path_wins": 2,
+          "reference": "NATIVE"
+        },
+        {
+          "AUROC_gain": -0.004590747336991052,
+          "Macro_gain": 0.003501663103368524,
+          "paired_Macro_high": 0.027823845760474426,
+          "paired_Macro_low": -0.021569805868581496,
+          "passed": false,
+          "path_wins": 1,
+          "reference": "FROZEN_PRE"
+        }
+      ],
+      "eligible": false,
+      "fold": 4
+    }
+  ],
+  "status": "RECOMPUTED_WITH_INDEPENDENT_INTERVAL_CHECK"
+}

@@ -1,6 +1,7 @@
 # Fresh temporal interactions for Raw-only Macro-F1, seed42
 
-Prospective bounded internal study. **No result has been obtained.** Target:
+Completed, independently verified bounded internal study. **No fresh candidate
+qualified for a new final evaluation.** See [RUN_REPORT.md](RUN_REPORT.md). Target:
 full80 equal-patient Macro-F1 >0.65, not an internal, pooled, EZ-F1 or oracle
 metric. The preceding studies remain published with their negative results.
 
@@ -59,8 +60,9 @@ After training: all retained CAL/HELD predictions replayed,201threshold
 decisions checked, nine independent patient metrics, source/fold coverage
 and198absolute/paired interval rows. First-path assessment has86appearances
 of59unique people, not a new80patient test. Repeated patient appearances are
-kept together in10,000bootstrap draws. Original Development/Outer remain
-unavailable to this internal program. A later final program would need a
+kept together in10,000bootstrap draws. Original Development/Outer are not used
+for fitting, selection or evaluation by this internal program; the legacy
+mixed-file readers do not provide physical file isolation. A later final program would need a
 separate model/threshold freeze, and its results would still be exploratory
 repeated-test, not independent confirmation.
 
@@ -94,3 +96,23 @@ through epoch5 at approximately1.9seconds/epoch, error log empty. This is a
 dated progress snapshot, not a classification result or an overall runtime
 estimate. The original Development/Outer were not used. No target achievement
 is claimed from this admission or the still incomplete internal matrix.
+
+## Actual completed execution
+
+All21freshfits/555epochs completed. Fold4's initial pointwise candidate alone
+advanced, so allthree networks were replicated on two more ownFIT paths.
+That initial signal did not satisfy the replicated confidence/path-consistency
+gate. No fresh arm qualified and no new original Development/Outer run occurred.
+
+Complete first-path Macro-F1 was0.627126BASE,0.624601POINTWISE and0.605796TEMPORAL,
+versus0.625949prior compactPRE and0.627837prior pre-state. These are86patient
+assessment appearances of59unique people, not a full80test. The tested temporal
+adapter was worse than both fresh controls at the nominal paired interval
+level; this does not prove every longer temporal encoder is ineffective.
+
+All21actual checkpoints replayed with maximum error0 and exact201threshold
+decisions. All806private patient-metric rows/9metrics,198complete-first-path
+CI rows and6replication-gate intervals passed independent checks. The same
+coordinator exited0 with `FRESH_TEMPORAL_RAW_INTERNAL_PIPELINE_COMPLETE_NO_OUTER`.
+Only code and anonymous actual aggregates are public; the broad full80
+Macro-F1>0.65goal remains active and unachieved.

@@ -1,0 +1,6 @@
+fold,advanced,first_candidate,selected_arm,fresh_eligible
+1,False,FRESH_BASE,COMPACT_PRE,False
+2,False,FRESH_POINTWISE,NATIVE,False
+3,False,FRESH_BASE,COMPACT_PRE,False
+4,True,FRESH_POINTWISE,COMPACT_PRE,False
+5,False,FRESH_TEMPORAL,COMPACT_PRE,False

@@ -1,0 +1,147 @@
+{
+  "all7_features_unchanged": true,
+  "checkpoint_checks": [
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "body_readout_unchanged": true,
+      "epoch": 4,
+      "fold": 1,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "body_readout_unchanged": true,
+      "epoch": 5,
+      "fold": 2,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "body_readout_unchanged": true,
+      "epoch": 9,
+      "fold": 3,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "body_readout_unchanged": true,
+      "epoch": 5,
+      "fold": 4,
+      "maximum_replay_error": 4.76837158203125e-07
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "body_readout_unchanged": true,
+      "epoch": 4,
+      "fold": 5,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "body_readout_unchanged": true,
+      "epoch": 14,
+      "fold": 1,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "body_readout_unchanged": true,
+      "epoch": 9,
+      "fold": 2,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "body_readout_unchanged": true,
+      "epoch": 18,
+      "fold": 3,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "body_readout_unchanged": true,
+      "epoch": 1,
+      "fold": 4,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "body_readout_unchanged": true,
+      "epoch": 16,
+      "fold": 5,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "body_readout_unchanged": true,
+      "epoch": 17,
+      "fold": 1,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "body_readout_unchanged": true,
+      "epoch": 9,
+      "fold": 2,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "body_readout_unchanged": true,
+      "epoch": 21,
+      "fold": 3,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "body_readout_unchanged": true,
+      "epoch": 15,
+      "fold": 4,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "actual_Raw_end_to_end": true,
+      "all201_threshold_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "body_readout_unchanged": true,
+      "epoch": 5,
+      "fold": 5,
+      "maximum_replay_error": 0.0
+    }
+  ],
+  "independent_interval_checks": 54,
+  "independent_metric_checks": 1755,
+  "maximum_interval_difference": 0.0,
+  "maximum_replay_error": 4.76837158203125e-07,
+  "new_Outer_passes": 0,
+  "patient_metric_rows": 195,
+  "status": "PASS"
+}

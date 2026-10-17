@@ -1,0 +1,115 @@
+{
+  "actual_FIT_checks": [
+    {
+      "arm": "G0_GLOBAL",
+      "channels": 164,
+      "discarded_steps": 2,
+      "exact_full_model_cached_initial_logits": true,
+      "full_model_has_one_scalar_readout": true,
+      "full_parameters": 10506,
+      "gradient_norms": [
+        {
+          "offset": 0.01687679812312126
+        },
+        {
+          "offset": 0.016871711239218712
+        }
+      ],
+      "readout_unchanged": true,
+      "trainable_parameters": 128,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "G1_PATIENT",
+      "channels": 164,
+      "discarded_steps": 2,
+      "exact_full_model_cached_initial_logits": true,
+      "full_model_has_one_scalar_readout": true,
+      "full_parameters": 12562,
+      "gradient_norms": [
+        {
+          "context.0.bias": 0.0,
+          "context.0.weight": 0.0,
+          "context.2.bias": 0.01687679812312126,
+          "context.2.weight": 0.004554104059934616
+        },
+        {
+          "context.0.bias": 6.085800487198867e-05,
+          "context.0.weight": 0.00021592472330667078,
+          "context.2.bias": 0.016868701204657555,
+          "context.2.weight": 0.0045519182458519936
+        }
+      ],
+      "readout_unchanged": true,
+      "trainable_parameters": 2184,
+      "valid_windows": 48380
+    }
+  ],
+  "formal_epochs_discarded": 0,
+  "initial_checks": [
+    {
+      "all201_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "fold": 1,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "fold": 1,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "fold": 2,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "fold": 2,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "fold": 3,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "fold": 3,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "fold": 4,
+      "initial_replay_error": 4.76837158203125e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "fold": 4,
+      "initial_replay_error": 4.76837158203125e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G0_GLOBAL",
+      "fold": 5,
+      "initial_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "G1_PATIENT",
+      "fold": 5,
+      "initial_replay_error": 2.384185791015625e-07
+    }
+  ],
+  "input_binding_sha256": "cbfc0d41109b4995fe0176c4a06a5d7e0011fbceca44dd98d85275fb9d7f7980",
+  "new_Outer_passes": 0,
+  "status": "PASS",
+  "tests_passed": 5
+}

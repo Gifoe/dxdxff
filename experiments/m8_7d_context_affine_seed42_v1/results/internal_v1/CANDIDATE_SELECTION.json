@@ -1,0 +1,35 @@
+{
+  "candidate_sha256": "b79f87abff78ac22638bb1a2766e18d5b1d609b6175be8dabd63b5ceffcd1740",
+  "eligible": [],
+  "model_freeze_sha256": "f32af4b55d91386abdec21d5c478601a45e281299bbbdb09d64e54da77d066f1",
+  "new_Outer_used": false,
+  "new_qualified": false,
+  "scores": [
+    {
+      "arm": "C2_REFERENCE",
+      "auprc": 0.5616263970282607,
+      "auroc": 0.762169266320797,
+      "fold_sd": 0.01954309064762992,
+      "macro": 0.6730761426455318,
+      "penalized": 0.6711218335807688
+    },
+    {
+      "arm": "G0_GLOBAL",
+      "auprc": 0.5620002628655013,
+      "auroc": 0.7624740102526271,
+      "fold_sd": 0.01924258501449356,
+      "macro": 0.6735409550432081,
+      "penalized": 0.6716166965417587
+    },
+    {
+      "arm": "G1_PATIENT",
+      "auprc": 0.562436756374799,
+      "auroc": 0.7624683764577092,
+      "fold_sd": 0.02007191616751042,
+      "macro": 0.6747098416943997,
+      "penalized": 0.6727026500776487
+    }
+  ],
+  "selected": "C2_REFERENCE",
+  "status": "SELECTED_BEFORE_ANY_NEW_OUTER"
+}

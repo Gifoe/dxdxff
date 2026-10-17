@@ -1,7 +1,10 @@
 # Frozen C2 + patient-context hidden affine adaptation
 
-Prospective third bounded study after two actual Raw architecture studies
-failed their unchanged internal Macro gate. Original7D/14processedcoordinates
+Completed third bounded study after two actual Raw architecture studies
+failed their unchanged internal Macro gate. All10new frozen-body head fits/
+275epochs and full independent Raw replay passed,but G1 failed the preset
+improvement gate. No newOuter;actual results in RUN_REPORT.md and
+results/internal_v1. Original7D/14processedcoordinates
 and the full80patient contract stay unchanged. The previously paused
 displacement-only proposal is preserved separately and was never run.
 

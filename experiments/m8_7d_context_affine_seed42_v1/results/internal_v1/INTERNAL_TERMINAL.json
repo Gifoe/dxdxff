@@ -1,0 +1,11 @@
+{
+  "actual_new_fits": 10,
+  "epochs": 275,
+  "final_stage_warranted": false,
+  "goal_established": false,
+  "independent_confirmation": false,
+  "new_Outer_passes": 0,
+  "reused_controls": 5,
+  "selected": "C2_REFERENCE",
+  "status": "COMPLETE_VERIFIED_CONTEXT_AFFINE_INTERNAL"
+}

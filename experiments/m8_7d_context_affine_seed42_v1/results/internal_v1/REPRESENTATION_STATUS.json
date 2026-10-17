@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "all201_decisions_exact": true,
+      "body_unchanged": true,
+      "fold": 1,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "body_unchanged": true,
+      "fold": 2,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "body_unchanged": true,
+      "fold": 3,
+      "maximum_replay_error": 2.384185791015625e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "body_unchanged": true,
+      "fold": 4,
+      "maximum_replay_error": 4.76837158203125e-07
+    },
+    {
+      "all201_decisions_exact": true,
+      "body_unchanged": true,
+      "fold": 5,
+      "maximum_replay_error": 2.384185791015625e-07
+    }
+  ],
+  "folds": 5,
+  "new_Outer_passes": 0,
+  "no_labels_in_hidden_cache": true,
+  "patient_appearances": 320,
+  "representation_seal_sha256": "57cf5c81dbcfedfafc8a806d02824e41952ddede1dd490eeec353fdea90f7744",
+  "status": "PASS"
+}

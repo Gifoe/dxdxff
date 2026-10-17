@@ -1,18 +1,25 @@
 {
   "files": {
     ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "FINAL_PROTOCOL_LOCK.json": "11840236a07b1e65296f02f5c5cd4e498036b9d2cdc64a15e56af5ef78d75bd5",
     "PROTOCOL_LOCK.json": "cc1bf66bbd68bca53ae8335ab371e4384cfd452132e34171792b90c6d88ba362",
-    "README.md": "cd1a83204ecdf9bf21a10bf4a327da5bfca815a4ee055cbfa2f8f375856b83db",
+    "README.md": "a09ab25c9eb32d41e425728de330cade6f3ae5177f08bea7e70e09cd285e2357",
     "admit.py": "ebe4eb4f56e613c9e95b0d1f82c32b978fa1b358bc970bba008ca9f656c1964a",
+    "audit_raw_support.py": "61710585be9521591c6f94e28c474caec275f143a17602f10cfa0be835ea8cd5",
+    "check_final_gate.py": "791fa95ebff2800367fd890181a04510f8ea94584ec2f9050c915022fbf1831c",
     "common.py": "b31e088a710b541bc21d7ee2abe93cffcefc2f72cffdf7bb9ca1cd22d1550247",
+    "final_stage.py": "95963ffb8c8606a98301ad6c8ca1f5998bd5dd2009de0047da47435e49fa22ef",
     "model.py": "7e34c70ba6af6253cb55069ead80c83aec45e65a158fde28c8eacfa3e9f1a417",
     "results/internal_v1/ADMISSION.json": "197c8bffbe1ffea9e1deba0f67c7c8b4039d3871de2f5072c746ce866fb79b26",
+    "run_final.ps1": "5bcedd6bdfc446a29645b8022e5bd4530f5d2eef6b95f10760a0b02c646ad5cd",
     "run_internal.ps1": "9ca9a0e59466becccc902231cb7d1e38325243d1b61196cd9450ad9414586668",
     "summarize.py": "1b6c3d472a22b1d5e0130c226081618f05a8a06f4e3a008eda90dae657443c75",
     "test_model.py": "d5a50f076ee35cdabcc9b2c710587efbc25bcd3268a2d6c995314e8ef799e1ea",
     "train_internal.py": "72d117c68785c5c020eda3d41689ad756a588c0cec6b1006e2b5e11736e6802a",
-    "verify_public.py": "af4048a51a9532b51fbe650acc60f61bad703cac690931959fe5678f993bc024"
+    "verify_final.py": "8eca96a40fa8fff0dd475c39e8583a0daaee9023d068740c7d1be310ff13884a",
+    "verify_public.py": "f1f3aa61c1f0c1cc19bc8948bd75b6f8156f21ad2b63f3dee4eed3a26709def8"
   },
+  "final_verified": false,
   "internal_verified": false,
   "scope": "public_consistency_not_private_Raw_replay",
   "status": "PASS"

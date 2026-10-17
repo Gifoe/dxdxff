@@ -58,3 +58,20 @@ At07:54Asia/Shanghai, the first complete internal fit was saved and the second
 was actively training, error log empty. This is a dated progress snapshot,
 not a claim that the full internal matrix or any new Outer is complete.
 No new performance or target achievement is claimed until actual verification.
+
+## Guarded final implementation, not an executed result
+
+`FINAL_PROTOCOL_LOCK.json`, `final_stage.py`, `verify_final.py` and
+`run_final.ps1` implement the already registered conditional final plan. They
+do not alter any live internal training source. Entry requires completed
+independent internalPASS plus allfive ownFIT choices and an advancedfold.
+Then actual complete originalFIT admission precedes15freshFIT/Development
+fits,30model/thresholdfreezes,one joint sealedOuter pass,all480patientmetric
+rows and126absolute/pairedCI checks. The primary remains SELECTED, not the
+best fixed Outer point. A new post-seal Raw mask census is also mandatory.
+`check_final_gate.py` checks denial while the real internal terminal is absent;
+it performs no fitting, prediction or Development/Outer data loading.
+That negative-entry check passed on the server while the real internal
+terminal was absent. It is a workflow guard check, not a model performance
+result. This final implementation is not automatically run by the internal
+coordinator and must not be launched while an internal worker is active.

@@ -1,0 +1,14 @@
+{
+  "status": "CPU_CHANGED_PATH_TESTS_PASS_NOT_MODEL_RESULT",
+  "date_Asia_Shanghai": "2026-10-17",
+  "actual_pytest_passed": 5,
+  "actual_pytest_failed": 0,
+  "actual_pytest_skipped": 0,
+  "pytest_reported_seconds": 1.14,
+  "public_deployed_source_manifest_verified": true,
+  "prebinding_source_zip_sha256": "440acffd4570246153683b89cd27c2411f842014ee78019ad4b9e843d2639060",
+  "formal_fits_at_preflight": 0,
+  "classification_results_generated": false,
+  "complete_patient_GPU_admission_proven_by_this_artifact": false,
+  "target_proven_by_this_artifact": false
+}

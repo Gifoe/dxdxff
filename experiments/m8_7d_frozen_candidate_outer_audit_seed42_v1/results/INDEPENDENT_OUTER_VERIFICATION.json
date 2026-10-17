@@ -1,0 +1,15 @@
+{
+  "all10_new_full_Raw_censuses_verified": true,
+  "all11_complete80_verified": true,
+  "all55_models_and_thresholds_frozen": true,
+  "interval_checks": 234,
+  "macro_family_interval_checks": 10,
+  "maximum_interval_difference": 6.661338147750939e-16,
+  "no_new_training_or_inference": true,
+  "old_scores_and_Development_gates_unchanged": true,
+  "one_classification_head": true,
+  "original7_features_unchanged": true,
+  "patient_metric_checks": 7920,
+  "patient_rows": 880,
+  "status": "PASS"
+}

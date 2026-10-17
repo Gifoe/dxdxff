@@ -1,0 +1,66 @@
+{
+  "arms": [
+    {
+      "above_0_64": false,
+      "arm": "C2_REFERENCE",
+      "patient_equal_Macro_F1": 0.6396579900303191
+    },
+    {
+      "above_0_64": true,
+      "arm": "R0_MEAN_CAPACITY",
+      "patient_equal_Macro_F1": 0.642014220192354
+    },
+    {
+      "above_0_64": false,
+      "arm": "R1_RAW_DISPERSION",
+      "patient_equal_Macro_F1": 0.634626949199661
+    },
+    {
+      "above_0_64": true,
+      "arm": "F0_AFTER_GELU",
+      "patient_equal_Macro_F1": 0.6479765335907924
+    },
+    {
+      "above_0_64": true,
+      "arm": "F1_BEFORE_GELU",
+      "patient_equal_Macro_F1": 0.6458734850350851
+    },
+    {
+      "above_0_64": false,
+      "arm": "G0_GLOBAL",
+      "patient_equal_Macro_F1": 0.6389810987031325
+    },
+    {
+      "above_0_64": true,
+      "arm": "G1_PATIENT",
+      "patient_equal_Macro_F1": 0.6402523812127615
+    },
+    {
+      "above_0_64": false,
+      "arm": "P0_POINTWISE",
+      "patient_equal_Macro_F1": 0.6370585449886697
+    },
+    {
+      "above_0_64": false,
+      "arm": "P1_RELATIONAL",
+      "patient_equal_Macro_F1": 0.6394689323443269
+    },
+    {
+      "above_0_64": false,
+      "arm": "T0_GLOBAL_NORMALIZED",
+      "patient_equal_Macro_F1": 0.6353663071353858
+    },
+    {
+      "above_0_64": false,
+      "arm": "T1_PATIENT_BALANCED",
+      "patient_equal_Macro_F1": 0.6370168295184001
+    }
+  ],
+  "independent_confirmation": false,
+  "no_post_Outer_tuning": true,
+  "old_development_gates_unchanged": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST_MULTI_CANDIDATE_AUDIT",
+  "selected_arm": null,
+  "status": "ALL11_FIXED_ARMS_REPORTED_NO_SELECTION",
+  "target_strictly_greater_than": 0.64
+}

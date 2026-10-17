@@ -21,4 +21,12 @@ All eleven arms are reported in the protocol's fixed order. Any arm above 0.64 i
 
 Deploy the exact source directory on the trusted Windows server under the experiment's declared D: code path. Run `run_outer.ps1 -Stage Admit -RunTag 01` to check adapters and freeze; then `run_outer.ps1 -Stage All -RunTag 02` in a sustained foreground SSH session. The coordinator locks its runtime, rejects duplicates, preserves logs and does not automatically retry failures. Use a fresh RunTag only after diagnosis. No original experiment source is overwritten.
 
-The public checker `python verify_public.py` consumes only compact aggregates in `results/`. Private waveforms, identities, per-patient predictions, checkpoints and logs stay on the trusted server. Execution status and actual results will be added only after verified runs.
+The public checker `python verify_public.py` consumes only compact aggregates in `results/`. Private waveforms, identities, per-patient predictions, checkpoints and logs stay on the trusted server.
+
+## Actual completion: 2026-10-17
+
+All eleven full-80-patient arms completed. Independent verification passed **880 patient rows, 7,920 metric values, 234 nominal intervals and ten additional Macro-F1 family intervals**. Every new arm retained the complete original Raw census. No training or threshold adjustment occurred in this audit.
+
+The largest observed patient-average Macro-F1 was **0.64797653 (F0_AFTER_GELU)**, versus **0.63965799 (C2_REFERENCE)**. The paired difference was +0.00831854, nominal 95% patient-bootstrap CI **[-0.00814414, 0.02513739]**; the approximate multiplicity-aware interval also includes zero. F0 AUROC was lower than C2 (0.75493236 vs 0.76970364). This exceeds the requested **observed point target**, but does not establish a statistically reliable or across-metric improvement, and no arm is retrospectively promoted to an independently confirmed main model.
+
+See [full results and interpretation](REPORT.md), [execution audit](RUN_AUDIT.md), [all patient-average metrics](results/MAIN_RESULTS.csv), [folds](results/FOLD_RESULTS.csv), [paired uncertainty](results/INTERVALS.csv), and [source stability](results/SOURCE_RESULTS.csv). No new Development performance gate was applied; the five historical studies and their failed improvement gates are unchanged.

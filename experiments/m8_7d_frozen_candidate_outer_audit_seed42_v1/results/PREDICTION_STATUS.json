@@ -1,0 +1,12 @@
+{
+  "arms": 11,
+  "channels_each": 7635,
+  "freeze_sha256": "f8205e35ca983e49c69265e5c07921d0b9e10eff46c7b89d524bb41f43a81388",
+  "full_truth_used": false,
+  "new_inference_cells": 50,
+  "original7_features_unchanged": true,
+  "patients_each": 80,
+  "reused_reference_cells": 5,
+  "score_seal_sha256": "b345ac3a2aa934c97782280275a149737d96d870b5e54eadd0b629f77ef44bf6",
+  "status": "ALL50_NEW_PLUS5_REUSED_OUTER_SCORES_SEALED"
+}

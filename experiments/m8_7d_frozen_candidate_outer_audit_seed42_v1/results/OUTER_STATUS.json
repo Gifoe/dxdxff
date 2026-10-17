@@ -1,0 +1,15 @@
+{
+  "arms": 11,
+  "features": 7,
+  "freeze_sha256": "f8205e35ca983e49c69265e5c07921d0b9e10eff46c7b89d524bb41f43a81388",
+  "independent_confirmation": false,
+  "metric_checks": 7920,
+  "new_inference_cells": 50,
+  "patient_rows": 880,
+  "patients_each": 80,
+  "reused_reference_cells": 5,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST_MULTI_CANDIDATE_AUDIT",
+  "score_seal_sha256": "b345ac3a2aa934c97782280275a149737d96d870b5e54eadd0b629f77ef44bf6",
+  "selected_arm": null,
+  "status": "COMPLETE_VERIFIED_ALL11_FULL80_FROZEN_OUTER_AUDIT"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "CPU_PREFLIGHT_PASS_FORMAL_TRAINING_NOT_STARTED",
+  "date": "2026-10-17",
+  "tests_collected": 6,
+  "tests_passed": 6,
+  "test_seconds": 0.95,
+  "formal_optimizer_updates": 0,
+  "development_or_outer_evaluations": 0,
+  "preflight_source_zip_sha256": "c22908f8efc9e726a3fa43a9943ce2b8154968a5e08d40fc029e88931fdcc57f",
+  "checks": [
+    "Shared random core, actual parameter counts and constructor signature",
+    "Matching-pool short/long exact initial outputs and shared CPU gradients",
+    "Early support dependence and exact learned-response log-energy definition",
+    "Complete input, channel-order equivariance, masked padding and finite gradients",
+    "Exact registered Macro objective",
+    "Factorial contrast algebra"
+  ],
+  "launcher_issue": "The first ad-hoc CPU launcher imported torch before numpy and aborted with duplicate OpenMP initialization. No setup/freeze/optimizer ran. Importing numpy before torch, matching common.py's existing import order, passed all six tests. No duplicate-runtime override, dependency change or scientific source change was used.",
+  "limitations": "Synthetic correctness checks are not performance evidence. Seven actual old-control replays and largest complete actual-patient GPU admission remain required before any formal fit."
+}

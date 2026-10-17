@@ -34,3 +34,15 @@ No arbitrary threshold or architecture tweaks are made to the frozen C2 to
 cross its0.000342target gap. This trial tests the physiology-anchor hypothesis
 identified before C2's Outer report. It is generic staged training/hidden
 fusion, not a claimed novel method or a guaranteed improvement.
+
+## Completed result
+
+All5warm+15joint fits actually completed123+156=279epochs. Independent
+verification passed25checkpoint cells,2,925patient metrics and135intervals,
+with zero replay/interval difference. Development Macro-F1 isC2.673076,
+P.646064,H0.670936,H1.673146,H2.674237. No new candidate met the locked
+Macro+0.003gate versus C2; therefore **no new Outer was run**.
+
+See `RUN_REPORT.md`, `COMPLETION_AUDIT.json` and complete anonymous actual
+artifacts under `results/internal_v1/`. The overall full80>0.64goal remains
+unmet; the old full80C2value0.639658 is unchanged and is not a new result here.

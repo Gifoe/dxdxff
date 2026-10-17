@@ -32,3 +32,12 @@ retries; logs/checkpoints are preserved. Warm training and joint training are
 separately counted. Each fold trains one shared warm head and three joint
 variants; feature-only warm validation is diagnostic, never an eligible primary.
 No new Outer input or outcome is used during this stage.
+
+Tag01 ended normally with`HIDDEN_ANCHOR_INTERNAL_PIPELINE_COMPLETE_NO_OUTER`.
+All20newfits completed279epochs (warm123,joint156), plusfive actual old-control
+replays. Training and verification stderr were empty. Independent verification
+passed25checkpoint cells with zero maximum replay error,2,925patient-metric
+entries and135intervals with zero maximum interval difference. Stage transfer,
+fixed-tensor invariants and actual counts were verified. No candidate met the
+original gate, so no new Outer was accessed or run. The old full80C2score and
+all earlier sources/weights/seals remain unchanged. This is not goal completion.

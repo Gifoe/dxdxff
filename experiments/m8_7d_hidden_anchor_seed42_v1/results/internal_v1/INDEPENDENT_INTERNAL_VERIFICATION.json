@@ -1,0 +1,213 @@
+{
+  "all7_features_unchanged": true,
+  "all_stage_transfer_and_frozen_states_verified": true,
+  "checkpoint_checks": [
+    {
+      "all201_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 4,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 5,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 9,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 5,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 4,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "P_WARM_ONLY",
+      "epoch": 8,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "P_WARM_ONLY",
+      "epoch": 17,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "P_WARM_ONLY",
+      "epoch": 19,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "P_WARM_ONLY",
+      "epoch": 3,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "P_WARM_ONLY",
+      "epoch": 1,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H0_SCRATCH",
+      "epoch": 3,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H0_SCRATCH",
+      "epoch": 5,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H0_SCRATCH",
+      "epoch": 7,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H0_SCRATCH",
+      "epoch": 5,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H0_SCRATCH",
+      "epoch": 3,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H1_WARM_JOINT",
+      "epoch": 2,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H1_WARM_JOINT",
+      "epoch": 4,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H1_WARM_JOINT",
+      "epoch": 7,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H1_WARM_JOINT",
+      "epoch": 2,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H1_WARM_JOINT",
+      "epoch": 2,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H2_WARM_FIXED",
+      "epoch": 2,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H2_WARM_FIXED",
+      "epoch": 4,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H2_WARM_FIXED",
+      "epoch": 10,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H2_WARM_FIXED",
+      "epoch": 1,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    },
+    {
+      "all201_decisions_exact": true,
+      "arm": "H2_WARM_FIXED",
+      "epoch": 9,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "transfer_and_frozen_state_verified": true
+    }
+  ],
+  "independent_interval_checks": 135,
+  "independent_metric_checks": 2925,
+  "maximum_interval_difference": 0.0,
+  "maximum_replay_error": 0.0,
+  "new_Outer_passes": 0,
+  "patient_metric_rows": 325,
+  "status": "PASS"
+}

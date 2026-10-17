@@ -1,0 +1,15 @@
+{
+  "actual_new_fits": 20,
+  "epochs": 279,
+  "final_stage_warranted": false,
+  "goal_established": false,
+  "independent_confirmation": false,
+  "joint_epochs": 156,
+  "joint_fits": 15,
+  "new_Outer_passes": 0,
+  "reused_controls": 5,
+  "selected": "C2_REFERENCE",
+  "status": "COMPLETE_VERIFIED_HIDDEN_ANCHOR_INTERNAL",
+  "warm_epochs": 123,
+  "warm_fits": 5
+}

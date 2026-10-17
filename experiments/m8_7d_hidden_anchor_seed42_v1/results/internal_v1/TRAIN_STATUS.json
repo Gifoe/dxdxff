@@ -1,0 +1,14 @@
+{
+  "actual_new_fits": 20,
+  "candidate_sha256": "5463d6ab08ecafaf75910859ed629c4ff69dd1d2efee113c3f669b87040a19f8",
+  "epochs": 279,
+  "goal_established": false,
+  "joint_epochs": 156,
+  "joint_fits": 15,
+  "model_freeze_sha256": "354ffa9832b21f7e74983a00daa8b92871197cdfd9fcd51ea1bfd7fb409230a3",
+  "new_Outer_passes": 0,
+  "reused_controls": 5,
+  "status": "ALL20_NEW_PLUS5_REUSED_HIDDEN_ANCHOR_FROZEN",
+  "warm_epochs": 123,
+  "warm_fits": 5
+}

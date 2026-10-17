@@ -1,0 +1,51 @@
+{
+  "candidate_sha256": "5463d6ab08ecafaf75910859ed629c4ff69dd1d2efee113c3f669b87040a19f8",
+  "eligible": [],
+  "model_freeze_sha256": "354ffa9832b21f7e74983a00daa8b92871197cdfd9fcd51ea1bfd7fb409230a3",
+  "new_Outer_used": false,
+  "new_qualified": false,
+  "scores": [
+    {
+      "arm": "C2_REFERENCE",
+      "auprc": 0.5616263970282607,
+      "auroc": 0.762169266320797,
+      "fold_sd": 0.01954309064762992,
+      "macro": 0.6730761426455318,
+      "penalized": 0.6711218335807688
+    },
+    {
+      "arm": "H0_SCRATCH",
+      "auprc": 0.575981124870971,
+      "auroc": 0.7802414126967483,
+      "fold_sd": 0.026692138683973757,
+      "macro": 0.6709356895395767,
+      "penalized": 0.6682664756711794
+    },
+    {
+      "arm": "H1_WARM_JOINT",
+      "auprc": 0.5725292855480095,
+      "auroc": 0.7706331150139434,
+      "fold_sd": 0.024584079939398228,
+      "macro": 0.67314550844872,
+      "penalized": 0.6706871004547802
+    },
+    {
+      "arm": "H2_WARM_FIXED",
+      "auprc": 0.5795973923942496,
+      "auroc": 0.7740724003285341,
+      "fold_sd": 0.020448607541593892,
+      "macro": 0.6742365024680835,
+      "penalized": 0.6721916417139241
+    },
+    {
+      "arm": "P_WARM_ONLY",
+      "auprc": 0.5168486116357288,
+      "auroc": 0.7225730469273063,
+      "fold_sd": 0.03820798626208551,
+      "macro": 0.6460640714869366,
+      "penalized": 0.642243272860728
+    }
+  ],
+  "selected": "C2_REFERENCE",
+  "status": "SELECTED_BEFORE_ANY_NEW_OUTER"
+}

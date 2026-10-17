@@ -69,3 +69,26 @@ The deployed public source manifest passed. All five unique changed-path CPU
 tests passed (pytest:5 passed in1.14s). No formal fit or classification result
 is implied. The real complete-patient GPU admission is still required before
 formal training. The protocol/source are pushed before that formal training.
+
+## Actual admission and training snapshot
+
+The protocol/source commit was `aad65d31c5ca682d8e56db81037223e0a12c9fea`,
+verified at the GitHub remote before formal fitting. The real complete legal
+training-patient admission then passed all three networks:164channels,
+48,380validwindows,14,577parameters,finite all-parameter gradients and
+nonzero CNN/head gradients. All five fold initial-state matches passed.
+Admission made zero optimizer updates; its actual anonymous artifact is
+[ADMISSION.json](results/internal_v1/ADMISSION.json).
+
+At09:14Asia/Shanghai on2026-10-17, the first DELTA_DUP internal fit was active
+through epoch9, approximately1.8seconds/epoch, empty error log. This is a dated
+snapshot, not an end-to-end timing estimate or an internal/final result.
+The original Development/Outer were not used. No new performance claim is made.
+
+The older four-component evidence ledger remains
+[MECHANISM_EVIDENCE.md](../raw_temporal_context_macro_seed42_v1/MECHANISM_EVIDENCE.md).
+Those frozen-encoder/readout deletions are conditional evidence, not proofs
+that all four components are universally necessary in retrained CNNs. In
+particular, the cross-seizure SD benefit was not established. This new
+from-scratch POST_DUP comparison addresses latent-reference subtraction under
+the Macro-oriented protocol; it does not silently replace the older evidence.

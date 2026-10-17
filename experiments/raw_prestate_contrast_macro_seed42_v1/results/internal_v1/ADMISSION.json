@@ -1,0 +1,79 @@
+{
+  "all15_role_identities_verified": true,
+  "formal_updates": 0,
+  "initial_states": [
+    {
+      "all3_initial_states_exact": true,
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "random_start": true
+    },
+    {
+      "all3_initial_states_exact": true,
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "random_start": true
+    },
+    {
+      "all3_initial_states_exact": true,
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "random_start": true
+    },
+    {
+      "all3_initial_states_exact": true,
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "random_start": true
+    },
+    {
+      "all3_initial_states_exact": true,
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "random_start": true
+    }
+  ],
+  "input_binding_sha256": "5ad4f362e0d246cbebdd8767952669584f899df02828231134a59a893021fbad",
+  "largest_complete_patient_backward": [
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "DELTA_DUP",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 14577,
+      "peak_allocated_bytes": 968949248,
+      "seconds": 0.3491112999909092,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "POST_DUP",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 14577,
+      "peak_allocated_bytes": 987807232,
+      "seconds": 0.03838549999636598,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "PRE_DELTA",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 14577,
+      "peak_allocated_bytes": 987807232,
+      "seconds": 0.31059999999706633,
+      "valid_windows": 48380
+    }
+  ],
+  "original_Development_Outer_used": false,
+  "status": "PASS",
+  "strong_firstpath_reference_verified_all5folds": true,
+  "tests_passed": 5
+}

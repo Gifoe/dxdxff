@@ -1,0 +1,35 @@
+{
+  "candidate_sha256": "24eb24e9dcbdb38665a69b122b979cf7fc2e2e601d0b56c35b29ad3c40810658",
+  "eligible": [],
+  "model_freeze_sha256": "9aeb0770c177993048dff7585ca23cb22acd06147766b4797f61eb607108d361",
+  "new_Outer_used": false,
+  "new_qualified": false,
+  "scores": [
+    {
+      "arm": "C2_REFERENCE",
+      "auprc": 0.5616263970282607,
+      "auroc": 0.762169266320797,
+      "fold_sd": 0.01954309064762992,
+      "macro": 0.6730761426455318,
+      "penalized": 0.6711218335807688
+    },
+    {
+      "arm": "T0_GLOBAL_NORMALIZED",
+      "auprc": 0.5590451873243061,
+      "auroc": 0.7582962489166302,
+      "fold_sd": 0.017510748723332074,
+      "macro": 0.6698903622743754,
+      "penalized": 0.6681392874020422
+    },
+    {
+      "arm": "T1_PATIENT_BALANCED",
+      "auprc": 0.5551611778866755,
+      "auroc": 0.7590283349006024,
+      "fold_sd": 0.01963136135661582,
+      "macro": 0.6731345729331945,
+      "penalized": 0.6711714367975329
+    }
+  ],
+  "selected": "C2_REFERENCE",
+  "status": "SELECTED_BEFORE_ANY_NEW_OUTER"
+}

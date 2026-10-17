@@ -1,6 +1,9 @@
 # Patient-Macro training of the retained seven-feature C2 single head
 
-Prospective training-method study,not a new-architecture or performance claim.
+Completed training-method study:10new end-to-end fits/108epochs and
+independent verification passed,but neither newobjective passed the Macro
+improvement gate. No newOuter. Actualresults are in RUN_REPORT.md and
+results/internal_v1. This is not a new-architecture innovation claim.
 The already designed C2 architecture,all10378parameters,original7D/14inputs,
 Raw/Gate/completepatientZ and one scalar classifier remain unchanged.
 The goal is actual full80patient-Macro>0.64 and>oldC2,not its rounded
@@ -27,3 +30,7 @@ viewed is exploratory repeated-test,not independent confirmation.
 Report all9metrics,all54cluster intervals,fold/source/coverage and actual
 epochs,including negatives. Code/hash/anonymousactualaggregates only to
 GitHub;Raw,weights,scalers,individualscores/IDs and logs stay on the server.
+
+The separately guarded final recipe is supplied as unexecuted source only.
+Its entrypoint requires a qualified internally selected newmodel. This run
+failed that gate;no final freeze,prediction or test result exists.

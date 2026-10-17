@@ -1,0 +1,216 @@
+{
+  "actual_control_replays": [
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "selected_epoch": 4
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "selected_epoch": 5
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "selected_epoch": 9
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "selected_epoch": 5
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "selected_epoch": 4
+    }
+  ],
+  "formal_epochs_discarded": 0,
+  "initial_full_patient_logits_exact": true,
+  "input_binding_sha256": "a6b3853c5e32693d606fe98d146607ca587dea06054406ad3b117805d8b6e2d2",
+  "largest_complete_FIT_backwards": [
+    {
+      "all7_coordinates_retained": true,
+      "arm": "C2_REFERENCE",
+      "channel_order_equivariant": true,
+      "channels": 164,
+      "discarded_legal_FIT_steps": 3,
+      "exact_initial_original_Raw_summary": true,
+      "gradient_norms": [
+        {
+          "cnn.0.bias": 0.005189876072108746,
+          "cnn.0.weight": 0.0560586079955101,
+          "cnn.2.bias": 0.003654303727671504,
+          "cnn.2.weight": 0.1861596405506134,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 2.2655000098126266e-10,
+          "gate.network.2.weight": 0.0167829692363739,
+          "head.0.bias": 0.029139794409275055,
+          "head.0.weight": 0.1534680724143982,
+          "head.2.bias": 0.10442645847797394,
+          "head.2.weight": 0.11095061153173447,
+          "interaction_gain": 0.00037098699249327183
+        },
+        {
+          "cnn.0.bias": 0.005052259191870689,
+          "cnn.0.weight": 0.05540848895907402,
+          "cnn.2.bias": 0.0036008295137435198,
+          "cnn.2.weight": 0.18536603450775146,
+          "gate.network.0.bias": 4.346623882156564e-06,
+          "gate.network.0.weight": 8.760441414779052e-05,
+          "gate.network.2.bias": 5.143313501321245e-06,
+          "gate.network.2.weight": 0.0166814923286438,
+          "head.0.bias": 0.029065730050206184,
+          "head.0.weight": 0.14978985488414764,
+          "head.2.bias": 0.10479331016540527,
+          "head.2.weight": 0.1101168841123581,
+          "interaction_gain": 0.0005910017644055188
+        },
+        {
+          "cnn.0.bias": 0.004880716558545828,
+          "cnn.0.weight": 0.05313574895262718,
+          "cnn.2.bias": 0.0034869464579969645,
+          "cnn.2.weight": 0.17760510742664337,
+          "gate.network.0.bias": 8.53707388159819e-06,
+          "gate.network.0.weight": 0.00017174410459119827,
+          "gate.network.2.bias": 1.0144642146769911e-05,
+          "gate.network.2.weight": 0.016590211540460587,
+          "head.0.bias": 0.02902960032224655,
+          "head.0.weight": 0.14618194103240967,
+          "head.2.bias": 0.10518331080675125,
+          "head.2.weight": 0.10987281054258347,
+          "interaction_gain": 0.0007936449255794287
+        }
+      ],
+      "padding_ignored": true,
+      "parameters": 10378,
+      "valid_windows": 48380
+    },
+    {
+      "all7_coordinates_retained": true,
+      "arm": "T0_GLOBAL_NORMALIZED",
+      "channel_order_equivariant": true,
+      "channels": 164,
+      "discarded_legal_FIT_steps": 3,
+      "exact_initial_original_Raw_summary": true,
+      "gradient_norms": [
+        {
+          "cnn.0.bias": 0.008600911125540733,
+          "cnn.0.weight": 0.09290456771850586,
+          "cnn.2.bias": 0.006062658037990332,
+          "cnn.2.weight": 0.30836665630340576,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 2.814030120035227e-10,
+          "gate.network.2.weight": 0.027877509593963623,
+          "head.0.bias": 0.048375923186540604,
+          "head.0.weight": 0.2539321184158325,
+          "head.2.bias": 0.1733696162700653,
+          "head.2.weight": 0.18396423757076263,
+          "interaction_gain": 0.0006052681128494442
+        },
+        {
+          "cnn.0.bias": 0.0083853080868721,
+          "cnn.0.weight": 0.09197074919939041,
+          "cnn.2.bias": 0.005984471179544926,
+          "cnn.2.weight": 0.3076285421848297,
+          "gate.network.0.bias": 7.2351849667029455e-06,
+          "gate.network.0.weight": 0.0001457273174310103,
+          "gate.network.2.bias": 8.550809980079066e-06,
+          "gate.network.2.weight": 0.027742300182580948,
+          "head.0.bias": 0.04826201871037483,
+          "head.0.weight": 0.2482876032590866,
+          "head.2.bias": 0.1739901602268219,
+          "head.2.weight": 0.18279847502708435,
+          "interaction_gain": 0.0009708767174743116
+        },
+        {
+          "cnn.0.bias": 0.00810983031988144,
+          "cnn.0.weight": 0.08833782374858856,
+          "cnn.2.bias": 0.005804017186164856,
+          "cnn.2.weight": 0.2952556312084198,
+          "gate.network.0.bias": 1.4229539374355227e-05,
+          "gate.network.0.weight": 0.000286101276287809,
+          "gate.network.2.bias": 1.6889807739062235e-05,
+          "gate.network.2.weight": 0.027627447620034218,
+          "head.0.bias": 0.04820847883820534,
+          "head.0.weight": 0.2427251636981964,
+          "head.2.bias": 0.1746528148651123,
+          "head.2.weight": 0.18257984519004822,
+          "interaction_gain": 0.0013108961284160614
+        }
+      ],
+      "padding_ignored": true,
+      "parameters": 10378,
+      "valid_windows": 48380
+    },
+    {
+      "all7_coordinates_retained": true,
+      "arm": "T1_PATIENT_BALANCED",
+      "channel_order_equivariant": true,
+      "channels": 164,
+      "discarded_legal_FIT_steps": 3,
+      "exact_initial_original_Raw_summary": true,
+      "gradient_norms": [
+        {
+          "cnn.0.bias": 0.01217151153832674,
+          "cnn.0.weight": 0.14667892456054688,
+          "cnn.2.bias": 0.009777500294148922,
+          "cnn.2.weight": 0.4731876850128174,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 4.702712108617391e-10,
+          "gate.network.2.weight": 0.04574815183877945,
+          "head.0.bias": 0.02032829076051712,
+          "head.0.weight": 0.41339144110679626,
+          "head.2.bias": 0.03541836515069008,
+          "head.2.weight": 0.24511969089508057,
+          "interaction_gain": 0.001293133944272995
+        },
+        {
+          "cnn.0.bias": 0.011771582998335361,
+          "cnn.0.weight": 0.14514979720115662,
+          "cnn.2.bias": 0.009613587521016598,
+          "cnn.2.weight": 0.47261494398117065,
+          "gate.network.0.bias": 1.2102286746085156e-05,
+          "gate.network.0.weight": 0.0002446305879857391,
+          "gate.network.2.bias": 1.412719939253293e-05,
+          "gate.network.2.weight": 0.0452900268137455,
+          "head.0.bias": 0.020008159801363945,
+          "head.0.weight": 0.4002634286880493,
+          "head.2.bias": 0.038891587406396866,
+          "head.2.weight": 0.23650266230106354,
+          "interaction_gain": 0.0018847486935555935
+        },
+        {
+          "cnn.0.bias": 0.011313165538012981,
+          "cnn.0.weight": 0.1399877667427063,
+          "cnn.2.bias": 0.009323895908892155,
+          "cnn.2.weight": 0.4565300941467285,
+          "gate.network.0.bias": 2.377967393840663e-05,
+          "gate.network.0.weight": 0.00047691111103631556,
+          "gate.network.2.bias": 2.7805985155282542e-05,
+          "gate.network.2.weight": 0.04482142627239227,
+          "head.0.bias": 0.019861852750182152,
+          "head.0.weight": 0.3871918320655823,
+          "head.2.bias": 0.0424310564994812,
+          "head.2.weight": 0.22994071245193481,
+          "interaction_gain": 0.002409910084679723
+        }
+      ],
+      "padding_ignored": true,
+      "parameters": 10378,
+      "valid_windows": 48380
+    }
+  ],
+  "new_Outer_passes": 0,
+  "status": "PASS",
+  "tests_passed": 5
+}

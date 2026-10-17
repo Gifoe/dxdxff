@@ -77,3 +77,9 @@ with zero formal updates and no new Development/Outer. One ad-hoc launch
 aborted from torch-before-numpy OpenMP initialization; the existing scientific
 import order (numpy before torch) passed without an unsafe duplicate-runtime
 override or source/math change. Actual GPU admission is still pending.
+
+Subsequent actual GPU admission passed: seven exact old-control replays and
+four complete-patient backwards, with matching-pool output/shared-gradient
+maximum error zero. The first formal process failed during a PyTorch import
+before any model/update; a fresh import-only diagnostic passed. See
+`EXECUTION_AUDIT.md`. No new classification result is available at this point.

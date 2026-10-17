@@ -1,0 +1,148 @@
+{
+  "all15_role_identities_verified": true,
+  "formal_updates": 0,
+  "initial_states": [
+    {
+      "all4_collapsed_random_core_states_exact": true,
+      "fold": 1,
+      "random_start": true,
+      "shared_core_sha256": "dad8339a1bab733e57a01101bed1b74e7917a9148a834c0d4e7554d97dc8ace6"
+    },
+    {
+      "all4_collapsed_random_core_states_exact": true,
+      "fold": 2,
+      "random_start": true,
+      "shared_core_sha256": "ba6155a06c86e65aeaa9fef531db6b0672cb26b9800d1ddaf695966221cf2264"
+    },
+    {
+      "all4_collapsed_random_core_states_exact": true,
+      "fold": 3,
+      "random_start": true,
+      "shared_core_sha256": "fcabba9391b62e59c2f0cd6ee6bdad25b8e381b4e966d93c79ebf9f26c5041db"
+    },
+    {
+      "all4_collapsed_random_core_states_exact": true,
+      "fold": 4,
+      "random_start": true,
+      "shared_core_sha256": "20c6c26c787c19040d7441ab312d85a34c6aa30441b137daae381326c9a5c433"
+    },
+    {
+      "all4_collapsed_random_core_states_exact": true,
+      "fold": 5,
+      "random_start": true,
+      "shared_core_sha256": "7ebc0171eeb64cb909ffa79b65153861ae2da7e89bb8c8af3b66935c479f5b62"
+    }
+  ],
+  "input_binding_sha256": "dcd4642ee918c0af979ede9838d186225396ad729fa177a68c02dcfa2f53f246",
+  "largest_complete_patient_backward": [
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "SHORT_MEAN",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "matching_pool_pair_initial_logits_exact": true,
+      "maximum_shared_pair_gradient_error": 0.0,
+      "optimizer_updates": 0,
+      "outer_filter_gradient_nonzero": null,
+      "parameters": 8433,
+      "peak_allocated_bytes": 978492928,
+      "seconds": 0.10295050000422634,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "SHORT_ENERGY",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "matching_pool_pair_initial_logits_exact": true,
+      "maximum_shared_pair_gradient_error": 0.0,
+      "optimizer_updates": 0,
+      "outer_filter_gradient_nonzero": null,
+      "parameters": 8433,
+      "peak_allocated_bytes": 1110014976,
+      "seconds": 0.04831349998130463,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "LONG_MEAN",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "matching_pool_pair_initial_logits_exact": true,
+      "maximum_shared_pair_gradient_error": 0.0,
+      "optimizer_updates": 0,
+      "outer_filter_gradient_nonzero": true,
+      "parameters": 9873,
+      "peak_allocated_bytes": 987094528,
+      "seconds": 0.3389202000107616,
+      "valid_windows": 48380
+    },
+    {
+      "all_parameter_gradients_finite": true,
+      "arm": "LONG_ENERGY",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "largest_of_unique_training_patients": 79,
+      "matching_pool_pair_initial_logits_exact": true,
+      "maximum_shared_pair_gradient_error": 0.0,
+      "optimizer_updates": 0,
+      "outer_filter_gradient_nonzero": true,
+      "parameters": 9873,
+      "peak_allocated_bytes": 1113122816,
+      "seconds": 0.04835759999696165,
+      "valid_windows": 48380
+    }
+  ],
+  "maximum_reused_control_error": 0.0,
+  "original_Development_Outer_used": false,
+  "reused_control_cells": 7,
+  "reused_control_checks": [
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 1,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 2,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 3,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 2
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 4,
+      "maximum_replay_error": 0.0,
+      "screen": 3
+    },
+    {
+      "all201_CAL_decisions_exact": true,
+      "fold": 5,
+      "maximum_replay_error": 0.0,
+      "screen": 1
+    }
+  ],
+  "status": "PASS",
+  "tests_passed": 6
+}

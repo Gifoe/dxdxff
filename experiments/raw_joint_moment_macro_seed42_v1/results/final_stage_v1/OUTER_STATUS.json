@@ -1,0 +1,39 @@
+{
+  "cells": 30,
+  "coverage": [
+    {
+      "channels": 1631,
+      "fold": 1,
+      "patients": 16,
+      "valid_windows": 333155
+    },
+    {
+      "channels": 1498,
+      "fold": 2,
+      "patients": 16,
+      "valid_windows": 265639
+    },
+    {
+      "channels": 1746,
+      "fold": 3,
+      "patients": 17,
+      "valid_windows": 375476
+    },
+    {
+      "channels": 1425,
+      "fold": 4,
+      "patients": 15,
+      "valid_windows": 244998
+    },
+    {
+      "channels": 1335,
+      "fold": 5,
+      "patients": 16,
+      "valid_windows": 252697
+    }
+  ],
+  "fullOuter_truth_read": false,
+  "primary": "SELECTED",
+  "score_seal_sha256": "476a96a1b4d200002238f345f6a716e46ef0be955e1369ea2aaf6d50a3193cc1",
+  "status": "ALL30_FROZEN_JOINT_RAW_SCORE_CELLS_SEALED"
+}

@@ -1,7 +1,10 @@
 # Joint learned-response moments, Raw-only Macro-F1, seed42
 
-Internal study completed and independently verified. **No full80 final result
-or >0.65 achievement is claimed yet.** See [INTERNAL_REPORT.md](INTERNAL_REPORT.md).
+Internal and full80 final studies completed and independently verified.
+**The >0.65 patient-equal Macro-F1 target was not reached.** The primary
+SELECTED procedure scored0.626446; the joint fixed arm scored0.632344 versus
+the unchanged Native0.630493. See [RUN_REPORT.md](RUN_REPORT.md) for the complete
+six-procedure results and [INTERNAL_REPORT.md](INTERNAL_REPORT.md) for selection.
 The preceding complete fresh factorial failed the full80 target; its actual
 negative results remain in
 [the prior report](../raw_fresh_energy_macro_seed42_v1/RUN_REPORT.md).
@@ -46,7 +49,7 @@ labels, weights, individual predictions/latents, caches and runtime logs stay
 private. Unrun results are not filled by templates or proxies. The broad
 full80 equal-patient Macro-F1>0.65 goal remains active and unachieved.
 
-## Actual execution snapshot, 2026-10-17
+## Historical execution snapshot, 2026-10-17
 
 Scientific code/protocol were pushed at `c66da777960020766ab3293362bc9b7eff01f638`
 before formal fitting. Five unique changed-path tests passed. The largest
@@ -60,7 +63,7 @@ was actively training, error log empty. This is a dated progress snapshot,
 not a claim that the full internal matrix or any new Outer is complete.
 No new performance or target achievement is claimed until actual verification.
 
-## Guarded final implementation, not an executed result
+## Guarded final implementation (now executed; description retained)
 
 `FINAL_PROTOCOL_LOCK.json`, `final_stage.py`, `verify_final.py` and
 `run_final.ps1` implement the already registered conditional final plan. They
@@ -113,3 +116,25 @@ differences from both matched duplicated controls have CIs crossingzero,
 and it does not improve on the preceding compact PRE_MEAN point0.625949.
 The additional historical comparison is explicitly post-hoc internal context,
 with the fivefold choice hash unchanged; it is not a new selection rule.
+
+## Completed final execution
+
+All15fresh final fits/346epochs and30logical frozen models completed. The
+single frozen score pass contains all80patients/7,635channels; all480patient
+metric rows,126absolute/pairedCI rows and15Development replays independently
+passed verification. The fullRaw support census also passed at1,471,965valid
+windows. Predictions, weights and individual records remain private.
+
+After writing and printing independent verification PASS, that verifier's
+process had a Windows native torch_cpu.dll access violation. The coordinator
+correctly stopped. A newRunTag03 skipped every completed stage and ran only
+the missing Raw census; it exited0 with the full completion terminal. No fit,
+threshold selection or Outer prediction was repeated. The cause within the
+native library is not established. See ENGINEERING_COMPLETION_AUDIT.json.
+
+The experiment-design evidence layout separates the prespecified primary,
+all fixed secondary arms, internal assessments, pooled metrics and full80
+patient-equal metrics. No best-Outer secondary is adopted after seeing results.
+All results remain exploratory repeated-test. The optimization goal remains
+active, not complete; a confidence-interval upper bound above0.65 is not a
+target achievement.

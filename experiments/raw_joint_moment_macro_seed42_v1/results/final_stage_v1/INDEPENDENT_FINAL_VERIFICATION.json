@@ -1,0 +1,134 @@
+{
+  "Development_checks": [
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 1,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 2,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 3,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 4,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    },
+    {
+      "all201_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 5,
+      "maximum_Development_replay_error": 0.0,
+      "random_initial_state_exact": true
+    }
+  ],
+  "all3_initializers_exact_per_fold": true,
+  "all9_patient_metrics_independent": true,
+  "channels_per_procedure": 7635,
+  "fold_means_sampleSD_source_and_coverage_verified": true,
+  "fresh_fits": 15,
+  "independent_CI_metric_checks": 126,
+  "independent_confirmation": false,
+  "logical_cells": 30,
+  "maximum_bootstrap_difference": 2.220446049250313e-16,
+  "maximum_metric_error": 1.1102230246251565e-16,
+  "model_freeze_sha256": "85453fe0914bc93f6b9bd41f553932d2c6fc1870b6e4ab19e3e8666350b88266",
+  "no_training_or_Outer_inference_in_verifier": true,
+  "patient_metric_rows": 480,
+  "patients_per_procedure": 80,
+  "primary": "SELECTED",
+  "primary_point_over_065": false,
+  "procedures": 6,
+  "reference_predictions_unchanged": true,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "476a96a1b4d200002238f345f6a716e46ef0be955e1369ea2aaf6d50a3193cc1",
+  "selected_aliases_exact": true,
+  "source_groups_checked": 24,
+  "source_role_and_archive_identity_exact": true,
+  "status": "PASS",
+  "valid_Raw250_windows": 1471965
+}

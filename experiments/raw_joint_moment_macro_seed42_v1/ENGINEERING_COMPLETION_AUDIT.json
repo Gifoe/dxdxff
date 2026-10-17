@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE_WITH_DISCLOSED_POST_VERIFICATION_NATIVE_EXIT",
+  "final_independent_metrics": "PASS",
+  "raw_support_census": "PASS",
+  "failed_stage": "verify_process_after_PASS_artifact_and_stdout",
+  "windows_event": {
+    "log": "Application",
+    "event_id": 1000,
+    "process_id": 27612,
+    "module": "torch_cpu.dll",
+    "exception_code": "0xc0000005"
+  },
+  "underlying_native_cause_proven": false,
+  "recovery": "same_guarded_coordinator_new_RunTag03_skips_all_complete_stages_runs_raw_audit_only",
+  "recovery_exit_code": 0,
+  "exact_terminal": "JOINT_RAW_ALL_SIX_FINAL_PROCEDURES_VERIFIED_EXACT_ORIGINAL_ROLES",
+  "all_original_logs_and_sources_preserved": true,
+  "training_repeated_during_recovery": false,
+  "Outer_inference_repeated_during_recovery": false,
+  "classification_metric_computation_repeated_during_recovery": false,
+  "checkpoint_threshold_role_or_mask_changes": false,
+  "score_seal_sha256": "476a96a1b4d200002238f345f6a716e46ef0be955e1369ea2aaf6d50a3193cc1",
+  "delivery_zip_sha256": "52b144f50cacccd883bc6b272ff46fca8132c39f75003a36a436e671dbe58072",
+  "delivery_files": 17,
+  "primary_patient_equal_macro_f1": 0.6264457690841099,
+  "target": "full80_patient_equal_macro_f1_strictly_greater_than_0.65",
+  "target_achieved": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "independent_confirmation": false
+}

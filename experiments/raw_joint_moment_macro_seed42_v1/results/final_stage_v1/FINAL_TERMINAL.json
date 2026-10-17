@@ -1,0 +1,18 @@
+{
+  "goal_requires_independent_completion_audit": true,
+  "independent_confirmation": false,
+  "outer_oracle": false,
+  "patient_equal_macro_f1": {
+    "FROZEN_PRE": 0.6314324049383006,
+    "NATIVE": 0.6304930529317453,
+    "PRE_ENERGY_DUP": 0.619016915465024,
+    "PRE_JOINT": 0.6323436091099255,
+    "PRE_MEAN_DUP": 0.6136410192442481,
+    "SELECTED": 0.6264457690841099
+  },
+  "postOuter_tuning": false,
+  "primary": "SELECTED",
+  "primary_point_over_065": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "status": "COMPLETE_SIX_JOINT_RAW_PROCEDURES"
+}

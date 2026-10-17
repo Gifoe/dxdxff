@@ -6,7 +6,8 @@ All **39** registered fresh fits / **1,061** epochs and independent internal
 verification completed. This is **not** the complete80-patient Outer result
 or an achievement of Macro-F1>0.65. Original Development/Outer were not used
 for these internal fits or their procedure selection. The separately frozen
-final stage is running; its uncomputed results are not filled into this report.
+final stage subsequently completed; its actual negative results are reported
+separately in [RUN_REPORT.md](RUN_REPORT.md), not substituted for internal metrics.
 
 The complete first-path assessment has **86 appearances / 59 unique patients
 per arm**, not86independent patients. Repeated appearances remain together in
@@ -133,8 +134,9 @@ preserved; `run_final_exact_roles_v2.ps1 -RunTag 02` uses new logs and replaces
 only this admission entry. The old one-shot handoff correctly stopped on the
 failure, rather than retrying it. Final fitting and subsequent30cell score
 seal,480patientmetricrow verification and Raw census use the original frozen
-implementation. At this report's creation, final FIT/Development fitting is
-active; final performance is uncomputed, not asserted.
+implementation. At this report's original creation, final FIT/Development
+fitting was active. The completed final performance and the later native
+post-verification exit are now documented in RUN_REPORT.md.
 
 Key SHA256 locks:
 

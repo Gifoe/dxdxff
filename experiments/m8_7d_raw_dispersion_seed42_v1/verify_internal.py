@@ -79,7 +79,7 @@ def main():
         pd.DataFrame(data).to_csv(PUB/(name+'.csv'),index=False)
     assert len(pd.read_csv(PUB/'TRAIN_HISTORY.csv'))==status['epochs']==int(actual.epochs.sum())
     for name,h in binding['source'].items():assert sha(HERE/name)==h
-    assert sha(BASE_ROOT/'OUTER_PREDICTIONS_SEAL_PRIVATE.json')==binding['protected_Outer_seal']
+    assert sha(BASE_SEAL)==binding['protected_Outer_seal']
     write(PUB/'CANDIDATE_SELECTION.json',dict(status='SELECTED_BEFORE_ANY_NEW_OUTER',**selection,
         model_freeze_sha256=sha(ROOT/'MODEL_FREEZE_PRIVATE.json'),candidate_sha256=sha(ROOT/'CANDIDATE_PRIVATE.json'),new_Outer_used=False))
     write(PUB/'INDEPENDENT_INTERNAL_VERIFICATION.json',dict(status='PASS',checkpoint_checks=checks,maximum_replay_error=maximum,

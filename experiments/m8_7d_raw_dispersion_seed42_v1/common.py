@@ -10,6 +10,7 @@ HERE=Path(__file__).resolve().parent
 ROOT=Path(r'D:\m8_7d_raw_dispersion_seed42_v1_runtime');PUB=ROOT/'public'
 BASE_CODE=Path(r'D:\m8_7d_balanced_single_head_seed42_v1')
 BASE_ROOT=Path(r'D:\m8_7d_balanced_single_head_seed42_v1_runtime')
+BASE_SEAL=BASE_ROOT/'final_stage_v1/OUTER_SCORE_SEAL_PRIVATE.json'
 
 
 def module(name,path):
@@ -32,11 +33,11 @@ def setup():
     try:prior,core,fac,records,rec,banks,_=previous.setup()
     finally:sys.modules['common']=own;sys.modules['model']=MODEL;sys.path.insert(0,str(HERE))
     assert sha(BASE_ROOT/'MODEL_FREEZE_PRIVATE.json')=='c4aaecb2be9dbaa6f0b0da0351a7fa0b3eec13057a763c5b863ed5b613192e10'
-    assert sha(BASE_ROOT/'OUTER_PREDICTIONS_SEAL_PRIVATE.json')=='9f5beef8b232cff825cf1a3b560d9a54f10bdfd4ee9bdf27f3275b3bb7774e6c'
+    assert sha(BASE_SEAL)=='9f5beef8b232cff825cf1a3b560d9a54f10bdfd4ee9bdf27f3275b3bb7774e6c'
     assert jr(BASE_ROOT/'public/INDEPENDENT_INTERNAL_VERIFICATION.json')['status']=='PASS'
     binding=dict(source={n:sha(HERE/n) for n in CRITICAL},prior_input_sha256=digest(prior),
         reference_model_freeze=sha(BASE_ROOT/'MODEL_FREEZE_PRIVATE.json'),
-        protected_Outer_seal=sha(BASE_ROOT/'OUTER_PREDICTIONS_SEAL_PRIVATE.json'),
+        protected_Outer_seal=sha(BASE_SEAL),
         reconstruction=io.EXPECTED_REC,raw_registry=io.EXPECTED_REG,torch=torch.__version__,numpy=np.__version__)
     freeze(ROOT/'INPUT_FREEZE_PRIVATE.json',binding)
     return binding,core,fac,records,rec,banks,jr(BASE_ROOT/'MODEL_FREEZE_PRIVATE.json')

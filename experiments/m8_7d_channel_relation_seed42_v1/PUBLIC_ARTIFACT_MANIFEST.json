@@ -1,0 +1,20 @@
+{
+  "admission": false,
+  "files": {
+    ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "PREFLIGHT_AUDIT.json": "5b1ad7e896ac297c2ab7bca863e51245471ae0eb93375e92cd8dc40a1fe8a869",
+    "PROTOCOL_LOCK.json": "e58936d482019203f45c0fd587354d92ba7791e18a75cfe69298d8f3ddd4d59a",
+    "README.md": "1a070884f274e46bfaff1c78493d51b3fd0764d2c2690847695d129e162113a1",
+    "admit.py": "35efc5366bcd6332018397f8afab23d9e64d3c3b79f5e8c871f61b6193e92a98",
+    "common.py": "52f6a92000a3cc9e0c0cee5601f44481f6dd6a44a9189574ed00d89658471079",
+    "model.py": "e450b7ef2173f7371d9bd71843194196d4dd13ab92adc5c3cd07acb805ba502d",
+    "run_internal.ps1": "4f66e8f02df96a1073d825237c5b6f1e6bf82c9455f3fd7408b39276028e49a2",
+    "test_model.py": "1ab48fa8b6ba710dead8da66b42f071563367004b1f1f1880a76d4a332a260f8",
+    "train.py": "24666b485480b957005996725394918e83f5937749432584e3133d57b2504226",
+    "verify_internal.py": "08a9fe8cf2c3bb61a3cf67d16d4fa85a96880e312c6e1dea636862be8a6e99f0",
+    "verify_public.py": "fb55c30e48ddc886c3ca62ca974b6d9f130d277b73a1e53bc31919cf5e5c3a5a"
+  },
+  "internal": false,
+  "scope": "public_hashes_and_aggregate_consistency_not_private_replay",
+  "status": "PASS"
+}

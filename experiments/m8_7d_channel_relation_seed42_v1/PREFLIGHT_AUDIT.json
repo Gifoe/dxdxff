@@ -1,0 +1,13 @@
+{
+  "status":"PASS",
+  "date_client":"2026-10-17",
+  "scope":"AST/JSON,CPU changed-path tests,source manifest and trusted import;not performance or realpatient admission",
+  "server_cpu_tests":5,
+  "server_cpu_seconds":5.49,
+  "trusted_import_without_setup":"PASS",
+  "source_manifest":"PASS",
+  "source_archive_sha256":"9c97d5faf686b72f64840ba6f6f24a37286390e0e2a289ca95040316cf758c4b",
+  "formal_fits_started":0,
+  "new_Outer_passes":0,
+  "terminal":"CHANNEL_RELATION_PREFLIGHT_PASS_NO_FITS"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "date_client": "2026-10-17",
+  "scope": "Syntax,CPU implementation tests,source hashes and trusted imports;not full patient admission or performance",
+  "local_python_ast_json": "PASS",
+  "local_powershell_parser": "PASS",
+  "server_cpu_tests_collected": 5,
+  "server_cpu_tests_passed": 5,
+  "server_cpu_tests_seconds": 1.48,
+  "server_trusted_import_without_setup": "PASS",
+  "server_public_source_manifest": "PASS",
+  "source_archive_sha256": "64d079576572e158a4dd489304b5a4e51776b0a191d14b98d29f01893dadb461",
+  "formal_fits_started": 0,
+  "new_Outer_passes": 0,
+  "terminal": "RAW_DISPERSION_PREFLIGHT_PASS_NO_FITS",
+  "safety": "Existing code,checkpoints,paused patient-context proposal and unrelated jobs preserved. No real outcome has been generated for either new arm."
+}

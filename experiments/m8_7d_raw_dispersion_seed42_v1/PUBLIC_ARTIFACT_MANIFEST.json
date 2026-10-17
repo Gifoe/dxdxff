@@ -1,14 +1,15 @@
 {
-  "admission": false,
+  "admission": true,
   "files": {
     ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
-    "ENGINEERING_LEDGER.md": "1150d3d05a01949881e8761e9768dfb67aaff32e70739662f51e3b56aef1598c",
+    "ENGINEERING_LEDGER.md": "a46e9cf521b75c55e545b34a5fd75ab79f4e8530b74b2c431599c3139fa32733",
     "PREFLIGHT_AUDIT.json": "ac1792bd670d277c02a230e6d028b2f85fe2dcf92a65dac50db533fc97c6e192",
     "PROTOCOL_LOCK.json": "788783ccc73e4bd418a6c68aa7ba495b32b5abcb74d3123c4c75c0aab48ec423",
     "README.md": "018b3adcc3b382dc90502066fb176a64a7f71d8160b7a54d8bac05ac1e3d4ed3",
     "admit.py": "56896efb0a429b3d3a306e3033484afcd1e452ff20c3015bdc5857ac3d35b7ab",
     "common.py": "032c413bcadc41bb5f29e8df4de4e46594e40187dad197cc1a156d05267a1748",
     "model.py": "0555228633b41913a56abc3ce8eae589e3a8c9d11069bd469aab546f6c1f7366",
+    "results/internal_v1/ADMISSION.json": "70a1ae7eba048b5ecff4ae5f7bccd55b1d0e4efaf172f47722f05f33babeb9a8",
     "run_internal.ps1": "c5290ddc1d7a7c89221dda6f7e8d226caec95d59c82d2a22005d44a6a3980a16",
     "test_model.py": "c4795538b1407a17405a1a71c90dc33ed8b48e2d6a794c5a6f915737b1844338",
     "train.py": "ffe715862a606a92f497f9df73cc9c60580bec7cc6c7df0b9766a732610353ef",

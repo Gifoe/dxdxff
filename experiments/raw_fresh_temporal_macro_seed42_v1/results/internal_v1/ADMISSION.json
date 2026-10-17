@@ -1,0 +1,110 @@
+{
+  "all15_role_identities_verified": true,
+  "formal_updates": 0,
+  "initial_states": [
+    {
+      "fold": 1,
+      "full_initial_states": {
+        "FRESH_BASE": "dad8339a1bab733e57a01101bed1b74e7917a9148a834c0d4e7554d97dc8ace6",
+        "FRESH_POINTWISE": "04053e2dda54c679e1b98509a580f921fc884ea3b3ea51848b27ede60f934a8e",
+        "FRESH_TEMPORAL": "e6ce8f524f7628b680fcfcb6056ff2ee52a23128dadc7a82531d708cdb3f39f3"
+      },
+      "random_start": true,
+      "shared_CNN_head_states_exact": true,
+      "shared_core_initial_state_sha256": "dad8339a1bab733e57a01101bed1b74e7917a9148a834c0d4e7554d97dc8ace6"
+    },
+    {
+      "fold": 2,
+      "full_initial_states": {
+        "FRESH_BASE": "ba6155a06c86e65aeaa9fef531db6b0672cb26b9800d1ddaf695966221cf2264",
+        "FRESH_POINTWISE": "48480f2957c04e878f03749df9d7d9bdeb0505f5a26e21591695df9f17046cf0",
+        "FRESH_TEMPORAL": "f5f3434acb6b1f9b8ec82fb3f57cd137a7e7a31d78e0afda0bff393b747825f8"
+      },
+      "random_start": true,
+      "shared_CNN_head_states_exact": true,
+      "shared_core_initial_state_sha256": "ba6155a06c86e65aeaa9fef531db6b0672cb26b9800d1ddaf695966221cf2264"
+    },
+    {
+      "fold": 3,
+      "full_initial_states": {
+        "FRESH_BASE": "fcabba9391b62e59c2f0cd6ee6bdad25b8e381b4e966d93c79ebf9f26c5041db",
+        "FRESH_POINTWISE": "d9322edba3c86415ffa0d6bb2611a73b2e25f91d6c8ba9e0ef5a2e8d93b577ca",
+        "FRESH_TEMPORAL": "bddeece793d83f337d68527273bd6cc97cfd72632dee13ef8b2abe304483a7d7"
+      },
+      "random_start": true,
+      "shared_CNN_head_states_exact": true,
+      "shared_core_initial_state_sha256": "fcabba9391b62e59c2f0cd6ee6bdad25b8e381b4e966d93c79ebf9f26c5041db"
+    },
+    {
+      "fold": 4,
+      "full_initial_states": {
+        "FRESH_BASE": "20c6c26c787c19040d7441ab312d85a34c6aa30441b137daae381326c9a5c433",
+        "FRESH_POINTWISE": "c18efbb423750934f1dc1fa24711ef366fa910d968e161faf8f49beeb2bcf9ec",
+        "FRESH_TEMPORAL": "80430d39f0fcd2093fb85570bcc96815d404bb0c58682db8966fd182e0dd6570"
+      },
+      "random_start": true,
+      "shared_CNN_head_states_exact": true,
+      "shared_core_initial_state_sha256": "20c6c26c787c19040d7441ab312d85a34c6aa30441b137daae381326c9a5c433"
+    },
+    {
+      "fold": 5,
+      "full_initial_states": {
+        "FRESH_BASE": "7ebc0171eeb64cb909ffa79b65153861ae2da7e89bb8c8af3b66935c479f5b62",
+        "FRESH_POINTWISE": "a33cae6b74a3b9b342bef20b032506ed38b16cb1505efd1dc29428aebed236cd",
+        "FRESH_TEMPORAL": "1dee4eae6c24be377e7df4496d470c70895df7759c778a7129838989b056d922"
+      },
+      "random_start": true,
+      "shared_CNN_head_states_exact": true,
+      "shared_core_initial_state_sha256": "7ebc0171eeb64cb909ffa79b65153861ae2da7e89bb8c8af3b66935c479f5b62"
+    }
+  ],
+  "input_binding_sha256": "4c23e5bee03909e7e5923965db373405bdb93122c270abb5fd6c78d0649ffa0d",
+  "largest_complete_patient_backward": [
+    {
+      "adapter_output_projection_gradient_nonzero": null,
+      "all_parameter_gradients_finite": true,
+      "arm": "FRESH_BASE",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "exact_initial_logits_match": true,
+      "largest_of_unique_training_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 8433,
+      "peak_allocated_bytes": 968924672,
+      "seconds": 0.39010780001990497,
+      "valid_windows": 48380
+    },
+    {
+      "adapter_output_projection_gradient_nonzero": true,
+      "all_parameter_gradients_finite": true,
+      "arm": "FRESH_POINTWISE",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "exact_initial_logits_match": true,
+      "largest_of_unique_training_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 9417,
+      "peak_allocated_bytes": 1471186944,
+      "seconds": 0.08880569998291321,
+      "valid_windows": 48380
+    },
+    {
+      "adapter_output_projection_gradient_nonzero": true,
+      "all_parameter_gradients_finite": true,
+      "arm": "FRESH_TEMPORAL",
+      "backbone_head_gradients_nonzero": true,
+      "channels": 164,
+      "exact_initial_logits_match": true,
+      "largest_of_unique_training_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 9417,
+      "peak_allocated_bytes": 1523961344,
+      "seconds": 0.07106509999721311,
+      "valid_windows": 48380
+    }
+  ],
+  "original_Development_Outer_used": false,
+  "status": "PASS",
+  "strong_firstpath_reference_verified_all5folds": true,
+  "tests_passed": 5
+}

@@ -77,3 +77,20 @@ tests passed (pytest:5 passed in1.22s). These are executable checks, not
 classification results or proof of the full80target. Complete-patient GPU
 admission remains mandatory before formal fitting. Source/protocol are
 pushed before any formal optimizer update.
+
+## Actual GPU admission and training start
+
+Source/protocol commit `f266f04b224463ff02a34fdcaaf568d055ede568` was verified
+at GitHub before formal fitting. Complete-patient GPU admission then passed
+all three networks on164channels/48,380validwindows, the largest actual legal
+training patient among79unique training patients. Initial logits were exact
+across all three, shared CNN/head states matched in all five folds, all
+parameter gradients were finite and both new output projections had nonzero
+gradients. Admission performed zero optimizer updates; see the actual
+[ADMISSION.json](results/internal_v1/ADMISSION.json).
+
+At09:39Asia/Shanghai on2026-10-17, FRESH_BASE fold1 was actively training
+through epoch5 at approximately1.9seconds/epoch, error log empty. This is a
+dated progress snapshot, not a classification result or an overall runtime
+estimate. The original Development/Outer were not used. No target achievement
+is claimed from this admission or the still incomplete internal matrix.

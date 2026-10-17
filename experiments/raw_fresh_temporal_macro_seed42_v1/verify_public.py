@@ -23,6 +23,9 @@ def main():
         admission=json.loads((result/'ADMISSION.json').read_text());assert admission['status']=='PASS' and admission['tests_passed']==5
         assert admission['formal_updates']==0 and not admission['original_Development_Outer_used']
         assert all(r['optimizer_updates']==0 and r['parameters']==(8433 if r['arm']=='FRESH_BASE' else 9417) and r['all_parameter_gradients_finite'] for r in admission['largest_complete_patient_backward'])
+        assert len(admission['initial_states'])==5 and all(r['shared_CNN_head_states_exact'] for r in admission['initial_states'])
+        assert all(r['exact_initial_logits_match'] for r in admission['largest_complete_patient_backward'])
+        assert all(r['adapter_output_projection_gradient_nonzero'] for r in admission['largest_complete_patient_backward'] if r['arm']!='FRESH_BASE')
     if complete:
         terminal=json.loads((result/'INTERNAL_TERMINAL.json').read_text());audit=json.loads((result/'INDEPENDENT_INTERNAL_VERIFICATION.json').read_text())
         assert terminal['status']=='COMPLETE_VERIFIED_FRESH_TEMPORAL_RAW_INTERNAL' and audit['status']=='PASS'

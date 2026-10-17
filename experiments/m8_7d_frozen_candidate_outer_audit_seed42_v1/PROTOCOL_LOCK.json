@@ -1,0 +1,18 @@
+{
+  "version": "m8_7d_frozen_candidate_outer_audit_seed42_v1",
+  "authorization": "User explicitly requested completion of Outer before further consideration of Development. This separate audit includes all ten already-trained candidates, regardless of the unchanged historical Development improvement gates.",
+  "training": "FORBIDDEN: no new fits, epoch selection, threshold selection, feature changes, architecture changes or source changes to historical experiments",
+  "arms": ["C2_REFERENCE", "R0_MEAN_CAPACITY", "R1_RAW_DISPERSION", "F0_AFTER_GELU", "F1_BEFORE_GELU", "G0_GLOBAL", "G1_PATIENT", "P0_POINTWISE", "P1_RELATIONAL", "T0_GLOBAL_NORMALIZED", "T1_PATIENT_BALANCED"],
+  "candidate_selection": "NONE: all ten previously trained candidates must be reported, in the stated order. No best-Outer candidate is prospectively selected or independently confirmed.",
+  "cohort": {"patients": 80, "channels": 7635, "seizures": 256, "valid_raw250_windows_per_new_arm": 1471965, "fold_patients": [16,16,17,15,16]},
+  "features": "Unchanged original seven physiological measurements, original derived 14D inputs, original FIT-only preprocessing, full-patient Raw PR, and one scalar classification head",
+  "freeze": "Bind all 55 logical cells, 50 existing candidate checkpoints plus five reused C2 score cells, epochs, thresholds, preprocessing, sources and original input identities before any new Outer signal inference. Read full truth only after all 55 score cells are sealed.",
+  "admission": "Read-only adapter numerical replay on the lexicographically first existing validation patient of each checkpoint; no labels, performance metrics, threshold optimization or candidate selection. Previously completed independent full-validation verification must remain PASS.",
+  "resume": "Atomic private per-patient scores bound to complete freeze, checkpoint and input hashes. Reuse only exact matching predictions. No automatic retries of failures.",
+  "metrics": ["macro_f1","auroc","auprc","f1","nez_f1","accuracy","mrr","hit_at_1","ez_fraction_bias"],
+  "primary_endpoint": "Equal-patient mean binary Macro-F1 on all 80 original Outer patients. Strict observed target >0.64; pooled, fold-equal, rounded and confidence-interval upper endpoints do not substitute.",
+  "aggregation": "Report equal-patient means, pooled-channel classification separately, all five fold means and sample SD, source means suppressed below five patients, and finite coverage without drops. Rank ties use canonical channel names.",
+  "uncertainty": {"seed":42,"draws":10000,"unit":"patient, sorted by original identity, identical draws across arms", "nominal_ci":0.95, "families":"11 absolute + 10 candidate-minus-C2 + five within-study second-minus-first contrasts, nine metrics = 234 rows", "additional_macro_intervals":"Ten candidate-minus-C2 comparisons with Bonferroni percentile levels 0.0025/0.9975. These approximate bootstrap family intervals are exploratory, not independent confirmation."},
+  "scientific_status": "EXPLORATORY_REPEATED_TEST_MULTI_CANDIDATE_AUDIT; historical Outer has been viewed repeatedly. No post-Outer tuning or retrospective change of candidate selection rule.",
+  "publication": "Only source, hashes and anonymous aggregate results. No patient/channel identities, raw signals, private predictions, embeddings, weights, logs, credentials or private paths. Historical failed Development gates remain unchanged."
+}

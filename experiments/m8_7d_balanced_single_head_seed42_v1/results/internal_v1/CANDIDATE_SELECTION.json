@@ -1,0 +1,38 @@
+{
+  "candidate_sha256": "51f89e56f67c4d8ce22324c56e1e143e23b7f6673db1224fd93f8b3c1aef4d72",
+  "eligible": [
+    "C1_BALANCED",
+    "C2_INTERACTION"
+  ],
+  "model_freeze_sha256": "c4aaecb2be9dbaa6f0b0da0351a7fa0b3eec13057a763c5b863ed5b613192e10",
+  "new_Outer_used": false,
+  "new_qualified": true,
+  "scores": [
+    {
+      "arm": "C0_CONCAT",
+      "auprc": 0.5455691503654104,
+      "auroc": 0.7557737204360344,
+      "fold_sd": 0.01976841091759404,
+      "macro": 0.6658844107576498,
+      "penalized": 0.6639075696658904
+    },
+    {
+      "arm": "C1_BALANCED",
+      "auprc": 0.5624218461675247,
+      "auroc": 0.7621326396633344,
+      "fold_sd": 0.01951875329406782,
+      "macro": 0.6729465739445346,
+      "penalized": 0.6709946986151278
+    },
+    {
+      "arm": "C2_INTERACTION",
+      "auprc": 0.5616263970282607,
+      "auroc": 0.762169266320797,
+      "fold_sd": 0.01954309064762992,
+      "macro": 0.6730761426455318,
+      "penalized": 0.6711218335807688
+    }
+  ],
+  "selected": "C2_INTERACTION",
+  "status": "SELECTED_BEFORE_ANY_NEW_OUTER"
+}

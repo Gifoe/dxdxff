@@ -1,0 +1,10 @@
+{
+  "actual_new_fits": 10,
+  "candidate_sha256": "51f89e56f67c4d8ce22324c56e1e143e23b7f6673db1224fd93f8b3c1aef4d72",
+  "epochs": 114,
+  "goal_established": false,
+  "model_freeze_sha256": "c4aaecb2be9dbaa6f0b0da0351a7fa0b3eec13057a763c5b863ed5b613192e10",
+  "new_Outer_passes": 0,
+  "reused_controls": 5,
+  "status": "ALL10_NEW_PLUS5_REUSED_MODELS_FROZEN"
+}

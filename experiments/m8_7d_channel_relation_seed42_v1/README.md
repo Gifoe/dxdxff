@@ -1,6 +1,8 @@
 # Parameter-matched channel-relational single head,unchanged7D
 
-Prospective bounded study,not a performance claim. Current full80C2
+Completed bounded study:10newfits/107epochs and independent verification
+passed,but neither newarm passed the registered Macro gate. No newOuter.
+Actualresults are in RUN_REPORT.md and results/internal_v1. Current full80C2
 patient-Macro0.6396579900303192 remains below the required>0.64.
 Previous Raw-dispersion,Raw-FiLM and context-affine negative results are
 preserved. Prior simple scoreZ/fraction cutoffs andGaussian posterior

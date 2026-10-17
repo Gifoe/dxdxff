@@ -1,0 +1,13 @@
+{
+  "status":"PASS",
+  "date_client":"2026-10-17",
+  "scope":"AST/JSON,CPU model/objective checks,source manifest,trusted imports;not performance",
+  "server_cpu_tests":5,
+  "server_cpu_seconds":1.14,
+  "trusted_import_without_setup":"PASS",
+  "source_manifest":"PASS",
+  "source_archive_sha256":"4fdb734dba5eb702daa49cfc8f346b38e4110497c666ffc126a8600079919039",
+  "formal_fits_started":0,
+  "new_Outer_passes":0,
+  "terminal":"PATIENT_MACRO_TRAINING_PREFLIGHT_PASS_NO_FITS"
+}

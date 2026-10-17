@@ -1,13 +1,15 @@
 {
-  "admission": false,
+  "admission": true,
   "files": {
     ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "EXECUTION_AUDIT.md": "4335f8bf41ebffd7ea9910a775c6de93ef0837dea906547cf73979641bf66b3b",
     "PREFLIGHT_AUDIT.json": "feb7335baba3ee091379566580b68c48d561a887c948e34e9f375c0ed23702c5",
     "PROTOCOL_LOCK.json": "0bee6d23f00f9bf62d7591ec4b7ebf2c9948422eb209d78a87bf400515d77960",
     "README.md": "abe26577edb6fda5744e2e505a5ccd215fd846a5f28d9d2fd424a430a05781f5",
     "admit.py": "3b99f5bd4abb109f208b64cd5933614b29e27555125f2dd85896f1e16031dc53",
     "common.py": "75f031164ce491c74b46aa661935c503f36f3886212de0fa0e97bd6942d45b20",
     "model.py": "8f2f890ac2252ca2d5496d117c1c78074c2377d04139e2088683fa727fd4b6cb",
+    "results/internal_v1/ADMISSION.json": "4d192ae9571b97086216e4fb8f6ddc43359447696ed16b00a040998f01dd6098",
     "run_internal.ps1": "1efa9eef3d4882d3f043730735d545d0f4d2e78a3b05fb2ea8764abfdfa14fcc",
     "test_model.py": "25d6104ffa17f3e3a3b2dbd0fd91d01c1a12ea3f32645b0d34358c09bf7e8c7f",
     "train.py": "44e240e71647f1c13efe7817c4fa3a9ffebbb34ce5ce37661db051121cedeea4",

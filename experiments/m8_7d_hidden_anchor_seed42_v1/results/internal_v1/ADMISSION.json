@@ -1,0 +1,202 @@
+{
+  "actual_FIT_gradient_checks": [
+    {
+      "all7_coordinates_retained": true,
+      "arm": "H0_SCRATCH",
+      "channels": 164,
+      "discarded_steps": 3,
+      "gradient_norms": [
+        {
+          "cnn.0.bias": 0.0,
+          "cnn.0.weight": 0.0,
+          "cnn.2.bias": 0.0,
+          "cnn.2.weight": 0.0,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 0.0,
+          "gate.network.2.weight": 0.0,
+          "phys_first.bias": 0.03764713928103447,
+          "phys_first.weight": 0.2665708065032959,
+          "raw_projection.weight": 0.17414677143096924,
+          "readout.bias": 0.10816428065299988,
+          "readout.weight": 0.38870713114738464
+        },
+        {
+          "cnn.0.bias": 0.00038483418757095933,
+          "cnn.0.weight": 0.00504332035779953,
+          "cnn.2.bias": 0.00031962073990143836,
+          "cnn.2.weight": 0.01070981752127409,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 7.336779621336387e-12,
+          "gate.network.2.weight": 0.0007675027009099722,
+          "phys_first.bias": 0.03691865876317024,
+          "phys_first.weight": 0.26462045311927795,
+          "raw_projection.weight": 0.1703483760356903,
+          "readout.bias": 0.10723493248224258,
+          "readout.weight": 0.3845236599445343
+        },
+        {
+          "cnn.0.bias": 0.0006589653785340488,
+          "cnn.0.weight": 0.008352609351277351,
+          "cnn.2.bias": 0.0005533199873752892,
+          "cnn.2.weight": 0.017759883776307106,
+          "gate.network.0.bias": 2.3135116578032466e-07,
+          "gate.network.0.weight": 4.765483936353121e-06,
+          "gate.network.2.bias": 3.293226029654761e-07,
+          "gate.network.2.weight": 0.0014232175890356302,
+          "phys_first.bias": 0.037105150520801544,
+          "phys_first.weight": 0.25536003708839417,
+          "raw_projection.weight": 0.16073085367679596,
+          "readout.bias": 0.10807473957538605,
+          "readout.weight": 0.3761468827724457
+        }
+      ],
+      "initial_single_head_equals_untrained_phys_only": true,
+      "original_Raw_summary_exact": true,
+      "original_physiological_normalization_exact": true,
+      "parameters": 13961,
+      "trainable": 13961,
+      "valid_windows": 48380
+    },
+    {
+      "all7_coordinates_retained": true,
+      "arm": "H1_WARM_JOINT",
+      "channels": 164,
+      "discarded_steps": 3,
+      "gradient_norms": [
+        {
+          "cnn.0.bias": 0.0,
+          "cnn.0.weight": 0.0,
+          "cnn.2.bias": 0.0,
+          "cnn.2.weight": 0.0,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 0.0,
+          "gate.network.2.weight": 0.0,
+          "phys_first.bias": 0.03764713928103447,
+          "phys_first.weight": 0.2665708065032959,
+          "raw_projection.weight": 0.17414677143096924,
+          "readout.bias": 0.10816428065299988,
+          "readout.weight": 0.38870713114738464
+        },
+        {
+          "cnn.0.bias": 0.00038483418757095933,
+          "cnn.0.weight": 0.00504332035779953,
+          "cnn.2.bias": 0.00031962073990143836,
+          "cnn.2.weight": 0.01070981752127409,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 7.336779621336387e-12,
+          "gate.network.2.weight": 0.0007675027009099722,
+          "phys_first.bias": 0.03691865876317024,
+          "phys_first.weight": 0.26462045311927795,
+          "raw_projection.weight": 0.1703483760356903,
+          "readout.bias": 0.10723493248224258,
+          "readout.weight": 0.3845236599445343
+        },
+        {
+          "cnn.0.bias": 0.0006589653785340488,
+          "cnn.0.weight": 0.008352609351277351,
+          "cnn.2.bias": 0.0005533199873752892,
+          "cnn.2.weight": 0.017759883776307106,
+          "gate.network.0.bias": 2.3135116578032466e-07,
+          "gate.network.0.weight": 4.765483936353121e-06,
+          "gate.network.2.bias": 3.293226029654761e-07,
+          "gate.network.2.weight": 0.0014232175890356302,
+          "phys_first.bias": 0.037105150520801544,
+          "phys_first.weight": 0.25536003708839417,
+          "raw_projection.weight": 0.16073085367679596,
+          "readout.bias": 0.10807473957538605,
+          "readout.weight": 0.3761468827724457
+        }
+      ],
+      "initial_single_head_equals_untrained_phys_only": true,
+      "original_Raw_summary_exact": true,
+      "original_physiological_normalization_exact": true,
+      "parameters": 13961,
+      "trainable": 13961,
+      "valid_windows": 48380
+    },
+    {
+      "all7_coordinates_retained": true,
+      "arm": "H2_WARM_FIXED",
+      "channels": 164,
+      "discarded_steps": 3,
+      "gradient_norms": [
+        {
+          "cnn.0.bias": 0.0,
+          "cnn.0.weight": 0.0,
+          "cnn.2.bias": 0.0,
+          "cnn.2.weight": 0.0,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 0.0,
+          "gate.network.2.weight": 0.0,
+          "raw_projection.weight": 0.17414677143096924
+        },
+        {
+          "cnn.0.bias": 0.0003873277746606618,
+          "cnn.0.weight": 0.0050735450349748135,
+          "cnn.2.bias": 0.0003216362383682281,
+          "cnn.2.weight": 0.01076920423656702,
+          "gate.network.0.bias": 0.0,
+          "gate.network.0.weight": 0.0,
+          "gate.network.2.bias": 6.269870473502026e-12,
+          "gate.network.2.weight": 0.000770781422033906,
+          "raw_projection.weight": 0.17113037407398224
+        },
+        {
+          "cnn.0.bias": 0.0006669323774985969,
+          "cnn.0.weight": 0.008447623811662197,
+          "cnn.2.bias": 0.0005602808087132871,
+          "cnn.2.weight": 0.01795189641416073,
+          "gate.network.0.bias": 2.3262020931724692e-07,
+          "gate.network.0.weight": 4.7939515752659645e-06,
+          "gate.network.2.bias": 3.3176584679495136e-07,
+          "gate.network.2.weight": 0.0014339463086798787,
+          "raw_projection.weight": 0.1621323823928833
+        }
+      ],
+      "initial_single_head_equals_untrained_phys_only": true,
+      "original_Raw_summary_exact": true,
+      "original_physiological_normalization_exact": true,
+      "parameters": 13961,
+      "trainable": 12424,
+      "valid_windows": 48380
+    }
+  ],
+  "all3_initial_states_exact": true,
+  "formal_epochs_discarded": 0,
+  "input_binding_sha256": "1e4dbee095ff69abf5410948c05e8ef952448dbe4bcf9ef59eb61dfafdeebaf6",
+  "new_Outer_passes": 0,
+  "reference_checks": [
+    {
+      "all201_decisions_exact": true,
+      "fold": 1,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_decisions_exact": true,
+      "fold": 2,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_decisions_exact": true,
+      "fold": 3,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_decisions_exact": true,
+      "fold": 4,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_decisions_exact": true,
+      "fold": 5,
+      "maximum_replay_error": 0.0
+    }
+  ],
+  "status": "PASS",
+  "tests_passed": 5
+}

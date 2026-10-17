@@ -1,0 +1,117 @@
+{
+  "all7_features_unchanged": true,
+  "checkpoint_checks": [
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 4,
+      "fold": 1,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 5,
+      "fold": 2,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 9,
+      "fold": 3,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 5,
+      "fold": 4,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "C2_REFERENCE",
+      "epoch": 4,
+      "fold": 5,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R0_MEAN_CAPACITY",
+      "epoch": 4,
+      "fold": 1,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R0_MEAN_CAPACITY",
+      "epoch": 5,
+      "fold": 2,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R0_MEAN_CAPACITY",
+      "epoch": 9,
+      "fold": 3,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R0_MEAN_CAPACITY",
+      "epoch": 9,
+      "fold": 4,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R0_MEAN_CAPACITY",
+      "epoch": 5,
+      "fold": 5,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R1_RAW_DISPERSION",
+      "epoch": 3,
+      "fold": 1,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R1_RAW_DISPERSION",
+      "epoch": 5,
+      "fold": 2,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R1_RAW_DISPERSION",
+      "epoch": 5,
+      "fold": 3,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R1_RAW_DISPERSION",
+      "epoch": 7,
+      "fold": 4,
+      "maximum_replay_error": 0.0
+    },
+    {
+      "all201_threshold_decisions_exact": true,
+      "arm": "R1_RAW_DISPERSION",
+      "epoch": 5,
+      "fold": 5,
+      "maximum_replay_error": 0.0
+    }
+  ],
+  "independent_interval_checks": 54,
+  "independent_metric_checks": 1755,
+  "maximum_interval_difference": 0.0,
+  "maximum_replay_error": 0.0,
+  "new_Outer_passes": 0,
+  "patient_metric_rows": 195,
+  "status": "PASS"
+}

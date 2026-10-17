@@ -1,0 +1,18 @@
+{
+  "status": "CPU_PREFLIGHT_PASS_FORMAL_TRAINING_NOT_STARTED",
+  "date": "2026-10-17",
+  "tests_collected": 4,
+  "tests_passed": 4,
+  "seconds": 0.08,
+  "task_import_pass_without_setup": true,
+  "preflight_zip_sha256": "6af67d80c3b8140ed0f96273d0f002e1cb736a88ec59673cb5091a389a1c0996",
+  "formal_updates": 0,
+  "new_outer_evaluations": 0,
+  "checks": [
+    "Single output head, original7D and parameter counts, paired initial tensors",
+    "C1/C2 exact initial function and shared head gradients, nonzero interaction gain gradient",
+    "Every physiological coordinate and every Raw summary coordinate has finite nonzero gradient",
+    "Exact original0.75BCE+0.25softMacro objective"
+  ],
+  "limitation": "Synthetic correctness tests are not model performance. Actual five retained-control replays and complete-patient GPU admission remain mandatory."
+}

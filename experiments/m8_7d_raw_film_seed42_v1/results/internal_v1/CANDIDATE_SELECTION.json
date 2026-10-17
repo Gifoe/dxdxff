@@ -1,0 +1,35 @@
+{
+  "candidate_sha256": "778e4544c01bfccc55fb0a44a35a15ae235daa22f93947a6842401674657915c",
+  "eligible": [],
+  "model_freeze_sha256": "83ffe0516ce3f7ea8b13448b498948f5b04b3a630ad538a0037134b1243721f7",
+  "new_Outer_used": false,
+  "new_qualified": false,
+  "scores": [
+    {
+      "arm": "C2_REFERENCE",
+      "auprc": 0.5616263970282607,
+      "auroc": 0.762169266320797,
+      "fold_sd": 0.01954309064762992,
+      "macro": 0.6730761426455318,
+      "penalized": 0.6711218335807688
+    },
+    {
+      "arm": "F0_AFTER_GELU",
+      "auprc": 0.5788700875379926,
+      "auroc": 0.7757235091168194,
+      "fold_sd": 0.008229738241510605,
+      "macro": 0.6684765914581221,
+      "penalized": 0.667653617633971
+    },
+    {
+      "arm": "F1_BEFORE_GELU",
+      "auprc": 0.5697154910152965,
+      "auroc": 0.7771801661968122,
+      "fold_sd": 0.00985894757463212,
+      "macro": 0.6705021786328715,
+      "penalized": 0.6695162838754083
+    }
+  ],
+  "selected": "C2_REFERENCE",
+  "status": "SELECTED_BEFORE_ANY_NEW_OUTER"
+}

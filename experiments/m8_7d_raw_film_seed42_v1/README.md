@@ -1,7 +1,10 @@
 # Same7D,single-head Raw conditioning before versus after GELU
 
-Prospective experiment registered after the Raw-dispersion internal gate
-failed. No result is claimed. User explicitly permits Raw structure changes;
+Completed experiment registered after the Raw-dispersion internal gate
+failed. All10new fits/116epochs and independent verification passed,but
+both architectures failed the Macro improvement gate;zero newOuter passes.
+Actual results are in RUN_REPORT.md and results/internal_v1.
+User explicitly permits Raw structure changes;
 the original seven physiological measurements,all14processed coordinates,
 80patient/7635channel/256seizure/1471965validwindow contract remain unchanged.
 The target is actual full80 equal-patient Macro-F1>0.64 and>C2,not internal

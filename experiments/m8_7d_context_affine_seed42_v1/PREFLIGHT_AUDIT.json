@@ -1,0 +1,13 @@
+{
+  "status":"PASS",
+  "date_client":"2026-10-17",
+  "scope":"Syntax,CPU implementation checks,source manifest and trusted imports;not performance",
+  "server_cpu_tests":5,
+  "server_cpu_seconds":2.14,
+  "source_archive_sha256":"6aefa4490f09f422b708c4c68b822555696c9e5f3debd379218d7ccdc8d124cb",
+  "trusted_import_without_setup":"PASS",
+  "source_manifest":"PASS",
+  "formal_fits_started":0,
+  "new_Outer_passes":0,
+  "terminal":"CONTEXT_AFFINE_PREFLIGHT_PASS_NO_FITS"
+}

@@ -1,7 +1,10 @@
 # Seven unchanged physiological features + Raw temporal dispersion
 
-Prospective bounded experiment after explicit user authorization to modify
-the Raw architecture on2026-10-17. No performance result is claimed here.
+Completed bounded experiment after explicit user authorization to modify
+the Raw architecture on2026-10-17. All10new fits/117epochs and independent
+verification passed,but neither new arm passed the internal improvement
+gate. No new Outer was run. Actual results are in RUN_REPORT.md and
+results/internal_v1;the broader>0.64full80 target remains unmet.
 The previous unexecuted patient-context source is preserved, not called run.
 
 The target is full80 **equal-patient Macro-F1 strictly>0.64**, improving the

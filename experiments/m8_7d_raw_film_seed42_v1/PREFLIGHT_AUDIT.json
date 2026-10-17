@@ -1,0 +1,14 @@
+{
+  "status":"PASS",
+  "date_client":"2026-10-17",
+  "scope":"Syntax,CPU changed-path tests,trusted dependency import and source hashes;not performance or actual patient admission",
+  "server_cpu_tests_passed":5,
+  "server_cpu_tests_seconds":2.15,
+  "server_trusted_import_without_setup":"PASS",
+  "server_source_manifest":"PASS",
+  "source_archive_sha256":"7feed7381b9bb22c0da557e98e8f89ca7a1c5a81e3f9c9956a9b54fded1135c4",
+  "formal_fits_started":0,
+  "new_Outer_passes":0,
+  "terminal":"RAW_FILM_PREFLIGHT_PASS_NO_FITS",
+  "pre_deployment_correction":"A mechanically copied public-checker arm name was rejected locally and corrected before server extraction or any scientific binding. Unused source ZIPv1 is preserved,never executed. No model/data/selection change."
+}

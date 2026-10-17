@@ -13,6 +13,8 @@ Executed on 2026-10-17, Asia/Shanghai, after explicit user authorization to eval
 
 Historical model/candidate/input/source hashes, the 55 selected checkpoint hashes, epochs and thresholds are in `results/ADMISSION.json` and `results/FROZEN_MODELS.csv`. Earlier sources, checkpoints and failed Development gates were not overwritten.
 
+The aggregate export manifest records the exact server bytes. The results directory disables Git line-ending conversion so that every published blob retains those original SHA256 values; frozen executable source uses LF. This is packaging only and does not change any prediction, numerical result or model binding.
+
 ## Actual sequence
 
 1. CPU AST / PowerShell parse checks passed for the new audit code. Server tests for the fixed arm contract, exact private cache identity/tamper rejection, and paired NumPy bootstrap ordering: **3 tests PASS**.

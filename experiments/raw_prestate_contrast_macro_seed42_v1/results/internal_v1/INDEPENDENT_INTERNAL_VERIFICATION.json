@@ -1,0 +1,154 @@
+{
+  "actual_neural_fits": 15,
+  "all3_random_initial_states_exact_per_fold": true,
+  "all9_patient_metrics_independent": true,
+  "all_races_recomputed": true,
+  "checks": [
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "DELTA_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "POST_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_DELTA",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 7
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "DELTA_DUP",
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 12
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "POST_DUP",
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_DELTA",
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "DELTA_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 9
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "POST_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_DELTA",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 8
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "DELTA_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "POST_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_DELTA",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 7
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "DELTA_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 2
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "POST_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 20
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_DELTA",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 6
+    }
+  ],
+  "independent_CI_metric_checks": 162,
+  "logical_cells": 30,
+  "maximum_bootstrap_difference": 9.80118763926896e-17,
+  "maximum_replay_error": 0.0,
+  "maximum_replication_interval_error": 0.0,
+  "original_Development_Outer_used": false,
+  "ownFIT_selection_sha256": "7af8e9df960133b6c73d59465c6b632866fb04a94b97b7f1c859812a4d4b01fd",
+  "patient_metric_rows": 516,
+  "public_cell_summaries_verified": true,
+  "replication_interval_checks": 0,
+  "status": "PASS"
+}

@@ -3,6 +3,7 @@ import csv
 import hashlib
 import json
 import math
+import statistics
 import sys
 from pathlib import Path
 
@@ -39,6 +40,17 @@ def main():
             count={r['fold']:int(r['patients']) for r in cells if r['arm']==row['arm'] and r['screen']=='1'}
             ff=[r for r in folds if r['arm']==row['arm']];assert len(ff)==len(count)==5 and sum(count.values())==86
             for m in METRICS:assert abs(math.fsum(float(r[m])*count[r['fold']] for r in ff)/86-float(row[m]))<1e-12
+            assert abs(float(row['macro_f1'])-.5*(float(row['f1'])+float(row['nez_f1'])))<1e-12
+            sd=next(r for r in table(result/'FIRST_PATH_FOLD_SD.csv') if r['arm']==row['arm'])
+            src=[r for r in table(result/'FIRST_PATH_SOURCE.csv') if r['arm']==row['arm']]
+            assert sum(int(r['appearances']) for r in src)==86 and sum(int(r['unique_patients']) for r in src)==59
+            for m in METRICS:
+                assert abs(statistics.stdev(float(r[m]) for r in ff)-float(sd[m]))<1e-12
+                if all(r['suppressed']=='False' for r in src):
+                    assert abs(math.fsum(float(r[m])*int(r['appearances']) for r in src)/86-float(row[m]))<1e-12
+        coverage=table(result/'FIRST_PATH_METRIC_COVERAGE.csv');assert len(coverage)==54
+        assert all(int(r['finite_appearances'])==int(r['total_appearances'])==86 and int(r['unique_patients'])==59 for r in coverage)
+        assert len(table(result/'FIRST_PATH_ABSOLUTE_CI.csv'))==54 and len(table(result/'FIRST_PATH_PAIRED_CI.csv'))==108
         for row in table(result/'FIRST_PATH_PAIRED_CI.csv'):
             assert int(row['appearances'])==86 and int(row['unique_patients'])==59 and int(row['draws'])==10000
             assert abs(float(row['mean'])-(float(points[row['left']][row['metric']])-float(points[row['right']][row['metric']])))<1e-12

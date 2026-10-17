@@ -1,0 +1,6 @@
+fold,advanced,first_candidate,selected_arm,fresh_eligible
+1,False,PRE_DELTA,NATIVE,False
+2,False,PRE_DELTA,NATIVE,False
+3,False,DELTA_DUP,NATIVE,False
+4,False,DELTA_DUP,FROZEN_PRE,False
+5,False,DELTA_DUP,NATIVE,False

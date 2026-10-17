@@ -1,6 +1,8 @@
 # Raw pre-state retention and contrast, Macro-F1, seed42
 
-Prospective bounded internal experiment. **No results have yet been obtained.**
+Completed, independently verified bounded internal experiment.
+**No fold passed the frozen advancement gate; no new Outer was run.**
+See [RUN_REPORT.md](RUN_REPORT.md) for the actual six-arm results and limits.
 The full80 patient-equal Macro-F1 target remains >0.65, not an EZ-F1, pooled,
 internal or confidence-upper-bound target. The preceding complete joint-moment
 experiment failed it; its report and all negative controls remain available.
@@ -92,3 +94,20 @@ that all four components are universally necessary in retrained CNNs. In
 particular, the cross-seizure SD benefit was not established. This new
 from-scratch POST_DUP comparison addresses latent-reference subtraction under
 the Macro-oriented protocol; it does not silently replace the older evidence.
+
+## Actual completed internal program
+
+The same uninterrupted foreground coordinator completed15freshfits/320epochs
+and exited0 with `PRESTATE_RAW_INTERNAL_PIPELINE_COMPLETE_NO_OUTER`.
+All15retained CAL/HELD checkpoints replayed exactly (maximum error0), all201
+threshold classification decisions matched, and all516patient-metric rows,
+nine metrics and162absolute/paired interval rows passed independent checks.
+No fold advanced, no replication path was run, no fresh final candidate
+qualified, and no original Development/Outer evaluation was initiated.
+
+The strongest fresh first-path Macro point was PRE_DELTA0.627837 versus
+COMPACT_PRE0.625949; their paired interval crossedzero. These are86assessment
+appearances/59unique people, not80Outerpatients. MRR improved at the nominal
+interval level, while NEZ-F1 and ACC declined versus that stronger reference.
+All outcomes, including those tradeoffs and the gate failures, are retained.
+The broader >0.65full80 Macro target remains active and unachieved.

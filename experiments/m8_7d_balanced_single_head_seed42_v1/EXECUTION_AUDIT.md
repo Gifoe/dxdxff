@@ -59,3 +59,14 @@ setup, training or test access. Source ZIP SHA256:
 `0f95f4a22427139483959ee3b4b3eecd64f623eb33cfaf73eb07941607cac1c3`.
 This import check is not evidence that final inference/statistics succeeded.
 Final protocol/source are published before the separately frozen test pass.
+
+Final code/protocol and verified internal results were pushed at
+`12d2716180047da26d69a214e33e51f8e00032d4` before final tag01 started.
+All10newscore cells andfiveoldexactS3reference cells were sealed before full
+truth was used. All160newpatient cells are privately cached; none required a
+retry. The report and independent verifier ended normally, with empty stderr.
+Exact terminal:
+`BALANCED_7D_SINGLE_FULL80_OUTER_PIPELINE_VERIFIED_COMPLETE`.
+The overall target remains unmet: primary full80Macro-F1 is
+0.6396579900303192, not strictly greater than0.64. The final verification and
+complete metric/census/interval files are published without private predictions.

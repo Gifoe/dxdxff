@@ -1,0 +1,23 @@
+{
+  "status": "EXPERIMENT_COMPLETE_OVERALL_GOAL_NOT_MET",
+  "one_classification_head": "VERIFIED: one final scalar classifier; no D1 prediction/residual/ensemble",
+  "original7D": "VERIFIED: all7 original measurements and14 coordinates retained, original preprocessors and source hashes; exact old control replay",
+  "original_patient_protocol": "VERIFIED: complete fivefold80patients7635channels and1471965validRawwindows per new arm, original roles/masks/reference/pooling",
+  "actual_new_fits": 10,
+  "actual_new_epochs": 114,
+  "exact_reused_controls": 5,
+  "internal_verification": "PASS: 15checkpoint replays,1755patient metrics,54intervals",
+  "final_verification": "PASS: 240patient rows,2160metrics,54intervals,all10newinferencecells andfiveoldscorecells",
+  "primary_selected_before_test": "C2_INTERACTION",
+  "primary_full80_patient_equal_Macro_F1": 0.6396579900303192,
+  "control_full80_patient_equal_Macro_F1": 0.6334923520820233,
+  "strict_target": ">0.64",
+  "strict_target_met": false,
+  "gap_to_0_64": 0.0003420099696808,
+  "performance_interpretation": "Positive point difference,pairedMacro95CI crosseszero;notstatisticallyconfirmed improvement",
+  "no_postOuter_rescue": true,
+  "independent_confirmation": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "terminal": "BALANCED_7D_SINGLE_FULL80_OUTER_PIPELINE_VERIFIED_COMPLETE",
+  "goal_status": "Keep active;do not mark complete fromthisexperiment"
+}

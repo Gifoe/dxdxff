@@ -1,0 +1,14 @@
+{
+  "control_Macro_F1": 0.6334923520820233,
+  "delta": 0.006165637948295943,
+  "features": 7,
+  "independent_confirmation": false,
+  "one_classification_head": true,
+  "outcome_status": "EXPLORATORY_REPEATED_TEST",
+  "patient_equal_Macro_F1": 0.6396579900303192,
+  "patients": 80,
+  "selected": "C2_INTERACTION",
+  "status": "POINT_TARGET_NOT_MET",
+  "target_strictly_greater_than": 0.64,
+  "verification_required": true
+}

@@ -1,0 +1,13 @@
+{
+  "all7_features_unchanged": true,
+  "channels_each": 7635,
+  "freeze_sha256": "c36dae333719f4c40497e13e9531e0afa65e5b4b46530ac4aad232da47da7201",
+  "full_truth_used": false,
+  "models": 3,
+  "new_inference_cells": 10,
+  "patients_each": 80,
+  "reused_reference_cells": 5,
+  "score_seal_sha256": "9f5beef8b232cff825cf1a3b560d9a54f10bdfd4ee9bdf27f3275b3bb7774e6c",
+  "selected": "C2_INTERACTION",
+  "status": "ALL10_NEW_PLUS5_REUSED_OUTER_SCORES_SEALED"
+}

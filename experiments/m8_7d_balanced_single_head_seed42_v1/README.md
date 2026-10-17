@@ -35,3 +35,17 @@ favorable fold, interval upper bound or post-hoc best Outer secondary.
 All nine metrics, coverage, source/fold stability and paired uncertainty are
 reported. Old source/seals/results remain unchanged. Only code/hashes and
 anonymous actual aggregate artifacts are uploaded to GitHub.
+
+## Completed run
+
+All10newfits/114epochs and the frozen full80evaluation actually completed.
+The preselected C2 achieved patient-equal Macro-F1 **0.6396579900303192**,
+versus0.6334923520820233 for the exact old7Dsingle-head control. This is below
+the strict>0.64target; the goal is **not met**, even though a rounded display
+may show0.640. C2−C0 paired95% CI is[−.004709,+.017371].
+
+See `RUN_REPORT.md`, `COMPLETION_AUDIT.json` and actual anonymous outputs under
+`results/internal_v1/` and `results/final_stage_v1/`. Complete independent
+checkpoint/metric/interval/census checks passed. No postOuter change or
+replacement of the internally selected primary was made. This is exploratory
+repeated-test evidence, not independent confirmation.

@@ -1,0 +1,13 @@
+{
+  "control_patient_Macro_F1": 0.6334923520820233,
+  "features": 7,
+  "independent_confirmation": false,
+  "neural_inference_cells": 10,
+  "patients": 80,
+  "reused_control_cells": 5,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected": "C2_INTERACTION",
+  "selected_patient_Macro_F1": 0.6396579900303192,
+  "status": "COMPLETE_VERIFIED_FULL80_BALANCED_7D",
+  "target_met": false
+}

@@ -1,0 +1,48 @@
+{
+  "admission_loss_uses_only_ownFIT_labels": true,
+  "engineering_admission_source_sha256": "4c4ffde24591ced0f5ec54d0da0e9bf1a86fac6e396b4904c6e6316ee48329eb",
+  "input_binding_sha256": "1c8c53880aaed2a277e8ca7c0a1786844e472bd215947b9824a93898ad0020d1",
+  "largest_complete_FIT_patient_backward": [
+    {
+      "all_gradients_finite": true,
+      "arm": "PRE_MEAN_DUP",
+      "channels": 164,
+      "largest_of_unique_FIT_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 14577,
+      "peak_allocated_bytes": 968949248,
+      "seconds": 0.3560249999864027,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "PRE_ENERGY_DUP",
+      "channels": 164,
+      "largest_of_unique_FIT_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 14577,
+      "peak_allocated_bytes": 1115620352,
+      "seconds": 0.039720899978419766,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "PRE_JOINT",
+      "channels": 164,
+      "largest_of_unique_FIT_patients": 79,
+      "optimizer_updates": 0,
+      "parameters": 14577,
+      "peak_allocated_bytes": 1115620352,
+      "seconds": 0.04105080000590533,
+      "valid_windows": 48380
+    }
+  ],
+  "no_model_data_loss_split_or_selection_change": true,
+  "optimizer_updates": 0,
+  "original_FIT_union_patients": 79,
+  "original_input_freeze_sha256": "cd08eeec8272affa4ac7dac448b47b206a725f4ec0c74abe00faf27c25b0d6f2",
+  "original_role_diagnostic_sha256": "39dbf5b6f216e7577a73fd640cab004386303e88d4d606a60563582b3de2c0b9",
+  "repair": "OriginalFITunion is79,not80; original39fittedinternalmodels andallscientificsourcebindings preserved. No cohortorrolechange.",
+  "status": "PASS",
+  "unchanged_Outer_contract_patients": 80
+}

@@ -1,0 +1,13 @@
+{
+  "appearances_per_comparison": 86,
+  "choices_sha256_before_and_after": "51963534e666e5bae8a657a3674cdb9895ce56d683507da0925b5c5c268faad3",
+  "current_internal_seal_sha256": "99800c1d64c9ca68e7bd7a25ef153543f77e56e61f519208480199bf10154e6e",
+  "no_new_Development_Outer_data_read": true,
+  "no_training_prediction_or_threshold_change": true,
+  "paired_metric_rows": 54,
+  "posthoc_internal_only_not_selection": true,
+  "previous_internal_seal_sha256": "7ba9c5fb3c1577fb7db42dd2bf4030687cb391757ce7bf3b5bf6c223f0ca461a",
+  "scope": "Allthree newarms versus both priorcompactPREoperators; role-matched internalcontext,not a new independenttest or parameter-matched attribution.",
+  "status": "PASS",
+  "unique_patients_per_comparison": 59
+}

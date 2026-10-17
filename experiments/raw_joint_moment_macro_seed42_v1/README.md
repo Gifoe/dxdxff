@@ -1,6 +1,7 @@
 # Joint learned-response moments, Raw-only Macro-F1, seed42
 
-Prospective bounded experiment. **No result or >0.65 achievement is claimed.**
+Internal study completed and independently verified. **No full80 final result
+or >0.65 achievement is claimed yet.** See [INTERNAL_REPORT.md](INTERNAL_REPORT.md).
 The preceding complete fresh factorial failed the full80 target; its actual
 negative results remain in
 [the prior report](../raw_fresh_energy_macro_seed42_v1/RUN_REPORT.md).
@@ -104,3 +105,11 @@ remain the byte-unchanged preregistered sources. FailedRunTag01 logs and origina
 code are preserved. The earlier one-shot handoff stopped on this failure and
 is not retried; the diagnosed correction uses a new foreground SSH owner.
 The full80Outer contract and >0.65 target are unchanged.
+
+The completed internal program has39freshfits/1061epochs/65logicalcells and
+1105patientmetricrows,maximum retained-prediction replay error0,all126CI
+checksPASS. First-path jointMacro0.624301 is not a full80Outer metric. Its
+differences from both matched duplicated controls have CIs crossingzero,
+and it does not improve on the preceding compact PRE_MEAN point0.625949.
+The additional historical comparison is explicitly post-hoc internal context,
+with the fivefold choice hash unchanged; it is not a new selection rule.

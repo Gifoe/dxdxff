@@ -85,3 +85,22 @@ then does it invoke the unchanged `run_final.ps1`; any missing gate or failure
 stops without retry. It never terminates a process, changes a model or starts
 a second active lane. Its private operational status/history is not clinical
 evidence or a substitute for actual final results.
+
+## Engineering-only final admission correction
+
+The first final admission stopped before any final fit or test: its source
+incorrectly assumed that the union of original FIT roles must contain80
+patients. Actual unchanged folds have FIT counts51/51/50/52/51,13Development
+patients each, and Outer16/16/17/15/16. Their FIT union is79 and Outer union80;
+one patient is never in FIT. No role is reassigned to force a count.
+
+`diagnose_original_roles.py` verifies these original identities without
+returning labels or making predictions. `admit_exact_roles_v2.py` gates the
+exact original FIT/cohort identity hashes, admits the actual largest complete
+legal FIT patient for allthree unchanged models, and binds the original final
+input freeze. `run_final_exact_roles_v2.ps1 -RunTag 02` replaces only the bad
+admission entry; fitting, thresholding, prediction, verification and census
+remain the byte-unchanged preregistered sources. FailedRunTag01 logs and original
+code are preserved. The earlier one-shot handoff stopped on this failure and
+is not retried; the diagnosed correction uses a new foreground SSH owner.
+The full80Outer contract and >0.65 target are unchanged.

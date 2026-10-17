@@ -1,0 +1,61 @@
+{
+  "decisions": [
+    {
+      "AUROC_gain": 0.04748174367944891,
+      "Macro_gain": 0.010811477053264018,
+      "advanced": true,
+      "chosen": "PRE_MEAN_DUP",
+      "fold": 1,
+      "promoted": [
+        "PRE_MEAN_DUP",
+        "PRE_ENERGY_DUP",
+        "PRE_JOINT"
+      ]
+    },
+    {
+      "AUROC_gain": -0.018210585383535705,
+      "Macro_gain": -0.021615445027576285,
+      "advanced": false,
+      "chosen": "PRE_JOINT",
+      "fold": 2,
+      "promoted": []
+    },
+    {
+      "AUROC_gain": 0.08247566009483964,
+      "Macro_gain": 0.06457840166655304,
+      "advanced": true,
+      "chosen": "PRE_JOINT",
+      "fold": 3,
+      "promoted": [
+        "PRE_MEAN_DUP",
+        "PRE_ENERGY_DUP",
+        "PRE_JOINT"
+      ]
+    },
+    {
+      "AUROC_gain": 0.0258464710638433,
+      "Macro_gain": 0.03724893019693609,
+      "advanced": true,
+      "chosen": "PRE_ENERGY_DUP",
+      "fold": 4,
+      "promoted": [
+        "PRE_MEAN_DUP",
+        "PRE_ENERGY_DUP",
+        "PRE_JOINT"
+      ]
+    },
+    {
+      "AUROC_gain": 0.06745958234479765,
+      "Macro_gain": 0.05669302135284271,
+      "advanced": true,
+      "chosen": "PRE_JOINT",
+      "fold": 5,
+      "promoted": [
+        "PRE_MEAN_DUP",
+        "PRE_ENERGY_DUP",
+        "PRE_JOINT"
+      ]
+    }
+  ],
+  "status": "JOINT_RAW_INTERNAL_RACING"
+}

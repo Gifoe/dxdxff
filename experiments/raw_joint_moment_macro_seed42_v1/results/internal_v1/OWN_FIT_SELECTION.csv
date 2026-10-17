@@ -1,0 +1,6 @@
+fold,advanced,first_candidate,selected_arm
+1,True,PRE_MEAN_DUP,FROZEN_PRE
+2,False,PRE_JOINT,NATIVE
+3,True,PRE_JOINT,PRE_JOINT
+4,True,PRE_ENERGY_DUP,PRE_ENERGY_DUP
+5,True,PRE_JOINT,PRE_JOINT

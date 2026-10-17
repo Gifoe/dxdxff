@@ -1,0 +1,367 @@
+{
+  "actual_neural_fits": 39,
+  "all3_random_initial_states_exact_per_fold": true,
+  "all9_patient_metrics_independent": true,
+  "all_races_recomputed": true,
+  "checks": [
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 20
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 5
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 12
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 13
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 8
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 1,
+      "initial_state_sha256": "09161a3b225dff58ea97427f43f5c0185b189b034e1efd65005dfa2f65b3369d",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 7
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 29
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 22
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 2,
+      "initial_state_sha256": "9e8e2906dbcc7e668359da43fb6fee46264d53bb4f1330663bf5ae7c51c60153",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 16
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 22
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 4
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 8
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 4
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 16
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 21
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 3,
+      "initial_state_sha256": "39e8e26e93720d9adac85b538d3965e9961bbc4a7865652b36dfff40e3ede28e",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 8
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 12
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 12
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 3
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 3
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 7
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 5
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 6
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 4,
+      "initial_state_sha256": "c7678a0e167b166d5d0424daf22726ac9e320385a8a9dbf65dea06d964846069",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 2
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 69
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 5
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 1,
+      "selected_epoch": 3
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 23
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 23
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 2,
+      "selected_epoch": 23
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_ENERGY_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 7
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_JOINT",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 11
+    },
+    {
+      "all201_CAL_grid_decisions_exact": true,
+      "arm": "PRE_MEAN_DUP",
+      "fold": 5,
+      "initial_state_sha256": "710f75ffcdbbac08b06a5bd69392748eee2c5810365a8b3d952329f4be82deac",
+      "maximum_replay_error": 0.0,
+      "screen": 3,
+      "selected_epoch": 13
+    }
+  ],
+  "independent_CI_metric_checks": 126,
+  "logical_cells": 65,
+  "maximum_bootstrap_difference": 9.80118763926896e-17,
+  "maximum_replay_error": 0.0,
+  "original_Development_Outer_used": false,
+  "ownFIT_selection_sha256": "51963534e666e5bae8a657a3674cdb9895ce56d683507da0925b5c5c268faad3",
+  "patient_metric_rows": 1105,
+  "status": "PASS"
+}

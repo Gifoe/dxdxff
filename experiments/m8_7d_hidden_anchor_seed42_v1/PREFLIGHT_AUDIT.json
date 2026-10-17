@@ -1,0 +1,19 @@
+{
+  "status": "CPU_PREFLIGHT_PASS_FORMAL_TRAINING_NOT_STARTED",
+  "date": "2026-10-17",
+  "tests_collected": 5,
+  "tests_passed": 5,
+  "seconds": 1.13,
+  "task_import_pass_without_setup": true,
+  "source_zip_sha256": "ea181241275f34f74d10ca7560a3b897a26516fd671566fab9effe3124c56001",
+  "formal_optimizer_updates": 0,
+  "new_Outer_evaluations": 0,
+  "checks": [
+    "One classification output, identical initial states,13961parameters",
+    "Exact original virtualLN88 normalization on14originalcoordinates",
+    "Feature-only initial identity and1537/12424/13961stage trainable counts",
+    "Zero Raw projection gradient opening and frozen-head state preservation",
+    "Exact registered original0.75BCE+0.25softMacro objective"
+  ],
+  "limitation": "These are correctness checks, not classification results. Five actual old-model replays and complete-patient GPU admission remain required before any formal fit."
+}

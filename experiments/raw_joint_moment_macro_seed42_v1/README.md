@@ -75,3 +75,13 @@ That negative-entry check passed on the server while the real internal
 terminal was absent. It is a workflow guard check, not a model performance
 result. This final implementation is not automatically run by the internal
 coordinator and must not be launched while an internal worker is active.
+
+`handoff_after_internal.ps1` is a one-shot execution sequencer, not a new
+selection rule. Under a sustained foreground SSH owner, it watches the exact
+original coordinator PID plus creation time, waits for normal exit, then
+requires independent internalPASS/126CI checks, frozen fivefold choice hash,
+no remaining owned worker, and exact precommitted final source hashes. Only
+then does it invoke the unchanged `run_final.ps1`; any missing gate or failure
+stops without retry. It never terminates a process, changes a model or starts
+a second active lane. Its private operational status/history is not clinical
+evidence or a substitute for actual final results.

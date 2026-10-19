@@ -13,14 +13,20 @@ def equal_tree(a,b):
     return type(a) is type(b) and a==b
 
 
+def independent_views(v,mean,scale):
+    # Keep the two ToCopyBackward paths separate, as in production. Sharing a
+    # float64 tensor changes whether branch gradients add before/after FP32 cast.
+    g=((v.double()-mean)/scale).to(v.dtype)
+    a=v.double();sd=a.std(0,unbiased=False)
+    r=((a-a.mean(0))/torch.where(sd>1e-8,sd,torch.ones_like(sd))).to(v.dtype)
+    return torch.cat([g,r],dim=-1)
+
+
 def independent_features(self,raw,mask,times,delta,scale,permutation=None):
     saved=self.raw_pr;self.raw_pr=False
     try:v,activity=MODEL.BASE.BASE.PRFactorial.features(self,raw,mask,times,delta,scale,permutation)
     finally:self.raw_pr=saved
-    a=v.double();sd=a.std(0,unbiased=False)
-    r=((a-a.mean(0))/torch.where(sd>1e-8,sd,torch.ones_like(sd))).to(v.dtype)
-    g=((a-self.anchor_mean)/self.anchor_scale).to(v.dtype)
-    return torch.cat([g,r],dim=-1),activity
+    return independent_views(v,self.anchor_mean,self.anchor_scale),activity
 
 
 def main():

@@ -96,6 +96,16 @@ class Tests(unittest.TestCase):
         y=copy.deepcopy(x);self.assertTrue(equal_tree(x,y));y['state'][0]['exp_avg'][1]=2
         self.assertFalse(equal_tree(x,y))
 
+    def test_independent_auditor_preserves_separate_cast_gradients(self):
+        from admit import independent_views
+        torch.manual_seed(79);a=torch.randn(17,96,requires_grad=True);b=a.detach().clone().requires_grad_()
+        mu=torch.linspace(-.2,.2,96,dtype=torch.float64);scale=torch.linspace(.01,.3,96,dtype=torch.float64)
+        expected=views(a,mu,scale);actual=independent_views(b,mu,scale)
+        self.assertTrue(torch.equal(expected,actual))
+        weights=torch.linspace(-1,1,192)
+        (expected*weights).square().mean().backward();(actual*weights).square().mean().backward()
+        self.assertTrue(torch.equal(a.grad,b.grad))
+
 
 if __name__=='__main__':
     torch.set_num_threads(2);unittest.main()

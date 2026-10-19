@@ -1,0 +1,44 @@
+{
+  "TRAIN_channels": 125,
+  "TRAIN_valid_windows": 36580,
+  "comparisons": [
+    {
+      "all_gradients_bit_equal": false,
+      "case": "shared_double_audit",
+      "logits_bit_equal": true,
+      "loss_bit_equal": true,
+      "maximum_absolute_gradient_difference": 1.1874362826347351e-08,
+      "unequal_parameter_tensors": 4
+    },
+    {
+      "all_gradients_bit_equal": true,
+      "case": "separate_double_audit",
+      "logits_bit_equal": true,
+      "loss_bit_equal": true,
+      "maximum_absolute_gradient_difference": 0.0,
+      "unequal_parameter_tensors": 0
+    }
+  ],
+  "explanation": "Production casts the global and patient branches separately. The initial independent auditor shared one double tensor,accumulating branch gradients before its single cast. Equal forward real formulas do not imply identical finite-precision gradient graphs.",
+  "formal_fits": 0,
+  "model_or_loss_or_data_or_tolerance_changed": false,
+  "new_Outer": false,
+  "new_assessment": false,
+  "scientific_sources": {
+    "PROTOCOL_LOCK.json": "d8b0640888a2ee03dce8af40485d8d8461cc44fbb4f6f05629c9968bef2fa8b6",
+    "admit.py": "4abd4920c2c517eed4b4552460f0fdc6f49caefc2da05708712ceebe3e32d6dc",
+    "affinity_entry.py": "9f19bcff436df6149682db0cacbda002d3923aa5a5c9acc1572e2d5a02b96e6a",
+    "assess.py": "15ed3842d8dc4d5137ef84299a2a613fa77980f457ba624e985557bda2e22545",
+    "common.py": "f6f734096c1412cb4bb370438850e8a0fb0f1315157bcfe0210f0fd0e01cf910",
+    "model.py": "47a7c8a1a9cfa1fa701741d19bc5d98a5106454e9d4e1351ee5306edda3d0925",
+    "package_public.py": "b7786845188f6372223df6aacd0f52c589ce7d663ff50cd3c5a48c7232d20e57",
+    "run_all.ps1": "b099cf0b1c600de08e0810809c2051ce1c159ec0b2dcbe1e48132ff82a3aa7bb",
+    "test_model.py": "5194dde1bfa9a5d9cea943d62113559dee6fc7cd3fa80c6d7e48f2df653ebcff",
+    "train.py": "398f53853eaaefc31fd08182f218cb29faf485ddc25986b48cd705e229cf447e",
+    "verify.py": "c400fc73e8a3ea28ee12e42f1be423c5c46bdcccacd3e2196f4fc3d57e60bd2b",
+    "view_math.py": "7e3f05ae20cab9a2b63125aee9de4aad58ffe5938daacea502bdd39df23c2107"
+  },
+  "separate_cast_model_and_Adam_update_bit_equal": true,
+  "source_sha256": "8c0f91bf47755a58b58430f80ec3e24387ed9499a582a3478670d8c39ac6e658",
+  "status": "PRETRAIN_AUDIT_CAST_GRAPH_MISMATCH_VERIFIED"
+}

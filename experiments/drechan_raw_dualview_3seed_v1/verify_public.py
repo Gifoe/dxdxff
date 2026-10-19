@@ -46,6 +46,8 @@ def main(root):
     protocol = read_json(own / 'PROTOCOL_LOCK.json')
     assert protocol['arms'] == ARMS and protocol['seeds'] == SEEDS
     assert protocol['references'] == REFERENCES
+    assert protocol['data'] == dict(patients=80, channels=7635, seizures=256,
+                                    valid_raw250_windows=1471965)
 
     def table(name):
         with (root / (name + '.csv')).open(encoding='utf-8', newline='') as f:
@@ -159,21 +161,24 @@ def main(root):
     mainrows = {r['arm']: r for r in table('MAIN_RESULTS')}
     seeds = keyed(table('SEED_RESULTS'), ['arm', 'seed'])
     folds = keyed(table('FOLD_RESULTS'), ['arm', 'seed', 'fold'])
+    seed_sd = keyed(table('SEED_SD'), ['arm'])
+    fold_sd = keyed(table('FOLD_SD'), ['arm', 'seed'])
     assert len(table('MAIN_RESULTS')) == len(mainrows) == 8 and set(mainrows) == set(ARMS)
     assert set(seeds) == {(a, str(s)) for a in ARMS for s in SEEDS} and set(folds) == expected
+    assert set(seed_sd) == {(a,) for a in ARMS} and set(fold_sd) == set(seeds)
     metric_coverage = keyed(table('METRIC_COVERAGE'), ['arm', 'metric'])
     assert set(metric_coverage) == {(a, m) for a in ARMS for m in METRICS}
     for a in ARMS:
         assert int(mainrows[a]['unique_patients']) == 33 and int(mainrows[a]['patient_fold_seed_rows']) == 120
         assert int(mainrows[a]['seeds']) == 3
-        sd = next(r for r in table('SEED_SD') if r['arm'] == a)
+        sd = seed_sd[(a,)]
         for m in METRICS:
             values = [float(seeds[(a, str(s))][m]) for s in SEEDS]
             assert all(math.isfinite(v) for v in values)
             assert close(statistics.mean(values), mainrows[a][m]) and close(statistics.stdev(values), sd[m])
             assert int(metric_coverage[(a, m)]['unique_patients']) == int(metric_coverage[(a, m)]['finite_patients']) == 33
         for s in SEEDS:
-            ss = next(r for r in table('FOLD_SD') if r['arm'] == a and int(r['seed']) == s)
+            ss = fold_sd[(a, str(s))]
             ff = [folds[(a, str(s), str(f))] for f in range(1, 6)]
             assert all(int(r['patients']) == 8 for r in ff)
             assert all(close(statistics.stdev(float(r[m]) for r in ff), ss[m]) for m in METRICS)
@@ -184,6 +189,20 @@ def main(root):
             suppressed = int(r['unique_patients']) < 5
             assert (r['suppressed'] == 'True') == suppressed
             assert all(math.isnan(float(r[m])) if suppressed else math.isfinite(float(r[m])) for m in METRICS)
+
+    # These identities use aggregate tables only; they cannot recreate rankings
+    # or pooled classification metrics from private per-channel predictions.
+    pooled = keyed(table('POOLED_RESULTS'), ['arm', 'seed'])
+    assert set(pooled) == set(seeds)
+    expected_appearances = sum(int(r['assessment_channels']) for r in roles.values())
+    for r in pooled.values():
+        assert r['aggregation'] == 'POOLED_APPEARANCES_NOT_PRIMARY'
+        assert int(r['channel_appearances']) == expected_appearances
+        for m in ['macro_f1', 'auroc', 'auprc', 'f1', 'nez_f1', 'accuracy']:
+            assert math.isfinite(float(r[m])) and 0 <= float(r[m]) <= 1
+        assert math.isfinite(float(r['ez_fraction_bias'])) and -1 <= float(r['ez_fraction_bias']) <= 1
+    for r in list(mainrows.values()) + list(seeds.values()) + list(folds.values()) + list(pooled.values()):
+        assert close((float(r['f1']) + float(r['nez_f1'])) / 2, r['macro_f1'])
 
     ci = keyed(table('INTERVALS'), ['kind', 'contrast', 'metric'])
     family = keyed(table('PRIMARY_FAMILY_INTERVALS'), ['contrast', 'metric'])
@@ -243,6 +262,11 @@ def main(root):
     assert completed['fresh_fits'] == 90 and completed['exact_reused_fits'] == 30
     assert completed['qualified_for_final_study_planning'] == qualified
     assert not completed['new_Outer'] and not completed['active_goal_achieved']
+    reported = read_json(root / 'REPORT_STATUS.json')
+    assert reported['status'] == 'ALL8_ARMS_3SEEDS_REPORTED'
+    assert reported['patient_fold_seed_rows'] == 960 and reported['unique_patients'] == 33
+    assert reported['nominal_intervals'] == 144 and reported['primary_family_intervals'] == 12
+    assert reported['no_new_Outer'] and not reported['active_goal_achieved']
     print(json.dumps(dict(status='PASS', public_package_members=31, source_files=12,
                           arms=8, seeds=3, nominal_intervals=144, additional_intervals=12,
                           private_data_used=False, full_patient_bootstrap_recomputed=False,

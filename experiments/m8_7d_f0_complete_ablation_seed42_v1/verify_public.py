@@ -78,6 +78,10 @@ def main():
         assert len(nums)==5 and all(abs(x-float(y))<=.50001e-6 for x,y in zip(nums,[q['mean'],q['low'],q['high'],f['low'],f['high']]))
     manifest=json.loads((ROOT/'PACKAGE_MANIFEST.json').read_text(encoding='utf-8'));assert not manifest['private_artifacts_exported']
     assert all(sha(ROOT/n)==h for n,h in manifest['files'].items())
+    if (ROOT/'NATIVE_RESUME_AUDIT.json').exists():
+        q=json.loads((ROOT/'NATIVE_RESUME_AUDIT.json').read_text(encoding='utf-8-sig'))
+        assert q['backup_hash_verified'] and q['all_completed_hashes_verified'] and not q['scientific_source_changed'] and not q['model_data_loss_selection_hyperparameters_changed']
+        assert q['last_complete_epoch']==9 and q['resume_epoch']==10 and q['completed_fresh_cells_preserved']==63
     forbidden={'patient','patient_id','channel','channel_id','archive_indices','logit','score_nez','y','prediction'}
     for path in ROOT.glob('*.csv'):
         with path.open(encoding='utf-8',newline='') as f:assert not(set(next(csv.reader(f)))&forbidden),path.name

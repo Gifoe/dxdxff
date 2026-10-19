@@ -16,15 +16,16 @@ def main():
     status=json.loads((PUB/'OUTER_STATUS.json').read_text(encoding='utf-8'));v=json.loads((PUB/'INDEPENDENT_OUTER_VERIFICATION.json').read_text(encoding='utf-8'))
     assert status['status']=='COMPLETE_VERIFIED_F0_18_ARM_FIVE_FOLD_OUTER' and v['status']=='PASS'
     forbidden={'patient','patient_id','channel','channel_id','archive_indices','logit','score_nez','y','prediction'}
-    for name in ALLOW:
+    names=ALLOW+(['NATIVE_RESUME_AUDIT.json'] if (PUB/'NATIVE_RESUME_AUDIT.json').exists() else [])
+    for name in names:
         p=PUB/name;assert p.is_file() and p.stat().st_size<5000000
         if p.suffix=='.csv':
             with p.open(encoding='utf-8',newline='') as f:assert not(set(next(csv.reader(f)))&forbidden)
-    manifest=dict(status='EXPLICIT_ANONYMOUS_AGGREGATE_ALLOWLIST',files={n:sha(PUB/n) for n in ALLOW},private_artifacts_exported=False)
+    manifest=dict(status='EXPLICIT_ANONYMOUS_AGGREGATE_ALLOWLIST',files={n:sha(PUB/n) for n in names},private_artifacts_exported=False)
     text=json.dumps(manifest,indent=2,sort_keys=True)+'\n';path=ROOT/'public_aggregate_export_v1.zip';assert not path.exists(),'Preserve export; use a new reviewed version if needed'
     with zipfile.ZipFile(path,'x',compression=zipfile.ZIP_DEFLATED) as z:
-        for name in ALLOW:z.write(PUB/name,name)
+        for name in names:z.write(PUB/name,name)
         z.writestr('PACKAGE_MANIFEST.json',text)
-    print(json.dumps(dict(file=path.name,bytes=path.stat().st_size,sha256=sha(path),files=len(ALLOW)+1)),flush=True)
+    print(json.dumps(dict(file=path.name,bytes=path.stat().st_size,sha256=sha(path),files=len(names)+1)),flush=True)
 
 if __name__=='__main__':main()

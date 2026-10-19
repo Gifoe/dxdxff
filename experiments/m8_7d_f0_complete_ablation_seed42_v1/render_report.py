@@ -100,6 +100,12 @@ def main():
           '- F0 itself was chosen after historical Outer viewing. All evidence here is exploratory repeated-test, not independent confirmation or a reason to silently nominate an improved ablation as a new confirmed model. One seed does not establish training-seed robustness.',
           '- Full-model performance and every negative or mixed ablation remain in the report. The fixed matrix supports conditional mechanism comparisons, not a claim of globally optimal7D selection.',
           '- Only code, hashes and anonymous aggregates/figures are public; raw signals, identities, private predictions, mappings, weights and runtime logs stay on the trusted server.','']
+    recovery=PUB/'NATIVE_RESUME_AUDIT.json'
+    if recovery.exists():
+        r=json.loads(recovery.read_text(encoding='utf-8-sig'))
+        assert r['backup_hash_verified'] and r['all_completed_hashes_verified'] and not r['scientific_source_changed']
+        out+=['## Engineering recovery','',
+              f"A Windows native access violation ({r['exception']}) occurred during atomic PyTorch LAST serialization in {r['arm']}, fold{r['fold']}. The last complete epoch{r['last_complete_epoch']} checkpoint, all optimizer/RNG state and all{r['completed_fresh_cells_preserved']} completed-cell hashes were validated. Its exact checkpoint and failed temporary file were preserved before a fresh-process resume at epoch{r['resume_epoch']}. No model/data/loss/selection/hyperparameter or scientific-source change was made. The root cause of the native exception is not established; it is not described as a Python-level training error or as a failure-free run. See [NATIVE_RESUME_AUDIT.json](NATIVE_RESUME_AUDIT.json).",'']
     (PUB/'REPORT.md').write_text('\n'.join(out),encoding='utf-8')
     manifest={str(p.relative_to(PUB)).replace('\\','/'):sha(p) for p in (PUB/'figures').iterdir() if p.is_file()}
     manifest.update({n+'.csv':sha(PUB/(n+'.csv')) for n in ['MAIN_RESULTS','INTERVALS','MACRO_FAMILY_INTERVALS']})

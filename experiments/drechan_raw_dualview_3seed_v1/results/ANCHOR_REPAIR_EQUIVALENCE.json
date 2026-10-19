@@ -1,0 +1,12 @@
+{
+  "anchors": 30,
+  "changed_bound_sources": [
+    "test_model.py",
+    "admit.py"
+  ],
+  "labels_scores_or_new_inference_read": false,
+  "maximum_absolute_difference": 0,
+  "model_loss_data_threshold_hyperparameters_changed": false,
+  "old_anchors_preserved": true,
+  "status": "ALL30_PRE_ADMISSION_ANCHOR_NUMERICS_UNCHANGED"
+}

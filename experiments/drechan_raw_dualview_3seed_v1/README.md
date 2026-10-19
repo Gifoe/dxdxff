@@ -1,6 +1,6 @@
 # Raw global-plus-relative DREChannNet
 
-Prospective implementation;no new results yet. See [fixed design](DESIGN.md) and [protocol](PROTOCOL_LOCK.json). This follows negative internal evidence without promoting a previous control or changing previous results. The historical mainOuter Macro-F1 remains0.653828.
+Admission passed and formal training started on2026-10-20 at07:30:56 Asia/Shanghai; no new candidate assessment results yet. See [execution and admission repair evidence](RUN_AUDIT.md), [fixed design](DESIGN.md) and [protocol](PROTOCOL_LOCK.json). This follows negative internal evidence without promoting a previous control or changing previous results. The historical mainOuter Macro-F1 remains0.653828.
 
 Eight arms,three seeds,all five original within-FIT paths:90fresh fits plus30exact reference reuses. Each new arm combines two96D Rawviews with the original14wide masked six-feature summary,one64-hidden jointGELU and one scalar classifier. NoEarlyFiLM,lateGate,unsupported residualgains or extra hiddenPR. Full,PR removals,global-view control and pre-reference control each have15473parameters. All retained context views have meaningful matched no-context replacements,not zeroed inputs.
 
@@ -9,3 +9,5 @@ Fit30initialTRAIN-only global anchors,including independent no-pre anchors. Veri
 Everything runs in a new Ddrive namespace with existing caches read in place. Source must be pushed before fitting. A sustained foreground SSH owner runs admission/training/selection/scoring/verification/export. Preserve complete atomic checkpoints and logs;diagnose genuine failures before exact resume with fresh log names. No duplicate jobs,unsafe runtime bypass or unrelated process changes.
 
 All findings are exploratory repeated-test. Only code,hashes and anonymous aggregates may be released;raw,identities,individual scores,weights,preprocessing,anchors,caches andlogs stay private.
+
+The first pre-training admission stopped on a bit-exact gradient assertion. A measured full-patient probe isolated a shared-versus-separate float64 cast graph in the independent auditor,not the production model. Only the auditor and its regression test were repaired before any formal fits; outputs,loss,allgradients and oneAdam update then matched exactly. All30 old/new TRAIN-only anchor means and scales also matched exactly. No tolerance,model,loss,data,threshold or training-budget change was made. See the preserved [diagnostic](results/ADMISSION_PRECISION_PROBE.json), [passed admission](results/ADMISSION.json) and [anchor equivalence](results/ANCHOR_REPAIR_EQUIVALENCE.json).

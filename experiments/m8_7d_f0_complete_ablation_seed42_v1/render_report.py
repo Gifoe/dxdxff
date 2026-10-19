@@ -36,7 +36,9 @@ def forest(ids,labels,title,filename,ci):
         for spine in ['top','right','left']:ax.spines[spine].set_visible(False)
         ax.tick_params(axis='y',length=0);ax.tick_params(axis='x',labelsize=9)
     fig.suptitle(title,fontsize=13,fontweight='bold',y=.985)
-    fig.text(.5,.035,'Full minus ablation; nominal 95% paired intervals, 10,000 patient draws (n=80). Exploratory repeated-test.',ha='center',fontsize=9,color='#444444')
+    caption='Full minus ablation; nominal 95% paired intervals, 10,000 patient draws (n=80). Exploratory repeated-test.'
+    if 'Early_by_late_guidance' in ids:caption='Full minus ablation; final row is the factorial interaction. Nominal 95% paired intervals (80 patients; 10,000 draws). Exploratory repeated-test.'
+    fig.text(.5,.035,caption,ha='center',fontsize=9,color='#444444')
     fig.subplots_adjust(left=.255,right=.985,top=.87,bottom=.19,wspace=.32)
     dest=PUB/'figures';dest.mkdir(exist_ok=True)
     for ext in ['svg','pdf','png']:fig.savefig(dest/(filename+'.'+ext),dpi=180)
@@ -76,11 +78,11 @@ def main():
     for a in arms[1:]:
         r=next(r for r in ci if r['contrast']=='FULL_minus_'+a and r['metric']=='macro_f1');f=next(z for z in family if z['contrast']==r['contrast'])
         out.append(f"| Full minus {LABELS[a]} | {float(r['mean']):+.6f} | [{float(r['low']):.6f}, {float(r['high']):.6f}] | [{float(f['low']):.6f}, {float(f['high']):.6f}] |")
-    interaction=next(r for r in ci if r['kind']=='interaction' and r['metric']=='macro_f1')
+    interaction=next(r for r in ci if r['kind']=='interaction' and r['metric']=='macro_f1');interaction_family=next(r for r in family if r['kind']=='interaction')
     out+=['','The extra family intervals use Bonferroni-level percentile tails .05/(2x18). They are approximate exploratory multiplicity summaries, not exact guarantees and not a repair for the broader repeated-test research history.','',
           '## Early and late guidance','',
           'The four matched configurations are complete F0, no early FiLM (C2), no late Gate, and neither guidance. The predefined metric interaction is Full + Neither - NoEarly - NoLate. It is a metric-scale statistical interaction, not proof of a causal physiological interaction.',
-          f"Macro-F1 interaction: {float(interaction['mean']):+.6f}, nominal95% paired CI [{float(interaction['low']):.6f}, {float(interaction['high']):.6f}]. All nine interaction endpoints are in [GUIDANCE_INTERACTION.csv](GUIDANCE_INTERACTION.csv).",'',
+          f"Macro-F1 interaction: {float(interaction['mean']):+.6f}, nominal95% paired CI [{float(interaction['low']):.6f}, {float(interaction['high']):.6f}]; additional family interval [{float(interaction_family['low']):.6f}, {float(interaction_family['high']):.6f}]. All nine interaction endpoints are in [GUIDANCE_INTERACTION.csv](GUIDANCE_INTERACTION.csv).",'',
           'The early-FiLM mismatch control keeps the same parameter count and input distribution/support within patient/seizure groups but removes correct channel alignment only for the early conditioner. The direct14and late Gate remain correctly aligned. Its eligible/singleton/change counts are in [RAW_COVERAGE.csv](RAW_COVERAGE.csv); the control is not described as a proof against all alternative same-capacity architectures.','',
           '## Conditional feature contribution','',
           '![Feature contribution](figures/FEATURE_CONTRIBUTION.png)','',

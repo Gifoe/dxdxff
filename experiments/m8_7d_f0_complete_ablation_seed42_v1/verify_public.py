@@ -55,6 +55,10 @@ def main():
         assert sum(int(r['valid_windows']) for r in z)==(0 if arm=='PHYSIOLOGY_ONLY' else 1471965)
         if arm=='EARLY_FILM_MISMATCH':assert all(int(r['eligible_valid_windows'])==int(r['changed_valid_windows']) and int(r['eligible_valid_windows'])+int(r['singleton_valid_windows'])==int(r['valid_windows']) for r in z)
     cov=table('METRIC_COVERAGE');assert len(cov)==162 and all(int(r['finite_patients'])==int(r['patients'])==80 for r in cov)
+    centers=table('SOURCE_RESULTS');assert len(centers)==72
+    for arm in arms:
+        z=[r for r in centers if r['arm']==arm];assert {r['center']:int(r['patients']) for r in z}=={'hup':36,'lzu':21,'multicenter':15,'pediatric':8}
+        for m in METRICS:assert abs(math.fsum(float(r[m])*int(r['patients']) for r in z)/80-float(points[arm][m]))<1e-12
     feature=table('FEATURE_CONTRIBUTION');assert len(feature)==7 and [r['arm'] for r in feature]==arms[11:]
     for r in feature:
         for m in METRICS:

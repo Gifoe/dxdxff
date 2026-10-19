@@ -1,0 +1,9 @@
+{
+  "groups": 14,
+  "in_current_14_group_CI_family": false,
+  "new_fits": 0,
+  "source_commit": "b1a26df7f5e9c4e3794166e87c52b7b95d5d5398",
+  "source_independent_verification_sha256": "fc409867270584e5c1dd454ad5ddfee70e7a3fc628a593bf12e035bc130649bd",
+  "source_table_sha256": "098fb586a80c3acbc24f0817f77a104d49e451d53a9284bc8f572bf0b18a5761",
+  "status": "REUSED_UNCHANGED_ANONYMOUS_CONTEXT"
+}

@@ -1,0 +1,11 @@
+{
+  "actual_new_fits": 55,
+  "all_interactions_absent": true,
+  "all_neural_models_single_head": true,
+  "checkpoint_checks": 70,
+  "no_Development_eligibility_gate": true,
+  "reused_cells": 15,
+  "selected_epochs_and_thresholds_verified": true,
+  "status": "PASS",
+  "validation_logits_bit_exact": true
+}

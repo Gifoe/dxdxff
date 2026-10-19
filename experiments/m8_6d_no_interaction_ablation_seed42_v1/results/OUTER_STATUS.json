@@ -1,0 +1,16 @@
+{
+  "arms": 14,
+  "channels_each": 7635,
+  "freeze_sha256": "426eb419a1bcce1a3f909d55fc8db5a97965352876552cfd1d8856977cffd0f6",
+  "independent_confirmation": false,
+  "logical_model_cells": 70,
+  "metric_checks": 10080,
+  "new_neural_fits": 55,
+  "patient_rows": 1120,
+  "patients_each": 80,
+  "reused_cells": 15,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "17d989e1cfa7588db4b93cc48f57be544133a13206e33d72c35e9aebee624951",
+  "selected_arm": null,
+  "status": "COMPLETE_VERIFIED_NI_14_GROUP_FIVE_FOLD_OUTER"
+}

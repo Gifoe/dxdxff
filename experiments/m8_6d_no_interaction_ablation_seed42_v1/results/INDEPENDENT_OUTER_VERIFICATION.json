@@ -1,0 +1,16 @@
+{
+  "all13_Raw_arm_censuses_verified": true,
+  "all14_complete80_verified": true,
+  "all70_model_selections_frozen": true,
+  "all_head_interactions_absent": true,
+  "all_neural_models_single_head": true,
+  "macro_family_interval_checks": 13,
+  "maximum_interval_difference": 5.551115123125783e-16,
+  "no_post_Outer_tuning": true,
+  "nominal_interval_checks": 243,
+  "patient_metric_checks": 10080,
+  "patient_rows": 1120,
+  "physiology_only_Raw_not_consumed": true,
+  "reused_scores_unchanged": true,
+  "status": "PASS"
+}

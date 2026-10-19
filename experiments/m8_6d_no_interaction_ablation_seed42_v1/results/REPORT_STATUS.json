@@ -1,0 +1,11 @@
+{
+  "early_late_factorial_interaction_identifiable": false,
+  "independent_confirmation": false,
+  "macro_family_intervals": 13,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 243,
+  "patient_rows": 1120,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_arm": null,
+  "status": "ALL14_FIXED_GROUPS_REPORTED"
+}

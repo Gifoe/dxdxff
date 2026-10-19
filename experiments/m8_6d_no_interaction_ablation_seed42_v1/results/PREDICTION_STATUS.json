@@ -1,0 +1,9 @@
+{
+  "channels_each": 7635,
+  "freeze_sha256": "426eb419a1bcce1a3f909d55fc8db5a97965352876552cfd1d8856977cffd0f6",
+  "new_prediction_cells": 55,
+  "patients_each": 80,
+  "reused_cells": 15,
+  "score_seal_sha256": "17d989e1cfa7588db4b93cc48f57be544133a13206e33d72c35e9aebee624951",
+  "status": "ALL70_OUTER_CELLS_SEALED"
+}

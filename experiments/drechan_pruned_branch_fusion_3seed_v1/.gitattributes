@@ -1,2 +1,2 @@
 # Preserve frozen source and public payload hashes across Windows/Linux checkouts.
-* -text
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

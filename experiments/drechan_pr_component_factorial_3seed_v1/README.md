@@ -1,6 +1,6 @@
 # Six-feature DREChannNet: separate Feature PR / Raw PR factorial
 
-Status: admission passed,45 fresh fits running; **no new assessment results yet**. The12 server source files matched pre-training GitHub commit `589c79695aa2eea0152a7ca98865a368af855cca` byte-for-byte. See [execution audit](RUN_AUDIT.md).
+Status: **all45fresh fits and15exact reuses complete and independently verified**. No new Outer. Feature PR has more consistent internal evidence than Raw PR; neither the goal nor a new main model is declared achieved. See [actual findings](FINDINGS.md), [all nine endpoints](results/MAIN_RESULTS.csv) and [execution audit](RUN_AUDIT.md). The12 server source files matched pre-training GitHub commit `589c79695aa2eea0152a7ca98865a368af855cca` byte-for-byte.
 
 This is a diagnostic step toward the active goal, not a replacement for an improved final model. The existing main model retains its original Outer Macro-F1 **0.653828**. The completed temporal-contrast experiment failed its prespecified mechanism gate; its sources, gates and conclusions are not edited or reopened here.
 

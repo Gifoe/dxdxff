@@ -1,0 +1,9 @@
+{
+  "active_goal_achieved": false,
+  "no_new_Outer": true,
+  "nominal_intervals": 108,
+  "patient_fold_seed_rows": 480,
+  "primary_family_intervals": 4,
+  "status": "ALL4_ARMS_3SEEDS_REPORTED",
+  "unique_patients": 33
+}

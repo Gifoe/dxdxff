@@ -1,0 +1,12 @@
+{
+  "active_goal_achieved": false,
+  "all_roles_and_raw_window_coverage_verified": true,
+  "maximum_interval_discrepancy": 3.3306690738754696e-16,
+  "no_new_Outer": true,
+  "nominal_interval_checks": 108,
+  "patient_fold_seed_rows": 480,
+  "patient_metric_checks": 4320,
+  "primary_family_interval_checks": 4,
+  "status": "PASS",
+  "unique_patients": 33
+}

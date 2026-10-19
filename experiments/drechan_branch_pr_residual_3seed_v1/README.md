@@ -1,6 +1,6 @@
 # Branch-wise nonlinear PR residual: six-feature DREChannNet
 
-Implementation/admission pending; **no new candidate result yet**. The prospective [design](DESIGN.md) was pushed before the preceding PR-factorial's new assessment scores were calculated. Its motivation includes an outcome-free raw-summary scale confound, not a selected classification outcome. The final lock is not executable until the completed dependency seal is filled and verified.
+Admission passed and75fresh fits are running; **no new candidate assessment result yet**. The prospective [design](DESIGN.md) was pushed before the preceding PR-factorial's new assessment scores were calculated. Its motivation includes an outcome-free raw-summary scale confound, not a selected classification outcome. Both dependency freeze/seal hashes are locked. All15server source files matched pre-training GitHub commit `134bb6daf320c122c5ecce371148a5368b0dfcef`. See [execution audit](RUN_AUDIT.md).
 
 This package tests one fixed candidate. It preserves the original single-head path at zero initialization and adds128bounded residual gain parameters on branch-wise nonlinear comparisons. The same128parameters exist in all five new variants; no second classifier is introduced. No loss, feature, training budget, seed or architecture search is performed.
 

@@ -93,6 +93,20 @@ def main():
     source=json.loads((ROOT/'SOURCE_PUSH_BEFORE_TRAIN.json').read_text(encoding='utf-8'))
     assert source['source_pushed_before_formal_fits'] and source['commit']=='9c84578a83cbae402f28e308de05602931111019'
     assert all(sha(HERE/n)==h for n,h in source['source'].items())
+    roundoff=json.loads((ROOT/'TABULAR_REPLAY_ROUNDOFF_AUDIT.json').read_text(encoding='utf-8'))
+    assert roundoff['status']=='PASS_VERIFICATION_ONLY_RF_ROUNDOFF' and roundoff['cells']==70
+    assert roundoff['maximum_absolute_probability_error']<=roundoff['RF_only_bound']<=2e-15
+    assert roundoff['other_models_bit_exact'] and roundoff['all201_decisions_exact'] and roundoff['all_selected_thresholds_and_decisions_exact']
+    assert roundoff['all_within_patient_rankings_exact'] and not roundoff['training_or_prediction_math_changed'] and not roundoff['weights_or_preprocessors_or_thresholds_changed']
+    assert sha(HERE/'verify_internal_roundoff.py')==roundoff['wrapper_sha256']
+    internal=json.loads((ROOT/'INTERNAL_VERIFICATION.json').read_text(encoding='utf-8'))
+    assert internal['checkpoint_checks']==150 and internal['maximum_neural_replay_error']==0
+    assert internal['verification_wrapper_sha256']==roundoff['wrapper_sha256']
+    adapter=json.loads((ROOT/'REFERENCE_PATH_ADAPTER_AUDIT.json').read_text(encoding='utf-8'))
+    assert adapter['status']=='PASS_HASH_PINNED_REFERENCE_PATH_ONLY' and not adapter['original_files_changed']
+    assert not adapter['model_or_prediction_math_changed'] and adapter['scientific_source_unchanged']
+    assert adapter['resolved_sha256']=='6dc73306f04ffefa9ffee471470786b3e190d16a304a81b8be5b9b2225a1f033'
+    assert sha(HERE/'evaluate_reference_path_adapter.py')==adapter['adapter_sha256']
     render=json.loads((ROOT/'RENDER_MANIFEST.json').read_text(encoding='utf-8'))
     assert sha(HERE/'render_report.py')==render['renderer_sha256']
     assert all(sha(ROOT/n)==h for n,h in render['files'].items())

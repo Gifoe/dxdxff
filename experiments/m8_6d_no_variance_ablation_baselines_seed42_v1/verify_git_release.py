@@ -23,6 +23,10 @@ def main():
     expected={HERE/'results'/n:h for n,h in manifest['files'].items()}
     expected.update({HERE/n:h for n,h in source['source'].items()})
     expected[HERE/'render_report.py']=render['renderer_sha256']
+    rounding=json.loads((HERE/'results/TABULAR_REPLAY_ROUNDOFF_AUDIT.json').read_text(encoding='utf-8'))
+    expected[HERE/'verify_internal_roundoff.py']=rounding['wrapper_sha256']
+    adapter=json.loads((HERE/'results/REFERENCE_PATH_ADAPTER_AUDIT.json').read_text(encoding='utf-8'))
+    expected[HERE/'evaluate_reference_path_adapter.py']=adapter['adapter_sha256']
     mp=HERE/'results/PACKAGE_MANIFEST.json'
     expected[mp]=hashlib.sha256(mp.read_bytes()).hexdigest()
     for path,digest in expected.items():

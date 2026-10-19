@@ -1,0 +1,78 @@
+{
+  "all_import_trials_pass": true,
+  "files": [
+    {
+      "bytes": 10752,
+      "file": "torch/_C.cp313-win_amd64.pyd",
+      "record_matches": true,
+      "sha256": "605dd8b73b28a30eea2517b79a684502377a3a505ef207d3e2ac2160b0294d17"
+    },
+    {
+      "bytes": 19173376,
+      "file": "torch/lib/torch_python.dll",
+      "record_matches": true,
+      "sha256": "25b82fcdc0b2f63be027a8b33c9088563a3a770750948bd4bfce60c3cc4960a3"
+    },
+    {
+      "bytes": 265966080,
+      "file": "torch/lib/torch_cpu.dll",
+      "record_matches": true,
+      "sha256": "6ca91441b89ee2618d628263d56303f1d7e9ce68bcf5b9e6b141800a0d1ca44c"
+    },
+    {
+      "bytes": 811555328,
+      "file": "torch/lib/torch_cuda.dll",
+      "record_matches": true,
+      "sha256": "2d600b51dd998fe15742a2e2adf3399a5c6b216953e66de1079b8da5b6df13db"
+    },
+    {
+      "bytes": 1088000,
+      "file": "torch/lib/c10.dll",
+      "record_matches": true,
+      "sha256": "f5fcd07e9ac8bfa653350ad0d3298619a0bcab62a1ac828acd3d2d42a9301429"
+    },
+    {
+      "bytes": 409600,
+      "file": "torch/lib/c10_cuda.dll",
+      "record_matches": true,
+      "sha256": "ff9673a448d4639b84390866b130bda3724c7c14deaf7bac0f1e0a641d4d0f02"
+    }
+  ],
+  "formal_updates": 0,
+  "import_trials": [
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 24,
+      "trial": 1
+    },
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 24,
+      "trial": 2
+    },
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 24,
+      "trial": 3
+    },
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 24,
+      "trial": 4
+    },
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 24,
+      "trial": 5
+    }
+  ],
+  "no_model_or_data_loaded": true,
+  "python": "3.13.9",
+  "status": "DIAGNOSIS_COMPLETE",
+  "torch": "2.11.0+cu128"
+}

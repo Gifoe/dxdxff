@@ -1,6 +1,6 @@
 # Same-candidate core-module audit, three seeds
 
-Implementation/admission pending; no new result. This is part of the active six-feature DREChannNet goal, not a different easier model. It tests the exact branch-relative residual candidate currently under its separate PR/context controls. A failed parent or core finding is reported, not hidden.
+Admission passed,75fresh core fits running; no new core assessment result. This is part of the active six-feature DREChannNet goal, not a different easier model. It tests the exact branch-relative residual candidate currently under its separate PR/context controls. A failed parent or core finding is reported, not hidden. See [execution audit](RUN_AUDIT.md).
 
 | Arm | Change | Parameters |
 | --- | --- | ---: |

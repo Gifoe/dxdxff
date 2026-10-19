@@ -1,0 +1,16 @@
+seed,fold,initial_parent_state_exact,stored_isolated_zero_gain_CAL_bit_exact
+42,1,True,True
+43,1,True,True
+44,1,True,True
+42,2,True,True
+43,2,True,True
+44,2,True,True
+42,3,True,True
+43,3,True,True
+44,3,True,True
+42,4,True,True
+43,4,True,True
+44,4,True,True
+42,5,True,True
+43,5,True,True
+44,5,True,True

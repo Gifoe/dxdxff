@@ -1,0 +1,90 @@
+{
+  "discarded_parity_updates": 2,
+  "full_logits_loss_all_gradients_oneAdam_exact": true,
+  "initial_bridges": 15,
+  "maximum_wrapper_gradient_error": 0,
+  "no_assessment_used": true,
+  "no_new_Outer": true,
+  "parent_source": {
+    "PROTOCOL_LOCK.json": "3801939a37ba835d92342af02ba95b26c4c31bea3d36904da45f6708e4cd2816",
+    "admit.py": "7a3d9cdb99d454c0ef1c9af0c3ad93c270984eb4f957966b7c42912f156bffa1",
+    "affinity_entry.py": "acef00c7b3cfd09e1e581687ed245c966d74567ad12013d677958039bb78e187",
+    "assess.py": "ad0a8710de0e527c3f9e6b30844de0421c1de9cfdc6f474550fd846d4f9f585d",
+    "common.py": "27ed4697d270807c3f2c84096236fe1b1e627583a9789f308ea852a2231d87c1",
+    "model.py": "514c1cdbd9c72db165b02b58da179105d77ab85ad832cf3fbb8b8541c343498a",
+    "package_public.py": "656d00cd4ac28563fea6df441efb8850bd220cf3a1f59c97bdb275d9bf11b72b",
+    "relative_math.py": "5a1445d307f884c93f769a612262222ab61cee290afec79108cd5651bdf0dac3",
+    "run_all.ps1": "ed92b3985ee41b06be355190956e0e860a7d7ea79ba08b065c1bee29b9fd95ca",
+    "test_model.py": "d215add5a56c3569df29012ab2dc98a9c89f37cff49b6cd7e73b4c854a807526",
+    "test_relative_math.py": "7f4017006dbbb29650bc0ab6d350be697780d8223e775f2b7ad7c6ced4688310",
+    "train.py": "9895a4d3d4ec19afcf0a69b6cdd4deb1974dcb30599ce494f5de6661271a112e",
+    "verify.py": "bd4e182604e4eeeebb593e42361e8b55e9f0816254c9abc821ac2fb3c52ec73c"
+  },
+  "paths": [
+    {
+      "arm": "WO_EARLY_FILM",
+      "channels": 125,
+      "complete_patient_backward_finite": true,
+      "no_formal_update": true,
+      "parameters": 10505,
+      "seconds": 0.07472820003749803,
+      "valid_windows": 36580
+    },
+    {
+      "arm": "WO_LATE_GATE",
+      "channels": 125,
+      "complete_patient_backward_finite": true,
+      "no_formal_update": true,
+      "parameters": 10505,
+      "seconds": 0.07561830000486225,
+      "valid_windows": 36580
+    },
+    {
+      "arm": "WO_BOTH_GUIDANCE",
+      "channels": 125,
+      "complete_patient_backward_finite": true,
+      "no_formal_update": true,
+      "parameters": 9457,
+      "seconds": 0.07402700005332008,
+      "valid_windows": 36580
+    },
+    {
+      "arm": "WO_RAW_PRE_REFERENCE",
+      "channels": 125,
+      "complete_patient_backward_finite": true,
+      "no_formal_update": true,
+      "parameters": 11553,
+      "seconds": 0.10128549998626113,
+      "valid_windows": 36580
+    },
+    {
+      "arm": "EARLY_FILM_MISMATCH",
+      "changed_valid_windows": 36580,
+      "channels": 125,
+      "complete_patient_backward_finite": true,
+      "eligible_valid_windows": 36580,
+      "no_formal_update": true,
+      "parameters": 11553,
+      "seconds": 0.11975190002704039,
+      "singleton_valid_windows": 0,
+      "total_valid_windows": 36580,
+      "valid_windows": 36580
+    }
+  ],
+  "source": {
+    "PROTOCOL_LOCK.json": "005d1ab80d86bb27ad2cdeca421183ecdb7ab0830d4fd7e7167f8b95a4510131",
+    "admit.py": "59254cbd2d9d845d559f645acea5723c3705c3a32fad20be9dd26feb0e2e5170",
+    "affinity_entry.py": "d8e915094de624a47777211c64f7235249f73fb6106abe6f31607e6a9c9e8b96",
+    "assess.py": "e1aaf3d713d114faa2e0307a05bd723a43943c47dfdf2a07047644ed5a2b34c1",
+    "common.py": "dd344724088a2d0f5803a5c686d0728957b44b5531cde0d7dc3204b87d39334c",
+    "finish.py": "e9b77081abcb8e3b28e4ee665c9816e0946d1cf8d4fc4bab824670817461d953",
+    "model.py": "a80b12a0ed165d50da8f079609098c666fb73d1ee3ddea2eafab44e4f03e2c1f",
+    "package_public.py": "f34599ef1d27303ead62999bdbc9b6bf9b6d9b5f03156df48389897e0d135a2b",
+    "run_all.ps1": "5cbdcb28c1f94f21dc64c2ff0a6cc604de2a16d3303e7036e86dc12f34ac4889",
+    "test_model.py": "42bc34285f890c282561f03f806b0f3345b9142735c01eecf093911c09faf1cc",
+    "train.py": "be329449b61c41b974e5a25150ec0b67b6899781eb01c8f56875f2b60ce1208b",
+    "verify.py": "943ee41ace7dbece18f9fe5e401c499b11cefc8be69b0289238748aaf59e2b3c"
+  },
+  "status": "PASS",
+  "synthetic_tests": 4
+}

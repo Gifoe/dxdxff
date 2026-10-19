@@ -1,0 +1,11 @@
+# Raw global-plus-relative DREChannNet
+
+Prospective implementation;no new results yet. See [fixed design](DESIGN.md) and [protocol](PROTOCOL_LOCK.json). This follows negative internal evidence without promoting a previous control or changing previous results. The historical mainOuter Macro-F1 remains0.653828.
+
+Eight arms,three seeds,all five original within-FIT paths:90fresh fits plus30exact reference reuses. Each new arm combines two96D Rawviews with the original14wide masked six-feature summary,one64-hidden jointGELU and one scalar classifier. NoEarlyFiLM,lateGate,unsupported residualgains or extra hiddenPR. Full,PR removals,global-view control and pre-reference control each have15473parameters. All retained context views have meaningful matched no-context replacements,not zeroed inputs.
+
+Fit30initialTRAIN-only global anchors,including independent no-pre anchors. Verify all120selected models/preprocessors/CALoutputs/thresholds before new assessment;seal all120score cells before metrics. Independent release requires960patient-fold-seed rows/8640endpoint values/144nominal/12additional interval checks. All9endpoints,source/fold/seed/pooled and coverage are reported. Qualification is not goal completion and does not authorize newOuter.
+
+Everything runs in a new Ddrive namespace with existing caches read in place. Source must be pushed before fitting. A sustained foreground SSH owner runs admission/training/selection/scoring/verification/export. Preserve complete atomic checkpoints and logs;diagnose genuine failures before exact resume with fresh log names. No duplicate jobs,unsafe runtime bypass or unrelated process changes.
+
+All findings are exploratory repeated-test. Only code,hashes and anonymous aggregates may be released;raw,identities,individual scores,weights,preprocessing,anchors,caches andlogs stay private.

@@ -1,0 +1,10 @@
+{
+  "actual_new_fits": 80,
+  "all201_threshold_decisions_exact": true,
+  "checkpoint_checks": 90,
+  "maximum_replay_error": 0.0,
+  "no_Development_eligibility_gate": true,
+  "reused_cells": 10,
+  "selected_epochs_and_thresholds_verified": true,
+  "status": "PASS"
+}

@@ -78,6 +78,32 @@ def main():
         assert len(nums)==5 and all(abs(x-float(y))<=.50001e-6 for x,y in zip(nums,[q['mean'],q['low'],q['high'],f['low'],f['high']]))
     manifest=json.loads((ROOT/'PACKAGE_MANIFEST.json').read_text(encoding='utf-8'));assert not manifest['private_artifacts_exported']
     assert all(sha(ROOT/n)==h for n,h in manifest['files'].items())
+    source=json.loads((ROOT/'SOURCE_PUSH_BEFORE_TRAIN.json').read_text(encoding='utf-8'))
+    assert source['source_pushed_before_formal_fits'] and source['commit']=='c8cd777d5b84d6cd7f17ebad1649aafc7dcfd537'
+    assert all(sha(HERE/n)==h for n,h in source['source'].items())
+    render=json.loads((ROOT/'RENDER_MANIFEST.json').read_text(encoding='utf-8'))
+    assert sha(HERE/'render_report.py')==render['renderer_sha256']
+    assert all(sha(ROOT/n)==h for n,h in render['files'].items())
+    for name in ['FEATURE_CONTRIBUTION','PAIRED_CORE_INTERVALS']:
+        assert '<text' in (ROOT/'figures'/(name+'.svg')).read_text(encoding='utf-8')
+        assert (ROOT/'figures'/(name+'.pdf')).read_bytes().startswith(b'%PDF-')
+    findings=HERE/'FINDINGS.md'
+    if findings.exists():
+        lines=findings.read_text(encoding='utf-8').splitlines()
+        def check_table(header,selected,metrics):
+            start=next(i for i,s in enumerate(lines) if s.startswith(header))+2
+            for a,line in zip(selected,lines[start:start+len(selected)]):
+                values=[x.strip().replace('\u2212','-') for x in line.split('|')[2:-1]]
+                assert all(abs(float(x)-float(points[a][m]))<=.50001e-6 for x,m in zip(values,metrics))
+        check_table('| 模型 | Macro-F1 |',['FULL_F0','RAW_ONLY','PHYSIOLOGY_ONLY'],METRICS)
+        check_table('| 删除项 | Macro-F1 |',arms[11:],['macro_f1','auroc','auprc','f1','mrr','hit_at_1'])
+        start=next(i for i,s in enumerate(lines) if s.startswith('| 配置 | Macro-F1 |'))+2
+        for a,line in zip(arms[1:9],lines[start:start+8]):
+            nums=[float(x) for x in re.findall(r'[+-]?\d+\.\d+',line.replace('\u2212','-'))]
+            q=next(q for q in ci if q['contrast']=='FULL_minus_'+a and q['metric']=='macro_f1')
+            f=next(f for f in family if f['contrast']==q['contrast'])
+            expected=[points[a]['macro_f1'],q['mean'],q['low'],q['high'],f['low'],f['high']]
+            assert len(nums)==6 and all(abs(x-float(y))<=.50001e-6 for x,y in zip(nums,expected))
     if (ROOT/'NATIVE_RESUME_AUDIT.json').exists():
         q=json.loads((ROOT/'NATIVE_RESUME_AUDIT.json').read_text(encoding='utf-8-sig'))
         assert q['backup_hash_verified'] and q['all_completed_hashes_verified'] and not q['scientific_source_changed'] and not q['model_data_loss_selection_hyperparameters_changed']

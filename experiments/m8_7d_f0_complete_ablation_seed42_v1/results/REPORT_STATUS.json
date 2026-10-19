@@ -1,0 +1,10 @@
+{
+  "independent_confirmation": false,
+  "macro_family_intervals": 18,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 324,
+  "patient_rows": 1440,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_arm": null,
+  "status": "ALL18_FIXED_ARMS_REPORTED"
+}

@@ -1,0 +1,11 @@
+{
+  "channels_each": 7635,
+  "freeze_sha256": "2bee5ce863af8774491b6e53f58cf0fd5775d562cf3644e107809604abdf15c9",
+  "new_Raw_inference_cells": 75,
+  "new_physiology_only_cells": 5,
+  "new_prediction_cells": 80,
+  "patients_each": 80,
+  "reused_cells": 10,
+  "score_seal_sha256": "6dc73306f04ffefa9ffee471470786b3e190d16a304a81b8be5b9b2225a1f033",
+  "status": "ALL90_OUTER_CELLS_SEALED"
+}

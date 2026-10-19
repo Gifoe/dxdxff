@@ -1,0 +1,22 @@
+﻿{
+    "scientific_source_changed":  false,
+    "model_data_loss_selection_hyperparameters_changed":  false,
+    "fold":  4,
+    "last_complete_epoch":  9,
+    "resume_epoch":  10,
+    "completed_fresh_cells_preserved":  63,
+    "resume_run_tag":  "03",
+    "optimizer_slots":  17,
+    "failed_partial_bytes":  0,
+    "python_level_error":  false,
+    "arm":  "DROP_SPECTRAL_ENTROPY",
+    "backup_hash_verified":  true,
+    "best_epoch_at_last":  6,
+    "failed_run_tag":  "02",
+    "failure_site":  "PyTorch tensor serialization inside atomic LAST save",
+    "exception":  "Windows c0000005",
+    "status":  "VERIFIED_NATIVE_RECOVERY_FROM_EXACT_LAST",
+    "all_completed_hashes_verified":  true,
+    "checkpoint_sha256":  "8badab449db61aaad4f271786e0895c87130dbe3ad228d5e52fc1f2d6c5b9bd3",
+    "model_tensors":  18
+}

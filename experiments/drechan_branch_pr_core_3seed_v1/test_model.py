@@ -8,6 +8,13 @@ sys.modules['common']=OWN;sys.modules['model']=MODEL
 def original():return parent.MODEL.BranchResidual(helper.source(),'FULL')
 
 class Tests(unittest.TestCase):
+    def test_nested_optimizer_comparison_detects_tamper(self):
+        from admit import equal_tree
+        x={'param_groups':[{'lr':.0003,'params':[0,1]}],'state':{0:{'step':torch.tensor(1.),'exp_avg':torch.ones(2)}}}
+        import copy
+        y=copy.deepcopy(x);self.assertTrue(equal_tree(x,y));y['state'][0]['exp_avg'][1]=2
+        self.assertFalse(equal_tree(x,y))
+
     def test_rng_shared_tensors_and_capacity(self):
         source=original();expected=source.state_dict();base_count=sum(p.numel() for p in source.parameters())
         import copy

@@ -3,6 +3,13 @@ import time
 import unittest
 from common import *
 
+def equal_tree(a,b):
+    """Optimizer state is nested, unlike the original flat model-tensor hash API."""
+    if isinstance(a,torch.Tensor):return isinstance(b,torch.Tensor) and a.dtype==b.dtype and torch.equal(a,b)
+    if isinstance(a,dict):return isinstance(b,dict) and set(a)==set(b) and all(equal_tree(a[k],b[k]) for k in a)
+    if isinstance(a,(list,tuple)):return type(a) is type(b) and len(a)==len(b) and all(equal_tree(x,y) for x,y in zip(a,b))
+    return type(a) is type(b) and a==b
+
 def main():
     import test_model
     tests=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromModule(test_model));assert tests.wasSuccessful()
@@ -35,7 +42,7 @@ def main():
     la.backward();lb.backward();pa,pb=dict(a.named_parameters()),dict(b.named_parameters());assert set(pa)==set(pb)
     assert all(pa[n].grad is not None and torch.equal(pa[n].grad,pb[n].grad) for n in pa)
     for m,o in [(a,oa),(b,ob)]:torch.nn.utils.clip_grad_norm_(m.parameters(),1.);o.step()
-    assert state_hash(a.state_dict())==state_hash(b.state_dict()) and state_hash(oa.state_dict())==state_hash(ob.state_dict())
+    assert state_hash(a.state_dict())==state_hash(b.state_dict()) and equal_tree(oa.state_dict(),ob.state_dict())
     del a,b,oa,ob,la,lb,out_a,out_b;gc.collect();torch.cuda.empty_cache();audits=[]
     for arm in NEW:
         m=make(core,fac,records,1,arm,42);tick=time.perf_counter();out,stats=forward(m,d,ii,inputs,scale)

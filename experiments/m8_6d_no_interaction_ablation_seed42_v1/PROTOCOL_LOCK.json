@@ -1,0 +1,23 @@
+{
+  "task": "m8_6d_no_interaction_ablation_seed42_v1",
+  "base_commit": "b1a26df7f5e9c4e3794166e87c52b7b95d5d5398",
+  "arms": ["FULL_F0", "WO_EARLY_FILM", "WO_BOTH_GUIDANCE", "WO_BOTH_PR", "WO_RAW_PRE_REFERENCE", "EARLY_FILM_MISMATCH", "RAW_ONLY", "PHYSIOLOGY_ONLY", "DROP_BETA", "DROP_LOW_GAMMA", "DROP_PARTIAL_HIGH_GAMMA", "DROP_RMS", "DROP_LINE_LENGTH", "DROP_SPECTRAL_ENTROPY"],
+  "excluded_user_items": {"3": "WO_LATE_GATE", "16": "ADD_HEAD_INTERACTION"},
+  "main_model": "Exact prior six-feature WO_HEAD_INTERACTION: no explicit Variance and no hidden Raw x physiology interaction. Early FiLM, late Gate, both PR, Raw pre-reference, one 64-hidden head retained. Original 7/14 input widths with Variance permanently masked; 6 measurements and 12 active summary coordinates.",
+  "features": ["log_bp_beta", "log_bp_low_gamma", "partial_high_gamma_80_125", "rms", "line_length_per_sec", "spectral_entropy_10_125"],
+  "references": {"FULL_F0": "previous six-feature WO_HEAD_INTERACTION", "RAW_ONLY": "previous six-feature RAW_ONLY", "PHYSIOLOGY_ONLY": "previous six-feature PHYSIOLOGY_ONLY"},
+  "counts": {"groups": 14, "selected_cells": 70, "new_neural_fits": 55, "reused_cells": 15, "patient_rows": 1120, "patient_metric_checks": 10080, "nominal_intervals": 243, "macro_family_intervals": 13},
+  "parent_freeze_sha256": "d58f7157a5b02531d8082c53ae5dacc682955fa2ed3126662d78091c0d67606d",
+  "parent_score_seal_sha256": "5886048612e9c3d2539d75ed0ad434d8ff104dc5298440e6476670cd00157b05",
+  "PR_ablation": "Remove BOTH physiological-summary patient Z AND final Raw96 patient Z, using unchanged FIT-only noPR bank. Per-window waveform normalization, pre-reference and physiological DELTA definition remain unchanged.",
+  "feature_deletion": "Fresh full matched initializer before removal; mask both summary coordinates and matching early-FiLM/late-Gate window input. No test-only ablation. Variance and head interaction absent in every group. Raw-only ignores all explicit physiology; Physiology-only has no Raw branch.",
+  "mismatch": "Fixed label-free donor whole trajectory, within same patient/seizure and identical complete validity support; singleton unchanged and reported. Only early FiLM mismatched; direct summaries and late Gate correctly aligned. Same parameters as FULL_F0.",
+  "training": "Unchanged FP32/TF32off/cuDNN deterministic, AdamW lr0.0003 wd0.001 clip1, max30 min6 patience6, original 0.75 weightedBCE + 0.25 patient softMacroF1, full-patient updates, chunk4096, seed42/foldseed42+1009fold. Head64 and original branch scaling/slices. No trained-main initialization, new features, Raw copying, extraction, sampling or hyperparameter search.",
+  "data": {"patients": 80, "channels": 7635, "seizures": 256, "valid_raw250_windows": 1471965, "fold_test_patients": [16,16,17,15,16]},
+  "selection": "Original legal FIT/validation roles; validation alone chooses epoch and original 201-grid threshold/ties. No Development eligibility gate. All70 checkpoints/preprocessors/epochs/thresholds freeze before any new Outer; all70 prediction cells sealed before unified reporting. Completed patient-score caches are bound to source/input/freeze/checkpoint hashes for engineering-only resume.",
+  "statistics": "Equal80patient means of nine metrics, separate pooled/fold/sampleSD/source/coverage. 10000 seed42 paired patient-bootstrap draws:14absolute+13Full-minus-ablation contrasts x9=243 nominal95 intervals. Additional13 Macro-F1 Bonferroni-level percentile intervals with tail0.05/(2*13), approximate exploratory summary, not exact guarantee. No early-by-late factorial interaction: user excluded isolated Late Gate deletion. No add-back interaction row. No post-Outer selection.",
+  "metrics": ["macro_f1","auroc","auprc","f1","nez_f1","accuracy","mrr","hit_at_1","ez_fraction_bias"],
+  "classical_baselines": "Previously completed seven classifiers x noPR/PR remain unchanged by neural interaction removal. Reuse hash-locked anonymous tables as separately labeled historical context; no fresh fits or inclusion in this14-group CI family.",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST. Main chosen after historical Outer viewing. No independent confirmation, global feature optimality, seed robustness or test-driven modification claim.",
+  "privacy": "Only code, hashes and anonymous aggregates may leave trusted server. Raw/EEG/IDs/per-patient or channel scores/weights/preprocessors/maps/logs remain server. New code and runtime on D, original caches read in place."
+}

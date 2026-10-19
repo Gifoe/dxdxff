@@ -1,0 +1,39 @@
+{
+  "TRAIN_reference_patients": 34,
+  "TRAIN_reference_valid_windows": 625864,
+  "checkpoint_sha256": "80a21e7169e3384c1cb51f016db2c7f25dfae5a577d5360c1df7adde470f3cfe",
+  "checkpoint_unchanged": true,
+  "completed_epoch": 6,
+  "cuda": "12.8",
+  "current_reference_exact_replays": 5,
+  "current_reference_seconds": [
+    0.4783842000178993,
+    0.24626159999752417,
+    0.3221248000045307,
+    0.2935552000417374,
+    0.25361950002843514
+  ],
+  "diagnosis": "Native torch_cuda.dll access violation; no Python exception. Single bounded exact reference diagnosis, not automatic retry.",
+  "formal_updates": 0,
+  "new_assessment_or_Outer": false,
+  "scientific_configuration_changed": false,
+  "selected_epoch": 3,
+  "selected_reference_bit_exact": true,
+  "source": {
+    "PROTOCOL_LOCK.json": "4269ee657da16424d3c36da2cc49852bec567d4b7b2759169e640eb989c27508",
+    "admit.py": "f248a310f997d17bb93413c2fc9ae16d3527aa46788f3d720a2d5050ab8e52b4",
+    "assess.py": "22715c61c5e4c502ac3cfc9a7ad77e4205a214f874a85699f465944c9f6d1d8a",
+    "common.py": "8aa2d63f2bf3cd7b5e3484cbc1bc88b6c60aeb4eb2cbaa09411492a4eecfc554",
+    "contrast.py": "ba8cc6a0f7fec33234de80837a07f1103d0afc2e3275abf63e6bcdfa1d544e76",
+    "final_outer.py": "9ee09786bf217f4943f7d1837ffe513468d00f129ab9599dae6d31f458dcb1f0",
+    "model.py": "033878c6742381b77ded45cc34a721a876fb5d38367ee454dc762f8a69a8b847",
+    "package_public.py": "252ef6f87bfaafaa1897e67fb4b86933cafd0d05e0c7a65da35ab6ae962be644",
+    "run_all.ps1": "18dad902208ed1a448cba3606daef4b3f454a8df7946cab55c1aa544535f88a1",
+    "test_contrast.py": "7fe77dd688070a05c5fea0c79f57f89d00fc7c2094c8b976c0591ed32a2a3b50",
+    "test_model.py": "8e94c7cc8c00771129a597558059f56fd9bed10f75e28a68cac4cf3702e5b5cb",
+    "train.py": "742fe31607475cae5558c3182dd69a139536ddb44d2cd405ac5b7cbbb68d8042",
+    "verify.py": "a7251d775aa8fccbb4b0c53bdf5185209661a1c96c4167e8dcadcb5409ae8f9f"
+  },
+  "status": "PASS",
+  "torch": "2.11.0+cu128"
+}

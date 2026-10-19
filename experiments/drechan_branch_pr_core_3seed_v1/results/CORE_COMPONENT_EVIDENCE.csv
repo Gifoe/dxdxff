@@ -1,0 +1,5 @@
+contrast,mean_AUROC_and_Macro_both_positive,seeds_both_positive,stable_positive_point_evidence,both_nominal_lowers_positive,both_family_lowers_positive
+EARLY_FILM,False,0,False,False,False
+LATE_GATE,True,3,True,False,False
+PRE_REFERENCE,True,3,True,False,False
+CORRECT_EARLY_CONTEXT,False,0,False,False,False

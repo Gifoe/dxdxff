@@ -1,0 +1,10 @@
+{
+  "active_goal_achieved": false,
+  "all_three_retained_core_point_rules_pass": false,
+  "correct_early_context_diagnostic_pass": false,
+  "final_study_planning_eligible": false,
+  "new_Outer_authorized": false,
+  "parent_fixed_rule_pass": false,
+  "point_rule_not_formal_inference": true,
+  "status": "FAIL"
+}

@@ -1,0 +1,9 @@
+{
+  "active_goal_achieved": false,
+  "exact_reused_fits": 15,
+  "final_study_planning_eligible": false,
+  "fresh_fits": 75,
+  "new_Outer": false,
+  "next_step": "Only if parent/core evidence qualifies, plan original-protocol final study. Otherwise separately optimize/prune; never alter these results or choose onOuter.",
+  "status": "CORE_MODULE_INTERNAL_COMPLETE_VERIFIED"
+}

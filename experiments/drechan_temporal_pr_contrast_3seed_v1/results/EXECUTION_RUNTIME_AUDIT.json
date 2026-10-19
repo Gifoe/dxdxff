@@ -1,0 +1,77 @@
+{
+  "all30_completed_cells_retained": true,
+  "exact_critical_Torch_binaries": [
+    {
+      "bytes": 10752,
+      "file": "torch/_C.cp313-win_amd64.pyd",
+      "record_matches": true,
+      "sha256": "605dd8b73b28a30eea2517b79a684502377a3a505ef207d3e2ac2160b0294d17"
+    },
+    {
+      "bytes": 19173376,
+      "file": "torch/lib/torch_python.dll",
+      "record_matches": true,
+      "sha256": "25b82fcdc0b2f63be027a8b33c9088563a3a770750948bd4bfce60c3cc4960a3"
+    },
+    {
+      "bytes": 265966080,
+      "file": "torch/lib/torch_cpu.dll",
+      "record_matches": true,
+      "sha256": "6ca91441b89ee2618d628263d56303f1d7e9ce68bcf5b9e6b141800a0d1ca44c"
+    },
+    {
+      "bytes": 811555328,
+      "file": "torch/lib/torch_cuda.dll",
+      "record_matches": true,
+      "sha256": "2d600b51dd998fe15742a2e2adf3399a5c6b216953e66de1079b8da5b6df13db"
+    },
+    {
+      "bytes": 1088000,
+      "file": "torch/lib/c10.dll",
+      "record_matches": true,
+      "sha256": "f5fcd07e9ac8bfa653350ad0d3298619a0bcab62a1ac828acd3d2d42a9301429"
+    },
+    {
+      "bytes": 409600,
+      "file": "torch/lib/c10_cuda.dll",
+      "record_matches": true,
+      "sha256": "ff9673a448d4639b84390866b130bda3724c7c14deaf7bac0f1e0a641d4d0f02"
+    }
+  ],
+  "execution_source": {
+    "admit_execution.py": "d07e04bb2043ac74d487116827fccef4d32fc120157c3fc328bca3b8646da1f4",
+    "affinity_entry_v2.py": "d6867aa68843a9ce1bb1f487f7415c957d5c09b97508c0c73f894e90d1e873bc",
+    "run_all_isolated.ps1": "954edf76e4bae7761e1c3a5314efe76b42820eefb8a46e4b6fb6f0b88778b85c",
+    "runtime_integrity_tagged.py": "a53679c1afd50ecb0bf3230098d23dafabca092969462285642d0a5accd97345",
+    "runtime_parity.py": "f125151e528d91bb9c2e0e7a286beaa76d2dbcf7d70c0c5a8195b54ce35acf99"
+  },
+  "import_admission_sha256": "c37089f705fe192299e93a4fa32c2e2356e5e256731675922e285725086595f9",
+  "logical_cpu_affinity_hex": "ffff0000",
+  "model_optimizer_RNG_reference_selection_thresholds_unchanged": true,
+  "no_KMP_DUPLICATE_LIB_OK": true,
+  "no_new_assessment_or_Outer": true,
+  "numeric_admission_sha256": "43c2c80b3cbc9b1a217b3c5dadd33da6c57a10edf0c5dbd3f5d7fd0fca9c6014",
+  "numpy": "2.3.5 pip OpenBLAS",
+  "python": "3.13.9",
+  "python_environment": "D-drive isolated CPython3.13.9, no system site packages",
+  "root_cause_not_proven": true,
+  "scientific_source": {
+    "PROTOCOL_LOCK.json": "4269ee657da16424d3c36da2cc49852bec567d4b7b2759169e640eb989c27508",
+    "admit.py": "f248a310f997d17bb93413c2fc9ae16d3527aa46788f3d720a2d5050ab8e52b4",
+    "assess.py": "22715c61c5e4c502ac3cfc9a7ad77e4205a214f874a85699f465944c9f6d1d8a",
+    "common.py": "8aa2d63f2bf3cd7b5e3484cbc1bc88b6c60aeb4eb2cbaa09411492a4eecfc554",
+    "contrast.py": "ba8cc6a0f7fec33234de80837a07f1103d0afc2e3275abf63e6bcdfa1d544e76",
+    "final_outer.py": "9ee09786bf217f4943f7d1837ffe513468d00f129ab9599dae6d31f458dcb1f0",
+    "model.py": "033878c6742381b77ded45cc34a721a876fb5d38367ee454dc762f8a69a8b847",
+    "package_public.py": "252ef6f87bfaafaa1897e67fb4b86933cafd0d05e0c7a65da35ab6ae962be644",
+    "run_all.ps1": "18dad902208ed1a448cba3606daef4b3f454a8df7946cab55c1aa544535f88a1",
+    "test_contrast.py": "7fe77dd688070a05c5fea0c79f57f89d00fc7c2094c8b976c0591ed32a2a3b50",
+    "test_model.py": "8e94c7cc8c00771129a597558059f56fd9bed10f75e28a68cac4cf3702e5b5cb",
+    "train.py": "742fe31607475cae5558c3182dd69a139536ddb44d2cd405ac5b7cbbb68d8042",
+    "verify.py": "a7251d775aa8fccbb4b0c53bdf5185209661a1c96c4167e8dcadcb5409ae8f9f"
+  },
+  "scope": "Owned worker and children only; no BIOS/clocks/reboot/security-service change",
+  "status": "PASS",
+  "system_wide_native_faults_not_claimed_fixed": true,
+  "torch": "2.11.0+cu128"
+}

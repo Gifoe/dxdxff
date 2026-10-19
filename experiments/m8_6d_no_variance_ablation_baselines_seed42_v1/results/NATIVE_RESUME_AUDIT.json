@@ -1,0 +1,21 @@
+{
+  "all_completed_hashes_verified": true,
+  "arm": "WO_LATE_GATE",
+  "backup_hash_verified": true,
+  "best_epoch_at_last": 7,
+  "checkpoint_sha256": "c969dbba9ea1e94a0f60924419dc9f00cade9cf39929d846ad4f745ce71b152c",
+  "completed_fresh_cells_preserved": 43,
+  "exception": "Windows c0000005",
+  "failed_run_tag": "03",
+  "failure_site": "Native access violation during autograd backward; timestamp-matched Windows Application Error names cublasLt64_12.dll; root cause not established",
+  "fold": 4,
+  "last_complete_epoch": 8,
+  "model_data_loss_selection_hyperparameters_changed": false,
+  "model_tensors": 14,
+  "optimizer_slots": 13,
+  "python_level_error": false,
+  "resume_epoch": 9,
+  "resume_run_tag": "04",
+  "scientific_source_changed": false,
+  "status": "VERIFIED_NATIVE_RECOVERY_FROM_EXACT_LAST"
+}

@@ -21,6 +21,7 @@ def forest(ids,labels,title,filename,ci,pr_pair=False):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from matplotlib.ticker import MaxNLocator
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'svg.fonttype':'none','pdf.fonttype':42})
     fig,axes=plt.subplots(1,3,figsize=(13.5,max(4.5,.37*len(ids)+1.7)),sharey=True)
     for ax,metric,heading in zip(axes,['macro_f1','auroc','auprc'],['Macro-F1','AUROC','AP']):
@@ -32,6 +33,7 @@ def forest(ids,labels,title,filename,ci,pr_pair=False):
         span=max(float(hi.max()),0)-min(float(lo.min()),0);pad=max(span*.08,.002)
         ax.set_xlim(min(float(lo.min()),0)-pad,max(float(hi.max()),0)+pad);ax.set_title(heading,fontweight='bold')
         ax.set_xlabel('Metric difference');ax.set_yticks(yy);ax.set_yticklabels(labels)
+        ax.xaxis.set_major_locator(MaxNLocator(nbins=4))
         for spine in ['top','right','left']:ax.spines[spine].set_visible(False)
         ax.tick_params(axis='y',length=0);ax.tick_params(axis='x',labelsize=9)
     fig.suptitle(title,fontsize=13,fontweight='bold',y=.985)
@@ -50,8 +52,9 @@ def main():
     lock=json.loads((HERE/'PROTOCOL_LOCK.json').read_text(encoding='utf-8'));arms=lock['arms'];deep=lock['deep_arms'];classifiers=lock['classifiers']
     points={r['arm']:r for r in table('MAIN_RESULTS')};ci=table('INTERVALS');fam=table('MACRO_FAMILY_INTERVALS')
     assert len(points)==30 and len(ci)==603 and len(fam)==37
+    readable={'LogisticRegression':'Logistic regression','Linear_SVM':'Linear SVM','RBF_SVM':'RBF SVM','RandomForest':'Random forest','XGBoost':'XGBoost','MLP':'MLP','AdaBoost':'AdaBoost'}
     for c in classifiers:
-        LABELS[c+'_NO_PR']=c+' without PR';LABELS[c+'_PR']=c+' with PR'
+        LABELS[c+'_NO_PR']=readable[c]+' without PR';LABELS[c+'_PR']=readable[c]+' with PR'
     output_csv('CORE_ABLATION_TABLE',[points[a] for a in deep[:10]])
     output_csv('FEATURE_ABLATION_TABLE',[points[a] for a in deep[10:]])
     output_csv('CLASSIFIER_TABLE',[points[a] for a in arms[16:]])
@@ -59,7 +62,7 @@ def main():
     forest(['FULL_minus_'+a for a in deep[10:]],[LABELS[a].replace('Drop ','') for a in deep[10:]],'Six-feature model: conditional feature contribution','FEATURE_CONTRIBUTION',ci)
     forest(['FULL_minus_'+a for a in deep[1:10]]+['Early_by_late_guidance'],[LABELS[a] for a in deep[1:10]]+['Early x late interaction'],
         'Six-feature model: core mechanisms and branch comparison','CORE_PAIRED_INTERVALS',ci)
-    forest([c+'_PR_minus_NO_PR' for c in classifiers],classifiers,'Six-feature classifiers: patient-relative normalization','CLASSIFIER_PR_INTERVALS',ci,True)
+    forest([c+'_PR_minus_NO_PR' for c in classifiers],[readable[c] for c in classifiers],'Six-feature classifiers: patient-relative normalization','CLASSIFIER_PR_INTERVALS',ci,True)
     md=['# F0 without Variance: complete ablations and classical classifiers','',
         'Actual completed experiment: sixteen neural configurations plus seven classifiers in two PR settings, each over all five original patient-held-out folds. The cohort remains80patients/7635channels/256seizures. All150selected models froze before newOuter; all150score cells sealed before metric reporting.','',
         'The full six-feature model and Raw-only reuse ten exact previously frozen cells;70neural fits and70classical models are genuinely new. The main model was chosen by the user after historical Outer viewing: every conclusion is exploratory repeated-test, not independent confirmation. No new model or threshold was chosen from this Outer pass.','',
@@ -71,7 +74,8 @@ def main():
         for a in selected:md.append('| '+LABELS[a]+' | '+' | '.join(f'{float(points[a][m]):.6f}' for m in METRICS)+' |')
     md+=['### Neural mechanisms and six feature deletions',''];add_table(deep)
     md+=['','### Other classifiers: exact same12physiological summary coordinates',''];add_table(arms[16:])
-    md+=['','Unrounded [main results](MAIN_RESULTS.csv); separate [pooled](POOLED_RESULTS.csv), [folds](FOLD_RESULTS.csv), [fold SD](FOLD_SD.csv), [sources](SOURCE_RESULTS.csv) and [coverage](METRIC_COVERAGE.csv). All group rows, including worse outcomes, remain reported.','',
+    warnings=[r for r in table('TABULAR_TRAIN_CELLS') if r['warning_categories']]
+    md+=['',f"Training warnings: {len(warnings)}/70 classical fits recorded warning categories. See [training records](TABULAR_TRAIN_CELLS.csv); the fixed MLP400-iteration budget was not enlarged after outcomes. Reaching the budget is not evidence of optimization convergence.",'','Unrounded [main results](MAIN_RESULTS.csv); separate [pooled](POOLED_RESULTS.csv), [folds](FOLD_RESULTS.csv), [fold SD](FOLD_SD.csv), [sources](SOURCE_RESULTS.csv) and [coverage](METRIC_COVERAGE.csv). All group rows, including worse outcomes, remain reported.','',
         '## Paired uncertainty','',
         'Same80patient resampling indices,10000draws,seed42.603nominal intervals cover30absolute estimates,29Full-minus-other comparisons,one guidance interaction and7classifier PR differences across9metrics.37additional Macro-F1 intervals use Bonferroni-level percentile tails .05/(2x37); these are approximate exploratory summaries, not exact family-error guarantees or correction for the entire historical research sequence.','',
         '| Contrast | Macro-F1 difference | Nominal95% interval | Additional37-comparison interval |',
@@ -101,7 +105,7 @@ def main():
         '- Only source/hashes and anonymous aggregate tables/figures are released. Signals, identities, individual predictions, weights, preprocessors, maps and logs stay on the trusted server.','']
     (PUB/'REPORT.md').write_text('\n'.join(md),encoding='utf-8')
     manifest={str(p.relative_to(PUB)).replace('\\','/'):sha(p) for p in (PUB/'figures').iterdir() if p.is_file()}
-    manifest.update({n+'.csv':sha(PUB/(n+'.csv')) for n in ['MAIN_RESULTS','INTERVALS','MACRO_FAMILY_INTERVALS']})
+    manifest.update({n+'.csv':sha(PUB/(n+'.csv')) for n in ['MAIN_RESULTS','INTERVALS','MACRO_FAMILY_INTERVALS','TABULAR_TRAIN_CELLS']})
     (PUB/'RENDER_MANIFEST.json').write_text(json.dumps(dict(status='GENERATED_PENDING_VISIBLE_QA',renderer_sha256=sha(__file__),files=manifest),indent=2)+'\n',encoding='utf-8')
     print('SIXD_VERIFIED_30_GROUP_REPORT_AND_THREE_FIGURES_RENDERED',flush=True)
 if __name__=='__main__':main()

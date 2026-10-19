@@ -1,0 +1,10 @@
+{
+  "adapter_sha256": "38d172b41d3c6bf9ffb5829de73b6f597344d3d69debed2a364944ff6efd360c",
+  "model_or_prediction_math_changed": false,
+  "original_files_changed": false,
+  "requested_basename": "NEURAL_SCORE_SEAL_PRIVATE.json",
+  "resolved_basename": "OUTER_SCORE_SEAL_PRIVATE.json",
+  "resolved_sha256": "6dc73306f04ffefa9ffee471470786b3e190d16a304a81b8be5b9b2225a1f033",
+  "scientific_source_unchanged": true,
+  "status": "PASS_HASH_PINNED_REFERENCE_PATH_ONLY"
+}

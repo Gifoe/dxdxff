@@ -22,7 +22,7 @@ def main():
         if p.suffix=='.csv':
             with p.open(encoding='utf-8',newline='') as f:assert not(set(next(csv.reader(f)))&forbidden)
     manifest=dict(status='EXPLICIT_ANONYMOUS_AGGREGATE_ALLOWLIST',files={n:sha(PUB/n) for n in names},private_artifacts_exported=False)
-    out=ROOT/'public_aggregate_export_v1.zip';assert not out.exists(),'Preserve previous export'
+    out=ROOT/'public_aggregate_export_v2.zip';assert not out.exists(),'Preserve previous export'
     with zipfile.ZipFile(out,'x',compression=zipfile.ZIP_DEFLATED) as z:
         for n in names:z.write(PUB/n,n)
         z.writestr('PACKAGE_MANIFEST.json',json.dumps(manifest,indent=2,sort_keys=True)+'\n')

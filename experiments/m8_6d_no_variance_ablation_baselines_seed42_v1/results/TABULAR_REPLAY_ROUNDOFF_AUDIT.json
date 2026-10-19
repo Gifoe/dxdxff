@@ -1,0 +1,14 @@
+{
+  "RF_only_bound": 1.7763568394002505e-15,
+  "all201_decisions_exact": true,
+  "all_selected_thresholds_and_decisions_exact": true,
+  "all_within_patient_rankings_exact": true,
+  "cells": 70,
+  "maximum_absolute_probability_error": 3.3306690738754696e-16,
+  "original_failed_verifier_preserved": true,
+  "other_models_bit_exact": true,
+  "status": "PASS_VERIFICATION_ONLY_RF_ROUNDOFF",
+  "training_or_prediction_math_changed": false,
+  "weights_or_preprocessors_or_thresholds_changed": false,
+  "wrapper_sha256": "18efd6b05bc691e0d5619e2fcafb25d9b0a014fa54f558b43608b63f97500502"
+}

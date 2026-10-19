@@ -1,0 +1,17 @@
+{
+  "actual_new_fits": 70,
+  "all201_threshold_decisions_exact": true,
+  "checkpoint_checks": 150,
+  "maximum_neural_replay_error": 0.0,
+  "maximum_replay_error": 3.3306690738754696e-16,
+  "maximum_tabular_probability_replay_error": 3.3306690738754696e-16,
+  "neural_checkpoint_checks": 80,
+  "no_Development_eligibility_gate": true,
+  "reused_cells": 10,
+  "selected_epochs_and_thresholds_verified": true,
+  "status": "PASS",
+  "tabular_all201_decisions_and_rankings_exact": true,
+  "tabular_checkpoint_checks": 70,
+  "verification_only_roundoff_audit_sha256": "4e9503e9fba65fd31c972e33f7883a76bf718e677395a5969c7025ebdd5fe8b2",
+  "verification_wrapper_sha256": "18efd6b05bc691e0d5619e2fcafb25d9b0a014fa54f558b43608b63f97500502"
+}

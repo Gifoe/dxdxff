@@ -113,6 +113,26 @@ def main():
     for name in ['FEATURE_CONTRIBUTION','CORE_PAIRED_INTERVALS','CLASSIFIER_PR_INTERVALS']:
         assert '<text' in (ROOT/'figures'/(name+'.svg')).read_text(encoding='utf-8')
         assert (ROOT/'figures'/(name+'.pdf')).read_bytes().startswith(b'%PDF-')
+    findings=HERE/'FINDINGS.md'
+    if findings.exists():
+        lines=findings.read_text(encoding='utf-8').splitlines()
+        def numeric_row(line):
+            return [float(x) for x in re.findall(r'[+-]?\d+\.\d+',' '.join(line.replace('\u2212','-').split('|')[2:-1]))]
+        start=next(i for i,s in enumerate(lines) if s.startswith('| 模型 | Macro-F1 |'))+2
+        for arm,line in zip(['FULL_F0','WO_BOTH_PR','RAW_ONLY','PHYSIOLOGY_ONLY'],lines[start:start+4]):
+            nums=numeric_row(line);assert len(nums)==9
+            assert all(abs(x-float(points[arm][m]))<=.50001e-6 for x,m in zip(nums,METRICS))
+        start=next(i for i,s in enumerate(lines) if s.startswith('| 分类器 | 无PR Macro-F1 |'))+2
+        for classifier,line in zip(json.loads((HERE/'PROTOCOL_LOCK.json').read_text(encoding='utf-8'))['classifiers'],lines[start:start+7]):
+            f=next(r for r in family if r['contrast']==classifier+'_PR_minus_NO_PR')
+            values=[points[classifier+'_NO_PR']['macro_f1'],points[classifier+'_PR']['macro_f1'],f['mean'],f['low'],f['high']]
+            nums=numeric_row(line);assert len(nums)==5 and all(abs(x-float(y))<=.50001e-6 for x,y in zip(nums,values))
+        start=next(i for i,s in enumerate(lines) if s.startswith('| 额外删除项 | Macro-F1 |'))+2
+        for arm,line in zip(arms[10:16],lines[start:start+6]):
+            c=next(r for r in ci if r['contrast']=='FULL_minus_'+arm and r['metric']=='macro_f1')
+            f=next(r for r in family if r['contrast']==c['contrast'])
+            nums=numeric_row(line);values=[points[arm]['macro_f1'],c['mean'],c['low'],c['high'],f['low'],f['high']]
+            assert len(nums)==6 and all(abs(x-float(y))<=.50001e-6 for x,y in zip(nums,values))
     if (ROOT/'NATIVE_RESUME_AUDIT.json').exists():
         q=json.loads((ROOT/'NATIVE_RESUME_AUDIT.json').read_text(encoding='utf-8-sig'))
         assert q['backup_hash_verified'] and q['all_completed_hashes_verified'] and not q['scientific_source_changed'] and not q['model_data_loss_selection_hyperparameters_changed']

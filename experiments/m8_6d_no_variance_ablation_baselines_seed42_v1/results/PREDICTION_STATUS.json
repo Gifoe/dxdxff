@@ -1,0 +1,10 @@
+{
+  "cells": 150,
+  "freeze_sha256": "d58f7157a5b02531d8082c53ae5dacc682955fa2ed3126662d78091c0d67606d",
+  "groups": 30,
+  "new_neural_cells": 70,
+  "new_tabular_cells": 70,
+  "reused_cells": 10,
+  "score_seal_sha256": "5886048612e9c3d2539d75ed0ad434d8ff104dc5298440e6476670cd00157b05",
+  "status": "ALL150_OUTER_CELLS_SEALED"
+}

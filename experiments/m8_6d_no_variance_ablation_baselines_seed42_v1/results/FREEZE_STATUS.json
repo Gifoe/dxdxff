@@ -1,0 +1,8 @@
+{
+  "freeze_sha256": "d58f7157a5b02531d8082c53ae5dacc682955fa2ed3126662d78091c0d67606d",
+  "models": 150,
+  "new_neural_fits": 70,
+  "new_tabular_fits": 70,
+  "reused": 10,
+  "status": "ALL80_FROZEN_BEFORE_NEW_OUTER"
+}

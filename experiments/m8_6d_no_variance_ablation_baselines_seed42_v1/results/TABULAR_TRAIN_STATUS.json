@@ -1,0 +1,6 @@
+{
+  "freeze_sha256": "38a21a7e2fb0acddf7550250fddf64782e1d8f5cdadaa2eee6757b7732f67a8b",
+  "models": 70,
+  "new_hyperparameter_search": false,
+  "status": "ALL70_TABULAR_MODELS_FROZEN"
+}

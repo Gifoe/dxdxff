@@ -1,0 +1,81 @@
+{
+  "configs_frozen": true,
+  "models": 7,
+  "new_search": false,
+  "no_raw_or_new_extraction": true,
+  "rows": [
+    {
+      "PR": false,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 1,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": true,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 1,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": false,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 2,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": true,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 2,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": false,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 3,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": true,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 3,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": false,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 4,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": true,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 4,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": false,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 5,
+      "test_patients_excluded": true
+    },
+    {
+      "PR": true,
+      "active_dimension": 12,
+      "exact_matched_FIT_bank": true,
+      "fold": 5,
+      "test_patients_excluded": true
+    }
+  ],
+  "sklearn": "1.7.2",
+  "status": "PASS",
+  "xgboost": "3.0.5"
+}

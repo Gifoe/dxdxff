@@ -1,6 +1,6 @@
 # Temporal Patient-Relative Contrast — DREChanNet, three seeds
 
-Status: real-data admission **PASS**, before formal training. All8CPU tests, five exact initializer/old legal-validation replay bridges and real complete-patient gradients for all3new reference paths passed. See [admission](results/ADMISSION.json) and [role counts](results/INTERNAL_ROLE_ADMISSION.csv). No new accuracy numbers are supplied by this source-only document.
+Status: **internal training in progress**, not a completed performance claim. Real-data admission passed all8CPU tests, five exact initializer/old legal-validation replay bridges and real complete-patient gradients. After native system/runtime interruptions, an isolated execution environment passed bit-exact30model/CAL replays and one full logits/loss/gradient/model/Adam/RNG update comparison. See [admission](results/ADMISSION.json), [role counts](results/INTERNAL_ROLE_ADMISSION.csv), [execution admission](results/EXECUTION_RUNTIME_AUDIT.json) and [failure/recovery ledger](RUN_AUDIT.md). No new accuracy numbers are supplied before the fixed score seal.
 
 The reference is the six-feature, no-Variance/no-explicit-head-interaction single-head model from `075305f1aa372a9ac34faa19e689d2cca96fe7bd`. Its historical Outer patient Macro-F1/AUROC/AP/EZ-F1 were 0.653828/0.752255/0.585240/0.467424. These are historical exploratory references, not independent targets for tuning.
 
@@ -42,6 +42,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File D:\drechan_temporal_pr_contr
 ```
 
 The driver holds an exclusive coordinator lock, preserves log names, stops on worker failures and never blindly retries. `admit.py` requires CPU mathematical/model-path tests, five exact B0 initializer/old legal-validation replays, strict internal role isolation and real complete-patient gradient checks. `verify.py` independently replays selected references/calibration and recalculates metrics, gates, intervals, expected score indices and Raw coverage. `package_public.py` exports only a strict anonymous allowlist.
+
+After the documented native failures, production uses the **separately admitted** `run_all_isolated.ps1` and the tracked `affinity_entry.py` (server alias `affinity_entry_v2.py`), not an edit to any original scientific source. It uses the D-drive isolated environment and confines only owned workers to logical CPUs16–31. All original13source hashes and the original pre-training source commit remain unchanged. Never launch another coordinator while the current foreground owner is active; recovery requires fresh RunTag/log names and diagnosis. The system-wide root cause is not claimed repaired; no unsafe OpenMP duplicate-runtime bypass, BIOS/clock/reboot/driver/security change was made.
 
 ## Evidence limitations
 

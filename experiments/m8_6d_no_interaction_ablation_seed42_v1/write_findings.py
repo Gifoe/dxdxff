@@ -77,7 +77,7 @@ def main():
         f"独立重算{ind['patient_rows']}行患者结果、{ind['patient_metric_checks']}个指标值，核验243个名义区间、13个额外区间、pooled指标、五折及来源汇总、所有有效窗口覆盖和15个复用预测。独立区间最大数值差为{ind['maximum_interval_difference']:.3g}。",'',
         '本轮主模型选择发生在既往 Outer 多次查看之后，所有结论均为探索性重复测试，不是独立确认。没有根据本轮 Outer 更改模型、阈值或筛选规则。固定一个seed不足以证明训练随机性稳定，也不能据此声称最优特征集合或外部中心泛化。','',
         '代码、匿名汇总、区间、图和执行审计上传 GitHub；原始波形、患者／通道身份、逐例预测、权重、预处理器、缓存及日志保留在可信服务器。','']
-    (HERE/'FINDINGS.md').write_text('\n'.join(md),encoding='utf-8')
+    (HERE/'FINDINGS.md').write_text('\n'.join(md),encoding='utf-8',newline='\n')
     print('NI_ACTUAL_CHINESE_FINDINGS_GENERATED_FROM_VERIFIED_AGGREGATES')
 
 if __name__=='__main__':main()

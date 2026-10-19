@@ -1,6 +1,6 @@
 # Branch-wise nonlinear PR residual: six-feature DREChannNet
 
-Admission passed and75fresh fits are running; **no new candidate assessment result yet**. The prospective [design](DESIGN.md) was pushed before the preceding PR-factorial's new assessment scores were calculated. Its motivation includes an outcome-free raw-summary scale confound, not a selected classification outcome. Both dependency freeze/seal hashes are locked. All15server source files matched pre-training GitHub commit `134bb6daf320c122c5ecce371148a5368b0dfcef`. See [execution audit](RUN_AUDIT.md).
+**All75fresh fits/15reuses and independent verification complete. Fixed qualification FAIL; no newOuter and no main-model replacement.** Added nonlinear patient context did not improve AUROC against B0 or its capacity-matched channel-normalization control. See [actual findings](FINDINGS.md), [all nine endpoints](results/MAIN_RESULTS.csv) and [execution audit](RUN_AUDIT.md). The prospective [design](DESIGN.md) was pushed before the preceding factorial's new assessment outcomes. All15server source files matched pre-training GitHub commit `134bb6daf320c122c5ecce371148a5368b0dfcef`.
 
 This package tests one fixed candidate. It preserves the original single-head path at zero initialization and adds128bounded residual gain parameters on branch-wise nonlinear comparisons. The same128parameters exist in all five new variants; no second classifier is introduced. No loss, feature, training budget, seed or architecture search is performed.
 
@@ -20,3 +20,5 @@ Raw PR off no longer feeds a raw branch roughly200times smaller solely because o
 Use sustained foreground SSH to run `run_all.ps1 -SourceCommit <verified40hex> -RunTag <newtag>` after source push. All code/runtime/checkpoints stay on D, trusted caches are reused without copying, and the admitted isolated runtime/owned-worker affinity is retained. Failures stop for diagnosis rather than blind retry.
 
 The fixed qualification rule can admit only a separately frozen core-module study. It does not authorize new Outer or establish the active goal. Final Macro-F1>0.64, AUROC improvement, retained-core-module contributions and uncertainty remain actual-execution requirements, not presumed successes. All results on this repeatedly viewed cohort are exploratory.
+
+While this candidate was still training, a prospectively frozen [core diagnostic extension](../drechan_branch_pr_core_3seed_v1/README.md) was added under the broader active goal. It continues its fixed matrix even after this failure, to diagnose possible simplification; it does **not** reverse this failed qualification or authorize promotion/Outer. This schedule extension is explicitly separate from the original conditional next-stage plan.

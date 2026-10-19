@@ -2,6 +2,8 @@
 
 Admission passed,75fresh core fits running; no new core assessment result. This is part of the active six-feature DREChannNet goal, not a different easier model. It tests the exact branch-relative residual candidate currently under its separate PR/context controls. A failed parent or core finding is reported, not hidden. See [execution audit](RUN_AUDIT.md).
 
+The parent PR/context study has now completed with qualification FAIL. This additional core diagnostic was frozen/launched before those outcomes and continues the complete matrix; it does not cancel that failure, promote the parent or authorizeOuter. A possible future simplification requires a separately frozen comparison, not selecting an Outer winner.
+
 | Arm | Change | Parameters |
 | --- | --- | ---: |
 | FULL | exact parent candidate;15 selected cells/scores reused after verification | 11553 |

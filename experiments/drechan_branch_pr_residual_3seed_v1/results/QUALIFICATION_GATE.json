@@ -1,0 +1,10 @@
+{
+  "active_goal_achieved": false,
+  "both_separate_PR_point_rules_pass": true,
+  "capacity_context_point_rule_pass": false,
+  "new_Outer_authorized": false,
+  "performance_margin_pass": false,
+  "point_rule_not_formal_inference": true,
+  "qualified_for_separate_core_module_study": false,
+  "status": "FAIL"
+}

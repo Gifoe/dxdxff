@@ -1,0 +1,8 @@
+{
+  "ASSESS_not_used_for_selection": true,
+  "TRAIN_only_preprocessing": true,
+  "all_CAL_bit_exact": true,
+  "cells": 90,
+  "initial_TRAIN_anchor_replays": 15,
+  "status": "PASS"
+}

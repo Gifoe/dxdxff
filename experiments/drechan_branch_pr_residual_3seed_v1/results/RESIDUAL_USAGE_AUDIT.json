@@ -1,0 +1,14 @@
+{
+  "aggregate_rows": 16,
+  "checkpoint_set_sha256": "9b1dcc7a24082e5d096cbeb146d70fa0a087534f20c9e91b0d1c8767ef894697",
+  "checkpoints": 30,
+  "freeze_sha256": "742f9179e7c24ec4f435684ec1c92648e24b556c57c80b5f14b491bd7a6aaae2",
+  "interpretation": "Effective coefficient is0.25*tanh(g). Weighted L1 is an algebraic scale summary, not an observed activation/logit effect or a retrained ablation. No causal inference or independent selection evidence.",
+  "new_metrics_or_inference": false,
+  "original13_scientific_sources_unchanged": true,
+  "output_sha256": "ee0d334d50e6beda477fa02d650e271bab2b13b7cd0acb44f5ea609d4f2f5e49",
+  "source_sha256": "178695bd23f798c85db2e4cd0ac3a7138731d70f0312b6d7f622cd982cd8a7d0",
+  "status": "POSTFIT_UNLABELED_WEIGHT_DIAGNOSTIC",
+  "waveforms_or_labels_or_predictions_read": false,
+  "weights_exported": false
+}

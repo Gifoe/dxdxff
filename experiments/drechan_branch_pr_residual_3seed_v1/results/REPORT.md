@@ -1,0 +1,46 @@
+# Six-feature DREChannNet branch-wise nonlinear PR residual: actual internal results
+
+Exploratory repeated-test. These are the33-unique-patient, three-seed within-original-FIT ASSESS results, NOT a new80-patient Outer. The original main model Outer Macro-F1 remains0.653828; no direct performance difference against that point is estimated here.
+
+## Execution and controls
+
+Three seeds42/43/44 and all original five fold paths;15 exact internal B0 cells verified/reused and75 new full-patient fits. B0 has11425parameters; all five new variants have11553, with128zero-initialized gain parameters and the same single64-hidden head. EarlyFiLM, lateGate, six features, pre-reference, loss/budget and complete window/seizure pooling are unchanged.
+
+The original hidden state is preserved at initialization. Bounded branch-wise patient-Z residuals are formed after GELU and added before the same final scalar classifier. PR deletion removes both original summary PR and the new nonlinear branch PR for that branch; a parameter-free per-channel LayerNorm replaces only the new residual normalization, never comparing other channels. Feature PR off uses TRAIN-only global imputation/scaling; Raw PR off uses a fixed per-coordinate affine preconditioner fitted under the matched initial encoder on all TRAIN channels. It is not claimed to be a current-encoder global reference or exact distribution matching during training.
+
+CHANNEL_CONTEXT keeps both original summary PR operations but replaces the new residual context with per-channel LayerNorm, matching added capacity. It is not a no-PR model. All15 initial TRAIN raw anchors were independently replayed from original-model summaries, with no CAL/ASSESS input or labels.
+
+All90 selections replayed/frozen before new assessment scores; all90 scores sealed before metrics. Prior B0 scores reused only after exact index/checkpoint/preprocessor/threshold checks. No new Outer, extra candidate/seed/loss/threshold search or post-assessment edits.
+
+| Arm | Macro-F1 | AUROC | AP | EZ-F1 | NEZ-F1 | ACC | MRR | Top-1 | EZ-frac.bias |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| B0 | 0.619955 | 0.752344 | 0.572237 | 0.408406 | 0.831505 | 0.752759 | 0.820934 | 0.729798 | -0.107229 |
+| FULL | 0.621613 | 0.751335 | 0.571718 | 0.409797 | 0.833430 | 0.754685 | 0.826245 | 0.739899 | -0.111479 |
+| WO_FEATURE_PR | 0.601226 | 0.736786 | 0.555734 | 0.371471 | 0.830981 | 0.748417 | 0.823850 | 0.737374 | -0.120948 |
+| WO_RAW_PR | 0.571055 | 0.749424 | 0.567479 | 0.353425 | 0.788685 | 0.736351 | 0.846940 | 0.770202 | -0.065728 |
+| WO_BOTH_PR | 0.510097 | 0.708164 | 0.535080 | 0.255589 | 0.764605 | 0.704401 | 0.807135 | 0.712121 | -0.078598 |
+| CHANNEL_CONTEXT | 0.620375 | 0.752754 | 0.571905 | 0.408597 | 0.832153 | 0.753492 | 0.826690 | 0.739899 | -0.108181 |
+
+## Separate PR evidence
+
+| Contrast | Seeds with AUROC and Macro-F1 both positive | Stable positive points | Both nominal lower bounds positive | Both8-comparison lower bounds positive |
+| --- | ---: | --- | --- | --- |
+| FULL_MINUS_B0 | 2 | False | False | False |
+| FEATURE_PR_WITH_RAW | 3 | True | True | False |
+| RAW_PR_WITH_FEATURE | 2 | True | False | False |
+| NEW_PATIENT_CONTEXT | 0 | False | False | False |
+
+See all108 nominal intervals, eight additional primary-family intervals and the PR difference-of-differences interaction in INTERVALS.csv. Zero-crossing intervals do not establish absence or superiority. Nonlinear training, normalization/reference differences and numeric scale remain part of each conditional comparison; an interaction is not proof of a physiological causal mechanism.
+
+## Fixed next-stage qualification
+
+Performance margin: False; both separate PR point rules: True; matched context rule: False; qualify for a separate core-module study: False.
+Qualification uses predeclared internal point rules, not proof of statistical noninferiority or improvement. It never authorizes new Outer by itself. A failing group is not substituted post hoc as the main model.
+
+Primary estimates average repeated fold metrics within unique patients, then metrics across three seeds, then patients equally. Pooled appearances are separate. Source summaries with fewer than5patients are suppressed. Bootstrap draws10000unique patients, retaining all paths and seeds paired; intervals are conditional on historical selection and do not cover full training randomness. Reusing the historical internal assessment does not create independent confirmation.
+
+## Active objective remains open
+
+This internal study cannot prove final80-patient five-fold Macro-F1>0.64 or contributions from all retained core modules. If qualified, separate prespecified EarlyFiLM/lateGate/pre-reference checks and final original-protocol fits/freeze/Outer evaluation are still required. If not qualified, report the negative evidence without weakening controls or relaxing gates. Previous temporal-contrast and PR-factorial results remain unchanged.
+
+Raw signals, identities, individual predictions, checkpoints, preprocessors, caches and runtime logs remain on the trusted server. Only source, hashes and anonymous aggregates are exported.

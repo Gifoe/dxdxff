@@ -1,0 +1,9 @@
+{
+  "active_goal_achieved": false,
+  "exact_reused_fits": 15,
+  "fresh_fits": 75,
+  "new_Outer": false,
+  "next_step": "If qualified, separately freeze core-module study; no best-Outer selection. Otherwise preserve negative evidence and do not promote this candidate.",
+  "qualified_for_separate_core_module_study": false,
+  "status": "BRANCH_PR_INTERNAL_COMPLETE_VERIFIED"
+}

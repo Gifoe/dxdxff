@@ -1,0 +1,10 @@
+{
+  "internal_gate": "FAIL",
+  "new_outer_completed": false,
+  "private_artifacts_exported": false,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "stages": [
+    "internal"
+  ],
+  "status": "COMPLETE_VERIFIED_INTERNAL_GATE_FAIL_NO_NEW_OUTER"
+}

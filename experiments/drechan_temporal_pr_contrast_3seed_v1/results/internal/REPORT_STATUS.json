@@ -1,0 +1,8 @@
+{
+  "nominal_intervals": 63,
+  "patient_fold_seed_rows": 480,
+  "primary_family_intervals": 12,
+  "stage": "internal",
+  "status": "ALL4_ARMS_3_SEEDS_REPORTED",
+  "unique_patients": 33
+}

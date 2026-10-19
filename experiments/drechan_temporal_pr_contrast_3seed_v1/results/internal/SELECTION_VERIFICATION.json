@@ -1,0 +1,9 @@
+{
+  "all_calibration_logits_bit_exact": true,
+  "all_epochs_thresholds_preprocessors_verified": true,
+  "all_original_FIT_inner_roles_separate": true,
+  "cells": 60,
+  "current_TRAIN_reference_replays": 15,
+  "no_own_assessment_selection": true,
+  "status": "PASS"
+}

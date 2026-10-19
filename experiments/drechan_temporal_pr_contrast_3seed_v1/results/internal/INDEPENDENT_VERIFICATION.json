@@ -1,0 +1,14 @@
+{
+  "all4_arms_all3_seeds_all5_folds": true,
+  "all_expected_role_indices_and_raw_coverage_verified": true,
+  "assessment_is_not_epoch_or_threshold_selection": true,
+  "maximum_interval_discrepancy": 2.220446049250313e-16,
+  "nominal_interval_checks": 63,
+  "patient_fold_seed_rows": 480,
+  "patient_metric_checks": 4320,
+  "primary_family_interval_checks": 12,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "source_preprocessing_selection_and_reference_replay": true,
+  "status": "PASS",
+  "unique_patients": 33
+}

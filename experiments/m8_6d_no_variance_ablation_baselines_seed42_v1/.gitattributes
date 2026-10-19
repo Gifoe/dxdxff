@@ -1,0 +1,4 @@
+* text eol=lf
+results/* -text -whitespace
+results/** -text -whitespace
+

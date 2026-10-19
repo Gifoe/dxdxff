@@ -1,0 +1,2 @@
+# Preserve frozen source and public payload hashes across Windows/Linux checkouts.
+* -text

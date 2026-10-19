@@ -1,0 +1,6 @@
+contrast,mean_AUROC_and_Macro_both_positive,seeds_both_positive,stable_positive_point_evidence,both_nominal_lowers_positive,both_family_lowers_positive
+FULL_MINUS_B0,False,0,False,False,False
+FUSION_EFFECT,False,0,False,False,False
+FEATURE_PR_WITH_RAW,True,3,True,True,False
+RAW_PR_WITH_FEATURE,False,0,False,False,False
+PRE_REFERENCE,True,3,True,True,False

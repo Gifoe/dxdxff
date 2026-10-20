@@ -1,1 +1,2 @@
 * text eol=lf
+audit/*.json -text whitespace=cr-at-eol

@@ -1,0 +1,38 @@
+{
+  "all5_historical_main_mean": {
+    "accuracy": 0.7593706608190833,
+    "auprc": 0.5657248756128583,
+    "auroc": 0.7638913392029021,
+    "ez_fraction_bias": -0.028917527793325255,
+    "f1": 0.44386449376258036,
+    "hit_at_1": 0.6799999999999999,
+    "macro_f1": 0.6396176738190991,
+    "mrr": 0.7763413280411435,
+    "nez_f1": 0.8353708538756173
+  },
+  "bootstrap_unit": "80_UNIQUE_PATIENTS_AFTER_METRIC_SEED_AVERAGING",
+  "fixed_main": "NO_EARLY_NO_LATE",
+  "independent_confirmation": false,
+  "no_ablation_direction_assumed": true,
+  "no_new_model_promotion": true,
+  "seed_set": [
+    42,
+    44,
+    62
+  ],
+  "seed_set_outcome_informed": true,
+  "selected3_mean": {
+    "accuracy": 0.7605499537875542,
+    "auprc": 0.5707954975945724,
+    "auroc": 0.7666602217497662,
+    "ez_fraction_bias": -0.026135970817958758,
+    "f1": 0.45163703713191605,
+    "hit_at_1": 0.6958333333333332,
+    "macro_f1": 0.6437713949662128,
+    "mrr": 0.7876977362914866,
+    "nez_f1": 0.8359057528005097
+  },
+  "selected_arm": null,
+  "selected_seed": null,
+  "status": "DESCRIPTIVE_NOT_SELECTION_GATE"
+}

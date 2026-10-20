@@ -1,0 +1,10 @@
+{
+  "independent_confirmation": false,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 306,
+  "patient_rows": 4080,
+  "primary_family_intervals": 32,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST_OUTCOME_INFORMED_SEED_SET",
+  "selected_arm": null,
+  "status": "ALL17_FIXED_GROUPS_SELECTED3SEEDS_REPORTED"
+}

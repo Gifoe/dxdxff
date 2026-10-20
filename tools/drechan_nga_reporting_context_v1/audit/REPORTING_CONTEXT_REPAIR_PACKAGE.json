@@ -1,0 +1,17 @@
+{
+  "execution_manifest_sha256": "df29a3309eaecfca5276a80074817b73a0eed33cde12eed1d21ce7ce0feaa5db",
+  "existing_aggregate_prefix_bit_exact": true,
+  "existing_aggregate_prefix_files": 39,
+  "existing_patient_metrics_bit_exact": true,
+  "freeze_sha256": "411e44cbef3ae6155048708c9ecc7b00fa9e56a99f804f61d66d590a7ab4026e",
+  "no_metric_math_or_threshold_changes": true,
+  "no_training_or_predictions": true,
+  "original_context_setup_only": true,
+  "original_input_binding_exact": true,
+  "scientific14_sources_unchanged": true,
+  "score_seal_sha256": "d232e513cac994ca795c765ac9edd29b8fd398d1f65c8fb451205bfb408ae4d6",
+  "sealed_score_files_checked": 255,
+  "sealed_scores_bit_exact": true,
+  "stage": "package_public",
+  "status": "PASS"
+}

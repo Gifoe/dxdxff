@@ -1,0 +1,9 @@
+# No-Late-Gate DREChannNet: seed42 complete ablation
+
+Implementation/admission in progress; no fresh outcomes are claimed. The fixed main is the exact completed parent `WO_LATE_GATE`, seed42 Macro-F1 0.6534651290238689 and AUROC 0.7652863490156572. Variance and head interaction remain absent. Historical Outer informed this choice, so all new results remain exploratory repeated-test.
+
+16 unique current-architecture groups plus2 clearly labelled old references give18groups/90fold cells.30 strict reuses and60 fresh fits are required. All new groups remove Late Gate physically before training. `WO_BOTH_GUIDANCE` is identical to `WO_EARLY_FILM`; `WO_LATE_GATE` is identical to the main. These are explicit aliases, not extra fits/hypotheses. A guide four-cell interaction cannot be estimated when Late is fixed absent; only PR interaction is reported.
+
+Same80patients/7635channels/256seizures/1471965validRaw250windows, original5folds,seed42, matched initializer,FP32/TF32off,4096windows,complete-patient updates,original optimizer/loss/budget/validation selection. No new extraction/features/hyperparameter search, Development gate or other seeds. Freeze all90selections before unfinishedOuter; seal all90scores before reporting.
+
+Deliver all9patient metrics,pooled/folds/sampleSD/sources/coverage,10000patient-bootstrap324nominal/34additional-family intervals,alias/reuse records and independent1440rows/12960metric verification. Source and only anonymous aggregates are pushed to GitHub; data/identities/weights/individual predictions/caches/logs remain on the trusted server.

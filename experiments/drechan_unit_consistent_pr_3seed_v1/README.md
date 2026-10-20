@@ -1,6 +1,6 @@
 # Unit-consistent FeaturePR on the unchanged Raw dual-view model
 
-**Admission PASS;formal three-seed training started2026-10-20 around08:50:41Asia/Shanghai. No new assessment results yet.** See[actual execution audit](RUN_AUDIT.md). The preceding outcome-free TRAIN/CALaudit exactly reproduced mixed-unit FeaturePR inputs andbillion-scale transformed CALvalues. This study changes only that numerical definition,not the neural architecture,RawPR,features,loss orthreshold selection. Correctness does not guarantee better prediction.
+**All135training cells completed:90fresh fits/1052epochs and45exact references. All135selections froze;the foreground coordinator exited0after assessment,independent metric verification andpublic-packaging commands. Final aggregate retrieval/public verification is pending an SSH-handshake failure;no new performance result is published yet.** See[actual execution audit](RUN_AUDIT.md). The preceding outcome-free TRAIN/CALaudit exactly reproduced mixed-unit FeaturePR inputs andbillion-scale transformed CALvalues. This study changes only that numerical definition,not the neural architecture,RawPR,features,loss orthreshold selection. Correctness does not guarantee better prediction.
 
 See the[locked protocol](PROTOCOL_LOCK.json),[preprocessing implementation](unit_pr.py)and[four unique changed-path tests](test_preprocessing.py). TRAIN-only raw global scales define coordinate units. Standard-deviation comparisons use dimensionless relativeepsilon1e-8;nondegenerate patient contrasts retain the usual formula,degenerate observed entries become0,andmissing entries remainNaN. The original second TRAIN-only imputer/scaler is retained. No feature,patient,channel orwindow is excluded orclipped.
 
@@ -21,7 +21,7 @@ All findings are exploratory repeated-test. This internal study cannot replace t
 | Historical six-feature main model | Original80-patient fivefold Outer,seed42 | 0.6538278218104221 |
 | B0,same architecture in the internal comparison | 33unique within-FIT assessment patients,three seeds | 0.6199553281293815 |
 | Completed parent Raw dual-view candidate | Same33-patient internal comparison,three seeds | 0.6003079335325800 |
-| Current unit-consistent candidate | Actual fitting/verification pending | Not yet reported |
+| Current unit-consistent candidate | Server workflow ended0;final aggregates not yet retrieved/verified | Not yet reported |
 
 The0.653828and0.619955figures do not estimate the same evaluation population or training scope. Their difference is not evidence that the main Outer result fell. The parent's0.619955to0.600308internal decrease is real within the matched comparison;that candidate was not promoted. A numerical-admission PASS must never be presented as a new predictive result.
 

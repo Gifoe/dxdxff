@@ -1,0 +1,112 @@
+{
+  "discarded_parity_updates": 2,
+  "exact_original_reference_replays": 5,
+  "fresh_path_admission": [
+    {
+      "all_gradients_finite": true,
+      "arm": "FULL",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 11425,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_FEATURE_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 11425,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_RAW_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 11425,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_BOTH_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 11425,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_WINDOW_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 11425,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_EARLY_FILM",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 10377,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_LATE_GATE",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 10377,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_PRE_REFERENCE",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "parameters": 11425,
+      "retained_paths_have_effective_gradients": true,
+      "valid_windows": 48380
+    }
+  ],
+  "new_formal_fits": 0,
+  "no_Development_eligibility_gate": true,
+  "no_new_Outer": true,
+  "original_five_roles_exact": true,
+  "source": {
+    "PROTOCOL_LOCK.json": "fd616976c98f6a2cf00a211c2a75ff28ca829f9f64dd46665fa3a0c2a9051942",
+    "admit.py": "8dc17454d3d797079563f36e12db8c50f1cf87dc2f08a31466c447b5d1f5689b",
+    "affinity_entry.py": "3bbe95e60591aae43a11e80a952d0c117920af88c99f45eec75e063df47ae3a0",
+    "common.py": "4bd90035bf5d9047ed53f8bc6bebc2e1f779d50a35311d0c08cbe7d036a78935",
+    "evaluate_outer.py": "4c4e7bdc41254f7bdc60477739a1e9fc719a46571d7b94be97be69cc430e6e3f",
+    "feature_pr.py": "3b9823db47382cc3d4d66d226b4041f05efbc65041095fccaf298f459dc8148f",
+    "model.py": "6e63164d449817b11b00de667de8b870577b82d3b993f79b1b0a91ebfba32826",
+    "package_public.py": "ee2c8458cfecfb1e3805c4c95c2442e4b6e1adad398d41ff9e0e81cce55da318",
+    "relative_guidance.py": "959e2434b36e7929d0da29d3156d6d168ce101a777036969c36c335ac1df4429",
+    "report_outer.py": "a6070457d09b9374047ffa7a8b6d08bbee15292a64085957decb6d6ec5cca7ee",
+    "run_all.ps1": "b5cf5d2fd0ae3d097a0e09ffbb9f701020fe294a8c5dfd0ba7ce7d4d7a298f17",
+    "test_math.py": "6128dbcdb5db2f5084df7e8649e5371177ce797f5c9c405934cbb5452ff10567",
+    "test_model.py": "9e1771c8dd64a7f86a0606e82eb00fc6700677d5e93165d284f063b745b43619",
+    "test_reporting.py": "902cdd40781e421226df3458b3516e502bb4dd0a72de201da6bf9bdb4b3d258d",
+    "train.py": "35c716bd512b8f6ca7459143afffdb81efe91702e948124adf1689fb248c54d8",
+    "verify_internal.py": "66fd41a3a703da7888270be12637ec719c2b9055e79aeb10bf7e5b114e6911fe",
+    "verify_outer.py": "9464810107aa1567fd937460d973f8384d5c8054b8a04f498e0f265dd1f972cb"
+  },
+  "status": "PASS",
+  "unchanged_noPR_logits_loss_gradients_oneAdam_rng_bit_exact": true,
+  "unique_math_model_reporting_tests": 9
+}

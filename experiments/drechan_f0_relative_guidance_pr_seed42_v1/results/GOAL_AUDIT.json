@@ -1,0 +1,18 @@
+{
+  "conditions": {
+    "all_retained_components_have_stable_two_metric_evidence": false,
+    "macro_f1_within_1pp_of_original": true,
+    "main_auroc_above_original": true,
+    "main_macro_f1_above_0p64": true
+  },
+  "full_auroc": 0.7658883112922217,
+  "full_macro_f1": 0.6463387559404331,
+  "original_auroc": 0.7522551973793955,
+  "original_macro_f1": 0.6538278218104221,
+  "outer_is_exploratory_repeated_test": true,
+  "seed_robustness_established": false,
+  "selected_arm": null,
+  "status": "FAIL",
+  "success_was_not_guaranteed": true,
+  "unsupported_components_not_promoted": true
+}

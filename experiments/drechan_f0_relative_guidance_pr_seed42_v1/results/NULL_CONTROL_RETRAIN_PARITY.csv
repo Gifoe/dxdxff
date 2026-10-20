@@ -1,0 +1,6 @@
+fold,fresh_training,selected_tensors_bit_exact,validation_bit_exact,epoch_and_threshold_bit_exact,total_epochs_bit_exact
+1,True,True,True,True,True
+2,True,True,True,True,True
+3,True,True,True,True,True
+4,True,True,True,True,True
+5,True,True,True,True,True

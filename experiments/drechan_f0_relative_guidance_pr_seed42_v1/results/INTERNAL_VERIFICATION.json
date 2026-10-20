@@ -1,0 +1,13 @@
+{
+  "FIT_only_preprocessing_independently_reconstructed": 5,
+  "actual_new_fits": 40,
+  "all_interactions_absent": true,
+  "all_neural_models_single_head": true,
+  "checkpoint_checks": 45,
+  "exact_fresh_no_PR_retrains": 5,
+  "no_Development_eligibility_gate": true,
+  "reused_cells": 5,
+  "selected_epochs_and_thresholds_verified": true,
+  "status": "PASS",
+  "validation_logits_bit_exact": true
+}

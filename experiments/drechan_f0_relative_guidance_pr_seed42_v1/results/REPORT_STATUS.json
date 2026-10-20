@@ -1,0 +1,10 @@
+{
+  "independent_confirmation": false,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 162,
+  "patient_rows": 720,
+  "primary_family_intervals": 14,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_arm": null,
+  "status": "ALL9_FIXED_GROUPS_REPORTED"
+}

@@ -1,0 +1,16 @@
+{
+  "all45_model_selections_frozen": true,
+  "all9_Raw_censuses_verified": true,
+  "all9_complete80_verified": true,
+  "all_head_interactions_absent": true,
+  "all_neural_models_single_head": true,
+  "fixed_goal_audit_independently_recomputed": true,
+  "maximum_interval_difference": 8.881784197001252e-16,
+  "no_post_Outer_tuning": true,
+  "nominal_interval_checks": 162,
+  "patient_metric_checks": 6480,
+  "patient_rows": 720,
+  "primary_family_interval_checks": 14,
+  "reused_scores_unchanged": true,
+  "status": "PASS"
+}

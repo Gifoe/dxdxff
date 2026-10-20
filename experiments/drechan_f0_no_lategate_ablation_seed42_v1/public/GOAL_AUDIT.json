@@ -1,0 +1,11 @@
+{
+  "full_auroc": 0.7652863490156573,
+  "full_macro_f1": 0.6534651290238692,
+  "historical_reference_groups": 2,
+  "independent_confirmation": false,
+  "late_gate_absent_in_all16_current_groups": true,
+  "no_ablation_direction_assumed": true,
+  "seed": 42,
+  "selected_arm": null,
+  "status": "DESCRIPTIVE_NOT_SELECTION_GATE"
+}

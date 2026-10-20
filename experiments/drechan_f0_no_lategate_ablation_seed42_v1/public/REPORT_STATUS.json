@@ -1,0 +1,15 @@
+{
+  "aliases": {
+    "WO_BOTH_GUIDANCE": "WO_EARLY_FILM",
+    "WO_LATE_GATE": "FULL"
+  },
+  "aliases_not_double_counted": true,
+  "independent_confirmation": false,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 324,
+  "patient_rows": 1440,
+  "primary_family_intervals": 34,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_arm": null,
+  "status": "ALL18_FIXED_GROUPS_SEED42_REPORTED"
+}

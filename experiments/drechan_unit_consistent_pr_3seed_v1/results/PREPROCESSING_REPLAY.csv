@@ -1,0 +1,6 @@
+fold,independent_TRAIN_units_bit_exact,independent_stable_inputs_within_rtol_1e_minus6,maximum_abs_input_difference,NoFeaturePR_inputs_bit_exact,all_original_patients_channels_roles_retained,TRAIN_only_fit
+1,True,True,7.347896666506523e-18,True,True,True
+2,True,True,5.7121420420992356e-18,True,True,True
+3,True,True,7.617235772940527e-18,True,True,True
+4,True,True,5.679142498742045e-18,True,True,True
+5,True,True,4.399868803939998e-18,True,True,True

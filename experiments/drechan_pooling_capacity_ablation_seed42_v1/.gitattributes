@@ -2,5 +2,5 @@
 *.json text eol=lf
 *.ps1 text eol=lf
 *.md text eol=lf
-public/* -text
-public_admission/* -text
+public/* -text whitespace=cr-at-eol
+public_admission/* -text whitespace=cr-at-eol

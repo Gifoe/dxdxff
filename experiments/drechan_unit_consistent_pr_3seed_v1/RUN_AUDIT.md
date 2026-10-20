@@ -30,3 +30,11 @@ Production uses the existing isolatedPyTorch2.11.0+cu128 runtime,FP32/TF32off,ow
 The old mixed-unit comparison is fully reported as an additional diagnostic;mathematical correctness does not promise an all-metric gain against that procedure. The fixed main performance andretained-module rules remain mandatory. No control promotion,post-assessment threshold rescue,gate edits orautomatic newOuter. The full objective still requires actual final80-patient Macro-F1>0.64,improvedAUROC andstable retained-module contributions. The historical mainOuter0.653828is unchanged,not a guaranteed repaired-model result.
 
 Only source,hashes andanonymous aggregate audits are public. Raw,identities,individual predictions,weights,preprocessors,anchors,caches andruntime logs stay on the trusted server.
+
+## Subsequent live observation and public-only checks
+
+At09:02:00Asia/Shanghai on2026-10-20,the same coordinator42464/launcher26308/worker42528were confirmed alive.61/135cells were complete:40fresh fits and21references. The current cell wasWO_BOTH_PR/seed42/fold3,epoch8;trainingstderr remained zero bytes. These are execution counts only,not newassessment metrics.
+
+A short-lived observation connection encountered an SSH-banner timeout. The original sustained SSHowner continued emitting live coordinator heartbeats throughout;the subsequent observation connected normally andconfirmed the same process identities. No training restart,checkpoint rollback orscientific change was made in response to an observation failure.
+
+Added`verify_public.py`andits six-test standard-library regression suite outside the12bound sources. Actual admission-only verification andall6tests passed locally. Checks coversource bytes,45reference admissions,30reused anchor admissions,10TRAIN/CALpreprocessing rows,andnegative cases for tampered source digests,duplicate aggregates andmissing final manifest. The pre-fit admission's`new_formal_fits=0`remains a historical snapshot;it is not used to deny the active formal training. Full public verification remains pending actual completion anddoes not claim to regenerate private patient rankings/bootstrap draws.

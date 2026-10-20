@@ -1,0 +1,50 @@
+{
+  "task": "drechan_no_earlyfilm_seed52_62_v1",
+  "base_commit": "fb722f75403f53aaaca757a585ff63d29fbc2240",
+  "parent_source": {
+    "PROTOCOL_LOCK.json": "fc7190e583e153bec67baf067d9c8b071e563c9f2f9bdebd30c4146480a701e7",
+    "admit.py": "8492167f64b0b1549e0613f3775d435b13cf328b4caf71458453b98a4d8decff",
+    "affinity_entry.py": "3bbe95e60591aae43a11e80a952d0c117920af88c99f45eec75e063df47ae3a0",
+    "common.py": "a3ca23c8d0455b7b0d17034fa42d919e4c0e4544489eb68540f72ac249ff9e2c",
+    "evaluate_outer.py": "853de7a37f621813a26cab2ca55f4045a9c0d1783d477c4d9e8607901f7a0c21",
+    "model.py": "74f8b15fb7c2c29facfac12fbd31018d66106834c2a9fa6a16de56613e5cc969",
+    "package_public.py": "7ced5a8f5d4bb11c878902ea102cbbd5d9afc24ca0799a0dacbf49633cba19d9",
+    "report_outer.py": "cd639cf36a6d4c1761967fb372c0d0a3ca17549b7ef4df7723e94c6fa6da47ff",
+    "run_all.ps1": "dc0ddbb6c23e2e8c8d63710eb0993b4a0fc8023f77b34db361c60382c33e2d74",
+    "test_math.py": "16aa4f9fdd0dc8bb9857a69ecbfce6821b54b46ab6463ef5c492ee5e0332ffd0",
+    "test_model.py": "12a176db563016d40fb6a5c57f79d99fe20aa48d7035204d1e67355bad6aa56b",
+    "test_reporting.py": "e46c3c52926fadd5013ea69ca2e2be498059f3dafd7dfc10d258800ebc18add6",
+    "train.py": "eb958872b470c0f2f7e7f84ec217c45665b1a9c2ef78a5da11b9f6d1fdb71bf2",
+    "verify_internal.py": "efaa62d11c8e2f36b147308fab076c5dc857a12c73c461e1b2e064eda351f38a",
+    "verify_outer.py": "238f3aa8f313ea51ea7d825a5011b42a45b8a881f52e831b467b2c56f5334fd7"
+  },
+  "parent_freeze_sha256": "4812759bed1105c0fc89b33b6fe47150b3de0ee90dee98747d64f34aa2eae69c",
+  "parent_score_seal_sha256": "a9af5280265f25d4150e9cb92bc8d69620c4eb7ac7d02a80337be250605c44f4",
+  "arms": [
+    "WO_EARLY_FILM"
+  ],
+  "seeds": [
+    52,
+    62
+  ],
+  "parameters": {
+    "WO_EARLY_FILM": 9329
+  },
+  "counts": {
+    "cells": 10,
+    "new_fits": 10,
+    "reused": 0,
+    "patients": 80,
+    "channels": 7635,
+    "seizures": 256,
+    "valid_raw250_windows": 1471965,
+    "patient_rows": 160,
+    "metric_values": 1440,
+    "nominal_intervals": 27
+  },
+  "architecture": "Identical existing no-Early/no-Late model (old three-seed WO_BOTH_GUIDANCE). Variance and Head Interaction absent. Retain direct 14D (12 active) FeaturePR, final96D RawPR, own pre-reference, original0-8/8-20means and equal-seizure Mean/SD96D, head64 and original input scaling. No capacity matching, attention, time mismatch or Full training at new seeds.",
+  "training": "All10 fresh seed52/62 x5folds, original patient roles; full untrained initializer consumes seed+1009fold and original head seed+170003 before deletions. FP32,TF32off,4096chunk,complete-patient updates; AdamWlr0.0003,wd0.001,clip1,max30,min6,patience6; unchanged original loss and validation-only epoch/201grid threshold. All10choices freeze before Outer,all10scores seal before metrics. Atomic complete optimizer/RNG resume only after engineering diagnosis. No new extraction,data,features,budget changes,performance gate or outcome tuning.",
+  "statistics": "Separate each new seed and arithmetic mean/sampleSD of seed metrics,never predictions or best seed.9patient-equal endpoints plus pooled/fold/sampleSD/source/coverage.10000seed42draws of80unique patients:9absolute intervals each for52,62 and the per-patient two-seed metric mean=27nominal intervals. No superiority hypothesis or new-seed Full-minus contrast; no multiplicity-adjusted comparison family. Historical42/43/44 noEarly results may be shown separately with fixed provenance,not newly run or used to choose a seed. No historical results merged into primary new-two-seed estimate.",
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "privacy": "Only code/hashes/anonymous aggregate stats; all identities,signals,individual scores,weights,preprocessors,caches and runtime logs remain trusted serverD. Parent sources immutable."
+}

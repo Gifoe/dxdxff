@@ -1,6 +1,6 @@
 # No-Late-Gate DREChannNet: seed42 complete ablation
 
-Implementation/admission in progress; no fresh outcomes are claimed. The fixed main is the exact completed parent `WO_LATE_GATE`, seed42 Macro-F1 0.6534651290238689 and AUROC 0.7652863490156572. Variance and head interaction remain absent. Historical Outer informed this choice, so all new results remain exploratory repeated-test.
+Implementation and real-server admission passed:10 tests,90 matched initializations,30 strict reuse checks, exact main forward/loss/all-gradient/Adam/RNG parity, and18 discarded complete-patient path checks. Evidence: [admission](public_admission/ADMISSION.json). Formal fresh training is next; no fresh outcomes are claimed. The fixed main is the exact completed parent `WO_LATE_GATE`, seed42 Macro-F1 0.6534651290238689 and AUROC 0.7652863490156572. Variance and head interaction remain absent. Historical Outer informed this choice, so all new results remain exploratory repeated-test.
 
 16 unique current-architecture groups plus2 clearly labelled old references give18groups/90fold cells.30 strict reuses and60 fresh fits are required. All new groups remove Late Gate physically before training. `WO_BOTH_GUIDANCE` is identical to `WO_EARLY_FILM`; `WO_LATE_GATE` is identical to the main. These are explicit aliases, not extra fits/hypotheses. A guide four-cell interaction cannot be estimated when Late is fixed absent; only PR interaction is reported.
 

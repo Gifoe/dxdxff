@@ -1,0 +1,175 @@
+{
+  "all30_reuse_checks_bit_exact": true,
+  "expected_fresh_fits": 60,
+  "expected_reused_cells": 30,
+  "fresh_path_admission": [
+    {
+      "arm": "FULL",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "PREVIOUS_FULL_WITH_LATE",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "B0_ORIGINAL",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "WO_FEATURE_PR",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "WO_RAW_PR",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "WO_BOTH_PR",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "WO_WINDOW_PR",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "WO_EARLY_FILM",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "WO_PRE_REFERENCE",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "EARLY_FILM_MISMATCH",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "RAW_ONLY",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "PHYSIOLOGY_ONLY",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 0
+    },
+    {
+      "arm": "DROP_BETA",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "DROP_LOW_GAMMA",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "DROP_PARTIAL_HIGH_GAMMA",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "DROP_RMS",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "DROP_LINE_LENGTH",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    },
+    {
+      "arm": "DROP_SPECTRAL_ENTROPY",
+      "channels": 164,
+      "discarded_steps": 2,
+      "finite_effective_gradients": true,
+      "fold": 2,
+      "valid_windows": 48380
+    }
+  ],
+  "initialization_cells_checked": 90,
+  "main_forward_loss_allgradients_Adam_rng_bit_exact": true,
+  "new_formal_fits": 0,
+  "no_new_Outer": true,
+  "no_performance_eligibility_gate": true,
+  "source": {
+    "PROTOCOL_LOCK.json": "fc7190e583e153bec67baf067d9c8b071e563c9f2f9bdebd30c4146480a701e7",
+    "admit.py": "8492167f64b0b1549e0613f3775d435b13cf328b4caf71458453b98a4d8decff",
+    "affinity_entry.py": "3bbe95e60591aae43a11e80a952d0c117920af88c99f45eec75e063df47ae3a0",
+    "common.py": "a3ca23c8d0455b7b0d17034fa42d919e4c0e4544489eb68540f72ac249ff9e2c",
+    "evaluate_outer.py": "853de7a37f621813a26cab2ca55f4045a9c0d1783d477c4d9e8607901f7a0c21",
+    "model.py": "74f8b15fb7c2c29facfac12fbd31018d66106834c2a9fa6a16de56613e5cc969",
+    "package_public.py": "7ced5a8f5d4bb11c878902ea102cbbd5d9afc24ca0799a0dacbf49633cba19d9",
+    "report_outer.py": "cd639cf36a6d4c1761967fb372c0d0a3ca17549b7ef4df7723e94c6fa6da47ff",
+    "run_all.ps1": "dc0ddbb6c23e2e8c8d63710eb0993b4a0fc8023f77b34db361c60382c33e2d74",
+    "test_math.py": "16aa4f9fdd0dc8bb9857a69ecbfce6821b54b46ab6463ef5c492ee5e0332ffd0",
+    "test_model.py": "12a176db563016d40fb6a5c57f79d99fe20aa48d7035204d1e67355bad6aa56b",
+    "test_reporting.py": "e46c3c52926fadd5013ea69ca2e2be498059f3dafd7dfc10d258800ebc18add6",
+    "train.py": "eb958872b470c0f2f7e7f84ec217c45665b1a9c2ef78a5da11b9f6d1fdb71bf2",
+    "verify_internal.py": "efaa62d11c8e2f36b147308fab076c5dc857a12c73c461e1b2e064eda351f38a",
+    "verify_outer.py": "238f3aa8f313ea51ea7d825a5011b42a45b8a881f52e831b467b2c56f5334fd7"
+  },
+  "status": "PASS",
+  "unique_tests": 10
+}

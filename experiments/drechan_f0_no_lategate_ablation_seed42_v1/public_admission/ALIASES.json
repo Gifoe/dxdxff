@@ -1,0 +1,9 @@
+{
+  "aliases": {
+    "WO_BOTH_GUIDANCE": "WO_EARLY_FILM",
+    "WO_LATE_GATE": "FULL"
+  },
+  "early_late_interaction_not_identifiable_when_late_is_fixed_absent": true,
+  "not_independent_contrasts": true,
+  "not_independent_fits": true
+}

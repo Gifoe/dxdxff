@@ -1,0 +1,20 @@
+{
+  "task": "drechan_dualview_traincal_diagnostic_v1",
+  "mode": "ZERO_TRAINING_TRAIN_CAL_DIAGNOSTIC_ONLY",
+  "parent_commit": "250c694b24bcdeda87f6bd85b88d47473afc3141",
+  "parent_freeze_sha256": "3bbaaf51d159d6dcf4f61d57633e4d70fc653ad2b9a216a68e2b27a95899188c",
+  "parent_seal_sha256": "ea236252f9cb7e6335323a213fcea36aff1557ddd828d82a21b488f565690a9e",
+  "calibration_bodies": ["B0", "PRUNED_REF", "FULL"],
+  "latent_bodies": ["PRUNED_REF", "FULL"],
+  "seeds": [42,43,44],
+  "folds": [1,2,3,4,5],
+  "scope": "Only original within-FIT TRAIN and CAL indices. Inherited bank deserialization contains other within-FIT metadata, but no ASSESS/Development/Outer target array is indexed, scored, fitted or used for a decision. No parent assessment score/metric private cache is opened. Parent freeze/seal/source/checkpoint hashes are verified,not changed.",
+  "prior_evidence": "Frozen Raw-only patient decision study already tested margin-grid,patient-scoreZ andfixedfraction without reliable MacroF1 gain. A0Gaussian/posterior identifiability failed. Do not propose these as established remedies or rerun a rescue grid. Current dual-view study improved ranking while losing classification;cause is not established.",
+  "calibration": "45selected cells. Reuse exact stored CAL logits and unchanged selected probability thresholds. Independently replay original 201grid,tie order patientMacroF1/EZF1/pooledBA/nearest0.5/lowerthreshold. For each8-patient CAL,remove one patient only from threshold fitting and evaluate that patient's existing scores;360held-CAL appearances. The model/checkpoint had already been selected using all8CAL labels,so this is selection-conditioned threshold sensitivity,NOT unbiased CV or a deployable new policy. No threshold is adopted.",
+  "latent_drift": "30selected FULL/PRUNED_REF models,complete TRAIN andCAL forward passes=60phase cells. Reuse immutable unconditioned24D CNN/pre-reference/stage/seizure kernel to recover pre-patientZ96D pooled vectors. Reconstruct the original classifier and require exact storedCAL logit parity. Verify original initialTRAIN anchor numeric equality between these two bodies. Report float64 descriptive initial-anchor standardized means,SDs,absolute quantiles andfractions above5/10;these are fixed diagnostic cutoffs,not quality exclusions or selection gates.",
+  "score_diagnostics": "75phase cells:FULL/PRUNED_REF TRAIN/CAL andB0storedCAL. Unlabeled score mean/SD,patient location dispersion,ties andFP32probability saturation. No AUROC/AP/Outer metric computation. CALMacroF1 values are diagnostic only,not final goal evidence.",
+  "immutability": "Zero model updates,zero new epoch/threshold selection for deployment,no changed source/checkpoint/preprocessing/role/window. Save derived private pooled vectors/logits for audit resume,not raw copies. Freeze all45private diagnostic caches before aggregate reporting. Independent verification reads those caches and original legalCAL labels,not newRaw orassessment outcomes.",
+  "verification": "Five changed critical-path tests. Independent45originalCAL selections,360leave-oneCAL threshold/metric checks,60latent-stat cells,75unlabeled-score cells and45source/checkpoint/role bindings. Metrics use abs1e-12,descriptive floating summaries abs1e-12+rel1e-10. This tolerance does not alter original exact prediction-parity gates.",
+  "execution": "New Ddrive code/runtime,existing isolatedtorch2.11cu128 runtime,FP32/TF32off,ownworkerCPU16-31,OMP/MKL/OpenBLASthreads1,foreground SSH ownership. No unrelated process/system changes. Diagnose genuine failure before exact resume with fresh logs.",
+  "delivery": "Source pushed before actual audit. Only explicit anonymous aggregates,hashes andreport may be published. No raw,identities,individual predictions,pooled vectors,weights,anchors,preprocessors,caches orlogs. No deployment qualification,newOuter authorization,main-model replacement or active-goal completion can follow from this diagnostic alone. All results are exploratory/selection-conditioned."
+}

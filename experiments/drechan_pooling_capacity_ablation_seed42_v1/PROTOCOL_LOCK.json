@@ -1,0 +1,18 @@
+{
+  "task":"drechan_pooling_capacity_ablation_seed42_v1",
+  "base_commit":"0a3de50e180c64d993ddbb7226138894086d7128",
+  "parent_freeze_sha256":"4812759bed1105c0fc89b33b6fe47150b3de0ee90dee98747d64f34aa2eae69c",
+  "parent_score_seal_sha256":"a9af5280265f25d4150e9cb92bc8d69620c4eb7ac7d02a80337be250605c44f4",
+  "arms":["FULL","WO_EARLY_FILM","P1_TEMPORAL_STATS","P2_TIME_ATTENTION","A2_CAPACITY_MATCHED"],
+  "parameters":{"FULL":10377,"WO_EARLY_FILM":9329,"P1_TEMPORAL_STATS":10377,"P2_TIME_ATTENTION":10403,"A2_CAPACITY_MATCHED":10337},
+  "seeds":[42],
+  "counts":{"cells":25,"reused":10,"new_fits":15,"patients":80,"channels":7635,"seizures":256,"valid_raw250_windows":1471965,"patient_rows":400,"metric_values":3600,"nominal_intervals":90,"family_intervals":10},
+  "P1":"Unsegmented0-20s valid population Mean/SD per seizure/channel/24latent, then equal-seizure Mean/SD,96D. Same own pre-reference, EarlyFiLM, RawPR, directFeaturePR and head64. Slot order temporalStatistic,crossSeizureStatistic,latent. Contrasts a replacement pooling package, not segmentation alone.",
+  "P2":"Retain0-8/8-20s stages. Shared26 zero-initialized coefficients score24latent + t/20 + (t/20)^2. Masked stage/channel softmax, weighted24D stage means, original equal-seizure Mean/SD96D. Only valid support, no physiology/labels in scorer, no extra attention regularization. Extra26parameters explicitly reported.",
+  "A2":"RemoveEarlyFiLM and noLate as fixed main; ordinary CNN unchanged, head widened64to73. First64neurons copied exactly from original untrained initializer; extra9ordinary neurons use forked seed(seed+1009*fold+170003+421001). Closest integer single-hidden width gives10337parameters(-40,-0.3855% versus10377); no dummy/inactive parameters. Direct physiology and both final PR paths retained; physiological modulation/windowPR absent as in oldNoEarly.",
+  "training":"Original roles80patients,7635channels,256seizures,1471965validRaw250windows; seed42+1009fold. FP32/TF32off/chunk4096/full-patient updates; AdamWlr0.0003wd0.001clip1,max30min6patience6, original loss/validation-only201-grid threshold/epochselection. All configurations complete Outer, no performance gate. No data/extraction/features/baselines/other seeds/hyperparameter search. All25selections freeze before newOuter, all25scores seal before metrics. Exact atomic optimizer/RNG checkpoint resume only after engineering diagnosis.",
+  "reuse":"Only5FULL and5WO_EARLY_FILM selections/scores from immutable verified no-Late parent, strict input/init/preprocessing/validation/threshold/checkpoint/score hashes. Reuse does not substitute weights for new arms.",
+  "statistics":"Patient-equal9metrics,pooled separate,fold/sampleSD/source/coverage.10000seed42paired draws of80patients.5absolute+4Full-minus+1A2-minus-noEarly=10x9=90nominal95%intervals.5pairedcontrasts xMacroF1/AUROC=10additionalBonferroni-percentile intervals tail0.05/20. No seedSD/independentconfirmation or postOuter reselection.",
+  "scientific_status":"EXPLORATORY_REPEATED_TEST",
+  "privacy":"ServerDcode/runtime/weights; existingcache read in place. Publishonlycode,hashes,anonymousaggregates; neverwaveforms,identities,individualpredictions,weights,preprocessors,caches,runtimelogs,secrets. No parent scientific files changed."
+}

@@ -1,6 +1,6 @@
 # Complete six-feature F0 ablations: three training seeds
 
-Implementation in progress; no new three-seed outcomes are claimed. The fixed main is the completed relative-guidance Full, not an ablation chosen from Outer.
+Implementation is complete. Server admission passed before any formal new fit:11 executable tests,285 shared-initialization cells,45 mandatory current seed42 reuses and5 strict historical Raw-only reuses. All19 paths passed discarded complete-patient backward/Adam admission; the unchanged no-PR path matched logits/loss/all gradients/Adam/RNG for all3 seeds. Thus235 fresh fits remain. Evidence: [admission](public_admission/ADMISSION.json). No new three-seed Outer outcomes are claimed. The fixed main remains the completed relative-guidance Full, not an ablation chosen from Outer.
 
 The approved matrix contains 19 groups, seeds42/43/44 and the original five patient-held-out folds:285 logical cells and80patients per group/seed. Current seed42's45cells are reused after exact checks. Five historical seed42 Raw-only cells are optional strict reuses; all other missing cells are freshly fitted,235–240new fits. Different-architecture33-patient internal studies are not substituted.
 

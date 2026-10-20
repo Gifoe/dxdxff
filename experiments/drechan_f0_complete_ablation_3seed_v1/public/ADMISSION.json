@@ -1,0 +1,231 @@
+{
+  "expected_fresh_fits": 235,
+  "expected_reused_cells": 50,
+  "fresh_path_admission": [
+    {
+      "all_gradients_finite": true,
+      "arm": "B0_ORIGINAL",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "FULL",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_FEATURE_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_RAW_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_BOTH_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_WINDOW_PR",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_EARLY_FILM",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_LATE_GATE",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_PRE_REFERENCE",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "WO_BOTH_GUIDANCE",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "EARLY_FILM_MISMATCH",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "RAW_ONLY",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "PHYSIOLOGY_ONLY",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 0
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "DROP_BETA",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "DROP_LOW_GAMMA",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "DROP_PARTIAL_HIGH_GAMMA",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "DROP_RMS",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "DROP_LINE_LENGTH",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    },
+    {
+      "all_gradients_finite": true,
+      "arm": "DROP_SPECTRAL_ENTROPY",
+      "complete_patient_channels": 164,
+      "discarded_admission_steps": 2,
+      "fold": 2,
+      "retained_paths_effective": true,
+      "seed": 42,
+      "valid_windows": 48380
+    }
+  ],
+  "initialization_cells_checked": 285,
+  "mandatory_current42_reuses": 45,
+  "new_formal_fits": 0,
+  "no_new_Outer": true,
+  "no_performance_eligibility_gate": true,
+  "optional_raw_reuses": 5,
+  "raw_reuse_by_fold": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "source": {
+    "PROTOCOL_LOCK.json": "72504a29e682b33a69a4c284c69c21d7efc12f5f5fabaaa9a1c7532a730d5d37",
+    "admit.py": "abac44dd3fdd0e5d18266619b5642954b398234934f6b6561423e3bc37731c42",
+    "affinity_entry.py": "3bbe95e60591aae43a11e80a952d0c117920af88c99f45eec75e063df47ae3a0",
+    "common.py": "1b38bc152f0976455f656578ba44f8f71b7e755eef828a18b6776d40dc6c603b",
+    "evaluate_outer.py": "f91250e46f9d5a97d0fa3b933c953c588897eefa7d8785a69cef5a14cb40d151",
+    "feature_pr.py": "3b9823db47382cc3d4d66d226b4041f05efbc65041095fccaf298f459dc8148f",
+    "model.py": "64a13b62c18bc197c251f7572e2fb6c03389d37b9de57906990b5e1a8b52af44",
+    "package_public.py": "f7e4a9d3c0a36730a46c33eae12530b90b8926446adeaf14e5bc087a573bb088",
+    "relative_guidance.py": "959e2434b36e7929d0da29d3156d6d168ce101a777036969c36c335ac1df4429",
+    "report_outer.py": "8e2c7d624a31955743c04b2d3a255a733e15ed2a5b75269a778bc3ae435700f1",
+    "run_all.ps1": "78d0e2164112e1011433513c0884d3b77b7b9c9880e6503fc62da350d275086c",
+    "test_math.py": "6128dbcdb5db2f5084df7e8649e5371177ce797f5c9c405934cbb5452ff10567",
+    "test_model.py": "8d8e35981c2731898a2cf27a7b3ddf0a894f21601c487d06bbeccc6f941b1689",
+    "test_reporting.py": "97f2e4a0abbaef493a083feb5981238e0b03055107cf054d6927166886853dff",
+    "train.py": "5262088206ed2800a24b87c9083009f6893ef8a77d074eec0fabf64100832bec",
+    "verify_internal.py": "2f35dab740b2b43bfcba5a7019b3bb0361b4e9619037f275e6b420c4eaac8b1f",
+    "verify_outer.py": "d734ce3f92cccaa66c9eec8bf22d27dd17410471409f8848ec447381fcdb04ed"
+  },
+  "status": "PASS",
+  "unchanged_noPR_forward_loss_gradients_Adam_rng_bit_exact_all3seeds": true,
+  "unique_math_model_reporting_tests": 11
+}

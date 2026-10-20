@@ -1,0 +1,15 @@
+{
+  "bootstrap_unit": "80_UNIQUE_PATIENTS_AFTER_METRIC_SEED_AVERAGING",
+  "full_auroc": 0.764881739568939,
+  "full_macro_f1": 0.6376412950985306,
+  "independent_confirmation": false,
+  "macro_within1pp_B0": true,
+  "main_auroc_above_B0": true,
+  "main_macro_f1_above_0p64": false,
+  "no_ablation_direction_assumed": true,
+  "no_model_promotion": true,
+  "original_auroc": 0.7525684424770707,
+  "original_macro_f1": 0.6418095135629046,
+  "selected_arm": null,
+  "status": "DESCRIPTIVE_NOT_SELECTION_GATE"
+}

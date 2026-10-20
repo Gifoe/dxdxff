@@ -1,0 +1,7 @@
+{
+  "freeze_sha256": "c0bfea48a8ce3c4d6ffaa5783afdc20f3b621bbe00606086451c29149ca6834c",
+  "models": 285,
+  "new_fits": 235,
+  "reused": 50,
+  "status": "ALL285_FROZEN_BEFORE_NEW_OUTER"
+}

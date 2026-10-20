@@ -1,11 +1,64 @@
-# Complete six-feature F0 ablations: three training seeds
+# 六特征单头 DREChannNet：完整三seed消融
 
-Implementation is complete. Server admission passed before any formal new fit:11 executable tests,285 shared-initialization cells,45 mandatory current seed42 reuses and5 strict historical Raw-only reuses. All19 paths passed discarded complete-patient backward/Adam admission; the unchanged no-PR path matched logits/loss/all gradients/Adam/RNG for all3 seeds. Thus235 fresh fits remain. Evidence: [admission](public_admission/ADMISSION.json). No new three-seed Outer outcomes are claimed. The fixed main remains the completed relative-guidance Full, not an ablation chosen from Outer.
+**已完成并独立核验通过**：19组 × seeds42/43/44 × 原五折 =285个模型/折单元；235次新增训练、50个严格复用，共2493轮新增训练。全部285个选择单元先冻结，剩余Outer推理后全部封存，再统一报告。不是挑选最佳seed，也不是预测集成。
 
-The approved matrix contains 19 groups, seeds42/43/44 and the original five patient-held-out folds:285 logical cells and80patients per group/seed. Current seed42's45cells are reused after exact checks. Five historical seed42 Raw-only cells are optional strict reuses; all other missing cells are freshly fitted,235–240new fits. Different-architecture33-patient internal studies are not substituted.
+固定主模型仍是本轮开始前锁定的Full，Variance和Head Interaction始终删除。没有因本轮Outer改变主模型、特征、损失、阈值或筛选规则。原B0仅作参考；33人内部三seed实验不并入本结果。
 
-Keep the original six measurements (beta,low gamma,partial high gamma80–125Hz,RMS,line length,entropy10–125Hz), original80patients/7635channels/256seizures/1471965validRaw windows, preprocessing definitions, matched initializers, losses and budgets. Variance and head interaction remain absent. All groups finish Outer without a performance eligibility gate.
+核心结果：Full的患者平均Macro-F1为 **0.637641 ±0.008321**，AUROC为 **0.764882 ±0.005731**。三seed平均Macro-F1没有达到0.64，也不能写成0.65。seed42的0.646339未变；seed43和44分别为0.629757、0.636828。
 
-See `PROTOCOL_LOCK.json` for the locked matrix/operations/statistics/privacy. Source is pushed before formal training. All285selections freeze before unfinished Outer inference; all285score cells seal before unified metrics. Primary results are averages of patient metrics across seeds, not a probability ensemble or best-seed selection. Independent verification covers4560patient-seed rows/41040endpoints/351nominal/36additional-family intervals.
+[结论与证据边界](FINDINGS.md) · [全部指标及统计说明](public/REPORT.md) · [三个seed分别结果](public/SEED_RESULTS.csv) · [执行审计](RUN_AUDIT.md) · [独立核验](public/INDEPENDENT_OUTER_VERIFICATION.json)
 
-Only code,hashes and anonymous aggregates are published. Signals,identities,individual predictions,weights,preprocessors,caches andruntime logs stay on the trusted server. These historical Outer results are exploratory repeated-test,not independent confirmation. Favorable ablation directions are not guaranteed or used to select a replacement main model.
+## 全部19组：患者平均指标的三seed均值 ± 样本标准差
+
+| 配置 | Macro-F1 | AUROC | AP | EZ-F1 | NEZ-F1 | ACC | MRR | Top-1 | EZ-Frac. Bias |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| B0_ORIGINAL | 0.641810 ±0.010708 | 0.752568 ±0.002498 | 0.583070 ±0.005797 | 0.450019 ±0.015183 | 0.833600 ±0.006577 | 0.759424 ±0.010921 | 0.820336 ±0.022446 | 0.758333 ±0.038188 | -0.017646 ±0.005755 |
+| FULL | 0.637641 ±0.008321 | 0.764882 ±0.005731 | 0.589071 ±0.000626 | 0.439104 ±0.008697 | 0.836179 ±0.008341 | 0.761210 ±0.011850 | 0.828035 ±0.017842 | 0.762500 ±0.033072 | -0.031579 ±0.019522 |
+| WO_FEATURE_PR | 0.628294 ±0.007748 | 0.746395 ±0.001872 | 0.573941 ±0.006873 | 0.434592 ±0.012480 | 0.821996 ±0.004468 | 0.745766 ±0.005226 | 0.804441 ±0.025609 | 0.733333 ±0.028868 | -0.007019 ±0.007128 |
+| WO_RAW_PR | 0.628900 ±0.002447 | 0.758469 ±0.005516 | 0.557424 ±0.007938 | 0.438073 ±0.008880 | 0.819727 ±0.009376 | 0.750966 ±0.010675 | 0.766750 ±0.012946 | 0.675000 ±0.021651 | -0.010041 ±0.027695 |
+| WO_BOTH_PR | 0.505288 ±0.012843 | 0.753959 ±0.005296 | 0.566120 ±0.004960 | 0.383755 ±0.011358 | 0.626822 ±0.036694 | 0.637442 ±0.023318 | 0.797823 ±0.013959 | 0.716667 ±0.014434 | 0.175725 ±0.044811 |
+| WO_WINDOW_PR | 0.641214 ±0.011517 | 0.762460 ±0.006763 | 0.588992 ±0.002297 | 0.442666 ±0.019638 | 0.839763 ±0.004557 | 0.765923 ±0.007885 | 0.826314 ±0.022363 | 0.766667 ±0.031458 | -0.042037 ±0.009658 |
+| WO_EARLY_FILM | 0.643034 ±0.007285 | 0.762016 ±0.008077 | 0.564690 ±0.010599 | 0.451671 ±0.012575 | 0.834396 ±0.002093 | 0.759517 ±0.004095 | 0.777860 ±0.010235 | 0.683333 ±0.007217 | -0.020727 ±0.002869 |
+| WO_LATE_GATE | 0.640839 ±0.011029 | 0.764574 ±0.006445 | 0.589688 ±0.003386 | 0.446281 ±0.015908 | 0.835397 ±0.006341 | 0.760391 ±0.010727 | 0.830804 ±0.020391 | 0.775000 ±0.033072 | -0.028204 ±0.010209 |
+| WO_PRE_REFERENCE | 0.620722 ±0.004490 | 0.741152 ±0.002263 | 0.557763 ±0.001334 | 0.419123 ±0.007698 | 0.822321 ±0.006159 | 0.748373 ±0.007101 | 0.794292 ±0.004905 | 0.716667 ±0.007217 | -0.015781 ±0.012163 |
+| WO_BOTH_GUIDANCE | 0.639654 ±0.005623 | 0.761071 ±0.004585 | 0.562253 ±0.006927 | 0.444014 ±0.007428 | 0.835295 ±0.004198 | 0.759431 ±0.004996 | 0.774254 ±0.008058 | 0.679167 ±0.007217 | -0.026954 ±0.008350 |
+| EARLY_FILM_MISMATCH | 0.641874 ±0.005620 | 0.760118 ±0.009130 | 0.557026 ±0.009777 | 0.449821 ±0.007963 | 0.833927 ±0.003357 | 0.759570 ±0.005095 | 0.772740 ±0.002199 | 0.679167 ±0.007217 | -0.019818 ±0.003717 |
+| RAW_ONLY | 0.614443 ±0.006520 | 0.720207 ±0.007754 | 0.530188 ±0.011986 | 0.393623 ±0.010151 | 0.835263 ±0.003730 | 0.755728 ±0.004993 | 0.763592 ±0.013431 | 0.687500 ±0.021651 | -0.061330 ±0.006518 |
+| PHYSIOLOGY_ONLY | 0.624910 ±0.003641 | 0.751185 ±0.002747 | 0.541121 ±0.006463 | 0.424934 ±0.006156 | 0.824886 ±0.001174 | 0.751642 ±0.001425 | 0.736679 ±0.018753 | 0.633333 ±0.031458 | -0.018284 ±0.003089 |
+| DROP_BETA | 0.635981 ±0.008855 | 0.768765 ±0.001593 | 0.589830 ±0.003963 | 0.439355 ±0.010548 | 0.832607 ±0.008416 | 0.756911 ±0.010116 | 0.801653 ±0.015216 | 0.725000 ±0.025000 | -0.024560 ±0.015573 |
+| DROP_LOW_GAMMA | 0.632562 ±0.004871 | 0.763564 ±0.004157 | 0.588601 ±0.001679 | 0.433599 ±0.010367 | 0.831525 ±0.002305 | 0.755954 ±0.003664 | 0.825693 ±0.008585 | 0.754167 ±0.014434 | -0.027848 ±0.011454 |
+| DROP_PARTIAL_HIGH_GAMMA | 0.638110 ±0.007196 | 0.765020 ±0.005404 | 0.588700 ±0.005746 | 0.440104 ±0.009187 | 0.836115 ±0.005506 | 0.761145 ±0.007721 | 0.811565 ±0.007897 | 0.737500 ±0.012500 | -0.033532 ±0.012085 |
+| DROP_RMS | 0.631593 ±0.012144 | 0.759130 ±0.004053 | 0.579324 ±0.009230 | 0.433512 ±0.027413 | 0.829674 ±0.011911 | 0.753558 ±0.013560 | 0.813152 ±0.016357 | 0.745833 ±0.031458 | -0.022172 ±0.037850 |
+| DROP_LINE_LENGTH | 0.630214 ±0.003406 | 0.759559 ±0.006280 | 0.585213 ±0.002456 | 0.422940 ±0.002373 | 0.837488 ±0.004447 | 0.761293 ±0.005333 | 0.833932 ±0.024937 | 0.770833 ±0.038188 | -0.046614 ±0.012401 |
+| DROP_SPECTRAL_ENTROPY | 0.638490 ±0.011184 | 0.761188 ±0.005137 | 0.585076 ±0.006106 | 0.441317 ±0.016312 | 0.835663 ±0.006083 | 0.760574 ±0.008484 | 0.821567 ±0.016453 | 0.750000 ±0.025000 | -0.032945 ±0.007362 |
+
+Macro-F1先在患者内平均两类F1，再等权平均患者，最后平均三个seed的指标。EZ-Frac. Bias为预测EZ比例减真实EZ比例，越接近0越好，不是数值越大越好。MRR与Top-1保持患者内通道排序，未混成跨患者排名。Pooled结果独立列出，不能替代患者平均结果。
+
+## PR核心对比
+
+三项PR删除相对Full，在三个seed中均同时降低AUROC和Macro-F1；但这不等于配对区间已确认所有增益。删除BOTH PR的Macro-F1平均降0.132353，名义95%配对区间[0.094502,0.172247]，36项比较修正后的区间[0.071662,0.197821]；其AUROC差0.010923的名义区间[-0.007729,0.030232]仍跨0。
+
+独立删除Feature PR、Raw PR的Macro-F1差分别为0.009347、0.008741，两者名义区间均跨0。Window PR单独删除后的Macro-F1反而较高0.003573。因此不能把本轮写成“每项PR操作均已可靠改善排序与分类”。详见[全部方向](public/COMPONENT_EVIDENCE.csv)和[名义区间](public/INTERVALS.csv)。
+
+## 数据、操作和可复现性
+
+保持原80人、7635通道、256次发作、1471965个有效Raw250窗口及原五折患者隔离角色。保留六项生理属性：β、低γ、部分高γ80–125Hz、RMS、Line Length、Spectral Entropy10–125Hz。未新提取数据或特征，不改变预算、不减少患者或窗口、不搜索超参数。
+
+Feature PR删除同时取消生理摘要与窗口相对PR；Raw PR删除只取消最终Raw96D患者Z；BOTH同时取消上述PR，仍保留普通波形归一化和自身发作前参考。Both Guidance只删除Early FiLM和Late Gate，仍保留直接生理输入及Feature PR。每项特征删除在相对统计前同步屏蔽两个摘要坐标和对应窗口坐标，保留输入宽度和其余初始化。
+
+Raw-only、Physiology-only使用原完整初始化的对应输入权重切片、64宽单头和原缩放，不额外加宽。Early FiLM错配只在同患者、同发作和完整有效掩码相同的通道组中置换，salt42不随训练seed改变；Late Gate及直接输入保持正确。实测每seed的1471965个有效窗口均可配对置换，singleton窗口为0，未丢弃数据。
+
+源码先推送；真实服务器准入[11项测试、285个初始化及50个复用单元](public_admission/ADMISSION.json)全部通过。FP32、TF32关闭、4096窗口分块、完整患者更新、原AdamW/损失/预算及验证选轮次/阈值不变。冻结协议见[PROTOCOL_LOCK.json](PROTOCOL_LOCK.json)。服务器执行入口为 `run_all.ps1`，依赖原有不可变父实验和可信缓存；它不是脱离原始缓存可凭空运行的模拟实验。
+
+## 完整交付索引
+
+- [患者平均三seed均值](public/MAIN_RESULTS.csv)、[三个seed](public/SEED_RESULTS.csv)、[seed样本SD](public/SEED_SD.csv)。
+- [285个逐折结果](public/FOLD_RESULTS.csv)、[各seed折间样本SD](public/FOLD_SD.csv)、[跨来源均值](public/SOURCE_RESULTS.csv)、[来源/seed](public/SOURCE_SEED_RESULTS.csv)。
+- [Pooled各seed](public/POOLED_RESULTS.csv)、[Pooled指标的seed均值](public/POOLED_SEED_MEAN.csv)、[指标覆盖](public/METRIC_COVERAGE.csv)、[波形/错配覆盖](public/RAW_COVERAGE.csv)。
+- [351项名义区间](public/INTERVALS.csv)、[36项多重比较区间](public/PRIMARY_FAMILY_INTERVALS.csv)、[每seed每折方向](public/FOLD_SEED_DIRECTIONS.csv)、[18项对比概要](public/COMPONENT_EVIDENCE.csv)。
+- [全部训练记录](public/TRAIN_CELLS.csv)、[新增2493轮训练汇总](public/TRAIN_HISTORY.csv)、[285个验证回放](public/VALIDATION_REPLAY_CHECKS.csv)、[测试前冻结](public/FREEZE_STATUS.json)、[预测封存](public/PREDICTION_STATUS.json)、[最终状态](public/OUTER_STATUS.json)。
+- [匿名包清单与哈希](public/PACKAGE_MANIFEST.json)、[release_check.py](release_check.py)。
+
+10000次seed42配对bootstrap先按患者平均三个seed的指标，再重采样80个唯一患者，绝不把240个患者/seed行当成独立患者。351项名义区间覆盖19组绝对值、18项Full-minus及2项交互×9指标；36项额外Bonferroni-percentile区间的每侧尾概率为0.05/72。区间是给定已训练模型的患者不确定性，不是充分的训练seed不确定性估计。
+
+原始信号、身份、逐患者/通道预测、权重、预处理器、缓存和日志只留可信服务器。这里只提交代码、哈希及匿名统计。全部结果为**探索性重复测试**；历史Outer反复使用，三个seed不会将其变成独立确认。

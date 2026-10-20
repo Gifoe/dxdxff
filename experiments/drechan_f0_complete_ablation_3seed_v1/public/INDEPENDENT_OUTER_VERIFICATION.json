@@ -1,0 +1,14 @@
+{
+  "all19_3seed_complete80_verified": true,
+  "all285_model_selections_frozen": true,
+  "maximum_interval_difference": 5.551115123125783e-16,
+  "metric_seed_averaging_not_ensemble": true,
+  "no_post_Outer_tuning": true,
+  "nominal_interval_checks": 351,
+  "patient_metric_checks": 41040,
+  "patient_rows": 4560,
+  "primary_family_interval_checks": 36,
+  "reused_scores_unchanged": true,
+  "status": "PASS",
+  "unique_patient_resampling": true
+}

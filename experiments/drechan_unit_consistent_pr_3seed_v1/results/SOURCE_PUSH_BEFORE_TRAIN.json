@@ -1,0 +1,18 @@
+{
+  "commit": "0e7be02746f73700d4d8b22d365b47a10fa687f4",
+  "source": {
+    "PROTOCOL_LOCK.json": "a97599515f52d6a51b60fe9a16511a24d50c6c888d8dbdabc6f2f8b9bd0664ff",
+    "admit.py": "4e98592d12c460fbe81e5140ed5bde1289dfe3ce4d3937a2febc0fa41282f888",
+    "affinity_entry.py": "9806f8f9ee8a4ae012b98a9857bdee3ac9d52a83876507a87dd47ee0677b927e",
+    "assess.py": "e52e40b7b23ae9009ffc29dc4ec125b1303bc289a779b329dfbf21ee70613618",
+    "common.py": "109b9383a100c350f91dffa5254db439ae4c55f246873d3a4a9a65e66a620825",
+    "model.py": "c08972bdd9d9b512c5e782c0a9f0d6ac255957c3f54d4239958e3d7304b1fe07",
+    "package_public.py": "959f5cf0e3af4d3a3f94195a822a9cd8d55a470c960065d983deebf30a5ef072",
+    "run_all.ps1": "bbfed919ef3093095a7360952a6c9d43e67e48a386b724aadb28101aa62b0b20",
+    "test_preprocessing.py": "f334f2b10748c7a8ea4f04adaa48271ad2d101e6f94faf46c77066955917fdce",
+    "train.py": "99b552ae03fe3fbeddb8ad592e13751ed2b2c09301bec649a71b593d8df56f8d",
+    "unit_pr.py": "2429906e260f02b7be71ab23220b2953dede963aaf79bef2a6eac923afd65f7b",
+    "verify.py": "719280ece8d3ad5ab80076992889ffa1749bb597990c7acd9e171dc7f5be5d5c"
+  },
+  "source_pushed_before_formal_fits": true
+}

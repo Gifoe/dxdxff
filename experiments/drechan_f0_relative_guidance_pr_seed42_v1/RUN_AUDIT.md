@@ -13,3 +13,9 @@
 - Admission PASS is not a claim of Macro-F1/AUROC improvement, favorable ablation directions, seed stability or goal completion. Forty actual fresh fits,45legal selection checks and the sealed original80-patient fivefold Outer experiment still have to finish.
 
 All private data, weights, per-patient/channel values and runtime logs stay on the trusted server. This repository contains only source, hashes and the four anonymous admission aggregates.
+
+## Production start and release-only checks
+
+At15:43:20Asia/Shanghai the sustained foreground production owner started the original-protocol training worker, with source-push proof `581396c836501b4ccba99c7ac136914ba74950e1`. That commit contains exactly the same17scientific source hashes as admission; the additional changes were anonymous admission evidence and documentation. Forty fresh fits are scheduled; the original five main reference cells are reused, not retrained. No new Outer prediction is allowed until all45selections are replayed and frozen.
+
+The independent public-package validator is a release-only addition, outside the17frozen execution files. Seven positive/adversarial archive-validation cases actually pass, including rejection of corrupted content, traversal paths, identity headers, secret markers, private-export flags and unapproved members. These tests generated no benchmark metrics. The complete final package must still pass this validator after actual server completion.

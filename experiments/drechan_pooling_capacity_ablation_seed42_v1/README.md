@@ -1,6 +1,6 @@
 # Fixed no-Late DREChannNet: temporal pooling and capacity controls
 
-Implementation stage; no new performance outcomes claimed. Three new alternatives are fixed before fitting: P1 unsegmented temporal Mean/SD then cross-seizure Mean/SD96D; P2 masked time-aware stage attention then original cross-seizure Mean/SD96D; A2 noEarlyFiLM with a73-wide ordinary head. Full and original noEarly are strict existing references. Five groups ×original5folds ×seed42 =25cells,10reused/15fresh.
+Real-server admission passed6 executable tests,25 matched initializers,10 strict reuse gates, exact main forward/loss/all-gradient/clippedAdam/RNG parity and5 discarded whole-patient path checks. Formal fits follow admission; no new performance outcomes are claimed yet. Three alternatives are fixed before fitting: P1 unsegmented temporal Mean/SD then cross-seizure Mean/SD96D; P2 masked time-aware stage attention then original cross-seizure Mean/SD96D; A2 noEarlyFiLM with a73-wide ordinary head. Full and original noEarly are strict existing references. Five groups ×original5folds ×seed42 =25cells,10reused/15fresh. [Admission proof](public_admission/ADMISSION.json).
 
 Parameters: Full10377; P1 10377; P2 10403(+26); original noEarly9329; A2 10337(-40 versusFull,-0.39%). No inactive padding parameters. Main still excludes Variance, Head Interaction and Late Gate. The same six physiological measurements/directPR, original raw data/roles/normalization/pre-reference/loss/budget remain unless explicitly changed. [Frozen operation definitions](PROTOCOL_LOCK.json).
 

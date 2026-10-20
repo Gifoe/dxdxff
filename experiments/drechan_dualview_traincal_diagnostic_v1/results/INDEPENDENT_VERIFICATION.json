@@ -1,0 +1,14 @@
+{
+  "TRAIN_CAL_only": true,
+  "active_goal_achieved": false,
+  "all_CAL_forward_or_prior_reuse_bindings_verified": true,
+  "assessment_metrics": 0,
+  "latent_phase_cells": 60,
+  "leave_one_CAL_checks": 360,
+  "maximum_CAL_metric_discrepancy": 0.0,
+  "neural_fits": 0,
+  "new_Outer": false,
+  "score_phase_cells": 75,
+  "selected_CAL_cells": 45,
+  "status": "PASS"
+}

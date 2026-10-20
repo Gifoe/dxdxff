@@ -1,0 +1,14 @@
+{
+  "commit": "c2b5fe922347a2adc22a11ea6db360ed99048323",
+  "source": {
+    "PROTOCOL_LOCK.json": "e7372d29b6b0c036c2ecaec07c18a25164a9b53aa312aa4462c3746b6994d8da",
+    "affinity_entry.py": "ca6908dd967bde4b17f06275d4a0b90ba625b791b2a6f015faec9b6753ca90f0",
+    "audit.py": "ab14ab0b777d1654b8e96ff2e9cf39325d2da8a86e49f39e0dc30466cd15cab9",
+    "audit_math.py": "7fa742189c5162fba6e827aa63ba993144c8722804f356e6b9077295abd10169",
+    "audit_support.py": "03044fbefedcbcd102284241fc5e02c1154063915c46311f60cff3ffe12a8b45",
+    "run_all.ps1": "5243cf528dd0012d653a498b0bd3119f3eef4477593610527fb2353c97c21408",
+    "test_audit.py": "2c45010bbaead482ff7b0c8a6acd11e466a33a0da4742a027e6eb44756ba212a",
+    "verify.py": "03fb4a7d51e751366fc598114f8868010cc59c446e3b734044fc439f92b84cb5"
+  },
+  "source_pushed_before_audit": true
+}

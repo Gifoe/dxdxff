@@ -1,0 +1,6 @@
+fold,TRAIN_patients,CAL_patients,TRAIN_channels,CAL_channels,ASSESS_labels_indexed,Outer_scored
+1,35,8,2978,791,False,False
+2,35,8,3328,852,False,False
+3,34,8,3386,647,False,False
+4,36,8,3377,793,False,False
+5,35,8,3376,898,False,False

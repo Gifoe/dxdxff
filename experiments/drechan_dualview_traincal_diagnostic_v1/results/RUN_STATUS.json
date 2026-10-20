@@ -1,0 +1,11 @@
+{
+  "active_goal_achieved": false,
+  "assessment_metrics": 0,
+  "calibration_cells": 45,
+  "latent_phase_cells": 60,
+  "neural_fits": 0,
+  "new_Outer": false,
+  "new_deployment_thresholds": 0,
+  "score_phase_cells": 75,
+  "status": "ALL45_DIAGNOSTIC_CELLS_REPORTED"
+}

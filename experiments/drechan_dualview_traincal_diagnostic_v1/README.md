@@ -1,6 +1,6 @@
 # Frozen DREChannNet TRAIN/CAL diagnosis
 
-This is a zero-training diagnostic after the fixed dual-view candidate's failed performance gate. Source is pushed before execution. There are no actual diagnostic outcomes yet. The original80-patientOuterMacro-F1=0.653828remains unchanged.
+**Completed and independently verified:45CALcells,360leave-oneCAL checks,60latent phases and75unlabeled score phases,zero neural fits.** See[actual diagnostic tables](results/DIAGNOSTIC_REPORT.md)and[execution evidence](RUN_AUDIT.md). The original80-patientOuterMacro-F1=0.653828remains unchanged. This diagnostic does not qualify a new model.
 
 The completed dual-view study improved ranking but lost Macro-F1. Historical Raw-only margin-grid,patient-scoreZ andfixed-fraction decoders did not yield reliable gains;historicalA0posterior identification also failed. No decoder rescue or new density model is assumed. The present study asks whether selected bodies show initial-anchor latent drift andCALthreshold sensitivity,using legal TRAIN/CAL only.
 
@@ -9,3 +9,7 @@ The[locked protocol](PROTOCOL_LOCK.json)defines45selected calibration cells,30co
 Leave-oneCAL excludes a patient's labels only from threshold fitting,not from the already completed checkpoint selection. It is therefore selection-conditioned sensitivity,not unbiased cross-validation or new validation performance. No new threshold is deployed. No assessment/Development/Outer predictions or metrics are read or generated. No neural weight,cache source,feature,patient role or existing result is changed.
 
 Run`run_all.ps1 -RunTag <fresh> -SourceCommit <verified40hex>`under a sustained foreground SSH owner on the trusted server. Code/runtime stay on Ddrive andexisting raw caches are read in place. Native or Python errors stop for diagnosis,not blind retry. Only anonymous aggregate tables,source andhashes may be exported. Derived vectors/logits,identities,weights,raw/cache andlogs stay on the server. This diagnosis alone cannot qualify a new main model or achieve the active goal.
+
+Actual evidence is not a clean threshold-only explanation:FULL already has lower CALMacro-F1 thanB0,and initial-anchor drift is larger but not causally identified as the reason. Fold3CAL has extreme logits and15.765%FP32probability saturation in all3bodies. This prompted a separately source-frozen[unlabeled input arithmetic extension](FEATURE_NUMERIC_AUDIT_LOCK.json),not a change to the completed diagnostic. No extension outcomes existed when this extension was frozen. Coordinates are audited by index without guessing their physiological meaning.
+
+Run`python verify_public.py`for the original11-member public diagnostic package. It checks source/payload hashes andaggregate structure,not the private360-case recomputation. The numeric extension has its own separate explicit package andsource binding.

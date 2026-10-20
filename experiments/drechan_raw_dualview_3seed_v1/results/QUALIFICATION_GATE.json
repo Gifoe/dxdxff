@@ -1,0 +1,12 @@
+{
+  "active_goal_achieved": false,
+  "both_separate_PR_point_rules_pass": true,
+  "expanded_reference_point_rule_pass": false,
+  "global_view_point_rule_pass": false,
+  "new_Outer_authorized": false,
+  "performance_margin_pass": false,
+  "point_rule_not_formal_inference": true,
+  "pre_reference_point_rule_pass": true,
+  "qualified_for_final_study_planning": false,
+  "status": "FAIL"
+}

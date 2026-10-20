@@ -1,0 +1,11 @@
+{
+  "independent_confirmation": false,
+  "no_extra_aliases": true,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 90,
+  "patient_rows": 400,
+  "primary_family_intervals": 10,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_arm": null,
+  "status": "ALL5_FIXED_GROUPS_SEED42_REPORTED"
+}

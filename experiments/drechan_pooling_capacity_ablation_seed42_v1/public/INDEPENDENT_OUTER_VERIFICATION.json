@@ -1,0 +1,15 @@
+{
+  "all25_model_selections_frozen": true,
+  "all5_arms_without_late_gate": true,
+  "all5_complete80_verified": true,
+  "maximum_interval_difference": 8.881784197001252e-16,
+  "no_extra_aliases": true,
+  "no_post_Outer_tuning": true,
+  "nominal_interval_checks": 90,
+  "patient_metric_checks": 3600,
+  "patient_rows": 400,
+  "primary_family_interval_checks": 10,
+  "reused_scores_unchanged": true,
+  "seed42_only": true,
+  "status": "PASS"
+}

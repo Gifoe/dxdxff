@@ -1,7 +1,7 @@
 param([string]$RunTag='repair01',[string]$SourceCommit='', [switch]$AdmissionOnly)
 $ErrorActionPreference='Stop'
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new($false)
-$runtime='D:\drechan_pooling_capacity_ablation_seed42_v1_runtime';$execution='D:\drechan_poolcap_masked_time_repair_v1'
+$runtime='D:\drechan_pooling_capacity_ablation_seed42_v1_runtime';$execution='D:\drechan_poolcap_masked_time_repair_v2'
 $python='D:\drechan_temporal_pr_contrast_3seed_v1_env\Scripts\python.exe'
 $env:OMP_NUM_THREADS='1';$env:MKL_NUM_THREADS='1';$env:OPENBLAS_NUM_THREADS='1';$env:PYTHONUNBUFFERED='1';$env:PCA_SOURCE_COMMIT=$SourceCommit
 $guard=[IO.File]::Open((Join-Path $runtime 'coordinator.lock'),[IO.FileMode]::OpenOrCreate,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None)

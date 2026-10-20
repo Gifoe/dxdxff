@@ -2,11 +2,11 @@
   "base_source_commit": "a48d47948191ff3fb3bacc680d326c6f406def3d",
   "kind": "ENGINEERING_MASKED_TIME_EXECUTION_OVERLAY",
   "execution_source": {
+    "run_repaired.ps1": "f02ed144152299fc20d4684a6f05226bfa0bd6a9eed0ab687848dfeeaec21643",
+    "repair.py": "65a4939ee4c673ae0295319165ab31f4d34091093f1c7e8332d585740aab64f1",
     "diagnose.py": "f04548e4a7ad78055b50b3851875b3606b529c62d95740762fefa55381f7ef96",
-    "run_repaired.ps1": "0fba5756e1bd785ac0a434c661ab6959eaab98f8bf0bf996ded21cd5334168c8",
-    "admit_repair.py": "131eff27e18cd5c0837403f0735167836462ded5c19af45fa2264a0a5ec96120",
     "entry.py": "5acfd51514399a71abc60955ccc4f1148808c6c2a5a69ef88edc66127c0b8275",
-    "repair.py": "65a4939ee4c673ae0295319165ab31f4d34091093f1c7e8332d585740aab64f1"
+    "admit_repair.py": "e2d581080f8305951fec55abc5cb39cfe78591c313fe2a430c566dd8130ee660"
   },
   "scope": "Only sanitize masked scorer inputs before matmul. Valid support tensor math and parameters unchanged; old13scientific files, P1completeepoch/checkpoint, optimizer/loss/roles/budgets preserved.",
   "scientific_source": {
@@ -23,5 +23,7 @@
     "train.py": "ff1156b2fdb6914990850809a4433915809c50c8bbc70f24b20b2867d5c0dbb6",
     "verify_internal.py": "bd3b3c22bf2dead97858bbe01160395b86972681393efbf501adb91fb75dd262",
     "verify_outer.py": "253671c66fb50e8ebc8ec3fbb4a322427fe71eb04125256c31ff3a669851f412"
-  }
+  },
+  "revision": 2,
+  "admission_coverage": "Original five-fold FIT union contains79patients; one patient is validation-only across FIT roles. Check255FIT+65legal validation supports label-free with zero optimizer updates, covering all80without changing roles or using Outer."
 }

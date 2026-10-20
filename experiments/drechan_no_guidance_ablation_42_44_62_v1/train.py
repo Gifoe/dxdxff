@@ -1,0 +1,84 @@
+"""Complete255cells: fixed selected42/44/62 no-guidance matrix and strict50reuses."""
+import os
+import re
+import time
+from common import *
+
+def fit(arm,seed,fold,binding,core,fac,records,banks,inputs):
+    d=bank(fold,banks,arm);ss=scale(fold);training_seed=seed+1009*fold;m=make(core,fac,records,fold,arm,seed)
+    root=ROOT/'models_private'/arm/f'seed{seed}'/f'fold{fold}';root.mkdir(parents=True,exist_ok=True)
+    bind=dict(input=binding,arm=arm,seed=seed,fold=fold,initial=state_hash(m.state_dict()),preprocessor=preprocessor(d,ss))
+    last,bp,vp,done=[root/n for n in ['LAST_PRIVATE.pt','BEST_PRIVATE.pt','VALIDATION_PRIVATE.pkl','COMPLETE_PRIVATE.json']]
+    if done.exists():
+        q=jr(done);assert q['binding']==digest(bind) and sha(bp)==q['best_sha256'] and sha(vp)==q['validation_sha256']
+        v=read(vp);assert v['binding']==bind;return v['summary'],v['history']
+    seed_all(training_seed);opt=torch.optim.AdamW(m.parameters(),lr=.0003,weight_decay=.001)
+    tr,va=d['train'],d['val'];pos=torch.tensor(float((1-d['y'][tr]).sum()/d['y'][tr].sum()),device='cuda')
+    best=key=None;history=[];stale=0;start=1
+    if last.exists():
+        q=torch.load(last,weights_only=False,map_location='cpu');assert q['binding']==bind
+        m.load_state_dict(q['model']);opt.load_state_dict(q['optimizer']);core.restore_rng(q['rng'])
+        best,key,history,stale,start=q['best'],q['key'],q['history'],q['stale'],q['epoch']+1
+        if q['epoch']>=6 and stale>=6:start=31
+    groups=[tr[d['patient'][tr]==pid] for pid in sorted(set(d['patient'][tr]))]
+    for epoch in range(start,31):
+        tick=time.perf_counter();m.train();losses=[]
+        for k in np.random.default_rng(training_seed+epoch).permutation(len(groups)):
+            ii=groups[int(k)];y=torch.as_tensor(d['y'][ii],device='cuda',dtype=torch.float32)
+            opt.zero_grad(set_to_none=True);logit,_=forward(m,d,ii,inputs,ss,fold,binding);loss=MODEL.objective(logit,y,pos)
+            assert torch.isfinite(loss);loss.backward()
+            assert all(p.grad is not None and torch.isfinite(p.grad).all() for p in m.parameters())
+            torch.nn.utils.clip_grad_norm_(m.parameters(),1.);opt.step();losses.append(float(loss.detach().cpu()))
+            del logit,loss,y
+        out=predict(m,d,va,inputs,ss,fold,binding)
+        sel=core.select_threshold(d['y'][va],probability(out),d['patient'][va]);candidate=(sel['macro_f1'],sel['ez_f1'],-epoch)
+        if key is None or candidate>key:
+            key=candidate;stale=0;best=dict(model={k:v.detach().cpu().clone() for k,v in m.state_dict().items()},epoch=epoch,**sel)
+        else:stale+=1
+        history.append(dict(arm=arm,seed=seed,fold=fold,epoch=epoch,seconds=time.perf_counter()-tick,loss=float(np.mean(losses)),**sel))
+        atomic_torch(last,dict(binding=bind,model=m.state_dict(),optimizer=opt.state_dict(),rng=core.rng_state(),best=best,key=key,history=history,stale=stale,epoch=epoch))
+        write(PUB/'TRAIN_STATUS.json',dict(status='TRAINING',arm=arm,seed=seed,fold=fold,epoch=epoch,best_epoch=best['epoch'],logical_cells_total=255))
+        print('NGA_EPOCH',arm,seed,fold,epoch,'best',best['epoch'],'seconds',round(history[-1]['seconds'],3),flush=True)
+        if epoch>=6 and stale>=6:break
+    assert best['epoch']>=1;m.load_state_dict(best['model']);atomic_torch(bp,dict(binding=bind,**best))
+    out=predict(m,d,va,inputs,ss,fold,binding);sel=core.select_threshold(d['y'][va],probability(out),d['patient'][va])
+    assert all(abs(float(v)-float(best[k]))<1e-12 for k,v in sel.items())
+    summary=dict(arm=arm,seed=seed,fold=fold,epochs=len(history),epoch=int(best['epoch']),threshold=float(best['threshold']),parameters=sum(p.numel() for p in m.parameters()),
+        checkpoint=str(bp),checkpoint_sha256=sha(bp),validation=str(vp),preprocessor=preprocessor(d,ss),reused=False,reuse_kind='NONE')
+    save(vp,dict(binding=bind,archive_indices=d['archive_indices'][va],logit=out,summary=summary,history=history))
+    write(done,dict(binding=digest(bind),best_sha256=sha(bp),validation_sha256=sha(vp)))
+    del m,opt;gc.collect();torch.cuda.empty_cache();return summary,history
+
+def main():
+    binding,core,fac,records,rec,banks=setup();admission=jr(PUB/'ADMISSION.json')
+    assert admission['status']=='PASS' and admission['source']==sources()
+    commit=os.environ.get('NGA_SOURCE_COMMIT','');assert re.fullmatch('[0-9a-f]{40}',commit),'Verified pre-training source push required'
+    freeze(PUB/'SOURCE_PUSH_BEFORE_TRAIN.json',dict(commit=commit,source=sources(),source_pushed_before_formal_fits=True))
+    inputs=store();cells=[];histories=[]
+    for seed in SEEDS:
+        for fold in range(1,6):
+            for arm in ARMS:
+                ref=reference(arm,seed,fold)
+                if ref is not None:
+                    r,state,v=ref;m=make(core,fac,records,fold,arm,seed)
+                    assert state_hash(m.state_dict())==v['binding']['initial']
+                    assert preprocessor(bank(fold,banks,arm),scale(fold))==r['preprocessor']
+                    r=dict(r,epochs=len(v['history']),parameters=sum(p.numel() for p in m.parameters()))
+                    del m,state,v;gc.collect();torch.cuda.empty_cache()
+                else:
+                    r,h=fit(arm,seed,fold,binding,core,fac,records,banks,inputs);histories+=h
+                    r=dict(r,validation_sha256=sha(r['validation']))
+                cells.append(r)
+                fields=['arm','seed','fold','epochs','epoch','threshold','parameters','checkpoint_sha256','validation_sha256','reused','reuse_kind']
+                csv_out('TRAIN_CELLS',[{k:q[k] for k in fields} for q in cells])
+                if histories:csv_out('TRAIN_HISTORY',histories)
+                print('NGA_TRAIN_CELL_COMPLETE',arm,seed,fold,len(cells),255,flush=True)
+    assert {(r['arm'],r['seed'],r['fold']) for r in cells}==expected_cells()
+    new=sum(not r['reused'] for r in cells);assert new==admission['expected_fresh_fits']
+    assert new==205 and sum(r['reused'] for r in cells)==50
+    freeze(ROOT/'MODEL_FREEZE_PRIVATE.json',dict(input=binding,cells=cells))
+    write(PUB/'TRAIN_STATUS.json',dict(status='ALL255_MODEL_CELLS_FROZEN',actual_new_fits=new,reused_cells=255-new,
+        epochs=len(histories),model_freeze_sha256=sha(ROOT/'MODEL_FREEZE_PRIVATE.json')))
+    print('NGA_ALL255_SELECTIONS_TRAIN_COMPLETE',flush=True)
+
+if __name__=='__main__':main()

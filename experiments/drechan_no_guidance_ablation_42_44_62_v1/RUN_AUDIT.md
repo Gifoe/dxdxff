@@ -1,3 +1,5 @@
 # Execution audit
 
 Source preparation: no formal fits yet. The fixed user-selected seeds42/44/62 and no-guidance main follow historical Outer viewing. Original parent sources remain unchanged. Actual source push/admission/production/freeze/seal/verification/result-push evidence will be recorded when run.
+
+Source e871b881e2875cc1203dadb2dce15a5e000ceb11 was pushed before admission01. It stopped before formal fitting at an overly broad constructor-RNG assertion. Outcome-free diagnosis proved all16other constructors preserve Python/NumPy/CPU/CUDA states; only CAPACITY_MATCHED changes CUDA RNG, exactly as its historical head73 recipe does (torch.manual_seed inside a CPU-only fork also seeds CUDA). Original train.fit has always reseeded all RNGs with seed+1009fold immediately after model construction, before optimizer steps. Model/data/loss/optimizer/initialization math was NOT changed. Admission now checks exact legacy capacity constructor state/RNG and exact reseeded real-patient forward/loss/all-gradient/clipped-Adam/RNG parity for all3seeds. Failed logs, source and outcome-free input binding are preserved; no epoch or model training was discarded.

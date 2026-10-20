@@ -1,0 +1,11 @@
+{
+  "aliases": {
+    "WO_BOTH_GUIDANCE": "FULL",
+    "WO_EARLY_FILM": "FULL",
+    "WO_LATE_GATE": "FULL",
+    "WO_WINDOW_PR": "FULL"
+  },
+  "mismatch_not_applicable_without_FiLM": true,
+  "no_Early_Late_interaction": true,
+  "status": "ALIASES_NOT_INDEPENDENT_HYPOTHESES"
+}

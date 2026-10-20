@@ -1,0 +1,9 @@
+{
+  "files": {
+    "FEATURE_COORDINATE_NUMERICS.csv": "3cea426c2ab194a5b9cab65d20c0ae492388df87bda253858779eb278d31c428",
+    "HEAD_INPUT_PATH_SCALE.csv": "9e83d34450363ad162105ad1f1319a1514d049bcf06e133d8c6a9f591afcefbb",
+    "INPUT_NUMERIC_VERIFICATION.json": "d1f7531398aa51411fb084b19dde581f9d9f6dd1b3c36532af874cac0565031d"
+  },
+  "private_artifacts_exported": false,
+  "status": "EXPLICIT_ANONYMOUS_ALLOWLIST"
+}

@@ -8,6 +8,43 @@ from pathlib import Path
 import sys
 
 
+def verify_numeric_extension(root,own,roles):
+    p=root/'feature_numeric_extension'
+    if not p.exists():return False
+    manifest=json.loads((p/'PACKAGE_MANIFEST.json').read_text(encoding='utf-8'))
+    assert set(manifest['files'])=={'FEATURE_COORDINATE_NUMERICS.csv','HEAD_INPUT_PATH_SCALE.csv','INPUT_NUMERIC_VERIFICATION.json'}
+    assert manifest['status']=='EXPLICIT_ANONYMOUS_ALLOWLIST' and not manifest['private_artifacts_exported']
+    for n,h in manifest['files'].items():assert hashlib.sha256((p/n).read_bytes()).hexdigest()==h
+    audit=json.loads((p/'INPUT_NUMERIC_VERIFICATION.json').read_text(encoding='utf-8'))
+    assert audit['status']=='PASS' and audit['unique_selftests']==2 and audit['exact_input_bank_reconstructions']==20
+    assert audit['coordinate_rows']==280 and audit['head_path_rows']==60 and audit['independent_projection_checks']==120
+    assert audit['maximum_relative_projection_error']<1e-10 and not audit['outcome_labels_used']
+    assert audit['neural_fits']==audit['new_deployment_thresholds']==audit['assessment_metrics']==0
+    assert not audit['new_Outer'] and not audit['active_goal_achieved']
+    assert all(hashlib.sha256((own/n).read_bytes()).hexdigest()==h for n,h in audit['source']['source'].items())
+    with (p/'FEATURE_COORDINATE_NUMERICS.csv').open(encoding='utf-8',newline='') as f:coords=list(csv.DictReader(f))
+    assert len(coords)==280 and {(r['fold'],r['phase'],r['preprocessor'],r['coordinate']) for r in coords}=={
+        (str(f),phase,prep,f'coord_{c:02d}') for f in range(1,6) for phase in ['TRAIN','CAL'] for prep in ['FeaturePR','NoFeaturePR'] for c in range(14)}
+    for r in coords:
+        active=int(r['coordinate'].split('_')[1]) not in [8,9]
+        assert (r['active']=='True')==active and int(r['channels'])==int(roles[(r['fold'],)][r['phase']+'_channels'])
+        assert int(r['patients'])==int(roles[(r['fold'],)][r['phase']+'_patients'])
+        assert float(r['TRAIN_scale'])>0 and float(r['TRAIN_variance'])>=0
+        assert (r['TRAIN_scale_below_1e_minus8']=='True')==(float(r['TRAIN_scale'])<1e-8)
+        assert 0<=float(r['before_finite_fraction'])<=1 and 0<=float(r['fraction_after_abs_above1000'])<=float(r['fraction_after_abs_above10'])<=1
+        assert 0<=float(r['after_abs_q50'])<=float(r['after_abs_q99'])<=float(r['after_abs_max'])
+    with (p/'HEAD_INPUT_PATH_SCALE.csv').open(encoding='utf-8',newline='') as f:paths=list(csv.DictReader(f))
+    assert len(paths)==60 and {(r['arm'],r['seed'],r['fold'],r['phase']) for r in paths}=={
+        (a,str(s),str(f),phase) for a in ['PRUNED_REF','FULL'] for s in [42,43,44] for f in range(1,6) for phase in ['TRAIN','CAL']}
+    for r in paths:
+        a,b=float(r['raw_preactivation_rms']),float(r['physiology_preactivation_rms'])
+        assert math.isfinite(a) and math.isfinite(b) and a>=0 and b>=0
+        value=b/max(a,1e-12);assert abs(float(r['physiology_to_raw_rms'])-value)<=1e-12+1e-10*abs(value)
+        assert (r['raw_rms_floor_active']=='True')==(a<1e-12)
+        assert r['float64_descriptive_projection_not_FP32_logit']=='True' and r['no_prediction_or_model_change']=='True'
+    return True
+
+
 def main(root):
     own=Path(__file__).resolve().parent
     def read(name):return json.loads((root/name).read_text(encoding='utf-8'))
@@ -65,8 +102,9 @@ def main(root):
     assert audit['neural_fits']==audit['assessment_metrics']==0 and not audit['new_Outer'] and not audit['active_goal_achieved']
     status=read('RUN_STATUS.json');assert status['status']=='ALL45_DIAGNOSTIC_CELLS_REPORTED'
     assert status['neural_fits']==status['new_deployment_thresholds']==status['assessment_metrics']==0 and not status['new_Outer'] and not status['active_goal_achieved']
+    numeric=verify_numeric_extension(root,own,roles)
     print(json.dumps(dict(status='PASS',public_package_members=11,source_files=8,CAL_cells=45,latent_phase_cells=60,score_phase_cells=75,
-                          private_data_used=False,private_360_case_recomputation=False,private_verifier_required=True)))
+                          numeric_extension_verified=numeric,private_data_used=False,private_360_case_recomputation=False,private_verifier_required=True)))
 
 
 if __name__=='__main__':main(Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parent/'results')

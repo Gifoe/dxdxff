@@ -1,0 +1,24 @@
+{
+  "active_goal_achieved": false,
+  "assessment_metrics": 0,
+  "coordinate_rows": 280,
+  "exact_input_bank_reconstructions": 20,
+  "head_path_rows": 60,
+  "independent_projection_checks": 120,
+  "maximum_relative_projection_error": 5.613945828101816e-15,
+  "neural_fits": 0,
+  "new_Outer": false,
+  "new_deployment_thresholds": 0,
+  "outcome_labels_used": false,
+  "source": {
+    "diagnostic_binding": "673eaff99d699133db1fede0e6ade64f70bf6e029086edf9f60eaac96d806242",
+    "diagnostic_cache_seal_sha256": "cc5ab7f0100c1ec08c81fe9d257a089bc21215ca335b739fa1bf06f45999088e",
+    "source": {
+      "FEATURE_NUMERIC_AUDIT_LOCK.json": "82dc4834afd61408bde5394776047862dc6e51d0ca7125c9a561bbdbf542e0a1",
+      "feature_numeric_audit.py": "0f151f2a3ab370f825950df0f080d067a4a17b69928e12afa2c887281eb98997"
+    },
+    "source_commit": "47250a4dea32e6a70f6c74968cf55a42b04ed518"
+  },
+  "status": "PASS",
+  "unique_selftests": 2
+}

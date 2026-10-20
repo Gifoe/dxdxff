@@ -1,0 +1,11 @@
+{
+  "independent_confirmation": false,
+  "metric_seed_averaging_not_ensemble": true,
+  "no_matched_Full_52_62_run": true,
+  "no_post_Outer_tuning": true,
+  "nominal_intervals": 27,
+  "patient_rows": 160,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "selected_seed": null,
+  "status": "NO_EARLY_SEEDS52_62_REPORTED"
+}

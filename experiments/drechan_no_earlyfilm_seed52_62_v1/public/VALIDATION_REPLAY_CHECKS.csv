@@ -1,0 +1,11 @@
+arm,seed,fold,validation_logits_bit_exact,selected_epoch,threshold,parameters,reused
+WO_EARLY_FILM,52,1,True,11,0.42,9329,False
+WO_EARLY_FILM,52,2,True,4,0.38,9329,False
+WO_EARLY_FILM,52,3,True,2,0.375,9329,False
+WO_EARLY_FILM,52,4,True,8,0.335,9329,False
+WO_EARLY_FILM,52,5,True,8,0.37,9329,False
+WO_EARLY_FILM,62,1,True,6,0.495,9329,False
+WO_EARLY_FILM,62,2,True,9,0.325,9329,False
+WO_EARLY_FILM,62,3,True,2,0.415,9329,False
+WO_EARLY_FILM,62,4,True,4,0.38,9329,False
+WO_EARLY_FILM,62,5,True,8,0.405,9329,False

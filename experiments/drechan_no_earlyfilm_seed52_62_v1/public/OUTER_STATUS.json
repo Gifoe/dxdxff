@@ -1,0 +1,18 @@
+{
+  "arms": 1,
+  "channels_each": 7635,
+  "freeze_sha256": "0c4347bd584e0b49cf57987bcfa833a296971c6852ea184501bae5fabce2e37a",
+  "independent_confirmation": false,
+  "logical_model_cells": 10,
+  "metric_checks": 1440,
+  "patient_rows": 160,
+  "patients_each": 80,
+  "scientific_status": "EXPLORATORY_REPEATED_TEST",
+  "score_seal_sha256": "f50a576d9031e978285c783587c40ad6a67ebbebafc523ce1b2124de94de9826",
+  "seeds": [
+    52,
+    62
+  ],
+  "selected_seed": null,
+  "status": "COMPLETE_VERIFIED_NO_EARLY_SEEDS52_62_FIVE_FOLD_OUTER"
+}

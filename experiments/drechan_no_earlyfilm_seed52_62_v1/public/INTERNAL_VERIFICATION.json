@@ -1,0 +1,9 @@
+{
+  "FIT_only_preprocessing_independently_reconstructed": 5,
+  "actual_new_fits": 10,
+  "all_models_no_early_no_late": true,
+  "checkpoint_checks": 10,
+  "reused_cells": 0,
+  "status": "PASS",
+  "validation_logits_bit_exact": true
+}

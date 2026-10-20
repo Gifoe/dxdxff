@@ -1,0 +1,11 @@
+{
+  "all10_model_selections_frozen": true,
+  "maximum_interval_difference": 5.551115123125783e-16,
+  "metric_seed_averaging_not_ensemble": true,
+  "no_post_Outer_tuning": true,
+  "nominal_interval_checks": 27,
+  "patient_metric_checks": 1440,
+  "patient_rows": 160,
+  "status": "PASS",
+  "unique_patient_resampling": true
+}

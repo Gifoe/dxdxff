@@ -1,0 +1,11 @@
+arm,seed,fold,patients,channels,raw_consumed,reused_scientific_cell,reused_patient_caches,coverage_source_sha256,valid_windows,relative_active_coordinates,relative_used_coordinates,global_fallback_coordinates,relative_singleton_valid_windows,mismatch_changed_valid_windows,mismatch_eligible_valid_windows,mismatch_singleton_valid_windows
+WO_EARLY_FILM,52,1,16,1631,True,False,0,,333155,0,0,0,0,0,0,0
+WO_EARLY_FILM,52,2,16,1498,True,False,0,,265639,0,0,0,0,0,0,0
+WO_EARLY_FILM,52,3,17,1746,True,False,0,,375476,0,0,0,0,0,0,0
+WO_EARLY_FILM,52,4,15,1425,True,False,0,,244998,0,0,0,0,0,0,0
+WO_EARLY_FILM,52,5,16,1335,True,False,0,,252697,0,0,0,0,0,0,0
+WO_EARLY_FILM,62,1,16,1631,True,False,0,,333155,0,0,0,0,0,0,0
+WO_EARLY_FILM,62,2,16,1498,True,False,0,,265639,0,0,0,0,0,0,0
+WO_EARLY_FILM,62,3,17,1746,True,False,0,,375476,0,0,0,0,0,0,0
+WO_EARLY_FILM,62,4,15,1425,True,False,0,,244998,0,0,0,0,0,0,0
+WO_EARLY_FILM,62,5,16,1335,True,False,0,,252697,0,0,0,0,0,0,0

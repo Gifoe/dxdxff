@@ -1,0 +1,7 @@
+{
+  "actual_new_fits": 10,
+  "epochs": 122,
+  "model_freeze_sha256": "9fccbb473abe573e56b0aee26e2e825fac440660b7f81b02f8971c00910e86f9",
+  "reused_cells": 0,
+  "status": "ALL10_MODEL_CELLS_FROZEN"
+}

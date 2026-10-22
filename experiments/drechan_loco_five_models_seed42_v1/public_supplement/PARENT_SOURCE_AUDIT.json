@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "phase": "postrun_release_supplement",
+  "audited_at": "2026-10-23T01:42:16.7399067+08:00",
+  "reason": "The new admission dependency enumerator selected D-drive directories containing seed. The immutable parent directory drechan_no_guidance_ablation_42_44_62_v1 does not contain that token, omitting its common.py/model.py from that enumerated56-file map. Both are already frozen in the historical parent admission predating this LOCO run. This postrun check compares current authenticated server files and repository files to that historical admission; it is NOT represented as a new pre-fit timestamp.",
+  "historical_admission": "experiments/drechan_no_guidance_ablation_42_44_62_v1/public_admission/ADMISSION.json",
+  "files": {
+    "experiments/drechan_no_guidance_ablation_42_44_62_v1/common.py": "ae14dfc827eac27c91dce007a25db1dba8f5e846800c9f15bccd7a69a8255196",
+    "experiments/drechan_no_guidance_ablation_42_44_62_v1/model.py": "efc1b3ce5fb8997df1c1f0db391d734f546656b079d644d4fe95b34d83a82775"
+  },
+  "both_match_historical_preexisting_admission": true,
+  "scientific_models_or_scores_changed": false,
+  "original_anonymous_package_changed": false
+}

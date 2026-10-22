@@ -1,0 +1,13 @@
+{
+  "all20_frozen": true,
+  "all20_scores_sealed": true,
+  "family_intervals": 8,
+  "freeze_sha256": "3e7bdd95ee8c3c71af62c9284bc298fc93b4f2ca08d002eba35a17b7d3271324",
+  "labels_used_for_fit_only_inside_own_source_roles": true,
+  "maximum_numeric_error": 1.3877787807814457e-16,
+  "metric_values": 3600,
+  "nominal_intervals": 405,
+  "patient_rows": 400,
+  "seal_sha256": "dd5974e68af150f294ae0523f453dd654b177a10c37ecb49e63536bdc3f4ff01",
+  "status": "COMPLETE_VERIFIED_LOCO_5_MODELS_4_SOURCES_SEED42"
+}

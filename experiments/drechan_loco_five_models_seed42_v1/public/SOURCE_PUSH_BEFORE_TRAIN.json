@@ -1,0 +1,17 @@
+{
+  "admission_sha256": "2b80cc5d9dc19bc1e7796ccc0bb50a354b92bb20791b9d098dc45ca499b45959",
+  "commit": "9401bb8c73d0e3524bb110928ee9a848d617b51f",
+  "pushed_before_fit": true,
+  "source": {
+    "ENVIRONMENT_LOCK.json": "808ef78a67c93dab553b0ee598c38cd0837630af77966d405f92974c81028bdc",
+    "PROTOCOL_LOCK.json": "19220bf86e1559f86d74df34d2dad88d69e26af915592fa248db8f1f861ff607",
+    "admit.py": "7f3645d6877ae04f1c3c655b72a622c9a7f06abe1fece512a7cb1f248e08def5",
+    "affinity_entry.py": "3a740c93088dbed561b7fd3486d4e0e7bd2eaf3ef05060a46fa8be7fe243c4a8",
+    "common.py": "895126fdf1ea4affb59e323b374679807c7074118e1c3d90f770d5da0515c4c6",
+    "pipeline.py": "76487ef2f0a033a9c7d9581663802f98b27f2420ea6a0b2fac362715ec6e1e2e",
+    "run_all.ps1": "5d6c9a5a16dc2a8d2f0c5b0966b22ad55e31d81b8a9cdcefbbff9422e2813813",
+    "svm.py": "67c8b5cba527686720298d585689ec4ac2ab71d8b0d55069d1963d4ee8d31a88",
+    "test_contract.py": "8a7611fbe41b5852b08ca1d7761b14778d1e3f31df719fb3502a3128cd553302",
+    "timeconv_engine.py": "d7e7360b1f809826c15edbb6e5fa051193b1a66f68e427897522db8d179aa0ad"
+  }
+}

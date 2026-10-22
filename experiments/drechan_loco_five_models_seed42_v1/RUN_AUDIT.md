@@ -1,5 +1,46 @@
 # Execution audit
 
+## Final state: completed, not just launched
+
+Completed2026-10-23, production01 owner exited0. All20 selections are fresh,
+all20 validation scores replay bit-exact, all20 test score cells seal before
+metrics. Independent PASS400 patient rows/3600 endpoints/405 nominal/8 family
+intervals; reported aggregate numeric discrepancy1.3877787807814457e-16,
+all verification bounds1e-12. No formal training/inference restart or discarded
+completed epoch. Actual neural epochs201:45Full,59Raw,55Feature,42TimeConv.
+Four final SVMs plus12 OOF SVM submodels and4 Platt calibrators are auxiliary fits.
+
+Freeze SHA256:3e7bdd95ee8c3c71af62c9284bc298fc93b4f2ca08d002eba35a17b7d3271324.
+Score seal SHA256:dd5974e68af150f294ae0523f453dd654b177a10c37ecb49e63536bdc3f4ff01.
+Anonymous package43738bytes,24 explicit payloads plus manifest, SHA256
+5490828012ef69f0487cf6fa985556adafe82264c4d4f15e7126c9d9c3591427.
+Native authenticated framed transfer independently matched the package SHA;
+local release check passed source hashes,56 admission-enumerated dependencies, manifest, schemas,
+counts and privacy allowlist BEFORE extraction. No private artifacts fetched.
+
+Training ended around01:19:47; validation replay01:20..01:21; test inference
+01:21..01:24; report, independent verification and package completed around01:25.
+At01:12 shared GPU use had risen to83%/12932MiB with non-owned compute processes;
+last TimeConv rounds varied from137 to~195s. Other jobs were never modified.
+Training timing is diagnostic only, not a controlled speed comparison.
+
+Actual primary Full Macro-F1=.627380085529064, AUROC=.752589022316244.
+Interpretation and all9 metrics are in FINDINGS/public, including negative or
+uncertain comparisons. No main/seed/threshold replacement based on these tests.
+
+## Chronological pre-fit record
+
+Release supplementation: the dependency enumerator's D-directory-name filter
+omitted the parent NGA common/model files because that directory has no literal
+seed token. At01:42 authenticated server hashes and exact repository bytes for
+both matched their already-published historical pre-LOCO admission hashes. The
+separate public_supplement audit records this postrun check without pretending
+it was a new pre-fit timestamp. All58 imported scientific dependencies are now
+covered by the combined records. No model/data/selection/score/result was changed;
+the original anonymous package and its manifest remain byte-identical. Minimal
+release archives also explicitly include parent CPU fixtures and their relative-
+guidance helper; these are already tracked in the full repository.
+
 - Scientific plan: user-approved five-model, four-source LOCO; seed42 only.
 - Parent: completed no-guidance DREChannNet branch; no trained artifact reuse.
 - Privacy: code and anonymous aggregate outputs only; private artifacts stay server.

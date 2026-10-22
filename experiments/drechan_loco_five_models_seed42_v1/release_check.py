@@ -19,6 +19,21 @@ def main():
     if proof:
         assert proof['status']=='PASS' and proof['initialization_cells']==16 and proof['no_test_inference']
         for n,h in proof['source'].items():assert sha(HERE/n)==h,(n,'SOURCE_CHANGED_AFTER_ADMISSION')
+        if HERE.parent.name=='experiments':
+            repo=HERE.parents[1];checked=endings=0
+            for remote,expected in proof['binding']['dependencies'].items():
+                tail=remote.replace('\\','/')[3:]
+                if remote.startswith('E:'):tail=tail.split('DRE-nips/new-pipeline/7-11/',1)[1]
+                candidates=[repo/'experiments'/tail,repo/'dre/experiments'/tail]
+                local=next((p for p in candidates if p.is_file()),None);assert local is not None,tail
+                data=local.read_bytes()
+                if hashlib.sha256(data).hexdigest()!=expected:
+                    lf=data.replace(b'\r\n',b'\n')
+                    assert expected in [hashlib.sha256(lf).hexdigest(),hashlib.sha256(lf.replace(b'\n',b'\r\n')).hexdigest()],(tail,'DEPENDENCY_CODE_CHANGED')
+                    endings+=1
+                checked+=1
+            assert checked==56
+            print('ALL56_IMMUTABLE_DEPENDENCIES_PRESENT_CODE_IDENTICAL',dict(line_ending_only_differences=endings))
     if args.package:
         assert proof is not None
         tree=ast.parse((HERE/'pipeline.py').read_text());node=next(n for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='ALLOW' for t in n.targets));allow=ast.literal_eval(node.value)

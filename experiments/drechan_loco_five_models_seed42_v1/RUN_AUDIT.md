@@ -49,3 +49,7 @@
   no stderr. These timings do not predict TimeConv throughput or total duration.
 - No test outcomes read. Completion remains pending until all20 freezes, all20
   seals,400 patient rows/3600 metrics and independent interval checks pass.
+- Additional unchanged-parent CPU model tests:8/8 PASS locally. The release-only
+  checker resolves all56 imported scientific code dependencies in this repository;
+ 54 are byte-identical in checkout, two differ only by LF/CRLF and normalize to
+  the exact admitted hashes. No parent source or server dependency was changed.

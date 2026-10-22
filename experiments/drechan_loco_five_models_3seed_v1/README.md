@@ -1,5 +1,9 @@
 # Four-source LOCO, five fixed models: seeds42/43/44
 
+Production started2026-10-23T03:52+08:00 after real admission/source proof was
+pushed and remote-verified. New results are PENDING; no unrun values reported.
+See RUN_AUDIT.md and public_admission for actual launch and admission evidence.
+
 Prospective extension of the completed seed42 protocol, not a new architecture or search.
 Hold the ORIGINAL seed42 FIT/validation/test patient roles fixed. Vary neural
 initialization, training patient order/dropout, and SVM patient-group OOF calibration

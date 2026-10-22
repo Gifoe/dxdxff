@@ -41,3 +41,19 @@ Anonymous admission archive20327bytes, SHA
 Native pinned authenticated transfer and local allowlist/source/hash verifier
 passed before extraction. Actual Git archive CPU and AST parity checks passed.
 This is admission evidence, NOT completed new training or test results.
+
+Production01 started2026-10-23T03:52:16+08:00 after admission/source commit
+14479b6b8f0daaaacc30ce3a14a458c0cf74ae9f was pushed and remote-verified.
+Exact command: run_all.ps1 -RunTag production01 -SourceCommit
+14479b6b8f0daaaacc30ce3a14a458c0cf74ae9f -StopAfter All.
+Sustained native pinned foreground SSH owner; coordinator42396, initial train
+worker29728/venv-child34504. At03:53 seed43/HUP-held-out Raw+Feature epoch12
+was progressing, about3.25..3.28s/epoch after warmup, stderr empty. No new test
+predictions or outcome-based selection. No unrelated process/GPU changes.
+
+Actual committed-tree release archive passed3CPUtests,21-function AST parity,
+all13 anonymous admission payload hashes exact, and package source/hash checks.
+All12 scientific-file hashes remain unchanged; this addition is execution-only
+audit, not a model/data/budget revision. Completion still requires40fresh fits,
+all60 freezes/seals,1200patient-seed rows/10800metrics/405nominal/8family checks,
+and a final anonymous package upload with remote-tip verification.

@@ -1,0 +1,8 @@
+{
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "pillow": "12.0.0",
+  "isolated_dependency_files": 323,
+  "isolated_dependency_tree_sha256": "781dfd752d3b9fc8467d9391242dab931f91beb4d945faea84864f80df59f9bc",
+  "provenance": "Existing server-installed torchvision/Pillow packages copied byte-identically to experiment-only D-drive dependency directory; original Python environment unmodified; TorchVision requires torch==2.11.0. No pretrained weights. Exclude generated pyc/__pycache__ from immutable tree digest."
+}

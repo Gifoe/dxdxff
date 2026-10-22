@@ -1,0 +1,136 @@
+{
+  "task": "drechan_loco_five_models_3seed_v1",
+  "sources": [
+    "hup",
+    "lzu",
+    "multicenter",
+    "pediatric"
+  ],
+  "source_patients": [
+    36,
+    21,
+    15,
+    8
+  ],
+  "arms": [
+    "OURS_RAW_FEATURE",
+    "OURS_RAW",
+    "OURS_FEATURE",
+    "LINEAR_SVM_FEATURE_PR",
+    "TIMECONVCNN_RAW"
+  ],
+  "role_counts": [
+    [
+      34,
+      10,
+      36
+    ],
+    [
+      46,
+      13,
+      21
+    ],
+    [
+      50,
+      15,
+      15
+    ],
+    [
+      56,
+      16,
+      8
+    ]
+  ],
+  "cohort": {
+    "patients": 80,
+    "channels": 7635,
+    "seizures": 256,
+    "valid_windows": 1471965
+  },
+  "split": "One entire source test. Within every other source sort canonical patient keys, permute with numpy default_rng(42+1009*held_index+53*source_index), indices one-based; first ceil(.2*n) validation. No labels used. Same roles for all arms. Identical original seed42 roles in all three runs. Split randomness does not vary.",
+  "features": [
+    "beta",
+    "low_gamma",
+    "partial_high_gamma_80_125",
+    "rms",
+    "line_length",
+    "spectral_entropy_10_125"
+  ],
+  "feature_mask": "R14 coordinates8,9 zero BEFORE fitting or relative statistics. Fixed14 slots,12active. Corrected parent feature_pr.prepare/query with FIT-only unit scales, imputation and final scaling. Complete patient channel support only; never source-level target statistics.",
+  "initialization": "train_seed+1009*held_index, seeds42/43/44 fixed before new fits; original complete initializer and branch slices unchanged.",
+  "ours": {
+    "arms_map": {
+      "OURS_RAW_FEATURE": "FULL",
+      "OURS_RAW": "RAW_ONLY",
+      "OURS_FEATURE": "PHYSIOLOGY_ONLY"
+    },
+    "lr": 0.0003,
+    "weight_decay": 0.001,
+    "precision": "FP32",
+    "TF32": false,
+    "chunk": 4096,
+    "head": 64,
+    "loss": "original .75 weightedNEZ_BCE+.25 softMacroF1",
+    "full_patient_updates": true
+  },
+  "timeconv": {
+    "version": "Original_no_PR",
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "chunk": 128,
+    "fused_AdamW": true,
+    "training_precision": "BF16",
+    "validation_test_precision": "FP32",
+    "TF32": false,
+    "loss": "original FIT-weightedNEZ_BCE",
+    "aggregation": "original all-valid-window mean per seizure then equal-seizure mean/popSD",
+    "pretrained": false,
+    "full_patient_exact_gradient_cache": true
+  },
+  "budget": {
+    "max_epochs": 30,
+    "min_epochs": 6,
+    "patience": 6,
+    "gradient_clip": 1
+  },
+  "svm": {
+    "kernel": "linear",
+    "C": 1,
+    "probability": false,
+    "cache_size": 512,
+    "oof_splits": 3,
+    "oof_splitter": "GroupKFold(shuffle=True,random_state=train_seed+1009*held_index)",
+    "calibration": "OOF decision -> LogisticRegression(C=1e6,solver=lbfgs,max_iter=1000,tol=1e-8),patient-equal weights; every subFIT refits units/imputer/scaler; final estimator FIT only",
+    "weights": "original patient-equal times inverse pooled FIT class frequency"
+  },
+  "selection": "Original per-model threshold grids/ties. Ours NEZ<threshold via original uas_core; TimeConv/SVM EZ>=threshold via original evaluate.py. Epoch key patientMacroF1,EZF1,earlierEpoch. No FIT+VAL refit, no performance gate or hyperparameter search.",
+  "phases": "Strict20 seed42 sealed reuses;40 fresh selections seed43/44. ALL60 selections freeze BEFORE any new test. ALL60 scores seal BEFORE metrics. Existing seed42 results remain historical and already viewed.",
+  "statistics": {
+    "draws": 10000,
+    "seed": 42,
+    "sampling": "paired patients WITHIN each source, fixed source sample sizes; intervals conditional on these four sources",
+    "primary": "Average each patient endpoint across3seeds, then equal80patients; never probability ensemble or bestseed",
+    "separate": "source-equal over4,source sampleSD,pooled,per-source",
+    "contrasts": "OURS_RAW_FEATURE minus each other arm",
+    "family": "8contrasts=4controls x AUROC/MacroF1; Bonferroni percentile tails .05/16",
+    "rows": 1200,
+    "metric_values": 10800,
+    "seeds": 3,
+    "seed_sample_sd": "Per-arm and per-held-source sampleSD of3 seed endpoint means",
+    "intervals": 405,
+    "family_intervals": 8
+  },
+  "scientific_status": "EXPLORATORY_LEAVE_ONE_SOURCE_OUT_HISTORICALLY_SELECTED_ARCHITECTURE",
+  "interpretation": "multicenter/pediatric are source strata not proven single hospitals. Original TimeConv uses about -29..+29s windows; ours pre-reference and0..20s stages, different objectives/precision/capacity. Package comparison NOT architecture-only. Three prespecified seeds conditional on the ORIGINAL seed42 FIT/VAL roles, four source strata, historically viewed cohort NOT independent external confirmation. Seeds42/43/44 are reported in full; no winner selection. Bootstrap averages each patient metric across seeds BEFORE within-source paired draws; does not represent unseen-source variability.",
+  "privacy": "Code/runtime/weights on serverD, caches in place. Publish source,hashes,anonymous aggregate statistics only. Raw/IDs/patient scores/weights/preprocessors/cache/logs/secrets stay server. No extraction/research skills.",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "fresh_seeds": [
+    43,
+    44
+  ],
+  "seed42_strict_reuse": true
+}

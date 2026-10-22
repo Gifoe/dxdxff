@@ -57,3 +57,12 @@
   all9 endpoints,405 nominal and8 family intervals, independent count/matmul
   bootstrap, unequal source weighting and exact zero paired contrasts. This is
   not clinical evidence or completion of the real400-patient-row verification.
+- Around00:25 onward, new Paramiko queries repeatedly failed SSH signature/banner
+  checks; failures were rejected. Existing production owner/worker stayed alive
+  and were never restarted. Native Windows OpenSSH independently verified the
+  SAME pinned Ed25519 fingerprint and restored authenticated read-only queries
+  at2026-10-23T00:35. It uses the existing credential only in a hidden local
+  pseudoterminal, never argv/env/files/output/askpass; StrictHostKeyChecking remains
+  enabled, the old verified alias is pinned, and no new host identity is accepted.
+- At00:35, actual log showed14/20 completed main cells and multicenter-held-out
+  TimeConv epoch1. No model/scaler/threshold/config change or scientific restart.

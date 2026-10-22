@@ -1,6 +1,7 @@
 """Outcome-free engineering admission and legal FIT-only backward probes."""
 import copy
 import subprocess
+from types import FunctionType
 from common import *
 import timeconv_engine as engine
 
@@ -17,6 +18,12 @@ def main():
     binding,rec,banks=setup();
     from orchestrate import reuse_gate
     reuse_gate()
+    # The historical NGA helper guards its own seeds42/44/62. Reuse its EXACT
+    # code object in an isolated reference namespace for the new prespecified
+    # seeds; never mutate the historical module or the actual model constructor.
+    reference_source_for=FunctionType(LEG.source_for.__code__,
+        dict(LEG.source_for.__globals__,SEEDS=[42,43,44]),LEG.source_for.__name__)
+    assert reference_source_for.__code__ is LEG.source_for.__code__
     initials=[];roles=[];probes=[]
     import svm
     toy_rng=np.random.default_rng(42);toy_pid=np.repeat(np.arange(12).astype(str),4)
@@ -31,7 +38,7 @@ def main():
         _,pre=feature_fit(changed,d['patient'],d['train']);assert digest(io.clean(pre))==digest(io.clean(d['pre']))
         assert np.array_equal(feature_query(d['raw'],d['patient'],d['pre']),d['x'])
         source=make_source(k)
-        original=LEG.source_for(io,SA.SourceA0,CTX['records'],k,TRAIN_SEED)
+        original=reference_source_for(io,SA.SourceA0,CTX['records'],k,TRAIN_SEED)
         assert state_hash(source.state_dict())==state_hash(original.state_dict())
         full=make('OURS_RAW_FEATURE',k);reference=LEG.MODEL.NoGuidanceF0(original,'FULL',TRAIN_SEED+1009*k+170003).cuda()
         assert state_hash(full.state_dict())==state_hash(reference.state_dict())

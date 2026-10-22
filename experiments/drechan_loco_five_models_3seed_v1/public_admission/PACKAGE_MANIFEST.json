@@ -1,0 +1,33 @@
+{
+  "files": {
+    "REUSE_AUDIT.json": "8c85de3f41f209303136d5e59507e581ef36d6cdcd19b21f63a611fd07267e2a",
+    "seed42/ADMISSION.json": "fdda4efd9cd56808610c814d62ca5c8ab2c2fac91da17789a6878f2157086ad6",
+    "seed42/INITIALIZATION_AUDIT.csv": "dbbf2d957c3b7ce9d00cf79bccbb2e93a0bb851e8afb98aa00c2bedaa1700845",
+    "seed42/INPUT_AUDIT.json": "2e11c7220da07950353f2d790114bb9608a43f93acb064e30bcca1646f73e682",
+    "seed42/ROLE_AUDIT.csv": "c223378669b144776b6dc17348e57e2ae62bd77d57f1b5a44cbe1f527a252d23",
+    "seed43/ADMISSION.json": "bc7bdc8f9501a954a5f008021d971e1ff592439a596620351a640e53a405c8ce",
+    "seed43/INITIALIZATION_AUDIT.csv": "6b8ff73f3268ae2ba6d8837de6ad086edc256ad6449f06286b1ad729a1233fc5",
+    "seed43/INPUT_AUDIT.json": "2e11c7220da07950353f2d790114bb9608a43f93acb064e30bcca1646f73e682",
+    "seed43/ROLE_AUDIT.csv": "c223378669b144776b6dc17348e57e2ae62bd77d57f1b5a44cbe1f527a252d23",
+    "seed44/ADMISSION.json": "f1f9c6379102adcd3517af1911b13e89fb1d4d61216f974d541b2d5ea0d9f523",
+    "seed44/INITIALIZATION_AUDIT.csv": "f09763d30e5151d6f0bb5ba17c3a9e838b205e8350eab8cd8723ee88c43828cb",
+    "seed44/INPUT_AUDIT.json": "2e11c7220da07950353f2d790114bb9608a43f93acb064e30bcca1646f73e682",
+    "seed44/ROLE_AUDIT.csv": "c223378669b144776b6dc17348e57e2ae62bd77d57f1b5a44cbe1f527a252d23"
+  },
+  "private_artifacts_exported": false,
+  "schema": "LOCO5_3SEED_ADMISSION_V1",
+  "source": {
+    "ENVIRONMENT_LOCK.json": "808ef78a67c93dab553b0ee598c38cd0837630af77966d405f92974c81028bdc",
+    "PARENT_LOCK.json": "e061a5564e8618edfe6b3d7e6837b2cc0db4c292f2705169e4790a844891d8ce",
+    "PROTOCOL_LOCK.json": "996d4bb6acaf87793287a9703a705a43edb0adf81dfcb55e01a606e3ec55591b",
+    "admit.py": "a1bf97bf5fe39af2c29a585e00b8f22c0c4d3c623e92174ad4d96bfd1cfbceb6",
+    "affinity_entry.py": "29bc5390f249b3fad88e8137f2ed1a6540f913962b2197d4f4b74b24e8012331",
+    "common.py": "8d3c488ba887e541073c71e511b89241b573c9d1d42188980def56b1781cd3be",
+    "orchestrate.py": "572eed48a383019abbff8ee00728aa0085a5bd99cdda71167a15a0eb08f3acab",
+    "pipeline.py": "1584685b6fc2b0f5d83ad2899d47e560e91ff4f38759b6b7c2d8162eb7b5e833",
+    "run_all.ps1": "bd56c42bb8ca68bc559f3b6d5a849ba17ddaa25f948967d2f35cc390d8c69179",
+    "svm.py": "7f4d86a9ecffe6c9ed21687ab41bfbb0da31e39f5f0d385cc7c2225aa498f6f0",
+    "test_contract.py": "e47eff2dfd3d11f465f388443d5243c05b6e8757831155ff70d6cfa20446d847",
+    "timeconv_engine.py": "d7e7360b1f809826c15edbb6e5fa051193b1a66f68e427897522db8d179aa0ad"
+  }
+}

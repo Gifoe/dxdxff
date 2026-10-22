@@ -1,0 +1,4 @@
+* text eol=lf
+public/*.json -text
+public/*.csv -text
+public_admission/*.json -text

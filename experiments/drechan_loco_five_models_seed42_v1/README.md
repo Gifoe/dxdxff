@@ -50,5 +50,6 @@ Status2026-10-22: real-server admission02 PASS,16 matched neural initializers,
 four complete legal FIT-patient backward probes and80-patient Raw coverage.
 TimeConv direct/cache logits and loss exact, max absolute gradient difference
 9.313225746154785e-10, BatchNorm buffers and RNG exact. Three CPU tests also pass
-in an actual Git archive. Formal20-cell fitting follows the verified source push;
-no test outcomes exist yet. See public_admission and RUN_AUDIT.
+in an actual Git archive. Formal20-cell fitting started2026-10-22T23:48+08:00
+after the verified source/admission push; no test outcomes exist yet.
+See public_admission and RUN_AUDIT.

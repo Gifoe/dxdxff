@@ -35,3 +35,17 @@
   e91026e1fd44f8e8f195ce43779156db476ff1297d6762ed6ddd5634be6794d1.
   Whole-file hash verified on download; admission scientific hashes match local.
 - No formal model/optimizer checkpoint or test prediction has yet been created.
+
+## Production01 launch
+
+- Started2026-10-22T23:48:02+08:00 under sustained foreground SSH owner.
+- Command: run_all.ps1 -RunTag production01 -SourceCommit
+  9401bb8c73d0e3524bb110928ee9a848d617b51f -StopAfter All.
+- Source/admission commit9401bb8 was pushed and remote-verified before launch.
+  Later0123dde7d4286a9b2e0f8bb33660a0851c556e8a changes only Git attributes
+  and byte-exact public-proof line-ending preservation, not scientific files.
+- Initial worker20256 (venv child13172). First actual HUP-held-out Raw+Feature
+  epochs1..5 completed, observed first4.198s and subsequent3.25..3.30s/epoch;
+  no stderr. These timings do not predict TimeConv throughput or total duration.
+- No test outcomes read. Completion remains pending until all20 freezes, all20
+  seals,400 patient rows/3600 metrics and independent interval checks pass.

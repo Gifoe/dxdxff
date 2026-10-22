@@ -1,4 +1,5 @@
 * text eol=lf
-public/*.json -text
-public/*.csv -text
-public_admission/*.json -text
+public/*.json -text whitespace=cr-at-eol
+public/*.csv -text whitespace=cr-at-eol
+public_admission/*.json -text whitespace=cr-at-eol
+public_admission/*.csv -text whitespace=cr-at-eol

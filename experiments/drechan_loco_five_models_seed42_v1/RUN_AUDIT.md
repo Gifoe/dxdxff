@@ -53,3 +53,7 @@
   checker resolves all56 imported scientific code dependencies in this repository;
  54 are byte-identical in checkout, two differ only by LF/CRLF and normalize to
   the exact admitted hashes. No parent source or server dependency was changed.
+- Separate release-only synthetic report test PASS: exercises400 synthetic rows,
+  all9 endpoints,405 nominal and8 family intervals, independent count/matmul
+  bootstrap, unequal source weighting and exact zero paired contrasts. This is
+  not clinical evidence or completion of the real400-patient-row verification.

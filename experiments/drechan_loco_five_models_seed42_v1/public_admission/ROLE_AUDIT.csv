@@ -1,0 +1,5 @@
+held_source,fit_patients,validation_patients,test_patients,test_channels,source_patient_disjoint
+hup,34,10,36,3667,True
+lzu,46,13,21,2141,True
+multicenter,50,15,15,925,True
+pediatric,56,16,8,902,True

@@ -17,3 +17,21 @@
 - Connection: pinned Ed25519 authentication restored2026-10-22; no security checks disabled.
 - Further admission, source-push, production and verification facts will be recorded
   from actual runs, never inferred from intended commands.
+
+## Admission02, actual server run
+
+- Source/environment correction43fafe12bd20a3703c68d19968ac26895d597e61
+  pushed and remote-verified before fitting. Deployment archive SHA256
+  3e0c482ec0892d0564786133647b1d2444dfc35c4fad51fe4737bcdb83171e90.
+- Started2026-10-22T23:44:20+08:00; owner completed successfully. PASS3 CPU
+  tests,16 scratch initializer checks with original initializer/state equality,
+  matched head slices, nonFIT preprocessing perturbation invariance, synthetic
+  OOF-SVM calibration and4 complete actual legal FIT-patient backward probes.
+- TimeConv direct/cache logits and loss exact; max absolute gradient difference
+  9.313225746154785e-10. All BN buffers and CPU/CUDA RNG exactly preserved.
+-80patients/7635channels/256seizures/1471965valid windows verified using existing
+  banks, no Raw copies. Held-source channels3667/2141/925/902 respectively.
+- Explicit4-file public proof archive SHA256
+  e91026e1fd44f8e8f195ce43779156db476ff1297d6762ed6ddd5634be6794d1.
+  Whole-file hash verified on download; admission scientific hashes match local.
+- No formal model/optimizer checkpoint or test prediction has yet been created.

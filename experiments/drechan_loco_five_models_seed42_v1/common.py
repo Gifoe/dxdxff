@@ -20,6 +20,8 @@ ARMS=['OURS_RAW_FEATURE','OURS_RAW','OURS_FEATURE','LINEAR_SVM_FEATURE_PR','TIME
 OURS=dict(OURS_RAW_FEATURE='FULL',OURS_RAW='RAW_ONLY',OURS_FEATURE='PHYSIOLOGY_ONLY')
 METRICS=['macro_f1','auroc','auprc','f1','nez_f1','accuracy','mrr','hit_at_1','ez_fraction_bias']
 KEEP=np.array([i for i in range(14) if i not in [8,9]])
+ISOLATED_DEPS=Path(r'D:\drechan_loco_five_models_seed42_v1_deps')
+sys.path.insert(0,str(ISOLATED_DEPS))
 ARCHIVE=Path(r'C:\a0_patient_local_label_reliability_seed42_runtime\gate\FEATURES_PRIVATE.npz')
 ARCHIVE_SHA='1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd'
 
@@ -56,7 +58,7 @@ def dependencies():
         p=getattr(m,'__file__',None)
         if not p:continue
         p=Path(p)
-        code_path=(p.drive.upper()=='D:' and len(p.parts)>2 and 'seed' in p.parts[1] and 'runtime' not in p.parts[1] and '_env' not in p.parts[1]) or str(p).startswith(str(SOURCE))
+        code_path=(p.drive.upper()=='D:' and len(p.parts)>2 and 'seed' in p.parts[1] and 'runtime' not in p.parts[1] and '_env' not in p.parts[1] and '_deps' not in p.parts[1]) or str(p).startswith(str(SOURCE))
         if p.suffix=='.py' and p.is_file() and p.parent!=HERE and code_path:
             # Code paths only, never private runtime artifacts or identities.
             result[str(p)]=sha(p)
@@ -90,6 +92,13 @@ def feature_query(raw,pid,pre):
 
 def setup():
     ROOT.mkdir(exist_ok=True);PUB.mkdir(exist_ok=True)
+    import torchvision
+    import PIL
+    env=jr(HERE/'ENVIRONMENT_LOCK.json')
+    assert torch.__version__==env['torch'] and torchvision.__version__==env['torchvision'] and PIL.__version__==env['pillow']
+    files=sorted(p for p in ISOLATED_DEPS.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc')
+    tree=[[p.relative_to(ISOLATED_DEPS).as_posix(),sha(p)] for p in files]
+    assert len(tree)==env['isolated_dependency_files'] and hashlib.sha256(json.dumps(tree,separators=(',',':')).encode()).hexdigest()==env['isolated_dependency_tree_sha256']
     assert sha(io.BASE/'RECONSTRUCTION_PRIVATE.pkl')==io.EXPECTED_REC
     assert sha(io.BASE/'RAW_DYNAMIC_REGISTRY_PRIVATE.pkl')==io.EXPECTED_REG
     assert sha(ARCHIVE)==ARCHIVE_SHA

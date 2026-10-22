@@ -57,3 +57,20 @@ All12 scientific-file hashes remain unchanged; this addition is execution-only
 audit, not a model/data/budget revision. Completion still requires40fresh fits,
 all60 freezes/seals,1200patient-seed rows/10800metrics/405nominal/8family checks,
 and a final anonymous package upload with remote-tip verification.
+
+At2026-10-23T07:46+08 all40 fresh fits finished, all60 choices froze, and all60
+test score cells sealed. Global freeze SHA
+db92914decdd21ebdd3cbf27d447d52c787755e2563e2b84637a86564107e851;
+global score-seal SHA21f13014bc7daa870212d49f1cfcb19952d9c36e0c04e938f0c1df766a4ef2a8.
+Original independent verification then stopped correctly: global MAIN_RESULTS.csv
+was missing. Diagnosis: the report adjusted pipeline.PUB, but imported csv_out
+resolves common.PUB. The computed anonymous tables went to seed43/public and
+three combined60 metadata tables replaced their20row public summaries. Private
+selection/validation records, models and sealed predictions remain intact.
+
+Repair is an external REPORTING I/O bridge under tools, not an edit to the12
+frozen scientific sources. It preserves failure outputs, copies numeric tables
+byte-identically, recovers actual seed43 metadata, fixes only writer destination
+and reruns the ORIGINAL independent verifier/package. Two no-data I/O regression
+tests reproduce the original namespace bug and pass the corrected route/recovery.
+No retraining, re-prediction, threshold tuning or tolerance changes are allowed.

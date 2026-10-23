@@ -1,0 +1,14 @@
+{
+  "all60_checkpoint_validation_score_bindings_unchanged": true,
+  "all_scientific_source_hashes_unchanged": true,
+  "artifact_fingerprint_sha256": "531e66283eed32c101d53686b711ab738622a611f957aa9f21a2e2b3912128ba",
+  "frozen_scientific_files": 12,
+  "helper_sha256": "a59e33559ead5ecc7b453bd565d730babec070d8e67ab054cbef6dbd90764987",
+  "no_threshold_or_model_change": true,
+  "no_training_or_inference_rerun": true,
+  "original_computed_metric_tables_byte_identical": true,
+  "original_failure": "csv_out resolves common.PUB, not pipeline.PUB; combined rows overwrote3public seed43 summaries",
+  "repair": "Preserve all misplaced outputs, copy exact numeric tables, restore20seed43 metadata rows, route CSV to common.PUB temporarily, independent verification",
+  "scope": "REPORTING_OUTPUT_ROUTING_ONLY",
+  "status": "PASS"
+}

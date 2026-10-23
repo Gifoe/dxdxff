@@ -1,0 +1,213 @@
+{
+  "cells": 20,
+  "checks": [
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "hup",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "hup",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "hup",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "hup",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "hup",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "lzu",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "lzu",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "lzu",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "lzu",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "lzu",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "multicenter",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "multicenter",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "multicenter",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "multicenter",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "multicenter",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "pediatric",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "pediatric",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "pediatric",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "pediatric",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "pediatric",
+      "initial_or_SVM_recipe_exact": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    }
+  ],
+  "historical_results_already_viewed": true,
+  "old_freeze_sha256": "3e7bdd95ee8c3c71af62c9284bc298fc93b4f2ca08d002eba35a17b7d3271324",
+  "old_predictions_reused_not_recomputed": true,
+  "old_public_archive_sha256": "5490828012ef69f0487cf6fa985556adafe82264c4d4f15e7126c9d9c3591427",
+  "old_seal_sha256": "dd5974e68af150f294ae0523f453dd654b177a10c37ecb49e63536bdc3f4ff01",
+  "old_source_and_dependencies_immutable": true,
+  "parent_commit": "73b99e22aca85e71268585c6655f67b16112d340",
+  "status": "PASS"
+}

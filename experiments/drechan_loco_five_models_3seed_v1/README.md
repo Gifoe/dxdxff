@@ -1,8 +1,29 @@
 # Four-source LOCO, five fixed models: seeds42/43/44
 
-Production started2026-10-23T03:52+08:00 after real admission/source proof was
-pushed and remote-verified. New results are PENDING; no unrun values reported.
-See RUN_AUDIT.md and public_admission for actual launch and admission evidence.
+Completed2026-10-23 with independent PASS:60 logical cells,20 historical seed42
+reuses and40 fresh seeds43/44 fits;1200 patient/seed rows,10800 endpoints,405
+nominal intervals and8 main-family intervals. All60 choices froze before NEW
+test inference, all60 scores sealed before metrics. Actual new neural epochs424.
+
+| Fixed model | Macro-F1 mean+/-SD | AUROC mean+/-SD | AP mean | EZ-F1 mean | MRR mean | Top-1 mean |
+|---|---:|---:|---:|---:|---:|---:|
+| Raw+Feature | 0.625048+/-0.007563 | 0.745515+/-0.010748 | 0.549025 | 0.430256 | 0.772382 | 0.675000 |
+| Raw-only | 0.589337+/-0.012305 | 0.706683+/-0.003158 | 0.517056 | 0.384000 | 0.760578 | 0.679167 |
+| Feature-only | 0.615259+/-0.003714 | 0.750889+/-0.003261 | 0.542931 | 0.419440 | 0.745588 | 0.637500 |
+| Linear SVM Feature+PR | 0.610443+/-0.002275 | 0.738479+/-0.000000 | 0.537266 | 0.409868 | 0.728211 | 0.637500 |
+| Original TimeConvCNN Raw/noPR | 0.446847+/-0.028188 | 0.586908+/-0.011922 | 0.376882 | 0.179052 | 0.492577 | 0.370833 |
+
+See [FINDINGS.md](FINDINGS.md) for all9 metrics, allseeds, sources, paired
+intervals and negative findings. Full-minus-own-Raw-only Macro-F1/AUROC remain
+positive under8-test correction; stable superiority to Feature-only/SVM is NOT
+established. Feature-only has the higher mean AUROC, Raw-only higher Top-1.
+
+A reporting writer namespace bug was repaired OUTSIDE the12 frozen scientific
+files: exact existing numeric tables copied, source43 public metadata restored,
+original independent verifier rerun unchanged. No retraining/inference/threshold
+change. See [reporting bridge](../../tools/drechan_loco_3seed_reporting_repair_v1/README.md)
+for the executable report-stage entry and public_supplement for immutable-artifact
+proof. Source, all34 anonymous package payloads and supplementary proof are released.
 
 Prospective extension of the completed seed42 protocol, not a new architecture or search.
 Hold the ORIGINAL seed42 FIT/validation/test patient roles fixed. Vary neural

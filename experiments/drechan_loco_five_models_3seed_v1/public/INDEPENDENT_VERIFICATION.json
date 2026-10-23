@@ -1,0 +1,13 @@
+{
+  "cells": 60,
+  "family_intervals": 8,
+  "fresh": 40,
+  "maximum_numeric_error": 1.6653345369377348e-16,
+  "metric_values": 10800,
+  "nominal_intervals": 405,
+  "patient_roles_fixed": true,
+  "patient_rows": 1200,
+  "reused": 20,
+  "seed_metric_mean_not_prediction_ensemble": true,
+  "status": "PASS"
+}

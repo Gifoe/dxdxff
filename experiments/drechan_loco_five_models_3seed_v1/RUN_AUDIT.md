@@ -1,5 +1,45 @@
 # Actual execution audit
 
+## Final state: actual verified completion2026-10-23
+
+All60 logical choices completed:20 strict historical seed42 reuses,40 fresh
+seed43/44 fits. Fresh32 neural cells completed424 actual epochs (220/204 per
+seed);8 final SVMs,24 OOF auxiliary SVMs and8 Platt calibrators actually fit.
+Including historical201 neural epochs, the table records625 total epochs.
+All60 choices freeze BEFORE new tests and all60 score cells seal BEFORE metrics.
+
+After the documented reporting-only I/O repair, ORIGINAL independent verification
+PASS1200 patient/seed rows /10800 metric values /405 nominal /8 family intervals;
+maximum aggregate error1.6653345369377348e-16, tolerance remains1e-12. No retrain,
+re-prediction, threshold replacement, discarded formal epoch or relaxed bound.
+All12 scientific source hashes and all60 model/validation/score bindings remain
+unchanged. External bridge commit6e91d237c99ad0812945b848b165c72f355d9f2d was
+pushed before repair; its actual deployed SHA is recorded in the supplement.
+
+Final explicit anonymous package68815bytes,34payloads plus manifest, SHA256
+9634ea36acd44ea52c1db822365f333c9ccb1f0d12fec145b4744d84c5ed65d7.
+Standalone reporting repair proof841bytes, SHA256
+a2b73d35940279b2338837ab289db28f76956e573fd897846a91e5172c16ac02.
+Native pinned authenticated transfer hashes verified; local source/manifest/
+allowlist/schema/count verifier passed BEFORE extraction. All34 payload hashes
+exact. Separate local QA verified coverage,60cell identities, mean/sampleSD,
+source/patient weighting and58 parent source files (two line-ending-only cases).
+Parallel public-transfer queries once failed pre-auth; sequential pinned native
+transfer succeeded without accepting a changed host or weakening checks.
+
+Actual main Macro-F1 .6250479476050012 (sampleSD .007563199602960527), AUROC
+.7455150540696804 (sampleSD .010747640131287891). See FINDINGS for the full
+results/limitations; no main/seed/source selection changed after test inspection.
+
+Final ACTUAL Git-index archive passed3CPUcontract/synthetic-bootstrap tests,
+21 frozen-parent AST math checks,2 reporting I/O regression tests, all34payload
+hash/schema checks,60cell/coverage/seed-SD/source-weighting checks and all58parent
+source checks. Only two documented parent files differ by LF/CRLF, not code.
+Nested admission/public and standalone repair-proof bytes remained exact in the
+archive. All original scientific source files stayed byte-identical to admission.
+
+## Chronological record
+
 Implementation started2026-10-23 after explicit user request for more seeds.
 Prespecified seeds43/44 added to historical42, all5arms/all4sources. Original42
 patient roles stay fixed. Original completed source/result files remain unchanged.

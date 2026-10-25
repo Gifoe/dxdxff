@@ -72,18 +72,24 @@ def full80_assignment(meta):
     centers={p:str(meta['center'][np.flatnonzero(meta['patient']==p)[0]]) for p in ids}
     quotas={'hup':[8,7,7,7,7],'lzu':[4,5,4,4,4],'multicenter':[3]*5,'pediatric':[1,1,2,2,2]}
     fits={f:set(meta['split_patient'][(meta['split_fold']==f)&(meta['split_role']=='fit')]) for f in range(1,6)}
+    # One real-cohort patient is never original FIT. The all80 requirement is
+    # resolved BEFORE outcomes by one explicit original-validation-only path.
+    never_fit=set(ids)-set.union(*fits.values())
+    assert len(never_fit)<=1
+    validation={f:set(meta['split_patient'][(meta['split_fold']==f)&(meta['split_role']=='validation')]) for f in range(1,6)}
     slots=[(f,s) for f in range(1,6) for s in sorted(quotas) for _ in range(quotas[s][f-1])]
     cost=np.full((80,80),1e6)
     for i,p in enumerate(ids):
         for j,(f,s) in enumerate(slots):
-            if p in fits[f] and centers[p]==s:
+            eligible=p in fits[f] or (p in never_fit and p in validation[f])
+            if eligible and centers[p]==s:
                 cost[i,j]=int.from_bytes(hashlib.sha256(f'42|80ASSESS|{p}|{f}'.encode()).digest()[:8],'big')/2**64
     rows,cols=linear_sum_assignment(cost);assert (cost[rows,cols]<1).all()
     assigned={f:set() for f in range(1,6)}
     for i,j in zip(rows,cols):assigned[slots[j][0]].add(ids[i])
     assert all(len(a)==16 for a in assigned.values()) and set.union(*assigned.values())==set(ids)
     for f,a in assigned.items():
-        assert a<=fits[f]
+        assert a<=fits[f]|(never_fit&validation[f])
         assert all(sum(centers[p]==s for p in a)==quotas[s][f-1] for s in quotas)
     return assigned
 
@@ -113,16 +119,26 @@ def load_inputs():
         assert len(tr)==[35,35,34,36,35][f-1] and len(a)==len(cal)==8
         assert not(tr&cal or tr&a or cal&a) and set(pid)==outer['fit']
         original_assessed.extend(a)
-        a=assignments[f];cal=take(outer['fit']-a,centers,8,f'42|{f}|CAL80V1');tr=outer['fit']-a-cal
-        assert len(tr)==[27,27,26,28,27][f-1] and not(tr&a or tr&cal or a&cal)
+        a=assignments[f];exceptions=a-outer['fit']
+        assert len(exceptions)<=1 and exceptions<=outer['validation'] and not exceptions&outer['test']
+        cal=take(outer['fit']-a,centers,8,f'42|{f}|CAL80V1');tr=outer['fit']-a-cal
+        assert len(tr)==[27,27,26,28,27][f-1]+len(exceptions) and not(tr&a or tr&cal or a&cal)
+        if exceptions:
+            extra=np.flatnonzero(np.isin(meta['patient'],list(exceptions)))
+            assert not set(extra)&set(ix)
+            ix=np.concatenate([ix,extra]);pid=meta['patient'][ix]
         assessed.extend(a);banks.append(dict(fold=f,raw14=raw[ix],raw=raw[ix][:,KEEP].astype(float),
             patient=pid,source=meta['center'][ix],train=np.flatnonzero(np.isin(pid,list(tr))),
             cal=np.flatnonzero(np.isin(pid,list(cal))),assessment=np.flatnonzero(np.isin(pid,list(a))),
-            y=y[ix],roles=dict(train=tr,cal=cal,assessment=a,test=outer['test']),archive_indices=ix,old=d))
+            y=y[ix],roles=dict(train=tr,cal=cal,assessment=a,test=outer['test']),archive_indices=ix,old=d,
+            original_validation_only_assessment=len(exceptions)))
     assert len(original_assessed)==40 and len(set(original_assessed))==33
     assert len(assessed)==len(set(assessed))==80
+    exception_count=sum(d['original_validation_only_assessment'] for d in banks)
+    assert exception_count==1
     return banks,dict(input_hashes=HASHES,bank_hashes=BANK_HASHES,patients=80,channels=7635,EZ=1743,NEZ=5892,
         seizures=256,valid_windows=1471965,ASSESS_unique=80,ASSESS_appearances=80,
         legacy_internal_unique=33,legacy_internal_appearances=40,
+        strict_original_FIT_assessed=80-exception_count,original_validation_only_assessed=exception_count,
         new_assignment_sha256=digest({f:sorted(v) for f,v in assignments.items()}),
         source_patients={s:len(set(meta['patient'][meta['center']==s])) for s in ['hup','lzu','multicenter','pediatric']})

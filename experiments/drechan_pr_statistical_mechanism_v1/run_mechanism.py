@@ -19,7 +19,7 @@ def make_bank(d):
     unit,_=io.reference('unit_pr').prepare(d['raw14'],pid,d['train'])
     assert np.array_equal(op,unit)
     old_op,_=io.reference('feature_pr').prepare(d['raw14'],pid,d['old']['train'])
-    assert np.array_equal(old_op[:,io.KEEP],d['old']['x'][:,io.KEEP])
+    assert np.array_equal(old_op[:len(d['old']['patient']),io.KEEP],d['old']['x'][:,io.KEEP])
     base=x.astype(np.float32).astype(float)
     from sklearn.impute import SimpleImputer
     from sklearn.preprocessing import StandardScaler
@@ -76,6 +76,7 @@ def real_checks(d,bank):
     assert io.digest(m.fit_global(altered[d['train']]))==io.digest(bank['pre'])
     assert all(q in d['roles']['train'] and q!=p for p,q in bank['donors'].items())
     return dict(fold=d['fold'],TRAIN_patients=len(d['roles']['train']),CAL_patients=8,ASSESS_patients=16,
+        original_validation_only_assessment=d['original_validation_only_assessment'],
         original_feature_and_operational_PR_bit_parity=True,TRAIN_rank_AUC_invariance_max_error=rank_error,
         TRAIN_delta_fixed_projection_identity_max_error=identity,unlabeled_affine_invariance_max_error=affine_error,
         affine_support_crossings=support_crossings,held_query_cannot_change_TRAIN=True,
@@ -161,11 +162,13 @@ def evaluate(root):
                 moment=m.moments(bank['reps'][p][arm],ytrue[p])
                 for factor in m.FACTORS if b==-1 else [1e-8]:
                     row=dict(patient=p,source=bank['sources'][p],fold=d['fold'],estimator=estimator,arm=arm,
-                        factor=factor,permutation=b,diagnostic='TRUE_ASSESS',**m.endpoints(moment,model,factor))
+                        factor=factor,permutation=b,diagnostic='TRUE_ASSESS',
+                        strict_original_FIT=p in set(d['old']['patient']),**m.endpoints(moment,model,factor))
                     rows.append(row)
                 if yp is not None:
                     rows.append(dict(patient=p,source=bank['sources'][p],fold=d['fold'],estimator=estimator,arm=arm,
                         factor=1e-8,permutation=b,diagnostic='MATCHED_H3_LABEL_NULL',
+                        strict_original_FIT=p in set(d['old']['patient']),
                         **m.endpoints(m.moments(bank['reps'][p][arm],yp[p]),model)))
         print('ASSESS_ENDPOINTS_COMPUTED',d['fold'],len(rows),flush=True)
     assert len(rows)==179360

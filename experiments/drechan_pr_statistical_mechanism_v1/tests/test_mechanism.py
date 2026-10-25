@@ -86,5 +86,18 @@ class Tests(unittest.TestCase):
             for key in ['T','A','z','MAE']:
                 self.assertAlmostEqual(result[key],m.endpoints(m.moments(self.x,self.y),primary)[key],places=9)
 
+    def test_never_FIT_patient_uses_validation_only_not_test(self):
+        ids=np.array([f'synthetic{i:03d}' for i in range(80)])
+        centers=np.array(['hup']*36+['lzu']*21+['multicenter']*15+['pediatric']*8)
+        patients=[];folds=[];roles=[]
+        for f in range(1,6):
+            patients.extend(ids);folds.extend([f]*80)
+            roles.extend(['test' if i%5==f-1 else ('validation' if i==79 else 'fit') for i in range(80)])
+        meta=dict(patient=ids,center=centers,split_patient=np.array(patients),split_fold=np.array(folds),split_role=np.array(roles))
+        assigned=io.full80_assignment(meta)
+        own=next(f for f,a in assigned.items() if ids[79] in a)
+        self.assertNotEqual(own,5)
+        self.assertEqual(set.union(*assigned.values()),set(ids))
+
 
 if __name__=='__main__':unittest.main()

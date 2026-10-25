@@ -22,6 +22,23 @@
   or any new ASSESS evaluation. All scientific source hashes are bound at admission
   and enforced at every subsequent stage.
 
+## Admission01: metadata-only feasibility failure
+
+- Source `4f1ab8b7fc854da5d51ceb1754684c64721a53e3` was pushed and remote-verified.
+  Its Git archive SHA256 is
+  `b6ae138437dc077acc1692b4f8b273daf48788ae533190be866722e7f3ebf331`.
+- Real frozen metadata revealed FIT-appearance counts:33patients appear3times,
+  11appear2times,33appear4times,2appear1time,and1appears0times. The never-FIT
+  patient belongs to pediatric. The all-FIT assignment is mathematically infeasible.
+- Failure occurred before representations, direction freezing or ANY ASSESS
+  endpoint. Source, input archive and private transcript are preserved unmodified.
+- Before outcomes, eligibility was minimally corrected: the sole never-FIT patient
+  may be assessed in one original-validation path, never original test. The other79
+  remain inside original FIT; all80 stay absent from their own TRAIN/CAL.
+- The corrected source will be pushed before a NEW isolated admission/runtime.
+  Added a synthetic never-FIT/validation-only eligibility test and a prespecified
+  strict79 descriptive sensitivity. Primary remains all80, not a favorable subset.
+
 ## Trust and resource boundaries
 
 Use only existing frozen feature/label caches, CPU 2 and one BLAS thread. No neural

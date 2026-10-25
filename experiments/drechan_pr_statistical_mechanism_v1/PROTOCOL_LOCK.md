@@ -16,17 +16,27 @@ The originally requested historical internal split has33unique assessed patients
 across40appearances. Its lineage and frozen banks are audited, but those counts
 cannot be represented as80patient evaluation. Before any new ASSESS endpoint was
 computed, the user explicitly required all80patients to be used. The primary
-protocol therefore assigns each patient exactly one NEW internal ASSESS path,
-always inside an original outer-FIT cohort. No original global FIT/Development/
+protocol therefore assigns each patient exactly one NEW ASSESS path. No original global FIT/Development/
 Outer roles or historical results are overwritten.
+
+Admission01 stopped on metadata feasibility, before constructing ASSESS endpoints:
+one pediatric patient NEVER belongs to original FIT in any path. Thus 80 genuinely
+assessed patients cannot also be 80 strictly original-FIT-internal patients. The
+minimal pre-outcome correction keeps79 assessments within original FIT and admits
+the sole never-FIT patient ONLY into a path where originally validation, never
+original test. This explicit exception remains held out from TRAIN/CAL. It is not
+silently called internal FIT or promoted to fresh confirmation. Failed source,
+inputs and logs are preserved. Zero ASSESS endpoints existed at the correction.
 
 A metadata-only minimum-cost bipartite assignment uses five groups of16slots,
 with source quotas HUP8/7/7/7/7,LZU4/5/4/4/4,multicenter3each,pediatric1/1/2/2/2.
-Patient/source slots outside that path's original FIT are forbidden. Legal costs
+Patient/source slots outside original FIT are forbidden except the one declared
+never-FIT/original-validation exception. Legal costs
 are the first eight SHA256 bytes of `42|80ASSESS|patient|fold`, divided by2^64.
 Sorted patients,folds and source slots fix tie ordering. CAL8 is selected from
 remaining FIT by the audited source-stratified SHA allocation, salt
-`42|fold|CAL80V1`;TRAIN has27/27/26/28/27patients. CAL is unused in this probe.
+`42|fold|CAL80V1`;TRAIN has base27/27/26/28/27patients, plus one in the exception
+path (because it removes one fewer original FIT patient). CAL is unused.
 ASSESS has80unique patients and80appearances,one per person. Patients may be in
 TRAIN of another path, as in ordinary cross-fitting, but never in TRAIN/CAL of
 their own evaluation path. All role assignment is label-free and frozen.
@@ -124,6 +134,10 @@ conservative,not a claim of independent hypotheses. No p-value is calculated
 for an identity. T/A factorial centering/interaction identities are labeled;
 their scaling main effects alias existing comparisons and add no hypothesis.
 Fisher,epsilon,operational and four-source results are descriptive sensitivities.
+An additional prespecified strict79 sensitivity aggregates the same frozen direct
+directions/primary epsilon over only original-FIT assessments. It reports all7
+arms' four endpoints and Full-minus-Global's four endpoints,32nominal intervals.
+It neither drops the exception from the primary80 nor refits or selects anything.
 Extreme adjusted tails use about10bootstrap order statistics and have limited
 Monte Carlo precision. No source/feature/endpoint is selected after evaluation.
 

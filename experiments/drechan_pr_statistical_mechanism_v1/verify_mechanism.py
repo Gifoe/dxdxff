@@ -92,7 +92,7 @@ def assert_interval(samples,row,prefix='',adjust=False):
     np.testing.assert_allclose([lo,hi],[row[k] for k in keys],atol=1e-7,rtol=1e-8)
 
 
-def verify_tables(root,grouped):
+def verify_tables(root,grouped,strict):
     pub=root/'public';original=grouped[grouped.permutation==-1];checked=0;adjusted=0
     for filename,metric in [('representation_alignment','A'),('transferable_snr','T'),('boundary_drift','MAE')]:
         for r in pd.read_csv(pub/(filename+'.csv'),float_precision='round_trip').to_dict('records'):
@@ -146,7 +146,18 @@ def verify_tables(root,grouped):
         assert len(a)==100
         np.testing.assert_allclose([a.mean(),a.std(ddof=1),*np.quantile(a,[.025,.975])],
             [r[k] for k in ['null_mean','null_sample_SD','null_reference_low','null_reference_high']],atol=1e-7,rtol=1e-8)
-    assert checked==1080 and adjusted==25
+    for r in pd.read_csv(pub/'strict_fit_sensitivity.csv',float_precision='round_trip').to_dict('records'):
+        key='z' if r['metric']=='SD' else r['metric'];is_sd=r['metric']=='SD'
+        a=strict[strict.arm==r['target']].sort_values('patient')[key].to_numpy();assert len(a)==79
+        point=a.std(ddof=1) if is_sd else a.mean();samples=boot(a,is_sd)
+        if r['control']!='ABSOLUTE':
+            b=strict[strict.arm==r['control']].sort_values('patient')[key].to_numpy()
+            if is_sd:point=b.std(ddof=1)-point;samples=boot(b,True)-samples
+            elif r['metric']=='MAE':point=b.mean()-point;samples=boot(b-a)
+            else:point-=b.mean();samples=boot(a-b)
+        np.testing.assert_allclose(point,r['effect'],atol=1e-7,rtol=1e-8)
+        assert_interval(samples,r);checked+=1
+    assert checked==1112 and adjusted==25
     return checked,adjusted
 
 
@@ -173,10 +184,12 @@ def main(root):
             for p in patients:
                 for factor in [1e-8,1e-6,1e-10] if b==-1 else [1e-8]:
                     rows.append(dict(patient=p,source=saved['sources'][p],fold=d['fold'],estimator=est,arm=arm,factor=factor,
-                        permutation=b,diagnostic='TRUE_ASSESS',**endpoint(reps[p][arm],d['y'][pid==p],q,factor)))
+                        permutation=b,diagnostic='TRUE_ASSESS',strict_original_FIT=p in set(d['old']['patient']),
+                        **endpoint(reps[p][arm],d['y'][pid==p],q,factor)))
                 if py is not None:
                     rows.append(dict(patient=p,source=saved['sources'][p],fold=d['fold'],estimator=est,arm=arm,factor=1e-8,
-                        permutation=b,diagnostic='MATCHED_H3_LABEL_NULL',**endpoint(reps[p][arm],py[p],q,1e-8)))
+                        permutation=b,diagnostic='MATCHED_H3_LABEL_NULL',strict_original_FIT=p in set(d['old']['patient']),
+                        **endpoint(reps[p][arm],py[p],q,1e-8)))
         print('INDEPENDENT_PATH_REPLAYED',d['fold'],models_checked,len(rows),flush=True)
     actual=pd.DataFrame(rows);keys=['fold','patient','arm','estimator','factor','permutation','diagnostic']
     a=actual.set_index(keys).sort_index();b=original.set_index(keys).sort_index();assert a.index.equals(b.index)
@@ -184,10 +197,12 @@ def main(root):
     err=np.max(np.abs(a[['T','A','z','MAE']].to_numpy()-b[['T','A','z','MAE']].to_numpy()))
     gkeys=['estimator','factor','permutation','diagnostic','arm','patient','source']
     grouped=actual.groupby(gkeys,sort=True)[['T','A','z','MAE']].mean().reset_index()
-    checked,adjusted=verify_tables(root,grouped)
+    strict=actual[(actual.permutation==-1)&(actual.estimator=='DIRECT')&(actual.factor==1e-8)&actual.strict_original_FIT]
+    checked,adjusted=verify_tables(root,grouped,strict)
     assert models_checked==7070 and len(actual)==179360 and audit['ASSESS_unique']==80
     proof=dict(status='PASS',unique_assessed_patients=80,assessment_appearances=80,directions_reconstructed=7070,
         patient_direction_rows=179360,endpoint_values=717440,nominal_intervals_verified=checked,secondary_family_intervals=adjusted,
+        strict_original_FIT_patients=79,original_validation_only_assessed=1,strict79_sensitivity_intervals=32,
         maximum_endpoint_absolute_discrepancy=float(err),tolerances=dict(atol=1e-7,rtol=1e-8),
         numerical_implementation='Independent origin-shifted class arithmetic,scalar projected variances,TRAIN covariance reconstruction andbootstrap count matrices',
         input_hashes_unchanged=True,private_exported=False,classifier_fits=0,neural_fits=0)

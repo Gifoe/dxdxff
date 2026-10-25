@@ -11,7 +11,8 @@ PAIRS=[('G3_FULL','G0_GLOBAL'),('G1_CENTER','G0_GLOBAL'),('G2_SCALE','G0_GLOBAL'
 ALLOW=['representation_alignment.csv','transferable_snr.csv','boundary_drift.csv','factorial_contrasts.csv',
  'paired_intervals.csv','negative_controls.csv','negative_control_summary.csv','source_results.csv',
  'patient_distribution_bins.csv','support_and_donor_audit.csv','fold_coverage.csv','INPUT_AUDIT.json',
- 'FREEZE_STATUS.json','ASSESS_STATUS.json','REPORT_STATUS.json','INDEPENDENT_VERIFICATION.json','STATUS.json']
+ 'FREEZE_STATUS.json','ASSESS_STATUS.json','REPORT_STATUS.json','INDEPENDENT_VERIFICATION.json','STATUS.json',
+ 'strict_fit_sensitivity.csv']
 
 
 def csv(path,rows):
@@ -23,6 +24,26 @@ def csv(path,rows):
 def sd_stat(values,ids):
     v=np.asarray(values,float);s=v[ids].std(1,ddof=1);lo,hi=np.quantile(s,[.025,.975])
     return dict(SD=float(v.std(ddof=1)),SD_ci_low=float(lo),SD_ci_high=float(hi))
+
+
+def strict_sensitivity(frame):
+    q=frame[(frame.permutation==-1)&(frame.estimator=='DIRECT')&(frame.factor==1e-8)&frame.strict_original_FIT]
+    q=m.aggregate(q);rows=[];ids=m.boot_ids(79)
+    for arm in m.ARMS:
+        v=q[q.arm==arm].sort_values('patient');assert v.patient.nunique()==len(v)==79
+        for metric in ['T','A','MAE','SD']:
+            value=v['z' if metric=='SD' else metric].to_numpy()
+            samples=value[ids].std(1,ddof=1) if metric=='SD' else value[ids].mean(1)
+            lo,hi=np.quantile(samples,[.025,.975])
+            rows.append(dict(analysis='STRICT_ORIGINAL_FIT_79_SENSITIVITY',target=arm,control='ABSOLUTE',
+                metric=metric,patients=79,effect=float(value.std(ddof=1) if metric=='SD' else value.mean()),
+                ci_low=float(lo),ci_high=float(hi)))
+    a=q[q.arm=='G3_FULL'].sort_values('patient');b=q[q.arm=='G0_GLOBAL'].sort_values('patient')
+    for metric in ['T','A','MAE','SD']:
+        key='z' if metric=='SD' else metric
+        rows.append(dict(analysis='STRICT_ORIGINAL_FIT_79_SENSITIVITY',target='G3_FULL',control='G0_GLOBAL',
+            metric=metric,**m.contrast(a[key],b[key],metric,ids)))
+    return rows
 
 
 def factorial(part,metric,kind,ids,family):
@@ -124,12 +145,14 @@ def report(root):
     pack=io.read(root/'private/ASSESS_STATISTICS.pkl');frame=pd.DataFrame(pack['rows'])
     assert len(frame)==179360
     tables,grouped=build_tables(frame,pack['support'])
+    tables['strict_fit_sensitivity']=strict_sensitivity(frame)
     io.save(root/'private/UNIQUE_PATIENT_STATISTICS.pkl',grouped)
     for name,rows in tables.items():csv(root/'public'/(name+'.csv'),rows)
     banks,_=io.load_inputs();coverage=[]
     for d in banks:
         ii=d['assessment'];coverage.append(dict(fold=d['fold'],TRAIN_patients=len(d['roles']['train']),CAL_patients=8,
-            ASSESS_patients=16,ASSESS_channels=len(ii),EZ_channels=int(d['y'][ii].sum()),NEZ_channels=int((1-d['y'][ii]).sum())))
+            ASSESS_patients=16,original_validation_only_assessment=d['original_validation_only_assessment'],
+            ASSESS_channels=len(ii),EZ_channels=int(d['y'][ii].sum()),NEZ_channels=int((1-d['y'][ii]).sum())))
     assert sum(r['ASSESS_channels'] for r in coverage)==7635 and sum(r['EZ_channels'] for r in coverage)==1743
     csv(root/'public/fold_coverage.csv',coverage)
     io.write(root/'public/REPORT_STATUS.json',dict(status='ALL_FROZEN_PROBES_REPORTED_PENDING_INDEPENDENT_CHECK',

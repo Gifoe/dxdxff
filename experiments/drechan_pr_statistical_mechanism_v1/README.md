@@ -11,9 +11,12 @@ with matched-donor, TRAIN-label permutation and operational-PR diagnostics.
 
 The frozen design is in [PROTOCOL_LOCK.md](PROTOCOL_LOCK.md) and its machine-readable
 companion. Historical internal roles are audited but replaced for this study by
-a label-free, pre-outcome 80-patient assignment restricted to each path's original
-outer-FIT population. Original model roles, outputs and experiments are unchanged.
+a label-free, pre-outcome 80-patient assignment:79 within original outer-FIT and
+one original-validation-only exception for the patient never in FIT in any path.
+This exception was identified from metadata before any new endpoint computation.
+Original model roles, outputs and experiments are unchanged.
 Each person is absent from TRAIN/CAL in their own assessment path; CAL is unused.
+A separately declared strict79 sensitivity cannot replace the primary80 analysis.
 
 Execution requires environment-configured trusted inputs; no private server
 locations or individual data are included in this repository. Set

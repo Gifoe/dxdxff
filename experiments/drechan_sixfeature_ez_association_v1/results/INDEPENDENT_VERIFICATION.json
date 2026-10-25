@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "patient_effects_independently_verified": 960,
+  "overall_coordinates": 12,
+  "source_coordinate_rows": 48,
+  "bootstrap_draws_each": 10000,
+  "patient_bootstrap_intervals_checked": 60,
+  "primary_Wilcoxon_and_BH_tests_checked": 12,
+  "label_permutations_per_patient": 10000,
+  "independently_checked_permuted_effects": 9600000,
+  "maximum_effect_error": 1.1102230246251565e-16,
+  "effect_engines": [
+    "rank_sum",
+    "pairwise_sign_concordance",
+    "sklearn_ROC_AUC"
+  ],
+  "independent_BH": "scipy_false_discovery_control",
+  "independent_Wilcoxon": "tie_corrected_rank_variance_normal_tail",
+  "original_inputs_unchanged": true,
+  "individual_effects_exported": false,
+  "models_trained": 0
+}

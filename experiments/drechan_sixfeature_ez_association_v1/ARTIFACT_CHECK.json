@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "authenticated_public_payload_hashes_checked": 10,
+  "frozen_analysis_source_hashes_checked": 5,
+  "primary_report_rows": 12,
+  "source_rows": 48,
+  "public_patient_rows": false,
+  "report_numbers_match_CSV": true,
+  "source_weighted_means_match_primary": true,
+  "figures": [
+    {
+      "figure": "feature_association",
+      "png_pixels": [
+        4204,
+        2787
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "width_mm": 178,
+      "height_mm": 118,
+      "svg_text_nodes": 35,
+      "PDF_embedded_TrueType": true
+    },
+    {
+      "figure": "source_association",
+      "png_pixels": [
+        4204,
+        4086
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "width_mm": 178,
+      "height_mm": 173,
+      "svg_text_nodes": 40,
+      "PDF_embedded_TrueType": true
+    },
+    {
+      "figure": "patient_effect_distributions",
+      "png_pixels": [
+        4204,
+        5078
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "width_mm": 178,
+      "height_mm": 215,
+      "svg_text_nodes": 58,
+      "PDF_embedded_TrueType": true
+    }
+  ],
+  "visual_review": "PASS: all three rendered PNGs inspected; labels, signs, zero lines, intervals, source reversals and q-values checked",
+  "models_or_sensitive_inputs_opened": 0
+}

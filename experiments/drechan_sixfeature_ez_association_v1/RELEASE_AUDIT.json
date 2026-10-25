@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "check_kind": "Actual Git-index tree archive, extracted outside the working tree",
+  "tested_index_tree": "a40ce37f6c2d704e1cf8e83bd80176311ab97813",
+  "tested_archive_sha256": "81196546bde0e892685d06a3ab01a0101afca02b1b97a15e351329f87e53d9d6",
+  "archive_scope": "experiments/drechan_sixfeature_ez_association_v1",
+  "CPU_unit_tests_passed": 6,
+  "authenticated_server_payload_hashes_passed": 10,
+  "immutable_analysis_source_hashes_passed": 5,
+  "source_rows_checked": 48,
+  "primary_report_rows_checked": 12,
+  "figures_with_PDF_SVG_600dpiPNG_checked": 3,
+  "public_patient_or_channel_rows": false,
+  "new_classifier_fits": 0,
+  "required_private_data_for_release_tests": false,
+  "source_inputs_and_model_files_modified": false,
+  "note": "This audit records the tested pre-audit snapshot, not a self-referential hash of its own final commit. The only subsequent attribute change preserves generated SVG CRLF/path whitespace without changing any analysis, payload or figure bytes. Final committed-tree checks are also required before push."
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "SIXFEATURE_EZ_ASSOCIATION_V1",
+  "files": {
+    "feature_association.csv": "304c78c40c28ac0111ddbe25a71c98bcbfce85ca1010d961e91f231737206d99",
+    "source_association.csv": "dcc0397673dffaf851a4d79855e539faca1d5f743e954f4ec4aeb51623c0e632",
+    "patient_effect_summary.csv": "1585ef6a41374a0beae19d71c530d8ee0af5963a8ae46a3fbf56be378132c636",
+    "statistical_tests.csv": "c0612501c942ed16342230dbd17a252a0d8c60bf435f34d1a50e056fbea1b4d4",
+    "patient_effect_histogram.csv": "ae6b36fdfe8d769fab14ce3162cac768611cf4fdc69698ef61792a4d1bace470",
+    "permutation_control.csv": "e8e6412ddb8bcd00f1c70f9ed7eac46bf8f74bf544d50674f8829d958f978985",
+    "feature_definitions.json": "dcec817ccfcc147ebbe730cfe3c724bca88adeedab47a689fc0860bb4b60722d",
+    "INPUT_AUDIT.json": "ac9decf436a87dcf58f35ba96b4df9dd914c1ce1dbfddd97aad5acb95c36ed7d",
+    "INDEPENDENT_VERIFICATION.json": "77dcf4ba5e885d0383962fcefed1e8abe5821874f471442d3bd50f5278b55aa1",
+    "STATUS.json": "0acce44c67460ce2c9e5209d6aace8b74367096d1b8501c6148d57da8c9dcf4f"
+  },
+  "source": {
+    "statistics_core.py": "d54a0ca7d3bd9861fc69085fdaef6da170aced5b3727b4d33766af257ab36635",
+    "run_analysis.py": "4af5d472df9bd65c5d295f026ca6db07f6eb3bf7b09cbb8711bfd69472cfe37c",
+    "verify_analysis.py": "4ea397f3d414df960fd827ad4aef8749665c097751e5b957e0fa71a4a9398c63",
+    "test_statistics.py": "a11bef774c502c91c237330654c80c0fe5e5a2670aeb66f2c4b75a2dfa3dd180",
+    "PROTOCOL.json": "70e2558bc691e9c80a0a67137673f278c23d0a026a54fc2bf299f6fed1613a08"
+  },
+  "private_artifacts_exported": false
+}

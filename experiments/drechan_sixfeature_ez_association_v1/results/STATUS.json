@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE_INDEPENDENTLY_VERIFIED_SIXFEATURE_EZ_ASSOCIATION",
+  "patients": 80,
+  "channels": 7635,
+  "seizures": 256,
+  "coordinates": 12,
+  "patient_effect_rows": 960,
+  "models_trained": 0,
+  "exploratory_post_historical_feature_selection": true
+}

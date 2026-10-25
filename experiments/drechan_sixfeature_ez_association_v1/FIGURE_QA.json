@@ -1,0 +1,48 @@
+{
+  "backend": "Python/matplotlib",
+  "figures": [
+    {
+      "figure": "feature_association",
+      "width_mm": 178,
+      "height_mm": 118,
+      "png_dpi": 600,
+      "coordinates": 12,
+      "text_outside_canvas": [],
+      "editable_svg_text": true,
+      "pdf_fonttype": 42,
+      "individual_data_used": false
+    },
+    {
+      "figure": "source_association",
+      "width_mm": 178,
+      "height_mm": 173,
+      "png_dpi": 600,
+      "coordinates": 12,
+      "text_outside_canvas": [],
+      "editable_svg_text": true,
+      "pdf_fonttype": 42,
+      "individual_data_used": false
+    },
+    {
+      "figure": "patient_effect_distributions",
+      "width_mm": 178,
+      "height_mm": 215,
+      "png_dpi": 600,
+      "coordinates": 12,
+      "text_outside_canvas": [],
+      "editable_svg_text": true,
+      "pdf_fonttype": 42,
+      "individual_data_used": false
+    }
+  ],
+  "minimum_font_points": 7,
+  "all_requested_coordinates_shown": true,
+  "missing_data_exclusions": 0,
+  "visual_review": "PASS: all three rendered PNGs inspected; labels, signs, zero lines, intervals, source reversals and q-values checked",
+  "reviewed_image_sha256": {
+    "feature_association": "d93d2751bfa9e2d637380edfd18fdec7c43f8c41cd8136633ee135d2a1097e3c",
+    "source_association": "7d8271d4cb832d8582da8c466f1b4cd328ced5e887ec755e866291875508188b",
+    "patient_effect_distributions": "540bf0def1b9bee465ee97cb1399353650ea3fc1578f45895f1868f496932893"
+  },
+  "static_preflight": "12 PASS,2 WARN,0 FAIL; requested PNG not TIFF; validator misreads 178*MM as inches, actual vector/raster dimensions independently checked"
+}

@@ -18,3 +18,7 @@ foreach ($stage in @('admission','freeze','evaluate','report','verify','package'
     if ($LASTEXITCODE -ne 0) { throw "Mechanism stage failed: $stage; preserve inputs, outputs and logs" }
     Write-Output "STAGE_END $stage"
 }
+# The frozen package is a TRUSTED intermediate: its80/79 means are complementary.
+# Only the filtered archive below may leave the trusted runtime.
+& $Python -u (Join-Path $PSScriptRoot 'sanitize_public_export.py') --input (Join-Path $Runtime 'public_aggregate_export_v1.zip') --output (Join-Path $Runtime 'public_aggregate_export_privacy_v1.zip')
+if ($LASTEXITCODE -ne 0) { throw 'Privacy export failed; do not transfer the intermediate archive' }

@@ -13,6 +13,13 @@
     "report_and_table_regeneration": "identical text after universal newline normalization",
     "parent_dependency": "experiments/drechan_sixfeature_ez_association_v1/results/feature_association.csv"
   },
+  "committed_archive_test": {
+    "tested_commit": "14e2d6529fbb780c1e9a87bc12b9a55d9b86668c",
+    "tested_tree": "e310dc5d161f8179d8c88830af823a68b2a32509",
+    "archive_sha256": "6ced18a2ffe6fe62c9f8ef121c82cb3467507f1d886cae89c888aa3462739c83",
+    "status": "PASS",
+    "checks": "6CPU math tests,1adapter test,23payload/6source hashes,compiled table/public figures and exact report regeneration"
+  },
   "public_package_sha256": "87202b39099d472bb2203aed30c60d0b88221535446a3f0b7485a989718f009a",
   "scientific_source_commit": "caceb44597097f0f4baea49d10a5c543e2bb706f",
   "engineering_commit": "9ba8a29c7d0b6d33da48b4c293dcd233ab8aa9ef",
@@ -30,5 +37,5 @@
   "paper_paragraph_prose_preflight": {"scope":"paragraph","issues":0},
   "git_diff_cached_check": "PASS",
   "private_patient_records_models_logs_staged": false,
-  "self_reference_note": "The recorded archive precedes this audit file to avoid a self-referential archive hash; actual committed-tree tests are additionally run before final push."
+  "self_reference_note": "Recorded archives precede the corresponding audit-only append to avoid self-referential hashes. The exact final committed tree is additionally tested before push without modifying scientific sources or public server payloads."
 }

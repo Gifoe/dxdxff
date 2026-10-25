@@ -160,3 +160,12 @@ audit_adapter.py train, then run.py freeze/score/report/verify/package. Do not
 overwrite or restart this completed runtime. The original run_cpu.ps1 remains
 historical failed-entry evidence. Local public-only test/release commands and
 actual Git archive evidence are recorded in RELEASE_AUDIT.json.
+
+The actual staged tree989a97bdb76090f3532074a305671af0a4dffc85 and committed
+release14e2d6529fbb780c1e9a87bc12b9a55d9b86668c both passed exported-tree
+tests, including all23payload hashes, all six original source bytes, the exact
+metadata adapter, six CPU math tests, one adapter test, compiled-table/figure
+checks and reproducible public report/table generation. Only the existing public
+Task A feature_association.csv is needed as a report dependency. The final
+audit-only append is followed by the same exact committed-tree test before push;
+no anonymous result or scientific file changes in that append.

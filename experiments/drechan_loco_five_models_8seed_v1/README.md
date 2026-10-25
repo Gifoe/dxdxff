@@ -28,6 +28,8 @@ Old three-seed sources/results remain unchanged. No installed research/extractio
 skills or subagents. Experiment remains exploratory repeated-cohort leave-one-
 SOURCE-out; source labels are not verified individual hospitals.
 
-Status: real-server admission01 PASS for all5 new seeds; formal fitting pending
-the pre-fit admission-evidence push. This is NOT completed model performance.
+Status: real-server admission01 PASS for all5 new seeds; production01 formal
+training started2026-10-25T17:06+08:00 after admission/source remote verification.
+This is NOT completed model performance. All160 fits/scores and independent
+verification are still required; no new test metrics have been reported.
 See public_admission for21 anonymous proof payloads and RUN_AUDIT for execution.

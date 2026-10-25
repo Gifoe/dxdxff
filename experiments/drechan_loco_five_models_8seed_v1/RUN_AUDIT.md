@@ -40,3 +40,28 @@ Authenticated anonymous admission archive32876bytes,21 payloads plus manifest,
 SHA256 fef7bb0651da61a91d1d5835ccbc65cc6bc8fa963ab6ee4adecde2bf18e853e0.
 Local source/hash/schema/allowlist checks and all6CPU tests passed BEFORE explicit
 allowlist extraction. No patient IDs, predictions, signals, weights or logs exported.
+
+## Actual production01 start
+
+Real admission-evidence commit33fcd109ac40e0dd55f9cf8df9eaeeba624bc83c
+was pushed and git ls-remote verified BEFORE formal fitting. The actual committed
+tree again passed all6CPU tests,21 unchanged parent AST functions,12 scientific
+source hashes and all21 admission payload hashes. Prefit release archive SHA:
+067989f2f6ad23656d8acde77237c47ab51f79caffe5cd6ff3dc4c86f26aa8ab.
+
+Production01 actually started2026-10-25T17:06:15+08:00. The sustained foreground
+native --stream SSH owner is execsession76798, coordinator17356(parent19572),
+initial Python worker6224/venvchild40804. Exact frozen command:
+run_all.ps1 -RunTag production01 -SourceCommit
+33fcd109ac40e0dd55f9cf8df9eaeeba624bc83c -StopAfter All.
+
+At17:06:48+08,seed45/HUP-held-out Raw+Feature was training epoch8,with epochs
+about3.3seconds each, stderr empty and atomic LAST checkpoint advancing. This
+head timing is NOT an ETA for TimeConv or the whole batch. No new test inference
+or performance metrics have been inspected. Keep the owner alive; never duplicate
+active workers or interpret a transport reset alone as a trainer failure.
+
+All12 scientific source files remain identical to real admission. Completion
+still requires100 fresh main fits, all160 choices frozen before new test,all160
+scores sealed before metrics, independent3200row/28800endpoint/405nominal/
+8family verification and final anonymous release with GitHub remote-tip check.

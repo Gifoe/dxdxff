@@ -1,0 +1,15 @@
+{
+  "cells": 160,
+  "family_intervals": 8,
+  "freeze_sha256": "378be5240a32854a22cac8db30b4b9a6649548f5f70e342f4ee8af63f8334a9a",
+  "fresh": 100,
+  "maximum_numeric_error": 1.1102230246251565e-16,
+  "metric_values": 28800,
+  "nominal_intervals": 405,
+  "patient_roles_fixed": true,
+  "patient_rows": 3200,
+  "reused": 60,
+  "seal_sha256": "a3b70e784e2082f22492537eb10be961f26ad6208472cf5efdb8eb587e55e4ec",
+  "seed_metric_mean_not_prediction_ensemble": true,
+  "status": "COMPLETE_VERIFIED_LOCO_5_MODELS_4_SOURCES_8SEED"
+}

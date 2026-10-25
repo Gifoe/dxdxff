@@ -1,0 +1,613 @@
+{
+  "cells": 60,
+  "checks": [
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "hup",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "lzu",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "multicenter",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "pediatric",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 42,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "hup",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "lzu",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "multicenter",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "pediatric",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 43,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "hup",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "hup",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "lzu",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "lzu",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "multicenter",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "multicenter",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW_FEATURE",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_RAW",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "OURS_FEATURE",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "LINEAR_SVM_FEATURE_PR",
+      "held_source": "pediatric",
+      "initial_replayed": false,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    },
+    {
+      "FIT_preprocessor_exact": true,
+      "arm": "TIMECONVCNN_RAW",
+      "held_source": "pediatric",
+      "initial_replayed": true,
+      "roles_exact": true,
+      "sealed_score_hash_exact": true,
+      "seed": 44,
+      "selection_hash_exact": true
+    }
+  ],
+  "historical_results_already_viewed": true,
+  "old_freeze_sha256": "db92914decdd21ebdd3cbf27d447d52c787755e2563e2b84637a86564107e851",
+  "old_predictions_reused_not_recomputed": true,
+  "old_public_archive_sha256": "9634ea36acd44ea52c1db822365f333c9ccb1f0d12fec145b4744d84c5ed65d7",
+  "old_seal_sha256": "21f13014bc7daa870212d49f1cfcb19952d9c36e0c04e938f0c1df766a4ef2a8",
+  "old_source_and_dependencies_immutable": true,
+  "parent_commit": "bed31b20ab363745e4069bf18497b122d30c07da",
+  "status": "PASS"
+}

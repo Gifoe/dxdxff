@@ -1,0 +1,19 @@
+{
+  "channels": 7635,
+  "feature_dimension": 12,
+  "feature_slots": 14,
+  "old_fitted_banks_read_or_reused": false,
+  "original_fivefold_roles_not_used": true,
+  "patients": 80,
+  "raw_caches_copied": false,
+  "seizures": 256,
+  "source_labels_not_proven_individual_hospitals": true,
+  "status": "PASS",
+  "valid_windows": 1471965,
+  "valid_windows_by_source": {
+    "hup": 730656,
+    "lzu": 425225,
+    "multicenter": 165929,
+    "pediatric": 150155
+  }
+}

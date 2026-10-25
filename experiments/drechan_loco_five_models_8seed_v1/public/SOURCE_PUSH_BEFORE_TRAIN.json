@@ -1,0 +1,18 @@
+{
+  "all_new_fits_require_same_source_commit": true,
+  "source": {
+    "ENVIRONMENT_LOCK.json": "808ef78a67c93dab553b0ee598c38cd0837630af77966d405f92974c81028bdc",
+    "PARENT_LOCK.json": "bf26501a3e84236b89ad6f04a2443fde158913169cd7c544e33acd558db0700d",
+    "PROTOCOL_LOCK.json": "5ad8c5ac4932713b94794e9a1602af28f51ac31333465a283c305cadf5b4e4bb",
+    "admit.py": "6b72ed554f8d6147a5f2dcf63d716599431c561ff88d0cfb822ed6c151deaefa",
+    "affinity_entry.py": "29bc5390f249b3fad88e8137f2ed1a6540f913962b2197d4f4b74b24e8012331",
+    "common.py": "d7bc88d72e59ff1cf1d250d905cc0df2e3d203afc5027f5a0427c674cfe49789",
+    "orchestrate.py": "8c07383e6ccd0ed1bc85e548016cd59f8063c6ca15be2c03f4a9739285c2e038",
+    "pipeline.py": "db607848b1940ca08f85eb340a4f21af4b3466ef00c0cbafa359e8810f1c9a9d",
+    "run_all.ps1": "2b8efbfb7fb4b11e23ec0c2bd13a351ca5253bcbd6e89e60c058b45ddbfbc6ac",
+    "svm.py": "7f4d86a9ecffe6c9ed21687ab41bfbb0da31e39f5f0d385cc7c2225aa498f6f0",
+    "test_contract.py": "2d455f802afdf5975bd87e8af973f63cb27d9fbfa130d67616dc85b9c316acc9",
+    "timeconv_engine.py": "d7e7360b1f809826c15edbb6e5fa051193b1a66f68e427897522db8d179aa0ad"
+  },
+  "source_commit": "33fcd109ac40e0dd55f9cf8df9eaeeba624bc83c"
+}

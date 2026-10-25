@@ -109,3 +109,85 @@ patients with current stderr empty. This is recovery evidence, not completion
 or performance evidence. Keep production02's owner alive and monitor its own
 logs; production01's preserved error is historical. All original freeze, seal,
 independent-verification and anonymous-release gates still apply.
+
+## Actual all160 completion, score seal, independent verification and export
+
+Production02's exact resume started2026-10-26T02:26:23+08:00. The final
+seed49/pediatric TimeConv cell completed15 epochs, selecting epoch9 by the
+unchanged validation rule. All100 fresh main fits completed, including80 neural
+cells and20 final SVMs, plus60 FIT-only OOF auxiliary fits and20 calibrators.
+Fresh complete neural epochs total1026; all historical/fresh records total1651.
+The partial unfinished epoch replay is not an additional completed budget epoch.
+
+Server public phase records were written in order (Asia/Shanghai):
+
+- 02:50:18: ALL160_FROZEN_BEFORE_NEW_TEST,160 choices.
+- 03:01:45: ALL160_SEALED_BEFORE_METRICS,160 score cells.
+- 03:02:18: ALL5_MODELS_8SEED_REPORTED,3200 patient-seed-model rows.
+- 03:02:54: COMPLETE_VERIFIED_LOCO_5_MODELS_4_SOURCES_8SEED.
+- 03:03:15: final anonymous package created; foreground owner subsequently exit0.
+
+All current production02 stage stderr files were empty. The independent verifier
+reconstructed all3200 patient rows/28800 endpoint values and405 nominal plus8
+main-family intervals. It verified160 cells,60 strict historical reuses and100
+fresh fits; maximum aggregate numeric error1.1102230246251565e-16, tolerance
+unchanged1e-12. Original80patients,7635channels,256seizures and1471965 valid
+windows remained intact; pure-feature arms intentionally read no Raw windows.
+
+All160-choice freeze SHA256:
+378be5240a32854a22cac8db30b4b9a6649548f5f70e342f4ee8af63f8334a9a.
+All160-score seal SHA256:
+a3b70e784e2082f22492537eb10be961f26ad6208472cf5efdb8eb587e55e4ec.
+
+Only the explicit anonymous final archive was fetched through the unchanged
+native pinned transport. Whole SHA256 matched both server package output and
+local transfer check:
+c879e83e667f4e1f02c6f45218667587000bc004229b00cb1f605ef1696e7aa1,
+112318bytes,42 anonymous payloads plus manifest. Before any extraction, local
+release_check.py --package passed all6 CPU tests, exact allowlist/schema/counts,
+all payload hashes, all12 scientific source hashes and independent PASS gates.
+Only then were those43 entries extracted into a new public directory; all42
+payload hashes were rechecked. No private runtime artifact was downloaded.
+
+The release-only verifier also checks63 existing/final admission/payload hashes,
+unchanged12 source hashes, byte-identical copied admission proofs, all60 old
+cell bindings,75 old aggregate rows and all40 seed/arm patient-channel totals.
+All24 Raw-reading seed/arm groups retain1471965 valid windows; the16 feature-only
+groups correctly report zero Raw consumption. The old42-44 sources/results are
+not edited or recomputed. The additional release-only check treats identical
+historical SVM parameter-count strings nan as unchanged, not a numeric difference.
+
+README and FINDINGS disclose all42-49 outcomes, including all9 metrics and both
+per-source F1 tables. Full leads overall Macro-F1 but not every source or AUROC;
+Feature-only/SVM primary difference intervals include zero. No seed or source
+was excluded and no favorable stopping/threshold tuning was introduced.
+
+Release commands (also used from a real staged/committed Git-tree archive):
+
+```powershell
+python experiments/drechan_loco_five_models_8seed_v1/release_check.py --package <authenticated-public-archive.zip>
+python tools/drechan_loco_3seed_release_tests_v1/verify_parent_math.py
+python tools/drechan_loco_8seed_release_tests_v1/verify_public.py
+```
+
+The archived tree must include prior3seed common/pipeline/svm/timeconv_engine,
+original seed42 parent functions and original m8_raw_backbones_pr_seed42_v1/
+evaluate.py, with no worktree-only import fallback. The archive payload hashes
+are checked again so Git newline normalization cannot silently change public or
+nested admission bytes. Only this experiment's release/doc files are staged;
+the unrelated untracked patient-context experiment remains untouched.
+
+## Actual Git-index release gate PASS
+
+An actual git write-tree snapshot88f0a34121acee2cf1dc84abc1d4c21af1f16b70
+was exported with git archive and extracted into a separate new directory.
+That archive included all explicitly required original/3seed dependencies,
+not worktree-only fallback files. From the archive, all6 CPU tests passed,
+the21 original-parent AST comparisons and exact TimeConv engine passed, the
+authenticated final package/source/count verifier passed, and the additional
+public verifier passed all42 final/21 admission hashes,12 frozen sources,
+60 old bindings,75 old aggregate rows and40 seed/arm coverage groups. A Git
+diff against pre-fit33fcd confirmed original42/3seed sources/results and the
+old admission files unchanged. Staging contains only the explicit47 release
+and documentation files. A final committed-tree archive will repeat these
+same gates before push; remote ls-remote must match that final commit.

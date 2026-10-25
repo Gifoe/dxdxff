@@ -1,0 +1,3 @@
+* text eol=lf
+public/** -text whitespace=cr-at-eol
+public_admission/** -text whitespace=cr-at-eol

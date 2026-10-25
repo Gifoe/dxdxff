@@ -1,0 +1,174 @@
+{
+  "study": "drechan_sixfeature_ez_association_v1",
+  "scope": "Exploratory univariate association independent of fitted classifier; historically selected features and viewed cohort, not independent validation.",
+  "cohort": {
+    "patients": 80,
+    "channels": 7635,
+    "seizures": 256,
+    "valid_channel_windows": 1471965
+  },
+  "sources": [
+    "hup",
+    "lzu",
+    "multicenter",
+    "pediatric"
+  ],
+  "source_patients": [
+    36,
+    21,
+    15,
+    8
+  ],
+  "coordinates": [
+    {
+      "coordinate": "beta_mean",
+      "feature": "Beta power (13–30 Hz)",
+      "summary": "Across-seizure mean",
+      "r14_index": 0,
+      "window_formula": "log1p(trapezoidal Welch PSD integral over bins13 <= f <30Hz; last29.5Hz)",
+      "native_units": "native cache power under log1p; no unit conversion",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "beta_sd",
+      "feature": "Beta power (13–30 Hz)",
+      "summary": "Across-seizure population SD",
+      "r14_index": 1,
+      "window_formula": "log1p(trapezoidal Welch PSD integral over bins13 <= f <30Hz; last29.5Hz)",
+      "native_units": "native cache power under log1p; no unit conversion",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "low_gamma_mean",
+      "feature": "Low-gamma power (30–80 Hz)",
+      "summary": "Across-seizure mean",
+      "r14_index": 2,
+      "window_formula": "log1p(trapezoidal Welch PSD integral over bins30 <= f <80Hz; last79.5Hz)",
+      "native_units": "native cache power under log1p; no unit conversion",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "low_gamma_sd",
+      "feature": "Low-gamma power (30–80 Hz)",
+      "summary": "Across-seizure population SD",
+      "r14_index": 3,
+      "window_formula": "log1p(trapezoidal Welch PSD integral over bins30 <= f <80Hz; last79.5Hz)",
+      "native_units": "native cache power under log1p; no unit conversion",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "partial_high_gamma_mean",
+      "feature": "Partial high-gamma power (80–125 Hz)",
+      "summary": "Across-seizure mean",
+      "r14_index": 4,
+      "window_formula": "legacy80–150Hz band intersected with available250Hz PSD, bins80 through125Hz inclusive; log1p integrated power",
+      "native_units": "native cache power under log1p; not full80–150Hz/HFO",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "partial_high_gamma_sd",
+      "feature": "Partial high-gamma power (80–125 Hz)",
+      "summary": "Across-seizure population SD",
+      "r14_index": 5,
+      "window_formula": "legacy80–150Hz band intersected with available250Hz PSD, bins80 through125Hz inclusive; log1p integrated power",
+      "native_units": "native cache power under log1p; not full80–150Hz/HFO",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "rms_mean",
+      "feature": "RMS",
+      "summary": "Across-seizure mean",
+      "r14_index": 6,
+      "window_formula": "sqrt(mean(raw_float32**2)+1e-8); fixed legacy floor retained",
+      "native_units": "native cache amplitude with numerical floor",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "rms_sd",
+      "feature": "RMS",
+      "summary": "Across-seizure population SD",
+      "r14_index": 7,
+      "window_formula": "sqrt(mean(raw_float32**2)+1e-8); fixed legacy floor retained",
+      "native_units": "native cache amplitude with numerical floor",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "line_length_mean",
+      "feature": "Line Length",
+      "summary": "Across-seizure mean",
+      "r14_index": 10,
+      "window_formula": "sum(abs(diff(raw_float32)))/(500/250)",
+      "native_units": "native cache amplitude per second",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "line_length_sd",
+      "feature": "Line Length",
+      "summary": "Across-seizure population SD",
+      "r14_index": 11,
+      "window_formula": "sum(abs(diff(raw_float32)))/(500/250)",
+      "native_units": "native cache amplitude per second",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "spectral_entropy_mean",
+      "feature": "Spectral Entropy (10–125 Hz)",
+      "summary": "Across-seizure mean",
+      "r14_index": 12,
+      "window_formula": "restricted Welch PSD p=S/clip(sum(S),1e-8,None); -sum(p*log(p+1e-8))/log(number_of_bins+1e-8)",
+      "native_units": "normalized dimensionless entropy; legacy PSD floor retained",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    },
+    {
+      "coordinate": "spectral_entropy_sd",
+      "feature": "Spectral Entropy (10–125 Hz)",
+      "summary": "Across-seizure population SD",
+      "r14_index": 13,
+      "window_formula": "restricted Welch PSD p=S/clip(sum(S),1e-8,None); -sum(p*log(p+1e-8))/log(number_of_bins+1e-8)",
+      "native_units": "normalized dimensionless entropy; legacy PSD floor retained",
+      "aggregation": "Same-channel/record baseline at valid centers<0s subtracted first; all valid-window DELTA values averaged per seizure; mean or populationSD(ddof=0) across finite available seizures; originalfloat32 cached R14 unchanged"
+    }
+  ],
+  "extract_new_features": false,
+  "fit_classifiers": false,
+  "primary_input": "Exact frozen R14 before patient-relative standardization; indices0,1,2,3,4,5,6,7,10,11,12,13; not E14, not Raw96D, not PR features.",
+  "label_convention": "Archived y=1 NEZ,y=0 EZ; analysis ez=(y==0).",
+  "statistical_unit": "one patient effect for each of12 coordinates; seizures already aggregated, not independent patients",
+  "effect": "D=(2U-nEZ*nNEZ)/(nEZ*nNEZ), average ranks with pairwise ties0.5, retain signed direction",
+  "missing": "Use finite channels per coordinate; require both finite EZ/NEZ classes. No new imputation. Constant coordinate yields0. All-zero patient effect vector p1. Historical safe-float and B0 nan_to_num conventions already part of frozen data and not undone.",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 42,
+    "resample": "equal patients, not channels/seizures",
+    "interval": "unadjusted two-sided percentile95% for mean effect"
+  },
+  "wilcoxon": {
+    "alternative": "two-sided",
+    "zero_method": "wilcox",
+    "correction": true,
+    "method": "approx",
+    "all_zero_p": 1,
+    "interpretation": "signed-location test under symmetry assumptions, not the same estimand as a mean bootstrap"
+  },
+  "multiplicity": {
+    "method": "Benjamini-Hochberg",
+    "family_tests": 12,
+    "alpha": 0.05,
+    "source_tests": "descriptive only, no source significance flags"
+  },
+  "permutation": {
+    "draws": 10000,
+    "seed": 42,
+    "within_patient": true,
+    "preserve_EZ_count": true,
+    "same_permutation_all_12_coordinates": true,
+    "interpretation": "pipeline negative-control null means and95% reference intervals; empirical p-values supplementary, never substitute primary Wilcoxon/BH",
+    "numerical_comparison_tolerance": 1e-14
+  },
+  "privacy": "Individual patient effects and labels remain server-only; public patient_effect_summary.csv is coordinate-level distribution summary, not960 patient rows; fixed-bin histograms export no stable patient identifier or exact individual effects.",
+  "reproducibility": "Source SHA and input SHA fixed before analysis. Independent pairwise/ROC effects, tie-corrected Wilcoxon variance, BH and count-matrix bootstrap verification required.",
+  "references": [
+    "https://docs.scipy.org/doc/scipy-1.15.3/reference/generated/scipy.stats.wilcoxon.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html"
+  ]
+}

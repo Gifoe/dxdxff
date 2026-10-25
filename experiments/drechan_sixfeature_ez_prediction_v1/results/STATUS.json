@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE_VERIFIED_SIXFEATURE_EZ_PREDICTION",
+  "patients": 80,
+  "channels": 7635,
+  "groups": 14,
+  "formal_LR_fits": 1410,
+  "score_cells": 570,
+  "patient_rows": 9120,
+  "metric_values": 72960,
+  "exploratory_historically_selected_cohort": true,
+  "neural_fits": 0
+}

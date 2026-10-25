@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "patients": 80,
+  "channels": 7635,
+  "EZ_channels": 1743,
+  "NEZ_channels": 5892,
+  "seizures": 256,
+  "valid_channel_windows": 1471965,
+  "features": 6,
+  "coordinates": 12,
+  "roles": [
+    {
+      "fold": 1,
+      "fit_patients": 51,
+      "validation_patients": 13,
+      "test_patients": 16,
+      "fit_channels": 4623,
+      "validation_channels": 1381,
+      "test_channels": 1631
+    },
+    {
+      "fold": 2,
+      "fit_patients": 51,
+      "validation_patients": 13,
+      "test_patients": 16,
+      "fit_channels": 4951,
+      "validation_channels": 1186,
+      "test_channels": 1498
+    },
+    {
+      "fold": 3,
+      "fit_patients": 50,
+      "validation_patients": 13,
+      "test_patients": 17,
+      "fit_channels": 4725,
+      "validation_channels": 1164,
+      "test_channels": 1746
+    },
+    {
+      "fold": 4,
+      "fit_patients": 52,
+      "validation_patients": 13,
+      "test_patients": 15,
+      "fit_channels": 4943,
+      "validation_channels": 1267,
+      "test_channels": 1425
+    },
+    {
+      "fold": 5,
+      "fit_patients": 51,
+      "validation_patients": 13,
+      "test_patients": 16,
+      "fit_channels": 5025,
+      "validation_channels": 1275,
+      "test_channels": 1335
+    }
+  ],
+  "source_patients": {
+    "hup": 36,
+    "lzu": 21,
+    "multicenter": 15,
+    "pediatric": 8
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "PR_exact_current_float32": true,
+      "all14_branch_inputs_isolated": true,
+      "all_roles_disjoint": true,
+      "inner_splits": 3,
+      "held_patients_never_fit_preprocessor": true
+    },
+    {
+      "fold": 2,
+      "PR_exact_current_float32": true,
+      "all14_branch_inputs_isolated": true,
+      "all_roles_disjoint": true,
+      "inner_splits": 3,
+      "held_patients_never_fit_preprocessor": true
+    },
+    {
+      "fold": 3,
+      "PR_exact_current_float32": true,
+      "all14_branch_inputs_isolated": true,
+      "all_roles_disjoint": true,
+      "inner_splits": 3,
+      "held_patients_never_fit_preprocessor": true
+    },
+    {
+      "fold": 4,
+      "PR_exact_current_float32": true,
+      "all14_branch_inputs_isolated": true,
+      "all_roles_disjoint": true,
+      "inner_splits": 3,
+      "held_patients_never_fit_preprocessor": true
+    },
+    {
+      "fold": 5,
+      "PR_exact_current_float32": true,
+      "all14_branch_inputs_isolated": true,
+      "all_roles_disjoint": true,
+      "inner_splits": 3,
+      "held_patients_never_fit_preprocessor": true
+    }
+  ],
+  "binding": {
+    "source": {
+      "PROTOCOL.json": "f7de626802f2488f50ac325799b6325dde8d0672856e65855547929a1b0d95f2",
+      "core.py": "7aec29d21cb59ea9a99d507563021fd8e9ac9a84d657fd2a6adc46d4cfdd42c0",
+      "run.py": "096e4ef66484c58ceef8e800369a94845a661a6d21dd3f041e67362b35af5fc5",
+      "report.py": "e9be4dd247e20d2b36dec911606da6f4fdae7b9d2d68859490a3dfc5a5df7550",
+      "verify.py": "1570caeab806a48949a7bb6d37257fc7dbaebc80e5d742ce13881a28b1ac17f3",
+      "test_math.py": "d31712d0194144950e068d3a7f51dcaa5e7f4c55d2015d33c21c1494cf44666f"
+    },
+    "inputs": {
+      "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609",
+      "labels": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+      "PR_parent": "3b9823db47382cc3d4d66d226b4041f05efbc65041095fccaf298f459dc8148f",
+      "A_input": "ac9decf436a87dcf58f35ba96b4df9dd914c1ce1dbfddd97aad5acb95c36ed7d",
+      "A_verification": "77dcf4ba5e885d0383962fcefed1e8abe5821874f471442d3bd50f5278b55aa1",
+      "split": "fd897fa7eed2c521fd5b14c1ae95d91b5d43b2ae85822317dcda08a878f58278"
+    },
+    "python": "3.13.9",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "sklearn": "1.7.2"
+  },
+  "historical_models_reused": 0,
+  "LR_formal_fits_at_admission": 0,
+  "raw_extraction": false,
+  "neural_imports": false,
+  "GPU_used": false,
+  "CPU_affinity": [
+    2
+  ],
+  "seven_single_seizure_patients_retained": true,
+  "original_A_unmodified": true
+}

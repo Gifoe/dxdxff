@@ -1,0 +1,7 @@
+{
+  "status": "ALL1410_LR_FITS_COMPLETE_PENDING_FREEZE",
+  "main_and_supplementary": 70,
+  "null_models": 500,
+  "inner_models": 840,
+  "actual_unique_LR_fits": 1410
+}

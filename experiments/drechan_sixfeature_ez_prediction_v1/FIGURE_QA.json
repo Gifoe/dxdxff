@@ -1,0 +1,34 @@
+{
+  "backend": "Python/matplotlib",
+  "figures": [
+    {
+      "figure": "feature_prediction",
+      "width_mm": 89,
+      "height_mm": 91,
+      "png_dpi": 600,
+      "minimum_font_pt": 7,
+      "text_outside_canvas": [],
+      "individual_data_used": false,
+      "editable_text": true
+    },
+    {
+      "figure": "negative_control",
+      "width_mm": 89,
+      "height_mm": 65,
+      "png_dpi": 600,
+      "minimum_font_pt": 7,
+      "text_outside_canvas": [],
+      "individual_data_used": false,
+      "editable_text": true
+    }
+  ],
+  "rows_plotted": 8,
+  "patients_retained": 80,
+  "negative_repeats_retained": 100,
+  "visual_review": "PASS: main8-row forest and all100-repeat negative-control histogram inspected; labels,nominal CIs,chance line and source numbers checked",
+  "reviewed_PNG_SHA256": {
+    "feature_prediction": "6a018e7c475b2308deeaa3c8b26deec50be8e2ef85136e02e1f32ef3f42c5dda",
+    "negative_control": "46a8d904eea2cde265eb47838119d186ab7968aeac5ab49aac1ff34ca57d4368"
+  },
+  "static_preflight": "12 PASS,2 WARN,0 FAIL: requested PNG not TIFF; width parser reads89/25.4 incorrectly, actual dimensions independently checked"
+}

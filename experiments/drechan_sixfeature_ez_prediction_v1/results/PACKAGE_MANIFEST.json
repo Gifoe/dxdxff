@@ -1,0 +1,37 @@
+{
+  "schema": "SIXFEATURE_EZ_PREDICTION_V1",
+  "files": {
+    "main_results.csv": "04c228851ccdfa7c4bd33e0c5ba7f729afdf6e4412020aeec1818a132febf181",
+    "individual_feature_results.csv": "1a542b5b0088ef721cca3d36e44917debc0022d96ef47cdf0ad30c0fc04b6029",
+    "all_results.csv": "3b784eb71dfc12c0104a521c6e5687163d97bff53d1982a8dfd520c574fd5630",
+    "pr_improvement.csv": "bb7e1f67bc99c83ccd056919d9c350fa6377365f9785beaedd40ea30d65e544b",
+    "paired_comparisons.csv": "88086da2cd0ead29f14b43cca6e10b089dff6489de3525a6e7afbabf7bdaf64c",
+    "fold_results.csv": "ccd701856416786163e75fc4827246c38d8f6be7f61a00e8ef0f59427dd3d2c9",
+    "source_results.csv": "c7a94f90a10133fdba9e1a77e16e1347a61f55bdfaa258b433cfe746f574b4b0",
+    "negative_control.csv": "0bbd852f1b94ffb30b58d175e4ad0e7213bcc50a82a41bdf3a5d4890e393e183",
+    "negative_control_summary.csv": "cdab6638deddd25a90f7ba98a4dece7cf929b8294d8a9073fa49040c7d9fbf92",
+    "coverage.csv": "ec0696d1bebc412cb133615f615abb4e29b6558cdf5c94b1d340d8bc73ea2605",
+    "coordinate_variation.csv": "2eb8f4924ff1c205a73da6c8d24984d8bb80a2ea22003d6a632c42260bd9acf1",
+    "model_selection.csv": "f4dc7be9dbeb56281f7a3873cfbe306e8b635744ff906f11e2fda7f95511ed6a",
+    "inner_cv.csv": "350b64ade6fe2505e9034cf1c726489c036415a1adbd0fd8ada3e435f240853c",
+    "fit_audit.csv": "72d893da034c2dd507a6416bcd5f326656134cf596e68451589a6432c7d5fb46",
+    "INPUT_AUDIT.json": "3c4d905b1dfaa1efbf98efa7706b737698d32baf2f752b65bcec6426303f24d0",
+    "ADMISSION.json": "a4cbdbbd09f4508e0ba8a1fae909dc6976d10501c9f726157f15d280e341b72c",
+    "SOURCE_PUSH_BEFORE_FIT.json": "e74cdd72ef00dfd94a0bf5645b784ddb649100bc72fd98a1a90ff09a456c94e4",
+    "TRAIN_STATUS.json": "c03e78dcccc6a40d035d82192cbff12e5c2765b7a2f62c630fcf29f52786577e",
+    "FREEZE_STATUS.json": "41579977106278280207808d65642acd3d7d93c74479ecd139e8fa1cb71f81d7",
+    "PREDICTION_STATUS.json": "902efaed39d3a21bd9fa85d5d92020b74f2e9e834070d73f27b40cf0c3b20584",
+    "INTERNAL_VERIFICATION.json": "a3d140b3034ba1fb509779e86087d5302c1b3e00fdd086025c0fcd4038f4ac94",
+    "INDEPENDENT_VERIFICATION.json": "ec5a957aa84a6e8e9a7a337fed78df593f165f52eeab6a49d7e26de105c87941",
+    "STATUS.json": "d917677da889a7c288df6e1a74530a33ccfc76ee86020168f7a31bcff46d30c5"
+  },
+  "source": {
+    "PROTOCOL.json": "f7de626802f2488f50ac325799b6325dde8d0672856e65855547929a1b0d95f2",
+    "core.py": "7aec29d21cb59ea9a99d507563021fd8e9ac9a84d657fd2a6adc46d4cfdd42c0",
+    "run.py": "096e4ef66484c58ceef8e800369a94845a661a6d21dd3f041e67362b35af5fc5",
+    "report.py": "e9be4dd247e20d2b36dec911606da6f4fdae7b9d2d68859490a3dfc5a5df7550",
+    "verify.py": "1570caeab806a48949a7bb6d37257fc7dbaebc80e5d742ce13881a28b1ac17f3",
+    "test_math.py": "d31712d0194144950e068d3a7f51dcaa5e7f4c55d2015d33c21c1494cf44666f"
+  },
+  "private_exported": false
+}

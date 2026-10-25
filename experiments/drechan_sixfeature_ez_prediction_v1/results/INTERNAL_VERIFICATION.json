@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "candidate_models": 840,
+  "selected_and_null_models": 570,
+  "unique_LR_fits": 1410,
+  "all_C_choices_replayed": 70,
+  "all_CAL_thresholds_replayed": 570,
+  "patient_role_isolation": true,
+  "every_subFIT_preprocessor_checked": true,
+  "patient_and_class_weights_checked": true,
+  "permutations_preserve_counts": true,
+  "probability_direction_EZ_positive": true,
+  "nonconverged_fits": 0,
+  "max_iterations_observed": 94,
+  "no_new_Outer_inference_during_internal_verification": true
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "public_server_payload_hashes": 23,
+  "frozen_scientific_source_hashes": 6,
+  "main_rows": 8,
+  "all_groups": 14,
+  "source_rows": 448,
+  "fold_rows": 560,
+  "table_true_best_bolding": true,
+  "figures": [
+    {
+      "figure": "feature_prediction",
+      "width_mm": 89,
+      "height_mm": 91,
+      "png_pixels": [
+        2102,
+        2149
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "SVG_text_nodes": 17,
+      "PDF_TrueType_embedded": true
+    },
+    {
+      "figure": "negative_control",
+      "width_mm": 89,
+      "height_mm": 65,
+      "png_pixels": [
+        2102,
+        1535
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "SVG_text_nodes": 15,
+      "PDF_TrueType_embedded": true
+    }
+  ],
+  "visual_review": "PASS: main8-row forest and all100-repeat negative-control histogram inspected; labels,nominal CIs,chance line and source numbers checked",
+  "private_patient_rows_exported": false
+}

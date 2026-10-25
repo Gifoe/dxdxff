@@ -1,0 +1,15 @@
+{
+  "status": "PASS_COMPILED_AND_VISUALLY_REVIEWED",
+  "preview_sha256": "74c8ae76b28e0e07f8fa3713a03571387394c6bb919c335e5e06fd01b1b0d1b1",
+  "desktop_compiler": "success: current source compiled with the desktop editor compiler",
+  "independent_pdf_export": "pdfTeX 3.141592653-2.6-1.40.25, MiKTeX24.1, two passes, no shell escape, installer disabled",
+  "pdf_sha256": "5d53a20df04498340bc7c6c025dd55f445a800f4bdd4f4ee11a47c77c404e1d5",
+  "pages": 1,
+  "column_width_mm": 89,
+  "overfull_boxes": 0,
+  "underfull_boxes": 0,
+  "second_pass_LaTeX_warnings": 0,
+  "environment_notice": "MiKTeX update-check notice only; no package installation or update was performed",
+  "visual_review": "Actual rendered PDF inspected: eight rows, readable single-column text, three booktabs rules, no clipping, only true unrounded column maxima bold",
+  "public_export_contains_private_data": false
+}

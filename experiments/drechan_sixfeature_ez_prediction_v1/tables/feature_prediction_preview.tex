@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[paperwidth=93mm,paperheight=88mm,margin=2mm]{geometry}
+\usepackage{booktabs}
+\pagestyle{empty}
+\begin{document}
+\begin{table}[t]
+\centering
+\caption{Predictive Performance of Individual and Combined Physiological Features. Patient-average results over the original five held-out folds ($n=80$).}
+\label{tab:physiological-prediction}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Input & AUROC & AP & Macro-F1 & Top-1 \\
+\midrule
+Beta & 0.723 & 0.518 & 0.585 & 0.625 \\
+Low Gamma & 0.713 & 0.499 & 0.581 & 0.562 \\
+High Gamma & 0.719 & 0.495 & 0.535 & 0.500 \\
+RMS & 0.663 & 0.479 & 0.581 & 0.588 \\
+Line Length & 0.748 & 0.549 & \textbf{0.631} & \textbf{0.688} \\
+Spectral Entropy & 0.720 & 0.521 & 0.611 & 0.588 \\
+All Six (w/o PR) & 0.722 & 0.520 & 0.482 & 0.613 \\
+All Six (+PR) & \textbf{0.757} & \textbf{0.554} & 0.626 & 0.662 \\
+\bottomrule
+\end{tabular*}
+\par\vspace{2pt}
+\parbox{\columnwidth}{\scriptsize All rows use PR except the explicitly marked row. High Gamma is the available 80--125\,Hz band. Bold denotes the best unrounded mean in each column. Confidence intervals are reported with Fig.~B and in the supplementary tables.}
+\end{table}
+\end{document}

@@ -1,0 +1,37 @@
+{
+  "rows": 8,
+  "metrics": [
+    "AUROC",
+    "AP",
+    "Macro_F1",
+    "Top_1"
+  ],
+  "bolded_best_rows": {
+    "Macro_F1": [
+      "LINE_LENGTH_PR"
+    ],
+    "Top_1": [
+      "LINE_LENGTH_PR"
+    ],
+    "AUROC": [
+      "ALL_SIX_PR"
+    ],
+    "AP": [
+      "ALL_SIX_PR"
+    ]
+  },
+  "order": [
+    "BETA_PR",
+    "LOW_GAMMA_PR",
+    "HIGH_GAMMA_PR",
+    "RMS_PR",
+    "LINE_LENGTH_PR",
+    "SPECTRAL_ENTROPY_PR",
+    "ALL_SIX_NO_PR",
+    "ALL_SIX_PR"
+  ],
+  "booktabs": true,
+  "columnwidth": true,
+  "selection_from_unrounded_values": true,
+  "render_status": "PASS_COMPILED_AND_VISUALLY_REVIEWED"
+}

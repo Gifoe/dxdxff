@@ -1,0 +1,19 @@
+{
+  "status": "APPLIED",
+  "type": "AUDIT_SERIALIZATION_ONLY",
+  "original_run_sha256": "096e4ef66484c58ceef8e800369a94845a661a6d21dd3f041e67362b35af5fc5",
+  "adapter_sha256": "126753a1a7ac1f505e1e42ccb947d502a63222ebcc0a77a91a58fb1cd2ee3e8d",
+  "replacement_sites": 3,
+  "unchanged_statistical_source_hashes": {
+    "PROTOCOL.json": "f7de626802f2488f50ac325799b6325dde8d0672856e65855547929a1b0d95f2",
+    "core.py": "7aec29d21cb59ea9a99d507563021fd8e9ac9a84d657fd2a6adc46d4cfdd42c0",
+    "run.py": "096e4ef66484c58ceef8e800369a94845a661a6d21dd3f041e67362b35af5fc5",
+    "report.py": "e9be4dd247e20d2b36dec911606da6f4fdae7b9d2d68859490a3dfc5a5df7550",
+    "verify.py": "1570caeab806a48949a7bb6d37257fc7dbaebc80e5d742ce13881a28b1ac17f3",
+    "test_math.py": "d31712d0194144950e068d3a7f51dcaa5e7f4c55d2015d33c21c1494cf44666f"
+  },
+  "first_candidate_preserved": true,
+  "formal_fits_before_failure": 1,
+  "Outer_scores_before_failure": 0,
+  "engineering_commit": "9ba8a29c7d0b6d33da48b4c293dcd233ab8aa9ef"
+}

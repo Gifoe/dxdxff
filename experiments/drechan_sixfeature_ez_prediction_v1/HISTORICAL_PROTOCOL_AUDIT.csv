@@ -1,0 +1,12 @@
+item,historical_LR,new_Experiment_B,reuse
+input,"Exact R14 active12 coordinates","Same immutable R14 active12 coordinates",input_only
+cohort,"80patients7635channels256seizures","Same original cohort",input_only
+outer_roles,"Original five patient-held-out folds","Exact same FIT/CAL/Outer roles",roles_only
+sample_weights,"Patient-equal initial weights multiplied by pooled FIT inverse class frequency","Each patient equal and each within-patient class half; mean weight1",no_model_reuse
+hyperparameter_data,"CAL validation paired PR/NoPR mean MacroF1","Three patient-isolated CV folds inside FIT; patient-average OOF AUROC",no_model_reuse
+C_grid,"0.1 1 10","0.01 0.1 1 10",no_model_reuse
+PR_pair_C,"One common C chosen jointly for PR and NoPR","Separate C selected under identical FIT-only policies",no_model_reuse
+solver,"lbfgs L2 max_iter2000 tol1e-7","lbfgs L2 max_iter2000 tol1e-6",no_model_reuse
+PR,"Legacy absolute epsilon1e-8 PatientZ","Current DREChannNet unit-consistent epsilon1e-8 times FIT unit scale",no_model_reuse
+threshold,"CAL grid0..1 step0.005 MacroF1 thenEZF1 nearest0.5 lower","Same objective/grid with explicitly fixed12decimal tie keys",no_model_reuse
+historical_metrics,"NoPR AUROC0.6737598735842185 AP0.4731269819808879 MacroF10.4904587824638426; PR AUROC0.7442385384372512 AP0.5429911999798358 MacroF10.6168547869026988","Historical reference only; excluded from new main table and paired CIs",no_scores_reused

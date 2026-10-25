@@ -43,7 +43,7 @@ def main(runtime):
     import psutil
     psutil.Process().cpu_affinity([0])
     runtime=Path(runtime);pub=runtime/'public';private=runtime/'private'
-    binding=json.loads((private/'INPUT_FREEZE.json').read_text())
+    binding=json.loads((private/'INPUT_FREEZE.json').read_text(encoding='utf-8'))
     for n,h in binding['source'].items():assert a.sha(a.HERE/n)==h
     rec,x,ez,protocol=a.inputs();meta=rec['meta'];ids=sorted(set(meta['patient']))
     actual=pd.read_csv(private/'patient_effect_summary.csv',dtype={'patient':str});assert len(actual)==960

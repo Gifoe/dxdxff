@@ -42,7 +42,7 @@ def table(path,rows):
 
 
 def checked_pickle(path):
-    path=Path(path);assert sha(path)==json.loads(path.with_suffix('.sha256.json').read_text())['sha256']
+    path=Path(path);assert sha(path)==json.loads(path.with_suffix('.sha256.json').read_text(encoding='utf-8'))['sha256']
     with path.open('rb') as f:return pickle.load(f)
 
 
@@ -61,7 +61,7 @@ def inputs():
         label=z['y'].copy()
     assert set(np.unique(label))=={0,1};ez=label==0
     assert rec['binding']['archive']==LABEL_SHA
-    protocol=json.loads((HERE/'PROTOCOL.json').read_text())
+    protocol=json.loads((HERE/'PROTOCOL.json').read_text(encoding='utf-8'))
     cols=[c['r14_index'] for c in protocol['coordinates']]
     assert cols==[0,1,2,3,4,5,6,7,10,11,12,13]
     assert sum(len(r['records']) for r in rec['ledgers'])==256
@@ -165,7 +165,7 @@ def main(runtime):
 
 def package(runtime):
     runtime=Path(runtime);pub=runtime/'public'
-    assert json.loads((pub/'STATUS.json').read_text())['status']=='COMPLETE_INDEPENDENTLY_VERIFIED_SIXFEATURE_EZ_ASSOCIATION'
+    assert json.loads((pub/'STATUS.json').read_text(encoding='utf-8'))['status']=='COMPLETE_INDEPENDENTLY_VERIFIED_SIXFEATURE_EZ_ASSOCIATION'
     manifest=dict(schema='SIXFEATURE_EZ_ASSOCIATION_V1',files={n:sha(pub/n) for n in ALLOW},
                   source={n:sha(HERE/n) for n in SCIENCE},private_artifacts_exported=False)
     write(pub/'PACKAGE_MANIFEST.json',manifest)

@@ -5,6 +5,14 @@ from statistics_core import effect,summarize,bh,permuted_effects
 
 
 class Tests(unittest.TestCase):
+    def test_protocol_utf8_and_fixed_coordinates(self):
+        import json
+        from pathlib import Path
+        q=json.loads(Path(__file__).with_name('PROTOCOL.json').read_text(encoding='utf-8'))
+        self.assertEqual(len(q['coordinates']),12)
+        self.assertEqual([r['r14_index'] for r in q['coordinates']],[0,1,2,3,4,5,6,7,10,11,12,13])
+        self.assertEqual(q['multiplicity']['family_tests'],12)
+
     def test_effect_sign_ties_missing_constants(self):
         self.assertEqual(effect([3,4,1,2],[1,1,0,0]),1.)
         self.assertEqual(effect([1,2,3,4],[1,1,0,0]),-1.)

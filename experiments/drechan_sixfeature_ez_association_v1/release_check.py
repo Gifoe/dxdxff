@@ -12,7 +12,7 @@ HERE=Path(__file__).resolve().parent
 
 
 def verify(path):
-    tree=ast.parse((HERE/'run_analysis.py').read_text())
+    tree=ast.parse((HERE/'run_analysis.py').read_text(encoding='utf-8'))
     vals={n.targets[0].id:ast.literal_eval(n.value) for n in tree.body if isinstance(n,ast.Assign)
           and len(n.targets)==1 and isinstance(n.targets[0],ast.Name) and n.targets[0].id in ['SCIENCE','ALLOW']}
     with zipfile.ZipFile(path) as z:

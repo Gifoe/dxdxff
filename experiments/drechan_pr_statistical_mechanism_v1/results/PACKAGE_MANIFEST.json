@@ -1,0 +1,37 @@
+{
+  "schema": "PR_STATISTICAL_MECHANISM_V1",
+  "source": {
+    "PROTOCOL_LOCK.json": "f323f74174e6cea5241af4ea3369eb860282359503e3eae842a8a5bb53adc11d",
+    "PROTOCOL_LOCK.md": "fc3e79273ff784d1153fd081667fd9857dd67b7e6fe0698c8d120d3e51ef73be",
+    "mechanism_math.py": "4f1693501e2f5d7d3129bed43ebd72976e7f11f144e576c0cb03ed42ce210311",
+    "trusted_io.py": "90d6555d00e6de8b444dd9a314b83bdfde1cef96f187d568b43a87d1471f43a7",
+    "run_mechanism.py": "e00df3fe78f15e1d0bbeca92122ea1a872e70782c883791afa31de86be8f158f",
+    "statistics_report.py": "13d84a4e523b3937a1eaf28497a40391738d1eebac47c5feaf52caf8560ef816",
+    "verify_mechanism.py": "f3b0049512980d754dbe785c2cd4cb31885dc8b5746f841d931e356e0a854a8e",
+    "tests/test_mechanism.py": "6b6e79538ea8604cfdb516690bf7dadadbc88fa5585314993052414a81f33c11"
+  },
+  "files": {
+    "ASSESS_STATUS.json": "ab485884c397c627112f70184fdd91d6004b6394a5662baf164225ee12247e00",
+    "FREEZE_STATUS.json": "8a9607ffe49d36d91badb6cdb280091c311ffd841dfbd24833dcf89bd3ff85b4",
+    "INDEPENDENT_VERIFICATION.json": "277147c9bd8d57a6226f14560af70d1764bab188173359565f7ad6e45cc3c957",
+    "INPUT_AUDIT.json": "99f6ca52c9b4fd91ecad84fc8eeb31412b0fec44cc5bfababcccf6467772dfaa",
+    "PUBLIC_PRIVACY_REVIEW.json": "3e3994f31b5c678baf6369a359e4b6783c5817cd664e1b546d8f376643405f30",
+    "REPORT_STATUS.json": "1abaa2cf100a99573d5f392504cdc63e4d31957beaa013138f751a5f0747a68a",
+    "STATUS.json": "28a8e9915c08060af17432a8b87b76f05846ab9558cc15021d556062261c0f3b",
+    "boundary_drift.csv": "df23b57dc344bf9da34e4fa84b946494bd753067b95a89c239c0968913ca2463",
+    "factorial_contrasts.csv": "b8a369944dfcf56bb30ba71d3a8143b632a9e9ab7eaa153f0bec46b52433af2c",
+    "fold_coverage.csv": "80b57709c672aec617f88c951cf754b53104d26c2b2229c9cbf2771f4bd67f94",
+    "negative_control_summary.csv": "92a33970de5e073f804509b352b54618dd279dff6072af28ffaca8a2706cb960",
+    "negative_controls.csv": "e4f7ae2c545707f2c86b35744bbc38ed429e6bccab32e57aaa450a72fc724729",
+    "paired_intervals.csv": "174ef47d18aa993b4650e83335593b0ee37337253e27b2e256b824d53c418cbe",
+    "patient_distribution_bins.csv": "5907b74c64f6fce57e863537a8e8d58361a18ab713fa16123201eb0d5aba9b09",
+    "representation_alignment.csv": "cb7e3fe457384b55f1aed8d2b3483df50e6bc473deffb6599f9b75597ea6784b",
+    "source_results.csv": "bf27d298492c7390d61e28d8ba6770dd7b436d353870690df09ecef870cdde60",
+    "support_and_donor_audit.csv": "dead3ce6bdeb5bf35812d630834f6a0f5dd4aa674a7deeda3d7d743e8c4c7c54",
+    "transferable_snr.csv": "45920744f67212829f23c81b1effdbe946cadea3e0574f7a7f3eff73efeab155"
+  },
+  "private_exported": false,
+  "publication_privacy_filter": true,
+  "original_manifest_sha256": "5a8bb8355c7e797730632d5277a74f26fbfb871d0a7b459cda5802b6e1933891",
+  "strict79_table_published": false
+}

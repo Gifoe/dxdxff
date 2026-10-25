@@ -1,0 +1,14 @@
+{
+  "status": "PUBLIC_COMPLEMENT_PRIVACY_FILTER_PASS",
+  "all80_primary_unchanged": true,
+  "strict79_remains_trusted_only": true,
+  "strict79_intervals_independently_verified": 32,
+  "strict79_qualitative_conclusion": "NO_SUPPORTED_IMPROVEMENT_IN_TRANSFERABLE_T",
+  "exact_strict79_values_or_intervals_exported": false,
+  "reason": "Exact80 and79 means allow reconstruction of one patient endpoint by subtraction",
+  "removed_public_file": "strict_fit_sensitivity.csv",
+  "private_table_sha256": "6d03283cf343d6c37bfdeb8a2623a725562aa84772c4b78d0d83265c981ce847",
+  "original_private_intermediate_archive_sha256": "792f9caee25efa499ede006b2e0d5d649ff21291ac8228fc76a929bc28f12e89",
+  "scientific_source_changed": false,
+  "scientific_results_changed": false
+}

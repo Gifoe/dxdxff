@@ -1,0 +1,59 @@
+{
+  "status": "ALL7070_DIRECTIONS_FROZEN_BEFORE_ASSESS",
+  "source_commit": "49db6da4084635bade1cf64e3da10a5ed890e8fb",
+  "freeze_sha256": "3f259de720494874b4bda74ec9b39e4cac949605bf70b0de414433acccc2cd2e",
+  "states": 7070,
+  "folds": [
+    {
+      "fold": 1,
+      "directions": 1414,
+      "degenerate": 0,
+      "donor_same_source": 51,
+      "donor_pairs": 51,
+      "donor_self_pairs": 0
+    },
+    {
+      "fold": 2,
+      "directions": 1414,
+      "degenerate": 0,
+      "donor_same_source": 50,
+      "donor_pairs": 51,
+      "donor_self_pairs": 0
+    },
+    {
+      "fold": 3,
+      "directions": 1414,
+      "degenerate": 0,
+      "donor_same_source": 50,
+      "donor_pairs": 50,
+      "donor_self_pairs": 0
+    },
+    {
+      "fold": 4,
+      "directions": 1414,
+      "degenerate": 0,
+      "donor_same_source": 51,
+      "donor_pairs": 52,
+      "donor_self_pairs": 0
+    },
+    {
+      "fold": 5,
+      "directions": 1414,
+      "degenerate": 0,
+      "donor_same_source": 52,
+      "donor_pairs": 52,
+      "donor_self_pairs": 0
+    }
+  ],
+  "source": {
+    "PROTOCOL_LOCK.json": "f323f74174e6cea5241af4ea3369eb860282359503e3eae842a8a5bb53adc11d",
+    "PROTOCOL_LOCK.md": "fc3e79273ff784d1153fd081667fd9857dd67b7e6fe0698c8d120d3e51ef73be",
+    "mechanism_math.py": "4f1693501e2f5d7d3129bed43ebd72976e7f11f144e576c0cb03ed42ce210311",
+    "trusted_io.py": "90d6555d00e6de8b444dd9a314b83bdfde1cef96f187d568b43a87d1471f43a7",
+    "run_mechanism.py": "e00df3fe78f15e1d0bbeca92122ea1a872e70782c883791afa31de86be8f158f",
+    "statistics_report.py": "13d84a4e523b3937a1eaf28497a40391738d1eebac47c5feaf52caf8560ef816",
+    "verify_mechanism.py": "f3b0049512980d754dbe785c2cd4cb31885dc8b5746f841d931e356e0a854a8e",
+    "tests/test_mechanism.py": "6b6e79538ea8604cfdb516690bf7dadadbc88fa5585314993052414a81f33c11"
+  },
+  "CAL_used": false
+}

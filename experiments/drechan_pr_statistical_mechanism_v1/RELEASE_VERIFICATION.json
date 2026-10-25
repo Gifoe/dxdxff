@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "package_sha256": "0a356496d52fba9beb8c7643e216b48efdceccf5d18a29e41c11b772c8f349d4",
+  "payloads": 18,
+  "source_files": 8,
+  "unique_patients": 80,
+  "channels": 7635,
+  "strict_original_FIT": 79,
+  "original_validation_exception": 1,
+  "source_commit": "49db6da4084635bade1cf64e3da10a5ed890e8fb",
+  "row_counts": {
+    "representation_alignment.csv": 42,
+    "transferable_snr.csv": 42,
+    "boundary_drift.csv": 42,
+    "factorial_contrasts.csv": 72,
+    "paired_intervals.csv": 168,
+    "negative_controls.csv": 2200,
+    "negative_control_summary.csv": 136,
+    "source_results.csv": 168,
+    "patient_distribution_bins.csv": 1146,
+    "support_and_donor_audit.csv": 5,
+    "fold_coverage.csv": 5
+  },
+  "verified_before_extraction": true,
+  "strict79_complementary_means_private_only": true
+}

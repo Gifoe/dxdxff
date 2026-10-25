@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "unique_assessed_patients": 80,
+  "assessment_appearances": 80,
+  "directions_reconstructed": 7070,
+  "patient_direction_rows": 179360,
+  "endpoint_values": 717440,
+  "nominal_intervals_verified": 1112,
+  "secondary_family_intervals": 25,
+  "strict_original_FIT_patients": 79,
+  "original_validation_only_assessed": 1,
+  "strict79_sensitivity_intervals": 32,
+  "maximum_endpoint_absolute_discrepancy": 1.1428369361965451e-10,
+  "tolerances": {
+    "atol": 1e-07,
+    "rtol": 1e-08
+  },
+  "numerical_implementation": "Independent origin-shifted class arithmetic,scalar projected variances,TRAIN covariance reconstruction andbootstrap count matrices",
+  "input_hashes_unchanged": true,
+  "private_exported": false,
+  "classifier_fits": 0,
+  "neural_fits": 0
+}

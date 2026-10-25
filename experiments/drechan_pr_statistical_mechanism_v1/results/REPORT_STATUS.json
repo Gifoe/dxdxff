@@ -1,0 +1,25 @@
+{
+  "status": "ALL_FROZEN_PROBES_REPORTED_PENDING_INDEPENDENT_CHECK",
+  "unique_patients": 80,
+  "appearances": 80,
+  "patient_direction_rows": 179360,
+  "directions": 7070,
+  "primary_comparisons": 1,
+  "secondary_family_slots": 25,
+  "TRAIN_label_permutations": 100,
+  "neural_fits": 0,
+  "classifier_fits": 0,
+  "row_counts": {
+    "representation_alignment": 42,
+    "transferable_snr": 42,
+    "boundary_drift": 42,
+    "factorial_contrasts": 72,
+    "paired_intervals": 168,
+    "source_results": 168,
+    "patient_distribution_bins": 1146,
+    "negative_controls": 2200,
+    "negative_control_summary": 136,
+    "support_and_donor_audit": 5,
+    "strict_fit_sensitivity": 32
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "status": "ALL_ASSESS_STATISTICS_SEALED_BEFORE_AGGREGATES",
+  "rows": 179360,
+  "freeze_sha256": "3f259de720494874b4bda74ec9b39e4cac949605bf70b0de414433acccc2cd2e",
+  "seal_sha256": "85a70e98105abec07ced532b8cde40cbc7240cbcf3974bcc1524d978b0b5e196"
+}

@@ -1,0 +1,6 @@
+fold,TRAIN_patients,CAL_patients,ASSESS_patients,original_validation_only_assessment,ASSESS_channels,EZ_channels,NEZ_channels
+1,27,8,16,0,1601,393,1208
+2,27,8,16,0,1446,324,1122
+3,26,8,16,0,1514,301,1213
+4,28,8,16,0,1616,402,1214
+5,28,8,16,1,1458,323,1135

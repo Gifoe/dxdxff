@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE_VERIFIED_PR_STATISTICAL_MECHANISM_80",
+  "patients": 80,
+  "channels": 7635,
+  "EZ": 1743,
+  "NEZ": 5892,
+  "ASSESS_appearances": 80,
+  "primary_T_comparison": 1,
+  "secondary_family": 25,
+  "permutations": 100,
+  "historical_exploratory": true,
+  "no_Outer_promotion": true,
+  "private_exported": false
+}

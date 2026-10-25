@@ -32,10 +32,12 @@ def sanitize(source,destination):
     assert checks['status']=='PASS' and checks['strict79_sensitivity_intervals']==32
     rows=list(csv.DictReader(io.StringIO(data[OMIT].decode('utf-8'))));assert len(rows)==32
     result=next(r for r in rows if r['target']=='G3_FULL' and r['control']=='G0_GLOBAL' and r['metric']=='T')
-    assert float(result['effect'])<0 and float(result['ci_high'])<0
+    # Outcome-agnostic reporting, never a favorable-result export gate.
+    conclusion=('SUPPORTED_IMPROVEMENT_IN_TRANSFERABLE_T' if float(result['ci_low'])>0
+                else 'NO_SUPPORTED_IMPROVEMENT_IN_TRANSFERABLE_T')
     review=dict(status='PUBLIC_COMPLEMENT_PRIVACY_FILTER_PASS',all80_primary_unchanged=True,
         strict79_remains_trusted_only=True,strict79_intervals_independently_verified=32,
-        strict79_qualitative_conclusion='NO_SUPPORTED_IMPROVEMENT_IN_TRANSFERABLE_T',
+        strict79_qualitative_conclusion=conclusion,
         exact_strict79_values_or_intervals_exported=False,
         reason='Exact80 and79 means allow reconstruction of one patient endpoint by subtraction',
         removed_public_file=OMIT,private_table_sha256=prior['files'][OMIT],

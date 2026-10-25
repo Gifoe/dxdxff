@@ -1,0 +1,130 @@
+{
+  "input_hashes": {
+    "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609",
+    "labels": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "feature_pr": "3b9823db47382cc3d4d66d226b4041f05efbc65041095fccaf298f459dc8148f",
+    "unit_pr": "2429906e260f02b7be71ab23220b2953dede963aaf79bef2a6eac923afd65f7b"
+  },
+  "bank_hashes": [
+    "0096095bb69cd63fc338389c43ccb3f5ea5bfd24498c28e9441c80122b453e2a",
+    "a6bfd47e045e3d104fe0e925a950609fd1ef77f81001fafa882f968aae816cf9",
+    "9452cfd64a122ff9191d18a006ed0b0b5e2c77a4e4ccf2e4f95d1727ab110c65",
+    "d024f099e449b5143b6493ce9cd1baae67ecc5172c71f710583b9db052ef234f",
+    "bf282533bb91826fb0dcff6f8343c351b6986ce629b164c397d250dd7a44fe89"
+  ],
+  "patients": 80,
+  "channels": 7635,
+  "EZ": 1743,
+  "NEZ": 5892,
+  "seizures": 256,
+  "valid_windows": 1471965,
+  "ASSESS_unique": 80,
+  "ASSESS_appearances": 80,
+  "legacy_internal_unique": 33,
+  "legacy_internal_appearances": 40,
+  "strict_original_FIT_assessed": 79,
+  "original_validation_only_assessed": 1,
+  "new_assignment_sha256": "878b0a83431b99390e47e46be7069e7aaeec6853965f1c45e57f4e98ed8f1350",
+  "source_patients": {
+    "hup": 36,
+    "lzu": 21,
+    "multicenter": 15,
+    "pediatric": 8
+  },
+  "status": "PASS",
+  "source": {
+    "PROTOCOL_LOCK.json": "f323f74174e6cea5241af4ea3369eb860282359503e3eae842a8a5bb53adc11d",
+    "PROTOCOL_LOCK.md": "fc3e79273ff784d1153fd081667fd9857dd67b7e6fe0698c8d120d3e51ef73be",
+    "mechanism_math.py": "4f1693501e2f5d7d3129bed43ebd72976e7f11f144e576c0cb03ed42ce210311",
+    "trusted_io.py": "90d6555d00e6de8b444dd9a314b83bdfde1cef96f187d568b43a87d1471f43a7",
+    "run_mechanism.py": "e00df3fe78f15e1d0bbeca92122ea1a872e70782c883791afa31de86be8f158f",
+    "statistics_report.py": "13d84a4e523b3937a1eaf28497a40391738d1eebac47c5feaf52caf8560ef816",
+    "verify_mechanism.py": "f3b0049512980d754dbe785c2cd4cb31885dc8b5746f841d931e356e0a854a8e",
+    "tests/test_mechanism.py": "6b6e79538ea8604cfdb516690bf7dadadbc88fa5585314993052414a81f33c11"
+  },
+  "checks": [
+    {
+      "fold": 1,
+      "TRAIN_patients": 27,
+      "CAL_patients": 8,
+      "ASSESS_patients": 16,
+      "original_validation_only_assessment": 0,
+      "original_feature_and_operational_PR_bit_parity": true,
+      "TRAIN_rank_AUC_invariance_max_error": 0.0,
+      "TRAIN_delta_fixed_projection_identity_max_error": 1.815214645262131e-14,
+      "unlabeled_affine_invariance_max_error": 1.2290446438356639e-11,
+      "affine_support_crossings": 0,
+      "held_query_cannot_change_TRAIN": true,
+      "ASSESS_endpoint_labels_used": false
+    },
+    {
+      "fold": 2,
+      "TRAIN_patients": 27,
+      "CAL_patients": 8,
+      "ASSESS_patients": 16,
+      "original_validation_only_assessment": 0,
+      "original_feature_and_operational_PR_bit_parity": true,
+      "TRAIN_rank_AUC_invariance_max_error": 0.0,
+      "TRAIN_delta_fixed_projection_identity_max_error": 1.7763568394002505e-15,
+      "unlabeled_affine_invariance_max_error": 2.0188295479783847e-12,
+      "affine_support_crossings": 0,
+      "held_query_cannot_change_TRAIN": true,
+      "ASSESS_endpoint_labels_used": false
+    },
+    {
+      "fold": 3,
+      "TRAIN_patients": 26,
+      "CAL_patients": 8,
+      "ASSESS_patients": 16,
+      "original_validation_only_assessment": 0,
+      "original_feature_and_operational_PR_bit_parity": true,
+      "TRAIN_rank_AUC_invariance_max_error": 0.0,
+      "TRAIN_delta_fixed_projection_identity_max_error": 4.1522341120980855e-14,
+      "unlabeled_affine_invariance_max_error": 2.2962964862927038e-11,
+      "affine_support_crossings": 0,
+      "held_query_cannot_change_TRAIN": true,
+      "ASSESS_endpoint_labels_used": false
+    },
+    {
+      "fold": 4,
+      "TRAIN_patients": 28,
+      "CAL_patients": 8,
+      "ASSESS_patients": 16,
+      "original_validation_only_assessment": 0,
+      "original_feature_and_operational_PR_bit_parity": true,
+      "TRAIN_rank_AUC_invariance_max_error": 0.0,
+      "TRAIN_delta_fixed_projection_identity_max_error": 1.7319479184152442e-14,
+      "unlabeled_affine_invariance_max_error": 1.0790701665541746e-11,
+      "affine_support_crossings": 0,
+      "held_query_cannot_change_TRAIN": true,
+      "ASSESS_endpoint_labels_used": false
+    },
+    {
+      "fold": 5,
+      "TRAIN_patients": 28,
+      "CAL_patients": 8,
+      "ASSESS_patients": 16,
+      "original_validation_only_assessment": 1,
+      "original_feature_and_operational_PR_bit_parity": true,
+      "TRAIN_rank_AUC_invariance_max_error": 0.0,
+      "TRAIN_delta_fixed_projection_identity_max_error": 2.1227464230832993e-13,
+      "unlabeled_affine_invariance_max_error": 3.5255909303089084e-11,
+      "affine_support_crossings": 0,
+      "held_query_cannot_change_TRAIN": true,
+      "ASSESS_endpoint_labels_used": false
+    }
+  ],
+  "ASSESS_source_patients": {
+    "hup": 36,
+    "lzu": 21,
+    "multicenter": 15,
+    "pediatric": 8
+  },
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "sklearn": "1.7.2",
+  "neural_imports": false,
+  "raw_extraction": false,
+  "CAL_used": false
+}

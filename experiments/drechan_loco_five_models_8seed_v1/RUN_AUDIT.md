@@ -65,3 +65,47 @@ All12 scientific source files remain identical to real admission. Completion
 still requires100 fresh main fits, all160 choices frozen before new test,all160
 scores sealed before metrics, independent3200row/28800endpoint/405nominal/
 8family verification and final anonymous release with GitHub remote-tip check.
+
+## Production01 host-memory failure and exact production02 resume
+
+Production01 exited1 at2026-10-26T02:14:21+08:00 during the final fresh
+main fit: seed49, pediatric held out, original TimeConvCNN. At that point,
+99/100 fresh main selections were complete; seeds45-48 each had20 selections
+and were internally frozen, and seed49 had19. No global all160-choice freeze
+or new test inference had occurred.
+
+The actual exception was MemoryError in the original RawStore SHA streaming
+reader while allocating an8MiB read block. It was not a hash mismatch, a
+scientific input-gate failure or a CUDA out-of-memory exception. Windows System
+Event2004 at02:14:15 reported low virtual memory and named the own training
+processes. This establishes host virtual-memory exhaustion; it does not identify
+a specific leak or justify changing the frozen scientific implementation.
+
+Read-only inspection confirmed the old owner, coordinator and workers exited.
+The latest atomic LAST checkpoint was epoch6: finite model tensors,68 Adam
+states, complete Python/NumPy/CPU/CUDA RNG state, history6, best epoch5 and
+stale1. Its input binding, all12 scientific source hashes and58 parent dependency
+hashes matched. Its181637763bytes had SHA256:
+9768819e77b6b6615045865f4f1abbb0448f6403db8d95e3e188b0bf8a1939a1.
+Byte-verified checkpoint, configuration/status and old log copies, together with
+hashes of all99 completed main-cell records, were retained only on the trusted
+server in a separate engineering-private failure snapshot. No patient records,
+model states or runtime logs were exported or committed.
+
+After confirming the coordinator lock was free, exactly one foreground resume
+was launched with a new tag and the identical pre-fit SourceCommit:
+run_all.ps1 -RunTag production02 -SourceCommit
+33fcd109ac40e0dd55f9cf8df9eaeeba624bc83c -StopAfter All.
+Foreground native owner execsession79030, coordinator27384(parent29176),
+Python38688/venvchild27392. The99 completed selections were retained. The final
+fit restored epoch6 model/Adam/RNG, replaying its unfinished epoch7 under the
+unchanged patient order, precision, loss, optimizer, validation rules and budget.
+No completed epoch was discarded. No cache, hash-reader, scientific source,
+data, feature, OS/pagefile setting or unrelated job was changed.
+
+At2026-10-26T02:31:31+08:00, resumed epochs7 and8 had completed, the atomic
+LAST checkpoint advanced at02:31:06, and epoch9 had reached10/56 training
+patients with current stderr empty. This is recovery evidence, not completion
+or performance evidence. Keep production02's owner alive and monitor its own
+logs; production01's preserved error is historical. All original freeze, seal,
+independent-verification and anonymous-release gates still apply.

@@ -1,0 +1,3 @@
+* text eol=lf
+results/** -text whitespace=cr-at-eol
+figures/** -text whitespace=-blank-at-eol,cr-at-eol

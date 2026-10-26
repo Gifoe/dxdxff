@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "patients": 80,
+  "channels": 7635,
+  "endpoint_values_checked": 518880,
+  "max_absolute_error": 2.565725409908737e-13,
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-09,
+  "aggregate_checks": {
+    "interval_rows": 8793,
+    "primary_family_intervals": 2,
+    "secondary_family_intervals": 11,
+    "permutation_values": 20000
+  },
+  "secondary_slots": 11,
+  "source_commit": "b12952d9b8abce3b280dda7fa704671bb78e60fc",
+  "frozen_sources_unchanged": true
+}

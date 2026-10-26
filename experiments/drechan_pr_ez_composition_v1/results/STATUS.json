@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE_VERIFIED_PR_EZ_COMPOSITION_80",
+  "patients": 80,
+  "channels": 7635,
+  "primary_family": 2,
+  "secondary_family": 11,
+  "row_counts": {
+    "E1_CLASS_LOSS": 650,
+    "E1_GAIN": 650,
+    "E1_H": 325,
+    "E2_LOSS": 3900,
+    "E2_GAIN": 300,
+    "E2_H": 1300,
+    "E2_ANOMALY": 1040,
+    "E2_SUPPORT": 520,
+    "REFERENCE_COMPOSITION": 80,
+    "COMPOSITION_SLOPE": 20,
+    "PRIMARY": 2,
+    "SECONDARY": 11,
+    "H_PERMUTATION": 20000,
+    "H_PERMUTATION_SUMMARY": 20
+  },
+  "legacy_anomaly_sha256": "7f69a1480050d6873cf73e3ac7a5733e73b5f6a33c7ec25577e59333d218db56",
+  "source_commit": "b12952d9b8abce3b280dda7fa704671bb78e60fc"
+}

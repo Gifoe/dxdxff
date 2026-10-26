@@ -1,0 +1,25 @@
+{
+  "source_commit": "b12952d9b8abce3b280dda7fa704671bb78e60fc",
+  "sources": {
+    "PROTOCOL_LOCK.json": "adea672f4bf4d9570e841838711b647dbc738302d8146c5077fe5c65c55a79b8",
+    "PROTOCOL_LOCK.md": "20b9462ce86ce190e9639c83e31ce2e6efdd0ac9972458e645f88768af23de27",
+    "core.py": "134df85dba91931e9e26cc1aeb4dfc028ee98bfce97af09774d66740eb2240c0",
+    "io_contract.py": "865c7860768aa5de48526e6a9dad393b15d547a0932d57f9dd6d1577e065bae7",
+    "pipeline.py": "2f4b7ab9c70a8cd57bdb0fc0e5ee6dc48f4ef322f9c1e26faf7c6f36e736ba5d",
+    "stats_report.py": "72878603e5bd7aacb36b838bfd4de162c08bf02f9978c5d1b8c7a85881ae8c38",
+    "independent.py": "b2a38abb5d605f17bdf5fcb3d43ac688056bc1382af578f1b3c2da0b97b4d453",
+    "tests/test_composition.py": "101e9c813c5ce795903ee39a0b64bd3909f9f8d351f469435132381684b8f858",
+    "tests/test_end_to_end.py": "b2a4032437cb833eb4bcc1e8c63ad2eefa37b5da9d3186aedd1b42640b3e507c",
+    "reference_parent/PROTOCOL_LOCK.json": "3b5452837b2e5b9526fadc03880ddc338f4c973ac27f33fbea56431860d7f171",
+    "reference_parent/PROTOCOL_LOCK.md": "1963bbb2f0ebee27625e72718bc0e437ef20d08389fc24a316d69627b96057da",
+    "reference_parent/math_core.py": "a71765618154e44713414bd733a43f3ded550af5f3734db5999530110adb4fbc",
+    "reference_parent/contract.py": "6aa86711dba6bae973c32701dfaac01ec7786a6c2bde70227bc7d99431e55415",
+    "reference_parent/pipeline.py": "cf1ce2a16fa4ff93e9dc734f0239769a8757363f8f2ff2a020b35c98df682f89",
+    "reference_parent/stats_report.py": "3a66d0a89fc39bd2828a9d15258a988f0e91d1d05401b744a44f4d9e933514e7",
+    "reference_parent/independent.py": "61688ae32920b267d60c70c12e0a707594043ff5b2128e9ff71763bc52fe27b9",
+    "reference_parent/tests/test_reference.py": "2ef6c32d277ec6b17121978dd789cc71e5586159e4b92edb024712a4b00310ab",
+    "reference_parent/parent/trusted_io.py": "90d6555d00e6de8b444dd9a314b83bdfde1cef96f187d568b43a87d1471f43a7",
+    "reference_parent/parent/mechanism_math.py": "4f1693501e2f5d7d3129bed43ebd72976e7f11f144e576c0cb03ed42ce210311"
+  },
+  "legacy_anomaly_sha256": "7f69a1480050d6873cf73e3ac7a5733e73b5f6a33c7ec25577e59333d218db56"
+}

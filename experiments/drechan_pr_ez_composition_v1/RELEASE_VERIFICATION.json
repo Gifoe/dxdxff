@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "source_commit": "b12952d9b8abce3b280dda7fa704671bb78e60fc",
+  "package_sha256": "0903b16a7269527d1d0f36cd076720a6a37e0dc462b5e371ee6491fa39f503f4",
+  "anonymous_payloads": 21,
+  "scientific_files": 9,
+  "patients": 80,
+  "channels": 7635,
+  "primary_slots": 2,
+  "secondary_slots": 11,
+  "table_rows": {
+    "E1_CLASS_LOSS": 650,
+    "E1_GAIN": 650,
+    "E1_H": 325,
+    "E2_LOSS": 3900,
+    "E2_GAIN": 300,
+    "E2_H": 1300,
+    "E2_ANOMALY": 1040,
+    "E2_SUPPORT": 520,
+    "REFERENCE_COMPOSITION": 80,
+    "COMPOSITION_SLOPE": 20,
+    "PRIMARY": 2,
+    "SECONDARY": 11,
+    "H_PERMUTATION": 20000,
+    "H_PERMUTATION_SUMMARY": 20
+  },
+  "legacy_bytes_unchanged": true,
+  "figure_dimensions": [
+    7509,
+    5290
+  ],
+  "figure_dpi": 600,
+  "PDF_embedded_fonts": true,
+  "SVG_editable_text": true,
+  "figures": {
+    "pr_ez_composition.pdf": "c298c7397bd9c1a7eceff3672e027ec6ed4c8a4da303809e781417e22771da04",
+    "pr_ez_composition.png": "b6146751b03765cdb8560383a347aaf5a02f483aab0a2f6e4ce78ff94e604682",
+    "pr_ez_composition.svg": "2593fb41574886b05c92430566f1ae4dd34c030963159d69c9807c975fc5ddc9"
+  }
+}

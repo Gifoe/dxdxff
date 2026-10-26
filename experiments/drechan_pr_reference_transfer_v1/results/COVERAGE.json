@@ -1,0 +1,38 @@
+{
+  "input_hashes": {
+    "reconstruction": "73095eefbb3035200894560de3c3cfdb6259a4f28c343ecd3d7195be5b94f609",
+    "labels": "1bdcc479a2bd148bdc94614c8253bea67e4008bd98bc6dad9e8030df827db9bd",
+    "feature_pr": "3b9823db47382cc3d4d66d226b4041f05efbc65041095fccaf298f459dc8148f",
+    "unit_pr": "2429906e260f02b7be71ab23220b2953dede963aaf79bef2a6eac923afd65f7b"
+  },
+  "bank_hashes": [
+    "0096095bb69cd63fc338389c43ccb3f5ea5bfd24498c28e9441c80122b453e2a",
+    "a6bfd47e045e3d104fe0e925a950609fd1ef77f81001fafa882f968aae816cf9",
+    "9452cfd64a122ff9191d18a006ed0b0b5e2c77a4e4ccf2e4f95d1727ab110c65",
+    "d024f099e449b5143b6493ce9cd1baae67ecc5172c71f710583b9db052ef234f",
+    "bf282533bb91826fb0dcff6f8343c351b6986ce629b164c397d250dd7a44fe89"
+  ],
+  "patients": 80,
+  "channels": 7635,
+  "EZ": 1743,
+  "NEZ": 5892,
+  "seizures": 256,
+  "valid_windows": 1471965,
+  "ASSESS_unique": 80,
+  "ASSESS_appearances": 80,
+  "legacy_internal_unique": 33,
+  "legacy_internal_appearances": 40,
+  "strict_original_FIT_assessed": 79,
+  "original_validation_only_assessed": 1,
+  "new_assignment_sha256": "878b0a83431b99390e47e46be7069e7aaeec6853965f1c45e57f4e98ed8f1350",
+  "source_patients": {
+    "hup": 36,
+    "lzu": 21,
+    "multicenter": 15,
+    "pediatric": 8
+  },
+  "single_seizure_patients": 7,
+  "primary_patients": 80,
+  "primary_channels": 7635,
+  "reference_repeats": 100
+}

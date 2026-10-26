@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source_commit": "30549f7cbc4391f6574d661bb514e91273ab9f18",
+  "package_sha256": "85f52aa7a4b9f9811844b9f825671bfb1881350134c9a0a917531b6a9719456e",
+  "anonymous_payloads": 12,
+  "scientific_files": 8,
+  "parent_files": 2,
+  "patients": 80,
+  "channels": 7635,
+  "primary_tests": 1,
+  "secondary_family_tests": 6,
+  "public_rows": {
+    "BACKGROUND.csv": 325,
+    "CONTRASTS.csv": 390,
+    "ANOMALY.csv": 195,
+    "SUPPORT.csv": 130,
+    "PERMUTATION.csv": 5000,
+    "PERMUTATION_SUMMARY.csv": 5
+  },
+  "figure_dimensions": [
+    7749,
+    5230
+  ],
+  "figure_dpi": 600,
+  "PDF_embedded_fonts": true,
+  "SVG_editable_text": true,
+  "figures": {
+    "pr_reference_transfer.pdf": "f3798d7c1bf1ab95af91f58abeac82c4e377c6dd30261994ef0b857c04ae8d1a",
+    "pr_reference_transfer.png": "a017048af73d2045ea4fb447c37f05146bd362176f0d916077c7a85b6eeb663b",
+    "pr_reference_transfer.svg": "76e37d35fa19af31c03fa5fd2a98e601c457929aec077afca0eddd7f953fd492"
+  }
+}

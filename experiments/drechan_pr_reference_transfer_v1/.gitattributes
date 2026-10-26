@@ -1,2 +1,5 @@
 * text eol=lf
 results/** -text whitespace=cr-at-eol
+figures/*.png binary
+figures/*.pdf binary
+figures/*.svg -text -whitespace

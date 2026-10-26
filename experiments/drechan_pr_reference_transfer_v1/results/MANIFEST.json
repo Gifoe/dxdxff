@@ -1,0 +1,31 @@
+{
+  "schema": "PR_REFERENCE_TRANSFER_PUBLIC_V1",
+  "files": {
+    "BACKGROUND.csv": "0be81bfebb7dfeb43bb0eb41747aae93de433150df4fbb08b3471aa6018fefad",
+    "CONTRASTS.csv": "3632fe768efa14191dfe4f4035376f89b5530fed21e4075f8b1d4a89b9a82ecb",
+    "ANOMALY.csv": "7f69a1480050d6873cf73e3ac7a5733e73b5f6a33c7ec25577e59333d218db56",
+    "SUPPORT.csv": "dc7d19bdd33a101845abbc492dbf696c870582686e77476e98953860af225698",
+    "PERMUTATION.csv": "1ec5c752d49d2e351bf9be99c68cbdeb7ebb73c54fcbd038c35c0d47bfe2e8da",
+    "PERMUTATION_SUMMARY.csv": "5990d73ff3ea10bac1ae43356dd78493b56d42d19283aa232ea68487b311366f",
+    "COVERAGE.json": "6f5bcf943cf62dcbdbcd7902c0f3d712875cd4ee8d51b4e47b96daf21387209a",
+    "ADMISSION.json": "7b294fdbb4d67275e988635bca011851a80ef30ff2a9baf73698212a4a0afe66",
+    "FREEZE.json": "80885466d3ecb99400bc629fc514e4232fb260c38124b48c577b5e63e4635c92",
+    "SEAL.json": "0664eb9a79d84d8ba2af21e66ac7bc7eea0c84cada23e98df2142aadff7d0f3c",
+    "INDEPENDENT_VERIFICATION.json": "2687c434f0ccf0e2f744bed674ed74aabeb7179733e9933bca6da69e25098a72",
+    "STATUS.json": "c0060eed51960a53c15edb1c55f40a10d73612ed7c13be51bbcc18600b88567c"
+  },
+  "sources": {
+    "PROTOCOL_LOCK.json": "3b5452837b2e5b9526fadc03880ddc338f4c973ac27f33fbea56431860d7f171",
+    "PROTOCOL_LOCK.md": "1963bbb2f0ebee27625e72718bc0e437ef20d08389fc24a316d69627b96057da",
+    "math_core.py": "a71765618154e44713414bd733a43f3ded550af5f3734db5999530110adb4fbc",
+    "contract.py": "6aa86711dba6bae973c32701dfaac01ec7786a6c2bde70227bc7d99431e55415",
+    "pipeline.py": "cf1ce2a16fa4ff93e9dc734f0239769a8757363f8f2ff2a020b35c98df682f89",
+    "stats_report.py": "3a66d0a89fc39bd2828a9d15258a988f0e91d1d05401b744a44f4d9e933514e7",
+    "independent.py": "61688ae32920b267d60c70c12e0a707594043ff5b2128e9ff71763bc52fe27b9",
+    "tests/test_reference.py": "2ef6c32d277ec6b17121978dd789cc71e5586159e4b92edb024712a4b00310ab",
+    "parent/trusted_io.py": "90d6555d00e6de8b444dd9a314b83bdfde1cef96f187d568b43a87d1471f43a7",
+    "parent/mechanism_math.py": "4f1693501e2f5d7d3129bed43ebd72976e7f11f144e576c0cb03ed42ce210311"
+  },
+  "source_commit": "30549f7cbc4391f6574d661bb514e91273ab9f18",
+  "privacy": "Aggregate only;no individuals or complementary subcohorts"
+}

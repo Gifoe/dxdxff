@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE_VERIFIED_PR_REFERENCE_TRANSFER_80",
+  "patients": 80,
+  "channels": 7635,
+  "repetitions": 100,
+  "permutations": 1000,
+  "secondary_family": 6,
+  "row_counts": {
+    "BACKGROUND": 325,
+    "CONTRASTS": 390,
+    "ANOMALY": 195,
+    "SUPPORT": 130,
+    "PERMUTATION": 5000,
+    "PERMUTATION_SUMMARY": 5
+  },
+  "source_commit": "30549f7cbc4391f6574d661bb514e91273ab9f18"
+}

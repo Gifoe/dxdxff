@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "patients": 80,
+  "channels": 7635,
+  "partitions": 8000,
+  "crps_patient_arm_coordinate_values": 4800,
+  "endpoint_values_checked": 180260,
+  "aggregate_interval_rows_checked": 1040,
+  "family_intervals_checked": 6,
+  "permutation_aggregate_values_checked": 5000,
+  "max_endpoint_absolute_error": 1.8189894035458565e-12,
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-09,
+  "frozen_sources_unchanged": true,
+  "source_commit": "30549f7cbc4391f6574d661bb514e91273ab9f18"
+}

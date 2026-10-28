@@ -1,0 +1,12 @@
+{
+  "all105_frozen_before_primary_pipeline_scoring": true,
+  "early_preview_before_global_freeze": true,
+  "early_preview_cells": 70,
+  "early_two_model_preview_authorized": true,
+  "freeze_sha256": "485501e03b68be56c67c3fb86d148a54574b61d5f9773d4346027ef2bf091e5e",
+  "logical_cells": 105,
+  "main_training_selection_rules_unchanged": true,
+  "new_test_results_accessed": true,
+  "statement_scope": "PRIMARY_105_CELL_PIPELINE_WITH_AUTHORIZED_EARLY_70_CELL_PREVIEW",
+  "status": "ALL105_SELECTIONS_FROZEN"
+}

@@ -1,0 +1,9 @@
+{
+  "channels": 7635,
+  "logical_cells": 105,
+  "new_main_fits": 40,
+  "new_svm_oof_fits": 30,
+  "patients": 80,
+  "source_commit": "eede217c80985bbb4f91f8df5580d4fcfbef0f6b",
+  "status": "COMPLETE_VERIFIED_PR_REPRESENTATION_VS_SCORE_3_MODELS_7_CONDITIONS_5_FOLDS"
+}

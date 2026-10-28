@@ -1,0 +1,8 @@
+{
+  "status": "EXACT_MATCH",
+  "patient_condition_rows": 1120,
+  "endpoint_values": 10080,
+  "maximum_absolute_difference": 0.0,
+  "mismatched_endpoint_counts": {},
+  "identities_exported": false
+}

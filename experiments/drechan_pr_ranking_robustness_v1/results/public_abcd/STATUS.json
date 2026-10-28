@@ -1,0 +1,11 @@
+{
+  "A": "COMPLETE",
+  "ABC_patients": 80,
+  "B": "COMPLETE",
+  "C": "COMPLETE",
+  "D": "COMPLETE",
+  "D_patients": 57,
+  "status": "ABCD_COMPLETE_VERIFIED",
+  "timeconv_additional_normalizer_training_untouched": true,
+  "timeconv_core_models_complete": true
+}

@@ -1,0 +1,47 @@
+{
+  "all80_original_feature_reconstruction_exact": true,
+  "common_channels": 5735,
+  "eligible_patients": 57,
+  "empty_common_channel_exclusions": 0,
+  "excluded_channels": 128,
+  "feature_max_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "included_patients": 57,
+  "inference_device": "CPU_FP32",
+  "no_new_training": true,
+  "original_channels": 5863,
+  "sampling_labels_independent": true,
+  "source": {
+    "README.md": "13e3e8a8ba0e9aa7ac6d49f163e97273eca3cc2762eaa73a9c0cd551a13084e3",
+    "protocol.md": "81b35a43418edf583c4dfb6623ac478d04d87f29855883048c36a8cb19c504a1",
+    "scripts/analysis_math.py": "303fa901a140ea651ab31da2e0ce8846735413e9dc9153033b394a6192fcfbe6",
+    "scripts/release_check.py": "55af89d3122bd6a89a45a3d593756c2bf10dc4dd8140d8abed0e6b20ece67e68",
+    "scripts/run_abc.py": "c9c70b5f9090f4571f71191dc14e9c91d18c388e40b97d9785b86ee702e2525e",
+    "scripts/run_d.py": "f0c117350dba522c7642138dfc487d11598634511ba37a8b87932122d5870f5c",
+    "scripts/seizure_math.py": "3a5ec330a8a618eb7a7aad30b65fef9690b8668a3501831b174029c72a07a4ea",
+    "scripts/test_analysis.py": "1aceb8382d9152d5f2261b018ac9a9e1b744c94b89680eae264b8215d142d78c",
+    "scripts/trusted.py": "bddc5da64a66d1445606b935b5ece860a69d0257b3db9c45af329bfd643e2b06"
+  },
+  "source_commit": "4d45a5b02524e4c0eb2d01c45454e780e261bfb9",
+  "source_patients": {
+    "hup": 27,
+    "lzu": 15,
+    "multicenter": 9,
+    "pediatric": 6
+  },
+  "status": "PASS"
+}

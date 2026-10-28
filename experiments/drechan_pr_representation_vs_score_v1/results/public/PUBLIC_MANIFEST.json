@@ -1,0 +1,78 @@
+{
+  "files": {
+    "public/ADMISSION.json": {
+      "bytes": 11467,
+      "sha256": "b769515e8447acc39abace7d6318be18361db7050544716563a207714333f570"
+    },
+    "public/COVERAGE.csv": {
+      "bytes": 6280,
+      "sha256": "cca5ee5a99166ce397391b49bd80149ebc9473d753504685e4c557ba31d5ed32"
+    },
+    "public/ENDPOINT_STATUS.json": {
+      "bytes": 166,
+      "sha256": "a9eac963f8e862c15c1de6329c68a3e2b9214d198f2d95173b0bafcfa1ecc710"
+    },
+    "public/FINDINGS.md": {
+      "bytes": 3334,
+      "sha256": "e732c35c3249088f29360c9d17d1761b760a08f7869412d7c8c6389c52063cb0"
+    },
+    "public/FOLD_RESULTS.csv": {
+      "bytes": 20231,
+      "sha256": "32bc888be20b7dfabe9fd2dee80648f41956dfb1804988450a80d2811d91c7dc"
+    },
+    "public/FREEZE_STATUS.json": {
+      "bytes": 518,
+      "sha256": "9c2cffe057652ada54c11ac4d796cac034cc24dba68eb1aa18045c0a9f0deedb"
+    },
+    "public/INDEPENDENT_VERIFICATION.json": {
+      "bytes": 442,
+      "sha256": "3eb56172903523266f7456c4c542b7ba1cb2440e2a9cf5c21d364b3540ab7d8b"
+    },
+    "public/INTERVALS.csv": {
+      "bytes": 40546,
+      "sha256": "120f4fe622b614d18eef333911b15c4015e189435b1c7918e3a5bec5f2e8eba0"
+    },
+    "public/MAIN_RESULTS.csv": {
+      "bytes": 4086,
+      "sha256": "4906c156e916894a436c6948d936304438e0eac35d0d907eb105c5894acd0334"
+    },
+    "public/MODEL_SELECTION.csv": {
+      "bytes": 11910,
+      "sha256": "54152536cff538019903207d7fe6c0a9d94d08e4163a9c1bf025f2720c090435"
+    },
+    "public/OUTER_STATUS.json": {
+      "bytes": 274,
+      "sha256": "21895ca4684537811b1242a26f55a10a08b1f70fb431cf5bb2b0368a6fdfbd88"
+    },
+    "public/PRIMARY_FAMILY_INTERVALS.csv": {
+      "bytes": 807,
+      "sha256": "f34f5aabe399fe8e231c2f6023e0045f0f7766d9838910781d1e94093cb224d9"
+    },
+    "public/REPORT_STATUS.json": {
+      "bytes": 230,
+      "sha256": "93a0bcb8ceeb560edb7555837c3f136f002cee7c00e262f98191f6bb707d0cd8"
+    },
+    "public/REUSE_AUDIT.csv": {
+      "bytes": 5389,
+      "sha256": "84049b72f27235763fc1cbe0181892e821db1f283f9a9b5acf72ea44944b4077"
+    },
+    "public/SCORE_STATUS.json": {
+      "bytes": 236,
+      "sha256": "688883f059fe6dec34de44e0c7c52e94752149927deb20f27e25712de760ab8a"
+    },
+    "public/SOURCE_LOCK_PUBLIC.json": {
+      "bytes": 1594,
+      "sha256": "1533644112c499f4bab37d2d57c1fb8f9648f75036a3c524a6c3ff315ed29548"
+    },
+    "public/SOURCE_RESULTS.csv": {
+      "bytes": 16701,
+      "sha256": "45edfd7d9888238fcf35f962378e85cdb88212b156cb8e563a3a665b833c646d"
+    },
+    "public/SOURCE_SUMMARY.csv": {
+      "bytes": 7868,
+      "sha256": "12d874179d1e6f14b7dca87a53ad393cdce71deb0dafa20bb9d04eb7947ead6d"
+    }
+  },
+  "private_data_included": false,
+  "schema": "PR_REPRESENTATION_VS_SCORE_PUBLIC_V1"
+}

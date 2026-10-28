@@ -1,0 +1,17 @@
+{
+  "alias_cells": 5,
+  "channels_per_condition": 7635,
+  "endpoint_values": 15120,
+  "frozen_parents_unchanged": true,
+  "logical_cells": 105,
+  "new_main_fits": 40,
+  "new_svm_oof_fits": 30,
+  "nominal_intervals": 405,
+  "output_ranking_invariance": "EXACT",
+  "patient_condition_rows": 1680,
+  "postprocess_cells": 30,
+  "primary_family_intervals": 6,
+  "reused_main_fits": 30,
+  "status": "PASS",
+  "unique_patients": 80
+}

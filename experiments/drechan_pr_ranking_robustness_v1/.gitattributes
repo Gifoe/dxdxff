@@ -1,3 +1,7 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+results/** -text
+figures/*.svg -text
+tables/*.md -text
+tables/*.tex -text

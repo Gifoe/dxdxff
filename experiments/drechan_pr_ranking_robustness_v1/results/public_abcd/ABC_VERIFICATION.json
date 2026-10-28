@@ -1,0 +1,16 @@
+{
+  "B_family_intervals": 12,
+  "C_family_intervals": 9,
+  "budget_rows": 4320,
+  "channels_per_condition": 7635,
+  "curve_patient_rows": 480,
+  "frozen_parents_unchanged": true,
+  "independent_direct_index_bootstrap": true,
+  "independent_endpoint_formulas": true,
+  "logical_cells": 45,
+  "patient_rows": 720,
+  "patients": 80,
+  "primary_family_intervals": 6,
+  "ranking_invariance": "EXACT",
+  "status": "PASS"
+}

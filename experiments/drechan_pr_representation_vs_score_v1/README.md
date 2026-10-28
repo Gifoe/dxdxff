@@ -50,3 +50,19 @@ Validate `release_check.py --package <archive>` before allowlist extraction.
 Signals, identities, patient/channel endpoints, logits, embeddings, reference
 parameters, scalers, weights, optimizer state and runtime logs remain private.
 Existing JBHI tables and figures are not overwritten.
+
+## Completed execution and disclosure timing
+
+All 105 logical cells, 40 new main fits and 30 SVM OOF fits completed with
+independent verification of 1,680 patient-condition rows and 15,120 endpoint
+values. Final results are in `results/RESULTS_ZH.md` and `results/public/`.
+
+During execution, the user explicitly requested the SVM/DREChanNet outer results
+before TimeConv finished. Their 70 cells were separately frozen, scored, sealed
+and independently verified before that early disclosure. The original common
+105-cell disclosure timing was therefore amended; subsequent TimeConv training
+and selection used the unchanged frozen source and rules. The final 105-cell
+freeze/score-seal statements apply to the primary pipeline, with the earlier
+70-cell preview separately disclosed in the public freeze status and findings.
+Immutable private freeze/score seals were preserved. Final GPU evaluation
+matched every one of the preview's 10,080 patient endpoint values exactly.

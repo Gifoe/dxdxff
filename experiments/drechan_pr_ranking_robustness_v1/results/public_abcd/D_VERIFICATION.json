@@ -1,0 +1,14 @@
+{
+  "all_cached_direct_representation_and_logit_bit_exact": true,
+  "all_scores_sealed_before_metrics": true,
+  "family_intervals": 36,
+  "independent_direct_index_bootstrap": true,
+  "independent_endpoint_formulas": true,
+  "nominal_paired_intervals": 144,
+  "patient_K_rows": 1026,
+  "patient_model_cells": 342,
+  "patients": 57,
+  "repetition_rows": 3666,
+  "status": "PASS",
+  "thresholds_unchanged": true
+}

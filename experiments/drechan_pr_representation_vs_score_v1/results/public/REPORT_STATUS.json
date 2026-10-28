@@ -1,0 +1,9 @@
+{
+  "channels_per_configuration": 7635,
+  "configurations": 21,
+  "family_intervals": 6,
+  "nominal_intervals": 405,
+  "patients_per_configuration": 80,
+  "status": "COMPLETE_VERIFIED_AGGREGATES",
+  "unique_patients": 80
+}

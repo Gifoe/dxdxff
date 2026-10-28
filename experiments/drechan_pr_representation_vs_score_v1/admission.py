@@ -74,7 +74,8 @@ def admit(p,commit):
     from test_core import CoreTests
     import unittest,sklearn
     assert sklearn.__version__=='1.7.2' and torch.__version__=='2.11.0+cu128'
-    result=unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(CoreTests));assert result.wasSuccessful()
+    import sys
+    result=unittest.TextTestRunner(stream=sys.stdout).run(unittest.defaultTestLoader.loadTestsFromTestCase(CoreTests));assert result.wasSuccessful()
     assert shutil.disk_usage(ROOT).free>=12*1024**3,'7 GiB task budget plus5GiB reserve unavailable'
     references={};rows=[]
     cache=ROOT/'admission_private';cache.mkdir(parents=True,exist_ok=True)

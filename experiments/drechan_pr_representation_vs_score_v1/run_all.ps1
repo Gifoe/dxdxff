@@ -15,12 +15,16 @@ try {
  $admission=$taskRuntime+'\public\ADMISSION.json'
  if(-not (Test-Path -LiteralPath ($taskRuntime+'\SOURCE_LOCK.json'))){
   Write-Output ('PR_REPR_ADMISSION_START '+(Get-Date).ToString('o'))
-  & $taskPython -u ($taskSource+'\entry.py') admit --source-commit $SourceCommit 2>($taskRuntime+'\admit_'+$RunTag+'.err') | Tee-Object -FilePath ($taskRuntime+'\admit_'+$RunTag+'.log')
-  if($LASTEXITCODE -ne 0){throw 'Admission failed; preserve logs and diagnose'}
+  $taskChild=Start-Process -FilePath $taskPython -ArgumentList @('-u',($taskSource+'\entry.py'),'admit','--source-commit',$SourceCommit) -WindowStyle Hidden -PassThru -RedirectStandardOutput ($taskRuntime+'\admit_'+$RunTag+'.log') -RedirectStandardError ($taskRuntime+'\admit_'+$RunTag+'.err')
+  Write-Output ('PR_REPR_ADMISSION_WORKER '+$taskChild.Id)
+  $taskChild.WaitForExit()
+  if($taskChild.ExitCode -ne 0){throw ('Admission failed with exit '+$taskChild.ExitCode+'; preserve logs and diagnose')}
  }
  if(-not (Test-Path -LiteralPath $admission)){throw 'Admission record unavailable'}
  Write-Output ('PR_REPR_PRODUCTION_START '+(Get-Date).ToString('o'))
- & $taskPython -u ($taskSource+'\entry.py') all --source-commit $SourceCommit 2>($taskRuntime+'\train_'+$RunTag+'.err') | Tee-Object -FilePath ($taskRuntime+'\train_'+$RunTag+'.log')
- if($LASTEXITCODE -ne 0){throw 'Production failed; preserve exact checkpoints and diagnose'}
+ $taskChild=Start-Process -FilePath $taskPython -ArgumentList @('-u',($taskSource+'\entry.py'),'all','--source-commit',$SourceCommit) -WindowStyle Hidden -PassThru -RedirectStandardOutput ($taskRuntime+'\train_'+$RunTag+'.log') -RedirectStandardError ($taskRuntime+'\train_'+$RunTag+'.err')
+ Write-Output ('PR_REPR_PRODUCTION_WORKER '+$taskChild.Id)
+ $taskChild.WaitForExit()
+ if($taskChild.ExitCode -ne 0){throw ('Production failed with exit '+$taskChild.ExitCode+'; preserve exact checkpoints and diagnose')}
  Write-Output ('PR_REPR_COORDINATOR_COMPLETE '+(Get-Date).ToString('o'))
 } finally {$taskOwner.Dispose()}

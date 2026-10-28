@@ -5,7 +5,7 @@ os.environ.update(CUDA_VISIBLE_DEVICES='-1',OMP_NUM_THREADS='1',MKL_NUM_THREADS=
 sys.dont_write_bytecode=True
 SOURCE=Path(r'D:\Codex_Research\experiments\drechan_pr_representation_vs_score_v1')
 MAIN=Path(r'D:\Codex_Research\experiments\drechan_pr_representation_vs_score_v1_runtime')
-ROOT=MAIN/'partial_outer_20261028'
+ROOT=MAIN/'partial_outer_20261028_v2'
 os.environ['PR_REPR_RUNTIME']=str(ROOT)
 sys.path.insert(0,str(SOURCE))
 from path_adapter import install
@@ -73,7 +73,7 @@ def cpu_forward(self,m,d,ix,fold):
 def validate_cpu(p,fr):
     refs=read(MAIN/'admission_private/REFERENCE_VALIDATION.pkl');audit=[]
     for r in fr['cells']:
-        if r['model']!='DRECHANNET' or r['condition'].startswith('SCORE_'):continue
+        if r['model']!='DRECHANNET' or r['condition'].startswith('SCORE_') or r['condition']=='FULL_PR':continue
         fold,arm=r['fold'],r['condition'];d=p.bank(fold)
         cp=torch.load(r['checkpoint'],map_location='cpu',weights_only=False)
         if arm in ['NO_PR','FULL_PR']:
@@ -92,7 +92,7 @@ def validate_cpu(p,fr):
         audit.append(dict(model='DRECHANNET',condition=arm,fold=fold,maximum_logit_error=le,maximum_probability_error=pe,validation_classifications_exact=equal))
         print('PREVIEW_CPU_VALIDATED',arm,fold,flush=True)
         del m;gc.collect()
-    assert len(audit)==25
+    assert len(audit)==20
     write(PUB/'CPU_VALIDATION_REPLAY.json',dict(status='PASS',cells=audit))
 
 

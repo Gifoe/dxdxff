@@ -1,0 +1,165 @@
+{
+  "cells": [
+    {
+      "condition": "NO_PR",
+      "fold": 1,
+      "maximum_logit_error": 2.086162567138672e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "NO_PR",
+      "fold": 2,
+      "maximum_logit_error": 3.5762786865234375e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "NO_PR",
+      "fold": 3,
+      "maximum_logit_error": 2.384185791015625e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "NO_PR",
+      "fold": 4,
+      "maximum_logit_error": 3.5762786865234375e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "NO_PR",
+      "fold": 5,
+      "maximum_logit_error": 2.384185791015625e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "GLOBAL",
+      "fold": 1,
+      "maximum_logit_error": 6.556510925292969e-07,
+      "maximum_probability_error": 2.384185791015625e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "GLOBAL",
+      "fold": 2,
+      "maximum_logit_error": 5.960464477539062e-07,
+      "maximum_probability_error": 1.7881393432617188e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "GLOBAL",
+      "fold": 3,
+      "maximum_logit_error": 8.121132850646973e-07,
+      "maximum_probability_error": 2.384185791015625e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "GLOBAL",
+      "fold": 4,
+      "maximum_logit_error": 6.556510925292969e-07,
+      "maximum_probability_error": 1.7881393432617188e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "GLOBAL",
+      "fold": 5,
+      "maximum_logit_error": 4.76837158203125e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "CENTER",
+      "fold": 1,
+      "maximum_logit_error": 7.152557373046875e-07,
+      "maximum_probability_error": 1.1920928955078125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "CENTER",
+      "fold": 2,
+      "maximum_logit_error": 1.430511474609375e-06,
+      "maximum_probability_error": 3.5762786865234375e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "CENTER",
+      "fold": 3,
+      "maximum_logit_error": 1.430511474609375e-06,
+      "maximum_probability_error": 2.980232238769531e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "CENTER",
+      "fold": 4,
+      "maximum_logit_error": 1.2814998626708984e-06,
+      "maximum_probability_error": 3.5762786865234375e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "CENTER",
+      "fold": 5,
+      "maximum_logit_error": 5.066394805908203e-07,
+      "maximum_probability_error": 1.7881393432617188e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "SCALE",
+      "fold": 1,
+      "maximum_logit_error": 1.1324882507324219e-06,
+      "maximum_probability_error": 2.980232238769531e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "SCALE",
+      "fold": 2,
+      "maximum_logit_error": 7.62939453125e-06,
+      "maximum_probability_error": 1.1920928955078125e-06,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "SCALE",
+      "fold": 3,
+      "maximum_logit_error": 1.0728836059570312e-06,
+      "maximum_probability_error": 2.384185791015625e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "SCALE",
+      "fold": 4,
+      "maximum_logit_error": 2.086162567138672e-06,
+      "maximum_probability_error": 4.76837158203125e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    },
+    {
+      "condition": "SCALE",
+      "fold": 5,
+      "maximum_logit_error": 2.384185791015625e-06,
+      "maximum_probability_error": 2.384185791015625e-07,
+      "model": "DRECHANNET",
+      "validation_classifications_exact": true
+    }
+  ],
+  "status": "PASS"
+}

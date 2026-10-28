@@ -1,0 +1,13 @@
+{
+  "channels_per_condition": 7635,
+  "endpoint_values": 10080,
+  "inference_device": "CPU_FP32",
+  "logical_cells": 70,
+  "main_gpu_training_unchanged": true,
+  "nominal_intervals": 270,
+  "patient_condition_rows": 1120,
+  "patients": 80,
+  "planned_primary_family_size": 6,
+  "reported_primary_intervals": 4,
+  "status": "PASS"
+}

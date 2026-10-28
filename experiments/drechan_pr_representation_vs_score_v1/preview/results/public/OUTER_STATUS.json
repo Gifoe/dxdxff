@@ -1,0 +1,5 @@
+{
+  "all_three_model_complete": false,
+  "inference_device": "CPU_FP32",
+  "status": "VERIFIED_EARLY_TWO_MODEL_OUTER_PREVIEW"
+}

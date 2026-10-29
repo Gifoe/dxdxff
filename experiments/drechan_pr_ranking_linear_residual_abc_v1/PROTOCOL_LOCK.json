@@ -1,0 +1,46 @@
+{
+  "experiment": "drechan_pr_ranking_linear_residual_abc_v1",
+  "scope": "A/B/C only; D remains in its original end-to-end PR study",
+  "patients": 80,
+  "channels": 7635,
+  "folds": 5,
+  "logical_cells": 45,
+  "new_fits": 0,
+  "unchanged_old_abc_score_cells": 40,
+  "reused_main_table_residual_score_cells": 5,
+  "TimeConv_PR": "Frozen original backbone plus PR Linear Residual; identical to published main table",
+  "other_models": "Unchanged SVM and DREChanNet",
+  "exploratory": true,
+  "condition_export": "TimeConv FULL_PR internal alias exports as PR_LINEAR_RESIDUAL",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 42,
+    "unit": "paired patient, within source",
+    "patient_equal": true
+  },
+  "families": {
+    "PR_minus_ScoreZ_MacroF1_AUROC": 6,
+    "PR_minus_NoPR_AUROC_AP_MacroF1_EZF1": 12,
+    "PR_minus_NoPR_recall_at_5_10_20_percent": 9
+  },
+  "ties": "Original channel-identifier deterministic order; AP groups equal scores",
+  "review_budget": "ceil(fraction*patient_channels); fixed 1/3/5 clipped to channel count",
+  "checkpoint_replay_probability_atol": 1e-06,
+  "source_pins": {
+    "experiments/drechan_pr_ranking_robustness_v1/scripts/run_abc.py": "c9c70b5f9090f4571f71191dc14e9c91d18c388e40b97d9785b86ee702e2525e",
+    "experiments/drechan_pr_ranking_robustness_v1/scripts/analysis_math.py": "303fa901a140ea651ab31da2e0ce8846735413e9dc9153033b394a6192fcfbe6",
+    "experiments/m8_raw_frozen_pr_linear_residual_seed42_v1/run.py": "f9b16412755d4f607bb0ce7a9f8633074b7b5b8032da8a6daabe05d0a685103c",
+    "experiments/m8_raw_frozen_pr_linear_residual_seed42_v1/PROTOCOL_LOCK.json": "65f3f5aca0639c41d763e32726cb5c41ab99b8fefb949629bb67fb0a40d243e7",
+    "experiments/m8_raw_backbones_pr_seed42_v1/patient_relative.py": "4d5c1bf00c12600b08f8d96557e4197a26ef0d3598743aa4477d70b2d8796a3a"
+  },
+  "freeze_order": [
+    "admission",
+    "source commit",
+    "all45selection freeze",
+    "all45score seal",
+    "endpoint reconstruction",
+    "independent verification",
+    "report"
+  ],
+  "publication": "Anonymous aggregate tables only; no individual channels, patients, scores, model states or representations"
+}

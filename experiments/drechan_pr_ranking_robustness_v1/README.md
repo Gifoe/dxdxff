@@ -1,5 +1,9 @@
 # PR ranking, robustness and seizure sufficiency
 
+The separate [main-table-matched A-C analysis](../drechan_pr_ranking_linear_residual_abc_v1/report.md)
+uses TimeConv PR Linear Residual. This directory preserves the original
+end-to-end TimeConv version and its seizure-sufficiency experiment D.
+
 Supplementary ictal analyses on the existing cohort. `protocol.md` fixes models,
 metrics, comparison families and seizure sampling before new analysis.
 

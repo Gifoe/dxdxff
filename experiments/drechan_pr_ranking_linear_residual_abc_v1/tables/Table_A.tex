@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Patient-equal outer ranking and classification (\%)}
+\small
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Model / condition & AUROC & AP & MRR & Hit@1 & Hit@3 & Hit@5 & Macro-F1 & EZ-F1 \\
+\midrule
+Linear SVM / No PR & 68.65 & 48.16 & 64.83 & 53.75 & 71.25 & 80.00 & 46.06 & 28.73 \\
+Linear SVM / Full PR & 74.36 & 54.32 & 73.88 & 65.00 & 80.00 & 85.00 & 62.47 & 45.21 \\
+Linear SVM / Score-Z & 68.65 & 48.16 & 64.83 & 53.75 & 71.25 & 80.00 & 57.93 & 35.05 \\
+TimeConv-CNN / No PR & 62.06 & 43.15 & 57.01 & 43.75 & 65.00 & 72.50 & 49.11 & 26.70 \\
+TimeConv-CNN / PR Linear Residual & 64.68 & 44.58 & 60.69 & 45.00 & 71.25 & 77.50 & 54.87 & 35.91 \\
+TimeConv-CNN / Score-Z & 62.06 & 43.15 & 57.01 & 43.75 & 65.00 & 72.50 & 54.12 & 31.97 \\
+DREChanNet / No PR & 76.09 & 55.94 & 74.83 & 65.00 & 80.00 & 86.25 & 50.23 & 37.44 \\
+DREChanNet / Full PR & 76.60 & 56.86 & 77.93 & 67.50 & 87.50 & 90.00 & 64.41 & 44.85 \\
+DREChanNet / Score-Z & 76.09 & 55.94 & 74.83 & 65.00 & 80.00 & 86.25 & 63.08 & 42.99 \\
+\bottomrule
+\end{tabular}
+\end{table*}

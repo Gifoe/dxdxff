@@ -1,0 +1,13 @@
+{
+  "base_checkpoint_match_all5": true,
+  "cached_fixed_head_replays": 80,
+  "channels": 7635,
+  "logical_cells": 45,
+  "main_table_residual_score_cells": 5,
+  "new_fits": 0,
+  "parent_inputs_unchanged": true,
+  "patients": 80,
+  "replay_max_absolute_probability_error": 0.0,
+  "status": "PASS",
+  "unchanged_score_cells": 40
+}

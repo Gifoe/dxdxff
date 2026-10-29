@@ -1,0 +1,8 @@
+{
+  "DREChanNet": "Unchanged Full PR",
+  "SVM": "Unchanged Full PR",
+  "TimeConv": {
+    "internal_FULL_PR": "PR_LINEAR_RESIDUAL",
+    "public_PR_LINEAR_RESIDUAL": "Frozen original backbone plus original PR Linear Residual; main-table match"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "CASE-A01",
+  "model": "DRECHANNET",
+  "seed": 42,
+  "comparison": "Original complete FULL vs WO_BOTH_PR; 11425 parameters; not LOCO/no-guidance",
+  "original_source_commit": "493a7d35ba70d419c788a5e990a7460b0e112f38",
+  "source_archive_sha256": "5030436c5008cfa5cb8158f1f7c6040ad071a832e4d6741127e50da63bc9b0fc",
+  "source_manifest_sha256": "0a8c7c4f242eb6cdda2915d516358f4851d19406ae34bd6519b627b513eadaa8",
+  "case_selection": "Retrospectively selected using all three seeds mean TP/FP and AUROC; all four prior cases excluded",
+  "display_selection": "User requested seed42 after viewing all three seeds; this is a selected case/seed illustration, not an independent validation",
+  "original_thresholds_unchanged": true,
+  "new_training": 0,
+  "new_inference": 0,
+  "other_seed_predictions_in_this_subset": false,
+  "original_contact_names_included": false,
+  "real_patient_identifiers_included": false
+}

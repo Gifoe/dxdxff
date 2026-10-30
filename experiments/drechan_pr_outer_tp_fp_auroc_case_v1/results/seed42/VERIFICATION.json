@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "case_id": "CASE-A01",
+  "model": "DRECHANNET",
+  "seed": 42,
+  "channels": 49,
+  "ez_channels": 10,
+  "metric_rows": 5,
+  "confusion_rows": 2,
+  "score_rows": 98,
+  "recall_k_rows": 100,
+  "all_ranks_metrics_counts_and_curves_independently_recomputed": true
+}

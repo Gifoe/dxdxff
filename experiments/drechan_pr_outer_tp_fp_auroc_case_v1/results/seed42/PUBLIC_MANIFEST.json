@@ -1,0 +1,50 @@
+{
+  "files": {
+    "CASE_CONFUSION.csv": {
+      "bytes": 224,
+      "sha256": "e5cd85b0a1a13b3700e4d44e4530aa7b420361664645335b9375ff6882b87805"
+    },
+    "CASE_METADATA.csv": {
+      "bytes": 95,
+      "sha256": "59498242946192fd42f9244102fca33c86fe774d66e4df3302e896d9fb16fb10"
+    },
+    "CASE_METRICS.csv": {
+      "bytes": 548,
+      "sha256": "dd5a3052fe095cadc3d6f4baa19d6607e37155eb3b44b1424b1c4a15dc207579"
+    },
+    "CHANNEL_SCORES_ANONYMOUS.csv": {
+      "bytes": 6510,
+      "sha256": "97983524ca82176e3c26123bf54281a25ea44cf5f65ee2fc7856381b0fe1ce80"
+    },
+    "DRECHANNET_SEED42_CHANNELS_WIDE.csv": {
+      "bytes": 3617,
+      "sha256": "e95a314722842dc7b1bc9f510f20f513436a61f2b0b06428e935ca93aa1c010b"
+    },
+    "DRECHANNET_SEED42_EZ_CHANNELS_ONLY.csv": {
+      "bytes": 821,
+      "sha256": "93b93978f1f2bf4fa3a63c8db43fe4335a31912c008f58dbc7d57af46c35d7ab"
+    },
+    "PROVENANCE.json": {
+      "bytes": 941,
+      "sha256": "89aa5040ac7bdbef71b52367a4cabd936e2a2711e978b1144c147850e36c80e6"
+    },
+    "README_ZH.md": {
+      "bytes": 1710,
+      "sha256": "fffbcbab456ebee5c90511482581494a49265fcaf33903174645e660319a08ee"
+    },
+    "RECALL_AT_K.csv": {
+      "bytes": 7770,
+      "sha256": "60753e4adeb79766022f93ae872b73a862df1dc33f2cd60ecae9b9a884aaacac"
+    },
+    "SOURCE_PUBLIC_MANIFEST.json": {
+      "bytes": 1692,
+      "sha256": "0a8c7c4f242eb6cdda2915d516358f4851d19406ae34bd6519b627b513eadaa8"
+    },
+    "VERIFICATION.json": {
+      "bytes": 298,
+      "sha256": "b950c77e1af0bcb8f8830d8c8bcc7f36dc235c4ee1f83acd97fa65a060d6f1e5"
+    }
+  },
+  "real_patient_identifiers_included": false,
+  "original_contact_names_included": false
+}

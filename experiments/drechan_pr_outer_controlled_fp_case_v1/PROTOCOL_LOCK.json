@@ -1,0 +1,16 @@
+{
+  "design": "Retrospective case illustration selected after viewing previous cohort cases; not representative or independent confirmation.",
+  "cohort": {
+    "patients": 80,
+    "channels": 7635
+  },
+  "eligibility": "Both labels; >=20 total channels; no minimum EZ count. Exclude all three previously selected patients. Require DRE three-seed mean AUROC and Recall10 positive, >=2 seeds jointly improve AUROC and Recall10. Require mean TP increase and >=2 seeds increase TP; mean precision must not decline.",
+  "fp_tiers": [
+    "All three DRE seeds FP increase <=0",
+    "All three DRE seeds FP increase <=2 channels"
+  ],
+  "selection": "Use first nonempty tier; maximize mean DRE TP increase, then minimize mean FP change, then maximize equal-weight mean delta AUROC/delta Recall10, then fixed identifier SHA256. Never adjust frozen original validation thresholds.",
+  "report": "All original five endpoints, all four confusion counts, precision, sensitivity, FPR and predicted positive counts for SVM and each DRE seed plus endpoint means. Retain every seed and negative result.",
+  "privacy": "CASE-F01/CH aliases only outside trusted server; identity and original names private.",
+  "no_new_training_or_inference": true
+}

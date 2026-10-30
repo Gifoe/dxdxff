@@ -1,0 +1,16 @@
+{
+  "design": "User-requested retrospective extension after viewing CASE-F01: add positive three-seed mean AUROC to the same TP/FP constraint; not representative or independent confirmation.",
+  "cohort": {
+    "patients": 80,
+    "channels": 7635
+  },
+  "eligibility": ">=20 total channels, both labels, no EZ minimum. Exclude all four prior cases. DRE mean TP must increase, >=2 seeds increase TP, and three-seed mean AUROC must strictly increase (>1e-12). Do not require all seeds AUROC positive; disclose every seed.",
+  "fp_tiers": [
+    "All three DRE seeds FP change <=0",
+    "All three DRE seeds FP change <=2"
+  ],
+  "selection": "Same V2 primary order: first nonempty FP tier; maximize DRE mean TP gain, then minimize mean FP change, then maximize equal-weight mean delta AUROC/Recall10, then fixed hash.",
+  "implementation": "Reuse verified pure Python endpoint/confusion formulas, with original input admission; all640 endpoints/all400 changes must replay unchanged. Original frozen validation thresholds; no training, inference or probability averaging.",
+  "pure_engine_sha256": "f53ca3f7814ac209e3e2723471e4f10fda75bfdaac23dd44924b3a31e93c8cee",
+  "privacy": "CASE-A01 and CH aliases only outside trusted server; original identity/contact names private."
+}

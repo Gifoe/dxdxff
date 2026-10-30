@@ -1,0 +1,11 @@
+{
+  "design": "Retrospective deliberately high-gain case selection from previously frozen Ictal Outer scores; not a representative case or independent confirmation.",
+  "cohort": {"patients": 80, "channels": 7635},
+  "parent": "drechan_pr_outer_representative_cases_v1",
+  "eligibility": "No minimum EZ count beyond both classes being present; retain >=20 total channels. Exclude the two previously selected cases. Require positive DREChanNet three-seed mean AUROC and Recall@10% changes, with at least two seeds jointly positive in both.",
+  "selection": "Maximize J=(delta AUROC + delta Recall@10%)/2 for DREChanNet, with equal weights on their native 0-1 scales. Ties: maximize min(delta AUROC,delta Recall@10%); then number of jointly positive seeds; then fixed SHA256 identifier order. Do not change this rule after outcomes.",
+  "report": "All five endpoints for SVM and all DRE seeds42/43/44 plus patient-endpoint seed mean; both gains and losses; cohort and eligible-pool midrank percentiles. SVM is reported but does not determine selection.",
+  "metrics": ["auroc", "macro_f1", "top1", "recall_at_10pct", "recall_at_20pct"],
+  "privacy": "Only CASE-H01 and within-case CH aliases outside trusted server. True identities and contact names stay private.",
+  "no_new_training_or_inference": true
+}

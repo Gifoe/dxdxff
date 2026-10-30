@@ -1,0 +1,24 @@
+{
+  "base_candidates": 26,
+  "candidates": 6,
+  "case_id": "CASE-F01",
+  "cohort_patients": 80,
+  "deliberate_outcome_based_selection": true,
+  "fp_increase_limit_per_seed": 2,
+  "independent_maximum_agreement": true,
+  "maximum_fp_change_across_seeds": 1,
+  "mean_fp_change": 0.6666666666666666,
+  "mean_precision_change": 0.025925925925925908,
+  "mean_tp_change": 4.666666666666666,
+  "min_ez_count": null,
+  "minimum_total_channels": 20,
+  "prior_cases_excluded": 3,
+  "ranking": "Maximize DRE mean TP increase; then minimize FP change; then ranking gain; then fixed hash",
+  "selected_tier": 2,
+  "selection_kind": "deliberately_controlled_false_positive_illustration",
+  "tier_counts": [
+    0,
+    6
+  ],
+  "tp_increase_seed_count": 3
+}

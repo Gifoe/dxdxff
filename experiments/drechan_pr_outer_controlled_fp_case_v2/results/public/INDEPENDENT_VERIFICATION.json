@@ -1,0 +1,19 @@
+{
+  "all_patient_confusion_counts_verified": 640,
+  "anonymous_channel_score_rows": 672,
+  "case_metric_rows": 25,
+  "confusion_rows": 10,
+  "endpoint_values": 3200,
+  "independent_metric_formulas": true,
+  "independent_selector_agreement": true,
+  "new_inference": 0,
+  "new_training": 0,
+  "original_parent_patient_metric_replays": 640,
+  "parent_hashes_unchanged": true,
+  "patient_change_rows": 400,
+  "patient_condition_rows": 640,
+  "recall_at_k_rows": 680,
+  "score_cells": 40,
+  "selected_case_count": 1,
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "package_sha256": "7920a35660cd4d6b5ce93ae3a8e07307e60ce3793788621dd7c3b5e3b0e689dc",
+  "authenticated_payloads": 12,
+  "anonymous_channel_rows": 1888,
+  "case_metric_rows": 50,
+  "wide_case_channel_counts": {
+    "CASE-P01": 114,
+    "CASE-N01": 122
+  },
+  "independent_selected_metric_and_all_k_reconstruction": true
+}

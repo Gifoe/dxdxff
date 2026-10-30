@@ -1,0 +1,66 @@
+{
+  "basic_eligible": 77,
+  "cohort_patients": 80,
+  "negative": {
+    "chosen_changes": [
+      -0.44973544973544977,
+      -0.21428571428571427,
+      -0.036375661375661394,
+      -0.047619047619047644
+    ],
+    "independent_selector_agreement": true,
+    "maximum_median_distance_in_pool": 25.0,
+    "median_distance_percentile_points": 25.0,
+    "pool_medians": [
+      -0.26831034781854457,
+      -0.15714285714285714,
+      -0.03294192904848642,
+      -0.07380952380952376
+    ],
+    "pool_size": 2,
+    "within_pool_selection_percentiles": [
+      25.0,
+      25.0,
+      25.0,
+      75.0
+    ]
+  },
+  "negative_selected_tier": 1,
+  "negative_tier_counts": [
+    2,
+    11,
+    24
+  ],
+  "positive": {
+    "chosen_changes": [
+      0.4336890243902439,
+      0.125,
+      0.08892276422764234,
+      0.0625
+    ],
+    "independent_selector_agreement": true,
+    "maximum_median_distance_in_pool": 36.11111111111111,
+    "median_distance_percentile_points": 16.66666666666667,
+    "pool_medians": [
+      0.1528716216216217,
+      0.125,
+      0.0406336088154271,
+      0.06666666666666665
+    ],
+    "pool_size": 9,
+    "within_pool_selection_percentiles": [
+      72.22222222222223,
+      50.0,
+      72.22222222222223,
+      27.77777777777778
+    ]
+  },
+  "positive_both_models_before_seed_stability": 13,
+  "positive_stable_candidates": 9,
+  "selection_coordinate_order": [
+    "SVM_delta_AUROC",
+    "SVM_delta_Recall10",
+    "DRE_mean_delta_AUROC",
+    "DRE_mean_delta_Recall10"
+  ]
+}

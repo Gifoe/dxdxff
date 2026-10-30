@@ -1,0 +1,3 @@
+case_id,center,outer_fold,total_channels,ez_channels,nez_channels,dre_joint_consistent_seeds,dre_auroc_consistent_seeds,dre_recall10_consistent_seeds
+CASE-P01,LZU,4,114,32,82,2,2,3
+CASE-N01,HUP,3,122,14,108,2,3,2

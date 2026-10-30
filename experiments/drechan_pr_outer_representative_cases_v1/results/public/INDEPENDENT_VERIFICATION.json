@@ -1,0 +1,20 @@
+{
+  "all_selected_channel_ranks_and_curves_reconstructed": true,
+  "anonymous_channel_score_rows": 1888,
+  "case_metric_rows": 50,
+  "endpoint_values": 3200,
+  "independent_metric_formulas": true,
+  "independent_selector_agreement": true,
+  "original_parent_patient_metric_replays": 640,
+  "parent_hashes_unchanged": true,
+  "patient_change_rows": 400,
+  "patient_condition_rows": 640,
+  "patients": 80,
+  "private_original_channel_score_rows": 1888,
+  "recall_at_k_rows": 1904,
+  "score_cells": 40,
+  "score_ensembling": false,
+  "selected_case_count": 2,
+  "selected_channels": 236,
+  "status": "PASS"
+}

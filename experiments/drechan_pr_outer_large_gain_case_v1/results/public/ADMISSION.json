@@ -1,0 +1,9 @@
+{
+  "channels": 7635,
+  "ez_channels": 1743,
+  "new_model_fits": 0,
+  "new_model_forward_passes": 0,
+  "patients": 80,
+  "score_cells": 40,
+  "status": "PASS"
+}

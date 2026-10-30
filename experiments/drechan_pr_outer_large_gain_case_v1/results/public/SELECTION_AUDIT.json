@@ -1,0 +1,13 @@
+{
+  "candidates": 15,
+  "cohort_patients": 80,
+  "deliberate_high_gain_selection": true,
+  "independent_maximum_agreement": true,
+  "min_ez_count": null,
+  "minimum_total_channels": 20,
+  "primary_gain": 0.3051674428919937,
+  "primary_gain_percentile_among_all80": 99.375,
+  "primary_gain_percentile_among_candidates": 96.66666666666667,
+  "prior_cases_excluded": 2,
+  "ranking": "descending equal-weight mean of DRE mean delta AUROC and delta Recall10"
+}

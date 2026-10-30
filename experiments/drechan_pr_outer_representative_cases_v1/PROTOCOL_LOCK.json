@@ -1,0 +1,22 @@
+{
+  "task": "drechan_pr_outer_representative_cases_v1",
+  "design": "Retrospective descriptive case selection using existing sealed five-fold Ictal Outer scores only; no training, model inference, threshold selection or performance claim from case selection.",
+  "cohort": {"patients":80,"channels":7635,"ez_channels":1743},
+  "svm": {"parent":"m8_6d_no_variance_ablation_baselines_seed42_v1_runtime","conditions":["Linear_SVM_NO_PR","Linear_SVM_PR"],"label_pr":"Legacy PR","run_seed":42},
+  "drechan": {"parent":"drechan_f0_complete_ablation_3seed_v1_runtime","conditions":["WO_BOTH_PR","FULL"],"seeds":[42,43,44],"parameters":11425,"variant":"Original complete three-seed FULL, with early FiLM/late Gate; not later no-guidance FULL and not LOCO"},
+  "metrics":["auroc","macro_f1","top1","recall_at_10pct","recall_at_20pct"],
+  "classification": "Use the historical VAL-selected threshold and native orientation unchanged; DRE score_nez < threshold; SVM frozen prediction_ez.",
+  "ranking": "EZ direction; unrounded scores; decreasing score with original canonical channel-name ascending tie key. Recall uses ceil(q*N).",
+  "seed_aggregation": "Mean each patient's endpoints across the three seeds, never ensemble scores or probabilities. Retain all per-seed results.",
+  "basic_eligibility": {"min_ez":3,"min_channels":20,"require_nez":true},
+  "positive_eligibility": "Basic eligibility plus strictly positive SVM AUROC/Recall@10% changes and positive DRE three-seed mean AUROC/Recall@10% changes; at least two DRE seeds jointly positive for both endpoints. Strict means >1e-12.",
+  "representativeness": "For each eligible pool, compute midrank empirical percentiles of four changes: SVM AUROC, SVM Recall@10%, DRE mean AUROC, DRE mean Recall@10%. Choose minimum mean absolute percentile distance to 50%. Tie-break by more jointly consistent DRE seeds, then SHA256(case_selection_v1|private patient identifier).",
+  "negative_eligibility_priority": [
+    "Basic plus strictly negative AUROC and Recall@10% changes in both SVM and DRE mean, with at least two jointly negative DRE seeds",
+    "Basic plus strictly negative DRE mean AUROC and Recall@10%, with at least two jointly negative DRE seeds; SVM direction unrestricted",
+    "Basic plus strictly negative DRE mean AUROC, nonpositive Recall@10%, at least two DRE seeds with negative AUROC; SVM direction unrestricted"
+  ],
+  "percentile": "100*(number strictly lower + 0.5*number tied)/population size, tolerance1e-12. Report all80 and the relevant selection-pool percentiles. Pool medians and all screening counts are disclosed.",
+  "privacy": "True patient IDs and original contact names remain on the trusted server. Public selected-case tables use CASE-P01/CASE-N01 and CH0001 aliases preserving canonical tie order. Export per-channel true class, frozen scores, decisions/ranks and every-K recall data only for the two deidentified selected cases. The original 80-patient table and reversible mapping remain private.",
+  "verification": "Verify parent freeze/seal/source/checkpoint/validation hashes and complete role coverage; independent patient endpoints, source aggregate replay, independent selection, all selected-channel ranks and Recall@K reconstruction. Rehash protected parents after analysis."
+}

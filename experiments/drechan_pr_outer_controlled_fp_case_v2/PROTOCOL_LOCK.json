@@ -1,0 +1,16 @@
+{
+  "design": "Exploratory TP/FP-based case illustration. V1 added nondecreasing precision and stable ranking requirements and had zero candidates. Aggregate diagnostics subsequently showed six candidates satisfying only TP gain and <=2 additional FP per seed; this V2 explicitly removes the extra precision and ranking eligibility filters before identifying/exporting the new patient.",
+  "cohort": {
+    "patients": 80,
+    "channels": 7635
+  },
+  "eligibility": ">=20 total channels; both EZ/NEZ; no EZ minimum; exclude the three existing cases. DRE mean TP must increase and >=2 seeds must increase TP. No precision or ranking eligibility restriction; report them all.",
+  "fp_tiers": [
+    "All three DRE seeds FP change <=0",
+    "All three DRE seeds FP change <=2 channels"
+  ],
+  "selection": "First nonempty tier; maximize DRE mean TP increase, then minimize mean FP change, then maximize equal-weight mean delta AUROC/Recall10, then fixed identifier hash.",
+  "thresholds": "Original frozen validation-selected thresholds, unchanged; no new models, calibration, inference, score transformations or ensembles.",
+  "privacy": "CASE-F01/CH aliases outside trusted server; real identities/original channel names private.",
+  "all_results_exploratory": true
+}
